@@ -1,0 +1,13 @@
+{
+  "schema": "dexter-article-evidence-catalog/v1",
+  "articles": [
+    {
+      "id": "the-account-inversion",
+      "title": "The Account Inversion",
+      "subtitle": "From Account Holder to Account Owner",
+      "guide": "the-account-inversion/README.md",
+      "evidence_index": "the-account-inversion/evidence.json",
+      "evidence_released": "2026-11-04"
+    }
+  ]
+}

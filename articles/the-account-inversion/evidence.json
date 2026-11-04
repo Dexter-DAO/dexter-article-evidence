@@ -1,0 +1,24 @@
+{
+  "id": "the-account-inversion",
+  "title": "The Account Inversion",
+  "subtitle": "From Account Holder to Account Owner",
+  "evidence_released": "2026-11-04",
+  "guide": "README.md",
+  "archive": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-04/dexter-article-evidence-2026-11-04.zip",
+  "archive_sha256": "e789a59a553c23488007befa3678032373ab1e68bf41462a92a5da10eadd33f2",
+  "evidence": [
+    {
+      "id": "historical-mainnet-case",
+      "record": "../../evidence/historical-evidence/record.json",
+      "findings": "../../evidence/historical-evidence/findings.txt",
+      "index": "../../evidence/historical-evidence/evidence-index.json"
+    },
+    {
+      "id": "account-commitments",
+      "guide": "../../evidence/account-evidence/README.md",
+      "sequence": "../../evidence/account-evidence/checks/article-claim-check-20261104.json",
+      "results": "../../evidence/account-evidence/checks/offline-check-20261104.json",
+      "manifest": "../../evidence/account-evidence/manifest.json"
+    }
+  ]
+}
