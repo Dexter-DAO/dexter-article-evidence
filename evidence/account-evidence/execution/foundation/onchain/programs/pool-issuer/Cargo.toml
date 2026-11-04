@@ -1,0 +1,29 @@
+[package]
+name = "pool-issuer"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "pool_issuer"
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+anchor-debug = []
+custom-heap = []
+custom-panic = []
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build", "anchor-spl/token_2022", "dexter-contracts/idl-build"]
+
+[dependencies]
+anchor-lang = { workspace = true }
+anchor-spl = { workspace = true }
+dexter-contracts = { path = "../../crates/contracts" }
+
+[lints.rust.unexpected_cfgs]
+level = "warn"
+check-cfg = ['cfg(target_os, values("solana"))']

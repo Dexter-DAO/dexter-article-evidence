@@ -1,0 +1,78 @@
+{
+  "schema": "dexter-historical-release-assessment/v1",
+  "assessed_at": "2026-11-04T06:18:31.757771+00:00",
+  "recommendation": "Release this package as the historical demonstration evidence; link current Account evidence separately.",
+  "publication_performed": false,
+  "inputs_complete": true,
+  "new_execution": [
+    {
+      "artifact": "results/record-offline-checks.json",
+      "result": "21 checks passed with network access disabled",
+      "scope": "Exact published record hashes, seller evidence, agent vouchers, seller receipt signatures, copycat decisions and retained same-claim references"
+    },
+    {
+      "artifact": "results/offline-record-mutations.tap",
+      "result": "4 tests passed",
+      "scope": "Baseline record passes; changes to agent channel, seller quote signature and receipt signature fail the intended check"
+    },
+    {
+      "artifact": "results/verifier-tests.tap",
+      "result": "82 tests passed",
+      "scope": "Pinned public verifier suite with generated fixtures, captured case-two transactions and signed case-three clone records"
+    }
+  ],
+  "previous_observation": [
+    {
+      "artifact": "disclosure-links.json",
+      "date": "2026-11-04",
+      "result": "Unkeyed name withheld; keyed disclosure reveals shared name and verifies in browser",
+      "source": "Existing EC2 Chromium verification"
+    }
+  ],
+  "full_mainnet_chain_replay": {
+    "fresh_run": false,
+    "command": "cd verifier && node verify.mjs ../record.json --rpc https://YOUR-ARCHIVAL-SOLANA-RPC",
+    "requires": [
+      "Node24+ with pinned dependencies",
+      "Archival Solana RPC with retained transactions",
+      "Exact Wayback capture and screenshot for their online hash checks"
+    ]
+  },
+  "release_paths": {
+    "reader": "README.txt",
+    "plain_findings": "findings.txt",
+    "machine_index": "evidence-index.json",
+    "raw_record": "record.json",
+    "source_and_tests": "verifier/",
+    "file_hashes": "SHA256SUMS",
+    "download": "../historical-evidence.zip"
+  },
+  "publication_sensitive_material": [
+    {
+      "path": "disclosure-links.json",
+      "content": "Intentional identity-disclosure key in the example URL",
+      "recommendation": "Publish the two explicit comparison links as requested by Branch. Preserve the fragment only on the shared-name link; require the reader to choose reveal."
+    }
+  ],
+  "exclude": [
+    "verifier/node_modules/",
+    "private scratch material",
+    "credentials and private RPC endpoints"
+  ],
+  "unresolved_dependencies": [
+    {
+      "task": "Anonymous delivery from the chosen public surface",
+      "state": "Not deployed by this task; parent owns publication and anonymous download checks"
+    },
+    {
+      "task": "Fresh independent read of historical chain execution",
+      "state": "Optional additional refresh; full verifier and exact transaction IDs are included. No mainnet replay was claimed for this build."
+    }
+  ],
+  "claims_to_keep_separate": [
+    "Historical mainnet Vault outcomes",
+    "Fresh offline checks of the historical record",
+    "Pinned verifier fixture and mutation results",
+    "Current Account implementation and deployment evidence"
+  ]
+}

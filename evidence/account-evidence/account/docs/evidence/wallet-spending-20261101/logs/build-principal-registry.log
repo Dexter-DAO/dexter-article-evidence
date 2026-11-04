@@ -1,0 +1,16 @@
+[2026-11-01T20:07:03.129006614Z WARN  cargo_build_sbf] Package 'principal-registry' has two crate types defined: cdylib and lib. This setting precludes link-time optimizations (LTO). Use cdylib for programs to be deployed and rlib for packages to be imported by other programs as libraries.
+   Compiling dexter-contracts v0.1.0 (/workspace/scratch/e85e65001bc6/dexter-account/foundation/onchain/crates/contracts)
+   Compiling principal-registry v0.1.0 (/workspace/scratch/e85e65001bc6/dexter-account/foundation/onchain/programs/principal-registry)
+warning: ambiguous glob re-exports
+  --> programs/principal-registry/src/lib.rs:18:9
+   |
+18 | pub use repayment::*;
+   |         ^^^^^^^^^^^^ the name `consume` in the value namespace is first re-exported here
+...
+23 | #[program]
+   | ---------- but the name `consume` in the value namespace is also re-exported here
+   |
+   = note: `#[warn(ambiguous_glob_reexports)]` on by default
+
+warning: `principal-registry` (lib) generated 1 warning
+    Finished `release` profile [optimized] target(s) in 11.60s

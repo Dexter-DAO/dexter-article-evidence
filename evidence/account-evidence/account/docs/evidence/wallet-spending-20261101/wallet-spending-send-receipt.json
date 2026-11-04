@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "trace": "/workspace/scratch/e85e65001bc6/dexter-account/.local/anchor/wallet-spending-send-trace.json",
+  "trace_sha256": "2e71004d1f18b5547bd3c27af3d8303bdf23bfa9def2c090ab1dabb96003861c",
+  "transaction_count": 108,
+  "refused": 21,
+  "assertions": 268,
+  "receipts": 14,
+  "maximum_signed_packet": 2233,
+  "build_receipt_sha256": "20b490f6089f052a9d41f553d6ab1c10d988cf014a978d5c0d63303b8c3fffbb",
+  "idl_receipt_sha256": "2a42144a01c4d46b68d1d9504f6b812c833af6c7173b85180a5a9e9fe3342418",
+  "spending_receipts": 6
+}

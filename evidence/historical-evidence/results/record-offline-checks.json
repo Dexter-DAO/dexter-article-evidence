@@ -1,0 +1,273 @@
+{
+  "ok": true,
+  "checks": [
+    {
+      "name": "record.identity",
+      "ok": true,
+      "detail": "b0ee0521-898e-828b-9c14-265bfb59216c"
+    },
+    {
+      "name": "manifest.digest",
+      "ok": true,
+      "detail": "2dcd4b4264aae394110a628687b80f4ed1fc9d6bf6fed88ef834fe8f2237214d"
+    },
+    {
+      "name": "seller.saved_evidence",
+      "ok": true,
+      "detail": {
+        "checks": [
+          {
+            "name": "binding_bytes",
+            "ok": true,
+            "detail": "1552 canonical bytes, sha256 9ad25a29d13b991086fd59eb439a90e8eec631f9a8025f6ed0dc2cabc32380ed"
+          },
+          {
+            "name": "registration_match",
+            "ok": true,
+            "detail": "vault, counterparty and agent key equal the registration"
+          },
+          {
+            "name": "commitment",
+            "ok": true,
+            "detail": "sellerBindingNonce(binding, salt) equals the approval's ceremony nonce"
+          },
+          {
+            "name": "did_document_hash",
+            "ok": true,
+            "detail": "sha256 eaa77c5e24fb7356749890577a60887cd5464c2b8d2f0750e592cea3c4e83c03 equals the binding"
+          },
+          {
+            "name": "did_document_valid",
+            "ok": true,
+            "detail": "did:web:dexter.cash's file meets the store-file rules"
+          },
+          {
+            "name": "key_listed",
+            "ok": true,
+            "detail": "did:web:dexter.cash#books-quote-1 is listed and is the key in the binding"
+          },
+          {
+            "name": "host_listed",
+            "ok": true,
+            "detail": "dexter.cash's file lists books.dexter.cash"
+          },
+          {
+            "name": "offer_signature",
+            "ok": true,
+            "detail": "the quote verifies under the listed key and its hash equals the binding"
+          },
+          {
+            "name": "offer_terms",
+            "ok": true,
+            "detail": "the quote names D21yDMWuiMZfkoaZj3t67S4hhfBfCgA4hNYuWA5i1esj for https://books.dexter.cash/books/the-innovators-dilemma, valid at 1793341650"
+          },
+          {
+            "name": "payto_listed",
+            "ok": true,
+            "detail": "D21yDMWuiMZfkoaZj3t67S4hhfBfCgA4hNYuWA5i1esj is in the file's address list"
+          },
+          {
+            "name": "address_proofs",
+            "ok": true,
+            "detail": "every listed address carries a valid control proof"
+          },
+          {
+            "name": "screen_decision",
+            "ok": true,
+            "detail": "replayed: allowed"
+          }
+        ],
+        "nonce_source": "retained record; approval transaction is checked by the full verifier"
+      }
+    },
+    {
+      "name": "seller.document_and_archive_digest",
+      "ok": true,
+      "detail": {
+        "sha256": "eaa77c5e24fb7356749890577a60887cd5464c2b8d2f0750e592cea3c4e83c03",
+        "archive_url": "https://web.archive.org/web/20261030025533id_/https://dexter.cash/.well-known/did.json",
+        "archive_fetch": "not performed by this offline check"
+      }
+    },
+    {
+      "name": "copycats.complete",
+      "ok": true,
+      "detail": "V1 through V5 retained"
+    },
+    {
+      "name": "copycat.V1",
+      "ok": true,
+      "detail": {
+        "approve": "confirm",
+        "rule": "R4",
+        "code": "lookalike_name"
+      }
+    },
+    {
+      "name": "copycat.V2",
+      "ok": true,
+      "detail": {
+        "approve": "refused",
+        "rule": "R1",
+        "code": "kid_not_listed"
+      }
+    },
+    {
+      "name": "copycat.V3",
+      "ok": true,
+      "detail": {
+        "approve": "refused",
+        "rule": "R2",
+        "code": "payto_mismatch"
+      }
+    },
+    {
+      "name": "copycat.V4",
+      "ok": true,
+      "detail": {
+        "approve": "confirm",
+        "rule": "R4",
+        "code": "lookalike_name"
+      }
+    },
+    {
+      "name": "copycat.V5",
+      "ok": true,
+      "detail": {
+        "approve": "confirm",
+        "rule": "R5",
+        "code": "unsigned_known_host"
+      }
+    },
+    {
+      "name": "first_contact",
+      "ok": true,
+      "detail": {
+        "approve": "allowed",
+        "relation": "first-payment"
+      }
+    },
+    {
+      "name": "purchases.complete",
+      "ok": true,
+      "detail": "Two distinct purchases retained"
+    },
+    {
+      "name": "purchase.1.agent_voucher_signature",
+      "ok": true,
+      "detail": {
+        "claim": "9KoQFbCgxtykNqiVSVRP4Vb6oPePv8CyyaVtNy8qgnkM",
+        "voucher_sha256": "36f4fb83391a0122cf58daf09bf53431dd2377c48a5d1d06190029f3fc1f46fe"
+      }
+    },
+    {
+      "name": "purchase.1.retained_order_and_response",
+      "ok": true,
+      "detail": {
+        "order_id": "fefa818e-a017-4aae-853d-d83de5ef9f60",
+        "request_sha256": "20cf0a21a18db3c608b6ec3280e05ec8c439b7174e77b1c61ae91472d32d4244",
+        "response_sha256": "3b4464f6ed79b8d3cba3f860cea725d62f5ab73de7fdb9dcdd9780fc35437243",
+        "evidence": "Internal agreement of retained order, response and voucher fields"
+      }
+    },
+    {
+      "name": "purchase.1.seller_receipt_signature",
+      "ok": true,
+      "detail": {
+        "payload": {
+          "version": 1,
+          "network": "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
+          "resourceUrl": "https://books.dexter.cash/books/the-innovators-dilemma",
+          "payer": "H6YGwccDRcjtaRFgCfaa5tWxFC1fkMjQWJRtCmXnMuJr",
+          "issuedAt": 1793342113
+        },
+        "checked_fields": [
+          "signature",
+          "resourceUrl",
+          "payer",
+          "network"
+        ],
+        "chain_time_window": "Checked by full verifier against reservation and lock transactions"
+      }
+    },
+    {
+      "name": "purchase.2.agent_voucher_signature",
+      "ok": true,
+      "detail": {
+        "claim": "49Bg9FJx2VC73udyvN6EFXhwDxbV5yVsKJCWHrCrU3fz",
+        "voucher_sha256": "92a853354063a3d9031455cc9bb0809004106d7309a016daaeff794ea7519ec4"
+      }
+    },
+    {
+      "name": "purchase.2.retained_order_and_response",
+      "ok": true,
+      "detail": {
+        "order_id": "bcee5318-b59e-4f69-a132-5bf55fc7edc3",
+        "request_sha256": "1989151b46d2e681b59149cda6f8cee0765f8111bd544560295d61a3bb8e5f7c",
+        "response_sha256": "ef2c03784dd2e5d42a94431737a94af9df80663f4ffcdaa1f668bb7140234c8a",
+        "evidence": "Internal agreement of retained order, response and voucher fields"
+      }
+    },
+    {
+      "name": "purchase.2.seller_receipt_signature",
+      "ok": true,
+      "detail": {
+        "payload": {
+          "version": 1,
+          "network": "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
+          "resourceUrl": "https://books.dexter.cash/books/the-sovereign-individual",
+          "payer": "H6YGwccDRcjtaRFgCfaa5tWxFC1fkMjQWJRtCmXnMuJr",
+          "issuedAt": 1793342140
+        },
+        "checked_fields": [
+          "signature",
+          "resourceUrl",
+          "payer",
+          "network"
+        ],
+        "chain_time_window": "Checked by full verifier against reservation and lock transactions"
+      }
+    },
+    {
+      "name": "redirect.same_claim_record",
+      "ok": true,
+      "detail": {
+        "claim": "49Bg9FJx2VC73udyvN6EFXhwDxbV5yVsKJCWHrCrU3fz",
+        "rejected_transaction": "4MMw5EVLvGK6yQBrGUWRJxNH4LudxFkZRcKdkayUUxxpjzLMPHnE8Z9QjBD6U8niYuNn5yxjR99Q9XHPn5DLFxXg",
+        "successful_transaction": "QNb41FGAxugzUWaWiKjj8vsouA2sLngHVftaXuycR4JmBxMg5CetYmUGVwmymuo7hCF3P3h8DkSmKXJkg96eN8h",
+        "evidence": "Retained references; transaction execution and balances are checked by full verifier"
+      }
+    },
+    {
+      "name": "refusal.6013.agent_signature",
+      "ok": true,
+      "detail": {
+        "signature_valid": true,
+        "recorded_outcome": {
+          "code": 6013,
+          "name": "RevolvingCapacityExceeded"
+        },
+        "transaction": "4g3gekW1RySoGHvPWY1jAvgRku3QV8qPzLeg9roau3M9kBpHwvc67hs1EuSuXyyVveF6RjYP4sFmv6qXjva84krK"
+      }
+    },
+    {
+      "name": "refusal.6009.agent_signature",
+      "ok": true,
+      "detail": {
+        "signature_valid": true,
+        "recorded_outcome": {
+          "code": 6009,
+          "name": "SessionExpiryInPast"
+        },
+        "transaction": "54mYrWvYsMqvDz5GMh2rPrQNZcBfyF3gbANPCUgRdpegdAi7R6PQRnR3MEA1RgdrYTiQKCFJe4yJxDuZ8yipKdqz"
+      }
+    }
+  ],
+  "record_sha256": "9c2052a9e07706d1596d819521615c187b76fc215087cc37cd13b1c17cbd152a",
+  "exact_published_bytes": true,
+  "executed_at": "2026-11-04T06:16:11.840Z",
+  "node": "v24.18.0",
+  "network_access": "disabled",
+  "scope": "Saved record hashes, seller and agent signatures, and deterministic copycat decisions",
+  "chain_verification": "Run verifier/verify.mjs with an archival mainnet RPC to reread chain outcomes"
+}

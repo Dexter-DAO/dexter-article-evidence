@@ -1,0 +1,33 @@
+{
+  "schema": "dexter-swap-adapter-source/v1",
+  "adapter": "spl-token-swap-v3-constant-product",
+  "program_id": "SwapsVeCiPHMUAtzQWZw7RjsKjgCjhwU55QGu4U1Szw",
+  "repository": "https://github.com/solana-labs/solana-program-library",
+  "verified_default_branch": "master",
+  "verified_default_head": "264ca72de06b0c2b45c0b15d298000fe3f82db2e",
+  "upstream_archived": true,
+  "source_commit": "264ca72de06b0c2b45c0b15d298000fe3f82db2e",
+  "archive_url": "https://codeload.github.com/solana-labs/solana-program-library/tar.gz/264ca72de06b0c2b45c0b15d298000fe3f82db2e",
+  "archive_sha256": "8fec6389c6fed03dc6e7ad1078781b58da36bdf023ef89c7e28d9b342c6183eb",
+  "archive_bytes": 2798211,
+  "manifest_path": "token-swap/program/Cargo.toml",
+  "cargo_lock_sha256": "5c336c9b1ce7059719bf4fcf27cdea3ce3882161e07433ba835e54a9839e6949",
+  "features": [],
+  "build_architecture": "v3",
+  "qualified_artifact_sha256": "545687ec1bee83f09638d5bf1d1a7dd8dc497b62a0788aa0532440c6fd095626",
+  "qualified_artifact_bytes": 169080,
+  "build_command": "./dev exec python scripts/build-spl-token-swap.py",
+  "profile": {
+    "token_program": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "curve_type": 0,
+    "state_version": 1,
+    "state_bytes": 324,
+    "swap_instruction_tag": 1,
+    "swap_instruction_bytes": 17,
+    "swap_fixed_accounts": 14,
+    "optional_host_fee_account": false,
+    "require_exact_actual_input_debit": true,
+    "require_actual_output_at_least_minimum": true
+  },
+  "qualification_boundary": "Unchanged official SPL Token Swap source compiled with the repository pinned toolchain and default upstream features; actual program execution on synthetic local pools. This is not a test stand-in. No claim of binary equivalence to a public deployment, live pool admission, RPC/customer qualification, or Jupiter/Orca integration. The upstream production feature selects compile-time pool-creation fee/owner constraints and is not enabled; no production fee policy is chosen."
+}

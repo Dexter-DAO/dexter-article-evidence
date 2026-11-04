@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "trace": "/workspace/scratch/e85e65001bc6/dexter-account/.local/anchor/financing-governed-repayment-roles-trace.json",
+  "trace_sha256": "f804d7d1b1945a89f4678cf0b51124904822aced40ebb3a671febdef8e9eb92e",
+  "transaction_count": 79,
+  "refused": 0,
+  "assertions": 207,
+  "receipts": 17,
+  "maximum_signed_packet": 2297,
+  "build_receipt_sha256": "20b490f6089f052a9d41f553d6ab1c10d988cf014a978d5c0d63303b8c3fffbb",
+  "idl_receipt_sha256": "2a42144a01c4d46b68d1d9504f6b812c833af6c7173b85180a5a9e9fe3342418"
+}

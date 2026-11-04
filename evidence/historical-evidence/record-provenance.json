@@ -1,0 +1,12 @@
+{
+  "file": "record.json",
+  "bytes": 49826,
+  "sha256": "9c2052a9e07706d1596d819521615c187b76fc215087cc37cd13b1c17cbd152a",
+  "source_url": "https://api.dexter.cash/api/public/mandate-cases/b0ee0521-898e-828b-9c14-265bfb59216c/published",
+  "capture": "Retained public response on EC2; recovered unchanged through native tool output transport",
+  "transport_verified_at": "2026-11-04T06:18:31.757771+00:00",
+  "capture_timestamp": "not supplied with the retained response",
+  "fresh_download_on_this_mac": false,
+  "access_observation": "The direct Mac fetch returned HTTP 521. The retained EC2 copy supplied the complete response.",
+  "source_revision": "Published historical case record, identified by its byte hash"
+}

@@ -1,0 +1,10 @@
+{
+  "repository": "Dexter-DAO/dexter-x402-sdk",
+  "verifier_commit": "43980c8daaa5e3067681b9e3738b7bbb968ea200",
+  "case_page_commit": "2bfd942a588f44e72755f15d22ad8f334e0dad64",
+  "git_tree": "2f50c2064370bb7f18d79a6aa6e31ef70a962d7a",
+  "same_tree": true,
+  "checked_at": "2026-11-04T06:18:31.757771+00:00",
+  "read_method": "GitHub connector, git commit API for both pins",
+  "source_files": "source-provenance.json"
+}

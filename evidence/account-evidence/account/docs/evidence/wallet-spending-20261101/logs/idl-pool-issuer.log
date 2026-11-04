@@ -1,0 +1,4 @@
+   Compiling dexter-contracts v0.1.0 (/workspace/scratch/e85e65001bc6/dexter-account/foundation/onchain/crates/contracts)
+   Compiling pool-issuer v0.1.0 (/workspace/scratch/e85e65001bc6/dexter-account/foundation/onchain/programs/pool-issuer)
+    Finished `test` profile [unoptimized] target(s) in 2.69s
+     Running unittests src/lib.rs (/workspace/scratch/e85e65001bc6/dexter-account/.local/build/anchor-host/debug/deps/pool_issuer-f52898ffed02a0e7)

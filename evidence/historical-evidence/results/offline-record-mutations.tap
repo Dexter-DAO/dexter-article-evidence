@@ -1,0 +1,35 @@
+TAP version 13
+# bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+# Subtest: the exact public record passes all offline checks
+ok 1 - the exact public record passes all offline checks
+  ---
+  duration_ms: 58.233166
+  type: 'test'
+  ...
+# Subtest: a changed agent voucher channel fails its signature check
+ok 2 - a changed agent voucher channel fails its signature check
+  ---
+  duration_ms: 14.142667
+  type: 'test'
+  ...
+# Subtest: a changed signed seller quote fails saved seller evidence
+ok 3 - a changed signed seller quote fails saved seller evidence
+  ---
+  duration_ms: 6.4535
+  type: 'test'
+  ...
+# Subtest: a changed seller receipt signature fails verification
+ok 4 - a changed seller receipt signature fails verification
+  ---
+  duration_ms: 13.786958
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 550.553125

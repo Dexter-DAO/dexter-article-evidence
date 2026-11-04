@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "trace": "/workspace/scratch/e85e65001bc6/dexter-account/.local/anchor/financing-corrections-ownership-trace.json",
+  "trace_sha256": "eddcc42d36e6e7d4e134c4c0513e3573a4e1dc95a1880772fc101309c0eb1c3e",
+  "transaction_count": 93,
+  "refused": 6,
+  "assertions": 634,
+  "receipts": 22,
+  "maximum_signed_packet": 2297,
+  "build_receipt_sha256": "20b490f6089f052a9d41f553d6ab1c10d988cf014a978d5c0d63303b8c3fffbb",
+  "idl_receipt_sha256": "2a42144a01c4d46b68d1d9504f6b812c833af6c7173b85180a5a9e9fe3342418"
+}

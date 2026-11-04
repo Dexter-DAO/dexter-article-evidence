@@ -1,0 +1,119 @@
+{
+  "status": "passed",
+  "inputs": {
+    "foundation/onchain/Anchor.toml": "93e3bb1cbd4cf97d40287d772bdb1497f11e04a70a378d7966fc745b5c77da7b",
+    "foundation/onchain/Cargo.lock": "c032b714effdfba0d422cf36d5a91ff84052f2e3c95439552023a2e70e47c538",
+    "foundation/onchain/Cargo.toml": "334f896ceaa32744e520930af7f83bbfabfdffa7551bba49af730cb84926bb58",
+    "foundation/onchain/crates/contracts/Cargo.toml": "a7e4c821e6a3455f9d5e3e2377c8146e1a32dc1281140118578bb4076445e21b",
+    "foundation/onchain/crates/contracts/src/commercial.rs": "7d1cfd04fe2127f3978028c8ca5a8a5e1fe0a1c5ba14dad5797ebacb17bf92f1",
+    "foundation/onchain/crates/contracts/src/corrections.rs": "1de3db0c565429fca79cc6f2c24c39188b0bf829d7b923b88dfa40835032d9b0",
+    "foundation/onchain/crates/contracts/src/financing.rs": "70e687271fa885717b8135c075733aad1d6d8175fa7979eb1e5e3227f3f0a6e9",
+    "foundation/onchain/crates/contracts/src/funded.rs": "bdf610ff7b7075decd8da0bfee0bd4b5757e4887762846f1ec0a7017b3fad567",
+    "foundation/onchain/crates/contracts/src/lib.rs": "856199810d55a2c977e19fb197a5fc729a0dfa5eb1672a402f2c44a9be787597",
+    "foundation/onchain/crates/contracts/src/repayment.rs": "4bbf62992e35303b0dfa0939047609cb40cfdee693ab441862d7c525cdbb54ba",
+    "foundation/onchain/crates/contracts/src/spending.rs": "00ea2657dd05ceea299d666f9eb87001092c5ce24d12d13413e247ec429ad24f",
+    "foundation/onchain/crates/contracts/src/wallet_operation.rs": "c8bc1a81b0f7d89a6eb645dfcdb5ca17412c724e94034804867760b61f3a6245",
+    "foundation/onchain/crates/contracts/tests/commercial.rs": "c7573e437ed6a25954b1aa6646cf159216a201a70051d4ca694cbdcb6989035b",
+    "foundation/onchain/crates/contracts/tests/corrections.rs": "d63b9879ede1078a3be88f3c5423e0240e6d858ad297965f3321021bf0931206",
+    "foundation/onchain/crates/contracts/tests/financing.rs": "b5253a2c09506da5fa4a1fa478b94f4392eac4fc7d1aa28ff791acc3937069e9",
+    "foundation/onchain/crates/contracts/tests/funded.rs": "e9c7a88820a7093346e36ae7a701b20b8628bec19515e9df5a03e3f20f3ad641",
+    "foundation/onchain/programs/claims-core/Cargo.toml": "0a039a201dc92b9a3cea03d76defe2bd66c58330dbcdaba1e1260ace3b8b3f07",
+    "foundation/onchain/programs/claims-core/src/corrections.rs": "528e4768cef3509dfdca9bd18bcc04e0b950b34fd6c9cee242ce75e0791962cb",
+    "foundation/onchain/programs/claims-core/src/funding.rs": "10478b17ce9e156bee0c67f3210917a66826faa6481d32fe8ce0c93ba9ebc2be",
+    "foundation/onchain/programs/claims-core/src/funding_capital.rs": "b93656ca23b3b6231ee5983e03b2ab2f70dd72ce43a52bf96a473240942ffa70",
+    "foundation/onchain/programs/claims-core/src/funding_collection.rs": "f3de6f981f38814d5a696da441c5a24ffe6b7921c988811110c6d6e4cdb3cbfb",
+    "foundation/onchain/programs/claims-core/src/funding_journal.rs": "21ddee6bbcf2b8a96c13dd4e6e71c721de3326344edc3d7230831388c46ed903",
+    "foundation/onchain/programs/claims-core/src/funding_sponsor.rs": "b988f9bb4537b943afee8166692d2562735729d07237f5390d5b00462dc9232e",
+    "foundation/onchain/programs/claims-core/src/funding_state.rs": "94dbeb338cff95f7c1a1a509453101514a6549a39fde373812fc5f0a81ce1bc1",
+    "foundation/onchain/programs/claims-core/src/historical_refunds.rs": "8cb71fe680ed400f7211f15539e0f3f56e9e95b1c54d01ffbb3c7036c8646eaf",
+    "foundation/onchain/programs/claims-core/src/interest_refunds.rs": "576685b5bbd06fd1795a1ca05f9a49cad35209a92a09e7af8dc5e33f7d0e72f6",
+    "foundation/onchain/programs/claims-core/src/lib.rs": "3e1d73ae80109d3248ca233237a6d72318884344afcbb1706f2fb7258d041ad9",
+    "foundation/onchain/programs/claims-core/src/receivables.rs": "145ce5e258c2d65f95d3e85c54c5f97a332de89ef82925eff7b9b1893811a9d9",
+    "foundation/onchain/programs/claims-core/src/seller_fees.rs": "72688110a4ced5f066b264989ee4a1b4fd599c08b05ccf4f0e3f709e3cd1fa50",
+    "foundation/onchain/programs/claims-core/src/wallet_spending.rs": "78929783048048a4297972908234947d93b81364a3579667f432c51c7290de51",
+    "foundation/onchain/programs/pool-issuer/Cargo.toml": "ac8b10466749c6d1e9859265d9cc40dc434796c23c5872ec699be069e3a8226f",
+    "foundation/onchain/programs/pool-issuer/src/funding.rs": "212f99d9b52a049096d9d7a923a679ecf92ec5c8d25b1965afb073347eff6b70",
+    "foundation/onchain/programs/pool-issuer/src/lib.rs": "6f9c010043551604bc630b2ee6b88a0c22b5577d911e2ba70bf3dacd0e281330",
+    "foundation/onchain/programs/principal-registry/Cargo.toml": "7bf2c5ac7aef32d27a4d584e7a758c2ed39bb4d3c6999746272e4384581dabcb",
+    "foundation/onchain/programs/principal-registry/src/allowance.rs": "7437da98a50114fbd5ae7b75fa1c9515d33713de61918bdbff3466b3b51bb78b",
+    "foundation/onchain/programs/principal-registry/src/lib.rs": "84dd3b97aa4c779502ecac215f2d6c858a6a8e33135eb411c3bbb2dcbec015d2",
+    "foundation/onchain/programs/principal-registry/src/ownership.rs": "3855b0dfc9bf9af177e9d9041bdea0bfe9a71f1d22cad36756c889da2b308f21",
+    "foundation/onchain/programs/principal-registry/src/repayment.rs": "915c831bd6cc40d27e30c978d919bb241a36f873911eab720b65a2140e699440",
+    "foundation/onchain/programs/principal-registry/src/spending.rs": "2f7a0518f5d80c075729147e71281aec0120e815546b0568bf02555b57b24600",
+    "foundation/onchain/programs/principal-registry/src/state.rs": "eb15dd36069371ffac3e958e9a037a4b8c1a504420ddbe86eef9716e542e84ab",
+    "foundation/onchain/programs/principal-registry/src/wallet.rs": "dd1e418430350cd5691baf0913decddc124b020d202b7599d0c6c5b68f51711d",
+    "foundation/onchain/programs/principal-registry/src/wallet_funding.rs": "d0a0a455bbb00fbe0e1ad1916551454aa59118d200d6f8528ad6b96995378947"
+  },
+  "steps": [
+    {
+      "command": [
+        "/workspace/scratch/e85e65001bc6/dexter-account/.local/toolchains/anchor-1.2.2/bin/anchor",
+        "idl",
+        "build",
+        "--program-name",
+        "principal_registry",
+        "--out",
+        "/workspace/scratch/e85e65001bc6/dexter-account/.local/anchor/idl/principal_registry.json",
+        "--out-ts",
+        "/workspace/scratch/e85e65001bc6/dexter-account/.local/anchor/types/principal_registry.ts",
+        "--",
+        "--locked"
+      ],
+      "seconds": 4.67,
+      "log": "/workspace/scratch/e85e65001bc6/dexter-account/.local/anchor/idl-principal-registry.log"
+    },
+    {
+      "command": [
+        "/workspace/scratch/e85e65001bc6/dexter-account/.local/toolchains/anchor-1.2.2/bin/anchor",
+        "idl",
+        "build",
+        "--program-name",
+        "pool_issuer",
+        "--out",
+        "/workspace/scratch/e85e65001bc6/dexter-account/.local/anchor/idl/pool_issuer.json",
+        "--out-ts",
+        "/workspace/scratch/e85e65001bc6/dexter-account/.local/anchor/types/pool_issuer.ts",
+        "--",
+        "--locked"
+      ],
+      "seconds": 2.74,
+      "log": "/workspace/scratch/e85e65001bc6/dexter-account/.local/anchor/idl-pool-issuer.log"
+    },
+    {
+      "command": [
+        "/workspace/scratch/e85e65001bc6/dexter-account/.local/toolchains/anchor-1.2.2/bin/anchor",
+        "idl",
+        "build",
+        "--program-name",
+        "claims_core",
+        "--out",
+        "/workspace/scratch/e85e65001bc6/dexter-account/.local/anchor/idl/claims_core.json",
+        "--out-ts",
+        "/workspace/scratch/e85e65001bc6/dexter-account/.local/anchor/types/claims_core.ts",
+        "--",
+        "--locked"
+      ],
+      "seconds": 11.64,
+      "log": "/workspace/scratch/e85e65001bc6/dexter-account/.local/anchor/idl-claims-core.log"
+    }
+  ],
+  "artifacts": {
+    "principal_registry.json": {
+      "path": "/workspace/scratch/e85e65001bc6/dexter-account/.local/anchor/idl/principal_registry.json",
+      "bytes": 107367,
+      "sha256": "3c63df5ac3942b37b24d00fa7f7cfa97fef2df6eef82ffdeb45c64d4675b892f"
+    },
+    "pool_issuer.json": {
+      "path": "/workspace/scratch/e85e65001bc6/dexter-account/.local/anchor/idl/pool_issuer.json",
+      "bytes": 23175,
+      "sha256": "089c961ff2faff876fc54e13c3302fa29c652b3c3972b2a4933b169a9ba5b0e6"
+    },
+    "claims_core.json": {
+      "path": "/workspace/scratch/e85e65001bc6/dexter-account/.local/anchor/idl/claims_core.json",
+      "bytes": 190916,
+      "sha256": "80331d47405499392e235b271f5dc417e8c335fd881f2e09ce722a442f47e890"
+    }
+  },
+  "scope": "Local Anchor implementation; no deployment or production qualification.",
+  "disk_free_bytes": 53325778944
+}

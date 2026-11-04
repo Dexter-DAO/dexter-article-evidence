@@ -1,0 +1,96 @@
+   Compiling dexter-contracts v0.1.0 (/workspace/scratch/e85e65001bc6/dexter-account/foundation/onchain/crates/contracts)
+   Compiling pool-issuer v0.1.0 (/workspace/scratch/e85e65001bc6/dexter-account/foundation/onchain/programs/pool-issuer)
+   Compiling principal-registry v0.1.0 (/workspace/scratch/e85e65001bc6/dexter-account/foundation/onchain/programs/principal-registry)
+warning: ambiguous glob re-exports
+  --> programs/principal-registry/src/lib.rs:18:9
+   |
+18 | pub use repayment::*;
+   |         ^^^^^^^^^^^^ the name `consume` in the value namespace is first re-exported here
+...
+23 | #[program]
+   | ---------- but the name `consume` in the value namespace is also re-exported here
+   |
+   = note: `#[warn(ambiguous_glob_reexports)]` on by default
+
+warning: `principal-registry` (lib) generated 1 warning
+   Compiling claims-core v0.1.0 (/workspace/scratch/e85e65001bc6/dexter-account/foundation/onchain/programs/claims-core)
+warning: unused import: `SponsorQuote`
+ --> programs/claims-core/src/funding.rs:8:5
+  |
+8 |     SponsorQuote, within_domain_assignment_policy};
+  |     ^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused imports: `EarnedCollection` and `FINANCING_VERSION`
+ --> programs/claims-core/src/funding.rs:9:42
+  |
+9 | use dexter_contracts::financing::{Asset, EarnedCollection, FINANCING_VERSION, PrincipalAmounts};
+  |                                          ^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^
+
+warning: unused import: `InterestState`
+ --> programs/claims-core/src/receivables.rs:8:51
+  |
+8 | use dexter_contracts::commercial::{InterestTerms, InterestState, split_repayment, within_domain_assignment_policy};
+  |                                                   ^^^^^^^^^^^^^
+
+warning: `principal-registry` (lib test) generated 1 warning (1 duplicate)
+warning: `claims-core` (lib test) generated 3 warnings (run `cargo fix --lib -p claims-core --tests` to apply 3 suggestions)
+    Finished `test` profile [unoptimized] target(s) in 11.17s
+     Running unittests src/lib.rs (/workspace/scratch/e85e65001bc6/dexter-account/.local/build/anchor-host/debug/deps/claims_core-912364eee2126efa)
+
+running 9 tests
+test corrections::tests::bounded_result_hash_preserves_the_original_borsh_preimage ... ok
+test seller_fees::tests::credits_refunds_and_waivers_do_not_reopen_lifetime_fee_capacity ... ok
+test corrections::tests::bounded_request_hash_preserves_optional_route_borsh_bytes ... ok
+test seller_fees::tests::strict_reader_checks_owner_type_size_version_pda_and_bump ... ok
+test seller_fees::tests::reconciliation_preserves_usage_and_refuses_another_cap_or_identity ... ok
+test seller_fees::tests::two_tabs_allocate_realizable_fees_and_excess_cannot_consume_capacity ... ok
+test funding_state::tests::supplier_owner_change_preserves_usage_identity_and_original_payment_binding ... ok
+test seller_fees::tests::claim_has_an_exact_parent_and_slice_without_a_parent_servicing_dependency ... ok
+test funding_state::tests::distinct_supplier_principals_with_one_owner_keep_independent_usage_identity ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (/workspace/scratch/e85e65001bc6/dexter-account/.local/build/anchor-host/debug/deps/dexter_contracts-579ee45b77bbb81a)
+
+running 7 tests
+test repayment::tests::authority_route_and_generation_do_not_follow_assignments_or_owner_changes ... ok
+test repayment::tests::standing_limits_count_actual_principal_interest_and_timing ... ok
+test repayment::tests::exact_approval_binds_request_and_is_one_use ... ok
+test spending::tests::delegated_spending_consumes_finite_amount_count_and_time ... ok
+test spending::tests::exact_approval_binds_receipt_digest_amount_and_operation_kind ... ok
+test spending::tests::swap_rate_cannot_be_weakened_by_quote_or_rounding ... ok
+test spending::tests::executor_generation_and_asset_route_are_not_substitutable ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (/workspace/scratch/e85e65001bc6/dexter-account/.local/build/anchor-host/debug/deps/pool_issuer-0fe1bde687769b75)
+
+running 4 tests
+test funding::tests::ordered_historical_catchup_cannot_roll_back_a_later_frontier ... ok
+test funding::tests::projection_rejects_a_gap_wrong_predecessor_or_wrong_effect ... ok
+test funding::tests::strict_projection_reader_rejects_wrong_owner_bump_and_account_shape ... ok
+test funding::tests::projection_catches_up_once_and_replays_without_reapplying ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (/workspace/scratch/e85e65001bc6/dexter-account/.local/build/anchor-host/debug/deps/principal_registry-566833b8befadbad)
+
+running 13 tests
+test state::tests::allowance_changes_advance_revision_and_preserve_used_authority ... ok
+test state::tests::failed_overflow_and_shortfall_leave_budget_unchanged ... ok
+test state::tests::invalid_or_exhausted_policy_revision_cannot_change_allowance ... ok
+test state::tests::operation_identity_is_shared_across_stages ... ok
+test state::tests::jobs_share_one_lifetime_ceiling ... ok
+test wallet::claim_versions::only_the_two_explicit_claim_versions_are_admitted ... ok
+test wallet_funding::tests::collection_survives_owner_changes_and_requires_no_owner_generation ... ok
+test wallet_funding::tests::effective_meta_privileges_are_part_of_the_complete_bundle_encoding ... ok
+test wallet_funding::tests::withdrawal_requires_exact_current_owner_and_generation ... ok
+test wallet_funding::tests::exact_compact_profile_rejects_unknown_action_trailer_and_unused_accounts ... ok
+test wallet_funding::tests::compact_prefix_binds_caller_principal_custody_and_wallet ... ok
+test wallet_funding::tests::core_binding_reader_rejects_owner_size_bump_and_graph_substitution ... ok
+test wallet_funding::tests::complete_retained_graph_rejects_every_changed_byte_and_another_endpoint ... ok
+
+test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+

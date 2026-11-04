@@ -1,0 +1,9048 @@
+{
+  "address": "727zmMkqPEPHaBDbxY4iAhzt6uZxxAd8CFoPUjdGXPPz",
+  "metadata": {
+    "name": "claims_core",
+    "version": "0.1.0",
+    "spec": "0.1.0"
+  },
+  "instructions": [
+    {
+      "name": "accept_financed_tab",
+      "discriminator": [
+        11,
+        113,
+        108,
+        77,
+        68,
+        19,
+        119,
+        134
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "principal"
+        },
+        {
+          "name": "actor"
+        },
+        {
+          "name": "credential",
+          "signer": true
+        },
+        {
+          "name": "mandate"
+        },
+        {
+          "name": "budget",
+          "writable": true
+        },
+        {
+          "name": "reservation",
+          "writable": true
+        },
+        {
+          "name": "registry_operation",
+          "writable": true
+        },
+        {
+          "name": "registry_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121,
+                  45,
+                  99,
+                  111,
+                  110,
+                  115,
+                  117,
+                  109,
+                  101,
+                  114
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "registry_program",
+          "address": "9cRnuwBP8gUBmFKJxxhLyR3GcqzKwMuUCTTFPngEtr8G"
+        },
+        {
+          "name": "issuer_owner",
+          "signer": true
+        },
+        {
+          "name": "issuer"
+        },
+        {
+          "name": "supplier",
+          "signer": true
+        },
+        {
+          "name": "supplier_principal"
+        },
+        {
+          "name": "fee_custody",
+          "optional": true
+        },
+        {
+          "name": "seller_fee_agreement",
+          "docs": [
+            "Shared supplier-approved lifetime capacity; omitted only when this Tab cannot charge a fee."
+          ],
+          "writable": true,
+          "optional": true
+        },
+        {
+          "name": "credit_line",
+          "writable": true
+        },
+        {
+          "name": "facility",
+          "writable": true
+        },
+        {
+          "name": "custody",
+          "writable": true
+        },
+        {
+          "name": "custody_token"
+        },
+        {
+          "name": "wallet_binding"
+        },
+        {
+          "name": "wallet_config"
+        },
+        {
+          "name": "wallet_authority"
+        },
+        {
+          "name": "claim",
+          "writable": true
+        },
+        {
+          "name": "receipt",
+          "writable": true
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "pool_program",
+          "address": "3yceApSVxLYihHjLLrCycV8T4Bg1MYggbxQhdzaqB2Sm"
+        }
+      ],
+      "args": [
+        {
+          "name": "request_id",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "terms",
+          "type": {
+            "defined": {
+              "name": "TabTerms"
+            }
+          }
+        },
+        {
+          "name": "maximum_interest",
+          "type": "u64"
+        },
+        {
+          "name": "seller_fee_terms",
+          "type": {
+            "defined": {
+              "name": "SellerFeeTerms"
+            }
+          }
+        },
+        {
+          "name": "assignment_policy_hash",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "namespace",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "service_unit",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "unit_price",
+          "type": "u64"
+        },
+        {
+          "name": "external_contract_hash",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "accept_metered_tab",
+      "docs": [
+        "Buyer credential and issuer sign the full quantity × unit-price policy through accepted Tab terms."
+      ],
+      "discriminator": [
+        227,
+        252,
+        138,
+        55,
+        21,
+        6,
+        104,
+        247
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "manager",
+          "signer": true,
+          "relations": [
+            "pool"
+          ]
+        },
+        {
+          "name": "credential",
+          "signer": true
+        },
+        {
+          "name": "principal"
+        },
+        {
+          "name": "actor"
+        },
+        {
+          "name": "mandate"
+        },
+        {
+          "name": "budget",
+          "writable": true
+        },
+        {
+          "name": "reservation",
+          "writable": true
+        },
+        {
+          "name": "registry_operation",
+          "writable": true
+        },
+        {
+          "name": "registry_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121,
+                  45,
+                  99,
+                  111,
+                  110,
+                  115,
+                  117,
+                  109,
+                  101,
+                  114
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "registry_program",
+          "address": "9cRnuwBP8gUBmFKJxxhLyR3GcqzKwMuUCTTFPngEtr8G"
+        },
+        {
+          "name": "source",
+          "writable": true,
+          "relations": [
+            "pool"
+          ]
+        },
+        {
+          "name": "claim",
+          "writable": true
+        },
+        {
+          "name": "operation",
+          "writable": true
+        },
+        {
+          "name": "escrow",
+          "writable": true
+        },
+        {
+          "name": "mint",
+          "relations": [
+            "pool"
+          ]
+        },
+        {
+          "name": "pool",
+          "writable": true
+        },
+        {
+          "name": "treasury",
+          "writable": true,
+          "relations": [
+            "pool"
+          ]
+        },
+        {
+          "name": "dispatcher",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  111,
+                  111,
+                  108,
+                  45,
+                  100,
+                  105,
+                  115,
+                  112,
+                  97,
+                  116,
+                  99,
+                  104
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "pool_program",
+          "address": "3yceApSVxLYihHjLLrCycV8T4Bg1MYggbxQhdzaqB2Sm"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "AcceptArgs"
+            }
+          }
+        },
+        {
+          "name": "namespace",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "service_unit",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "unit_price",
+          "type": "u64"
+        },
+        {
+          "name": "external_contract_hash",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "accept_tab",
+      "discriminator": [
+        71,
+        104,
+        239,
+        36,
+        251,
+        58,
+        57,
+        155
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "manager",
+          "signer": true,
+          "relations": [
+            "pool"
+          ]
+        },
+        {
+          "name": "credential",
+          "signer": true
+        },
+        {
+          "name": "principal"
+        },
+        {
+          "name": "actor"
+        },
+        {
+          "name": "mandate"
+        },
+        {
+          "name": "budget",
+          "writable": true
+        },
+        {
+          "name": "reservation",
+          "writable": true
+        },
+        {
+          "name": "registry_operation",
+          "writable": true
+        },
+        {
+          "name": "registry_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121,
+                  45,
+                  99,
+                  111,
+                  110,
+                  115,
+                  117,
+                  109,
+                  101,
+                  114
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "registry_program",
+          "address": "9cRnuwBP8gUBmFKJxxhLyR3GcqzKwMuUCTTFPngEtr8G"
+        },
+        {
+          "name": "source",
+          "writable": true,
+          "relations": [
+            "pool"
+          ]
+        },
+        {
+          "name": "claim",
+          "writable": true
+        },
+        {
+          "name": "operation",
+          "writable": true
+        },
+        {
+          "name": "escrow",
+          "writable": true
+        },
+        {
+          "name": "mint",
+          "relations": [
+            "pool"
+          ]
+        },
+        {
+          "name": "pool",
+          "writable": true
+        },
+        {
+          "name": "treasury",
+          "writable": true,
+          "relations": [
+            "pool"
+          ]
+        },
+        {
+          "name": "dispatcher",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  111,
+                  111,
+                  108,
+                  45,
+                  100,
+                  105,
+                  115,
+                  112,
+                  97,
+                  116,
+                  99,
+                  104
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "pool_program",
+          "address": "3yceApSVxLYihHjLLrCycV8T4Bg1MYggbxQhdzaqB2Sm"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "AcceptArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "adopt_financier_surplus",
+      "discriminator": [
+        167,
+        153,
+        188,
+        150,
+        57,
+        124,
+        205,
+        215
+      ],
+      "accounts": [
+        {
+          "name": "owner",
+          "signer": true
+        },
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "principal"
+        },
+        {
+          "name": "custody",
+          "writable": true
+        },
+        {
+          "name": "custody_token"
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "receipt",
+          "writable": true
+        },
+        {
+          "name": "pool_program",
+          "address": "3yceApSVxLYihHjLLrCycV8T4Bg1MYggbxQhdzaqB2Sm"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "AdoptFinancierSurplusArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "assign_funded_run",
+      "discriminator": [
+        44,
+        243,
+        184,
+        251,
+        71,
+        6,
+        22,
+        185
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "seller_owner",
+          "signer": true
+        },
+        {
+          "name": "buyer_owner",
+          "signer": true
+        },
+        {
+          "name": "principal"
+        },
+        {
+          "name": "seller"
+        },
+        {
+          "name": "buyer"
+        },
+        {
+          "name": "budget",
+          "writable": true
+        },
+        {
+          "name": "reservation",
+          "writable": true
+        },
+        {
+          "name": "registry_accrual_operation",
+          "writable": true
+        },
+        {
+          "name": "registry_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121,
+                  45,
+                  99,
+                  111,
+                  110,
+                  115,
+                  117,
+                  109,
+                  101,
+                  114
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "registry_program",
+          "address": "9cRnuwBP8gUBmFKJxxhLyR3GcqzKwMuUCTTFPngEtr8G"
+        },
+        {
+          "name": "claim",
+          "writable": true
+        },
+        {
+          "name": "run",
+          "writable": true
+        },
+        {
+          "name": "seller_custody",
+          "writable": true
+        },
+        {
+          "name": "buyer_custody"
+        },
+        {
+          "name": "purchase_from",
+          "writable": true
+        },
+        {
+          "name": "seller_destination",
+          "writable": true
+        },
+        {
+          "name": "buyer_destination"
+        },
+        {
+          "name": "cost_principal",
+          "optional": true
+        },
+        {
+          "name": "cost_custody",
+          "writable": true,
+          "optional": true
+        },
+        {
+          "name": "cost_destination",
+          "writable": true,
+          "optional": true
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "receipt",
+          "writable": true
+        },
+        {
+          "name": "pool_program",
+          "address": "3yceApSVxLYihHjLLrCycV8T4Bg1MYggbxQhdzaqB2Sm"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "AssignFundedRunArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "capture",
+      "discriminator": [
+        110,
+        65,
+        245,
+        241,
+        195,
+        248,
+        233,
+        142
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "supplier",
+          "signer": true
+        },
+        {
+          "name": "principal"
+        },
+        {
+          "name": "budget",
+          "writable": true
+        },
+        {
+          "name": "reservation",
+          "writable": true
+        },
+        {
+          "name": "registry_operation",
+          "writable": true
+        },
+        {
+          "name": "registry_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121,
+                  45,
+                  99,
+                  111,
+                  110,
+                  115,
+                  117,
+                  109,
+                  101,
+                  114
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "registry_program",
+          "address": "9cRnuwBP8gUBmFKJxxhLyR3GcqzKwMuUCTTFPngEtr8G"
+        },
+        {
+          "name": "source",
+          "writable": true
+        },
+        {
+          "name": "claim",
+          "writable": true
+        },
+        {
+          "name": "operation",
+          "writable": true
+        },
+        {
+          "name": "escrow"
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "dispatcher",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  111,
+                  111,
+                  108,
+                  45,
+                  100,
+                  105,
+                  115,
+                  112,
+                  97,
+                  116,
+                  99,
+                  104
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "pool",
+          "writable": true,
+          "optional": true
+        },
+        {
+          "name": "pool_program",
+          "optional": true,
+          "address": "3yceApSVxLYihHjLLrCycV8T4Bg1MYggbxQhdzaqB2Sm"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "StageArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "capture_completed_run",
+      "docs": [
+        "The accepted supplier attests one completed run and its measured quantity."
+      ],
+      "discriminator": [
+        72,
+        211,
+        4,
+        225,
+        194,
+        12,
+        250,
+        60
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "supplier",
+          "signer": true
+        },
+        {
+          "name": "principal"
+        },
+        {
+          "name": "budget",
+          "writable": true
+        },
+        {
+          "name": "reservation",
+          "writable": true
+        },
+        {
+          "name": "registry_operation",
+          "writable": true
+        },
+        {
+          "name": "registry_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121,
+                  45,
+                  99,
+                  111,
+                  110,
+                  115,
+                  117,
+                  109,
+                  101,
+                  114
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "registry_program",
+          "address": "9cRnuwBP8gUBmFKJxxhLyR3GcqzKwMuUCTTFPngEtr8G"
+        },
+        {
+          "name": "source",
+          "writable": true
+        },
+        {
+          "name": "claim",
+          "writable": true
+        },
+        {
+          "name": "operation",
+          "writable": true
+        },
+        {
+          "name": "escrow"
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "dispatcher",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  111,
+                  111,
+                  108,
+                  45,
+                  100,
+                  105,
+                  115,
+                  112,
+                  97,
+                  116,
+                  99,
+                  104
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "pool",
+          "writable": true,
+          "optional": true
+        },
+        {
+          "name": "pool_program",
+          "optional": true,
+          "address": "3yceApSVxLYihHjLLrCycV8T4Bg1MYggbxQhdzaqB2Sm"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "usage_origin",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  117,
+                  115,
+                  97,
+                  103,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "supplier"
+              },
+              {
+                "kind": "arg",
+                "path": "namespace"
+              },
+              {
+                "kind": "arg",
+                "path": "run_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "payment",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  117,
+                  110,
+                  45,
+                  112,
+                  97,
+                  121,
+                  109,
+                  101,
+                  110,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "arg",
+                "path": "payment_id"
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "StageArgs"
+            }
+          }
+        },
+        {
+          "name": "namespace",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "run_id",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "service_unit",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "external_contract_hash",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "payment_id",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "units",
+          "type": "u64"
+        },
+        {
+          "name": "unit_price",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "collect_financier",
+      "discriminator": [
+        183,
+        239,
+        45,
+        244,
+        154,
+        30,
+        173,
+        57
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "financier_principal"
+        },
+        {
+          "name": "wallet_binding"
+        },
+        {
+          "name": "custody",
+          "writable": true
+        },
+        {
+          "name": "custody_token",
+          "writable": true
+        },
+        {
+          "name": "wallet_authority"
+        },
+        {
+          "name": "claim",
+          "writable": true
+        },
+        {
+          "name": "run",
+          "writable": true
+        },
+        {
+          "name": "facility",
+          "writable": true
+        },
+        {
+          "name": "destination",
+          "writable": true
+        },
+        {
+          "name": "fee_destination",
+          "writable": true,
+          "optional": true
+        },
+        {
+          "name": "fee_custody",
+          "writable": true,
+          "optional": true
+        },
+        {
+          "name": "receipt",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  102,
+                  105,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  45,
+                  111,
+                  112,
+                  101,
+                  114,
+                  97,
+                  116,
+                  105,
+                  111,
+                  110
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "claim.terms.principal",
+                "account": "FundedClaim"
+              },
+              {
+                "kind": "arg",
+                "path": "operation_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "pool_program",
+          "address": "3yceApSVxLYihHjLLrCycV8T4Bg1MYggbxQhdzaqB2Sm"
+        },
+        {
+          "name": "reimbursement_principal",
+          "optional": true
+        },
+        {
+          "name": "reimbursement_authority",
+          "signer": true,
+          "optional": true
+        },
+        {
+          "name": "reimbursement_from",
+          "writable": true,
+          "optional": true
+        },
+        {
+          "name": "sponsor_destination",
+          "writable": true,
+          "optional": true
+        },
+        {
+          "name": "sponsor_custody",
+          "writable": true,
+          "optional": true
+        }
+      ],
+      "args": [
+        {
+          "name": "operation_id",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "paid_before",
+          "type": "u64"
+        },
+        {
+          "name": "amount",
+          "type": "u64"
+        },
+        {
+          "name": "expected_revision",
+          "type": "u64"
+        },
+        {
+          "name": "service_without_pool",
+          "type": "bool"
+        },
+        {
+          "name": "sponsor_quote",
+          "type": {
+            "option": {
+              "defined": {
+                "name": "SponsorQuote"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "contribute_financier_capital",
+      "discriminator": [
+        167,
+        69,
+        134,
+        63,
+        38,
+        238,
+        57,
+        70
+      ],
+      "accounts": [
+        {
+          "name": "owner",
+          "signer": true
+        },
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "principal"
+        },
+        {
+          "name": "custody",
+          "writable": true
+        },
+        {
+          "name": "from",
+          "writable": true
+        },
+        {
+          "name": "custody_token",
+          "writable": true
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "receipt",
+          "writable": true
+        },
+        {
+          "name": "pool_program",
+          "address": "3yceApSVxLYihHjLLrCycV8T4Bg1MYggbxQhdzaqB2Sm"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "ContributeFinancierCapitalArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "correct_financed_run",
+      "discriminator": [
+        220,
+        214,
+        228,
+        42,
+        137,
+        0,
+        96,
+        75
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "company_owner",
+          "signer": true
+        },
+        {
+          "name": "supplier_owner",
+          "signer": true,
+          "optional": true
+        },
+        {
+          "name": "principal"
+        },
+        {
+          "name": "supplier_principal"
+        },
+        {
+          "name": "creditor_principal"
+        },
+        {
+          "name": "creditor_owner",
+          "signer": true,
+          "optional": true
+        },
+        {
+          "name": "funding_principal",
+          "optional": true
+        },
+        {
+          "name": "funding_authority",
+          "signer": true,
+          "optional": true
+        },
+        {
+          "name": "funding_from",
+          "writable": true,
+          "optional": true
+        },
+        {
+          "name": "budget",
+          "writable": true
+        },
+        {
+          "name": "reservation",
+          "writable": true
+        },
+        {
+          "name": "registry_accrual_operation",
+          "writable": true
+        },
+        {
+          "name": "registry_release_operation",
+          "writable": true
+        },
+        {
+          "name": "registry_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121,
+                  45,
+                  99,
+                  111,
+                  110,
+                  115,
+                  117,
+                  109,
+                  101,
+                  114
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "registry_program",
+          "address": "9cRnuwBP8gUBmFKJxxhLyR3GcqzKwMuUCTTFPngEtr8G"
+        },
+        {
+          "name": "line",
+          "writable": true
+        },
+        {
+          "name": "claim",
+          "writable": true
+        },
+        {
+          "name": "run",
+          "writable": true
+        },
+        {
+          "name": "custody",
+          "writable": true
+        },
+        {
+          "name": "custody_token"
+        },
+        {
+          "name": "facility",
+          "writable": true
+        },
+        {
+          "name": "creditor_custody",
+          "writable": true,
+          "optional": true
+        },
+        {
+          "name": "creditor_destination",
+          "writable": true,
+          "optional": true
+        },
+        {
+          "name": "original_collection",
+          "optional": true
+        },
+        {
+          "name": "collection_usage",
+          "writable": true,
+          "optional": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  114,
+                  114,
+                  101,
+                  99,
+                  116,
+                  105,
+                  111,
+                  110,
+                  45,
+                  99,
+                  111,
+                  108,
+                  108,
+                  101,
+                  99,
+                  116,
+                  105,
+                  111,
+                  110
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "original_collection"
+              }
+            ]
+          }
+        },
+        {
+          "name": "original_repayment",
+          "optional": true
+        },
+        {
+          "name": "repayment_usage",
+          "writable": true,
+          "optional": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  114,
+                  114,
+                  101,
+                  99,
+                  116,
+                  105,
+                  111,
+                  110,
+                  45,
+                  114,
+                  101,
+                  112,
+                  97,
+                  121,
+                  109,
+                  101,
+                  110,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "original_repayment"
+              }
+            ]
+          }
+        },
+        {
+          "name": "refund_destination",
+          "writable": true,
+          "optional": true
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "receipt",
+          "writable": true
+        },
+        {
+          "name": "correction",
+          "writable": true
+        },
+        {
+          "name": "pool_program",
+          "address": "3yceApSVxLYihHjLLrCycV8T4Bg1MYggbxQhdzaqB2Sm"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "refund_custody",
+          "docs": [
+            "repayment receipt; may alias the typed source or unchecked creditor."
+          ],
+          "writable": true,
+          "optional": true
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "CorrectFinancedRunArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "create_financier_custody",
+      "discriminator": [
+        25,
+        190,
+        87,
+        70,
+        44,
+        151,
+        5,
+        128
+      ],
+      "accounts": [
+        {
+          "name": "owner",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "financier"
+        },
+        {
+          "name": "wallet_binding"
+        },
+        {
+          "name": "wallet_config"
+        },
+        {
+          "name": "wallet_authority"
+        },
+        {
+          "name": "custody_token"
+        },
+        {
+          "name": "custody",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  117,
+                  115,
+                  116,
+                  111,
+                  100,
+                  121,
+                  45,
+                  114,
+                  101,
+                  115,
+                  101,
+                  114,
+                  118,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "custody_token"
+              }
+            ]
+          }
+        },
+        {
+          "name": "receipt",
+          "writable": true
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "pool_program",
+          "address": "3yceApSVxLYihHjLLrCycV8T4Bg1MYggbxQhdzaqB2Sm"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "request_id",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "profile",
+          "type": "u8"
+        },
+        {
+          "name": "allocated_cash",
+          "type": "u64"
+        },
+        {
+          "name": "authority_generation",
+          "type": "u64"
+        },
+        {
+          "name": "provenance_hash",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "credit_seller_fee",
+      "discriminator": [
+        106,
+        236,
+        191,
+        67,
+        13,
+        210,
+        106,
+        224
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "beneficiary_owner",
+          "signer": true
+        },
+        {
+          "name": "beneficiary"
+        },
+        {
+          "name": "claim",
+          "writable": true
+        },
+        {
+          "name": "original_receipt"
+        },
+        {
+          "name": "credits",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  108,
+                  108,
+                  101,
+                  114,
+                  45,
+                  102,
+                  101,
+                  101,
+                  45,
+                  99,
+                  114,
+                  101,
+                  100,
+                  105,
+                  116,
+                  115
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "original_receipt"
+              }
+            ]
+          }
+        },
+        {
+          "name": "from",
+          "writable": true
+        },
+        {
+          "name": "destination",
+          "writable": true
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "receipt",
+          "writable": true
+        },
+        {
+          "name": "pool_program",
+          "address": "3yceApSVxLYihHjLLrCycV8T4Bg1MYggbxQhdzaqB2Sm"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "CreditSellerFeeArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "earn_financed_run",
+      "discriminator": [
+        227,
+        179,
+        11,
+        225,
+        104,
+        3,
+        19,
+        95
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "supplier",
+          "signer": true
+        },
+        {
+          "name": "supplier_principal"
+        },
+        {
+          "name": "principal"
+        },
+        {
+          "name": "budget",
+          "writable": true
+        },
+        {
+          "name": "reservation",
+          "writable": true
+        },
+        {
+          "name": "registry_operation",
+          "writable": true
+        },
+        {
+          "name": "registry_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121,
+                  45,
+                  99,
+                  111,
+                  110,
+                  115,
+                  117,
+                  109,
+                  101,
+                  114
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "registry_program",
+          "address": "9cRnuwBP8gUBmFKJxxhLyR3GcqzKwMuUCTTFPngEtr8G"
+        },
+        {
+          "name": "line",
+          "writable": true
+        },
+        {
+          "name": "claim",
+          "writable": true
+        },
+        {
+          "name": "custody",
+          "writable": true
+        },
+        {
+          "name": "custody_token"
+        },
+        {
+          "name": "run",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  117,
+                  115,
+                  97,
+                  103,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "claim.supplier_principal",
+                "account": "FundedClaim"
+              },
+              {
+                "kind": "arg",
+                "path": "namespace"
+              },
+              {
+                "kind": "arg",
+                "path": "run_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "payment",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  117,
+                  110,
+                  45,
+                  112,
+                  97,
+                  121,
+                  109,
+                  101,
+                  110,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "arg",
+                "path": "payment_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "receipt",
+          "writable": true
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "pool_program",
+          "address": "3yceApSVxLYihHjLLrCycV8T4Bg1MYggbxQhdzaqB2Sm"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "payment_id",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "namespace",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "run_id",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "service_unit",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "external_contract_hash",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "units",
+          "type": "u64"
+        },
+        {
+          "name": "unit_price",
+          "type": "u64"
+        },
+        {
+          "name": "expected_revision",
+          "type": "u64"
+        },
+        {
+          "name": "service_without_pool",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "initialize_finance_book",
+      "discriminator": [
+        192,
+        232,
+        72,
+        38,
+        194,
+        205,
+        148,
+        187
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "book",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  102,
+                  105,
+                  110,
+                  97,
+                  110,
+                  99,
+                  105,
+                  97,
+                  108,
+                  45,
+                  98,
+                  111,
+                  111,
+                  107
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "principal"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "principal",
+          "type": "pubkey"
+        }
+      ]
+    },
+    {
+      "name": "initialize_source",
+      "discriminator": [
+        195,
+        76,
+        135,
+        83,
+        244,
+        202,
+        176,
+        138
+      ],
+      "accounts": [
+        {
+          "name": "manager",
+          "writable": true,
+          "signer": true,
+          "relations": [
+            "pool"
+          ]
+        },
+        {
+          "name": "pool"
+        },
+        {
+          "name": "mint",
+          "relations": [
+            "pool"
+          ]
+        },
+        {
+          "name": "treasury",
+          "relations": [
+            "pool"
+          ]
+        },
+        {
+          "name": "source",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  111,
+                  117,
+                  114,
+                  99,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "pool"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ]
+          }
+        },
+        {
+          "name": "escrow",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "source"
+              },
+              {
+                "kind": "const",
+                "value": [
+                  6,
+                  221,
+                  246,
+                  225,
+                  215,
+                  101,
+                  161,
+                  147,
+                  217,
+                  203,
+                  225,
+                  70,
+                  206,
+                  235,
+                  121,
+                  172,
+                  28,
+                  180,
+                  133,
+                  237,
+                  95,
+                  91,
+                  55,
+                  145,
+                  58,
+                  140,
+                  245,
+                  133,
+                  126,
+                  255,
+                  0,
+                  169
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "manage_funding_facility",
+      "discriminator": [
+        163,
+        81,
+        78,
+        40,
+        162,
+        122,
+        172,
+        48
+      ],
+      "accounts": [
+        {
+          "name": "owner",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "financier"
+        },
+        {
+          "name": "facility",
+          "writable": true
+        },
+        {
+          "name": "receipt",
+          "writable": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "request_id",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "expected_revision",
+          "type": "u64"
+        },
+        {
+          "name": "commitment_limit",
+          "type": "u64"
+        },
+        {
+          "name": "enabled",
+          "type": "bool"
+        },
+        {
+          "name": "authority_generation",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "open_customer_credit_line",
+      "discriminator": [
+        234,
+        25,
+        220,
+        73,
+        193,
+        196,
+        25,
+        251
+      ],
+      "accounts": [
+        {
+          "name": "owner",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "company"
+        },
+        {
+          "name": "issuer_owner",
+          "signer": true
+        },
+        {
+          "name": "issuer"
+        },
+        {
+          "name": "issuer_custody"
+        },
+        {
+          "name": "facility"
+        },
+        {
+          "name": "credit_line",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  114,
+                  101,
+                  100,
+                  105,
+                  116,
+                  45,
+                  108,
+                  105,
+                  110,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "company"
+              },
+              {
+                "kind": "arg",
+                "path": "line_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "protocol_custody",
+          "optional": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "line_id",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "limit",
+          "type": "u64"
+        },
+        {
+          "name": "interest_terms",
+          "type": {
+            "defined": {
+              "name": "InterestTerms"
+            }
+          }
+        },
+        {
+          "name": "assignment_policy_hash",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "owner_generation",
+          "type": "u64"
+        },
+        {
+          "name": "issuer_generation",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "open_funding_facility",
+      "discriminator": [
+        242,
+        79,
+        168,
+        241,
+        209,
+        82,
+        147,
+        63
+      ],
+      "accounts": [
+        {
+          "name": "owner",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "financier"
+        },
+        {
+          "name": "issuer_owner",
+          "signer": true
+        },
+        {
+          "name": "issuer"
+        },
+        {
+          "name": "custody"
+        },
+        {
+          "name": "facility",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  102,
+                  117,
+                  110,
+                  100,
+                  105,
+                  110,
+                  103,
+                  45,
+                  102,
+                  97,
+                  99,
+                  105,
+                  108,
+                  105,
+                  116,
+                  121
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "financier"
+              },
+              {
+                "kind": "arg",
+                "path": "facility_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "protocol_custody",
+          "optional": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "facility_id",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "commitment_limit",
+          "type": "u64"
+        },
+        {
+          "name": "accept_until",
+          "type": "i64"
+        },
+        {
+          "name": "external",
+          "type": "bool"
+        },
+        {
+          "name": "terms_hash",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "interest_terms",
+          "type": {
+            "defined": {
+              "name": "InterestTerms"
+            }
+          }
+        },
+        {
+          "name": "financier_generation",
+          "type": "u64"
+        },
+        {
+          "name": "issuer_generation",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "open_seller_fee_agreement",
+      "discriminator": [
+        151,
+        128,
+        40,
+        85,
+        83,
+        18,
+        206,
+        62
+      ],
+      "accounts": [
+        {
+          "name": "owner",
+          "signer": true
+        },
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "supplier_principal"
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "agreement",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  101,
+                  108,
+                  108,
+                  101,
+                  114,
+                  45,
+                  102,
+                  101,
+                  101,
+                  45,
+                  97,
+                  103,
+                  114,
+                  101,
+                  101,
+                  109,
+                  101,
+                  110,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "supplier_principal"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              },
+              {
+                "kind": "arg",
+                "path": "agreement_hash"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "agreement_hash",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "aggregate_cap",
+          "type": "u64"
+        },
+        {
+          "name": "authority_generation",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "payout",
+      "discriminator": [
+        149,
+        140,
+        194,
+        236,
+        174,
+        189,
+        6,
+        239
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "source",
+          "writable": true
+        },
+        {
+          "name": "claim",
+          "writable": true
+        },
+        {
+          "name": "operation",
+          "writable": true
+        },
+        {
+          "name": "escrow",
+          "writable": true
+        },
+        {
+          "name": "destination",
+          "writable": true
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "dispatcher",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  111,
+                  111,
+                  108,
+                  45,
+                  100,
+                  105,
+                  115,
+                  112,
+                  97,
+                  116,
+                  99,
+                  104
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "pool",
+          "writable": true,
+          "optional": true
+        },
+        {
+          "name": "pool_program",
+          "optional": true,
+          "address": "3yceApSVxLYihHjLLrCycV8T4Bg1MYggbxQhdzaqB2Sm"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "StageArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "refund_funded_interest",
+      "discriminator": [
+        166,
+        215,
+        68,
+        183,
+        199,
+        125,
+        68,
+        29
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "principal"
+        },
+        {
+          "name": "claim"
+        },
+        {
+          "name": "run"
+        },
+        {
+          "name": "original_repayment"
+        },
+        {
+          "name": "repayment_usage",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  114,
+                  114,
+                  101,
+                  99,
+                  116,
+                  105,
+                  111,
+                  110,
+                  45,
+                  114,
+                  101,
+                  112,
+                  97,
+                  121,
+                  109,
+                  101,
+                  110,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "original_repayment"
+              }
+            ]
+          }
+        },
+        {
+          "name": "lender_principal",
+          "optional": true
+        },
+        {
+          "name": "lender_authority",
+          "signer": true,
+          "optional": true
+        },
+        {
+          "name": "lender_from",
+          "writable": true,
+          "optional": true
+        },
+        {
+          "name": "protocol_principal",
+          "optional": true
+        },
+        {
+          "name": "protocol_authority",
+          "signer": true,
+          "optional": true
+        },
+        {
+          "name": "protocol_from",
+          "writable": true,
+          "optional": true
+        },
+        {
+          "name": "refund_destination",
+          "writable": true
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "receipt",
+          "writable": true
+        },
+        {
+          "name": "interest_refund",
+          "writable": true
+        },
+        {
+          "name": "pool_program",
+          "address": "3yceApSVxLYihHjLLrCycV8T4Bg1MYggbxQhdzaqB2Sm"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "refund_custody",
+          "docs": [
+            "from the immutable repayment receipt; absent for ordinary owner cash."
+          ],
+          "writable": true,
+          "optional": true
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "RefundFundedInterestArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "release_financier_unused",
+      "discriminator": [
+        160,
+        22,
+        172,
+        97,
+        150,
+        162,
+        170,
+        233
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "principal"
+        },
+        {
+          "name": "supplier_principal",
+          "docs": [
+            "Current supplier principal authenticates surrender; payment route is unchanged."
+          ]
+        },
+        {
+          "name": "supplier",
+          "signer": true,
+          "optional": true
+        },
+        {
+          "name": "budget",
+          "writable": true
+        },
+        {
+          "name": "reservation",
+          "writable": true
+        },
+        {
+          "name": "registry_operation",
+          "writable": true
+        },
+        {
+          "name": "registry_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121,
+                  45,
+                  99,
+                  111,
+                  110,
+                  115,
+                  117,
+                  109,
+                  101,
+                  114
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "registry_program",
+          "address": "9cRnuwBP8gUBmFKJxxhLyR3GcqzKwMuUCTTFPngEtr8G"
+        },
+        {
+          "name": "line",
+          "writable": true
+        },
+        {
+          "name": "claim",
+          "writable": true
+        },
+        {
+          "name": "facility",
+          "writable": true
+        },
+        {
+          "name": "custody",
+          "writable": true
+        },
+        {
+          "name": "custody_token"
+        },
+        {
+          "name": "receipt",
+          "writable": true
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "pool_program",
+          "address": "3yceApSVxLYihHjLLrCycV8T4Bg1MYggbxQhdzaqB2Sm"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "request_id",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "amount",
+          "type": "u64"
+        },
+        {
+          "name": "expected_revision",
+          "type": "u64"
+        },
+        {
+          "name": "service_without_pool",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "release_unused",
+      "docs": [
+        "Only the supplier can surrender an accepted unused promise before its",
+        "capture deadline. After expiry anyone can release the unused remainder;",
+        "earned supplier payable and debt are never canceled by this operation."
+      ],
+      "discriminator": [
+        12,
+        100,
+        150,
+        49,
+        94,
+        176,
+        99,
+        89
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "supplier",
+          "signer": true,
+          "optional": true
+        },
+        {
+          "name": "principal"
+        },
+        {
+          "name": "budget",
+          "writable": true
+        },
+        {
+          "name": "reservation",
+          "writable": true
+        },
+        {
+          "name": "registry_operation",
+          "writable": true
+        },
+        {
+          "name": "registry_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121,
+                  45,
+                  99,
+                  111,
+                  110,
+                  115,
+                  117,
+                  109,
+                  101,
+                  114
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "registry_program",
+          "address": "9cRnuwBP8gUBmFKJxxhLyR3GcqzKwMuUCTTFPngEtr8G"
+        },
+        {
+          "name": "source",
+          "writable": true
+        },
+        {
+          "name": "claim",
+          "writable": true
+        },
+        {
+          "name": "operation",
+          "writable": true
+        },
+        {
+          "name": "escrow",
+          "writable": true
+        },
+        {
+          "name": "treasury",
+          "writable": true
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "dispatcher",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  111,
+                  111,
+                  108,
+                  45,
+                  100,
+                  105,
+                  115,
+                  112,
+                  97,
+                  116,
+                  99,
+                  104
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "pool",
+          "writable": true,
+          "optional": true
+        },
+        {
+          "name": "pool_program",
+          "optional": true,
+          "address": "3yceApSVxLYihHjLLrCycV8T4Bg1MYggbxQhdzaqB2Sm"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "StageArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "repay",
+      "docs": [
+        "Repayment reduces buyer debt and transfers to the recorded creditor",
+        "treasury. It never calls Registry to replenish expenditure permission."
+      ],
+      "discriminator": [
+        234,
+        103,
+        67,
+        82,
+        208,
+        234,
+        219,
+        166
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "repayment_authority",
+          "docs": [
+            "The token owner authorizes repayment independently of the rent/fee sponsor.",
+            "A governed wallet may provide this signature through its native CPI."
+          ],
+          "signer": true
+        },
+        {
+          "name": "source",
+          "writable": true
+        },
+        {
+          "name": "claim",
+          "writable": true
+        },
+        {
+          "name": "operation",
+          "writable": true
+        },
+        {
+          "name": "from",
+          "writable": true
+        },
+        {
+          "name": "treasury",
+          "writable": true
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "dispatcher",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  111,
+                  111,
+                  108,
+                  45,
+                  100,
+                  105,
+                  115,
+                  112,
+                  97,
+                  116,
+                  99,
+                  104
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "pool",
+          "writable": true,
+          "optional": true
+        },
+        {
+          "name": "pool_program",
+          "optional": true,
+          "address": "3yceApSVxLYihHjLLrCycV8T4Bg1MYggbxQhdzaqB2Sm"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "StageArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "repay_funded_run",
+      "discriminator": [
+        156,
+        89,
+        11,
+        186,
+        173,
+        94,
+        66,
+        197
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "repayment_authority",
+          "signer": true
+        },
+        {
+          "name": "repayment_principal"
+        },
+        {
+          "name": "principal"
+        },
+        {
+          "name": "budget",
+          "writable": true
+        },
+        {
+          "name": "reservation",
+          "writable": true
+        },
+        {
+          "name": "registry_accrual_operation",
+          "writable": true
+        },
+        {
+          "name": "registry_release_operation",
+          "writable": true
+        },
+        {
+          "name": "registry_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121,
+                  45,
+                  99,
+                  111,
+                  110,
+                  115,
+                  117,
+                  109,
+                  101,
+                  114
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "registry_program",
+          "address": "9cRnuwBP8gUBmFKJxxhLyR3GcqzKwMuUCTTFPngEtr8G"
+        },
+        {
+          "name": "line",
+          "writable": true
+        },
+        {
+          "name": "claim",
+          "writable": true
+        },
+        {
+          "name": "run",
+          "writable": true
+        },
+        {
+          "name": "creditor_custody",
+          "writable": true
+        },
+        {
+          "name": "from",
+          "writable": true
+        },
+        {
+          "name": "destination",
+          "writable": true
+        },
+        {
+          "name": "protocol_custody",
+          "writable": true,
+          "optional": true
+        },
+        {
+          "name": "protocol_destination",
+          "writable": true,
+          "optional": true
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "receipt",
+          "writable": true
+        },
+        {
+          "name": "pool_program",
+          "address": "3yceApSVxLYihHjLLrCycV8T4Bg1MYggbxQhdzaqB2Sm"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "RepayFundedRunArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "repay_funding_facility",
+      "discriminator": [
+        54,
+        186,
+        61,
+        101,
+        220,
+        248,
+        188,
+        250
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "repayment_authority",
+          "signer": true
+        },
+        {
+          "name": "repayment_principal"
+        },
+        {
+          "name": "issuer"
+        },
+        {
+          "name": "facility",
+          "writable": true
+        },
+        {
+          "name": "financier_custody",
+          "writable": true
+        },
+        {
+          "name": "from",
+          "writable": true
+        },
+        {
+          "name": "destination",
+          "writable": true
+        },
+        {
+          "name": "protocol_custody",
+          "writable": true,
+          "optional": true
+        },
+        {
+          "name": "protocol_destination",
+          "writable": true,
+          "optional": true
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "receipt",
+          "writable": true
+        },
+        {
+          "name": "pool_program",
+          "address": "3yceApSVxLYihHjLLrCycV8T4Bg1MYggbxQhdzaqB2Sm"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "RepayFundingFacilityArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "repay_governed_funded_run",
+      "discriminator": [
+        153,
+        141,
+        35,
+        109,
+        167,
+        178,
+        216,
+        218
+      ],
+      "accounts": [
+        {
+          "name": "repayment",
+          "accounts": [
+            {
+              "name": "payer",
+              "writable": true,
+              "signer": true
+            },
+            {
+              "name": "repayment_authority",
+              "signer": true
+            },
+            {
+              "name": "repayment_principal"
+            },
+            {
+              "name": "principal"
+            },
+            {
+              "name": "budget",
+              "writable": true
+            },
+            {
+              "name": "reservation",
+              "writable": true
+            },
+            {
+              "name": "registry_accrual_operation",
+              "writable": true
+            },
+            {
+              "name": "registry_release_operation",
+              "writable": true
+            },
+            {
+              "name": "registry_authority",
+              "pda": {
+                "seeds": [
+                  {
+                    "kind": "const",
+                    "value": [
+                      114,
+                      101,
+                      103,
+                      105,
+                      115,
+                      116,
+                      114,
+                      121,
+                      45,
+                      99,
+                      111,
+                      110,
+                      115,
+                      117,
+                      109,
+                      101,
+                      114
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "name": "registry_program",
+              "address": "9cRnuwBP8gUBmFKJxxhLyR3GcqzKwMuUCTTFPngEtr8G"
+            },
+            {
+              "name": "line",
+              "writable": true
+            },
+            {
+              "name": "claim",
+              "writable": true
+            },
+            {
+              "name": "run",
+              "writable": true
+            },
+            {
+              "name": "creditor_custody",
+              "writable": true
+            },
+            {
+              "name": "from",
+              "writable": true
+            },
+            {
+              "name": "destination",
+              "writable": true
+            },
+            {
+              "name": "protocol_custody",
+              "writable": true,
+              "optional": true
+            },
+            {
+              "name": "protocol_destination",
+              "writable": true,
+              "optional": true
+            },
+            {
+              "name": "mint"
+            },
+            {
+              "name": "receipt",
+              "writable": true
+            },
+            {
+              "name": "pool_program",
+              "address": "3yceApSVxLYihHjLLrCycV8T4Bg1MYggbxQhdzaqB2Sm"
+            },
+            {
+              "name": "token_program",
+              "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+            },
+            {
+              "name": "system_program",
+              "address": "11111111111111111111111111111111"
+            }
+          ]
+        },
+        {
+          "name": "repayment_binding"
+        },
+        {
+          "name": "repayment_custody",
+          "writable": true
+        },
+        {
+          "name": "repayment_permission",
+          "writable": true
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "RepayFundedRunArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "repay_governed_funding_facility",
+      "discriminator": [
+        194,
+        126,
+        85,
+        185,
+        148,
+        165,
+        174,
+        22
+      ],
+      "accounts": [
+        {
+          "name": "repayment",
+          "accounts": [
+            {
+              "name": "payer",
+              "writable": true,
+              "signer": true
+            },
+            {
+              "name": "repayment_authority",
+              "signer": true
+            },
+            {
+              "name": "repayment_principal"
+            },
+            {
+              "name": "issuer"
+            },
+            {
+              "name": "facility",
+              "writable": true
+            },
+            {
+              "name": "financier_custody",
+              "writable": true
+            },
+            {
+              "name": "from",
+              "writable": true
+            },
+            {
+              "name": "destination",
+              "writable": true
+            },
+            {
+              "name": "protocol_custody",
+              "writable": true,
+              "optional": true
+            },
+            {
+              "name": "protocol_destination",
+              "writable": true,
+              "optional": true
+            },
+            {
+              "name": "mint"
+            },
+            {
+              "name": "receipt",
+              "writable": true
+            },
+            {
+              "name": "pool_program",
+              "address": "3yceApSVxLYihHjLLrCycV8T4Bg1MYggbxQhdzaqB2Sm"
+            },
+            {
+              "name": "token_program",
+              "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+            },
+            {
+              "name": "system_program",
+              "address": "11111111111111111111111111111111"
+            }
+          ]
+        },
+        {
+          "name": "registry_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121,
+                  45,
+                  99,
+                  111,
+                  110,
+                  115,
+                  117,
+                  109,
+                  101,
+                  114
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "registry_program",
+          "address": "9cRnuwBP8gUBmFKJxxhLyR3GcqzKwMuUCTTFPngEtr8G"
+        },
+        {
+          "name": "repayment_binding"
+        },
+        {
+          "name": "repayment_custody",
+          "writable": true
+        },
+        {
+          "name": "repayment_permission",
+          "writable": true
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "RepayFundingFacilityArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "wallet_send",
+      "discriminator": [
+        89,
+        38,
+        228,
+        220,
+        142,
+        253,
+        194,
+        46
+      ],
+      "accounts": [
+        {
+          "name": "executor",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "wallet_authority",
+          "signer": true
+        },
+        {
+          "name": "principal"
+        },
+        {
+          "name": "binding"
+        },
+        {
+          "name": "permission",
+          "writable": true
+        },
+        {
+          "name": "source_custody",
+          "writable": true
+        },
+        {
+          "name": "source",
+          "writable": true
+        },
+        {
+          "name": "input_mint"
+        },
+        {
+          "name": "operation",
+          "writable": true
+        },
+        {
+          "name": "input_receipt",
+          "writable": true
+        },
+        {
+          "name": "registry_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121,
+                  45,
+                  99,
+                  111,
+                  110,
+                  115,
+                  117,
+                  109,
+                  101,
+                  114
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "registry_program",
+          "address": "9cRnuwBP8gUBmFKJxxhLyR3GcqzKwMuUCTTFPngEtr8G"
+        },
+        {
+          "name": "pool_program",
+          "address": "3yceApSVxLYihHjLLrCycV8T4Bg1MYggbxQhdzaqB2Sm"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "destination",
+          "writable": true
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "WalletSendArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "wallet_swap_exact_input",
+      "discriminator": [
+        81,
+        8,
+        174,
+        174,
+        41,
+        144,
+        113,
+        82
+      ],
+      "accounts": [
+        {
+          "name": "executor",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "wallet_authority",
+          "signer": true
+        },
+        {
+          "name": "principal"
+        },
+        {
+          "name": "binding"
+        },
+        {
+          "name": "permission",
+          "writable": true
+        },
+        {
+          "name": "source_custody",
+          "writable": true
+        },
+        {
+          "name": "source",
+          "writable": true
+        },
+        {
+          "name": "input_mint"
+        },
+        {
+          "name": "operation",
+          "writable": true
+        },
+        {
+          "name": "input_receipt",
+          "writable": true
+        },
+        {
+          "name": "registry_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121,
+                  45,
+                  99,
+                  111,
+                  110,
+                  115,
+                  117,
+                  109,
+                  101,
+                  114
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "registry_program",
+          "address": "9cRnuwBP8gUBmFKJxxhLyR3GcqzKwMuUCTTFPngEtr8G"
+        },
+        {
+          "name": "pool_program",
+          "address": "3yceApSVxLYihHjLLrCycV8T4Bg1MYggbxQhdzaqB2Sm"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "output_custody",
+          "writable": true
+        },
+        {
+          "name": "destination",
+          "writable": true
+        },
+        {
+          "name": "output_mint"
+        },
+        {
+          "name": "output_receipt",
+          "writable": true
+        },
+        {
+          "name": "swap_program",
+          "address": "SwapsVeCiPHMUAtzQWZw7RjsKjgCjhwU55QGu4U1Szw"
+        },
+        {
+          "name": "swap_state"
+        },
+        {
+          "name": "swap_authority"
+        },
+        {
+          "name": "pool_source",
+          "writable": true
+        },
+        {
+          "name": "pool_destination",
+          "writable": true
+        },
+        {
+          "name": "pool_mint",
+          "writable": true
+        },
+        {
+          "name": "pool_fee",
+          "writable": true
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "WalletSwapArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "withdraw_financier_free",
+      "discriminator": [
+        99,
+        99,
+        177,
+        120,
+        182,
+        205,
+        255,
+        43
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "financier_principal"
+        },
+        {
+          "name": "wallet_binding"
+        },
+        {
+          "name": "custody",
+          "writable": true
+        },
+        {
+          "name": "custody_token",
+          "writable": true
+        },
+        {
+          "name": "wallet_authority"
+        },
+        {
+          "name": "destination",
+          "writable": true
+        },
+        {
+          "name": "receipt",
+          "writable": true
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "pool_program",
+          "address": "3yceApSVxLYihHjLLrCycV8T4Bg1MYggbxQhdzaqB2Sm"
+        }
+      ],
+      "args": [
+        {
+          "name": "request_id",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "amount",
+          "type": "u64"
+        },
+        {
+          "name": "expected_revision",
+          "type": "u64"
+        },
+        {
+          "name": "authority_generation",
+          "type": "u64"
+        },
+        {
+          "name": "service_without_pool",
+          "type": "bool"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Claim",
+      "discriminator": [
+        155,
+        70,
+        22,
+        176,
+        123,
+        215,
+        246,
+        102
+      ]
+    },
+    {
+      "name": "CollectionCorrectionRecord",
+      "discriminator": [
+        194,
+        246,
+        19,
+        251,
+        152,
+        165,
+        207,
+        178
+      ]
+    },
+    {
+      "name": "CompletedRunOrigin",
+      "discriminator": [
+        38,
+        58,
+        111,
+        21,
+        124,
+        226,
+        226,
+        10
+      ]
+    },
+    {
+      "name": "CompletedRunPayment",
+      "discriminator": [
+        54,
+        233,
+        72,
+        162,
+        1,
+        152,
+        170,
+        138
+      ]
+    },
+    {
+      "name": "CorrectionReceipt",
+      "discriminator": [
+        165,
+        50,
+        228,
+        85,
+        26,
+        228,
+        245,
+        18
+      ]
+    },
+    {
+      "name": "CustomerCreditLine",
+      "discriminator": [
+        65,
+        189,
+        53,
+        22,
+        5,
+        4,
+        20,
+        15
+      ]
+    },
+    {
+      "name": "FacilityPolicyReceipt",
+      "discriminator": [
+        171,
+        191,
+        126,
+        110,
+        109,
+        233,
+        27,
+        203
+      ]
+    },
+    {
+      "name": "FinanceBook",
+      "discriminator": [
+        12,
+        151,
+        92,
+        142,
+        5,
+        135,
+        194,
+        182
+      ]
+    },
+    {
+      "name": "FinanceReceipt",
+      "discriminator": [
+        30,
+        167,
+        188,
+        107,
+        225,
+        114,
+        80,
+        56
+      ]
+    },
+    {
+      "name": "FinancierCustody",
+      "discriminator": [
+        243,
+        198,
+        121,
+        148,
+        188,
+        96,
+        192,
+        214
+      ]
+    },
+    {
+      "name": "FundedClaim",
+      "discriminator": [
+        148,
+        123,
+        156,
+        114,
+        176,
+        61,
+        249,
+        184
+      ]
+    },
+    {
+      "name": "FundedPayment",
+      "discriminator": [
+        59,
+        170,
+        76,
+        243,
+        9,
+        60,
+        203,
+        240
+      ]
+    },
+    {
+      "name": "FundedRun",
+      "discriminator": [
+        209,
+        200,
+        219,
+        96,
+        209,
+        213,
+        240,
+        47
+      ]
+    },
+    {
+      "name": "FundingFacility",
+      "discriminator": [
+        246,
+        232,
+        238,
+        185,
+        111,
+        242,
+        76,
+        75
+      ]
+    },
+    {
+      "name": "InterestRefundReceipt",
+      "discriminator": [
+        130,
+        187,
+        187,
+        0,
+        253,
+        14,
+        157,
+        207
+      ]
+    },
+    {
+      "name": "OperationRecord",
+      "discriminator": [
+        214,
+        2,
+        16,
+        4,
+        100,
+        10,
+        9,
+        150
+      ]
+    },
+    {
+      "name": "RepaymentRefundRecord",
+      "discriminator": [
+        14,
+        153,
+        45,
+        121,
+        218,
+        58,
+        77,
+        2
+      ]
+    },
+    {
+      "name": "SellerFeeAgreement",
+      "discriminator": [
+        160,
+        52,
+        249,
+        195,
+        63,
+        113,
+        236,
+        61
+      ]
+    },
+    {
+      "name": "SellerFeeCredits",
+      "discriminator": [
+        149,
+        219,
+        166,
+        207,
+        1,
+        180,
+        123,
+        221
+      ]
+    },
+    {
+      "name": "Source",
+      "discriminator": [
+        234,
+        248,
+        11,
+        137,
+        202,
+        183,
+        168,
+        229
+      ]
+    },
+    {
+      "name": "WalletSpendReceipt",
+      "discriminator": [
+        216,
+        70,
+        178,
+        214,
+        94,
+        188,
+        83,
+        187
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "CompletedRunBilled",
+      "discriminator": [
+        251,
+        188,
+        219,
+        236,
+        188,
+        21,
+        67,
+        85
+      ]
+    },
+    {
+      "name": "FinancierCapitalAllocated",
+      "discriminator": [
+        138,
+        229,
+        2,
+        207,
+        78,
+        30,
+        148,
+        7
+      ]
+    },
+    {
+      "name": "OperationCompleted",
+      "discriminator": [
+        206,
+        170,
+        191,
+        95,
+        223,
+        173,
+        19,
+        56
+      ]
+    },
+    {
+      "name": "RepaymentDebited",
+      "discriminator": [
+        112,
+        44,
+        171,
+        208,
+        168,
+        239,
+        112,
+        34
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "OperationConflict",
+      "msg": "Operation identity has already committed different economic terms"
+    },
+    {
+      "code": 6001,
+      "name": "DuplicateClaim",
+      "msg": "Tab identity already has an accepted financial claim"
+    },
+    {
+      "code": 6002,
+      "name": "TermsMismatch",
+      "msg": "Financial terms differ from the bound account, actor, source or asset"
+    },
+    {
+      "code": 6003,
+      "name": "Expired",
+      "msg": "Finite acceptance or capture deadline has expired"
+    },
+    {
+      "code": 6004,
+      "name": "IssuerAuthority",
+      "msg": "Issuer manager did not authorize this exact guarantee"
+    },
+    {
+      "code": 6005,
+      "name": "CaptureAuthority",
+      "msg": "Capture requires the accepted supplier's signature"
+    },
+    {
+      "code": 6006,
+      "name": "ReleaseAuthority",
+      "msg": "Unused rights require supplier surrender before the capture deadline"
+    },
+    {
+      "code": 6007,
+      "name": "ReservationMismatch",
+      "msg": "Registry reservation does not match this claim's accepted terms and residual rights"
+    },
+    {
+      "code": 6008,
+      "name": "SourceMismatch",
+      "msg": "Source, book, escrow or creditor route does not match"
+    },
+    {
+      "code": 6009,
+      "name": "Version",
+      "msg": "Unsupported financial schema version"
+    },
+    {
+      "code": 6010,
+      "name": "Revision",
+      "msg": "Claim changed since this operation was prepared"
+    },
+    {
+      "code": 6011,
+      "name": "Amount",
+      "msg": "Amount must be positive and within the residual accepted right"
+    },
+    {
+      "code": 6012,
+      "name": "CashDeficit",
+      "msg": "Actual protected custody is deficient"
+    },
+    {
+      "code": 6013,
+      "name": "TokenRouting",
+      "msg": "Token account is not on the accepted service route"
+    },
+    {
+      "code": 6014,
+      "name": "TokenDelta",
+      "msg": "Token movement differs from the exact authorized amount"
+    },
+    {
+      "code": 6015,
+      "name": "PoolRequired",
+      "msg": "Normal financial operation requires the issuer Pool projection"
+    },
+    {
+      "code": 6016,
+      "name": "CaptureProfile",
+      "msg": "This capture mode does not match the accepted Tab profile"
+    },
+    {
+      "code": 6017,
+      "name": "UsagePolicy",
+      "msg": "The reported usage does not match the accepted tariff"
+    },
+    {
+      "code": 6018,
+      "name": "UsageIdentity",
+      "msg": "Invalid canonical completed-run or payment identity"
+    },
+    {
+      "code": 6019,
+      "name": "UsageConflict",
+      "msg": "This completed run already binds another claim or bill"
+    },
+    {
+      "code": 6020,
+      "name": "PaymentConflict",
+      "msg": "This payment identifier already binds another completed run"
+    },
+    {
+      "code": 6021,
+      "name": "FundingSchema",
+      "msg": "Unsupported financial account schema"
+    },
+    {
+      "code": 6022,
+      "name": "FundingPrincipal",
+      "msg": "Invalid principal identity"
+    },
+    {
+      "code": 6023,
+      "name": "FundingOwner",
+      "msg": "Current owner or generation required"
+    },
+    {
+      "code": 6024,
+      "name": "FundingCustody",
+      "msg": "Invalid aggregate custody binding"
+    },
+    {
+      "code": 6025,
+      "name": "FundingFacility",
+      "msg": "Invalid financier facility"
+    },
+    {
+      "code": 6026,
+      "name": "FundingCreditLine",
+      "msg": "Invalid company credit line"
+    },
+    {
+      "code": 6027,
+      "name": "FundingClaim",
+      "msg": "Invalid accepted claim"
+    },
+    {
+      "code": 6028,
+      "name": "FundingRun",
+      "msg": "Invalid completed run"
+    },
+    {
+      "code": 6029,
+      "name": "FundingConservation",
+      "msg": "Financial amounts do not conserve"
+    },
+    {
+      "code": 6030,
+      "name": "FundingChargeCap",
+      "msg": "Accepted charge capacity exceeded"
+    },
+    {
+      "code": 6031,
+      "name": "FundingTerms",
+      "msg": "Invalid or inconsistent financial terms"
+    },
+    {
+      "code": 6032,
+      "name": "FundingAmount",
+      "msg": "Invalid amount"
+    },
+    {
+      "code": 6033,
+      "name": "FundingCashShortfall",
+      "msg": "Backing is below its allocated or protected balance"
+    },
+    {
+      "code": 6034,
+      "name": "FundingCashControl",
+      "msg": "Cash control graph does not qualify new commitments"
+    },
+    {
+      "code": 6035,
+      "name": "FundingTokenRouting",
+      "msg": "Wrong token route"
+    },
+    {
+      "code": 6036,
+      "name": "FundingTokenDelta",
+      "msg": "Actual token delta differs from authorized movement"
+    },
+    {
+      "code": 6037,
+      "name": "FundingReservation",
+      "msg": "Wrong Registry reservation"
+    },
+    {
+      "code": 6038,
+      "name": "FundingReplay",
+      "msg": "Conflicting replay"
+    },
+    {
+      "code": 6039,
+      "name": "FundingRevision",
+      "msg": "Stale financial revision"
+    },
+    {
+      "code": 6040,
+      "name": "FundingAdmission",
+      "msg": "Expired or disabled admission"
+    },
+    {
+      "code": 6041,
+      "name": "FundingBookAccounts",
+      "msg": "Missing or reordered affected financial books"
+    },
+    {
+      "code": 6042,
+      "name": "FundingProjection",
+      "msg": "Projection is stale or unavailable for new risk"
+    },
+    {
+      "code": 6043,
+      "name": "FundingReleaseAuthority",
+      "msg": "Supplier consent required before unused expiry"
+    },
+    {
+      "code": 6044,
+      "name": "FundingUsage",
+      "msg": "Wrong delivered-usage policy or identity"
+    },
+    {
+      "code": 6045,
+      "name": "FundingCreditor",
+      "msg": "Wrong creditor or title revision"
+    },
+    {
+      "code": 6046,
+      "name": "FundingAssignment",
+      "msg": "Assignment policy or acquisition consideration mismatch"
+    },
+    {
+      "code": 6047,
+      "name": "FundingSponsorship",
+      "msg": "Unsupported or unapproved sponsorship"
+    },
+    {
+      "code": 6048,
+      "name": "FundingWalletAuthority",
+      "msg": "Custody control authority is invalid"
+    },
+    {
+      "code": 6049,
+      "name": "FundingSellerFeeAgreement",
+      "msg": "Wrong supplier fee agreement or immutable terms"
+    },
+    {
+      "code": 6050,
+      "name": "FundingSellerFeeAggregateCap",
+      "msg": "Supplier agreement lifetime fee allocation exhausted"
+    },
+    {
+      "code": 6051,
+      "name": "FundingCorrection",
+      "msg": "Invalid correction terms or economic transition"
+    },
+    {
+      "code": 6052,
+      "name": "FundingCorrectionAuthority",
+      "msg": "Correction lacks the required current economic-party approval"
+    },
+    {
+      "code": 6053,
+      "name": "FundingCorrectionLineage",
+      "msg": "Correction source does not authenticate the original bill or cash lineage"
+    },
+    {
+      "code": 6054,
+      "name": "FundingCorrectionLimit",
+      "msg": "Correction or refund exceeds its remaining original entitlement"
+    },
+    {
+      "code": 6055,
+      "name": "FundingCorrectionReplay",
+      "msg": "Correction identity already records different approved economics"
+    },
+    {
+      "code": 6056,
+      "name": "WalletSpendingReplay",
+      "msg": "Wallet operation identity already records different approved effects"
+    },
+    {
+      "code": 6057,
+      "name": "WalletSwapAdapter",
+      "msg": "Swap adapter, pool or token route does not match the admitted profile"
+    },
+    {
+      "code": 6058,
+      "name": "WalletSwapOutcome",
+      "msg": "Observed swap debit, output or pool movements violate the approved bounds"
+    }
+  ],
+  "types": [
+    {
+      "name": "AcceptArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "operation_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "terms",
+            "type": {
+              "defined": {
+                "name": "TabTerms"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Actor",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "actor_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "current_key",
+            "type": "pubkey"
+          },
+          {
+            "name": "generation",
+            "type": "u64"
+          },
+          {
+            "name": "valid_from",
+            "type": "i64"
+          },
+          {
+            "name": "valid_until",
+            "type": "i64"
+          },
+          {
+            "name": "active",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AdoptFinancierSurplusArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "request_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "expected_revision",
+            "type": "u64"
+          },
+          {
+            "name": "authority_generation",
+            "type": "u64"
+          },
+          {
+            "name": "provenance_hash",
+            "docs": [
+              "Signed ownership/provenance attestation; not proof adjudicating third-party title."
+            ],
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Asset",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "token_program",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AssignFundedRunArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "request_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "consideration",
+            "type": "u64"
+          },
+          {
+            "name": "acquisition_costs",
+            "type": "u64"
+          },
+          {
+            "name": "acquisition_cost_evidence_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "expected_claim_revision",
+            "type": "u64"
+          },
+          {
+            "name": "expected_ownership_revision",
+            "type": "u64"
+          },
+          {
+            "name": "seller_owner_generation",
+            "type": "u64"
+          },
+          {
+            "name": "buyer_owner_generation",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Balances",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "reserved",
+            "type": "u64"
+          },
+          {
+            "name": "payable",
+            "type": "u64"
+          },
+          {
+            "name": "debt",
+            "type": "u64"
+          },
+          {
+            "name": "protected_cash",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Budget",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "asset",
+            "type": "pubkey"
+          },
+          {
+            "name": "ceiling",
+            "type": "u64"
+          },
+          {
+            "name": "reserved",
+            "type": "u64"
+          },
+          {
+            "name": "consumed",
+            "docs": [
+              "Lifetime expenditure; repayment has no Registry entrypoint."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "revision",
+            "docs": [
+              "Positive revision of the owner-approved allowance policy."
+            ],
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Claim",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "terms",
+            "type": {
+              "defined": {
+                "name": "TabTerms"
+              }
+            }
+          },
+          {
+            "name": "remaining",
+            "type": "u64"
+          },
+          {
+            "name": "payable",
+            "type": "u64"
+          },
+          {
+            "name": "debt",
+            "type": "u64"
+          },
+          {
+            "name": "paid",
+            "type": "u64"
+          },
+          {
+            "name": "repaid",
+            "type": "u64"
+          },
+          {
+            "name": "released",
+            "type": "u64"
+          },
+          {
+            "name": "revision",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CollectionCorrectionRecord",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "source_receipt",
+            "type": "pubkey"
+          },
+          {
+            "name": "claim",
+            "type": "pubkey"
+          },
+          {
+            "name": "run",
+            "type": "pubkey"
+          },
+          {
+            "name": "usage",
+            "type": {
+              "defined": {
+                "name": "CollectionCorrectionUsage"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "CollectionCorrectionUsage",
+      "docs": [
+        "Cumulative use of one authenticated original collection receipt. A new",
+        "request ID, later payment, rotation or refund cannot reset this allowance."
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "collected_returned",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CompletedRunBilled",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "operation_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "sequence",
+            "type": "u64"
+          },
+          {
+            "name": "effect_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "CompletedRunOrigin",
+      "docs": [
+        "One immutable, supplier-attested bill per supplier, billing namespace and run."
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "supplier",
+            "type": "pubkey"
+          },
+          {
+            "name": "namespace",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "run_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "service_unit",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "claim",
+            "type": "pubkey"
+          },
+          {
+            "name": "asset",
+            "type": "pubkey"
+          },
+          {
+            "name": "units",
+            "type": "u64"
+          },
+          {
+            "name": "unit_price",
+            "type": "u64"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "terms_digest",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "first_payment_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "operation",
+            "type": "pubkey"
+          },
+          {
+            "name": "request_digest",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "effect_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "CompletedRunPayment",
+      "docs": [
+        "Resolves the submitted financial ID to the original bill and its sole financial effect."
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "payment_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "usage_origin",
+            "type": "pubkey"
+          },
+          {
+            "name": "operation",
+            "type": "pubkey"
+          },
+          {
+            "name": "request_digest",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "effect_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "ContributeFinancierCapitalArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "request_id",
+            "docs": [
+              "Caller-owned raw ID; the permanent receipt ID is scoped to owner signer."
+            ],
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "expected_revision",
+            "type": "u64"
+          },
+          {
+            "name": "authority_generation",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CorrectFinancedRunArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "request_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "reason_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "unpaid_reduction",
+            "type": "u64"
+          },
+          {
+            "name": "collected_return",
+            "type": "u64"
+          },
+          {
+            "name": "creditor_compensation",
+            "type": "u64"
+          },
+          {
+            "name": "interest_waiver",
+            "type": "u64"
+          },
+          {
+            "name": "maximum_new_interest",
+            "type": "u64"
+          },
+          {
+            "name": "expected_claim_revision",
+            "type": "u64"
+          },
+          {
+            "name": "expected_ownership_revision",
+            "type": "u64"
+          },
+          {
+            "name": "company_owner_generation",
+            "type": "u64"
+          },
+          {
+            "name": "supplier_owner_generation",
+            "type": "u64"
+          },
+          {
+            "name": "creditor_owner_generation",
+            "type": "u64"
+          },
+          {
+            "name": "funding_owner_generation",
+            "type": "u64"
+          },
+          {
+            "name": "service_without_pool",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CorrectionAmounts",
+      "docs": [
+        "Gross, monotonic facts for one run or a correctly aggregated claim.",
+        "`principal_credited` is this lifecycle's part of the more general",
+        "PrincipalAmounts.extinguished counter. A prior principal payment stays in",
+        "`repaid` when its actual payer later receives a correction refund."
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "unpaid_reduced",
+            "type": "u64"
+          },
+          {
+            "name": "collected_returned",
+            "type": "u64"
+          },
+          {
+            "name": "principal_credited",
+            "type": "u64"
+          },
+          {
+            "name": "prior_repayment_refunded",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CorrectionPlan",
+      "docs": [
+        "Agreed allocation for one atomic bill correction. The original supplier's",
+        "collected portion is applied to current debt first. Explicit compensation",
+        "can make the remaining noncash creditor reduction whole; it creates no new",
+        "debt or implicit reimbursement right for the consenting cash funder."
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "total",
+            "type": "u64"
+          },
+          {
+            "name": "principal_credit",
+            "type": "u64"
+          },
+          {
+            "name": "prior_repayment_refund",
+            "type": "u64"
+          },
+          {
+            "name": "creditor_cash",
+            "type": "u64"
+          },
+          {
+            "name": "required_cash",
+            "type": "u64"
+          },
+          {
+            "name": "creditor_shortfall",
+            "type": "u64"
+          },
+          {
+            "name": "backing_released_from_payable",
+            "docs": [
+              "Earned payable backing made free; this does not release unearned work."
+            ],
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CorrectionReceipt",
+      "docs": [
+        "Fixed-size immutable result supplements the unchanged financial-journal ABI.",
+        "The journal commits this account's address; this result commits its effect",
+        "hash. Neither record requires rewriting an original capture or payment."
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "company",
+            "type": "pubkey"
+          },
+          {
+            "name": "claim",
+            "type": "pubkey"
+          },
+          {
+            "name": "run",
+            "type": "pubkey"
+          },
+          {
+            "name": "operation_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "request_digest",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "request",
+            "type": {
+              "defined": {
+                "name": "CorrectFinancedRunArgs"
+              }
+            }
+          },
+          {
+            "name": "capture_receipt",
+            "type": "pubkey"
+          },
+          {
+            "name": "capture_digest",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "acceptance_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "supplier_principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "frozen_supplier_wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "company_owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "supplier_owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "creditor_owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "current_creditor",
+            "type": "pubkey"
+          },
+          {
+            "name": "creditor_custody",
+            "type": "pubkey"
+          },
+          {
+            "name": "creditor_destination",
+            "type": "pubkey"
+          },
+          {
+            "name": "funding_principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "funding_authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "funding_from",
+            "type": "pubkey"
+          },
+          {
+            "name": "collection_receipt",
+            "type": "pubkey"
+          },
+          {
+            "name": "repayment_receipt",
+            "type": "pubkey"
+          },
+          {
+            "name": "refund_principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "refund_authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "refund_destination",
+            "type": "pubkey"
+          },
+          {
+            "name": "plan",
+            "type": {
+              "defined": {
+                "name": "CorrectionPlan"
+              }
+            }
+          },
+          {
+            "name": "principal_before",
+            "type": {
+              "defined": {
+                "name": "PrincipalAmounts"
+              }
+            }
+          },
+          {
+            "name": "principal_after",
+            "type": {
+              "defined": {
+                "name": "PrincipalAmounts"
+              }
+            }
+          },
+          {
+            "name": "corrections_before",
+            "type": {
+              "defined": {
+                "name": "CorrectionAmounts"
+              }
+            }
+          },
+          {
+            "name": "corrections_after",
+            "type": {
+              "defined": {
+                "name": "CorrectionAmounts"
+              }
+            }
+          },
+          {
+            "name": "newly_accrued_interest",
+            "type": "u64"
+          },
+          {
+            "name": "interest_waived",
+            "type": "u64"
+          },
+          {
+            "name": "unused_charge_authority_released",
+            "type": "u64"
+          },
+          {
+            "name": "resulting_claim_revision",
+            "type": "u64"
+          },
+          {
+            "name": "financial_receipt",
+            "type": "pubkey"
+          },
+          {
+            "name": "financial_effect_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "result_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "CreditSellerFeeArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "request_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "owner_generation",
+            "type": "u64"
+          },
+          {
+            "name": "expected_claim_revision",
+            "type": "u64"
+          },
+          {
+            "name": "service_without_pool",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CustomerCreditLine",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "line_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "company",
+            "type": "pubkey"
+          },
+          {
+            "name": "issuer",
+            "type": "pubkey"
+          },
+          {
+            "name": "issuer_custody",
+            "type": "pubkey"
+          },
+          {
+            "name": "facility",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "limit",
+            "type": "u64"
+          },
+          {
+            "name": "reserved",
+            "type": "u64"
+          },
+          {
+            "name": "principal_outstanding",
+            "type": "u64"
+          },
+          {
+            "name": "fee_exposure",
+            "type": "u64"
+          },
+          {
+            "name": "allocated_fee_caps",
+            "docs": [
+              "Lifetime cap allocation is distinct from outstanding risk usage."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "interest_terms",
+            "type": {
+              "defined": {
+                "name": "InterestTerms"
+              }
+            }
+          },
+          {
+            "name": "enabled",
+            "type": "bool"
+          },
+          {
+            "name": "revision",
+            "type": "u64"
+          },
+          {
+            "name": "assignment_policy_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "EffectData",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "domain",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "operation_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "request_digest",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "claim",
+            "type": "pubkey"
+          },
+          {
+            "name": "source",
+            "type": "pubkey"
+          },
+          {
+            "name": "book",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "kind",
+            "type": "u8"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "beneficiary",
+            "type": "pubkey"
+          },
+          {
+            "name": "sequence",
+            "type": "u64"
+          },
+          {
+            "name": "previous_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "before",
+            "type": {
+              "defined": {
+                "name": "Balances"
+              }
+            }
+          },
+          {
+            "name": "after",
+            "type": {
+              "defined": {
+                "name": "Balances"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "FacilityPolicyReceipt",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "facility",
+            "type": "pubkey"
+          },
+          {
+            "name": "financier",
+            "type": "pubkey"
+          },
+          {
+            "name": "request_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "operation_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "request_digest",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "authority_generation",
+            "type": "u64"
+          },
+          {
+            "name": "previous_revision",
+            "type": "u64"
+          },
+          {
+            "name": "resulting_revision",
+            "type": "u64"
+          },
+          {
+            "name": "previous_limit",
+            "type": "u64"
+          },
+          {
+            "name": "resulting_limit",
+            "type": "u64"
+          },
+          {
+            "name": "previously_enabled",
+            "type": "bool"
+          },
+          {
+            "name": "resulting_enabled",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FeeFailurePolicy",
+      "docs": [
+        "A missing/frozen canonical fee destination, or actual balance below its Core",
+        "accounted cash, waives this deduction and leaves that custody unchanged.",
+        "Waiver neither repairs the pre-existing deficit nor forgives another debt.",
+        "A wrong address, owner or mint is a binding failure, never unavailability."
+      ],
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "WaiveUnavailable"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FinanceBook",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "data",
+            "type": {
+              "defined": {
+                "name": "FinanceBookData"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "FinanceBookData",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "sequence",
+            "type": "u64"
+          },
+          {
+            "name": "head",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "positions",
+            "type": {
+              "defined": {
+                "name": "FinancialPositions"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "FinanceBookEffect",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "book",
+            "type": "pubkey"
+          },
+          {
+            "name": "principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "sequence",
+            "type": "u64"
+          },
+          {
+            "name": "previous_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "before",
+            "type": {
+              "defined": {
+                "name": "FinancialPositions"
+              }
+            }
+          },
+          {
+            "name": "after",
+            "type": {
+              "defined": {
+                "name": "FinancialPositions"
+              }
+            }
+          },
+          {
+            "name": "hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "FinanceReceipt",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "data",
+            "type": {
+              "defined": {
+                "name": "FinanceReceiptData"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "FinanceReceiptData",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "operation_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "request_digest",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "kind",
+            "type": "u8"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "claim",
+            "type": "pubkey"
+          },
+          {
+            "name": "run",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "principal_paid",
+            "type": "u64"
+          },
+          {
+            "name": "interest_paid",
+            "type": "u64"
+          },
+          {
+            "name": "supplier_net",
+            "docs": [
+              "Collection credit after the accepted Tab fee, before a separate approved",
+              "sponsorship debit. The exact sponsorship token legs are recorded below."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "seller_fee",
+            "type": "u64"
+          },
+          {
+            "name": "seller_fee_waived",
+            "type": "u64"
+          },
+          {
+            "name": "protocol_interest",
+            "type": "u64"
+          },
+          {
+            "name": "protocol_waived",
+            "type": "u64"
+          },
+          {
+            "name": "sponsor_reimbursement",
+            "type": "u64"
+          },
+          {
+            "name": "sponsor_margin",
+            "type": "u64"
+          },
+          {
+            "name": "sponsor_quote_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "sponsor_payer_principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "sponsor_rent_owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "sponsor_payer_authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "sponsor_from",
+            "type": "pubkey"
+          },
+          {
+            "name": "sponsor_destination",
+            "type": "pubkey"
+          },
+          {
+            "name": "sponsor_funding_source",
+            "type": {
+              "option": {
+                "defined": {
+                  "name": "SponsorFundingSource"
+                }
+              }
+            }
+          },
+          {
+            "name": "supplier_proceeds_reimbursement",
+            "type": "u64"
+          },
+          {
+            "name": "related_receipt",
+            "type": "pubkey"
+          },
+          {
+            "name": "seller_fee_credit",
+            "type": "u64"
+          },
+          {
+            "name": "capital_custody",
+            "type": "pubkey"
+          },
+          {
+            "name": "capital_allocated",
+            "type": "u64"
+          },
+          {
+            "name": "capital_token_inflow",
+            "type": "u64"
+          },
+          {
+            "name": "capital_provenance_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "capital_authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "capital_from",
+            "type": "pubkey"
+          },
+          {
+            "name": "capital_owner_generation",
+            "type": "u64"
+          },
+          {
+            "name": "debit_principal",
+            "docs": [
+              "Actual ordinary-cash funding identity and token debit, independent of",
+              "the company whose obligation was serviced or the transaction fee payer."
+            ],
+            "type": "pubkey"
+          },
+          {
+            "name": "debit_authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "debit_from",
+            "type": "pubkey"
+          },
+          {
+            "name": "previous_creditor",
+            "docs": [
+              "Immutable title/destination used by repayment, or the resulting title",
+              "after an assignment. Original supplier entitlement remains on the claim."
+            ],
+            "type": "pubkey"
+          },
+          {
+            "name": "current_creditor",
+            "type": "pubkey"
+          },
+          {
+            "name": "ownership_revision",
+            "type": "u64"
+          },
+          {
+            "name": "creditor_destination",
+            "type": "pubkey"
+          },
+          {
+            "name": "assignment_consideration",
+            "type": "u64"
+          },
+          {
+            "name": "assignment_acquisition_cost",
+            "type": "u64"
+          },
+          {
+            "name": "previous_acquisition_basis",
+            "type": "u64"
+          },
+          {
+            "name": "new_acquisition_basis",
+            "type": "u64"
+          },
+          {
+            "name": "assignment_cost_beneficiary",
+            "type": "pubkey"
+          },
+          {
+            "name": "assignment_cost_destination",
+            "type": "pubkey"
+          },
+          {
+            "name": "effects",
+            "type": {
+              "vec": {
+                "defined": {
+                  "name": "FinanceBookEffect"
+                }
+              }
+            }
+          },
+          {
+            "name": "effects_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "FinancialPositions",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "unused_supplier",
+            "type": "u64"
+          },
+          {
+            "name": "unpaid_supplier",
+            "type": "u64"
+          },
+          {
+            "name": "customer_principal",
+            "type": "u64"
+          },
+          {
+            "name": "owned_principal",
+            "type": "u64"
+          },
+          {
+            "name": "funding_reserved",
+            "type": "u64"
+          },
+          {
+            "name": "facility_assets",
+            "type": "u64"
+          },
+          {
+            "name": "facility_debt",
+            "type": "u64"
+          },
+          {
+            "name": "interest_owed",
+            "type": "u64"
+          },
+          {
+            "name": "interest_owned",
+            "type": "u64"
+          },
+          {
+            "name": "cash_received",
+            "docs": [
+              "Cumulative authenticated cash flows, not an automatically complete NAV."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "cash_sent",
+            "type": "u64"
+          },
+          {
+            "name": "seller_fees",
+            "type": "u64"
+          },
+          {
+            "name": "protocol_interest",
+            "type": "u64"
+          },
+          {
+            "name": "lender_interest",
+            "type": "u64"
+          },
+          {
+            "name": "sponsor_reimbursement",
+            "type": "u64"
+          },
+          {
+            "name": "sponsor_margin",
+            "type": "u64"
+          },
+          {
+            "name": "customer_reserved",
+            "type": "u64"
+          },
+          {
+            "name": "credit_charge_exposure",
+            "type": "u64"
+          },
+          {
+            "name": "seller_fee_refunds",
+            "type": "u64"
+          },
+          {
+            "name": "capital_allocated",
+            "docs": [
+              "Explicit own-capital allocation, separate from income and token inflows."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "supplier_committed",
+            "docs": [
+              "Supplier assets, distinct from an issuer's unused/payable liabilities",
+              "when the same continuing principal holds more than one economic role."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "supplier_receivable",
+            "type": "u64"
+          },
+          {
+            "name": "seller_fees_paid",
+            "type": "u64"
+          },
+          {
+            "name": "seller_fee_credits_received",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FinancierCapitalAllocated",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "custody",
+            "type": "pubkey"
+          },
+          {
+            "name": "owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "from",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "actual_token_inflow",
+            "type": "u64"
+          },
+          {
+            "name": "operation_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "receipt",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FinancierCustody",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "domain",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "binding",
+            "type": "pubkey"
+          },
+          {
+            "name": "wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "token_account",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "profile",
+            "type": "u8"
+          },
+          {
+            "name": "accounted_cash",
+            "docs": [
+              "Explicit allocation only. An unsolicited transfer does not become income."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "unused",
+            "type": "u64"
+          },
+          {
+            "name": "payable",
+            "type": "u64"
+          },
+          {
+            "name": "contributed_capital",
+            "type": "u64"
+          },
+          {
+            "name": "withdrawn_cash",
+            "docs": [
+              "Cumulative authorized uncommitted debits: withdrawals, sends and swap input.",
+              "Includes eligible earned cash; it is not a valuation or income measure."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "revision",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FundedClaim",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "terms",
+            "type": {
+              "defined": {
+                "name": "TabTerms"
+              }
+            }
+          },
+          {
+            "name": "usage_namespace",
+            "docs": [
+              "Accepted completed-run price preimage, available directly to readers."
+            ],
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "service_unit",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "unit_price",
+            "type": "u64"
+          },
+          {
+            "name": "external_contract_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "acceptance_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "credit_line",
+            "type": "pubkey"
+          },
+          {
+            "name": "assignment_policy_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "facility",
+            "type": "pubkey"
+          },
+          {
+            "name": "custody",
+            "type": "pubkey"
+          },
+          {
+            "name": "issuer",
+            "type": "pubkey"
+          },
+          {
+            "name": "issuer_custody",
+            "type": "pubkey"
+          },
+          {
+            "name": "supplier_principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "remaining",
+            "type": "u64"
+          },
+          {
+            "name": "payable",
+            "type": "u64"
+          },
+          {
+            "name": "debt",
+            "type": "u64"
+          },
+          {
+            "name": "paid",
+            "type": "u64"
+          },
+          {
+            "name": "repaid",
+            "type": "u64"
+          },
+          {
+            "name": "released",
+            "type": "u64"
+          },
+          {
+            "name": "revision",
+            "type": "u64"
+          },
+          {
+            "name": "fee_cap",
+            "type": "u64"
+          },
+          {
+            "name": "fee_authority_remaining",
+            "type": "u64"
+          },
+          {
+            "name": "allocated_run_fee_caps",
+            "type": "u64"
+          },
+          {
+            "name": "released_fee_caps",
+            "type": "u64"
+          },
+          {
+            "name": "released_unallocated_fee_caps",
+            "type": "u64"
+          },
+          {
+            "name": "interest_outstanding",
+            "type": "u64"
+          },
+          {
+            "name": "interest_terms",
+            "type": {
+              "defined": {
+                "name": "InterestTerms"
+              }
+            }
+          },
+          {
+            "name": "seller_fee_agreement",
+            "docs": [
+              "Immutable parent allocation. Accepted servicing never consults the parent."
+            ],
+            "type": "pubkey"
+          },
+          {
+            "name": "seller_fee_allocation",
+            "type": "u64"
+          },
+          {
+            "name": "seller_fee_terms",
+            "type": {
+              "defined": {
+                "name": "SellerFeeTerms"
+              }
+            }
+          },
+          {
+            "name": "seller_fee_state",
+            "type": {
+              "defined": {
+                "name": "SellerFeeState"
+              }
+            }
+          },
+          {
+            "name": "principal_extinguished",
+            "docs": [
+              "Append-only v2 extension. Captured principal and cash history never rewind."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "corrections",
+            "type": {
+              "defined": {
+                "name": "CorrectionAmounts"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "FundedPayment",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "company",
+            "type": "pubkey"
+          },
+          {
+            "name": "payment_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "run",
+            "type": "pubkey"
+          },
+          {
+            "name": "receipt",
+            "type": "pubkey"
+          },
+          {
+            "name": "request_digest",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "FundedRun",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "operation_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "claim",
+            "type": "pubkey"
+          },
+          {
+            "name": "namespace",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "run_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "service_unit",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "units",
+            "type": "u64"
+          },
+          {
+            "name": "unit_price",
+            "type": "u64"
+          },
+          {
+            "name": "supplier",
+            "type": "pubkey"
+          },
+          {
+            "name": "supplier_principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "debtor",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "gross_earned",
+            "type": "u64"
+          },
+          {
+            "name": "gross_paid",
+            "type": "u64"
+          },
+          {
+            "name": "current_creditor",
+            "type": "pubkey"
+          },
+          {
+            "name": "creditor_custody",
+            "type": "pubkey"
+          },
+          {
+            "name": "ownership_revision",
+            "type": "u64"
+          },
+          {
+            "name": "principal",
+            "type": {
+              "defined": {
+                "name": "PrincipalAmounts"
+              }
+            }
+          },
+          {
+            "name": "interest_terms",
+            "type": {
+              "defined": {
+                "name": "InterestTerms"
+              }
+            }
+          },
+          {
+            "name": "interest",
+            "type": {
+              "defined": {
+                "name": "InterestState"
+              }
+            }
+          },
+          {
+            "name": "acquisition_basis",
+            "type": "u64"
+          },
+          {
+            "name": "provenance_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "capture_receipt",
+            "type": "pubkey"
+          },
+          {
+            "name": "capture_digest",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "fee_authority_released",
+            "type": "u64"
+          },
+          {
+            "name": "corrections",
+            "docs": [
+              "Original delivery, gross collection and principal repayments remain historical."
+            ],
+            "type": {
+              "defined": {
+                "name": "CorrectionAmounts"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "FundingFacility",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "facility_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "financier",
+            "type": "pubkey"
+          },
+          {
+            "name": "issuer",
+            "type": "pubkey"
+          },
+          {
+            "name": "custody",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "external",
+            "type": "bool"
+          },
+          {
+            "name": "commitment_limit",
+            "type": "u64"
+          },
+          {
+            "name": "reserved",
+            "type": "u64"
+          },
+          {
+            "name": "drawn",
+            "type": "u64"
+          },
+          {
+            "name": "repaid",
+            "type": "u64"
+          },
+          {
+            "name": "accepts_new",
+            "type": "bool"
+          },
+          {
+            "name": "accept_until",
+            "type": "i64"
+          },
+          {
+            "name": "revision",
+            "type": "u64"
+          },
+          {
+            "name": "terms_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "opening_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "interest_terms",
+            "type": {
+              "defined": {
+                "name": "InterestTerms"
+              }
+            }
+          },
+          {
+            "name": "interest",
+            "type": {
+              "defined": {
+                "name": "InterestState"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "InterestRefundReceipt",
+      "docs": [
+        "Immutable detail for the two independently approved cash legs. This sidecar",
+        "keeps the existing financial journal layout and gross-income fields intact."
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "company",
+            "type": "pubkey"
+          },
+          {
+            "name": "claim",
+            "type": "pubkey"
+          },
+          {
+            "name": "run",
+            "type": "pubkey"
+          },
+          {
+            "name": "operation_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "request_digest",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "request",
+            "type": {
+              "defined": {
+                "name": "RefundFundedInterestArgs"
+              }
+            }
+          },
+          {
+            "name": "original_repayment",
+            "type": "pubkey"
+          },
+          {
+            "name": "original_request_digest",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "original_effects_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "original_principal_paid",
+            "type": "u64"
+          },
+          {
+            "name": "original_interest_paid",
+            "type": "u64"
+          },
+          {
+            "name": "original_protocol_interest",
+            "type": "u64"
+          },
+          {
+            "name": "capture_receipt",
+            "type": "pubkey"
+          },
+          {
+            "name": "capture_digest",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "acceptance_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "historical_lender",
+            "type": "pubkey"
+          },
+          {
+            "name": "historical_lender_destination",
+            "type": "pubkey"
+          },
+          {
+            "name": "protocol_beneficiary",
+            "type": "pubkey"
+          },
+          {
+            "name": "frozen_protocol_destination",
+            "type": "pubkey"
+          },
+          {
+            "name": "lender_authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "lender_from",
+            "type": "pubkey"
+          },
+          {
+            "name": "protocol_authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "protocol_from",
+            "type": "pubkey"
+          },
+          {
+            "name": "refund_principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "refund_authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "refund_destination",
+            "type": "pubkey"
+          },
+          {
+            "name": "repayment_usage",
+            "type": "pubkey"
+          },
+          {
+            "name": "usage_before",
+            "type": {
+              "defined": {
+                "name": "RepaymentRefundUsage"
+              }
+            }
+          },
+          {
+            "name": "usage_after",
+            "type": {
+              "defined": {
+                "name": "RepaymentRefundUsage"
+              }
+            }
+          },
+          {
+            "name": "financial_receipt",
+            "type": "pubkey"
+          },
+          {
+            "name": "financial_effect_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "result_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "InterestState",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "last_accrued_at",
+            "type": "i64"
+          },
+          {
+            "name": "accrued",
+            "type": "u64"
+          },
+          {
+            "name": "collected",
+            "type": "u64"
+          },
+          {
+            "name": "waived",
+            "type": "u64"
+          },
+          {
+            "name": "fractional_numerator",
+            "type": "u64"
+          },
+          {
+            "name": "protocol_collected",
+            "type": "u64"
+          },
+          {
+            "name": "protocol_waived",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "InterestTerms",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "annual_rate_bps",
+            "type": "u32"
+          },
+          {
+            "name": "seconds_per_year",
+            "docs": [
+              "Explicit year basis; no implicit production APR or spread policy."
+            ],
+            "type": "u32"
+          },
+          {
+            "name": "maximum_interest",
+            "type": "u64"
+          },
+          {
+            "name": "accrual_cutoff",
+            "type": "i64"
+          },
+          {
+            "name": "protocol_share_bps",
+            "type": "u16"
+          },
+          {
+            "name": "protocol_beneficiary",
+            "type": "pubkey"
+          },
+          {
+            "name": "protocol_destination",
+            "type": "pubkey"
+          },
+          {
+            "name": "repayment_priority",
+            "type": {
+              "defined": {
+                "name": "RepaymentPriority"
+              }
+            }
+          },
+          {
+            "name": "stop_on_shortfall",
+            "docs": [
+              "The cash runtime rejects this until it authenticates historical shortfall",
+              "windows. Today's balance cannot establish yesterday's eligible duration."
+            ],
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Mandate",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "actor",
+            "type": "pubkey"
+          },
+          {
+            "name": "budget",
+            "type": "pubkey"
+          },
+          {
+            "name": "mandate_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "asset",
+            "type": "pubkey"
+          },
+          {
+            "name": "supplier",
+            "type": "pubkey"
+          },
+          {
+            "name": "source",
+            "docs": [
+              "Exact admitted funding source for this first issuer-backed profile."
+            ],
+            "type": "pubkey"
+          },
+          {
+            "name": "per_operation_limit",
+            "type": "u64"
+          },
+          {
+            "name": "expires_at",
+            "type": "i64"
+          },
+          {
+            "name": "revision",
+            "type": "u64"
+          },
+          {
+            "name": "active",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OperationCompleted",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "operation_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "kind",
+            "type": "u8"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "sequence",
+            "type": "u64"
+          },
+          {
+            "name": "effect_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "OperationData",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "request_digest",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "effect",
+            "type": {
+              "defined": {
+                "name": "EffectData"
+              }
+            }
+          },
+          {
+            "name": "effect_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "OperationRecord",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "data",
+            "type": {
+              "defined": {
+                "name": "OperationData"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "PoolBook",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "pool_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "manager",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "treasury",
+            "type": "pubkey"
+          },
+          {
+            "name": "source",
+            "type": "pubkey"
+          },
+          {
+            "name": "operating_cash",
+            "type": "u64"
+          },
+          {
+            "name": "funded_capital",
+            "type": "u64"
+          },
+          {
+            "name": "projected",
+            "type": {
+              "defined": {
+                "name": "Balances"
+              }
+            }
+          },
+          {
+            "name": "applied_sequence",
+            "type": "u64"
+          },
+          {
+            "name": "applied_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "admission_open",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Principal",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "principal_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "domain",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "kind",
+            "docs": [
+              "1: person, 2: company, 3: other recognized principal."
+            ],
+            "type": "u8"
+          },
+          {
+            "name": "governing_policy",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "seed_owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "owner",
+            "docs": [
+              "This first profile has one Ed25519 owner. Other governance profiles",
+              "require distinct handlers and cannot be selected by this field."
+            ],
+            "type": "pubkey"
+          },
+          {
+            "name": "authority_generation",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PrincipalAmounts",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "originated",
+            "type": "u64"
+          },
+          {
+            "name": "outstanding",
+            "type": "u64"
+          },
+          {
+            "name": "repaid",
+            "type": "u64"
+          },
+          {
+            "name": "extinguished",
+            "docs": [
+              "Only legally/economically extinguishing, authenticated corrections."
+            ],
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RefundFundedInterestArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "request_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "reason_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "lender_interest_refund",
+            "type": "u64"
+          },
+          {
+            "name": "protocol_interest_refund",
+            "type": "u64"
+          },
+          {
+            "name": "lender_owner_generation",
+            "type": "u64"
+          },
+          {
+            "name": "protocol_owner_generation",
+            "type": "u64"
+          },
+          {
+            "name": "service_without_pool",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RepayFundedRunArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "request_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "maximum_interest",
+            "type": "u64"
+          },
+          {
+            "name": "expected_claim_revision",
+            "type": "u64"
+          },
+          {
+            "name": "expected_ownership_revision",
+            "type": "u64"
+          },
+          {
+            "name": "repayment_owner_generation",
+            "type": "u64"
+          },
+          {
+            "name": "service_without_pool",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RepayFundingFacilityArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "request_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "maximum_interest",
+            "type": "u64"
+          },
+          {
+            "name": "expected_facility_revision",
+            "type": "u64"
+          },
+          {
+            "name": "repayment_owner_generation",
+            "type": "u64"
+          },
+          {
+            "name": "service_without_pool",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RepaymentDebited",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "receipt",
+            "type": "pubkey"
+          },
+          {
+            "name": "authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "from",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RepaymentPriority",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "InterestFirst"
+          },
+          {
+            "name": "PrincipalFirst"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RepaymentRefundRecord",
+      "docs": [
+        "Principal and both interest refund capacities share one original repayment",
+        "identity. A later interest-refund handler must use this same usage account."
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "source_receipt",
+            "type": "pubkey"
+          },
+          {
+            "name": "claim",
+            "type": "pubkey"
+          },
+          {
+            "name": "run",
+            "type": "pubkey"
+          },
+          {
+            "name": "usage",
+            "type": {
+              "defined": {
+                "name": "RepaymentRefundUsage"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "RepaymentRefundUsage",
+      "docs": [
+        "Cumulative cash returned against one authenticated original repayment.",
+        "Principal, lender interest and protocol interest have separate beneficiaries",
+        "and refund capacities. Collected interest and historical repayments remain",
+        "gross facts; refunds never restore a paid debt or expenditure authority."
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "principal_refunded",
+            "type": "u64"
+          },
+          {
+            "name": "lender_interest_refunded",
+            "type": "u64"
+          },
+          {
+            "name": "protocol_interest_refunded",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Reservation",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "terms",
+            "type": {
+              "defined": {
+                "name": "TabTerms"
+              }
+            }
+          },
+          {
+            "name": "terms_digest",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "acceptance_operation",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "remaining",
+            "type": "u64"
+          },
+          {
+            "name": "consumed",
+            "type": "u64"
+          },
+          {
+            "name": "released",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SellerFeeAgreement",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "domain",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "supplier_principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "asset",
+            "type": {
+              "defined": {
+                "name": "Asset"
+              }
+            }
+          },
+          {
+            "name": "agreement_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "aggregate_cap",
+            "docs": [
+              "Immutable lifetime ceiling, in this asset's base units."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "usage",
+            "type": {
+              "defined": {
+                "name": "SellerFeeCapUsage"
+              }
+            }
+          },
+          {
+            "name": "approved_by",
+            "docs": [
+              "Opening provenance, not the authority required for later reconciliation."
+            ],
+            "type": "pubkey"
+          },
+          {
+            "name": "authority_generation",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SellerFeeCapUsage",
+      "docs": [
+        "Parent agreement allowance, distinct from buyer-financing FeeCapUsage.",
+        "Allocations are lifetime authorizations; settlement/refund never refills it."
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "allocated",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SellerFeeCredits",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "original_receipt",
+            "type": "pubkey"
+          },
+          {
+            "name": "credited",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SellerFeeState",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "gross_settled",
+            "type": "u64"
+          },
+          {
+            "name": "collected",
+            "type": "u64"
+          },
+          {
+            "name": "waived",
+            "type": "u64"
+          },
+          {
+            "name": "refunded",
+            "docs": [
+              "Economic refund and voluntary fee credit are distinct returned-cash facts."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "credited",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SellerFeeTerms",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "agreement_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "supplier",
+            "type": "pubkey"
+          },
+          {
+            "name": "asset",
+            "type": {
+              "defined": {
+                "name": "Asset"
+              }
+            }
+          },
+          {
+            "name": "gross_cap",
+            "type": "u64"
+          },
+          {
+            "name": "rate_bps",
+            "type": "u16"
+          },
+          {
+            "name": "fixed_fee",
+            "docs": [
+              "Applied once to cumulative settlement, never once per run or retry."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "aggregate_fee_cap",
+            "type": "u64"
+          },
+          {
+            "name": "maximum_deduction_bps",
+            "docs": [
+              "Cumulative upper slope; each settlement's maximum rounds UP by at most",
+              "one token base unit, while the total fee rounds DOWN cumulatively."
+            ],
+            "type": "u16"
+          },
+          {
+            "name": "beneficiary",
+            "type": "pubkey"
+          },
+          {
+            "name": "beneficiary_wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "destination",
+            "type": "pubkey"
+          },
+          {
+            "name": "failure_policy",
+            "type": {
+              "defined": {
+                "name": "FeeFailurePolicy"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Source",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "data",
+            "type": {
+              "defined": {
+                "name": "SourceData"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "SourceData",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "pool",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "escrow",
+            "type": "pubkey"
+          },
+          {
+            "name": "treasury",
+            "type": "pubkey"
+          },
+          {
+            "name": "balances",
+            "type": {
+              "defined": {
+                "name": "Balances"
+              }
+            }
+          },
+          {
+            "name": "sequence",
+            "type": "u64"
+          },
+          {
+            "name": "head",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "SponsorFundingSource",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "OwnerCash"
+          },
+          {
+            "name": "EarnedSupplierProceeds"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SponsorQuote",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "operation_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "funding_source",
+            "type": {
+              "defined": {
+                "name": "SponsorFundingSource"
+              }
+            }
+          },
+          {
+            "name": "payer_principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "payer_authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "authority_generation",
+            "type": "u64"
+          },
+          {
+            "name": "asset",
+            "type": {
+              "defined": {
+                "name": "Asset"
+              }
+            }
+          },
+          {
+            "name": "from",
+            "type": "pubkey"
+          },
+          {
+            "name": "destination",
+            "type": "pubkey"
+          },
+          {
+            "name": "sponsor_principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "rent_owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "approved_at",
+            "type": "i64"
+          },
+          {
+            "name": "expires_at",
+            "type": "i64"
+          },
+          {
+            "name": "native_cost_lamports",
+            "type": "u64"
+          },
+          {
+            "name": "conversion_numerator",
+            "docs": [
+              "Approved conversion into the bound token's base units per lamport."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "conversion_denominator",
+            "type": "u64"
+          },
+          {
+            "name": "reimbursement",
+            "type": "u64"
+          },
+          {
+            "name": "margin",
+            "type": "u64"
+          },
+          {
+            "name": "maximum_total_charge",
+            "type": "u64"
+          },
+          {
+            "name": "maximum_margin",
+            "type": "u64"
+          },
+          {
+            "name": "price_quote_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "StageArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "operation_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "expected_revision",
+            "docs": [
+              "Optimistic concurrency guard, excluded from the stable business identity.",
+              "Exact retries retrieve the prior result even after the claim advances."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "service_without_pool",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TabTerms",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "domain",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "tab_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "actor",
+            "type": "pubkey"
+          },
+          {
+            "name": "mandate",
+            "type": "pubkey"
+          },
+          {
+            "name": "asset",
+            "type": "pubkey"
+          },
+          {
+            "name": "supplier",
+            "type": "pubkey"
+          },
+          {
+            "name": "source",
+            "type": "pubkey"
+          },
+          {
+            "name": "cap",
+            "type": "u64"
+          },
+          {
+            "name": "expires_at",
+            "type": "i64"
+          },
+          {
+            "name": "credential_generation",
+            "type": "u64"
+          },
+          {
+            "name": "mandate_revision",
+            "type": "u64"
+          },
+          {
+            "name": "external_terms_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "WalletSendArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "request_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "authority_generation",
+            "type": "u64"
+          },
+          {
+            "name": "destination_authority",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WalletSpendReceipt",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "data",
+            "type": {
+              "defined": {
+                "name": "WalletSpendReceiptData"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "WalletSpendReceiptData",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "request",
+            "type": {
+              "defined": {
+                "name": "WalletSpendRequest"
+              }
+            }
+          },
+          {
+            "name": "request_digest",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "executor",
+            "type": "pubkey"
+          },
+          {
+            "name": "permission",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount_out",
+            "type": "u64"
+          },
+          {
+            "name": "input_receipt",
+            "type": "pubkey"
+          },
+          {
+            "name": "input_effects_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "output_receipt",
+            "type": "pubkey"
+          },
+          {
+            "name": "output_effects_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "receipt_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "WalletSpendRequest",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "request_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "kind",
+            "type": "u8"
+          },
+          {
+            "name": "principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "binding",
+            "type": "pubkey"
+          },
+          {
+            "name": "wallet_authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "source_custody",
+            "type": "pubkey"
+          },
+          {
+            "name": "source",
+            "type": "pubkey"
+          },
+          {
+            "name": "input_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "destination",
+            "type": "pubkey"
+          },
+          {
+            "name": "destination_authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "output_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "output_custody",
+            "type": "pubkey"
+          },
+          {
+            "name": "adapter_program",
+            "type": "pubkey"
+          },
+          {
+            "name": "adapter_pool",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "minimum_output",
+            "type": "u64"
+          },
+          {
+            "name": "authority_generation",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WalletSwapArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "request_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "minimum_output",
+            "type": "u64"
+          },
+          {
+            "name": "authority_generation",
+            "type": "u64"
+          }
+        ]
+      }
+    }
+  ]
+}

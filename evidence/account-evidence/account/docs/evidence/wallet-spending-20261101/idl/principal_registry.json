@@ -1,0 +1,5086 @@
+{
+  "address": "9cRnuwBP8gUBmFKJxxhLyR3GcqzKwMuUCTTFPngEtr8G",
+  "metadata": {
+    "name": "principal_registry",
+    "version": "0.1.0",
+    "spec": "0.1.0"
+  },
+  "instructions": [
+    {
+      "name": "amend_allowance",
+      "discriminator": [
+        41,
+        181,
+        173,
+        160,
+        220,
+        73,
+        165,
+        8
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "owner",
+          "signer": true
+        },
+        {
+          "name": "principal",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  105,
+                  110,
+                  99,
+                  105,
+                  112,
+                  97,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal.seed_owner",
+                "account": "Principal"
+              },
+              {
+                "kind": "account",
+                "path": "principal.principal_id",
+                "account": "Principal"
+              }
+            ]
+          },
+          "relations": [
+            "budget"
+          ]
+        },
+        {
+          "name": "budget",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  98,
+                  117,
+                  100,
+                  103,
+                  101,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "account",
+                "path": "budget.asset",
+                "account": "Budget"
+              }
+            ]
+          }
+        },
+        {
+          "name": "amendment",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  98,
+                  117,
+                  100,
+                  103,
+                  101,
+                  116,
+                  45,
+                  97,
+                  109,
+                  101,
+                  110,
+                  100,
+                  109,
+                  101,
+                  110,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "arg",
+                "path": "args.operation_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "AmendAllowanceArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "authorize_funding_wallet",
+      "discriminator": [
+        1,
+        38,
+        206,
+        25,
+        231,
+        241,
+        226,
+        127
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "relations": [
+            "binding"
+          ]
+        },
+        {
+          "name": "wallet",
+          "relations": [
+            "binding"
+          ]
+        },
+        {
+          "name": "binding",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  102,
+                  117,
+                  110,
+                  100,
+                  105,
+                  110,
+                  103,
+                  45,
+                  119,
+                  97,
+                  108,
+                  108,
+                  101,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "account",
+                "path": "config"
+              }
+            ]
+          }
+        },
+        {
+          "name": "principal",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  105,
+                  110,
+                  99,
+                  105,
+                  112,
+                  97,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal.seed_owner",
+                "account": "Principal"
+              },
+              {
+                "kind": "account",
+                "path": "principal.principal_id",
+                "account": "Principal"
+              }
+            ]
+          },
+          "relations": [
+            "binding"
+          ]
+        },
+        {
+          "name": "caller",
+          "signer": true
+        },
+        {
+          "name": "instructions",
+          "address": "Sysvar1nstructions1111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "AuthorizeFundingWalletArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "authorize_wallet",
+      "discriminator": [
+        62,
+        94,
+        118,
+        217,
+        208,
+        224,
+        39,
+        228
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "relations": [
+            "binding"
+          ]
+        },
+        {
+          "name": "wallet",
+          "relations": [
+            "binding"
+          ]
+        },
+        {
+          "name": "binding",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  119,
+                  97,
+                  108,
+                  108,
+                  101,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "account",
+                "path": "binding.generation",
+                "account": "WalletBinding"
+              }
+            ]
+          }
+        },
+        {
+          "name": "principal",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  105,
+                  110,
+                  99,
+                  105,
+                  112,
+                  97,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal.seed_owner",
+                "account": "Principal"
+              },
+              {
+                "kind": "account",
+                "path": "principal.principal_id",
+                "account": "Principal"
+              }
+            ]
+          },
+          "relations": [
+            "binding"
+          ]
+        },
+        {
+          "name": "owner",
+          "signer": true
+        },
+        {
+          "name": "instructions",
+          "address": "Sysvar1nstructions1111111111111111111111111"
+        },
+        {
+          "name": "claim"
+        },
+        {
+          "name": "source"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "AuthorizeWalletArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "bind_funding_wallet",
+      "discriminator": [
+        215,
+        18,
+        230,
+        192,
+        247,
+        148,
+        24,
+        201
+      ],
+      "accounts": [
+        {
+          "name": "config"
+        },
+        {
+          "name": "wallet"
+        },
+        {
+          "name": "principal",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  105,
+                  110,
+                  99,
+                  105,
+                  112,
+                  97,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal.seed_owner",
+                "account": "Principal"
+              },
+              {
+                "kind": "account",
+                "path": "principal.principal_id",
+                "account": "Principal"
+              }
+            ]
+          }
+        },
+        {
+          "name": "owner",
+          "signer": true
+        },
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "binding",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  102,
+                  117,
+                  110,
+                  100,
+                  105,
+                  110,
+                  103,
+                  45,
+                  119,
+                  97,
+                  108,
+                  108,
+                  101,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "account",
+                "path": "config"
+              }
+            ]
+          }
+        },
+        {
+          "name": "swig_program",
+          "address": "swigypWHEksbC64pWKwah1WTeh9JXwx8H1rJHLdbQMB"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "BindFundingWalletArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "bind_wallet",
+      "discriminator": [
+        156,
+        226,
+        250,
+        174,
+        87,
+        6,
+        18,
+        131
+      ],
+      "accounts": [
+        {
+          "name": "config"
+        },
+        {
+          "name": "wallet"
+        },
+        {
+          "name": "principal",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  105,
+                  110,
+                  99,
+                  105,
+                  112,
+                  97,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal.seed_owner",
+                "account": "Principal"
+              },
+              {
+                "kind": "account",
+                "path": "principal.principal_id",
+                "account": "Principal"
+              }
+            ]
+          }
+        },
+        {
+          "name": "owner",
+          "signer": true
+        },
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "binding",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  119,
+                  97,
+                  108,
+                  108,
+                  101,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "arg",
+                "path": "args.generation"
+              }
+            ]
+          }
+        },
+        {
+          "name": "swig_program",
+          "docs": [
+            "accepted dependency; this field does not claim executable immutability."
+          ],
+          "address": "swigypWHEksbC64pWKwah1WTeh9JXwx8H1rJHLdbQMB"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "BindWalletArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "consume",
+      "discriminator": [
+        65,
+        178,
+        141,
+        13,
+        95,
+        57,
+        76,
+        154
+      ],
+      "accounts": [
+        {
+          "name": "core_authority",
+          "signer": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121,
+                  45,
+                  99,
+                  111,
+                  110,
+                  115,
+                  117,
+                  109,
+                  101,
+                  114
+                ]
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                89,
+                111,
+                156,
+                218,
+                94,
+                100,
+                111,
+                195,
+                14,
+                162,
+                98,
+                155,
+                142,
+                50,
+                234,
+                47,
+                214,
+                177,
+                170,
+                127,
+                80,
+                24,
+                75,
+                6,
+                27,
+                151,
+                122,
+                103,
+                179,
+                166,
+                137,
+                109
+              ]
+            }
+          }
+        },
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "principal",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  105,
+                  110,
+                  99,
+                  105,
+                  112,
+                  97,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal.seed_owner",
+                "account": "Principal"
+              },
+              {
+                "kind": "account",
+                "path": "principal.principal_id",
+                "account": "Principal"
+              }
+            ]
+          },
+          "relations": [
+            "budget"
+          ]
+        },
+        {
+          "name": "budget",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  98,
+                  117,
+                  100,
+                  103,
+                  101,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "account",
+                "path": "budget.asset",
+                "account": "Budget"
+              }
+            ]
+          }
+        },
+        {
+          "name": "reservation",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  115,
+                  101,
+                  114,
+                  118,
+                  97,
+                  116,
+                  105,
+                  111,
+                  110
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "account",
+                "path": "reservation.terms.tab_id",
+                "account": "Reservation"
+              }
+            ]
+          }
+        },
+        {
+          "name": "operation",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  111,
+                  112,
+                  101,
+                  114,
+                  97,
+                  116,
+                  105,
+                  111,
+                  110
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "arg",
+                "path": "args.operation_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "StageArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "consume_completed_run",
+      "discriminator": [
+        223,
+        193,
+        98,
+        204,
+        249,
+        228,
+        227,
+        210
+      ],
+      "accounts": [
+        {
+          "name": "core_authority",
+          "signer": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121,
+                  45,
+                  99,
+                  111,
+                  110,
+                  115,
+                  117,
+                  109,
+                  101,
+                  114
+                ]
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                89,
+                111,
+                156,
+                218,
+                94,
+                100,
+                111,
+                195,
+                14,
+                162,
+                98,
+                155,
+                142,
+                50,
+                234,
+                47,
+                214,
+                177,
+                170,
+                127,
+                80,
+                24,
+                75,
+                6,
+                27,
+                151,
+                122,
+                103,
+                179,
+                166,
+                137,
+                109
+              ]
+            }
+          }
+        },
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "principal",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  105,
+                  110,
+                  99,
+                  105,
+                  112,
+                  97,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal.seed_owner",
+                "account": "Principal"
+              },
+              {
+                "kind": "account",
+                "path": "principal.principal_id",
+                "account": "Principal"
+              }
+            ]
+          },
+          "relations": [
+            "budget"
+          ]
+        },
+        {
+          "name": "budget",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  98,
+                  117,
+                  100,
+                  103,
+                  101,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "account",
+                "path": "budget.asset",
+                "account": "Budget"
+              }
+            ]
+          }
+        },
+        {
+          "name": "reservation",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  115,
+                  101,
+                  114,
+                  118,
+                  97,
+                  116,
+                  105,
+                  111,
+                  110
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "account",
+                "path": "reservation.terms.tab_id",
+                "account": "Reservation"
+              }
+            ]
+          }
+        },
+        {
+          "name": "operation",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  117,
+                  110,
+                  45,
+                  111,
+                  112,
+                  101,
+                  114,
+                  97,
+                  116,
+                  105,
+                  111,
+                  110
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "arg",
+                "path": "args.operation_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "StageArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "consume_repayment_permission",
+      "discriminator": [
+        68,
+        63,
+        101,
+        18,
+        87,
+        33,
+        231,
+        191
+      ],
+      "accounts": [
+        {
+          "name": "core_authority",
+          "signer": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121,
+                  45,
+                  99,
+                  111,
+                  110,
+                  115,
+                  117,
+                  109,
+                  101,
+                  114
+                ]
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                89,
+                111,
+                156,
+                218,
+                94,
+                100,
+                111,
+                195,
+                14,
+                162,
+                98,
+                155,
+                142,
+                50,
+                234,
+                47,
+                214,
+                177,
+                170,
+                127,
+                80,
+                24,
+                75,
+                6,
+                27,
+                151,
+                122,
+                103,
+                179,
+                166,
+                137,
+                109
+              ]
+            }
+          }
+        },
+        {
+          "name": "principal",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  105,
+                  110,
+                  99,
+                  105,
+                  112,
+                  97,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal.seed_owner",
+                "account": "Principal"
+              },
+              {
+                "kind": "account",
+                "path": "principal.principal_id",
+                "account": "Principal"
+              }
+            ]
+          },
+          "relations": [
+            "binding",
+            "permission"
+          ]
+        },
+        {
+          "name": "binding",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  102,
+                  117,
+                  110,
+                  100,
+                  105,
+                  110,
+                  103,
+                  45,
+                  119,
+                  97,
+                  108,
+                  108,
+                  101,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "account",
+                "path": "binding.config",
+                "account": "FundingWalletBinding"
+              }
+            ]
+          }
+        },
+        {
+          "name": "permission",
+          "writable": true
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "RepaymentExecution"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "consume_spending_permission",
+      "discriminator": [
+        148,
+        181,
+        23,
+        123,
+        237,
+        29,
+        145,
+        93
+      ],
+      "accounts": [
+        {
+          "name": "core_authority",
+          "signer": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121,
+                  45,
+                  99,
+                  111,
+                  110,
+                  115,
+                  117,
+                  109,
+                  101,
+                  114
+                ]
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                89,
+                111,
+                156,
+                218,
+                94,
+                100,
+                111,
+                195,
+                14,
+                162,
+                98,
+                155,
+                142,
+                50,
+                234,
+                47,
+                214,
+                177,
+                170,
+                127,
+                80,
+                24,
+                75,
+                6,
+                27,
+                151,
+                122,
+                103,
+                179,
+                166,
+                137,
+                109
+              ]
+            }
+          }
+        },
+        {
+          "name": "principal",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  105,
+                  110,
+                  99,
+                  105,
+                  112,
+                  97,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal.seed_owner",
+                "account": "Principal"
+              },
+              {
+                "kind": "account",
+                "path": "principal.principal_id",
+                "account": "Principal"
+              }
+            ]
+          },
+          "relations": [
+            "binding",
+            "permission"
+          ]
+        },
+        {
+          "name": "binding",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  102,
+                  117,
+                  110,
+                  100,
+                  105,
+                  110,
+                  103,
+                  45,
+                  119,
+                  97,
+                  108,
+                  108,
+                  101,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "account",
+                "path": "binding.config",
+                "account": "FundingWalletBinding"
+              }
+            ]
+          }
+        },
+        {
+          "name": "permission",
+          "writable": true
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "SpendingExecution"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "create_actor",
+      "discriminator": [
+        46,
+        167,
+        99,
+        125,
+        120,
+        247,
+        217,
+        39
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "owner",
+          "signer": true
+        },
+        {
+          "name": "principal",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  105,
+                  110,
+                  99,
+                  105,
+                  112,
+                  97,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal.seed_owner",
+                "account": "Principal"
+              },
+              {
+                "kind": "account",
+                "path": "principal.principal_id",
+                "account": "Principal"
+              }
+            ]
+          }
+        },
+        {
+          "name": "actor",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  99,
+                  116,
+                  111,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "arg",
+                "path": "args.actor_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "CreateActorArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "create_budget",
+      "discriminator": [
+        235,
+        230,
+        179,
+        201,
+        233,
+        58,
+        158,
+        72
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "owner",
+          "signer": true
+        },
+        {
+          "name": "principal",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  105,
+                  110,
+                  99,
+                  105,
+                  112,
+                  97,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal.seed_owner",
+                "account": "Principal"
+              },
+              {
+                "kind": "account",
+                "path": "principal.principal_id",
+                "account": "Principal"
+              }
+            ]
+          }
+        },
+        {
+          "name": "budget",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  98,
+                  117,
+                  100,
+                  103,
+                  101,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "arg",
+                "path": "args.asset"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "CreateBudgetArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "create_mandate",
+      "discriminator": [
+        230,
+        170,
+        158,
+        68,
+        33,
+        169,
+        16,
+        158
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "owner",
+          "signer": true
+        },
+        {
+          "name": "principal",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  105,
+                  110,
+                  99,
+                  105,
+                  112,
+                  97,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal.seed_owner",
+                "account": "Principal"
+              },
+              {
+                "kind": "account",
+                "path": "principal.principal_id",
+                "account": "Principal"
+              }
+            ]
+          },
+          "relations": [
+            "actor",
+            "budget"
+          ]
+        },
+        {
+          "name": "actor",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  99,
+                  116,
+                  111,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "account",
+                "path": "actor.actor_id",
+                "account": "Actor"
+              }
+            ]
+          }
+        },
+        {
+          "name": "budget",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  98,
+                  117,
+                  100,
+                  103,
+                  101,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "account",
+                "path": "budget.asset",
+                "account": "Budget"
+              }
+            ]
+          }
+        },
+        {
+          "name": "mandate",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  97,
+                  110,
+                  100,
+                  97,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "arg",
+                "path": "args.mandate_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "CreateMandateArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "create_principal",
+      "discriminator": [
+        168,
+        250,
+        18,
+        80,
+        185,
+        162,
+        130,
+        50
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "owner",
+          "signer": true
+        },
+        {
+          "name": "principal",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  105,
+                  110,
+                  99,
+                  105,
+                  112,
+                  97,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "owner"
+              },
+              {
+                "kind": "arg",
+                "path": "args.principal_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "CreatePrincipalArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "grant_repayment_permission",
+      "discriminator": [
+        117,
+        188,
+        116,
+        179,
+        140,
+        65,
+        137,
+        49
+      ],
+      "accounts": [
+        {
+          "name": "principal",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  105,
+                  110,
+                  99,
+                  105,
+                  112,
+                  97,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal.seed_owner",
+                "account": "Principal"
+              },
+              {
+                "kind": "account",
+                "path": "principal.principal_id",
+                "account": "Principal"
+              }
+            ]
+          },
+          "relations": [
+            "binding"
+          ]
+        },
+        {
+          "name": "owner",
+          "signer": true
+        },
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "binding",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  102,
+                  117,
+                  110,
+                  100,
+                  105,
+                  110,
+                  103,
+                  45,
+                  119,
+                  97,
+                  108,
+                  108,
+                  101,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "account",
+                "path": "binding.config",
+                "account": "FundingWalletBinding"
+              }
+            ]
+          }
+        },
+        {
+          "name": "permission",
+          "writable": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "GrantRepaymentPermissionArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "grant_spending_permission",
+      "discriminator": [
+        233,
+        40,
+        197,
+        20,
+        172,
+        219,
+        113,
+        31
+      ],
+      "accounts": [
+        {
+          "name": "principal",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  105,
+                  110,
+                  99,
+                  105,
+                  112,
+                  97,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal.seed_owner",
+                "account": "Principal"
+              },
+              {
+                "kind": "account",
+                "path": "principal.principal_id",
+                "account": "Principal"
+              }
+            ]
+          },
+          "relations": [
+            "binding"
+          ]
+        },
+        {
+          "name": "owner",
+          "signer": true
+        },
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "binding",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  102,
+                  117,
+                  110,
+                  100,
+                  105,
+                  110,
+                  103,
+                  45,
+                  119,
+                  97,
+                  108,
+                  108,
+                  101,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "account",
+                "path": "binding.config",
+                "account": "FundingWalletBinding"
+              }
+            ]
+          }
+        },
+        {
+          "name": "permission",
+          "writable": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "GrantSpendingPermissionArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "release",
+      "discriminator": [
+        253,
+        249,
+        15,
+        206,
+        28,
+        127,
+        193,
+        241
+      ],
+      "accounts": [
+        {
+          "name": "core_authority",
+          "signer": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121,
+                  45,
+                  99,
+                  111,
+                  110,
+                  115,
+                  117,
+                  109,
+                  101,
+                  114
+                ]
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                89,
+                111,
+                156,
+                218,
+                94,
+                100,
+                111,
+                195,
+                14,
+                162,
+                98,
+                155,
+                142,
+                50,
+                234,
+                47,
+                214,
+                177,
+                170,
+                127,
+                80,
+                24,
+                75,
+                6,
+                27,
+                151,
+                122,
+                103,
+                179,
+                166,
+                137,
+                109
+              ]
+            }
+          }
+        },
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "principal",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  105,
+                  110,
+                  99,
+                  105,
+                  112,
+                  97,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal.seed_owner",
+                "account": "Principal"
+              },
+              {
+                "kind": "account",
+                "path": "principal.principal_id",
+                "account": "Principal"
+              }
+            ]
+          },
+          "relations": [
+            "budget"
+          ]
+        },
+        {
+          "name": "budget",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  98,
+                  117,
+                  100,
+                  103,
+                  101,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "account",
+                "path": "budget.asset",
+                "account": "Budget"
+              }
+            ]
+          }
+        },
+        {
+          "name": "reservation",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  115,
+                  101,
+                  114,
+                  118,
+                  97,
+                  116,
+                  105,
+                  111,
+                  110
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "account",
+                "path": "reservation.terms.tab_id",
+                "account": "Reservation"
+              }
+            ]
+          }
+        },
+        {
+          "name": "operation",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  111,
+                  112,
+                  101,
+                  114,
+                  97,
+                  116,
+                  105,
+                  111,
+                  110
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "arg",
+                "path": "args.operation_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "StageArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "reserve",
+      "discriminator": [
+        92,
+        99,
+        244,
+        209,
+        28,
+        65,
+        213,
+        157
+      ],
+      "accounts": [
+        {
+          "name": "core_authority",
+          "signer": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121,
+                  45,
+                  99,
+                  111,
+                  110,
+                  115,
+                  117,
+                  109,
+                  101,
+                  114
+                ]
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                89,
+                111,
+                156,
+                218,
+                94,
+                100,
+                111,
+                195,
+                14,
+                162,
+                98,
+                155,
+                142,
+                50,
+                234,
+                47,
+                214,
+                177,
+                170,
+                127,
+                80,
+                24,
+                75,
+                6,
+                27,
+                151,
+                122,
+                103,
+                179,
+                166,
+                137,
+                109
+              ]
+            }
+          }
+        },
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "principal",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  105,
+                  110,
+                  99,
+                  105,
+                  112,
+                  97,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal.seed_owner",
+                "account": "Principal"
+              },
+              {
+                "kind": "account",
+                "path": "principal.principal_id",
+                "account": "Principal"
+              }
+            ]
+          },
+          "relations": [
+            "actor",
+            "mandate",
+            "budget"
+          ]
+        },
+        {
+          "name": "actor",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  99,
+                  116,
+                  111,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "account",
+                "path": "actor.actor_id",
+                "account": "Actor"
+              }
+            ]
+          },
+          "relations": [
+            "mandate"
+          ]
+        },
+        {
+          "name": "credential",
+          "signer": true
+        },
+        {
+          "name": "mandate",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  97,
+                  110,
+                  100,
+                  97,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "account",
+                "path": "mandate.mandate_id",
+                "account": "Mandate"
+              }
+            ]
+          }
+        },
+        {
+          "name": "budget",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  98,
+                  117,
+                  100,
+                  103,
+                  101,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "account",
+                "path": "budget.asset",
+                "account": "Budget"
+              }
+            ]
+          },
+          "relations": [
+            "mandate"
+          ]
+        },
+        {
+          "name": "reservation",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  115,
+                  101,
+                  114,
+                  118,
+                  97,
+                  116,
+                  105,
+                  111,
+                  110
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "arg",
+                "path": "args.terms.tab_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "operation",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  111,
+                  112,
+                  101,
+                  114,
+                  97,
+                  116,
+                  105,
+                  111,
+                  110
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "arg",
+                "path": "args.operation_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "AcceptArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "revoke_actor",
+      "discriminator": [
+        79,
+        112,
+        28,
+        147,
+        211,
+        196,
+        204,
+        161
+      ],
+      "accounts": [
+        {
+          "name": "owner",
+          "signer": true
+        },
+        {
+          "name": "principal",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  105,
+                  110,
+                  99,
+                  105,
+                  112,
+                  97,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal.seed_owner",
+                "account": "Principal"
+              },
+              {
+                "kind": "account",
+                "path": "principal.principal_id",
+                "account": "Principal"
+              }
+            ]
+          },
+          "relations": [
+            "actor"
+          ]
+        },
+        {
+          "name": "actor",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  99,
+                  116,
+                  111,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "account",
+                "path": "actor.actor_id",
+                "account": "Actor"
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "expected_generation",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "revoke_mandate",
+      "discriminator": [
+        252,
+        97,
+        140,
+        119,
+        67,
+        43,
+        177,
+        108
+      ],
+      "accounts": [
+        {
+          "name": "owner",
+          "signer": true
+        },
+        {
+          "name": "principal",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  105,
+                  110,
+                  99,
+                  105,
+                  112,
+                  97,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal.seed_owner",
+                "account": "Principal"
+              },
+              {
+                "kind": "account",
+                "path": "principal.principal_id",
+                "account": "Principal"
+              }
+            ]
+          },
+          "relations": [
+            "mandate"
+          ]
+        },
+        {
+          "name": "mandate",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  97,
+                  110,
+                  100,
+                  97,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "account",
+                "path": "mandate.mandate_id",
+                "account": "Mandate"
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "expected_revision",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "revoke_repayment_permission",
+      "discriminator": [
+        42,
+        142,
+        114,
+        26,
+        78,
+        88,
+        206,
+        45
+      ],
+      "accounts": [
+        {
+          "name": "principal",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  105,
+                  110,
+                  99,
+                  105,
+                  112,
+                  97,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal.seed_owner",
+                "account": "Principal"
+              },
+              {
+                "kind": "account",
+                "path": "principal.principal_id",
+                "account": "Principal"
+              }
+            ]
+          },
+          "relations": [
+            "permission"
+          ]
+        },
+        {
+          "name": "owner",
+          "signer": true
+        },
+        {
+          "name": "permission",
+          "writable": true
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "RevokeRepaymentPermissionArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "revoke_spending_permission",
+      "discriminator": [
+        245,
+        50,
+        161,
+        201,
+        192,
+        75,
+        109,
+        234
+      ],
+      "accounts": [
+        {
+          "name": "principal",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  105,
+                  110,
+                  99,
+                  105,
+                  112,
+                  97,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal.seed_owner",
+                "account": "Principal"
+              },
+              {
+                "kind": "account",
+                "path": "principal.principal_id",
+                "account": "Principal"
+              }
+            ]
+          },
+          "relations": [
+            "permission"
+          ]
+        },
+        {
+          "name": "owner",
+          "signer": true
+        },
+        {
+          "name": "permission",
+          "writable": true
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "RevokeSpendingPermissionArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "rotate_actor",
+      "discriminator": [
+        210,
+        234,
+        120,
+        88,
+        114,
+        94,
+        161,
+        189
+      ],
+      "accounts": [
+        {
+          "name": "owner",
+          "signer": true
+        },
+        {
+          "name": "principal",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  105,
+                  110,
+                  99,
+                  105,
+                  112,
+                  97,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal.seed_owner",
+                "account": "Principal"
+              },
+              {
+                "kind": "account",
+                "path": "principal.principal_id",
+                "account": "Principal"
+              }
+            ]
+          },
+          "relations": [
+            "actor"
+          ]
+        },
+        {
+          "name": "actor",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  99,
+                  116,
+                  111,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal"
+              },
+              {
+                "kind": "account",
+                "path": "actor.actor_id",
+                "account": "Actor"
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "RotateActorArgs"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "rotate_principal_owner",
+      "discriminator": [
+        224,
+        78,
+        177,
+        82,
+        56,
+        82,
+        116,
+        15
+      ],
+      "accounts": [
+        {
+          "name": "principal",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  105,
+                  110,
+                  99,
+                  105,
+                  112,
+                  97,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "principal.seed_owner",
+                "account": "Principal"
+              },
+              {
+                "kind": "account",
+                "path": "principal.principal_id",
+                "account": "Principal"
+              }
+            ]
+          }
+        },
+        {
+          "name": "current_owner",
+          "signer": true
+        },
+        {
+          "name": "new_owner",
+          "signer": true
+        },
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "receipt",
+          "writable": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "args",
+          "type": {
+            "defined": {
+              "name": "RotatePrincipalOwnerArgs"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Actor",
+      "discriminator": [
+        46,
+        77,
+        47,
+        204,
+        204,
+        54,
+        34,
+        88
+      ]
+    },
+    {
+      "name": "AllowanceAmendment",
+      "discriminator": [
+        195,
+        120,
+        96,
+        184,
+        252,
+        205,
+        30,
+        83
+      ]
+    },
+    {
+      "name": "Budget",
+      "discriminator": [
+        35,
+        151,
+        58,
+        65,
+        187,
+        148,
+        119,
+        218
+      ]
+    },
+    {
+      "name": "FundingWalletBinding",
+      "discriminator": [
+        231,
+        23,
+        18,
+        146,
+        17,
+        208,
+        80,
+        64
+      ]
+    },
+    {
+      "name": "Mandate",
+      "discriminator": [
+        113,
+        216,
+        98,
+        159,
+        185,
+        63,
+        55,
+        18
+      ]
+    },
+    {
+      "name": "OperationReceipt",
+      "discriminator": [
+        85,
+        164,
+        198,
+        182,
+        71,
+        51,
+        54,
+        103
+      ]
+    },
+    {
+      "name": "OwnerRotationReceipt",
+      "discriminator": [
+        100,
+        51,
+        203,
+        132,
+        240,
+        223,
+        153,
+        200
+      ]
+    },
+    {
+      "name": "Principal",
+      "discriminator": [
+        0,
+        19,
+        239,
+        113,
+        115,
+        34,
+        165,
+        148
+      ]
+    },
+    {
+      "name": "RepaymentPermission",
+      "discriminator": [
+        212,
+        233,
+        5,
+        8,
+        99,
+        33,
+        139,
+        55
+      ]
+    },
+    {
+      "name": "Reservation",
+      "discriminator": [
+        188,
+        235,
+        0,
+        111,
+        208,
+        253,
+        247,
+        212
+      ]
+    },
+    {
+      "name": "SpendingPermission",
+      "discriminator": [
+        142,
+        69,
+        87,
+        29,
+        120,
+        43,
+        119,
+        140
+      ]
+    },
+    {
+      "name": "WalletBinding",
+      "discriminator": [
+        51,
+        211,
+        204,
+        185,
+        168,
+        68,
+        52,
+        176
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "PrincipalOwnerRotated",
+      "discriminator": [
+        190,
+        210,
+        115,
+        212,
+        94,
+        238,
+        99,
+        126
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "SchemaVersion",
+      "msg": "Unsupported Registry schema version"
+    },
+    {
+      "code": 6001,
+      "name": "OwnerAuthority",
+      "msg": "Owner authority is required"
+    },
+    {
+      "code": 6002,
+      "name": "ConfigurationConflict",
+      "msg": "Configuration retry changes existing authority or policy"
+    },
+    {
+      "code": 6003,
+      "name": "InvalidPolicy",
+      "msg": "Policy is invalid for the supported authority profile"
+    },
+    {
+      "code": 6004,
+      "name": "CredentialInactive",
+      "msg": "Credential is inactive"
+    },
+    {
+      "code": 6005,
+      "name": "CredentialKey",
+      "msg": "Credential signer does not match the current actor credential"
+    },
+    {
+      "code": 6006,
+      "name": "CredentialGeneration",
+      "msg": "Credential generation has changed"
+    },
+    {
+      "code": 6007,
+      "name": "MandateRevoked",
+      "msg": "Mandate is revoked"
+    },
+    {
+      "code": 6008,
+      "name": "MandateRevision",
+      "msg": "Mandate revision has changed"
+    },
+    {
+      "code": 6009,
+      "name": "Expired",
+      "msg": "Credential, mandate or exact authorization has expired or is not yet valid"
+    },
+    {
+      "code": 6010,
+      "name": "IntentMismatch",
+      "msg": "Exact intent differs from principal, mandate or accepted terms"
+    },
+    {
+      "code": 6011,
+      "name": "PerOperationLimit",
+      "msg": "Operation exceeds the per-operation ceiling"
+    },
+    {
+      "code": 6012,
+      "name": "BudgetExhausted",
+      "msg": "Shared lifetime expenditure budget is exhausted"
+    },
+    {
+      "code": 6013,
+      "name": "ZeroAmount",
+      "msg": "Amount must be positive"
+    },
+    {
+      "code": 6014,
+      "name": "ReservationExists",
+      "msg": "This Tab already has an accepted reservation"
+    },
+    {
+      "code": 6015,
+      "name": "OperationConflict",
+      "msg": "Operation ID was already used for different terms or a different stage"
+    },
+    {
+      "code": 6016,
+      "name": "ReservationInvariant",
+      "msg": "Accepted reservation no longer conserves its finite original capacity"
+    },
+    {
+      "code": 6017,
+      "name": "WalletOwner",
+      "msg": "Current principal owner signature is required"
+    },
+    {
+      "code": 6018,
+      "name": "WalletBinding",
+      "msg": "Wallet binding identity or schema mismatch"
+    },
+    {
+      "code": 6019,
+      "name": "WalletGraph",
+      "msg": "Wallet graph differs from the admitted single Registry root"
+    },
+    {
+      "code": 6020,
+      "name": "WalletGeneration",
+      "msg": "Wallet or owner authority generation is stale"
+    },
+    {
+      "code": 6021,
+      "name": "WalletNonce",
+      "msg": "Wallet authorization nonce was already consumed or is out of order"
+    },
+    {
+      "code": 6022,
+      "name": "WalletExpired",
+      "msg": "Wallet authorization is expired or has no positive amount"
+    },
+    {
+      "code": 6023,
+      "name": "WalletEnvelope",
+      "msg": "Wallet operation must be an exact top-level admitted envelope"
+    },
+    {
+      "code": 6024,
+      "name": "WalletRepayment",
+      "msg": "Wallet operation is not the exact approved Core repayment"
+    },
+    {
+      "code": 6025,
+      "name": "WalletBundleHash",
+      "msg": "Wallet operation bytes or effective privileges changed"
+    },
+    {
+      "code": 6026,
+      "name": "AllowanceGeneration",
+      "msg": "Allowance amendment uses a stale owner authority generation"
+    },
+    {
+      "code": 6027,
+      "name": "AllowanceRevision",
+      "msg": "Allowance policy revision is invalid or has changed"
+    },
+    {
+      "code": 6028,
+      "name": "AllowanceFloor",
+      "msg": "Allowance ceiling cannot be below consumed plus reserved authority"
+    },
+    {
+      "code": 6029,
+      "name": "AllowanceConflict",
+      "msg": "Allowance operation ID was already used for a different amendment"
+    },
+    {
+      "code": 6030,
+      "name": "FundingAction",
+      "msg": "Wallet operation is not an admitted collection, free withdrawal, repayment, send or swap"
+    },
+    {
+      "code": 6031,
+      "name": "OwnerRotationConflict",
+      "msg": "Owner rotation ID conflicts with its original immutable request"
+    },
+    {
+      "code": 6032,
+      "name": "RepaymentPermission",
+      "msg": "Repayment permission is absent, revoked, expired, exhausted or does not cover this exact obligation and route"
+    },
+    {
+      "code": 6033,
+      "name": "SpendingPermission",
+      "msg": "Spending permission is absent, revoked, expired, exhausted or does not cover this action, asset, route and outcome"
+    }
+  ],
+  "types": [
+    {
+      "name": "AcceptArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "operation_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "terms",
+            "type": {
+              "defined": {
+                "name": "TabTerms"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Actor",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "actor_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "current_key",
+            "type": "pubkey"
+          },
+          {
+            "name": "generation",
+            "type": "u64"
+          },
+          {
+            "name": "valid_from",
+            "type": "i64"
+          },
+          {
+            "name": "valid_until",
+            "type": "i64"
+          },
+          {
+            "name": "active",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AllowanceAmendment",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "domain",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "budget",
+            "type": "pubkey"
+          },
+          {
+            "name": "asset",
+            "type": "pubkey"
+          },
+          {
+            "name": "operation_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "authorizing_owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "authority_generation",
+            "type": "u64"
+          },
+          {
+            "name": "expected_revision",
+            "type": "u64"
+          },
+          {
+            "name": "applied_revision",
+            "type": "u64"
+          },
+          {
+            "name": "before_ceiling",
+            "type": "u64"
+          },
+          {
+            "name": "ceiling",
+            "type": "u64"
+          },
+          {
+            "name": "reserved",
+            "type": "u64"
+          },
+          {
+            "name": "consumed",
+            "type": "u64"
+          },
+          {
+            "name": "request_digest",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "AmendAllowanceArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "operation_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "authority_generation",
+            "type": "u64"
+          },
+          {
+            "name": "expected_revision",
+            "type": "u64"
+          },
+          {
+            "name": "ceiling",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AuthorizeFundingWalletArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "binding",
+            "type": "pubkey"
+          },
+          {
+            "name": "nonce",
+            "type": "u64"
+          },
+          {
+            "name": "expires_at",
+            "type": "i64"
+          },
+          {
+            "name": "authority_generation",
+            "type": "u64"
+          },
+          {
+            "name": "action",
+            "type": "u8"
+          },
+          {
+            "name": "bundle_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "AuthorizeWalletArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "binding",
+            "type": "pubkey"
+          },
+          {
+            "name": "nonce",
+            "type": "u64"
+          },
+          {
+            "name": "authority_generation",
+            "type": "u64"
+          },
+          {
+            "name": "expires_at",
+            "type": "i64"
+          },
+          {
+            "name": "operation_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "bundle_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "BindFundingWalletArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "wallet_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "authority_generation",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BindWalletArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "generation",
+            "type": "u64"
+          },
+          {
+            "name": "wallet_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "authority_generation",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Budget",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "asset",
+            "type": "pubkey"
+          },
+          {
+            "name": "ceiling",
+            "type": "u64"
+          },
+          {
+            "name": "reserved",
+            "type": "u64"
+          },
+          {
+            "name": "consumed",
+            "docs": [
+              "Lifetime expenditure; repayment has no Registry entrypoint."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "revision",
+            "docs": [
+              "Positive revision of the owner-approved allowance policy."
+            ],
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CreateActorArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "actor_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "current_key",
+            "type": "pubkey"
+          },
+          {
+            "name": "valid_from",
+            "type": "i64"
+          },
+          {
+            "name": "valid_until",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CreateBudgetArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "asset",
+            "type": "pubkey"
+          },
+          {
+            "name": "ceiling",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CreateMandateArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "mandate_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "supplier",
+            "type": "pubkey"
+          },
+          {
+            "name": "source",
+            "type": "pubkey"
+          },
+          {
+            "name": "per_operation_limit",
+            "type": "u64"
+          },
+          {
+            "name": "expires_at",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CreatePrincipalArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "principal_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "domain",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "kind",
+            "type": "u8"
+          },
+          {
+            "name": "governing_policy",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "FundingWalletBinding",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "config",
+            "type": "pubkey"
+          },
+          {
+            "name": "wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "wallet_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "graph_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "nonce",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GrantRepaymentPermissionArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "permission_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "terms",
+            "type": {
+              "defined": {
+                "name": "RepaymentPermissionTerms"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "GrantSpendingPermissionArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "permission_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "terms",
+            "type": {
+              "defined": {
+                "name": "SpendingPermissionTerms"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Mandate",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "actor",
+            "type": "pubkey"
+          },
+          {
+            "name": "budget",
+            "type": "pubkey"
+          },
+          {
+            "name": "mandate_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "asset",
+            "type": "pubkey"
+          },
+          {
+            "name": "supplier",
+            "type": "pubkey"
+          },
+          {
+            "name": "source",
+            "docs": [
+              "Exact admitted funding source for this first issuer-backed profile."
+            ],
+            "type": "pubkey"
+          },
+          {
+            "name": "per_operation_limit",
+            "type": "u64"
+          },
+          {
+            "name": "expires_at",
+            "type": "i64"
+          },
+          {
+            "name": "revision",
+            "type": "u64"
+          },
+          {
+            "name": "active",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OperationReceipt",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "operation_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "kind",
+            "type": "u8"
+          },
+          {
+            "name": "request_digest",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "reservation",
+            "type": "pubkey"
+          },
+          {
+            "name": "reservation_remaining",
+            "type": "u64"
+          },
+          {
+            "name": "reservation_consumed",
+            "type": "u64"
+          },
+          {
+            "name": "reservation_released",
+            "type": "u64"
+          },
+          {
+            "name": "budget_reserved",
+            "type": "u64"
+          },
+          {
+            "name": "budget_consumed",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OwnerRotationReceipt",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "operation_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "old_owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "new_owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "previous_generation",
+            "type": "u64"
+          },
+          {
+            "name": "next_generation",
+            "type": "u64"
+          },
+          {
+            "name": "request_digest",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Principal",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "principal_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "domain",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "kind",
+            "docs": [
+              "1: person, 2: company, 3: other recognized principal."
+            ],
+            "type": "u8"
+          },
+          {
+            "name": "governing_policy",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "seed_owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "owner",
+            "docs": [
+              "This first profile has one Ed25519 owner. Other governance profiles",
+              "require distinct handlers and cannot be selected by this field."
+            ],
+            "type": "pubkey"
+          },
+          {
+            "name": "authority_generation",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PrincipalOwnerRotated",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "old_owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "new_owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "authority_generation",
+            "type": "u64"
+          },
+          {
+            "name": "receipt",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RepaymentConsumption",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "principal",
+            "type": "u64"
+          },
+          {
+            "name": "interest",
+            "type": "u64"
+          },
+          {
+            "name": "payments",
+            "type": "u64"
+          },
+          {
+            "name": "last_executed_at",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RepaymentExecution",
+      "docs": [
+        "Core supplies authenticated live obligation/title/route facts and the actual",
+        "allocation after accrual. Only Core's fixed consumer PDA can consume a grant."
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "binding",
+            "type": "pubkey"
+          },
+          {
+            "name": "kind",
+            "type": "u8"
+          },
+          {
+            "name": "obligation",
+            "type": "pubkey"
+          },
+          {
+            "name": "obligor",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "debit_from",
+            "type": "pubkey"
+          },
+          {
+            "name": "creditor",
+            "type": "pubkey"
+          },
+          {
+            "name": "creditor_custody",
+            "type": "pubkey"
+          },
+          {
+            "name": "creditor_destination",
+            "type": "pubkey"
+          },
+          {
+            "name": "protocol_beneficiary",
+            "type": "pubkey"
+          },
+          {
+            "name": "protocol_destination",
+            "type": "pubkey"
+          },
+          {
+            "name": "executor",
+            "type": "pubkey"
+          },
+          {
+            "name": "authority_generation",
+            "type": "u64"
+          },
+          {
+            "name": "request_digest",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "receipt",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "principal_paid",
+            "type": "u64"
+          },
+          {
+            "name": "interest_paid",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RepaymentPermission",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "permission_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "grant_owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "terms_digest",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "terms",
+            "type": {
+              "defined": {
+                "name": "RepaymentPermissionTerms"
+              }
+            }
+          },
+          {
+            "name": "active",
+            "type": "bool"
+          },
+          {
+            "name": "consumed",
+            "type": {
+              "defined": {
+                "name": "RepaymentConsumption"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "RepaymentPermissionTerms",
+      "docs": [
+        "Immutable owner-granted scope. An exact approval sets the three exact fields",
+        "and permits one payment; a standing grant sets them to zero. A fresh grant is",
+        "required to change any route, limit, executor or authority generation."
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "binding",
+            "type": "pubkey"
+          },
+          {
+            "name": "kind",
+            "type": "u8"
+          },
+          {
+            "name": "obligation",
+            "type": "pubkey"
+          },
+          {
+            "name": "obligor",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "debit_from",
+            "type": "pubkey"
+          },
+          {
+            "name": "creditor",
+            "type": "pubkey"
+          },
+          {
+            "name": "creditor_custody",
+            "type": "pubkey"
+          },
+          {
+            "name": "creditor_destination",
+            "type": "pubkey"
+          },
+          {
+            "name": "protocol_beneficiary",
+            "type": "pubkey"
+          },
+          {
+            "name": "protocol_destination",
+            "type": "pubkey"
+          },
+          {
+            "name": "executor",
+            "type": "pubkey"
+          },
+          {
+            "name": "authority_generation",
+            "type": "u64"
+          },
+          {
+            "name": "not_before",
+            "type": "i64"
+          },
+          {
+            "name": "expires_at",
+            "type": "i64"
+          },
+          {
+            "name": "minimum_interval",
+            "type": "u64"
+          },
+          {
+            "name": "per_payment_amount",
+            "type": "u64"
+          },
+          {
+            "name": "per_payment_principal",
+            "type": "u64"
+          },
+          {
+            "name": "per_payment_interest",
+            "type": "u64"
+          },
+          {
+            "name": "total_amount",
+            "type": "u64"
+          },
+          {
+            "name": "total_principal",
+            "type": "u64"
+          },
+          {
+            "name": "total_interest",
+            "type": "u64"
+          },
+          {
+            "name": "maximum_payments",
+            "type": "u64"
+          },
+          {
+            "name": "exact_request_digest",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "exact_receipt",
+            "type": "pubkey"
+          },
+          {
+            "name": "exact_amount",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Reservation",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "terms",
+            "type": {
+              "defined": {
+                "name": "TabTerms"
+              }
+            }
+          },
+          {
+            "name": "terms_digest",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "acceptance_operation",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "remaining",
+            "type": "u64"
+          },
+          {
+            "name": "consumed",
+            "type": "u64"
+          },
+          {
+            "name": "released",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RevokeRepaymentPermissionArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "authority_generation",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RevokeSpendingPermissionArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "authority_generation",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RotateActorArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "expected_generation",
+            "type": "u64"
+          },
+          {
+            "name": "new_key",
+            "type": "pubkey"
+          },
+          {
+            "name": "valid_from",
+            "type": "i64"
+          },
+          {
+            "name": "valid_until",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RotatePrincipalOwnerArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "operation_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "expected_authority_generation",
+            "type": "u64"
+          },
+          {
+            "name": "new_owner",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SpendingConsumption",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "operations",
+            "type": "u64"
+          },
+          {
+            "name": "last_executed_at",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SpendingExecution",
+      "docs": [
+        "Only Core's Registry-consumer PDA may supply these authenticated effects.",
+        "The request commits the quoted minimum; amount_out is the observed result."
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "binding",
+            "type": "pubkey"
+          },
+          {
+            "name": "kind",
+            "type": "u8"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "debit_from",
+            "type": "pubkey"
+          },
+          {
+            "name": "output_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "destination",
+            "type": "pubkey"
+          },
+          {
+            "name": "destination_authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "adapter_program",
+            "type": "pubkey"
+          },
+          {
+            "name": "adapter_pool",
+            "type": "pubkey"
+          },
+          {
+            "name": "executor",
+            "type": "pubkey"
+          },
+          {
+            "name": "authority_generation",
+            "type": "u64"
+          },
+          {
+            "name": "request_digest",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "receipt",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "minimum_output",
+            "type": "u64"
+          },
+          {
+            "name": "amount_out",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SpendingPermission",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "permission_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "grant_owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "terms_digest",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "terms",
+            "type": {
+              "defined": {
+                "name": "SpendingPermissionTerms"
+              }
+            }
+          },
+          {
+            "name": "active",
+            "type": "bool"
+          },
+          {
+            "name": "consumed",
+            "type": {
+              "defined": {
+                "name": "SpendingConsumption"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "SpendingPermissionTerms",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "binding",
+            "type": "pubkey"
+          },
+          {
+            "name": "kind",
+            "type": "u8"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "debit_from",
+            "type": "pubkey"
+          },
+          {
+            "name": "output_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "destination",
+            "type": "pubkey"
+          },
+          {
+            "name": "destination_authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "adapter_program",
+            "type": "pubkey"
+          },
+          {
+            "name": "adapter_pool",
+            "type": "pubkey"
+          },
+          {
+            "name": "executor",
+            "type": "pubkey"
+          },
+          {
+            "name": "authority_generation",
+            "type": "u64"
+          },
+          {
+            "name": "not_before",
+            "type": "i64"
+          },
+          {
+            "name": "expires_at",
+            "type": "i64"
+          },
+          {
+            "name": "minimum_interval",
+            "type": "u64"
+          },
+          {
+            "name": "per_operation_amount",
+            "type": "u64"
+          },
+          {
+            "name": "total_amount",
+            "type": "u64"
+          },
+          {
+            "name": "maximum_operations",
+            "type": "u64"
+          },
+          {
+            "name": "minimum_output_numerator",
+            "docs": [
+              "Smallest accepted output/input rate, in the respective token atoms.",
+              "Every swap must request and receive at least ceil(input * n / d)."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "minimum_output_denominator",
+            "type": "u64"
+          },
+          {
+            "name": "exact_request_digest",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "exact_receipt",
+            "type": "pubkey"
+          },
+          {
+            "name": "exact_amount",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "StageArgs",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "operation_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "expected_revision",
+            "docs": [
+              "Optimistic concurrency guard, excluded from the stable business identity.",
+              "Exact retries retrieve the prior result even after the claim advances."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "service_without_pool",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TabTerms",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "domain",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "tab_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "actor",
+            "type": "pubkey"
+          },
+          {
+            "name": "mandate",
+            "type": "pubkey"
+          },
+          {
+            "name": "asset",
+            "type": "pubkey"
+          },
+          {
+            "name": "supplier",
+            "type": "pubkey"
+          },
+          {
+            "name": "source",
+            "type": "pubkey"
+          },
+          {
+            "name": "cap",
+            "type": "u64"
+          },
+          {
+            "name": "expires_at",
+            "type": "i64"
+          },
+          {
+            "name": "credential_generation",
+            "type": "u64"
+          },
+          {
+            "name": "mandate_revision",
+            "type": "u64"
+          },
+          {
+            "name": "external_terms_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "WalletBinding",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "config",
+            "type": "pubkey"
+          },
+          {
+            "name": "wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "wallet_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "generation",
+            "type": "u64"
+          },
+          {
+            "name": "authority_generation",
+            "type": "u64"
+          },
+          {
+            "name": "nonce",
+            "type": "u64"
+          },
+          {
+            "name": "graph_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

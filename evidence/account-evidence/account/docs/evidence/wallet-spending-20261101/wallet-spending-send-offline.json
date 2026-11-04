@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "trace_sha256": "2e71004d1f18b5547bd3c27af3d8303bdf23bfa9def2c090ab1dabb96003861c",
+  "signed_packets": 108,
+  "verified_financial_receipts": 14,
+  "verified_spending_operations": 6,
+  "verified_actual_adapter_swaps": 0,
+  "refusals_with_rollback": 21,
+  "recorded_state_assertions": 268,
+  "scope": "Offline native-v1 signatures, immutable receipts, separate-asset books, reserve/permission and actual adapter token deltas; no new SVM or RPC execution"
+}

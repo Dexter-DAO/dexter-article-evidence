@@ -1,0 +1,47 @@
+{
+  "workspace": "/workspace/scratch/e85e65001bc6/dexter-account",
+  "versions": {
+    "node": {
+      "exit": 0,
+      "output": "v24.22.1"
+    },
+    "python": {
+      "exit": 0,
+      "output": "3.12.14\nsolders=0.29.0"
+    },
+    "solana": {
+      "exit": 0,
+      "output": "solana-cli 4.4.0 (src:9ef63128; feat:dddabd53, client:Agave)"
+    },
+    "validator": {
+      "exit": 0,
+      "output": "solana-test-validator 4.4.0 (src:9ef63128; feat:dddabd53, client:Agave)"
+    },
+    "cargo_build_sbf": {
+      "exit": 0,
+      "output": "cargo-build-sbf 4.5.0\nDefault platform-tools: v1.57\nDefault Rust: 1.95.0"
+    },
+    "anchor": {
+      "exit": 0,
+      "output": "anchor-cli 1.2.2"
+    },
+    "local_cli_defaults": {
+      "exit": 0,
+      "output": "Config File: /workspace/scratch/e85e65001bc6/dexter-account/.local/solana-cli.yml\nRPC URL: http://127.0.0.1:18999 \nWebSocket URL: ws://127.0.0.1:19000 \nKeypair Path: /workspace/scratch/e85e65001bc6/dexter-account/.local/validator/dev-payer.json \nCommitment: confirmed"
+    }
+  },
+  "pinned": {
+    "anchor": "anchor-cli 1.2.2",
+    "python": "Python 3.12.14",
+    "node": "v24.22.1",
+    "solana": "solana-cli 4.4.0 (src:9ef63128; feat:dddabd53, client:Agave)",
+    "validator": "solana-test-validator 4.4.0 (src:9ef63128; feat:dddabd53, client:Agave)",
+    "cargo_build_sbf": "cargo-build-sbf 4.5.0\nDefault platform-tools: v1.57\nDefault Rust: 1.95.0",
+    "cargo": "cargo 1.95.0 (bbbd3a760 2026-07-09)",
+    "rustc": "rustc 1.95.0-dev (ae660768a 2026-08-17)",
+    "host_cargo": "cargo 1.99.1 (5f94df478 2026-08-27)",
+    "host_rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)"
+  },
+  "disk_free_bytes": 53744934912,
+  "scope": "Local development. Reference and Anchor implementation have separate build/run receipts; neither is a production release."
+}

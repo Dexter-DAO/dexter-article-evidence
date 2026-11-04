@@ -1,0 +1,513 @@
+TAP version 13
+# bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+# Subtest: seller evidence and retained base64url salt verify with the approval nonce
+ok 1 - seller evidence and retained base64url salt verify with the approval nonce
+  ---
+  duration_ms: 48.629291
+  type: 'test'
+  ...
+# Subtest: one changed binding byte fails commitment
+ok 2 - one changed binding byte fails commitment
+  ---
+  duration_ms: 6.297209
+  type: 'test'
+  ...
+# Subtest: changed salt, nonce, file and quote each fail seller evidence
+    # Subtest: salt
+    ok 1 - salt
+      ---
+      duration_ms: 5.884709
+      type: 'test'
+      ...
+    # Subtest: ceremonyNonce
+    ok 2 - ceremonyNonce
+      ---
+      duration_ms: 5.990334
+      type: 'test'
+      ...
+    # Subtest: didDocument
+    ok 3 - didDocument
+      ---
+      duration_ms: 3.441042
+      type: 'test'
+      ...
+    # Subtest: offerJws
+    ok 4 - offerJws
+      ---
+      duration_ms: 5.375667
+      type: 'test'
+      ...
+    1..4
+ok 3 - changed salt, nonce, file and quote each fail seller evidence
+  ---
+  duration_ms: 21.000625
+  type: 'test'
+  ...
+# Subtest: V1 to V5 replay their saved approve, rule and code
+ok 4 - V1 to V5 replay their saved approve, rule and code
+  ---
+  duration_ms: 6.34725
+  type: 'test'
+  ...
+# Subtest: a copycat rerun with dexter.cash file swapped for copycat file fails
+ok 5 - a copycat rerun with dexter.cash file swapped for copycat file fails
+  ---
+  duration_ms: 3.077917
+  type: 'test'
+  ...
+# Subtest: missing, duplicated, altered-hash and unused saved documents fail
+    # Subtest: missing
+    ok 1 - missing
+      ---
+      duration_ms: 2.966583
+      type: 'test'
+      ...
+    # Subtest: duplicate
+    ok 2 - duplicate
+      ---
+      duration_ms: 2.759875
+      type: 'test'
+      ...
+    # Subtest: hash
+    ok 3 - hash
+      ---
+      duration_ms: 2.786125
+      type: 'test'
+      ...
+    # Subtest: unused
+    ok 4 - unused
+      ---
+      duration_ms: 4.806834
+      type: 'test'
+      ...
+    1..4
+ok 6 - missing, duplicated, altered-hash and unused saved documents fail
+  ---
+  duration_ms: 13.514334
+  type: 'test'
+  ...
+# Subtest: first-contact V1 allows a first payment with empty history
+ok 7 - first-contact V1 allows a first payment with empty history
+  ---
+  duration_ms: 5.001625
+  type: 'test'
+  ...
+# Subtest: copycat history follows every page to the empty end
+ok 8 - copycat history follows every page to the empty end
+  ---
+  duration_ms: 1.673542
+  type: 'test'
+  ...
+# Subtest: only a real approval counts: a vault instruction writing the copycat session fails, a lamport transfer does not
+ok 9 - only a real approval counts: a vault instruction writing the copycat session fails, a lamport transfer does not
+  ---
+  duration_ms: 3.6345
+  type: 'test'
+  ...
+# Subtest: an account at the copycat session fails only when it is a vault session account
+ok 10 - an account at the copycat session fails only when it is a vault session account
+  ---
+  duration_ms: 1.131875
+  type: 'test'
+  ...
+# Subtest: a vault session account created after the snapshot passes; the check stops at the first vault write after it
+ok 11 - a vault session account created after the snapshot passes; the check stops at the first vault write after it
+  ---
+  duration_ms: 1.952625
+  type: 'test'
+  ...
+# Subtest: a later vault session account holding the agent's own key fails: the agent's key never had permission for the copycat
+ok 12 - a later vault session account holding the agent's own key fails: the agent's key never had permission for the copycat
+  ---
+  duration_ms: 1.350084
+  type: 'test'
+  ...
+# Subtest: a vault write within the snapshot fails, with or without a later one
+    # Subtest: slot 100, later write true
+    ok 1 - slot 100, later write true
+      ---
+      duration_ms: 0.963875
+      type: 'test'
+      ...
+    # Subtest: slot 100, later write false
+    ok 2 - slot 100, later write false
+      ---
+      duration_ms: 1.046167
+      type: 'test'
+      ...
+    # Subtest: slot 99, later write true
+    ok 3 - slot 99, later write true
+      ---
+      duration_ms: 1.023959
+      type: 'test'
+      ...
+    # Subtest: slot 99, later write false
+    ok 4 - slot 99, later write false
+      ---
+      duration_ms: 1.137459
+      type: 'test'
+      ...
+    1..4
+ok 13 - a vault write within the snapshot fails, with or without a later one
+  ---
+  duration_ms: 4.31175
+  type: 'test'
+  ...
+# Subtest: a vault session account with no successful vault write after the snapshot fails
+    # Subtest: no later transaction
+    ok 1 - no later transaction
+      ---
+      duration_ms: 0.326583
+      type: 'test'
+      ...
+    # Subtest: only a lamport transfer
+    ok 2 - only a lamport transfer
+      ---
+      duration_ms: 0.300916
+      type: 'test'
+      ...
+    # Subtest: a failed vault write
+    ok 3 - a failed vault write
+      ---
+      duration_ms: 0.2965
+      type: 'test'
+      ...
+    # Subtest: an unreadable transaction
+    ok 4 - an unreadable transaction
+      ---
+      duration_ms: 0.2865
+      type: 'test'
+      ...
+    1..4
+ok 14 - a vault session account with no successful vault write after the snapshot fails
+  ---
+  duration_ms: 2.353833
+  type: 'test'
+  ...
+# Subtest: the retained snapshot must be at or after the no-permission refusal
+    # Subtest: snapshot before the refusal
+    ok 1 - snapshot before the refusal
+      ---
+      duration_ms: 0.1095
+      type: 'test'
+      ...
+    # Subtest: refusal slot undefined
+    ok 2 - refusal slot undefined
+      ---
+      duration_ms: 0.139584
+      type: 'test'
+      ...
+    # Subtest: refusal slot null
+    ok 3 - refusal slot null
+      ---
+      duration_ms: 0.113333
+      type: 'test'
+      ...
+    # Subtest: refusal slot 0
+    ok 4 - refusal slot 0
+      ---
+      duration_ms: 0.116666
+      type: 'test'
+      ...
+    # Subtest: refusal slot "90"
+    ok 5 - refusal slot "90"
+      ---
+      duration_ms: 0.106625
+      type: 'test'
+      ...
+    # Subtest: refusal slot 90.5
+    ok 6 - refusal slot 90.5
+      ---
+      duration_ms: 0.096209
+      type: 'test'
+      ...
+    1..6
+ok 15 - the retained snapshot must be at or after the no-permission refusal
+  ---
+  duration_ms: 1.201416
+  type: 'test'
+  ...
+# Subtest: verifyRecord bounds each copycat history by the slot of its no-permission refusal
+    # Subtest: a snapshot before the refusal fails
+    ok 1 - a snapshot before the refusal fails
+      ---
+      duration_ms: 0.483083
+      type: 'test'
+      ...
+    # Subtest: a missing no-permission refusal fails
+    ok 2 - a missing no-permission refusal fails
+      ---
+      duration_ms: 1.047625
+      type: 'test'
+      ...
+    1..2
+ok 16 - verifyRecord bounds each copycat history by the slot of its no-permission refusal
+  ---
+  duration_ms: 5.886
+  type: 'test'
+  ...
+# Subtest: the archive copy must be the exact capture, taken from 24 hours before through 30 minutes after the approval
+ok 17 - the archive copy must be the exact capture, taken from 24 hours before through 30 minutes after the approval
+  ---
+  duration_ms: 2.053625
+  type: 'test'
+  ...
+# Subtest: refusal requires the exact program log retained by the record
+ok 18 - refusal requires the exact program log retained by the record
+  ---
+  duration_ms: 0.089167
+  type: 'test'
+  ...
+# Subtest: Wayback comparison uses decoded id_ bytes and prints timestamp and both hashes
+ok 19 - Wayback comparison uses decoded id_ bytes and prints timestamp and both hashes
+  ---
+  duration_ms: 0.32375
+  type: 'test'
+  ...
+# Subtest: native fetch decodes compressed HTTP bytes once
+ok 20 - native fetch decodes compressed HTTP bytes once
+  ---
+  duration_ms: 17.868667
+  type: 'test'
+  ...
+# Subtest: archive byte mismatch fails and unsafe or untimestamped URLs are rejected
+ok 21 - archive byte mismatch fails and unsafe or untimestamped URLs are rejected
+  ---
+  duration_ms: 0.330875
+  type: 'test'
+  ...
+# Subtest: direct records and the downloaded envelope are both consumed; incomplete proof exits failed
+ok 22 - direct records and the downloaded envelope are both consumed; incomplete proof exits failed
+  ---
+  duration_ms: 4.036333
+  type: 'test'
+  ...
+# Subtest: a screenshot with another hash fails
+ok 23 - a screenshot with another hash fails
+  ---
+  duration_ms: 0.204209
+  type: 'test'
+  ...
+# Subtest: published approval and two purchases verify through the pinned public SDKs
+ok 24 - published approval and two purchases verify through the pinned public SDKs
+  ---
+  duration_ms: 70.349458
+  type: 'test'
+  ...
+# Subtest: store receipts bind book URL, payer, network and verified reservation-to-lock times
+    # Subtest: none
+    ok 1 - none
+      ---
+      duration_ms: 4.468209
+      type: 'test'
+      ...
+    # Subtest: url
+    ok 2 - url
+      ---
+      duration_ms: 4.277542
+      type: 'test'
+      ...
+    # Subtest: payer
+    ok 3 - payer
+      ---
+      duration_ms: 3.415708
+      type: 'test'
+      ...
+    # Subtest: network
+    ok 4 - network
+      ---
+      duration_ms: 3.468292
+      type: 'test'
+      ...
+    # Subtest: issuedAt
+    ok 5 - issuedAt
+      ---
+      duration_ms: 3.679875
+      type: 'test'
+      ...
+    # Subtest: signature
+    ok 6 - signature
+      ---
+      duration_ms: 3.402708
+      type: 'test'
+      ...
+    # Subtest: orderBytes
+    ok 7 - orderBytes
+      ---
+      duration_ms: 2.554125
+      type: 'test'
+      ...
+    1..7
+ok 25 - store receipts bind book URL, payer, network and verified reservation-to-lock times
+  ---
+  duration_ms: 25.63125
+  type: 'test'
+  ...
+# Subtest: retained copycat session and signatures must agree with the complete enumeration
+    # Subtest: none
+    ok 1 - none
+      ---
+      duration_ms: 0.531792
+      type: 'test'
+      ...
+    # Subtest: session
+    ok 2 - session
+      ---
+      duration_ms: 0.558459
+      type: 'test'
+      ...
+    # Subtest: signature
+    ok 3 - signature
+      ---
+      duration_ms: 0.418208
+      type: 'test'
+      ...
+    # Subtest: err
+    ok 4 - err
+      ---
+      duration_ms: 0.43975
+      type: 'test'
+      ...
+    # Subtest: duplicate
+    ok 5 - duplicate
+      ---
+      duration_ms: 0.420583
+      type: 'test'
+      ...
+    # Subtest: account
+    ok 6 - account
+      ---
+      duration_ms: 0.414792
+      type: 'test'
+      ...
+    1..6
+ok 26 - retained copycat session and signatures must agree with the complete enumeration
+  ---
+  duration_ms: 3.753541
+  type: 'test'
+  ...
+# Subtest: actual case-three clone approval, payments, receipts and refusals verify from archived signed messages
+    # Subtest: purchase 1 and receipt
+    ok 1 - purchase 1 and receipt
+      ---
+      duration_ms: 14.896834
+      type: 'test'
+      ...
+    # Subtest: purchase 2 and receipt
+    ok 2 - purchase 2 and receipt
+      ---
+      duration_ms: 14.411
+      type: 'test'
+      ...
+    # Subtest: redirect 3012
+    ok 3 - redirect 3012
+      ---
+      duration_ms: 3.416209
+      type: 'test'
+      ...
+    # Subtest: redirect 6070
+    ok 4 - redirect 6070
+      ---
+      duration_ms: 3.373
+      type: 'test'
+      ...
+    # Subtest: 3012 voucher binds the attempted increment after prior verified locks
+    ok 5 - 3012 voucher binds the attempted increment after prior verified locks
+      ---
+      duration_ms: 0.152333
+      type: 'test'
+      ...
+    # Subtest: new redirect channelId rejects redirect channelId: invalid bytes
+    ok 6 - new redirect channelId rejects redirect channelId: invalid bytes
+      ---
+      duration_ms: 1.992417
+      type: 'test'
+      ...
+    # Subtest: new redirect channelId rejects redirect channelId: expected base64url
+    ok 7 - new redirect channelId rejects redirect channelId: expected base64url
+      ---
+      duration_ms: 1.953834
+      type: 'test'
+      ...
+    # Subtest: new redirect sessionSignature rejects redirect sessionSignature: invalid bytes
+    ok 8 - new redirect sessionSignature rejects redirect sessionSignature: invalid bytes
+      ---
+      duration_ms: 2.634958
+      type: 'test'
+      ...
+    # Subtest: new redirect sessionSignature rejects redirect sessionSignature: expected base64url
+    ok 9 - new redirect sessionSignature rejects redirect sessionSignature: expected base64url
+      ---
+      duration_ms: 2.046667
+      type: 'test'
+      ...
+    # Subtest: new redirect raw byte fields retain canonical base64url
+    ok 10 - new redirect raw byte fields retain canonical base64url
+      ---
+      duration_ms: 0.054166
+      type: 'test'
+      ...
+    # Subtest: a redirect with another Swig fails despite the same signed transaction
+    ok 11 - a redirect with another Swig fails despite the same signed transaction
+      ---
+      duration_ms: 3.379833
+      type: 'test'
+      ...
+    # Subtest: 6013 proves the signed refusal and exact program log
+    ok 12 - 6013 proves the signed refusal and exact program log
+      ---
+      duration_ms: 2.968916
+      type: 'test'
+      ...
+    # Subtest: 6009 proves a program refusal but fails one-ledger history after the clone restart
+    ok 13 - 6009 proves a program refusal but fails one-ledger history after the clone restart
+      ---
+      duration_ms: 5.087459
+      type: 'test'
+      ...
+    1..13
+ok 27 - actual case-three clone approval, payments, receipts and refusals verify from archived signed messages
+  ---
+  duration_ms: 66.376041
+  type: 'test'
+  ...
+# Subtest: signed Swig payout destinations and amounts are checked independently of unchanged node balances
+    # Subtest: none
+    ok 1 - none
+      ---
+      duration_ms: 1.909958
+      type: 'test'
+      ...
+    # Subtest: destination
+    ok 2 - destination
+      ---
+      duration_ms: 1.686083
+      type: 'test'
+      ...
+    # Subtest: amount
+    ok 3 - amount
+      ---
+      duration_ms: 1.467167
+      type: 'test'
+      ...
+    # Subtest: unused-destination-and-wrong-amount
+    ok 4 - unused-destination-and-wrong-amount
+      ---
+      duration_ms: 1.573125
+      type: 'test'
+      ...
+    1..4
+ok 28 - signed Swig payout destinations and amounts are checked independently of unchanged node balances
+  ---
+  duration_ms: 13.895958
+  type: 'test'
+  ...
+1..28
+# tests 82
+# suites 0
+# pass 82
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 698.9885

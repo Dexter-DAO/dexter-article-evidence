@@ -1,0 +1,96 @@
+{
+  "schema": "dexter-article-claim-record/v1",
+  "status": "passed",
+  "trace": "account/docs/evidence/wallet-spending-20261101/wallet-spending-shared-trace.json.xz",
+  "compressed_sha256": "e866a169d1371c880fbc4afb35c5cac11919095cb4f48b1291163f14fc6c78e4",
+  "sequence": [
+    {
+      "trace_index": 69,
+      "name": "fresh authorization still refuses spending another facility's backing",
+      "expected": "reject",
+      "recorded_result": {
+        "InstructionError": [
+          1,
+          {
+            "Custom": 6033
+          }
+        ]
+      },
+      "signature_count": 1,
+      "required_signers": [
+        "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+      ]
+    },
+    {
+      "trace_index": 72,
+      "name": "a separate exact owner approval cannot spend one committed token",
+      "expected": "reject",
+      "recorded_result": {
+        "InstructionError": [
+          1,
+          {
+            "Custom": 6033
+          }
+        ]
+      },
+      "signature_count": 1,
+      "required_signers": [
+        "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+      ]
+    },
+    {
+      "trace_index": 74,
+      "name": "owner revokes the initiating agent after work was earned",
+      "expected": "success",
+      "recorded_result": null,
+      "signature_count": 2,
+      "required_signers": [
+        "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9",
+        "3BuW9SR5tG6VFK4MmkQQ3Ak8ny1K1Vv5Uz7is8Aa5pwG"
+      ]
+    },
+    {
+      "trace_index": 79,
+      "name": "both owners authorize financier control rotation",
+      "expected": "success",
+      "recorded_result": null,
+      "signature_count": 3,
+      "required_signers": [
+        "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9",
+        "6JhaGdekBjU2RfiYWSjYdQAibx4LfSfTNFEeMUHnUVz7",
+        "6TcyBfPdBt1kjsvDZLzmBFnuMaLWiTaAt4RjUr9VA5YD"
+      ]
+    },
+    {
+      "trace_index": 81,
+      "name": "independent collector services accepted rights without initiating agent or financier backend",
+      "expected": "success",
+      "recorded_result": null,
+      "signature_count": 1,
+      "required_signers": [
+        "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+      ]
+    }
+  ],
+  "shared_custody": "EMPX3MrhzgnWTi9jjwfCQ5b2waoHomSVULtwRiTpCvym",
+  "facilities_sharing_custody": [
+    "8TgjkCEtZMkkPFUrKSXN4Qq2h6261Bmj7yjD3hszpW5K",
+    "CUGbyGhek7TRMoLAVgA4FCRkqLZnwqznhXe7angDGDXj"
+  ],
+  "collection": {
+    "signature_count": 1,
+    "signer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9",
+    "signer_is_initiating_agent_or_old_or_new_financier_owner": false,
+    "actual_token_cash_before": 300000,
+    "actual_token_cash_after": 200000,
+    "unused_backing_before": 200000,
+    "unused_backing_after": 200000,
+    "supplier_payable_before": 100000,
+    "supplier_payable_after": 0,
+    "company_financing_debt_before": 100000,
+    "company_financing_debt_after": 100000,
+    "claim": "pZn3WfWHjHAWdB6dAy34nvWEsUTEXbnpnJyHgEQECQ5",
+    "earned_run": "R5dyrAJhAPB4ieUfAai7wganwsTwHTP8RP4Vv7otWUg"
+  },
+  "scope": "Decoded retained local execution sequence and verified its signed packets. Complete snapshot/receipt validation is performed by verify_recorded_evidence.py. No new SVM or RPC execution."
+}

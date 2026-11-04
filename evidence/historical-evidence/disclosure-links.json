@@ -1,0 +1,14 @@
+{
+  "schema": "dexter-disclosure-comparison/v1",
+  "concealed_name": "https://dexter.cash/mandate?case=b0ee0521-898e-828b-9c14-265bfb59216c",
+  "shared_name": "https://dexter.cash/mandate?case=b0ee0521-898e-828b-9c14-265bfb59216c&v=3#dexter-demo=eyJwcml2YXRlU2NhbGFyIjoiUEtxbkZ0RG9jZkNRRjVnTkFXOGRqR0ZZMEZ2X3hRazlraWxQUjVvZzBFdyIsInJlY2lwaWVudEtleUZpbmdlcnByaW50Ijoib0NfaDNiVnpTMUlpdlBwSFJlZjJwN2RnbHd3SVBDeVFhbUhab0JpSThLSSIsInJlcXVlc3QiOnsiYnVuZGxlSGFzaCI6IjQ1N2M2Njg3MWQ4MjIzMTQxMzY5MTcxN2RhMjcxNTJlZDIwZjRmNmFkMzc0YjI5OTc3ZTc3NTA4OGQwYmZkM2YiLCJleHBpcmVzQXRVbml4TXMiOm51bGwsIm1hbmRhdGVDYXNlIjp7ImlkIjoiYjBlZTA1MjEtODk4ZS04MjhiLTljMTQtMjY1YmZiNTkyMTZjIiwibWFuaWZlc3REaWdlc3QiOiIyZGNkNGI0MjY0YWFlMzk0MTEwYTYyODY4N2I4MGY0ZWQxZmM5ZDZiZjZmZWQ4OGVmODM0ZmU4ZjIyMzcyMTRkIn0sIm5vbmNlIjoid3VzVS1yVEdBZFhfaWNzUnNiSE9OclYxQ2VUT1lKZzdETzRTTVlwek5OUSIsInB1YmxpY2F0aW9uIjoidW50aWxfcmV2b2tlZCIsInB1cnBvc2UiOiJkZW1vIiwicmVjaXBpZW50UHVibGljS2V5Ijp7ImNydiI6IlAtMjU2Iiwia3R5IjoiRUMiLCJ4IjoiamEtYXRGZEhKWWtxcmJtUEROUXNVSXZWeDhEUXN0dHVoV0c5R1E1MzdYRSIsInkiOiJSMFJHOVliaHBwcXE1Tjg3OWpraWVxX1d5WER3NGMzNThELTQ0TGdOcTNvIn0sIndhbGxldCI6IjNOV2VCS25QUHhBWlpZcXl0TlZnYjI5Z3FORG1hUmRHTVF1RDVMclFSOUtlIn0sInJlcXVlc3RJZCI6IjI2MzQzODQxLTA5MWYtNDIyZC1hYjlkLTMyYmRjMjhmNTQ4MyIsInNjaGVtYSI6ImRleHRlci1wdWJsaWMtZGVtby1zaGFyZS92MSJ9",
+  "instruction": "Open concealed_name first. Open shared_name separately, then choose Show the name he shared.",
+  "key_treatment": "The shared_name URL intentionally includes the disclosure key in its fragment. Keep the concealed_name link free of that fragment.",
+  "observed_at": "2026-11-04",
+  "observation_source": "Existing isolated Chromium verification on EC2; reused without repeating the UI run.",
+  "observed_concealed": "Name withheld",
+  "observed_shared_initial": "Name concealed; Show the name he shared enabled",
+  "observed_shared_after_click": "Nicholas Robert Sander; Verified; Checked in your browser",
+  "expected_bundle_hash": "457c66871d82231413691717da27152ed20f4f6ad374b29977e775088d0bfd3f",
+  "expected_manifest_digest": "2dcd4b4264aae394110a628687b80f4ed1fc9d6bf6fed88ef834fe8f2237214d"
+}

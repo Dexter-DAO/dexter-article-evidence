@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "trace_sha256": "f804d7d1b1945a89f4678cf0b51124904822aced40ebb3a671febdef8e9eb92e",
+  "signed_packets": 79,
+  "verified_financial_receipts": 17,
+  "refusals_with_rollback": 0,
+  "recorded_state_assertions": 207,
+  "scope": "Offline signature/encoding/receipt/journal/token-delta checks over recorded local evidence; no new SVM execution",
+  "immutable_correction_results": 0,
+  "independent_economic_oracle": "foundation/money/model/financed_corrections.py"
+}

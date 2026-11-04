@@ -1,0 +1,79 @@
+HISTORICAL CASE: WHAT THE RECORD SHOWS
+
+Case: b0ee0521-898e-828b-9c14-265bfb59216c
+Date: October 30, 2026
+Implementation: historical Dexter Vault on Solana mainnet
+
+A passkey authorization names the agent, seller, spending limits and expiry.
+Two recorded purchases include the agent's signed vouchers, claim identifiers,
+settlement transaction references, order bytes and seller-signed receipts.
+
+The payout-redirect attempt and the second successful purchase name the same
+claim: 49Bg9FJx2VC73udyvN6EFXhwDxbV5yVsKJCWHrCrU3fz
+The record retains DebtTransferMismatch (6070) at slot 463186079 for the
+attempted diversion. Its later settlement reference pays the approved seller.
+
+Refused diversion:
+https://explorer.solana.com/tx/4MMw5EVLvGK6yQBrGUWRJxNH4LudxFkZRcKdkayUUxxpjzLMPHnE8Z9QjBD6U8niYuNn5yxjR99Q9XHPn5DLFxXg
+Subsequent collection of that same claim:
+https://explorer.solana.com/tx/QNb41FGAxugzUWaWiKjj8vsouA2sLngHVftaXuycR4JmBxMg5CetYmUGVwmymuo7hCF3P3h8DkSmKXJkg96eN8h
+
+This is the concrete payment-binding example: an accepted claim cannot be
+settled by substituting a different recipient. The pinned verifier checks the
+signed Swig payout instructions, token balance changes, claim closure, exact
+refusal log, and transaction ordering. Its same-claim check is here:
+https://github.com/Dexter-DAO/dexter-x402-sdk/blob/43980c8daaa5e3067681b9e3738b7bbb968ea200/examples/verify-case-three/verify.mjs#L362-L391
+
+WHAT RAN DURING THIS PACKAGE BUILD
+
+21 of 21 checks passed against the exact published record, with network access
+disabled. They verify the saved seller binding, document and quote; both agent
+voucher signatures and derived claims; retained order/response hashes; both
+seller receipt signatures; all five saved copycat decisions; and both signed
+limit-refusal vouchers. See results/record-offline-checks.json.
+
+4 of 4 additional tests passed against copies of that record. The original
+passes. A changed voucher channel, changed seller quote signature, and changed
+seller receipt signature each fail their intended check. See
+results/offline-record-mutations.tap.
+
+82 of 82 tests passed in the unchanged public verifier suite. Those tests cover
+binding tampering, missing or substituted seller files, copycat history,
+signed payout destinations and amounts, receipts, and archived signed
+transactions. The source includes a case-two fixture and case-three clone
+fixture. Each fixture keeps its own identity and scope.
+
+WHAT EACH OFFLINE RESULT MEANS
+
+The seller commitment is checked against the ceremony nonce retained in the
+record. The full verifier obtains that nonce independently from the finalized
+approval transaction. Receipt signature checks authenticate their signed URL,
+payer, network and issuance time. The separate order/response checks establish
+agreement among the retained bytes. The full verifier also checks issuance
+against the chain's reservation and lock times.
+
+The copied mainnet record contains transaction references and recorded results.
+It does not contain all RPC transaction responses. This package build did not
+run a fresh full mainnet replay. The exact input, pinned verifier and command
+are ready for a reader's own archival RPC.
+
+THE TWO IDENTITY VIEWS
+
+An isolated Chromium check on November 4 observed the unkeyed view withholding
+the name. The explicit shared-name link enabled the reveal control; clicking it
+showed the shared name and the browser's verification result. Those observed
+results and the exact links are retained in disclosure-links.json. That UI check
+was reused here, not repeated.
+
+DIRECT RECORD AND COMPLETE SOURCE
+
+Original JSON:
+https://api.dexter.cash/api/public/mandate-cases/b0ee0521-898e-828b-9c14-265bfb59216c/published
+Public demonstration:
+https://dexter.cash/mandate?case=b0ee0521-898e-828b-9c14-265bfb59216c
+Pinned verifier:
+https://github.com/Dexter-DAO/dexter-x402-sdk/blob/43980c8daaa5e3067681b9e3738b7bbb968ea200/examples/verify-case-three/
+
+record.json is the complete 49,826-byte public response. The local JSON, these
+findings, the source files and saved test output remain inspectable when the
+website, GitHub or an RPC provider is unavailable.

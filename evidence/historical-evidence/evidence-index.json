@@ -1,0 +1,111 @@
+{
+  "schema": "dexter-historical-evidence-index/v1",
+  "case_id": "b0ee0521-898e-828b-9c14-265bfb59216c",
+  "scope": "Historical Vault, Solana mainnet, October 30, 2026",
+  "entry": "README.txt",
+  "record": "record.json",
+  "findings": "findings.txt",
+  "plain_results": "results/record-offline-checks.json",
+  "original_record_url": "https://api.dexter.cash/api/public/mandate-cases/b0ee0521-898e-828b-9c14-265bfb59216c/published",
+  "proof_page_url": "https://dexter.cash/mandate?case=b0ee0521-898e-828b-9c14-265bfb59216c",
+  "paired_disclosure_examples": "disclosure-links.json",
+  "source_commit": "43980c8daaa5e3067681b9e3738b7bbb968ea200",
+  "source_url": "https://github.com/Dexter-DAO/dexter-x402-sdk/blob/43980c8daaa5e3067681b9e3738b7bbb968ea200/examples/verify-case-three/",
+  "transactions": [
+    {
+      "role": "passkey approval",
+      "signature": "2vWcs5iPRHqoTHBrtKiSWjriYUWf7DHpWZPUPYbZFCem3WhhBkW9weBA9JvSg9h1ZNWjM7dPSReFQHcKe1xj9P6F",
+      "url": "https://explorer.solana.com/tx/2vWcs5iPRHqoTHBrtKiSWjriYUWf7DHpWZPUPYbZFCem3WhhBkW9weBA9JvSg9h1ZNWjM7dPSReFQHcKe1xj9P6F"
+    },
+    {
+      "role": "purchase 1 reservation",
+      "signature": "47TPLbQ8F1QGppaNpVks2gv1uYG8H5jY9qFy8g5ScvzQ1fSxQSn7nuTZnhjASsCeSKrsd7bxDtQRLZ8Aj9VmzT6H",
+      "url": "https://explorer.solana.com/tx/47TPLbQ8F1QGppaNpVks2gv1uYG8H5jY9qFy8g5ScvzQ1fSxQSn7nuTZnhjASsCeSKrsd7bxDtQRLZ8Aj9VmzT6H"
+    },
+    {
+      "role": "purchase 1 claim lock",
+      "signature": "4n8NojSQM9vEuvpSPdPtfoUq2KvAQaxdPdwGKUaRNj5dr8gXmX7s1rMhxgGvUw6j6q786iQF6RZRbwL4WLd8X1Yg",
+      "url": "https://explorer.solana.com/tx/4n8NojSQM9vEuvpSPdPtfoUq2KvAQaxdPdwGKUaRNj5dr8gXmX7s1rMhxgGvUw6j6q786iQF6RZRbwL4WLd8X1Yg"
+    },
+    {
+      "role": "purchase 1 settlement",
+      "signature": "2hJBKx3GqFHPEsjGQNBNjTAdLd2S121KSNxzccVupjfGxywbFscozePwVY6SPwe95JgicywY6LzNwhJwrY5tJV7d",
+      "url": "https://explorer.solana.com/tx/2hJBKx3GqFHPEsjGQNBNjTAdLd2S121KSNxzccVupjfGxywbFscozePwVY6SPwe95JgicywY6LzNwhJwrY5tJV7d"
+    },
+    {
+      "role": "purchase 2 reservation",
+      "signature": "52HpZsfuaac9vaxsey6qrnAutxxS3cddFGyiaHsw3DieEaRNJ9xmDBYRCKwuXGCE5u8838pA8jLZ4ki2vLk8Pg7u",
+      "url": "https://explorer.solana.com/tx/52HpZsfuaac9vaxsey6qrnAutxxS3cddFGyiaHsw3DieEaRNJ9xmDBYRCKwuXGCE5u8838pA8jLZ4ki2vLk8Pg7u"
+    },
+    {
+      "role": "purchase 2 claim lock",
+      "signature": "2dYig3jWweXNTA517WhTbTZZKfCandALMWQ94FrJ3TmThLm2mQ8nxrHCzV4g7qLqfvho8K6edfEeCfiFWwdCLAtJ",
+      "url": "https://explorer.solana.com/tx/2dYig3jWweXNTA517WhTbTZZKfCandALMWQ94FrJ3TmThLm2mQ8nxrHCzV4g7qLqfvho8K6edfEeCfiFWwdCLAtJ"
+    },
+    {
+      "role": "purchase 2 settlement",
+      "signature": "QNb41FGAxugzUWaWiKjj8vsouA2sLngHVftaXuycR4JmBxMg5CetYmUGVwmymuo7hCF3P3h8DkSmKXJkg96eN8h",
+      "url": "https://explorer.solana.com/tx/QNb41FGAxugzUWaWiKjj8vsouA2sLngHVftaXuycR4JmBxMg5CetYmUGVwmymuo7hCF3P3h8DkSmKXJkg96eN8h"
+    },
+    {
+      "role": "no-permission",
+      "signature": "4GAMqg1P86Vj9VCkHvrrsVegzkwKxiWC2GojAN9z4mQjiKn3eFuCmihPf12t3xobVJPeLVc9WwqRx5J8D4KHbe7e",
+      "recorded_error": {
+        "code": 3012,
+        "name": "AccountNotInitialized"
+      },
+      "recorded_slot": 463185024,
+      "url": "https://explorer.solana.com/tx/4GAMqg1P86Vj9VCkHvrrsVegzkwKxiWC2GojAN9z4mQjiKn3eFuCmihPf12t3xobVJPeLVc9WwqRx5J8D4KHbe7e"
+    },
+    {
+      "role": "payout-redirect",
+      "signature": "4MMw5EVLvGK6yQBrGUWRJxNH4LudxFkZRcKdkayUUxxpjzLMPHnE8Z9QjBD6U8niYuNn5yxjR99Q9XHPn5DLFxXg",
+      "recorded_error": {
+        "code": 6070,
+        "name": "DebtTransferMismatch"
+      },
+      "recorded_slot": 463186079,
+      "url": "https://explorer.solana.com/tx/4MMw5EVLvGK6yQBrGUWRJxNH4LudxFkZRcKdkayUUxxpjzLMPHnE8Z9QjBD6U8niYuNn5yxjR99Q9XHPn5DLFxXg"
+    },
+    {
+      "role": "permission refusal",
+      "signature": "4g3gekW1RySoGHvPWY1jAvgRku3QV8qPzLeg9roau3M9kBpHwvc67hs1EuSuXyyVveF6RjYP4sFmv6qXjva84krK",
+      "recorded_error": {
+        "code": 6013,
+        "name": "RevolvingCapacityExceeded"
+      },
+      "recorded_slot": 463186436,
+      "url": "https://explorer.solana.com/tx/4g3gekW1RySoGHvPWY1jAvgRku3QV8qPzLeg9roau3M9kBpHwvc67hs1EuSuXyyVveF6RjYP4sFmv6qXjva84krK"
+    },
+    {
+      "role": "permission refusal",
+      "signature": "54mYrWvYsMqvDz5GMh2rPrQNZcBfyF3gbANPCUgRdpegdAi7R6PQRnR3MEA1RgdrYTiQKCFJe4yJxDuZ8yipKdqz",
+      "recorded_error": {
+        "code": 6009,
+        "name": "SessionExpiryInPast"
+      },
+      "recorded_slot": 463226899,
+      "url": "https://explorer.solana.com/tx/54mYrWvYsMqvDz5GMh2rPrQNZcBfyF3gbANPCUgRdpegdAi7R6PQRnR3MEA1RgdrYTiQKCFJe4yJxDuZ8yipKdqz"
+    }
+  ],
+  "checks": [
+    {
+      "kind": "fresh offline record checks",
+      "path": "results/record-offline-checks.json",
+      "passed": 21,
+      "failed": 0
+    },
+    {
+      "kind": "fresh mutations of public record",
+      "path": "results/offline-record-mutations.tap",
+      "passed": 4,
+      "failed": 0
+    },
+    {
+      "kind": "fresh pinned verifier fixture and mutation suite",
+      "path": "results/verifier-tests.tap",
+      "passed": 82,
+      "failed": 0
+    }
+  ]
+}

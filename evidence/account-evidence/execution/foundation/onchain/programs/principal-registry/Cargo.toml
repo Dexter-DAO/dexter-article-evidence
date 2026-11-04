@@ -1,0 +1,27 @@
+[package]
+name = "principal-registry"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "principal_registry"
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+anchor-debug = []
+custom-heap = []
+custom-panic = []
+idl-build = ["anchor-lang/idl-build", "dexter-contracts/idl-build"]
+
+[dependencies]
+anchor-lang = { workspace = true }
+dexter-contracts = { workspace = true }
+solana-sha256-hasher = { workspace = true }
+solana-instructions-sysvar = "=3.0.1"
+

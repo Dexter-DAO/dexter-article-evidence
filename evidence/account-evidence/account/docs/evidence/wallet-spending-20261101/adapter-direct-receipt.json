@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "trace": "/workspace/scratch/e85e65001bc6/dexter-account/.local/adapters/spl-token-swap/direct-trace.json.xz",
+  "raw_sha256": "fd94fcd15478ef8c602d972c86cbe39f705829c068748268a8d267d5cc9aae1c",
+  "signed_transactions": 9,
+  "expected_refusals": 2,
+  "assertions": 10,
+  "maximum_packet_bytes": 998,
+  "actual_rounding_case": {
+    "requested": 10027,
+    "actual_input": 10026,
+    "output": 9899,
+    "trade_fee": 25,
+    "owner_fee": 5
+  }
+}

@@ -1,0 +1,6233 @@
+[
+  {
+    "suite": "wallet-spending-send",
+    "index": 0,
+    "name": "initialize synthetic SPL token and disposable freeze authority",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 535,
+    "compute_units_consumed": 15402,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 8,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 1,
+    "name": "register company continuing principal",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 459,
+    "compute_units_consumed": 8267,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 2,
+    "name": "initialize company canonical financial book",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 330,
+    "compute_units_consumed": 9337,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 3,
+    "name": "initialize company zero-frontier Pool projection",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 298,
+    "compute_units_consumed": 11504,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 4,
+    "name": "create company owner token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 13525,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 5,
+    "name": "register issuer continuing principal",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 459,
+    "compute_units_consumed": 8267,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 6,
+    "name": "initialize issuer canonical financial book",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 330,
+    "compute_units_consumed": 12337,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 7,
+    "name": "initialize issuer zero-frontier Pool projection",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 298,
+    "compute_units_consumed": 16004,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 8,
+    "name": "create issuer owner token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 15025,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 9,
+    "name": "register financier continuing principal",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 459,
+    "compute_units_consumed": 8267,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 10,
+    "name": "initialize financier canonical financial book",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 330,
+    "compute_units_consumed": 13837,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 11,
+    "name": "initialize financier zero-frontier Pool projection",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 298,
+    "compute_units_consumed": 19004,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 12,
+    "name": "create financier owner token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 15025,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 13,
+    "name": "register supplier continuing principal",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 459,
+    "compute_units_consumed": 8267,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 14,
+    "name": "initialize supplier canonical financial book",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 330,
+    "compute_units_consumed": 10837,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 15,
+    "name": "initialize supplier zero-frontier Pool projection",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 298,
+    "compute_units_consumed": 17504,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 16,
+    "name": "create supplier owner token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 16525,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 17,
+    "name": "register fee continuing principal",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 459,
+    "compute_units_consumed": 8267,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 18,
+    "name": "initialize fee canonical financial book",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 330,
+    "compute_units_consumed": 9337,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 19,
+    "name": "initialize fee zero-frontier Pool projection",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 298,
+    "compute_units_consumed": 13004,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 20,
+    "name": "create fee owner token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 15025,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 21,
+    "name": "register protocol continuing principal",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 459,
+    "compute_units_consumed": 8267,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 22,
+    "name": "initialize protocol canonical financial book",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 330,
+    "compute_units_consumed": 9337,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 23,
+    "name": "initialize protocol zero-frontier Pool projection",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 298,
+    "compute_units_consumed": 17504,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 24,
+    "name": "create protocol owner token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 13525,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 25,
+    "name": "register assignee continuing principal",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 459,
+    "compute_units_consumed": 11267,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 26,
+    "name": "initialize assignee canonical financial book",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 330,
+    "compute_units_consumed": 9337,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 27,
+    "name": "initialize assignee zero-frontier Pool projection",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 298,
+    "compute_units_consumed": 11504,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 28,
+    "name": "create assignee owner token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 15025,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 29,
+    "name": "register sponsor continuing principal",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 459,
+    "compute_units_consumed": 8267,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 30,
+    "name": "initialize sponsor canonical financial book",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 330,
+    "compute_units_consumed": 10837,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 31,
+    "name": "initialize sponsor zero-frontier Pool projection",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 298,
+    "compute_units_consumed": 14504,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 32,
+    "name": "create sponsor owner token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 15025,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 33,
+    "name": "fund only synthetic company owner cash",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 300,
+    "compute_units_consumed": 105,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 34,
+    "name": "fund only synthetic issuer owner cash",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 300,
+    "compute_units_consumed": 105,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 35,
+    "name": "fund only synthetic assignee owner cash",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 300,
+    "compute_units_consumed": 105,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 36,
+    "name": "fund only synthetic fee owner cash",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 300,
+    "compute_units_consumed": 105,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 37,
+    "name": "owner initializes company allowance",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 435,
+    "compute_units_consumed": 10027,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 38,
+    "name": "owner creates actor 1",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 475,
+    "compute_units_consumed": 10475,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 39,
+    "name": "owner creates actor 2",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 475,
+    "compute_units_consumed": 10475,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 40,
+    "name": "create protocol custody token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 13525,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 40,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 41,
+    "name": "owner allocates protocol capital without inventing token inflow",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 708,
+    "compute_units_consumed": 122469,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 41,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 42,
+    "name": "create fee custody token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 21025,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 43,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 43,
+    "name": "owner allocates fee capital without inventing token inflow",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 708,
+    "compute_units_consumed": 111969,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 44,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 44,
+    "name": "create issuer custody token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 18025,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 46,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 45,
+    "name": "prefund issuer token account before explicit allocation",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 300,
+    "compute_units_consumed": 105,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 46,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 46,
+    "name": "owner allocates issuer capital without inventing token inflow",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 708,
+    "compute_units_consumed": 125472,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 47,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 47,
+    "name": "create assignee custody token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 13525,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 49,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 48,
+    "name": "owner allocates assignee capital without inventing token inflow",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 708,
+    "compute_units_consumed": 99969,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 50,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 49,
+    "name": "create sponsor custody token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 16525,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 52,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 50,
+    "name": "owner allocates sponsor capital without inventing token inflow",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 708,
+    "compute_units_consumed": 116469,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 53,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 51,
+    "name": "create and bind exact governed financier wallet",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 670,
+    "compute_units_consumed": 25909,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 56,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 52,
+    "name": "create financier custody token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 13525,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 58,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 53,
+    "name": "prefund financier token account before explicit allocation",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 300,
+    "compute_units_consumed": 105,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 58,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 54,
+    "name": "owner allocates financier capital without inventing token inflow",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 772,
+    "compute_units_consumed": 149219,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 59,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 55,
+    "name": "supplier approves immutable aggregate fee agreement main",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 476,
+    "compute_units_consumed": 12873,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 60,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 56,
+    "name": "approve external financing arrangement",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 781,
+    "compute_units_consumed": 24144,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 61,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 57,
+    "name": "owner and issuer approve main customer credit line",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 805,
+    "compute_units_consumed": 23540,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 62,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 58,
+    "name": "owner grants finite mandate 1",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 573,
+    "compute_units_consumed": 15304,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 62,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 59,
+    "name": "create independently owned send recipient ATA",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 16525,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 63,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 60,
+    "name": "owner grants exact spending permission exact-send-approval",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 893,
+    "compute_units_consumed": 24624,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 66,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 61,
+    "name": "unapproved executor cannot use exact owner approval",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1176,
+    "compute_units_consumed": 14663,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 66,
+    "rollback_accounts": 66,
+    "error": {
+      "InstructionError": [
+        0,
+        {
+          "Custom": 6030
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 62,
+    "name": "changed signed bundle hash cannot authorize an ordinary send",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1080,
+    "compute_units_consumed": 14249,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 66,
+    "rollback_accounts": 66,
+    "error": {
+      "InstructionError": [
+        0,
+        {
+          "Custom": 6025
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 63,
+    "name": "bare Swig token-send composition cannot bypass Registry approval",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 971,
+    "compute_units_consumed": 3855,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 66,
+    "rollback_accounts": 66,
+    "error": {
+      "InstructionError": [
+        0,
+        {
+          "Custom": 3033
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 64,
+    "name": "native-v1 spending rejects a provisional ComputeBudget prefix",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 1121,
+    "compute_units_consumed": 9479,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 66,
+    "rollback_accounts": 66,
+    "error": {
+      "InstructionError": [
+        1,
+        {
+          "Custom": 6023
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 65,
+    "name": "repayment action cannot turn a send into repayment authority",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 3,
+    "wire_bytes": 1080,
+    "compute_units_consumed": 14578,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 66,
+    "rollback_accounts": 66,
+    "error": {
+      "InstructionError": [
+        0,
+        {
+          "Custom": 6030
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 66,
+    "name": "exact owner approval refuses a changed debit before execution",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1080,
+    "compute_units_consumed": 59265,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 66,
+    "rollback_accounts": 66,
+    "error": {
+      "InstructionError": [
+        0,
+        {
+          "Custom": 6033
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 67,
+    "name": "recipient cooperatively changes the existing token account authority",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 355,
+    "compute_units_consumed": 123,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 66,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 68,
+    "name": "same receiving address with changed token authority is refused",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1080,
+    "compute_units_consumed": 136824,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 66,
+    "rollback_accounts": 66,
+    "error": {
+      "InstructionError": [
+        1,
+        {
+          "Custom": 6035
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 69,
+    "name": "recipient restores the explicitly approved token account authority",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 355,
+    "compute_units_consumed": 123,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 66,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 70,
+    "name": "explicit owner approval transfers exactly the approved asset and amount",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1080,
+    "compute_units_consumed": 299759,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 66,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 71,
+    "name": "replaying approval enrollment cannot replenish exact authority",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 893,
+    "compute_units_consumed": 15608,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 66,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 72,
+    "name": "a populated operation identity refuses conflicting request bytes",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1080,
+    "compute_units_consumed": 75940,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 66,
+    "rollback_accounts": 66,
+    "error": {
+      "InstructionError": [
+        0,
+        {
+          "Custom": 6033
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 73,
+    "name": "exact approval cannot authorize a second economic identity",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1080,
+    "compute_units_consumed": 62290,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 68,
+    "rollback_accounts": 68,
+    "error": {
+      "InstructionError": [
+        0,
+        {
+          "Custom": 6033
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 74,
+    "name": "current owner revokes delegated future spending",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 369,
+    "compute_units_consumed": 7995,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 68,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 75,
+    "name": "immutable send receipt recovers after revocation and envelope expiry",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1080,
+    "compute_units_consumed": 144742,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 68,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 76,
+    "name": "owner grants bounded delegated spending permission bounded-send-authority",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 893,
+    "compute_units_consumed": 24632,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 71,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 77,
+    "name": "per-operation ceiling refuses one excess token",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1080,
+    "compute_units_consumed": 62273,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 73,
+    "rollback_accounts": 73,
+    "error": {
+      "InstructionError": [
+        0,
+        {
+          "Custom": 6033
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 78,
+    "name": "bounded executor sends the first permitted amount",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1080,
+    "compute_units_consumed": 296776,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 73,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 79,
+    "name": "standing permission enforces minimum time between operations",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1080,
+    "compute_units_consumed": 60815,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 75,
+    "rollback_accounts": 75,
+    "error": {
+      "InstructionError": [
+        0,
+        {
+          "Custom": 6033
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 80,
+    "name": "standing permission admits the second amount at the time boundary",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1080,
+    "compute_units_consumed": 304277,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 75,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 81,
+    "name": "cumulative authority cannot be refilled by a new request id",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1080,
+    "compute_units_consumed": 60815,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 77,
+    "rollback_accounts": 77,
+    "error": {
+      "InstructionError": [
+        0,
+        {
+          "Custom": 6033
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 82,
+    "name": "owner grants bounded delegated spending permission count-limited-permission",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 893,
+    "compute_units_consumed": 24632,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 80,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 83,
+    "name": "standing permission consumes a single operation below its amount ceiling",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1080,
+    "compute_units_consumed": 301254,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 80,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 84,
+    "name": "operation count independently bounds unused monetary allowance",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1080,
+    "compute_units_consumed": 63834,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 82,
+    "rollback_accounts": 82,
+    "error": {
+      "InstructionError": [
+        0,
+        {
+          "Custom": 6033
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 85,
+    "name": "owner grants bounded delegated spending permission time-window-permission",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 893,
+    "compute_units_consumed": 26132,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 85,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 86,
+    "name": "standing permission cannot start before its not-before bound",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1080,
+    "compute_units_consumed": 59276,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 85,
+    "rollback_accounts": 85,
+    "error": {
+      "InstructionError": [
+        0,
+        {
+          "Custom": 6033
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 87,
+    "name": "standing permission begins at its exact not-before bound",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1080,
+    "compute_units_consumed": 296735,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 85,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 88,
+    "name": "standing permission expires at its exclusive time boundary",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1080,
+    "compute_units_consumed": 57780,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 87,
+    "rollback_accounts": 87,
+    "error": {
+      "InstructionError": [
+        0,
+        {
+          "Custom": 6033
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 89,
+    "name": "owner grants bounded delegated spending permission unused-revoked-permission",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 893,
+    "compute_units_consumed": 26132,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 90,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 90,
+    "name": "current owner revokes delegated future spending",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 369,
+    "compute_units_consumed": 7995,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 90,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 91,
+    "name": "revocation prevents a previously unused delegated send",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1080,
+    "compute_units_consumed": 58490,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 90,
+    "rollback_accounts": 90,
+    "error": {
+      "InstructionError": [
+        0,
+        {
+          "Custom": 6033
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 92,
+    "name": "accept finite supplier commitment repayment-domain-separation",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 2233,
+    "compute_units_consumed": 384554,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 94,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 93,
+    "name": "supplier attests completed run repayment-domain-separation",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 1306,
+    "compute_units_consumed": 372057,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 98,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 94,
+    "name": "owner grants an actual repayment-only permission",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 973,
+    "compute_units_consumed": 22396,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 99,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 95,
+    "name": "owner grants bounded delegated spending permission separate-send-domain",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 893,
+    "compute_units_consumed": 24632,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 102,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 96,
+    "name": "repayment permission account cannot implicitly authorize an ordinary send",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1080,
+    "compute_units_consumed": 54287,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 102,
+    "rollback_accounts": 102,
+    "error": {
+      "InstructionError": [
+        0,
+        {
+          "Custom": 6033
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 97,
+    "name": "owner grants bounded delegated spending permission foreign-capital-attempt",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 893,
+    "compute_units_consumed": 24632,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 105,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 98,
+    "name": "spending approval cannot use another principal's capital",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1080,
+    "compute_units_consumed": 26844,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 105,
+    "rollback_accounts": 105,
+    "error": {
+      "InstructionError": [
+        0,
+        {
+          "Custom": 6030
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 99,
+    "name": "owner grants bounded delegated spending permission pre-rotation-unused-permission",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 893,
+    "compute_units_consumed": 23132,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 108,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 100,
+    "name": "both owners authorize financier control rotation",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 564,
+    "compute_units_consumed": 14168,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 109,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 101,
+    "name": "owner rotation retry preserves original receipt and generation",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 564,
+    "compute_units_consumed": 11316,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 109,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 102,
+    "name": "owner rotation invalidates an old-generation unused permission",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1080,
+    "compute_units_consumed": 56934,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 109,
+    "rollback_accounts": 109,
+    "error": {
+      "InstructionError": [
+        0,
+        {
+          "Custom": 6020
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 103,
+    "name": "updating request generation cannot revive an old owner's grant",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1080,
+    "compute_units_consumed": 57750,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 111,
+    "rollback_accounts": 111,
+    "error": {
+      "InstructionError": [
+        0,
+        {
+          "Custom": 6033
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 104,
+    "name": "historical send remains read-only after cooperative owner rotation",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1080,
+    "compute_units_consumed": 144742,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 111,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 105,
+    "name": "owner grants bounded delegated spending permission old-owner-new-grant",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 893,
+    "compute_units_consumed": 16809,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 114,
+    "rollback_accounts": 114,
+    "error": {
+      "InstructionError": [
+        0,
+        {
+          "Custom": 6017
+        }
+      ]
+    },
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 106,
+    "name": "owner grants exact spending permission current-owner-approval",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 893,
+    "compute_units_consumed": 23124,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 117,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-send",
+    "index": 107,
+    "name": "replacement owner explicitly approves a fresh send",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1080,
+    "compute_units_consumed": 290778,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 117,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 0,
+    "name": "initialize synthetic SPL token and disposable freeze authority",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 535,
+    "compute_units_consumed": 15402,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 8,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 1,
+    "name": "register company continuing principal",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 459,
+    "compute_units_consumed": 8267,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 2,
+    "name": "initialize company canonical financial book",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 330,
+    "compute_units_consumed": 9337,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 3,
+    "name": "initialize company zero-frontier Pool projection",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 298,
+    "compute_units_consumed": 11504,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 4,
+    "name": "create company owner token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 13525,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 5,
+    "name": "register issuer continuing principal",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 459,
+    "compute_units_consumed": 8267,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 6,
+    "name": "initialize issuer canonical financial book",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 330,
+    "compute_units_consumed": 12337,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 7,
+    "name": "initialize issuer zero-frontier Pool projection",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 298,
+    "compute_units_consumed": 16004,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 8,
+    "name": "create issuer owner token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 15025,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 9,
+    "name": "register financier continuing principal",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 459,
+    "compute_units_consumed": 8267,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 10,
+    "name": "initialize financier canonical financial book",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 330,
+    "compute_units_consumed": 13837,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 11,
+    "name": "initialize financier zero-frontier Pool projection",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 298,
+    "compute_units_consumed": 19004,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 12,
+    "name": "create financier owner token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 15025,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 13,
+    "name": "register supplier continuing principal",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 459,
+    "compute_units_consumed": 8267,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 14,
+    "name": "initialize supplier canonical financial book",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 330,
+    "compute_units_consumed": 10837,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 15,
+    "name": "initialize supplier zero-frontier Pool projection",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 298,
+    "compute_units_consumed": 17504,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 16,
+    "name": "create supplier owner token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 16525,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 17,
+    "name": "register fee continuing principal",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 459,
+    "compute_units_consumed": 8267,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 18,
+    "name": "initialize fee canonical financial book",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 330,
+    "compute_units_consumed": 9337,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 19,
+    "name": "initialize fee zero-frontier Pool projection",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 298,
+    "compute_units_consumed": 13004,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 20,
+    "name": "create fee owner token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 15025,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 21,
+    "name": "register protocol continuing principal",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 459,
+    "compute_units_consumed": 8267,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 22,
+    "name": "initialize protocol canonical financial book",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 330,
+    "compute_units_consumed": 9337,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 23,
+    "name": "initialize protocol zero-frontier Pool projection",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 298,
+    "compute_units_consumed": 17504,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 24,
+    "name": "create protocol owner token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 13525,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 25,
+    "name": "register assignee continuing principal",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 459,
+    "compute_units_consumed": 11267,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 26,
+    "name": "initialize assignee canonical financial book",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 330,
+    "compute_units_consumed": 9337,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 27,
+    "name": "initialize assignee zero-frontier Pool projection",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 298,
+    "compute_units_consumed": 11504,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 28,
+    "name": "create assignee owner token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 15025,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 29,
+    "name": "register sponsor continuing principal",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 459,
+    "compute_units_consumed": 8267,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 30,
+    "name": "initialize sponsor canonical financial book",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 330,
+    "compute_units_consumed": 10837,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 31,
+    "name": "initialize sponsor zero-frontier Pool projection",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 298,
+    "compute_units_consumed": 14504,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 32,
+    "name": "create sponsor owner token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 15025,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 33,
+    "name": "fund only synthetic company owner cash",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 300,
+    "compute_units_consumed": 105,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 34,
+    "name": "fund only synthetic issuer owner cash",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 300,
+    "compute_units_consumed": 105,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 35,
+    "name": "fund only synthetic assignee owner cash",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 300,
+    "compute_units_consumed": 105,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 36,
+    "name": "fund only synthetic fee owner cash",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 300,
+    "compute_units_consumed": 105,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 37,
+    "name": "owner initializes company allowance",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 435,
+    "compute_units_consumed": 10027,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 38,
+    "name": "owner creates actor 1",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 475,
+    "compute_units_consumed": 10475,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 39,
+    "name": "owner creates actor 2",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 475,
+    "compute_units_consumed": 10475,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 40,
+    "name": "create protocol custody token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 13525,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 40,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 41,
+    "name": "owner allocates protocol capital without inventing token inflow",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 708,
+    "compute_units_consumed": 122469,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 41,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 42,
+    "name": "create fee custody token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 21025,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 43,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 43,
+    "name": "owner allocates fee capital without inventing token inflow",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 708,
+    "compute_units_consumed": 111969,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 44,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 44,
+    "name": "create issuer custody token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 18025,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 46,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 45,
+    "name": "prefund issuer token account before explicit allocation",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 300,
+    "compute_units_consumed": 105,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 46,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 46,
+    "name": "owner allocates issuer capital without inventing token inflow",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 708,
+    "compute_units_consumed": 125472,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 47,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 47,
+    "name": "create assignee custody token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 13525,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 49,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 48,
+    "name": "owner allocates assignee capital without inventing token inflow",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 708,
+    "compute_units_consumed": 99969,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 50,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 49,
+    "name": "create sponsor custody token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 16525,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 52,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 50,
+    "name": "owner allocates sponsor capital without inventing token inflow",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 708,
+    "compute_units_consumed": 116469,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 53,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 51,
+    "name": "create and bind exact governed financier wallet",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 670,
+    "compute_units_consumed": 25909,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 56,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 52,
+    "name": "create financier custody token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 13525,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 58,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 53,
+    "name": "prefund financier token account before explicit allocation",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 300,
+    "compute_units_consumed": 105,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 58,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 54,
+    "name": "owner allocates financier capital without inventing token inflow",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 772,
+    "compute_units_consumed": 149219,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 59,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 55,
+    "name": "supplier approves immutable aggregate fee agreement main",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 476,
+    "compute_units_consumed": 12873,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 60,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 56,
+    "name": "approve external financing arrangement",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 781,
+    "compute_units_consumed": 24144,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 61,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 57,
+    "name": "owner and issuer approve main customer credit line",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 805,
+    "compute_units_consumed": 23540,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 62,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 58,
+    "name": "owner grants finite mandate 1",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 573,
+    "compute_units_consumed": 15304,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 62,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 59,
+    "name": "create independently owned send recipient ATA",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 16525,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 63,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 60,
+    "name": "approve spending-shared-second financing arrangement",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 781,
+    "compute_units_consumed": 24144,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 64,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 61,
+    "name": "owner and issuer approve spending-shared-second customer credit line",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 805,
+    "compute_units_consumed": 22040,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 65,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 62,
+    "name": "owner grants finite mandate 1",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 573,
+    "compute_units_consumed": 15304,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 66,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 63,
+    "name": "accept finite supplier commitment spending-shared-first",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 2233,
+    "compute_units_consumed": 384554,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 74,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 64,
+    "name": "accept finite supplier commitment spending-shared-second",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 2233,
+    "compute_units_consumed": 389054,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 74,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 65,
+    "name": "supplier attests completed run spending-shared-earned",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 1306,
+    "compute_units_consumed": 375174,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 78,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 66,
+    "name": "owner grants bounded delegated spending permission shared-bounded-spend",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 893,
+    "compute_units_consumed": 24632,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 83,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 67,
+    "name": "first prepared operation spends eligible shared-custody cash",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1080,
+    "compute_units_consumed": 292235,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 83,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 68,
+    "name": "competing signed operation cannot reuse the old wallet nonce",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1080,
+    "compute_units_consumed": 0,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 83,
+    "rollback_accounts": 83,
+    "error": "BlockhashNotFound",
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 69,
+    "name": "fresh authorization still refuses spending another facility's backing",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1080,
+    "compute_units_consumed": 139967,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 83,
+    "rollback_accounts": 83,
+    "error": {
+      "InstructionError": [
+        1,
+        {
+          "Custom": 6033
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 70,
+    "name": "bounded permission spends exactly the remaining uncommitted balance",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1080,
+    "compute_units_consumed": 331296,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 85,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 71,
+    "name": "owner grants exact spending permission extra-reserve-permission",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 893,
+    "compute_units_consumed": 23124,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 88,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 72,
+    "name": "a separate exact owner approval cannot spend one committed token",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1080,
+    "compute_units_consumed": 141439,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 88,
+    "rollback_accounts": 88,
+    "error": {
+      "InstructionError": [
+        1,
+        {
+          "Custom": 6033
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 5
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 73,
+    "name": "ordinary withdrawal preserves the same canonical reserve floor",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 2,
+    "wire_bytes": 1047,
+    "compute_units_consumed": 59678,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 89,
+    "rollback_accounts": 89,
+    "error": {
+      "InstructionError": [
+        1,
+        {
+          "Custom": 6033
+        }
+      ]
+    },
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 74,
+    "name": "owner revokes the initiating agent after work was earned",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 369,
+    "compute_units_consumed": 6126,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 89,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 75,
+    "name": "owner changes only new facility admission close-new-admission-after-spending",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 484,
+    "compute_units_consumed": 16642,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 90,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 76,
+    "name": "facility policy retry preserves original outcome close-new-admission-after-spending",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 484,
+    "compute_units_consumed": 10559,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 90,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 77,
+    "name": "owner changes only new facility admission close-second-facility-admission",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 484,
+    "compute_units_consumed": 19642,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 91,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 78,
+    "name": "facility policy retry preserves original outcome close-second-facility-admission",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 484,
+    "compute_units_consumed": 13559,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 91,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 79,
+    "name": "both owners authorize financier control rotation",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 564,
+    "compute_units_consumed": 14168,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 92,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 80,
+    "name": "owner rotation retry preserves original receipt and generation",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 564,
+    "compute_units_consumed": 11316,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 92,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 81,
+    "name": "independent collector services accepted rights without initiating agent or financier backend",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": 1,
+    "wire_bytes": 1129,
+    "compute_units_consumed": 220064,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 93,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 82,
+    "name": "public ordered projection catch-up",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 297,
+    "compute_units_consumed": 58491,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 93,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 83,
+    "name": "public ordered projection catch-up",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 297,
+    "compute_units_consumed": 53997,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 93,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 84,
+    "name": "public ordered projection catch-up",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 297,
+    "compute_units_consumed": 55503,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 93,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 85,
+    "name": "public ordered projection catch-up",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 297,
+    "compute_units_consumed": 57009,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 93,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 86,
+    "name": "release unused accepted work remaining-first-accepted-work",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 1137,
+    "compute_units_consumed": 344941,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 95,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 87,
+    "name": "release unused accepted work remaining-second-accepted-work",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 1137,
+    "compute_units_consumed": 345751,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 97,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 88,
+    "name": "replacement owner prepares its ordinary withdrawal destination",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 15025,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 98,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-shared",
+    "index": 89,
+    "name": "current owner retains ordinary withdrawal of released uncommitted funds",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": 2,
+    "wire_bytes": 1047,
+    "compute_units_consumed": 188126,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 99,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 0,
+    "name": "initialize synthetic SPL token and disposable freeze authority",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 535,
+    "compute_units_consumed": 15402,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 8,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 1,
+    "name": "register company continuing principal",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 459,
+    "compute_units_consumed": 8267,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 2,
+    "name": "initialize company canonical financial book",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 330,
+    "compute_units_consumed": 9337,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 3,
+    "name": "initialize company zero-frontier Pool projection",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 298,
+    "compute_units_consumed": 11504,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 4,
+    "name": "create company owner token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 13525,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 5,
+    "name": "register issuer continuing principal",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 459,
+    "compute_units_consumed": 8267,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 6,
+    "name": "initialize issuer canonical financial book",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 330,
+    "compute_units_consumed": 12337,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 7,
+    "name": "initialize issuer zero-frontier Pool projection",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 298,
+    "compute_units_consumed": 16004,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 8,
+    "name": "create issuer owner token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 15025,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 9,
+    "name": "register financier continuing principal",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 459,
+    "compute_units_consumed": 8267,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 10,
+    "name": "initialize financier canonical financial book",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 330,
+    "compute_units_consumed": 13837,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 11,
+    "name": "initialize financier zero-frontier Pool projection",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 298,
+    "compute_units_consumed": 19004,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 12,
+    "name": "create financier owner token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 15025,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 13,
+    "name": "register supplier continuing principal",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 459,
+    "compute_units_consumed": 8267,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 14,
+    "name": "initialize supplier canonical financial book",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 330,
+    "compute_units_consumed": 10837,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 15,
+    "name": "initialize supplier zero-frontier Pool projection",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 298,
+    "compute_units_consumed": 17504,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 16,
+    "name": "create supplier owner token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 16525,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 17,
+    "name": "register fee continuing principal",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 459,
+    "compute_units_consumed": 8267,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 18,
+    "name": "initialize fee canonical financial book",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 330,
+    "compute_units_consumed": 9337,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 19,
+    "name": "initialize fee zero-frontier Pool projection",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 298,
+    "compute_units_consumed": 13004,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 20,
+    "name": "create fee owner token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 15025,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 21,
+    "name": "register protocol continuing principal",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 459,
+    "compute_units_consumed": 8267,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 22,
+    "name": "initialize protocol canonical financial book",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 330,
+    "compute_units_consumed": 9337,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 23,
+    "name": "initialize protocol zero-frontier Pool projection",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 298,
+    "compute_units_consumed": 17504,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 24,
+    "name": "create protocol owner token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 13525,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 25,
+    "name": "register assignee continuing principal",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 459,
+    "compute_units_consumed": 11267,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 26,
+    "name": "initialize assignee canonical financial book",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 330,
+    "compute_units_consumed": 9337,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 27,
+    "name": "initialize assignee zero-frontier Pool projection",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 298,
+    "compute_units_consumed": 11504,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 28,
+    "name": "create assignee owner token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 15025,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 29,
+    "name": "register sponsor continuing principal",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 459,
+    "compute_units_consumed": 8267,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 30,
+    "name": "initialize sponsor canonical financial book",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 330,
+    "compute_units_consumed": 10837,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 31,
+    "name": "initialize sponsor zero-frontier Pool projection",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 298,
+    "compute_units_consumed": 14504,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 32,
+    "name": "create sponsor owner token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 15025,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 33,
+    "name": "fund only synthetic company owner cash",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 300,
+    "compute_units_consumed": 105,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 34,
+    "name": "fund only synthetic issuer owner cash",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 300,
+    "compute_units_consumed": 105,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 35,
+    "name": "fund only synthetic assignee owner cash",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 300,
+    "compute_units_consumed": 105,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 36,
+    "name": "fund only synthetic fee owner cash",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 300,
+    "compute_units_consumed": 105,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 37,
+    "name": "owner initializes company allowance",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 435,
+    "compute_units_consumed": 10027,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 38,
+    "name": "owner creates actor 1",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 475,
+    "compute_units_consumed": 10475,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 39,
+    "name": "owner creates actor 2",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 475,
+    "compute_units_consumed": 10475,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 38,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 40,
+    "name": "create protocol custody token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 13525,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 40,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 41,
+    "name": "owner allocates protocol capital without inventing token inflow",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 708,
+    "compute_units_consumed": 122469,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 41,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 42,
+    "name": "create fee custody token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 21025,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 43,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 43,
+    "name": "owner allocates fee capital without inventing token inflow",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 708,
+    "compute_units_consumed": 111969,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 44,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 44,
+    "name": "create issuer custody token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 18025,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 46,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 45,
+    "name": "prefund issuer token account before explicit allocation",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 300,
+    "compute_units_consumed": 105,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 46,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 46,
+    "name": "owner allocates issuer capital without inventing token inflow",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 708,
+    "compute_units_consumed": 125472,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 47,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 47,
+    "name": "create assignee custody token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 13525,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 49,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 48,
+    "name": "owner allocates assignee capital without inventing token inflow",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 708,
+    "compute_units_consumed": 99969,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 50,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 49,
+    "name": "create sponsor custody token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 16525,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 52,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 50,
+    "name": "owner allocates sponsor capital without inventing token inflow",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 708,
+    "compute_units_consumed": 116469,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 53,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 51,
+    "name": "create and bind exact governed financier wallet",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 670,
+    "compute_units_consumed": 25909,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 56,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 52,
+    "name": "create financier custody token account",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 13525,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 58,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 53,
+    "name": "prefund financier token account before explicit allocation",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 300,
+    "compute_units_consumed": 105,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 58,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 54,
+    "name": "owner allocates financier capital without inventing token inflow",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 772,
+    "compute_units_consumed": 149219,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 59,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 55,
+    "name": "supplier approves immutable aggregate fee agreement main",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 476,
+    "compute_units_consumed": 12873,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 60,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 56,
+    "name": "approve external financing arrangement",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 781,
+    "compute_units_consumed": 24144,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 61,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 57,
+    "name": "owner and issuer approve main customer credit line",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 805,
+    "compute_units_consumed": 23540,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 62,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 58,
+    "name": "owner grants finite mandate 1",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 573,
+    "compute_units_consumed": 15304,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 62,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 59,
+    "name": "create independently owned send recipient ATA",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 16525,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 63,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 60,
+    "name": "initialize synthetic SPL token and disposable freeze authority",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 535,
+    "compute_units_consumed": 16902,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 63,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 61,
+    "name": "initialize separate output-asset financial book",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 330,
+    "compute_units_consumed": 12337,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 67,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 62,
+    "name": "initialize output-asset Pool projection",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 298,
+    "compute_units_consumed": 17504,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 67,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 63,
+    "name": "create exact governed output ATA",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 13525,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 67,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 64,
+    "name": "owner establishes zero-capital output custody",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 772,
+    "compute_units_consumed": 137216,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 68,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 65,
+    "name": "create actual SPL Token Swap pool accounts and funded reserves",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 998,
+    "compute_units_consumed": 63698,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 76,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 66,
+    "name": "initialize actual upstream constant-product pool",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 616,
+    "compute_units_consumed": 7405,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 76,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 67,
+    "name": "owner grants exact spending permission exact-swap-approval",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 893,
+    "compute_units_consumed": 21641,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 81,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 68,
+    "name": "owner-approved exact-input swap executes the actual source-built adapter",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": 6,
+    "wire_bytes": 1464,
+    "compute_units_consumed": 517574,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 81,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": 6
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 69,
+    "name": "owner grants exact spending permission reverse-swap-approval",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 893,
+    "compute_units_consumed": 20141,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 85,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 70,
+    "name": "governed reverse swap spends owned proceeds and credits the original asset custody",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": 6,
+    "wire_bytes": 1464,
+    "compute_units_consumed": 494907,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 85,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": 6
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 71,
+    "name": "owner grants bounded delegated spending permission bounded-swap-permission",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 893,
+    "compute_units_consumed": 23149,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 89,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 72,
+    "name": "executor cannot weaken the owner's minimum output rate",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 6,
+    "wire_bytes": 1464,
+    "compute_units_consumed": 77022,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 92,
+    "rollback_accounts": 92,
+    "error": {
+      "InstructionError": [
+        0,
+        {
+          "Custom": 6033
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 6
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 73,
+    "name": "actual adapter refuses an unattainable minimum output",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 6,
+    "wire_bytes": 1464,
+    "compute_units_consumed": 197573,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 95,
+    "rollback_accounts": 95,
+    "error": {
+      "InstructionError": [
+        1,
+        {
+          "Custom": 16
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 6
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 74,
+    "name": "bounded delegated swap commits the actual debit and output",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": 6,
+    "wire_bytes": 1464,
+    "compute_units_consumed": 496530,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 95,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": 6
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 75,
+    "name": "prepare another owner's output account for routing refusal",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 357,
+    "compute_units_consumed": 21025,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 99,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 76,
+    "name": "approved adapter identity cannot authorize a different receiving account",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 6,
+    "wire_bytes": 1464,
+    "compute_units_consumed": 36426,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 99,
+    "rollback_accounts": 99,
+    "error": {
+      "InstructionError": [
+        0,
+        {
+          "Custom": 6030
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 6
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 77,
+    "name": "standing swap permission binds the actual pool identity",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 6,
+    "wire_bytes": 1464,
+    "compute_units_consumed": 73696,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 102,
+    "rollback_accounts": 102,
+    "error": {
+      "InstructionError": [
+        0,
+        {
+          "Custom": 6033
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 6
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 78,
+    "name": "a correct router and pool cannot conceal a different input vault",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 6,
+    "wire_bytes": 1464,
+    "compute_units_consumed": 194985,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 105,
+    "rollback_accounts": 105,
+    "error": {
+      "InstructionError": [
+        1,
+        {
+          "Custom": 6057
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 6
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 79,
+    "name": "a send action cannot use bounded swap permission",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 5,
+    "wire_bytes": 1464,
+    "compute_units_consumed": 16185,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 105,
+    "rollback_accounts": 105,
+    "error": {
+      "InstructionError": [
+        0,
+        {
+          "Custom": 6030
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 6
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 80,
+    "name": "owner grants exact spending permission rounded-underdebit-permission",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 893,
+    "compute_units_consumed": 20141,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 109,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 81,
+    "name": "successful adapter CPI with smaller actual input debit is rolled back",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 6,
+    "wire_bytes": 1464,
+    "compute_units_consumed": 241786,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 109,
+    "rollback_accounts": 109,
+    "error": {
+      "InstructionError": [
+        1,
+        {
+          "Custom": 6058
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 6
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 82,
+    "name": "accept finite supplier commitment swap-late-booking",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 2233,
+    "compute_units_consumed": 386054,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 113,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 83,
+    "name": "approve swap-shared-second financing arrangement",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 781,
+    "compute_units_consumed": 25644,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 114,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 84,
+    "name": "owner and issuer approve swap-shared-second customer credit line",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 805,
+    "compute_units_consumed": 23540,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 115,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 85,
+    "name": "owner grants finite mandate 1",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 573,
+    "compute_units_consumed": 15304,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 116,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 86,
+    "name": "accept finite supplier commitment swap-shared-second",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 2233,
+    "compute_units_consumed": 389054,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 120,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 87,
+    "name": "supplier attests completed run swap-late-booking-delivery",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 1174,
+    "compute_units_consumed": 195120,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 124,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 88,
+    "name": "owner grants exact spending permission late-booking-approval",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 893,
+    "compute_units_consumed": 20141,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 128,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 89,
+    "name": "stale exact Pool projection rolls back adapter effects and permission consumption",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 6,
+    "wire_bytes": 1464,
+    "compute_units_consumed": 303463,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 128,
+    "rollback_accounts": 128,
+    "error": {
+      "InstructionError": [
+        1,
+        {
+          "Custom": 6006
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 6
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 90,
+    "name": "public ordered projection catch-up",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 297,
+    "compute_units_consumed": 59991,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 128,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 91,
+    "name": "public ordered projection catch-up",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 297,
+    "compute_units_consumed": 55497,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 128,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 92,
+    "name": "public ordered projection catch-up",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 297,
+    "compute_units_consumed": 57003,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 128,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 93,
+    "name": "public ordered projection catch-up",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 297,
+    "compute_units_consumed": 58509,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 128,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 94,
+    "name": "same operation succeeds after authenticated projection catch-up",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": 6,
+    "wire_bytes": 1464,
+    "compute_units_consumed": 489077,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 128,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": 6
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 95,
+    "name": "owner withdraws eligible uncommitted cash",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": 2,
+    "wire_bytes": 1047,
+    "compute_units_consumed": 191126,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 129,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 96,
+    "name": "owner grants exact spending permission committed-input-approval",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 893,
+    "compute_units_consumed": 20141,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 133,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 97,
+    "name": "owner-approved swap cannot convert accepted supplier backing into another asset",
+    "expected": "reject",
+    "passed": true,
+    "wallet_action": 6,
+    "wire_bytes": 1464,
+    "compute_units_consumed": 183640,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 133,
+    "rollback_accounts": 133,
+    "error": {
+      "InstructionError": [
+        1,
+        {
+          "Custom": 6033
+        }
+      ]
+    },
+    "core_wallet_operation_kind": 6
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 98,
+    "name": "current owner revokes delegated future spending",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 369,
+    "compute_units_consumed": 7995,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 133,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 99,
+    "name": "both owners authorize financier control rotation",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 564,
+    "compute_units_consumed": 14168,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 134,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 100,
+    "name": "owner rotation retry preserves original receipt and generation",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": null,
+    "wire_bytes": 564,
+    "compute_units_consumed": 11316,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 134,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": null
+  },
+  {
+    "suite": "wallet-spending-swap",
+    "index": 101,
+    "name": "historical swap result recovers after revocation rotation and changed pool price",
+    "expected": "success",
+    "passed": true,
+    "wallet_action": 6,
+    "wire_bytes": 1464,
+    "compute_units_consumed": 230751,
+    "config": {
+      "priorityFee": 0,
+      "computeUnitLimit": 1400000,
+      "loadedAccountsDataSizeLimit": 67108864,
+      "heapSize": null
+    },
+    "observed_accounts": 134,
+    "rollback_accounts": 0,
+    "error": null,
+    "core_wallet_operation_kind": 6
+  }
+]

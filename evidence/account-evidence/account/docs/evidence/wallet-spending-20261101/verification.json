@@ -1,0 +1,651 @@
+{
+  "schema": "dexter-wallet-spending-qualification/v1",
+  "status": "passed-local-program-qualification",
+  "date_utc": "2026-11-01",
+  "repository": "Dexter-DAO/dexter-account",
+  "pull_request": 22,
+  "starting_main": "d7cfd401d9d5ab8cb1aa409f407572cd19746d31",
+  "starting_main_tree": "f3d8d68126dc1d7e93fe2078b416f016afb045cb",
+  "program_source_revision": "fb2a3a4d2c2abec37468bd592ae72a75626d7b60",
+  "fixture_interface_revision": "5b205c6489efeb8d999d559434e251dfcaf92e2d",
+  "contract_checkpoint": "be0939e78f70fe029bf7123a92f31a51d4e8363b",
+  "scope": "Program/shared-contract authority, actual generated interfaces and focused signed local native-v1 execution. Codex PR23 handwritten SDK is preserved byte-for-byte relative to integrated main; no production deployment, spending, authority change or package publication.",
+  "implementation": {
+    "actions": {
+      "ordinary_send": 5,
+      "exact_input_swap": 6
+    },
+    "permission_account": "SpendingPermission",
+    "permission_version": 1,
+    "result_account": "WalletSpendReceipt",
+    "result_version": 1,
+    "financial_receipt_kinds": {
+      "send": 24,
+      "swap_input": 25,
+      "swap_output": 26
+    },
+    "reserve": "Canonical actual >= accounted >= unused accepted commitments + earned unpaid supplier amounts across facilities sharing custody",
+    "owner_changes": "Fresh authority generation required; accepted rights and immutable results preserved; cooperative rotation is not lost-owner recovery",
+    "account_composition": {
+      "send": {
+        "fixed": 16,
+        "financial_books": 2
+      },
+      "swap": {
+        "fixed": 26,
+        "financial_books": 4
+      }
+    },
+    "top_level_instructions": [
+      "Registry authorize_funding_wallet",
+      "Swig SignV2 with one Core instruction"
+    ],
+    "transport_enforcement_boundary": "Program checks exact envelope/effects. Instructions sysvar does not expose message version; native-v1 customer admission belongs to SDK/RPC qualification."
+  },
+  "source_hashes": {
+    "foundation/onchain/Anchor.toml": "93e3bb1cbd4cf97d40287d772bdb1497f11e04a70a378d7966fc745b5c77da7b",
+    "foundation/onchain/Cargo.lock": "c032b714effdfba0d422cf36d5a91ff84052f2e3c95439552023a2e70e47c538",
+    "foundation/onchain/Cargo.toml": "334f896ceaa32744e520930af7f83bbfabfdffa7551bba49af730cb84926bb58",
+    "foundation/onchain/crates/contracts/Cargo.toml": "a7e4c821e6a3455f9d5e3e2377c8146e1a32dc1281140118578bb4076445e21b",
+    "foundation/onchain/crates/contracts/src/commercial.rs": "7d1cfd04fe2127f3978028c8ca5a8a5e1fe0a1c5ba14dad5797ebacb17bf92f1",
+    "foundation/onchain/crates/contracts/src/corrections.rs": "1de3db0c565429fca79cc6f2c24c39188b0bf829d7b923b88dfa40835032d9b0",
+    "foundation/onchain/crates/contracts/src/financing.rs": "70e687271fa885717b8135c075733aad1d6d8175fa7979eb1e5e3227f3f0a6e9",
+    "foundation/onchain/crates/contracts/src/funded.rs": "bdf610ff7b7075decd8da0bfee0bd4b5757e4887762846f1ec0a7017b3fad567",
+    "foundation/onchain/crates/contracts/src/lib.rs": "856199810d55a2c977e19fb197a5fc729a0dfa5eb1672a402f2c44a9be787597",
+    "foundation/onchain/crates/contracts/src/repayment.rs": "4bbf62992e35303b0dfa0939047609cb40cfdee693ab441862d7c525cdbb54ba",
+    "foundation/onchain/crates/contracts/src/spending.rs": "00ea2657dd05ceea299d666f9eb87001092c5ce24d12d13413e247ec429ad24f",
+    "foundation/onchain/crates/contracts/src/wallet_operation.rs": "c8bc1a81b0f7d89a6eb645dfcdb5ca17412c724e94034804867760b61f3a6245",
+    "foundation/onchain/crates/contracts/tests/commercial.rs": "c7573e437ed6a25954b1aa6646cf159216a201a70051d4ca694cbdcb6989035b",
+    "foundation/onchain/crates/contracts/tests/corrections.rs": "d63b9879ede1078a3be88f3c5423e0240e6d858ad297965f3321021bf0931206",
+    "foundation/onchain/crates/contracts/tests/financing.rs": "b5253a2c09506da5fa4a1fa478b94f4392eac4fc7d1aa28ff791acc3937069e9",
+    "foundation/onchain/crates/contracts/tests/funded.rs": "e9c7a88820a7093346e36ae7a701b20b8628bec19515e9df5a03e3f20f3ad641",
+    "foundation/onchain/programs/claims-core/Cargo.toml": "0a039a201dc92b9a3cea03d76defe2bd66c58330dbcdaba1e1260ace3b8b3f07",
+    "foundation/onchain/programs/claims-core/src/corrections.rs": "528e4768cef3509dfdca9bd18bcc04e0b950b34fd6c9cee242ce75e0791962cb",
+    "foundation/onchain/programs/claims-core/src/funding.rs": "10478b17ce9e156bee0c67f3210917a66826faa6481d32fe8ce0c93ba9ebc2be",
+    "foundation/onchain/programs/claims-core/src/funding_capital.rs": "b93656ca23b3b6231ee5983e03b2ab2f70dd72ce43a52bf96a473240942ffa70",
+    "foundation/onchain/programs/claims-core/src/funding_collection.rs": "f3de6f981f38814d5a696da441c5a24ffe6b7921c988811110c6d6e4cdb3cbfb",
+    "foundation/onchain/programs/claims-core/src/funding_journal.rs": "21ddee6bbcf2b8a96c13dd4e6e71c721de3326344edc3d7230831388c46ed903",
+    "foundation/onchain/programs/claims-core/src/funding_sponsor.rs": "b988f9bb4537b943afee8166692d2562735729d07237f5390d5b00462dc9232e",
+    "foundation/onchain/programs/claims-core/src/funding_state.rs": "94dbeb338cff95f7c1a1a509453101514a6549a39fde373812fc5f0a81ce1bc1",
+    "foundation/onchain/programs/claims-core/src/historical_refunds.rs": "8cb71fe680ed400f7211f15539e0f3f56e9e95b1c54d01ffbb3c7036c8646eaf",
+    "foundation/onchain/programs/claims-core/src/interest_refunds.rs": "576685b5bbd06fd1795a1ca05f9a49cad35209a92a09e7af8dc5e33f7d0e72f6",
+    "foundation/onchain/programs/claims-core/src/lib.rs": "3e1d73ae80109d3248ca233237a6d72318884344afcbb1706f2fb7258d041ad9",
+    "foundation/onchain/programs/claims-core/src/receivables.rs": "145ce5e258c2d65f95d3e85c54c5f97a332de89ef82925eff7b9b1893811a9d9",
+    "foundation/onchain/programs/claims-core/src/seller_fees.rs": "72688110a4ced5f066b264989ee4a1b4fd599c08b05ccf4f0e3f709e3cd1fa50",
+    "foundation/onchain/programs/claims-core/src/wallet_spending.rs": "78929783048048a4297972908234947d93b81364a3579667f432c51c7290de51",
+    "foundation/onchain/programs/pool-issuer/Cargo.toml": "ac8b10466749c6d1e9859265d9cc40dc434796c23c5872ec699be069e3a8226f",
+    "foundation/onchain/programs/pool-issuer/src/funding.rs": "212f99d9b52a049096d9d7a923a679ecf92ec5c8d25b1965afb073347eff6b70",
+    "foundation/onchain/programs/pool-issuer/src/lib.rs": "6f9c010043551604bc630b2ee6b88a0c22b5577d911e2ba70bf3dacd0e281330",
+    "foundation/onchain/programs/principal-registry/Cargo.toml": "7bf2c5ac7aef32d27a4d584e7a758c2ed39bb4d3c6999746272e4384581dabcb",
+    "foundation/onchain/programs/principal-registry/src/allowance.rs": "7437da98a50114fbd5ae7b75fa1c9515d33713de61918bdbff3466b3b51bb78b",
+    "foundation/onchain/programs/principal-registry/src/lib.rs": "84dd3b97aa4c779502ecac215f2d6c858a6a8e33135eb411c3bbb2dcbec015d2",
+    "foundation/onchain/programs/principal-registry/src/ownership.rs": "3855b0dfc9bf9af177e9d9041bdea0bfe9a71f1d22cad36756c889da2b308f21",
+    "foundation/onchain/programs/principal-registry/src/repayment.rs": "915c831bd6cc40d27e30c978d919bb241a36f873911eab720b65a2140e699440",
+    "foundation/onchain/programs/principal-registry/src/spending.rs": "2f7a0518f5d80c075729147e71281aec0120e815546b0568bf02555b57b24600",
+    "foundation/onchain/programs/principal-registry/src/state.rs": "eb15dd36069371ffac3e958e9a037a4b8c1a504420ddbe86eef9716e542e84ab",
+    "foundation/onchain/programs/principal-registry/src/wallet.rs": "dd1e418430350cd5691baf0913decddc124b020d202b7599d0c6c5b68f51711d",
+    "foundation/onchain/programs/principal-registry/src/wallet_funding.rs": "d0a0a455bbb00fbe0e1ad1916551454aa59118d200d6f8528ad6b96995378947"
+  },
+  "verification_source_hashes": {
+    "foundation/onchain/tests/wallet_spending.py": "432eca00b3b26f2e349e8488ca2c682bd51c04ac5cb04a138698453e9e61f336",
+    "foundation/onchain/tests/verify_wallet_spending.py": "4622cad1ed427fc05be9a235a9bd4e3797dff4b8079f7c73c1a0bbd2d8374cf3",
+    "foundation/onchain/tests/financing_fixture.py": "04ba8cff199df0f9d7577fc0f952fedb819b9afe78f29707b643235c8c14b0c1",
+    "foundation/onchain/tests/financing_support.py": "76306f1ffdf44bd217215ad375088f9b53de927d0d6c3eb31f37275492a872ea",
+    "foundation/onchain/tests/spl_token_swap_fixture.py": "575835d77b3af3861bee2b9678e76e753f6961a826a08d20ad75cdbaca6366a0",
+    "foundation/onchain/tests/verify_financing_evidence.py": "0ac872266b3f80b249860d9786dc94b50b3d688f1020312fa203a4086f876c89",
+    "foundation/onchain/tests/verify_financing_corrections.py": "594b2d1d73b33c90b2771901bdc1169100aaff92431569347b45f0bd8e6a9576"
+  },
+  "program_artifacts": {
+    "principal_registry.so": {
+      "path": "/workspace/scratch/e85e65001bc6/dexter-account/.local/anchor/deploy/principal_registry.so",
+      "bytes": 782728,
+      "sha256": "e60391edb2a17f5b8398c83043d2cb97c5f55baf5c59f50bc9c795bc507cc604"
+    },
+    "pool_issuer.so": {
+      "path": "/workspace/scratch/e85e65001bc6/dexter-account/.local/anchor/deploy/pool_issuer.so",
+      "bytes": 334384,
+      "sha256": "524bc221b88035c911d8a5460e5e0526478838b621123b0e71d8ddbcc8a53a1b"
+    },
+    "claims_core.so": {
+      "path": "/workspace/scratch/e85e65001bc6/dexter-account/.local/anchor/deploy/claims_core.so",
+      "bytes": 1934008,
+      "sha256": "a558c3f5140693c3c2b4e3b4c117f6c6cc256de5617fe9f1a52f5108c50b4e3f"
+    }
+  },
+  "retained_swig_sha256": "bb744d9811c392e3f343952d1a99bef9c97aa1936248a23b9d7efc1adb8939c1",
+  "adapter": {
+    "pin": "adapter-pin.json",
+    "build_receipt": "adapter-build-receipt.json",
+    "source_commit": "264ca72de06b0c2b45c0b15d298000fe3f82db2e",
+    "program_id": "SwapsVeCiPHMUAtzQWZw7RjsKjgCjhwU55QGu4U1Szw",
+    "sha256": "545687ec1bee83f09638d5bf1d1a7dd8dc497b62a0788aa0532440c6fd095626",
+    "actual_implementation": true,
+    "test_stand_in": false,
+    "public_deployment_equivalence": false,
+    "direct_execution_receipt": "adapter-direct-receipt.json",
+    "direct_signed_transactions": 9,
+    "direct_expected_refusals": 2,
+    "direct_assertions": 10
+  },
+  "qualification": {
+    "build": "passed",
+    "actual_idls": "passed",
+    "generated_client_build": "passed",
+    "generated_instruction_and_account_vectors": "passed",
+    "host_tests": {
+      "workspace_lib_tests": 33,
+      "contracts_tests": 69,
+      "overlap_contract_lib_tests": 7
+    },
+    "sdk_regression": {
+      "passed": 245,
+      "failed": 0,
+      "skipped": 0,
+      "command": "./dev client test",
+      "log": "logs/wallet-client-test.log"
+    },
+    "new_wallet_scenarios": {
+      "transaction_count": 300,
+      "refused": 34,
+      "assertions": 767,
+      "financial_receipts": 48,
+      "spending_operations": 12,
+      "maximum_signed_packet": 2233,
+      "maximum_compute_units": 517574
+    },
+    "affected_regressions": {
+      "transaction_count": 1106,
+      "refused": 81,
+      "assertions": 4346,
+      "financial_receipts": 224,
+      "spending_operations": 0,
+      "maximum_signed_packet": 2297,
+      "maximum_compute_units": 701340
+    },
+    "all_native_scenarios": {
+      "scenarios": 15,
+      "signed_transactions": 1406,
+      "expected_refusals": 115,
+      "assertions": 5113,
+      "financial_receipts": 272,
+      "wallet_operations": 12
+    },
+    "offline_verification": "All 15 fresh traces passed; all 3 wallet traces also reviewed and rerun by a second agent. Offline reconstruction with shared helpers is not an execution attestation or separate monetary oracle.",
+    "integrated_sdk_closeout": {
+      "typescript_build": "passed",
+      "sdk_tests_passed": 261,
+      "new_native_sdk_repayments": 2,
+      "fresh_process_recovery": "passed",
+      "receipt_only_readback": true,
+      "rebroadcasts": 0,
+      "evidence": "main-integration/verification.json"
+    }
+  },
+  "resources": {
+    "native_transport": {
+      "version": 1,
+      "packet_limit": 4096,
+      "compute_unit_limit": 1400000,
+      "loaded_accounts_data_size_limit": 67108864,
+      "priority_fee": 0,
+      "heap_size": null,
+      "litesvm_compute_budget_override": 1400000,
+      "override_reason": "Pinned LiteSVM ignores native-v1 inline resource settings; these local executions do not qualify customer RPC resource admission or priority-fee charging"
+    },
+    "program_architecture": "SBPF v3",
+    "default_heap_bytes": 32768,
+    "maximum_observed_invocation_depth": 4,
+    "send": {
+      "successful_packet_bytes": 1080,
+      "account_keys": 22,
+      "maximum_successful_cu": 331296
+    },
+    "swap": {
+      "successful_packet_bytes": 1464,
+      "account_keys": 34,
+      "maximum_successful_cu": 517574
+    },
+    "measurement_method": "Classified by decoded signed Core selector, independently of the requested Registry action. Setup maxima are reported separately; successes include read-only recovery."
+  },
+  "evidence": {
+    "execution_report": "execution-report.json",
+    "case_index": "case-index.json",
+    "composition_vectors": "composition-vectors.json",
+    "generated_vector_check": "check-generated-vectors.mjs",
+    "generated_vector_receipt": "generated-vectors-receipt.json",
+    "rollback_details": "atomic-rollback-details.json",
+    "sdk_checks": "sdk-checks-receipt.json",
+    "actual_idls": "idl/",
+    "file_inventory": "evidence-files.json",
+    "runtime_availability": "runtime-availability.json"
+  },
+  "boundaries": {
+    "concurrency": "Competing signed/prepared transactions and serialized interleavings over shared canonical custody; no validator throughput or simultaneous RPC-load claim.",
+    "rollback": "All observed protected financial, token, pool, permission and journal accounts revert; the independent fee payer remains responsible for transaction network fees.",
+    "customer_rpc": "Not qualified: no customer send/swap SDK preparation, signing/submission, native resource/priority-fee admission, finality or durable fresh-process recovery journey was run.",
+    "financier_backend_shutdown": "Program evidence uses independent collection without financier/initiating-agent signatures after revocation/rotation; deployed stopped-backend RPC journey remains required.",
+    "lost_owner_recovery": "Separate preaccepted trust-policy and control requirement; no recovery authority is invented.",
+    "runtime": {
+      "observed_at": "2026-11-01T20:20:39.677589+00:00",
+      "scope": "Read-only local runtime availability; no validator was started and no RPC customer transaction was sent.",
+      "docker_executable": null,
+      "docker_socket_exists": false,
+      "repository_validator_status": {
+        "command": "./dev status",
+        "exit_code": 0,
+        "stdout": "{\n  \"status\": \"stopped\",\n  \"rpc\": \"http://127.0.0.1:18999\",\n  \"websocket\": \"ws://127.0.0.1:19000\",\n  \"reason\": \"not started\"\n}\n",
+        "stderr": ""
+      }
+    },
+    "broader_scope": "Full F04/F05, account, financing, investor, identity and archival requirements remain."
+  },
+  "files": {
+    "README.md": {
+      "bytes": 13616,
+      "sha256": "62ef3b39fee20993568a99402b70da791200723a5e362f9f82b741f8052a6819"
+    },
+    "adapter-build-receipt.json": {
+      "bytes": 5220,
+      "sha256": "d40b6de7276b5c09d4c01aefc1af813ba64c1b196d61e6f22d0de861be5778ff"
+    },
+    "adapter-direct-receipt.json": {
+      "bytes": 471,
+      "sha256": "c536188b3537481b2c5c8028b300eb77b497d3973b9d357a9e0752fd8f5edb65"
+    },
+    "adapter-direct-trace.json.xz": {
+      "bytes": 11628,
+      "sha256": "3eb898641f351f218dc47fd6a4819882511d5a5b6a3608f71b07bc8ea8ca94e7"
+    },
+    "adapter-pin.json": {
+      "bytes": 1981,
+      "sha256": "8da6148372b439ec11a2a87ea32a6b4ccb6c5c3a24fb9fa63f596762582fd8bc"
+    },
+    "atomic-rollback-details.json": {
+      "bytes": 18869,
+      "sha256": "425db55804c2fd9f41b00f2efbfa6bfa9edb18f48fb8d2a1beae69fe9b90d124"
+    },
+    "build-receipt.json": {
+      "bytes": 8515,
+      "sha256": "20b490f6089f052a9d41f553d6ab1c10d988cf014a978d5c0d63303b8c3fffbb"
+    },
+    "case-index.json": {
+      "bytes": 161833,
+      "sha256": "cd511f833fac21f5f4421c5c69d2a65639615240683cf276cda0fe2be441636c"
+    },
+    "check-generated-vectors.mjs": {
+      "bytes": 10206,
+      "sha256": "e1f4ce9b1d4264c0234d2e1b9d0eba3aae32b2a625329097e2149c6401298612"
+    },
+    "composition-vectors.json": {
+      "bytes": 93689,
+      "sha256": "89a1e0e982b1de59a75e5099bbca2b2dae6a147b05b8cadedd46b4ec87d65a0a"
+    },
+    "contracts-receipt.json": {
+      "bytes": 2923,
+      "sha256": "ea03eb5db8aa9d971ee08868638b5773d7150de18ed2fd5de694db955b8801db"
+    },
+    "doctor.json": {
+      "bytes": 1817,
+      "sha256": "56fabd3f2c22266d8cbed0a9b3b058211bef7f0341d643792a23caf04902a64f"
+    },
+    "evidence-files.json": {
+      "bytes": 14339,
+      "sha256": "32ba1981ce9c63dc49605a407ce39466ad13bd617207e8d9897605241edb9b14"
+    },
+    "execution-report.json": {
+      "bytes": 13561,
+      "sha256": "d87e89900058ad8cc94093defe71c7e428725397b4ce866c490232fe0845b17a"
+    },
+    "financing-commercial-offline.json": {
+      "bytes": 488,
+      "sha256": "74feb573d7b5c56849a9acd1ec6d035c8604491d2274ab3099655f3d002d7ded"
+    },
+    "financing-commercial-receipt.json": {
+      "bytes": 521,
+      "sha256": "1775ab26f8c5413bb66ddc9b0c5e864996ff2727abf1a60b94c8438292722c9b"
+    },
+    "financing-commercial-trace.json.xz": {
+      "bytes": 119432,
+      "sha256": "5348a1ab89ede2deda7f7de9610f97fc1de675d36d8327d501ab299e1b55f498"
+    },
+    "financing-corrections-interest-alias-offline.json": {
+      "bytes": 486,
+      "sha256": "7cdf97dfcd52b70d255ae803cf806b8635b4e8a925e46c916b0de58cf09f2e26"
+    },
+    "financing-corrections-interest-alias-receipt.json": {
+      "bytes": 535,
+      "sha256": "bac0b0f107286fc442040e690a3d458908eea6a17834c741f4ebb1728729e82b"
+    },
+    "financing-corrections-interest-alias-trace.json.xz": {
+      "bytes": 62232,
+      "sha256": "fe03111eaff391245300e19c14e988152da784cfd81bdc56a8224e1f8e933170"
+    },
+    "financing-corrections-lifecycle-offline.json": {
+      "bytes": 487,
+      "sha256": "fe225863a7fc1bd7139ba7bbdba4f8fd09cf0c66f176f845dcdb0966069f0b0b"
+    },
+    "financing-corrections-lifecycle-receipt.json": {
+      "bytes": 531,
+      "sha256": "58e80fd949a1ca4ac88edceb472a3fb8b32c3c571006311adc06f8fa0fd05897"
+    },
+    "financing-corrections-lifecycle-trace.json.xz": {
+      "bytes": 113524,
+      "sha256": "12fb1c2b7903a02f637fa739594f31caf643544e00a2de21ac8c0134cd179e2c"
+    },
+    "financing-corrections-own-capital-offline.json": {
+      "bytes": 486,
+      "sha256": "c9f646c9a59c091a446ee5391a62931dc7ceb26b29b405d318cf958bdbc4025e"
+    },
+    "financing-corrections-own-capital-receipt.json": {
+      "bytes": 532,
+      "sha256": "c8f2975e36a4b9e49d5728cccf594f453d5eac8caba48a3c6d6c1e3e3bbea253"
+    },
+    "financing-corrections-own-capital-trace.json.xz": {
+      "bytes": 67684,
+      "sha256": "25c08ba51c90924698853fe71e7b1e24da9c2a899cf2fd1a0a2590ea5b6622bb"
+    },
+    "financing-corrections-ownership-escrow-offline.json": {
+      "bytes": 486,
+      "sha256": "99a7606fd78652a3f3176660e1877b299604623b2e335a2bdad0d9d8a46e059d"
+    },
+    "financing-corrections-ownership-escrow-receipt.json": {
+      "bytes": 537,
+      "sha256": "91d22c6d91160156c56f815a823fff22f4759ae8de1f55ca91d669bb90e852f4"
+    },
+    "financing-corrections-ownership-escrow-trace.json.xz": {
+      "bytes": 114580,
+      "sha256": "287c5ceaac3fa2427941bec4e7215c702f7abf6ba8ba842bb794c4365515e2ea"
+    },
+    "financing-corrections-ownership-offline.json": {
+      "bytes": 486,
+      "sha256": "83d962ed502d581114050afbfee394b442943d308038edeed9bfe0691a62dd12"
+    },
+    "financing-corrections-ownership-receipt.json": {
+      "bytes": 530,
+      "sha256": "f35d189759d2c96e7019c90d44d6456f7feb84b4529fed53777911aa677c6c5d"
+    },
+    "financing-corrections-ownership-trace.json.xz": {
+      "bytes": 117344,
+      "sha256": "449079cb2b5ce6975820b39540c2e2ea08efe83e134fda2d88eab4b7e66be918"
+    },
+    "financing-corrections-repaid-uncollected-offline.json": {
+      "bytes": 486,
+      "sha256": "08dc020b16e3ac2dc4a6e3aeb88f817d38bb9e9e59b9e4a8a09d5258dec6b94d"
+    },
+    "financing-corrections-repaid-uncollected-receipt.json": {
+      "bytes": 539,
+      "sha256": "9c98cdd7b368ed4fabb445523d94ae0b906f04f37280d1ddc689823f96d41113"
+    },
+    "financing-corrections-repaid-uncollected-trace.json.xz": {
+      "bytes": 79340,
+      "sha256": "39a78cf0993118fbec34a9c178f3ce1e1279d82bd11cea84aae52a312df1a0c9"
+    },
+    "financing-governed-repayment-facility-offline.json": {
+      "bytes": 486,
+      "sha256": "fb8723f3f4e48076d48a7945bfc6949d693afe9798365477060aa6509f6a731d"
+    },
+    "financing-governed-repayment-facility-receipt.json": {
+      "bytes": 536,
+      "sha256": "3cbc5830985a884b71f9810b46cc74f8f0b151ae5375926ba655073c96c8011e"
+    },
+    "financing-governed-repayment-facility-trace.json.xz": {
+      "bytes": 88196,
+      "sha256": "c86118b5ebe9658e0dba7ab3bf32a09812741cb3540bd788338827e0d0e20974"
+    },
+    "financing-governed-repayment-refunds-offline.json": {
+      "bytes": 486,
+      "sha256": "54a97922d1fdf00b43e711d8cbea641e84fa189f96b20b2d260e3dfe3cb5daf1"
+    },
+    "financing-governed-repayment-refunds-receipt.json": {
+      "bytes": 535,
+      "sha256": "9df802fd43ae99add1584b5b6dffb36f17d133c0f6c85e877661668c0789b0ed"
+    },
+    "financing-governed-repayment-refunds-trace.json.xz": {
+      "bytes": 91876,
+      "sha256": "a31f47e103c6f1e9794c0eec08e813f42d8dd30f8bf2e2dad42b7764d1c652fa"
+    },
+    "financing-governed-repayment-roles-offline.json": {
+      "bytes": 486,
+      "sha256": "31e82c21f80df8136d5d1000f1a052fd96fdf637731de6cb495601c6f591a303"
+    },
+    "financing-governed-repayment-roles-receipt.json": {
+      "bytes": 533,
+      "sha256": "50522a473b4d36fac3c088ee1e3efba1caa107acc2336b5666d6ac258c59325c"
+    },
+    "financing-governed-repayment-roles-trace.json.xz": {
+      "bytes": 82616,
+      "sha256": "aeafc868d8b24293b60c6b416c08d13b333eaf174fe46efc97042492b02b7e42"
+    },
+    "financing-governed-repayment-run-offline.json": {
+      "bytes": 488,
+      "sha256": "1e4616cda2692eda80a2fc88513cd821e2d4ed65e3ff85df706bb0ed148fad84"
+    },
+    "financing-governed-repayment-run-receipt.json": {
+      "bytes": 533,
+      "sha256": "ffd36ffa24aef84d80ea5dceeba15adfd7c377f34a3b5ed5b2bdcf448bbf04f9"
+    },
+    "financing-governed-repayment-run-trace.json.xz": {
+      "bytes": 99916,
+      "sha256": "e8f284e6c10736bae8ad2f54735f8fc7740038e1b2728a4d1191893b5bb4a68d"
+    },
+    "financing-wallet-offline.json": {
+      "bytes": 488,
+      "sha256": "7bb43a0dac4f4d544456ffadc86beac71c10e8ac683bb806b9e1049a3405f57a"
+    },
+    "financing-wallet-receipt.json": {
+      "bytes": 517,
+      "sha256": "4428edb8f5cac7ac578e4493e310ec395ae5a12c34a73b55fbbc0e2b27e17a2d"
+    },
+    "financing-wallet-trace.json.xz": {
+      "bytes": 152264,
+      "sha256": "00c7f81ff8478c8957536440abf73c00d0305184f984a1695b1b72f98add34cf"
+    },
+    "generated-manifest.json": {
+      "bytes": 7967,
+      "sha256": "1a04ee423ef4260ccbefc382366f3e1149df39c800a8924fee05f076e9e84206"
+    },
+    "generated-vectors-receipt.json": {
+      "bytes": 7226,
+      "sha256": "31ab594e13b7f0effcafc090a9d082c3a741b1af6a69b37f857395e533c8d380"
+    },
+    "idl/claims_core.json": {
+      "bytes": 190916,
+      "sha256": "80331d47405499392e235b271f5dc417e8c335fd881f2e09ce722a442f47e890"
+    },
+    "idl/pool_issuer.json": {
+      "bytes": 23175,
+      "sha256": "089c961ff2faff876fc54e13c3302fa29c652b3c3972b2a4933b169a9ba5b0e6"
+    },
+    "idl/principal_registry.json": {
+      "bytes": 107367,
+      "sha256": "3c63df5ac3942b37b24d00fa7f7cfa97fef2df6eef82ffdeb45c64d4675b892f"
+    },
+    "idl-receipt.json": {
+      "bytes": 8241,
+      "sha256": "2a42144a01c4d46b68d1d9504f6b812c833af6c7173b85180a5a9e9fe3342418"
+    },
+    "logs/build-claims-core.log": {
+      "bytes": 2109,
+      "sha256": "fb1ce89f0fabae0425811e5bb11bd61c1b6d45e892522f976a6db671022a1acd"
+    },
+    "logs/build-pool-issuer.log": {
+      "bytes": 589,
+      "sha256": "5be6c6ec078803a0566f02b167777aa32017d0ee307258deba0df589cc81b77a"
+    },
+    "logs/build-principal-registry.log": {
+      "bytes": 1052,
+      "sha256": "f58dd1f3b6d1b48b80160b2703c7c470908e8540ea77e54332dd98e0603d017d"
+    },
+    "logs/contracts-all.log": {
+      "bytes": 7057,
+      "sha256": "bcd47e6b4a35a4906beee0c972a8fe99852cf7bb4e72b3a289d03b2cf5b6f8dd"
+    },
+    "logs/idl-claims-core.log": {
+      "bytes": 587,
+      "sha256": "6c4762a7c03f92779a258bb1c3a6a6e6a6e9ff80158c76ec7fda23d751f5f546"
+    },
+    "logs/idl-pool-issuer.log": {
+      "bytes": 452,
+      "sha256": "411710e130cdca617e98e45347f416a94312cfb9f7d52e0f9e852400936806a8"
+    },
+    "logs/idl-principal-registry.log": {
+      "bytes": 473,
+      "sha256": "27f896e43aa5a8db6768d1c35216c9a253e11eb579b2380aaa96cd805b6e6d8c"
+    },
+    "logs/unit.log": {
+      "bytes": 6123,
+      "sha256": "06755e3fe9f7ca7081fa46d7004c13a4b16d5f63649cd92fa49d26ea03e7112b"
+    },
+    "logs/wallet-client-build.log": {
+      "bytes": 221,
+      "sha256": "817b1b11842644bdc92a2fcc0337cdbc9fb5a4605f9ea4a6c11df2914273d3d1"
+    },
+    "logs/wallet-client-generate.log": {
+      "bytes": 11298,
+      "sha256": "fd48535575d63530483dda4dc40462928a6b5353ef5595b017684b2aaf03ad2c"
+    },
+    "logs/wallet-client-test.log": {
+      "bytes": 25511,
+      "sha256": "d0dcb0b2e959b47c0d4e4b4ff96ce803966519db708f54b6b95f853776952485"
+    },
+    "logs/wallet-regression-financing-commercial.log": {
+      "bytes": 499,
+      "sha256": "e620d695a3d1685d7f330a2dae2955cdae163cbda638e6a45384dd6453203c16"
+    },
+    "logs/wallet-regression-financing-corrections.log": {
+      "bytes": 3072,
+      "sha256": "4b0c184f1c5fd3694af65309a1e48a173d5b122549508dc25e35560f066d764e"
+    },
+    "logs/wallet-regression-financing-governed-repayment.log": {
+      "bytes": 2049,
+      "sha256": "d96bda0b015b832ac547021f89c8ad5459c17fef4c379cbca017794d73495336"
+    },
+    "logs/wallet-regression-financing-wallet.log": {
+      "bytes": 495,
+      "sha256": "dc850f5ce55d8194263a9efb895cc180895c45f294d2c945fba76990cdf63152"
+    },
+    "logs/wallet-regression-offline.log": {
+      "bytes": 6362,
+      "sha256": "2ef3d49033573c86725795fdaa2e2d564394ef86c41f2930d4f2fe92de37e24f"
+    },
+    "logs/wallet-spending-execution.log": {
+      "bytes": 3064,
+      "sha256": "98bf204feca7677e4ce6b98940e85d169e1d34bcadc7fab842e1e584ffe203ab"
+    },
+    "main-integration/bridge-trace-refresh.json": {
+      "bytes": 5699,
+      "sha256": "cad5860cce73d1e1d8947d1dbb7c887a19e05e3c7cdde62f1fd833c006a6d823"
+    },
+    "main-integration/client-build.log": {
+      "bytes": 221,
+      "sha256": "817b1b11842644bdc92a2fcc0337cdbc9fb5a4605f9ea4a6c11df2914273d3d1"
+    },
+    "main-integration/client-tests.log": {
+      "bytes": 27165,
+      "sha256": "0463b17ceacbf703aeb7dc088e13f18dcf871672c96df1c2ceb8556451222909"
+    },
+    "main-integration/fixture-eof-provenance.json": {
+      "bytes": 834,
+      "sha256": "c52f5f29f7cad49f64051d1f4e8600b8bbb8f321707738ebad6fb324d5bab135"
+    },
+    "main-integration/governed-financing-native-runtime.json.gz": {
+      "bytes": 156477,
+      "sha256": "c50d7ca00f5298bedea2b0442df090809ff8d22eb542c391b9d47d09458a9498"
+    },
+    "main-integration/governed-financing-native-runtime.log": {
+      "bytes": 339,
+      "sha256": "87d4b309eaa464682098165ad15a9503f14b38c64dc9e5b4ebc5600cdcb3b9f6"
+    },
+    "main-integration/incoming-bridge-provenance-refusal.json.gz": {
+      "bytes": 2543,
+      "sha256": "2efee83bf43567b465b851e86b3de084170954b70a2754e8ecb012b22df74e3d"
+    },
+    "main-integration/incoming-bridge-provenance-refusal.log": {
+      "bytes": 1354,
+      "sha256": "b4b25fe3a81ed7c66a5545a5144806f50371cb9080b564fef067abb5ac32f56c"
+    },
+    "main-integration/operation-stores.zip": {
+      "bytes": 47773,
+      "sha256": "87d9243262e18e57c90ebb7ecf8c3288d341913a6f06bd609be6ff81c1a75fe2"
+    },
+    "main-integration/verification.json": {
+      "bytes": 56472,
+      "sha256": "dba12f32807cc6e6507180e67ed7f52bbb83df254eb2de855eda17cc3aab399b"
+    },
+    "runtime-availability.json": {
+      "bytes": 512,
+      "sha256": "738316aea783ee4b73f20cfd521f851037836fad0c3fbf2f4e73809e13e75b5f"
+    },
+    "sdk-checks-receipt.json": {
+      "bytes": 42558,
+      "sha256": "0227c370a6d2adf9b051b44a79f5cce82ac2262864525d37ffdd8a8a0c60ad7f"
+    },
+    "unit-receipt.json": {
+      "bytes": 6020,
+      "sha256": "8dfb46f4dd3d641562bdba479d776e6f413a628ccc4a4984a4a2f7478d42b03a"
+    },
+    "wallet-spending-send-offline.json": {
+      "bytes": 482,
+      "sha256": "1ebed3550a6a3a6a7685089edef614d65c7d42fd846aa4454537ba5045be9936"
+    },
+    "wallet-spending-send-receipt.json": {
+      "bytes": 547,
+      "sha256": "9fe780abf8a5ab9a79ab959fcc89af50155631e5c74598a2a417c1f0845a5af0"
+    },
+    "wallet-spending-send-trace.json.xz": {
+      "bytes": 94284,
+      "sha256": "15a6306cf4ff3782a8a53e4a9f47e57e40d2f3f1ba5d336ccb82fda5d9dce44a"
+    },
+    "wallet-spending-shared-offline.json": {
+      "bytes": 480,
+      "sha256": "01f9c2b10528ab0e0a7bed813d1b559932c66bcb44fab5b93af2b2d2bfb1c6df"
+    },
+    "wallet-spending-shared-receipt.json": {
+      "bytes": 547,
+      "sha256": "ab844b29a49949a8c2ce1c90507dbdc1c86c044cfa4fb24cdffc5e7e60b114d8"
+    },
+    "wallet-spending-shared-trace.json.xz": {
+      "bytes": 85368,
+      "sha256": "e866a169d1371c880fbc4afb35c5cac11919095cb4f48b1291163f14fc6c78e4"
+    },
+    "wallet-spending-swap-offline.json": {
+      "bytes": 481,
+      "sha256": "58fc44afbc39729723698a260918d114c66769a4fe81e3d7452dd23786b8f66d"
+    },
+    "wallet-spending-swap-receipt.json": {
+      "bytes": 546,
+      "sha256": "94c97f45385bbfbae9b68ecd1a2a0e2bbc3edee62037a4b863dfb0c55dcf2b4c"
+    },
+    "wallet-spending-swap-trace.json.xz": {
+      "bytes": 105732,
+      "sha256": "2f237b784adc22d509245ac6450dbf50c0cfa057dd17a5ae182f94cf6acc16f7"
+    }
+  },
+  "original_qualification_commit": "80cca2ff3d2d87a090376d2cf3ca10453ea53bd4",
+  "integrated_main": "ddb40f73536a4391cb2782be8e77e2aee8185c56",
+  "integrated_main_pull_request": 23,
+  "verification_source_hashes_scope": "Original native traces at the recorded fixture revision. EOF-only cleanup and current SDK bridge trace pins are recorded in the additive main-integration closeout; original 83-file package is unchanged.",
+  "integration_closeout": {
+    "path": "main-integration/verification.json",
+    "sha256": "dba12f32807cc6e6507180e67ed7f52bbb83df254eb2de855eda17cc3aab399b",
+    "incoming_main": "ddb40f73536a4391cb2782be8e77e2aee8185c56",
+    "handwritten_sdk_changes_relative_to_incoming_main": 0,
+    "sdk_tests": {
+      "passed": 261,
+      "failed": 0
+    },
+    "sdk_native_payments": 2,
+    "matched_run_after_state_accounts": 90,
+    "matched_facility_after_state_accounts": 83,
+    "fresh_process_receipt_only_recovery": true,
+    "repeat_submissions": 0,
+    "new_rpc_execution": false,
+    "existing_rpc_evidence": "../governed-financing-sdk-20261101/verification.json",
+    "active_bridge_refresh": "Current trace/artifact pins replace the prior trace pins; no historical hash fallback. Selected request and pre/post financial state are byte-identical.",
+    "fixture_cleanup": "Only a terminal blank line was removed; both hashes and identical Python AST are recorded."
+  },
+  "current_additional_program_test_hashes": {
+    "foundation/onchain/tests/sdk_governed_repayment_bridge.py": "bfd22d3c803cada2bb6a49cb61f46b83fc77c4cafe00f4c10ed7701af92d4624",
+    "foundation/onchain/tests/wallet_spending.py": "da859ca9ee2973c2d048c86fa37d74e32ad8699f6395d99af392263cd9521d70"
+  }
+}

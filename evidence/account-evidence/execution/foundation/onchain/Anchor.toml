@@ -1,0 +1,18 @@
+[toolchain]
+anchor_version = "1.2.2"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.localnet]
+principal_registry = "9cRnuwBP8gUBmFKJxxhLyR3GcqzKwMuUCTTFPngEtr8G"
+claims_core = "727zmMkqPEPHaBDbxY4iAhzt6uZxxAd8CFoPUjdGXPPz"
+pool_issuer = "3yceApSVxLYihHjLLrCycV8T4Bg1MYggbxQhdzaqB2Sm"
+
+[provider]
+cluster = "http://127.0.0.1:18999"
+wallet = "../../.local/validator/dev-payer.json"
+
+[workspace]
+members = ["programs/principal-registry", "programs/claims-core", "programs/pool-issuer"]

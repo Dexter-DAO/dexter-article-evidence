@@ -1,0 +1,1036 @@
+{
+  "schema": "dexter-article-evidence-package/v1",
+  "created_at": "2026-11-04T06:22:57.123644+00:00",
+  "publication": "Prepared; not published",
+  "entry": "README.txt",
+  "proposed_destination": "Dexter-DAO/dexter-article-evidence",
+  "files": [
+    {
+      "path": "README.txt",
+      "bytes": 2971,
+      "sha256": "f32ad256f9ec2323b6366f43be6767f58202a9e4d3140b7e747bd0cc9ced5ba0"
+    },
+    {
+      "path": "account-evidence/NOTICE.md",
+      "bytes": 599,
+      "sha256": "4fc405512196ff1cef75e2c50009009df7c02bc7dbad3c905ca3f18796887fdd"
+    },
+    {
+      "path": "account-evidence/README.md",
+      "bytes": 5578,
+      "sha256": "877391453c4af8d323a22a5e2da2a2109c16ebe8f4f478023260541c8fe3a38e"
+    },
+    {
+      "path": "account-evidence/REPLAY.md",
+      "bytes": 2740,
+      "sha256": "ab398c41e6f8024f1e680af7c2fb3e12640bac040ea80564dc1d414491e9a4c0"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/README.md",
+      "bytes": 13616,
+      "sha256": "62ef3b39fee20993568a99402b70da791200723a5e362f9f82b741f8052a6819"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/adapter-build-receipt.json",
+      "bytes": 5220,
+      "sha256": "d40b6de7276b5c09d4c01aefc1af813ba64c1b196d61e6f22d0de861be5778ff"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/adapter-direct-receipt.json",
+      "bytes": 471,
+      "sha256": "c536188b3537481b2c5c8028b300eb77b497d3973b9d357a9e0752fd8f5edb65"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/adapter-direct-trace.json.xz",
+      "bytes": 11628,
+      "sha256": "3eb898641f351f218dc47fd6a4819882511d5a5b6a3608f71b07bc8ea8ca94e7"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/adapter-pin.json",
+      "bytes": 1981,
+      "sha256": "8da6148372b439ec11a2a87ea32a6b4ccb6c5c3a24fb9fa63f596762582fd8bc"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/atomic-rollback-details.json",
+      "bytes": 18869,
+      "sha256": "425db55804c2fd9f41b00f2efbfa6bfa9edb18f48fb8d2a1beae69fe9b90d124"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/build-receipt.json",
+      "bytes": 8515,
+      "sha256": "20b490f6089f052a9d41f553d6ab1c10d988cf014a978d5c0d63303b8c3fffbb"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/case-index.json",
+      "bytes": 161833,
+      "sha256": "cd511f833fac21f5f4421c5c69d2a65639615240683cf276cda0fe2be441636c"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/check-generated-vectors.mjs",
+      "bytes": 10206,
+      "sha256": "e1f4ce9b1d4264c0234d2e1b9d0eba3aae32b2a625329097e2149c6401298612"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/composition-vectors.json",
+      "bytes": 93689,
+      "sha256": "89a1e0e982b1de59a75e5099bbca2b2dae6a147b05b8cadedd46b4ec87d65a0a"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/contracts-receipt.json",
+      "bytes": 2923,
+      "sha256": "ea03eb5db8aa9d971ee08868638b5773d7150de18ed2fd5de694db955b8801db"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/doctor.json",
+      "bytes": 1817,
+      "sha256": "56fabd3f2c22266d8cbed0a9b3b058211bef7f0341d643792a23caf04902a64f"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/evidence-files.json",
+      "bytes": 14339,
+      "sha256": "32ba1981ce9c63dc49605a407ce39466ad13bd617207e8d9897605241edb9b14"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/execution-report.json",
+      "bytes": 13561,
+      "sha256": "d87e89900058ad8cc94093defe71c7e428725397b4ce866c490232fe0845b17a"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-commercial-offline.json",
+      "bytes": 488,
+      "sha256": "74feb573d7b5c56849a9acd1ec6d035c8604491d2274ab3099655f3d002d7ded"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-commercial-receipt.json",
+      "bytes": 521,
+      "sha256": "1775ab26f8c5413bb66ddc9b0c5e864996ff2727abf1a60b94c8438292722c9b"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-commercial-trace.json.xz",
+      "bytes": 119432,
+      "sha256": "5348a1ab89ede2deda7f7de9610f97fc1de675d36d8327d501ab299e1b55f498"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-corrections-interest-alias-offline.json",
+      "bytes": 486,
+      "sha256": "7cdf97dfcd52b70d255ae803cf806b8635b4e8a925e46c916b0de58cf09f2e26"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-corrections-interest-alias-receipt.json",
+      "bytes": 535,
+      "sha256": "bac0b0f107286fc442040e690a3d458908eea6a17834c741f4ebb1728729e82b"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-corrections-interest-alias-trace.json.xz",
+      "bytes": 62232,
+      "sha256": "fe03111eaff391245300e19c14e988152da784cfd81bdc56a8224e1f8e933170"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-corrections-lifecycle-offline.json",
+      "bytes": 487,
+      "sha256": "fe225863a7fc1bd7139ba7bbdba4f8fd09cf0c66f176f845dcdb0966069f0b0b"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-corrections-lifecycle-receipt.json",
+      "bytes": 531,
+      "sha256": "58e80fd949a1ca4ac88edceb472a3fb8b32c3c571006311adc06f8fa0fd05897"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-corrections-lifecycle-trace.json.xz",
+      "bytes": 113524,
+      "sha256": "12fb1c2b7903a02f637fa739594f31caf643544e00a2de21ac8c0134cd179e2c"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-corrections-own-capital-offline.json",
+      "bytes": 486,
+      "sha256": "c9f646c9a59c091a446ee5391a62931dc7ceb26b29b405d318cf958bdbc4025e"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-corrections-own-capital-receipt.json",
+      "bytes": 532,
+      "sha256": "c8f2975e36a4b9e49d5728cccf594f453d5eac8caba48a3c6d6c1e3e3bbea253"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-corrections-own-capital-trace.json.xz",
+      "bytes": 67684,
+      "sha256": "25c08ba51c90924698853fe71e7b1e24da9c2a899cf2fd1a0a2590ea5b6622bb"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-corrections-ownership-escrow-offline.json",
+      "bytes": 486,
+      "sha256": "99a7606fd78652a3f3176660e1877b299604623b2e335a2bdad0d9d8a46e059d"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-corrections-ownership-escrow-receipt.json",
+      "bytes": 537,
+      "sha256": "91d22c6d91160156c56f815a823fff22f4759ae8de1f55ca91d669bb90e852f4"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-corrections-ownership-escrow-trace.json.xz",
+      "bytes": 114580,
+      "sha256": "287c5ceaac3fa2427941bec4e7215c702f7abf6ba8ba842bb794c4365515e2ea"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-corrections-ownership-offline.json",
+      "bytes": 486,
+      "sha256": "83d962ed502d581114050afbfee394b442943d308038edeed9bfe0691a62dd12"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-corrections-ownership-receipt.json",
+      "bytes": 530,
+      "sha256": "f35d189759d2c96e7019c90d44d6456f7feb84b4529fed53777911aa677c6c5d"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-corrections-ownership-trace.json.xz",
+      "bytes": 117344,
+      "sha256": "449079cb2b5ce6975820b39540c2e2ea08efe83e134fda2d88eab4b7e66be918"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-corrections-repaid-uncollected-offline.json",
+      "bytes": 486,
+      "sha256": "08dc020b16e3ac2dc4a6e3aeb88f817d38bb9e9e59b9e4a8a09d5258dec6b94d"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-corrections-repaid-uncollected-receipt.json",
+      "bytes": 539,
+      "sha256": "9c98cdd7b368ed4fabb445523d94ae0b906f04f37280d1ddc689823f96d41113"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-corrections-repaid-uncollected-trace.json.xz",
+      "bytes": 79340,
+      "sha256": "39a78cf0993118fbec34a9c178f3ce1e1279d82bd11cea84aae52a312df1a0c9"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-governed-repayment-facility-offline.json",
+      "bytes": 486,
+      "sha256": "fb8723f3f4e48076d48a7945bfc6949d693afe9798365477060aa6509f6a731d"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-governed-repayment-facility-receipt.json",
+      "bytes": 536,
+      "sha256": "3cbc5830985a884b71f9810b46cc74f8f0b151ae5375926ba655073c96c8011e"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-governed-repayment-facility-trace.json.xz",
+      "bytes": 88196,
+      "sha256": "c86118b5ebe9658e0dba7ab3bf32a09812741cb3540bd788338827e0d0e20974"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-governed-repayment-refunds-offline.json",
+      "bytes": 486,
+      "sha256": "54a97922d1fdf00b43e711d8cbea641e84fa189f96b20b2d260e3dfe3cb5daf1"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-governed-repayment-refunds-receipt.json",
+      "bytes": 535,
+      "sha256": "9df802fd43ae99add1584b5b6dffb36f17d133c0f6c85e877661668c0789b0ed"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-governed-repayment-refunds-trace.json.xz",
+      "bytes": 91876,
+      "sha256": "a31f47e103c6f1e9794c0eec08e813f42d8dd30f8bf2e2dad42b7764d1c652fa"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-governed-repayment-roles-offline.json",
+      "bytes": 486,
+      "sha256": "31e82c21f80df8136d5d1000f1a052fd96fdf637731de6cb495601c6f591a303"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-governed-repayment-roles-receipt.json",
+      "bytes": 533,
+      "sha256": "50522a473b4d36fac3c088ee1e3efba1caa107acc2336b5666d6ac258c59325c"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-governed-repayment-roles-trace.json.xz",
+      "bytes": 82616,
+      "sha256": "aeafc868d8b24293b60c6b416c08d13b333eaf174fe46efc97042492b02b7e42"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-governed-repayment-run-offline.json",
+      "bytes": 488,
+      "sha256": "1e4616cda2692eda80a2fc88513cd821e2d4ed65e3ff85df706bb0ed148fad84"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-governed-repayment-run-receipt.json",
+      "bytes": 533,
+      "sha256": "ffd36ffa24aef84d80ea5dceeba15adfd7c377f34a3b5ed5b2bdcf448bbf04f9"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-governed-repayment-run-trace.json.xz",
+      "bytes": 99916,
+      "sha256": "e8f284e6c10736bae8ad2f54735f8fc7740038e1b2728a4d1191893b5bb4a68d"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-wallet-offline.json",
+      "bytes": 488,
+      "sha256": "7bb43a0dac4f4d544456ffadc86beac71c10e8ac683bb806b9e1049a3405f57a"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-wallet-receipt.json",
+      "bytes": 517,
+      "sha256": "4428edb8f5cac7ac578e4493e310ec395ae5a12c34a73b55fbbc0e2b27e17a2d"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/financing-wallet-trace.json.xz",
+      "bytes": 152264,
+      "sha256": "00c7f81ff8478c8957536440abf73c00d0305184f984a1695b1b72f98add34cf"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/generated-manifest.json",
+      "bytes": 7967,
+      "sha256": "1a04ee423ef4260ccbefc382366f3e1149df39c800a8924fee05f076e9e84206"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/generated-vectors-receipt.json",
+      "bytes": 7226,
+      "sha256": "31ab594e13b7f0effcafc090a9d082c3a741b1af6a69b37f857395e533c8d380"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/idl-receipt.json",
+      "bytes": 8241,
+      "sha256": "2a42144a01c4d46b68d1d9504f6b812c833af6c7173b85180a5a9e9fe3342418"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/idl/claims_core.json",
+      "bytes": 190916,
+      "sha256": "80331d47405499392e235b271f5dc417e8c335fd881f2e09ce722a442f47e890"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/idl/pool_issuer.json",
+      "bytes": 23175,
+      "sha256": "089c961ff2faff876fc54e13c3302fa29c652b3c3972b2a4933b169a9ba5b0e6"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/idl/principal_registry.json",
+      "bytes": 107367,
+      "sha256": "3c63df5ac3942b37b24d00fa7f7cfa97fef2df6eef82ffdeb45c64d4675b892f"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/logs/build-claims-core.log",
+      "bytes": 2109,
+      "sha256": "fb1ce89f0fabae0425811e5bb11bd61c1b6d45e892522f976a6db671022a1acd"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/logs/build-pool-issuer.log",
+      "bytes": 589,
+      "sha256": "5be6c6ec078803a0566f02b167777aa32017d0ee307258deba0df589cc81b77a"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/logs/build-principal-registry.log",
+      "bytes": 1052,
+      "sha256": "f58dd1f3b6d1b48b80160b2703c7c470908e8540ea77e54332dd98e0603d017d"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/logs/contracts-all.log",
+      "bytes": 7057,
+      "sha256": "bcd47e6b4a35a4906beee0c972a8fe99852cf7bb4e72b3a289d03b2cf5b6f8dd"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/logs/idl-claims-core.log",
+      "bytes": 587,
+      "sha256": "6c4762a7c03f92779a258bb1c3a6a6e6a6e9ff80158c76ec7fda23d751f5f546"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/logs/idl-pool-issuer.log",
+      "bytes": 452,
+      "sha256": "411710e130cdca617e98e45347f416a94312cfb9f7d52e0f9e852400936806a8"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/logs/idl-principal-registry.log",
+      "bytes": 473,
+      "sha256": "27f896e43aa5a8db6768d1c35216c9a253e11eb579b2380aaa96cd805b6e6d8c"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/logs/unit.log",
+      "bytes": 6123,
+      "sha256": "06755e3fe9f7ca7081fa46d7004c13a4b16d5f63649cd92fa49d26ea03e7112b"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/logs/wallet-client-build.log",
+      "bytes": 221,
+      "sha256": "817b1b11842644bdc92a2fcc0337cdbc9fb5a4605f9ea4a6c11df2914273d3d1"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/logs/wallet-client-generate.log",
+      "bytes": 11298,
+      "sha256": "fd48535575d63530483dda4dc40462928a6b5353ef5595b017684b2aaf03ad2c"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/logs/wallet-client-test.log",
+      "bytes": 25511,
+      "sha256": "d0dcb0b2e959b47c0d4e4b4ff96ce803966519db708f54b6b95f853776952485"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/logs/wallet-regression-financing-commercial.log",
+      "bytes": 499,
+      "sha256": "e620d695a3d1685d7f330a2dae2955cdae163cbda638e6a45384dd6453203c16"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/logs/wallet-regression-financing-corrections.log",
+      "bytes": 3072,
+      "sha256": "4b0c184f1c5fd3694af65309a1e48a173d5b122549508dc25e35560f066d764e"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/logs/wallet-regression-financing-governed-repayment.log",
+      "bytes": 2049,
+      "sha256": "d96bda0b015b832ac547021f89c8ad5459c17fef4c379cbca017794d73495336"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/logs/wallet-regression-financing-wallet.log",
+      "bytes": 495,
+      "sha256": "dc850f5ce55d8194263a9efb895cc180895c45f294d2c945fba76990cdf63152"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/logs/wallet-regression-offline.log",
+      "bytes": 6362,
+      "sha256": "2ef3d49033573c86725795fdaa2e2d564394ef86c41f2930d4f2fe92de37e24f"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/logs/wallet-spending-execution.log",
+      "bytes": 3064,
+      "sha256": "98bf204feca7677e4ce6b98940e85d169e1d34bcadc7fab842e1e584ffe203ab"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/runtime-availability.json",
+      "bytes": 512,
+      "sha256": "738316aea783ee4b73f20cfd521f851037836fad0c3fbf2f4e73809e13e75b5f"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/sdk-checks-receipt.json",
+      "bytes": 42558,
+      "sha256": "0227c370a6d2adf9b051b44a79f5cce82ac2262864525d37ffdd8a8a0c60ad7f"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/unit-receipt.json",
+      "bytes": 6020,
+      "sha256": "8dfb46f4dd3d641562bdba479d776e6f413a628ccc4a4984a4a2f7478d42b03a"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/verification.json",
+      "bytes": 31385,
+      "sha256": "cc6cf766c8a89e67a8c1fc963731d6e74edeb1873df3c0341d2f410019e4b140"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/wallet-spending-send-offline.json",
+      "bytes": 482,
+      "sha256": "1ebed3550a6a3a6a7685089edef614d65c7d42fd846aa4454537ba5045be9936"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/wallet-spending-send-receipt.json",
+      "bytes": 547,
+      "sha256": "9fe780abf8a5ab9a79ab959fcc89af50155631e5c74598a2a417c1f0845a5af0"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/wallet-spending-send-trace.json.xz",
+      "bytes": 94284,
+      "sha256": "15a6306cf4ff3782a8a53e4a9f47e57e40d2f3f1ba5d336ccb82fda5d9dce44a"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/wallet-spending-shared-offline.json",
+      "bytes": 480,
+      "sha256": "01f9c2b10528ab0e0a7bed813d1b559932c66bcb44fab5b93af2b2d2bfb1c6df"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/wallet-spending-shared-receipt.json",
+      "bytes": 547,
+      "sha256": "ab844b29a49949a8c2ce1c90507dbdc1c86c044cfa4fb24cdffc5e7e60b114d8"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/wallet-spending-shared-trace.json.xz",
+      "bytes": 85368,
+      "sha256": "e866a169d1371c880fbc4afb35c5cac11919095cb4f48b1291163f14fc6c78e4"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/wallet-spending-swap-offline.json",
+      "bytes": 481,
+      "sha256": "58fc44afbc39729723698a260918d114c66769a4fe81e3d7452dd23786b8f66d"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/wallet-spending-swap-receipt.json",
+      "bytes": 546,
+      "sha256": "94c97f45385bbfbae9b68ecd1a2a0e2bbc3edee62037a4b863dfb0c55dcf2b4c"
+    },
+    {
+      "path": "account-evidence/account/docs/evidence/wallet-spending-20261101/wallet-spending-swap-trace.json.xz",
+      "bytes": 105732,
+      "sha256": "2f237b784adc22d509245ac6450dbf50c0cfa057dd17a5ae182f94cf6acc16f7"
+    },
+    {
+      "path": "account-evidence/checks/article-claim-check-20261104.json",
+      "bytes": 3197,
+      "sha256": "1c9a6495ef28a95e6c8804dc56bbdb9d75d07626fb39d8471cad64335aacc11b"
+    },
+    {
+      "path": "account-evidence/checks/offline-check-20261104.json",
+      "bytes": 12867,
+      "sha256": "d29679ed4816c14ef3a02e50672f456d2e7c61503e9173fa4bb2263dbe920b89"
+    },
+    {
+      "path": "account-evidence/execution/foundation/money/model/financed_corrections.py",
+      "bytes": 6910,
+      "sha256": "d560a45857db5c3eef458ef64ad5ec2d3137e17ae46bf09ed4839c3e70648827"
+    },
+    {
+      "path": "account-evidence/execution/foundation/money/model/pool_model.py",
+      "bytes": 46244,
+      "sha256": "3d02974dd97f8885ef22ab62d81e0de67789f3bb9176daa6da6da55674bf5db3"
+    },
+    {
+      "path": "account-evidence/execution/foundation/money/svm_common.py",
+      "bytes": 7302,
+      "sha256": "3ed2546e749dc9cf4876a205834ab690bad81a41918c9409e9ea5f2023e6d3e6"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/Anchor.toml",
+      "bytes": 495,
+      "sha256": "93e3bb1cbd4cf97d40287d772bdb1497f11e04a70a378d7966fc745b5c77da7b"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/Cargo.lock",
+      "bytes": 62558,
+      "sha256": "c032b714effdfba0d422cf36d5a91ff84052f2e3c95439552023a2e70e47c538"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/Cargo.toml",
+      "bytes": 737,
+      "sha256": "334f896ceaa32744e520930af7f83bbfabfdffa7551bba49af730cb84926bb58"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/crates/contracts/Cargo.toml",
+      "bytes": 245,
+      "sha256": "a7e4c821e6a3455f9d5e3e2377c8146e1a32dc1281140118578bb4076445e21b"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/crates/contracts/src/commercial.rs",
+      "bytes": 20211,
+      "sha256": "7d1cfd04fe2127f3978028c8ca5a8a5e1fe0a1c5ba14dad5797ebacb17bf92f1"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/crates/contracts/src/corrections.rs",
+      "bytes": 8394,
+      "sha256": "1de3db0c565429fca79cc6f2c24c39188b0bf829d7b923b88dfa40835032d9b0"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/crates/contracts/src/financing.rs",
+      "bytes": 25602,
+      "sha256": "70e687271fa885717b8135c075733aad1d6d8175fa7979eb1e5e3227f3f0a6e9"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/crates/contracts/src/funded.rs",
+      "bytes": 14409,
+      "sha256": "bdf610ff7b7075decd8da0bfee0bd4b5757e4887762846f1ec0a7017b3fad567"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/crates/contracts/src/lib.rs",
+      "bytes": 9793,
+      "sha256": "856199810d55a2c977e19fb197a5fc729a0dfa5eb1672a402f2c44a9be787597"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/crates/contracts/src/repayment.rs",
+      "bytes": 13581,
+      "sha256": "4bbf62992e35303b0dfa0939047609cb40cfdee693ab441862d7c525cdbb54ba"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/crates/contracts/src/spending.rs",
+      "bytes": 13744,
+      "sha256": "00ea2657dd05ceea299d666f9eb87001092c5ce24d12d13413e247ec429ad24f"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/crates/contracts/src/wallet_operation.rs",
+      "bytes": 6492,
+      "sha256": "c8bc1a81b0f7d89a6eb645dfcdb5ca17412c724e94034804867760b61f3a6245"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/crates/contracts/tests/commercial.rs",
+      "bytes": 15631,
+      "sha256": "c7573e437ed6a25954b1aa6646cf159216a201a70051d4ca694cbdcb6989035b"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/crates/contracts/tests/corrections.rs",
+      "bytes": 8697,
+      "sha256": "d63b9879ede1078a3be88f3c5423e0240e6d858ad297965f3321021bf0931206"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/crates/contracts/tests/financing.rs",
+      "bytes": 20319,
+      "sha256": "b5253a2c09506da5fa4a1fa478b94f4392eac4fc7d1aa28ff791acc3937069e9"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/crates/contracts/tests/funded.rs",
+      "bytes": 13652,
+      "sha256": "e9c7a88820a7093346e36ae7a701b20b8628bec19515e9df5a03e3f20f3ad641"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/programs/claims-core/Cargo.toml",
+      "bytes": 884,
+      "sha256": "0a039a201dc92b9a3cea03d76defe2bd66c58330dbcdaba1e1260ace3b8b3f07"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/programs/claims-core/src/corrections.rs",
+      "bytes": 33206,
+      "sha256": "528e4768cef3509dfdca9bd18bcc04e0b950b34fd6c9cee242ce75e0791962cb"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/programs/claims-core/src/funding.rs",
+      "bytes": 44705,
+      "sha256": "10478b17ce9e156bee0c67f3210917a66826faa6481d32fe8ce0c93ba9ebc2be"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/programs/claims-core/src/funding_capital.rs",
+      "bytes": 9492,
+      "sha256": "b93656ca23b3b6231ee5983e03b2ab2f70dd72ce43a52bf96a473240942ffa70"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/programs/claims-core/src/funding_collection.rs",
+      "bytes": 15436,
+      "sha256": "f3de6f981f38814d5a696da441c5a24ffe6b7921c988811110c6d6e4cdb3cbfb"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/programs/claims-core/src/funding_journal.rs",
+      "bytes": 4749,
+      "sha256": "21ddee6bbcf2b8a96c13dd4e6e71c721de3326344edc3d7230831388c46ed903"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/programs/claims-core/src/funding_sponsor.rs",
+      "bytes": 6520,
+      "sha256": "b988f9bb4537b943afee8166692d2562735729d07237f5390d5b00462dc9232e"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/programs/claims-core/src/funding_state.rs",
+      "bytes": 21102,
+      "sha256": "94dbeb338cff95f7c1a1a509453101514a6549a39fde373812fc5f0a81ce1bc1"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/programs/claims-core/src/historical_refunds.rs",
+      "bytes": 3918,
+      "sha256": "8cb71fe680ed400f7211f15539e0f3f56e9e95b1c54d01ffbb3c7036c8646eaf"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/programs/claims-core/src/interest_refunds.rs",
+      "bytes": 15407,
+      "sha256": "576685b5bbd06fd1795a1ca05f9a49cad35209a92a09e7af8dc5e33f7d0e72f6"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/programs/claims-core/src/lib.rs",
+      "bytes": 58346,
+      "sha256": "3e1d73ae80109d3248ca233237a6d72318884344afcbb1706f2fb7258d041ad9"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/programs/claims-core/src/receivables.rs",
+      "bytes": 50848,
+      "sha256": "145ce5e258c2d65f95d3e85c54c5f97a332de89ef82925eff7b9b1893811a9d9"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/programs/claims-core/src/seller_fees.rs",
+      "bytes": 12963,
+      "sha256": "72688110a4ced5f066b264989ee4a1b4fd599c08b05ccf4f0e3f709e3cd1fa50"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/programs/claims-core/src/wallet_spending.rs",
+      "bytes": 19179,
+      "sha256": "78929783048048a4297972908234947d93b81364a3579667f432c51c7290de51"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/programs/pool-issuer/Cargo.toml",
+      "bytes": 645,
+      "sha256": "ac8b10466749c6d1e9859265d9cc40dc434796c23c5872ec699be069e3a8226f"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/programs/pool-issuer/src/funding.rs",
+      "bytes": 11799,
+      "sha256": "212f99d9b52a049096d9d7a923a679ecf92ec5c8d25b1965afb073347eff6b70"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/programs/pool-issuer/src/lib.rs",
+      "bytes": 15627,
+      "sha256": "6f9c010043551604bc630b2ee6b88a0c22b5577d911e2ba70bf3dacd0e281330"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/programs/principal-registry/Cargo.toml",
+      "bytes": 550,
+      "sha256": "7bf2c5ac7aef32d27a4d584e7a758c2ed39bb4d3c6999746272e4384581dabcb"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/programs/principal-registry/src/allowance.rs",
+      "bytes": 4886,
+      "sha256": "7437da98a50114fbd5ae7b75fa1c9515d33713de61918bdbff3466b3b51bb78b"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/programs/principal-registry/src/lib.rs",
+      "bytes": 28115,
+      "sha256": "84dd3b97aa4c779502ecac215f2d6c858a6a8e33135eb411c3bbb2dcbec015d2"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/programs/principal-registry/src/ownership.rs",
+      "bytes": 4373,
+      "sha256": "3855b0dfc9bf9af177e9d9041bdea0bfe9a71f1d22cad36756c889da2b308f21"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/programs/principal-registry/src/repayment.rs",
+      "bytes": 20185,
+      "sha256": "915c831bd6cc40d27e30c978d919bb241a36f873911eab720b65a2140e699440"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/programs/principal-registry/src/spending.rs",
+      "bytes": 18492,
+      "sha256": "2f7a0518f5d80c075729147e71281aec0120e815546b0568bf02555b57b24600"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/programs/principal-registry/src/state.rs",
+      "bytes": 8808,
+      "sha256": "eb15dd36069371ffac3e958e9a037a4b8c1a504420ddbe86eef9716e542e84ab"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/programs/principal-registry/src/wallet.rs",
+      "bytes": 16386,
+      "sha256": "dd1e418430350cd5691baf0913decddc124b020d202b7599d0c6c5b68f51711d"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/programs/principal-registry/src/wallet_funding.rs",
+      "bytes": 23232,
+      "sha256": "d0a0a455bbb00fbe0e1ad1916551454aa59118d200d6f8528ad6b96995378947"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/tests/financing_commercial.py",
+      "bytes": 22781,
+      "sha256": "9810ddc237a3992893fbb86def2e50dfd43a727619b46a047a7ae8f8165639b7"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/tests/financing_correction_fixture.py",
+      "bytes": 27662,
+      "sha256": "d06c5426910abcbcb71e6ffb64435354a4b29b58b91229cdc621e46d63fd491b"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/tests/financing_corrections.py",
+      "bytes": 24653,
+      "sha256": "b09d528454c8896352435bb4168d80ffdea967b34b9dba05f65eeb20a12635a7"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/tests/financing_fixture.py",
+      "bytes": 44801,
+      "sha256": "04ba8cff199df0f9d7577fc0f952fedb819b9afe78f29707b643235c8c14b0c1"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/tests/financing_governed_repayment.py",
+      "bytes": 34660,
+      "sha256": "11a1405e37c3f2126242110aa001afe25b56c8440a84dff8511654bd8fc8c7fe"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/tests/financing_support.py",
+      "bytes": 17694,
+      "sha256": "76306f1ffdf44bd217215ad375088f9b53de927d0d6c3eb31f37275492a872ea"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/tests/financing_wallet.py",
+      "bytes": 17676,
+      "sha256": "c131ff55a11b236074211577278ea26d834c74393856959ad6261269304d5566"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/tests/spl_token_swap_fixture.py",
+      "bytes": 7461,
+      "sha256": "575835d77b3af3861bee2b9678e76e753f6961a826a08d20ad75cdbaca6366a0"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/tests/verify_financing_corrections.py",
+      "bytes": 13199,
+      "sha256": "594b2d1d73b33c90b2771901bdc1169100aaff92431569347b45f0bd8e6a9576"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/tests/verify_financing_evidence.py",
+      "bytes": 11259,
+      "sha256": "0ac872266b3f80b249860d9786dc94b50b3d688f1020312fa203a4086f876c89"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/tests/verify_wallet_spending.py",
+      "bytes": 22283,
+      "sha256": "4622cad1ed427fc05be9a235a9bd4e3797dff4b8079f7c73c1a0bbd2d8374cf3"
+    },
+    {
+      "path": "account-evidence/execution/foundation/onchain/tests/wallet_spending.py",
+      "bytes": 44647,
+      "sha256": "432eca00b3b26f2e349e8488ca2c682bd51c04ac5cb04a138698453e9e61f336"
+    },
+    {
+      "path": "account-evidence/inspect_article_claim.py",
+      "bytes": 5522,
+      "sha256": "dc5690028dc15351e20013b283a701e134377527000cca18e8595add2f151b49"
+    },
+    {
+      "path": "account-evidence/manifest.json",
+      "bytes": 115064,
+      "sha256": "b20cd289a37172e58db15270eab7995a7ae9b655e3d320bb257397582e79202f"
+    },
+    {
+      "path": "account-evidence/requirements.txt",
+      "bytes": 59,
+      "sha256": "d7177912d3a3f86b2f5ea260f847e12894523bb2e521c426e5add0bff62366df"
+    },
+    {
+      "path": "account-evidence/spec/account-and-interfaces.md",
+      "bytes": 11280,
+      "sha256": "f11a49e052e38f5c35c7a49aa399f956d460fd8aa85eedd61754b2e7b5d7eb2c"
+    },
+    {
+      "path": "account-evidence/spec/tab-and-backing.md",
+      "bytes": 4679,
+      "sha256": "b59310815de959e174d8fc7ec995f17a4e646b58c18dad36f72cf366b43cf64b"
+    },
+    {
+      "path": "account-evidence/vault/LICENSE",
+      "bytes": 1063,
+      "sha256": "6a694c6c736e9474ca4b54dac937a509cc744459e7e7a03aa82a567ab097d7c3"
+    },
+    {
+      "path": "account-evidence/vault/programs/dexter-vault/src/constants.rs",
+      "bytes": 38922,
+      "sha256": "4b4cc2b2287a3a31d6cc04c11949c2c08971a00c49877d1948b77c54392cbb61"
+    },
+    {
+      "path": "account-evidence/vault/programs/dexter-vault/src/events.rs",
+      "bytes": 13051,
+      "sha256": "2ac2279993c5eec7c9a7c50162116fbd7b81b367f7d2db9cfbd1e23089b3b4dd"
+    },
+    {
+      "path": "account-evidence/vault/programs/dexter-vault/src/instructions/authorize_legacy_v1_tab.rs",
+      "bytes": 41863,
+      "sha256": "382ed59a59b9452a78e7e04bfb8f840eda8b7457434dc0d1d5a04120736f7877"
+    },
+    {
+      "path": "account-evidence/vault/programs/dexter-vault/src/instructions/grant_agent_session.rs",
+      "bytes": 12630,
+      "sha256": "5668b9a52e164f49765e77b7915dea9246118760c8d157d9336e1f047140e084"
+    },
+    {
+      "path": "account-evidence/vault/programs/dexter-vault/src/instructions/lock_voucher.rs",
+      "bytes": 22632,
+      "sha256": "24e1a26ba00fdeccce7e71763f4ad91df8fbe8b950e1ec61da36d8ff3342b769"
+    },
+    {
+      "path": "account-evidence/vault/programs/dexter-vault/src/instructions/register_session_key.rs",
+      "bytes": 23531,
+      "sha256": "7c76be40ded827fcf178e8eaa323cf600f429583972886c7f273be659b8bc815"
+    },
+    {
+      "path": "account-evidence/vault/programs/dexter-vault/src/instructions/resolve_legacy_v6_vouchers.rs",
+      "bytes": 27549,
+      "sha256": "2c04abaea179280942978eb5680c7c6945b0d052239731520fa9cdb35b401d0b"
+    },
+    {
+      "path": "account-evidence/vault/programs/dexter-vault/src/instructions/revoke_session_key.rs",
+      "bytes": 15353,
+      "sha256": "afca63e6ded020fe6a2e53ad480c5f90631d90546894ab932f85a8f67586745a"
+    },
+    {
+      "path": "account-evidence/vault/programs/dexter-vault/src/instructions/session_admission.rs",
+      "bytes": 40206,
+      "sha256": "9e1f9d670f6ca078335e09842fd3477067118c96758a8f44997f630e4fe51cb2"
+    },
+    {
+      "path": "account-evidence/vault/programs/dexter-vault/src/instructions/settle_locked_voucher.rs",
+      "bytes": 15291,
+      "sha256": "f415b418557379dad1caf8a6b26474869920ddd2b8e7b9a87e41ad1160f1fb7a"
+    },
+    {
+      "path": "account-evidence/vault/programs/dexter-vault/src/state.rs",
+      "bytes": 111370,
+      "sha256": "18208d814f953663456dbf5b0e0eb606a071794dafd4a498b4aa22234baf298a"
+    },
+    {
+      "path": "account-evidence/vault/programs/dexter-vault/src/verify/ed25519.rs",
+      "bytes": 22874,
+      "sha256": "25e62f9a36c045af2e6c596c3144e799fa7ac982baef353a2d64b10970bcb3e1"
+    },
+    {
+      "path": "account-evidence/vault/programs/dexter-vault/src/verify/p256.rs",
+      "bytes": 1056,
+      "sha256": "49b050623eda5ac6c167fe48cf4ccebf613add711dad55c5667f5e14b19cb323"
+    },
+    {
+      "path": "account-evidence/vault/programs/dexter-vault/src/verify/reserved_cash.rs",
+      "bytes": 36924,
+      "sha256": "a73251289981d98aac36855d28b0d808f33b33098aabbc5d276b63a6d4538608"
+    },
+    {
+      "path": "account-evidence/vault/programs/dexter-vault/src/verify/swig_transfer.rs",
+      "bytes": 89436,
+      "sha256": "fa4c284157504fbc2d4740174a61260522974c59fa10609050f45e02c8db5e2b"
+    },
+    {
+      "path": "account-evidence/vault/programs/dexter-vault/src/verify/voucher.rs",
+      "bytes": 11811,
+      "sha256": "9df24dbf8ad2a7256bb6092fc7b8a605dbca5f7a6563a9cef2ea1f3ed40bdaa7"
+    },
+    {
+      "path": "account-evidence/vault/programs/dexter-vault/src/verify/webauthn.rs",
+      "bytes": 45013,
+      "sha256": "c3235546ff595fe8d90a0d975c9ef061b6069ccace3d1e04cfca3adb6b8b67f4"
+    },
+    {
+      "path": "account-evidence/verify_files.py",
+      "bytes": 619,
+      "sha256": "1df5288551c5c290b3c645f9f7d80af799b8f659407cfc381ca09e532babb6e9"
+    },
+    {
+      "path": "account-evidence/verify_recorded_evidence.py",
+      "bytes": 2999,
+      "sha256": "8c252e50ef3f651e1946e9b449aa968c8b35c8956b41b67297678ff11ebeb806"
+    },
+    {
+      "path": "historical-evidence.zip",
+      "bytes": 111568,
+      "sha256": "f081c1179aba66bcd43840dc2abbc474dfc62745e790067d0353e5def2687438"
+    },
+    {
+      "path": "historical-evidence/README.txt",
+      "bytes": 3342,
+      "sha256": "9b265a72a4d42c60761effec07efe47cb2a6e1f7283c435c30e9d54cf9871175"
+    },
+    {
+      "path": "historical-evidence/SHA256SUMS",
+      "bytes": 2743,
+      "sha256": "94c6b07fee3dfbc23f652cebb711ca1fe85584e6a63f39171f42520564025829"
+    },
+    {
+      "path": "historical-evidence/checks/check-record-offline.mjs",
+      "bytes": 12060,
+      "sha256": "74b3c89339acdd8de8490111e411a51087eee14ad875c52ef713bed40150a88e"
+    },
+    {
+      "path": "historical-evidence/checks/offline-record.test.mjs",
+      "bytes": 2016,
+      "sha256": "822e73cc45bc57a1c176fc051ad27a0074ed25165d48e6b1a954b5378c0c00b7"
+    },
+    {
+      "path": "historical-evidence/disclosure-links.json",
+      "bytes": 2118,
+      "sha256": "0c1f1f751e7805e794b37353ce746431e4dccd14f03e098e86e3b431f275f544"
+    },
+    {
+      "path": "historical-evidence/evidence-index.json",
+      "bytes": 5070,
+      "sha256": "8211eb47392b42037f5924811332fed671408a4c8549fa7a953ee2a9084896e6"
+    },
+    {
+      "path": "historical-evidence/findings.txt",
+      "bytes": 4141,
+      "sha256": "6c3d0048392fec3be4a5a1395030b823d65786cbc9f3dbf0cd02ff916e31dbf9"
+    },
+    {
+      "path": "historical-evidence/record-provenance.json",
+      "bytes": 722,
+      "sha256": "7ba73d7b0724c9b4ade58c9c15b4981ba4c453aa4349da2d4aefdf6fb8879c19"
+    },
+    {
+      "path": "historical-evidence/record.json",
+      "bytes": 49826,
+      "sha256": "9c2052a9e07706d1596d819521615c187b76fc215087cc37cd13b1c17cbd152a"
+    },
+    {
+      "path": "historical-evidence/release-assessment.json",
+      "bytes": 3173,
+      "sha256": "acc72eb7d306c654c4b1276a17e2ece79bb73bfeb7b6c95e341fe4d28196dcb4"
+    },
+    {
+      "path": "historical-evidence/release-candidate-manifest.json",
+      "bytes": 5086,
+      "sha256": "e53d87d82fb19b6dbec6cd1b193eb1a3bad89bcd85c91c1f8c03faedf62831c4"
+    },
+    {
+      "path": "historical-evidence/results/offline-record-mutations-run.json",
+      "bytes": 324,
+      "sha256": "05a4c20947b94e83d2c3d6c2301a5961c8e7287e6b724a30e111d91e95427e40"
+    },
+    {
+      "path": "historical-evidence/results/offline-record-mutations.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "historical-evidence/results/offline-record-mutations.tap",
+      "bytes": 915,
+      "sha256": "93f9a3fe5601a91f944ceaf119d3cd47ea152e26057dbe227634b8f6fef7fc8d"
+    },
+    {
+      "path": "historical-evidence/results/record-offline-checks.json",
+      "bytes": 8668,
+      "sha256": "7c969e369adc15a884ec7c04517c3049f1e2c49b162cffe1261f536e97c78cad"
+    },
+    {
+      "path": "historical-evidence/results/record-offline-checks.stderr.txt",
+      "bytes": 77,
+      "sha256": "583a5f2f54d8ad6248ef8cdb3e256fab09f606028e139b569f2696f5a9b02f0f"
+    },
+    {
+      "path": "historical-evidence/results/verifier-tests-run.json",
+      "bytes": 435,
+      "sha256": "c20bb44bea2e1d2bc16786fd6c104ba0d09b0d7e1ebc0a7733023249802a3995"
+    },
+    {
+      "path": "historical-evidence/results/verifier-tests.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "historical-evidence/results/verifier-tests.tap",
+      "bytes": 14179,
+      "sha256": "fcdbe9854e03be1bbcf74849aad555030aca7fb6b3d0bfe31b7b8af35078810f"
+    },
+    {
+      "path": "historical-evidence/source-provenance.json",
+      "bytes": 2347,
+      "sha256": "4a0fc869f3ab68034bdf828bec9c0164b2575c20e8621adb33b3a3ccb02c466a"
+    },
+    {
+      "path": "historical-evidence/verifier-pins.json",
+      "bytes": 422,
+      "sha256": "4bc35077e440c1f72af4f288bfa2ec47d5fb45b7e0767e1054531873267bd777"
+    },
+    {
+      "path": "historical-evidence/verifier/README.md",
+      "bytes": 4875,
+      "sha256": "f9670961d53af46dc54bc893179f89995630e8174be5ede7158a259db46d8353"
+    },
+    {
+      "path": "historical-evidence/verifier/archive.mjs",
+      "bytes": 3567,
+      "sha256": "8088e86e96d63a955153197dc2b2094deac9f621c8d5d5f870090ffce827449e"
+    },
+    {
+      "path": "historical-evidence/verifier/fixtures/archived-transactions.mjs",
+      "bytes": 2172,
+      "sha256": "d462bfef7230335c420cc0c99f436f930c995525cbfb63696efcc4612350f490"
+    },
+    {
+      "path": "historical-evidence/verifier/fixtures/case-three-clone-run-9.json",
+      "bytes": 55755,
+      "sha256": "39e748fad04b53e9cd334178267d81ad194c145728805d2d24c94c63f5affb2d"
+    },
+    {
+      "path": "historical-evidence/verifier/fixtures/published-case-two-payments.json",
+      "bytes": 38711,
+      "sha256": "c8a8083920f1e6092a96bbf7d486682f1568462c303b48d30637e897320bb71b"
+    },
+    {
+      "path": "historical-evidence/verifier/package-lock.json",
+      "bytes": 90919,
+      "sha256": "02c82b0457c291cd87ef4cba8c517fcc3bb103d65f2fb8c7ea86605f9418b284"
+    },
+    {
+      "path": "historical-evidence/verifier/package.json",
+      "bytes": 337,
+      "sha256": "da09b452b5d8e1ea4bf29c2ada7660b66a8d43ad5fb51b18025384456c8a93e7"
+    },
+    {
+      "path": "historical-evidence/verifier/verify.mjs",
+      "bytes": 43232,
+      "sha256": "9b3b24ad4402b9e77171ce79717db12dda070dbb3c53e85ee87890b2b32b7043"
+    },
+    {
+      "path": "historical-evidence/verifier/verify.test.mjs",
+      "bytes": 43721,
+      "sha256": "5666529d856a381ff40abe35e7912b176df36d4dd07fbc52feeba8e44c165207"
+    }
+  ],
+  "file_count_excluding_manifest": 205,
+  "bytes_excluding_manifest": 4629652
+}

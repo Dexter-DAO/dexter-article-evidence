@@ -1,0 +1,101 @@
+   Compiling dexter-contracts v0.1.0 (/workspace/scratch/e85e65001bc6/dexter-account/foundation/onchain/crates/contracts)
+    Finished `test` profile [unoptimized] target(s) in 0.90s
+     Running unittests src/lib.rs (/workspace/scratch/e85e65001bc6/dexter-account/.local/build/anchor-host/debug/deps/dexter_contracts-83de7d07da256bc7)
+
+running 7 tests
+test repayment::tests::exact_approval_binds_request_and_is_one_use ... ok
+test repayment::tests::standing_limits_count_actual_principal_interest_and_timing ... ok
+test spending::tests::exact_approval_binds_receipt_digest_amount_and_operation_kind ... ok
+test repayment::tests::authority_route_and_generation_do_not_follow_assignments_or_owner_changes ... ok
+test spending::tests::delegated_spending_consumes_finite_amount_count_and_time ... ok
+test spending::tests::swap_rate_cannot_be_weakened_by_quote_or_rounding ... ok
+test spending::tests::executor_generation_and_asset_route_are_not_substitutable ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/commercial.rs (/workspace/scratch/e85e65001bc6/dexter-account/.local/build/anchor-host/debug/deps/commercial-0795de7363317f34)
+
+running 22 tests
+test finite_interest_cap_handles_maximum_principal_rate_and_clock_without_overflow ... ok
+test accrued_interest_does_not_compound_and_principal_changes_keep_prior_fraction ... ok
+test interest_waiver_never_refills_authorized_lifetime_cap ... ok
+test interest_fraction_carry_matches_one_accrual_for_the_same_time_and_principal ... ok
+test cutoff_and_clock_guards_do_not_strand_work_earned_after_cutoff ... ok
+test assignment_policy_has_one_exact_core_and_domain_bound_meaning ... ok
+test productive_backing_has_named_ownership_loss_and_staleness_rules ... ok
+test productive_income_separates_realized_loss_owner_income_and_protocol_take ... ok
+test protocol_take_only_allocates_actual_collected_interest_with_cumulative_rounding ... ok
+test repayment_priority_is_explicit_and_principal_is_not_protocol_income ... ok
+test every_partial_collection_preserves_gross_and_accepted_deduction_bound ... ok
+test seller_fee_returns_are_bounded_and_never_refill_gross_cap ... ok
+test seller_parent_allowance_covers_multiple_entitlements ... ok
+test seller_zero_cap_and_extreme_values_have_explicit_bounded_meaning ... ok
+test seller_hash_binds_accepted_destination_supplier_asset_and_caps ... ok
+test sponsorship_overflow_is_refused_instead_of_capping_a_charge_silently ... ok
+test sponsorship_quotes_bind_conversion_total_margin_and_expiry ... ok
+test unavailable_fee_is_waived_permanently_and_does_not_block_supplier ... ok
+test unavailable_protocol_take_stays_with_lender_and_cannot_reappear ... ok
+test unsupported_shortfall_policy_is_rejected_and_rates_are_not_defaulted ... ok
+test sponsorship_hash_separates_operation_authority_route_and_funding_source ... ok
+test split_supplier_settlement_has_one_fixed_fee_and_cumulative_rounding ... ok
+
+test result: ok. 22 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/corrections.rs (/workspace/scratch/e85e65001bc6/dexter-account/.local/build/anchor-host/debug/deps/corrections-c05002d4d13e8f3a)
+
+running 12 tests
+test assignment_compensation_is_explicit_bounded_cash_and_creates_no_new_debt ... ok
+test complete_u64_amount_and_overflow_boundaries_are_exact ... ok
+test invalid_history_excess_scope_and_prior_writeoffs_cannot_become_refundable_cash ... ok
+test later_collection_and_repayment_preserve_correction_capacity_and_origin ... ok
+test correction_after_repayment_returns_only_the_repaid_slice_to_its_original_payer ... ok
+test mixed_correction_allocates_collected_cash_before_uncompensated_creditor_reduction ... ok
+test original_collection_receipt_has_one_lifetime_refund_capacity ... ok
+test original_repayment_separates_principal_lender_interest_and_protocol_refunds ... ok
+test collected_return_satisfies_current_creditor_without_rewriting_repaid_history ... ok
+test unpaid_supplier_bill_already_repaid_requires_real_refund_cash ... ok
+test unpaid_bill_reduction_releases_payable_backing_without_cash_or_repayment ... ok
+test economic_invoice_oracle_matches_all_small_admissible_correction_partitions ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/financing.rs (/workspace/scratch/e85e65001bc6/dexter-account/.local/build/anchor-host/debug/deps/financing-8c44a98e86203650)
+
+running 17 tests
+test assignment_rejects_stale_title_partial_transfer_and_invented_basis ... ok
+test assignment_preserves_customer_debt_supplier_backing_and_fee_ownership ... ok
+test all_facilities_share_the_custody_floor_across_policy_rotations ... ok
+test existing_cash_backing_equations_match_the_new_custody_amounts ... ok
+test external_facility_draw_and_company_repayment_are_different_debts ... ok
+test fees_require_earning_and_real_collected_proceeds ... ok
+test collection_identity_survives_relayer_and_projection_attempt_changes ... ok
+test fee_refunds_and_distribution_recoveries_do_not_reopen_paid_debt ... ok
+test lowered_limits_fence_new_risk_without_erasing_existing_obligations ... ok
+test invalid_and_overflowed_states_are_rejected_without_healing_them ... ok
+test partial_repayment_names_exact_title_fee_entitlements_and_debit ... ok
+test wallet_acceptance_amounts_keep_free_cash_and_earned_rights_separate ... ok
+test backing_profile_changes_are_explicit_commitments ... ok
+test fee_caps_are_aggregate_and_cash_paid_fees_do_not_require_credit ... ok
+test collection_ranges_prevent_overlapping_consumption_and_overpayment ... ok
+test external_funding_binds_actual_provider_obligor_asset_and_accepted_terms ... ok
+test financing_binds_original_metered_policy_and_separate_credit_fee_cap ... ok
+
+test result: ok. 17 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/funded.rs (/workspace/scratch/e85e65001bc6/dexter-account/.local/build/anchor-host/debug/deps/funded-6ebfe4b31f3a9b0b)
+
+running 11 tests
+test every_book_amount_is_checked_and_capital_allocation_is_not_cash_or_income ... ok
+test book_reader_checks_canonical_bump_and_exact_fixed_layout ... ok
+test borrowed_receipt_hash_rejects_noncanonical_tags_truncation_and_nonzero_padding ... ok
+test supplier_assets_and_fee_expenses_do_not_cancel_an_issuers_liabilities_or_income ... ok
+test sponsorship_and_capital_token_legs_are_committed_as_separate_facts ... ok
+test receipt_capacity_is_a_schema_bound_and_not_a_transaction_packet_limit ... ok
+test title_and_repayment_routes_remain_historical_receipt_facts ... ok
+test receipt_reader_authenticates_owner_address_type_outer_hash_and_each_inner_effect ... ok
+test receipt_body_hash_excludes_only_its_hash_suffix_and_never_allocated_padding ... ok
+test fixed_effect_hash_matches_the_original_generic_preimage_for_every_position ... ok
+test receipt_hash_matches_independent_canonical_borsh_for_zero_through_eight_books ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+

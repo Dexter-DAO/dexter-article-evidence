@@ -1,0 +1,4 @@
+   Compiling dexter-contracts v0.1.0 (/workspace/scratch/e85e65001bc6/dexter-account/foundation/onchain/crates/contracts)
+   Compiling principal-registry v0.1.0 (/workspace/scratch/e85e65001bc6/dexter-account/foundation/onchain/programs/principal-registry)
+    Finished `test` profile [unoptimized] target(s) in 4.59s
+     Running unittests src/lib.rs (/workspace/scratch/e85e65001bc6/dexter-account/.local/build/anchor-host/debug/deps/principal_registry-042b7278481896fe)

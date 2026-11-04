@@ -1,0 +1,16 @@
+{
+  "started_at": "2026-11-04T06:12:06.379698+00:00",
+  "completed_at": "2026-11-04T06:12:07.117397+00:00",
+  "command": [
+    "node",
+    "--test",
+    "--test-reporter=tap",
+    "verify.test.mjs"
+  ],
+  "node": "v24.18.0",
+  "exit_code": 0,
+  "fresh_execution": true,
+  "scope": "Pinned verifier mutation and fixture suite, not a live mainnet case replay",
+  "stdout": "verifier-tests.tap",
+  "stderr": "verifier-tests.stderr.txt"
+}

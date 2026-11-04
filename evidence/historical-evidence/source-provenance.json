@@ -1,0 +1,47 @@
+{
+  "README.md": {
+    "sha": "ccd8448cb7a52bccc36a2eb0d957cdd87d4be398",
+    "size": 4875,
+    "url": "https://github.com/Dexter-DAO/dexter-x402-sdk/blob/43980c8daaa5e3067681b9e3738b7bbb968ea200/examples/verify-case-three/README.md"
+  },
+  "archive.mjs": {
+    "sha": "7d49a1ad4b284f8a741b8a06d2dfbdd7c3182564",
+    "size": 3567,
+    "url": "https://github.com/Dexter-DAO/dexter-x402-sdk/blob/43980c8daaa5e3067681b9e3738b7bbb968ea200/examples/verify-case-three/archive.mjs"
+  },
+  "package-lock.json": {
+    "sha": "6253b47d96200352aa8884b3d975691bd3327bcc",
+    "size": 90919,
+    "url": "https://github.com/Dexter-DAO/dexter-x402-sdk/blob/43980c8daaa5e3067681b9e3738b7bbb968ea200/examples/verify-case-three/package-lock.json"
+  },
+  "package.json": {
+    "sha": "b56b636d7c1c36655580e177b768d03609510d75",
+    "size": 337,
+    "url": "https://github.com/Dexter-DAO/dexter-x402-sdk/blob/43980c8daaa5e3067681b9e3738b7bbb968ea200/examples/verify-case-three/package.json"
+  },
+  "verify.mjs": {
+    "sha": "e86170177baee8e271e2a4e0d54e25fd4a91fe2b",
+    "size": 43232,
+    "url": "https://github.com/Dexter-DAO/dexter-x402-sdk/blob/43980c8daaa5e3067681b9e3738b7bbb968ea200/examples/verify-case-three/verify.mjs"
+  },
+  "verify.test.mjs": {
+    "sha": "aced965e5a29f4579eb5a1b3fa83604faf6ca61a",
+    "size": 43721,
+    "url": "https://github.com/Dexter-DAO/dexter-x402-sdk/blob/43980c8daaa5e3067681b9e3738b7bbb968ea200/examples/verify-case-three/verify.test.mjs"
+  },
+  "fixtures/archived-transactions.mjs": {
+    "sha": "8ae7004fcfc1a16e1ddbd17ce7bbe628597f179a",
+    "size": 2172,
+    "url": "https://github.com/Dexter-DAO/dexter-x402-sdk/blob/43980c8daaa5e3067681b9e3738b7bbb968ea200/examples/verify-case-three/fixtures/archived-transactions.mjs"
+  },
+  "fixtures/case-three-clone-run-9.json": {
+    "sha": "9803799391b4eee5b61fc3d7d6e2e2e4d0f4030b",
+    "size": 55755,
+    "url": "https://github.com/Dexter-DAO/dexter-x402-sdk/blob/43980c8daaa5e3067681b9e3738b7bbb968ea200/examples/verify-case-three/fixtures/case-three-clone-run-9.json"
+  },
+  "fixtures/published-case-two-payments.json": {
+    "sha": "27a0a5df9ab44d0f3d76e6e0bffb2a672d5ce647",
+    "size": 38711,
+    "url": "https://github.com/Dexter-DAO/dexter-x402-sdk/blob/43980c8daaa5e3067681b9e3738b7bbb968ea200/examples/verify-case-three/fixtures/published-case-two-payments.json"
+  }
+}

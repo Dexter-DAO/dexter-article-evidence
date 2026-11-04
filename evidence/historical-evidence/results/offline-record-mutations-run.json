@@ -1,0 +1,13 @@
+{
+  "executed_at": "2026-11-04T06:17:11.346508+00:00",
+  "command": [
+    "node",
+    "--test",
+    "--test-reporter=tap",
+    "checks/offline-record.test.mjs"
+  ],
+  "exit_code": 0,
+  "fresh_execution": true,
+  "scope": "Published mainnet record offline signature and integrity mutations",
+  "network_access": "disabled"
+}

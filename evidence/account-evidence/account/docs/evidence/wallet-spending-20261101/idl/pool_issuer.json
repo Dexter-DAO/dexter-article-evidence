@@ -1,0 +1,1132 @@
+{
+  "address": "3yceApSVxLYihHjLLrCycV8T4Bg1MYggbxQhdzaqB2Sm",
+  "metadata": {
+    "name": "pool_issuer",
+    "version": "0.1.0",
+    "spec": "0.1.0"
+  },
+  "instructions": [
+    {
+      "name": "catch_up",
+      "docs": [
+        "Permissionless ordered catchup consumes Core-owned immutable receipts.",
+        "It cannot manufacture a receipt, skip a predecessor or move tokens twice."
+      ],
+      "discriminator": [
+        171,
+        171,
+        165,
+        52,
+        74,
+        161,
+        170,
+        252
+      ],
+      "accounts": [
+        {
+          "name": "pool",
+          "writable": true
+        },
+        {
+          "name": "source",
+          "relations": [
+            "pool"
+          ]
+        },
+        {
+          "name": "operation"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "fund_pool",
+      "docs": [
+        "Records actual external cash and its contributor. Investor unit issuance,",
+        "ranking and redemption are separate required implementation work."
+      ],
+      "discriminator": [
+        36,
+        57,
+        233,
+        176,
+        181,
+        20,
+        87,
+        159
+      ],
+      "accounts": [
+        {
+          "name": "funder",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "pool",
+          "writable": true
+        },
+        {
+          "name": "source",
+          "relations": [
+            "pool"
+          ]
+        },
+        {
+          "name": "from",
+          "writable": true
+        },
+        {
+          "name": "treasury",
+          "writable": true,
+          "relations": [
+            "pool"
+          ]
+        },
+        {
+          "name": "mint",
+          "relations": [
+            "pool"
+          ]
+        },
+        {
+          "name": "contribution",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  97,
+                  112,
+                  105,
+                  116,
+                  97,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "pool"
+              },
+              {
+                "kind": "account",
+                "path": "funder"
+              },
+              {
+                "kind": "arg",
+                "path": "operation_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "operation_id",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "initialize_financial_projection",
+      "discriminator": [
+        148,
+        103,
+        90,
+        121,
+        7,
+        153,
+        157,
+        173
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "book"
+        },
+        {
+          "name": "projection",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  102,
+                  105,
+                  110,
+                  97,
+                  110,
+                  99,
+                  105,
+                  97,
+                  108,
+                  45,
+                  112,
+                  114,
+                  111,
+                  106,
+                  101,
+                  99,
+                  116,
+                  105,
+                  111,
+                  110
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "book"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "initialize_pool",
+      "discriminator": [
+        95,
+        180,
+        10,
+        172,
+        84,
+        174,
+        232,
+        40
+      ],
+      "accounts": [
+        {
+          "name": "manager",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "pool",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  111,
+                  111,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "manager"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              },
+              {
+                "kind": "arg",
+                "path": "pool_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "treasury",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "pool"
+              },
+              {
+                "kind": "const",
+                "value": [
+                  6,
+                  221,
+                  246,
+                  225,
+                  215,
+                  101,
+                  161,
+                  147,
+                  217,
+                  203,
+                  225,
+                  70,
+                  206,
+                  235,
+                  121,
+                  172,
+                  28,
+                  180,
+                  133,
+                  237,
+                  95,
+                  91,
+                  55,
+                  145,
+                  58,
+                  140,
+                  245,
+                  133,
+                  126,
+                  255,
+                  0,
+                  169
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "pool_id",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "project",
+      "discriminator": [
+        238,
+        77,
+        169,
+        205,
+        218,
+        82,
+        114,
+        217
+      ],
+      "accounts": [
+        {
+          "name": "dispatcher",
+          "signer": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  111,
+                  111,
+                  108,
+                  45,
+                  100,
+                  105,
+                  115,
+                  112,
+                  97,
+                  116,
+                  99,
+                  104
+                ]
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                89,
+                111,
+                156,
+                218,
+                94,
+                100,
+                111,
+                195,
+                14,
+                162,
+                98,
+                155,
+                142,
+                50,
+                234,
+                47,
+                214,
+                177,
+                170,
+                127,
+                80,
+                24,
+                75,
+                6,
+                27,
+                151,
+                122,
+                103,
+                179,
+                166,
+                137,
+                109
+              ]
+            }
+          }
+        },
+        {
+          "name": "pool",
+          "writable": true
+        },
+        {
+          "name": "source",
+          "relations": [
+            "pool"
+          ]
+        },
+        {
+          "name": "operation"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "project_financing",
+      "discriminator": [
+        61,
+        19,
+        223,
+        13,
+        156,
+        197,
+        68,
+        135
+      ],
+      "accounts": [
+        {
+          "name": "book",
+          "relations": [
+            "projection"
+          ]
+        },
+        {
+          "name": "projection",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  102,
+                  105,
+                  110,
+                  97,
+                  110,
+                  99,
+                  105,
+                  97,
+                  108,
+                  45,
+                  112,
+                  114,
+                  111,
+                  106,
+                  101,
+                  99,
+                  116,
+                  105,
+                  111,
+                  110
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "book"
+              }
+            ]
+          }
+        },
+        {
+          "name": "receipt"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "project_financing_batch",
+      "discriminator": [
+        53,
+        235,
+        39,
+        182,
+        74,
+        147,
+        143,
+        76
+      ],
+      "accounts": [
+        {
+          "name": "receipt",
+          "docs": [
+            "exactly [Core book, Pool projection] for every effect, in receipt order."
+          ]
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "read_book_value",
+      "docs": [
+        "The executed cash-guarantee subset of the authoritative NAV equation.",
+        "No investor share price or complete valuation engine is advertised here."
+      ],
+      "discriminator": [
+        157,
+        206,
+        152,
+        56,
+        196,
+        61,
+        51,
+        12
+      ],
+      "accounts": [
+        {
+          "name": "pool"
+        },
+        {
+          "name": "source",
+          "relations": [
+            "pool"
+          ]
+        }
+      ],
+      "args": [],
+      "returns": "u64"
+    },
+    {
+      "name": "reserve",
+      "docs": [
+        "Only Core can reserve cash. The Core receipt and new head must already",
+        "be serialized before this CPI; every failure rolls the whole transaction back."
+      ],
+      "discriminator": [
+        92,
+        99,
+        244,
+        209,
+        28,
+        65,
+        213,
+        157
+      ],
+      "accounts": [
+        {
+          "name": "dispatcher",
+          "signer": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  111,
+                  111,
+                  108,
+                  45,
+                  100,
+                  105,
+                  115,
+                  112,
+                  97,
+                  116,
+                  99,
+                  104
+                ]
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                89,
+                111,
+                156,
+                218,
+                94,
+                100,
+                111,
+                195,
+                14,
+                162,
+                98,
+                155,
+                142,
+                50,
+                234,
+                47,
+                214,
+                177,
+                170,
+                127,
+                80,
+                24,
+                75,
+                6,
+                27,
+                151,
+                122,
+                103,
+                179,
+                166,
+                137,
+                109
+              ]
+            }
+          }
+        },
+        {
+          "name": "pool",
+          "writable": true
+        },
+        {
+          "name": "source",
+          "relations": [
+            "pool"
+          ]
+        },
+        {
+          "name": "operation"
+        },
+        {
+          "name": "treasury",
+          "writable": true,
+          "relations": [
+            "pool"
+          ]
+        },
+        {
+          "name": "escrow",
+          "writable": true
+        },
+        {
+          "name": "mint",
+          "relations": [
+            "pool"
+          ]
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "set_admission",
+      "discriminator": [
+        210,
+        241,
+        169,
+        64,
+        58,
+        171,
+        144,
+        234
+      ],
+      "accounts": [
+        {
+          "name": "manager",
+          "signer": true,
+          "relations": [
+            "pool"
+          ]
+        },
+        {
+          "name": "pool",
+          "writable": true
+        }
+      ],
+      "args": [
+        {
+          "name": "enabled",
+          "type": "bool"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "CapitalContribution",
+      "discriminator": [
+        224,
+        26,
+        65,
+        64,
+        146,
+        247,
+        37,
+        24
+      ]
+    },
+    {
+      "name": "FinancialProjection",
+      "discriminator": [
+        226,
+        250,
+        217,
+        255,
+        17,
+        79,
+        200,
+        250
+      ]
+    },
+    {
+      "name": "PoolBook",
+      "discriminator": [
+        142,
+        23,
+        165,
+        246,
+        42,
+        164,
+        234,
+        53
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "OperationConflict",
+      "msg": "Economic operation identity conflicts with recorded contribution"
+    },
+    {
+      "code": 6001,
+      "name": "ZeroAmount",
+      "msg": "Amount must be positive"
+    },
+    {
+      "code": 6002,
+      "name": "TokenRouting",
+      "msg": "Token accounts do not match the accepted source route"
+    },
+    {
+      "code": 6003,
+      "name": "TokenDelta",
+      "msg": "Actual token movement differs from the authorized exact amount"
+    },
+    {
+      "code": 6004,
+      "name": "CashDeficit",
+      "msg": "Accounted source cash is unavailable or actual custody is deficient"
+    },
+    {
+      "code": 6005,
+      "name": "WrongSource",
+      "msg": "Source belongs to a different book or asset"
+    },
+    {
+      "code": 6006,
+      "name": "StaleBook",
+      "msg": "Pool projection must catch up to the complete Core head"
+    },
+    {
+      "code": 6007,
+      "name": "WrongEffect",
+      "msg": "Core effect has the wrong identity, transition or head"
+    },
+    {
+      "code": 6008,
+      "name": "EffectOrder",
+      "msg": "Effect is skipped, replayed or has the wrong predecessor"
+    },
+    {
+      "code": 6009,
+      "name": "AdmissionClosed",
+      "msg": "Issuer admission is closed"
+    },
+    {
+      "code": 6010,
+      "name": "ProjectionAccounts",
+      "msg": "Projection accounts must contain the exact ordered complete receipt effect set"
+    }
+  ],
+  "types": [
+    {
+      "name": "Balances",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "reserved",
+            "type": "u64"
+          },
+          {
+            "name": "payable",
+            "type": "u64"
+          },
+          {
+            "name": "debt",
+            "type": "u64"
+          },
+          {
+            "name": "protected_cash",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CapitalContribution",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "pool",
+            "type": "pubkey"
+          },
+          {
+            "name": "funder",
+            "type": "pubkey"
+          },
+          {
+            "name": "operation_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "from",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FinancialPositions",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "unused_supplier",
+            "type": "u64"
+          },
+          {
+            "name": "unpaid_supplier",
+            "type": "u64"
+          },
+          {
+            "name": "customer_principal",
+            "type": "u64"
+          },
+          {
+            "name": "owned_principal",
+            "type": "u64"
+          },
+          {
+            "name": "funding_reserved",
+            "type": "u64"
+          },
+          {
+            "name": "facility_assets",
+            "type": "u64"
+          },
+          {
+            "name": "facility_debt",
+            "type": "u64"
+          },
+          {
+            "name": "interest_owed",
+            "type": "u64"
+          },
+          {
+            "name": "interest_owned",
+            "type": "u64"
+          },
+          {
+            "name": "cash_received",
+            "docs": [
+              "Cumulative authenticated cash flows, not an automatically complete NAV."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "cash_sent",
+            "type": "u64"
+          },
+          {
+            "name": "seller_fees",
+            "type": "u64"
+          },
+          {
+            "name": "protocol_interest",
+            "type": "u64"
+          },
+          {
+            "name": "lender_interest",
+            "type": "u64"
+          },
+          {
+            "name": "sponsor_reimbursement",
+            "type": "u64"
+          },
+          {
+            "name": "sponsor_margin",
+            "type": "u64"
+          },
+          {
+            "name": "customer_reserved",
+            "type": "u64"
+          },
+          {
+            "name": "credit_charge_exposure",
+            "type": "u64"
+          },
+          {
+            "name": "seller_fee_refunds",
+            "type": "u64"
+          },
+          {
+            "name": "capital_allocated",
+            "docs": [
+              "Explicit own-capital allocation, separate from income and token inflows."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "supplier_committed",
+            "docs": [
+              "Supplier assets, distinct from an issuer's unused/payable liabilities",
+              "when the same continuing principal holds more than one economic role."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "supplier_receivable",
+            "type": "u64"
+          },
+          {
+            "name": "seller_fees_paid",
+            "type": "u64"
+          },
+          {
+            "name": "seller_fee_credits_received",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FinancialProjection",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "book",
+            "type": "pubkey"
+          },
+          {
+            "name": "principal",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "applied_sequence",
+            "type": "u64"
+          },
+          {
+            "name": "applied_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "positions",
+            "type": {
+              "defined": {
+                "name": "FinancialPositions"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "PoolBook",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u16"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "pool_id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "manager",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "treasury",
+            "type": "pubkey"
+          },
+          {
+            "name": "source",
+            "type": "pubkey"
+          },
+          {
+            "name": "operating_cash",
+            "type": "u64"
+          },
+          {
+            "name": "funded_capital",
+            "type": "u64"
+          },
+          {
+            "name": "projected",
+            "type": {
+              "defined": {
+                "name": "Balances"
+              }
+            }
+          },
+          {
+            "name": "applied_sequence",
+            "type": "u64"
+          },
+          {
+            "name": "applied_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "admission_open",
+            "type": "bool"
+          }
+        ]
+      }
+    }
+  ]
+}

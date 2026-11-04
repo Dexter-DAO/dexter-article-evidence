@@ -1,0 +1,12 @@
+{
+  "observed_at": "2026-11-01T20:20:39.677589+00:00",
+  "scope": "Read-only local runtime availability; no validator was started and no RPC customer transaction was sent.",
+  "docker_executable": null,
+  "docker_socket_exists": false,
+  "repository_validator_status": {
+    "command": "./dev status",
+    "exit_code": 0,
+    "stdout": "{\n  \"status\": \"stopped\",\n  \"rpc\": \"http://127.0.0.1:18999\",\n  \"websocket\": \"ws://127.0.0.1:19000\",\n  \"reason\": \"not started\"\n}\n",
+    "stderr": ""
+  }
+}
