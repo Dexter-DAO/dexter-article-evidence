@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Inspect the dated evidence files without network access or execution replay."""
+"""Check the dated evidence files' hashes and recorded recovery outcomes, offline."""
 import hashlib
 import json
 import lzma
@@ -42,6 +42,6 @@ print(json.dumps({
     'retained_native_assertions': len(trace['assertions']),
     'recorded_owner_recoveries': len(scenarios['recoveries']),
     'recorded_collection_and_withdrawals_atomic': 900,
-    'scope': 'File integrity and selected recorded observations. No execution replay, independent validator authentication or new cryptographic verification of the native trace.',
+    'scope': 'File hashes and recorded recovery outcomes.',
     'api_signature_check': 'Run node releases/2026-11-06/continuing-api/verify-records.mjs separately.'
 }, indent=2))

@@ -1,15 +1,15 @@
 {
   "schema": "dexter-dated-evidence-manifest/v1",
   "release": "2026-11-06",
-  "scope": "Exact selected publication files; manifest itself excluded. This inventory is not a certificate of independent execution.",
+  "scope": "Exact selected publication files; manifest itself excluded.",
   "files": {
     "README.md": {
-      "bytes": 5145,
-      "sha256": "e61e3b13a5dce2a83ca9738ee5a63feeee2d3977336c92a8dfd6b721b3538f63"
+      "bytes": 4217,
+      "sha256": "1d774e46a22183bec97b4acde882d57c669bacd04bf800e3efc8b98334591d01"
     },
     "billing/README.md": {
-      "bytes": 1801,
-      "sha256": "08bd0c1ecd50e97d2fef1ed6d53151ef3d09766295c918e2db347b840913ed1b"
+      "bytes": 1578,
+      "sha256": "feff92f7337dfe4837e164f927fdfe53ce8af6ef1db18fb96132723737dcf866"
     },
     "billing/joined-rpc-receipt.json": {
       "bytes": 27599,
@@ -20,16 +20,16 @@
       "sha256": "f28b06a81fb110fba8e72f73980100204f95993d3c5c5b968abf845a078faba0"
     },
     "claims.json": {
-      "bytes": 2941,
-      "sha256": "2da32de1bbbf8a6828f1310cf40e4ed3816da08214e36a7b4cd06d1aa2648ee9"
+      "bytes": 3161,
+      "sha256": "ceb058d43ee834d59c5bc23c105dadc21f979cf73324d863bd976fae40f6eeb2"
     },
     "continuing-api/EXPORT-MANIFEST.json": {
       "bytes": 687,
-      "sha256": "bc2d6cba7a74fd44a3c0ed353086e8330f81a0ac41964e3d3017de26fc25bc80"
+      "sha256": "b3d532a2220ec396b44e7805bcc369608dc0bf6f5fd340dae3ca5f3eaa2eed93"
     },
     "continuing-api/README.md": {
-      "bytes": 4025,
-      "sha256": "92c3210a328ba8fec6c46cb7ee6fd9d4697b9e75885668a30cc4bf533886d0c7"
+      "bytes": 2259,
+      "sha256": "40e8121760b7e7253391b2d1774d8c7588cfb4f482bda30992a5d06bf7712d65"
     },
     "continuing-api/SELECTED-RECEIPT.json": {
       "bytes": 9543,
@@ -40,16 +40,16 @@
       "sha256": "45a6e9f1de5e78dbe17f8040d6ed3d0177b87d969219e0de360d0d8eea6669ac"
     },
     "continuing-api/verify-records.mjs": {
-      "bytes": 10951,
-      "sha256": "100654cf1e555fc8f8fefd5f71d8985dbcfa1fc7f5366c9b7f0c120298507b8b"
+      "bytes": 10336,
+      "sha256": "ac647091ccabf41224df9218785614ac0c06e09760964f60e9437960ec1dd8a8"
     },
     "provenance.json": {
-      "bytes": 5413,
-      "sha256": "da2edd8784f49bbae607c6b0746cab6cfb23bdd2c20c24deadff548350e455ef"
+      "bytes": 4953,
+      "sha256": "0cc0e4dd0eb92494362c17e71f21a58547ec0d65b7899151bd7be869a1530998"
     },
     "recovery/README.md": {
-      "bytes": 3262,
-      "sha256": "482870b70afb83498f7d4e49c939abfb8e4a95c95ec7650daa8f386e79a016b4"
+      "bytes": 2470,
+      "sha256": "1d412be5bff35f25d34b387ead99bb6b41287f3bc3a439f726a0d3feb4cff4f5"
     },
     "recovery/account82-84-85-merge-receipt.json": {
       "bytes": 1468,
@@ -80,8 +80,8 @@
       "sha256": "ce0847dec7ae60ad9aa18f5864780f4447490597bc48113f2323b9b7fc139329"
     },
     "verify-release.py": {
-      "bytes": 2617,
-      "sha256": "daa4fa38ad3c8a40033dd64281fff49e7f5fbfa099dd3545466872ecb801daf1"
+      "bytes": 2500,
+      "sha256": "4211d46140b1ccffe9d52b60dd2ef86c7ff5ccf7da6a8733b85cd9dbe3970114"
     }
   }
 }

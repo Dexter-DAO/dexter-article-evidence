@@ -5,7 +5,7 @@
     {
       "file": "billing/joined-rpc-receipt.json",
       "source": {
-        "repository": "Dexter-DAO/dexter-account",
+        "codebase": "Dexter Account",
         "commit": "3415de7a9ec4d0ee42e9c7226c449969c91a0ff4",
         "path": "docs/evidence/evidence-billing-sdk-20261105/joined-rpc-receipt.json"
       },
@@ -17,7 +17,7 @@
     {
       "file": "billing/joined-rpc-report.json.gz",
       "source": {
-        "repository": "Dexter-DAO/dexter-account",
+        "codebase": "Dexter Account",
         "commit": "3415de7a9ec4d0ee42e9c7226c449969c91a0ff4",
         "path": "docs/evidence/evidence-billing-sdk-20261105/joined-rpc-report.json.gz"
       },
@@ -29,7 +29,7 @@
     {
       "file": "recovery/recovery-receipt.json",
       "source": {
-        "repository": "Dexter-DAO/dexter-account",
+        "codebase": "Dexter Account",
         "commit": "1489470609756238a6728d85ab182741d600d64a",
         "path": "docs/evidence/core-recovery-20261105/recovery-receipt.json"
       },
@@ -41,7 +41,7 @@
     {
       "file": "recovery/recovery-scenarios.json",
       "source": {
-        "repository": "Dexter-DAO/dexter-account",
+        "codebase": "Dexter Account",
         "commit": "1489470609756238a6728d85ab182741d600d64a",
         "path": "docs/evidence/core-recovery-20261105/recovery-scenarios.json"
       },
@@ -53,7 +53,7 @@
     {
       "file": "recovery/recovery-qualification.json",
       "source": {
-        "repository": "Dexter-DAO/dexter-account",
+        "codebase": "Dexter Account",
         "commit": "1489470609756238a6728d85ab182741d600d64a",
         "path": "docs/evidence/core-recovery-20261105/recovery-qualification.json"
       },
@@ -65,7 +65,7 @@
     {
       "file": "recovery/recovery-trace.json.xz",
       "source": {
-        "repository": "Dexter-DAO/dexter-account",
+        "codebase": "Dexter Account",
         "commit": "1489470609756238a6728d85ab182741d600d64a",
         "path": "docs/evidence/core-recovery-20261105/recovery-trace.json.xz"
       },
@@ -77,7 +77,7 @@
     {
       "file": "recovery/passkey-rpc-receipt.json",
       "source": {
-        "repository": "Dexter-DAO/dexter-account",
+        "codebase": "Dexter Account",
         "commit": "1489470609756238a6728d85ab182741d600d64a",
         "path": "docs/evidence/account-authority-sdk-20261105/rpc-receipt.json"
       },
@@ -109,7 +109,5 @@
       "semantic_fields_changed": false
     }
   ],
-  "api551": "The prepared selected-record package is retained with publication-status wording updated and hashes recomputed; its explicit source selections and evidence limits are unchanged.",
-  "omissions": "Source checkouts, keys, raw SQL, signed-unsent API authorization and unselected historical test traces are excluded. Full execution replay is not advertised.",
   "path_redaction": "Only absolute qualification-workspace prefixes changed where counted. Source and export hashes are distinct."
 }

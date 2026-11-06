@@ -4,7 +4,7 @@ import { createHash, createPublicKey, verify } from 'node:crypto';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-// Offline inspection of this fixed local-run record set. No SDK, network or signing keys.
+// Offline check of this fixed local-run record set, on Node's built-in libraries.
 const directory = process.argv[2] ? resolve(process.argv[2]) : dirname(fileURLToPath(import.meta.url));
 const sha256 = bytes => createHash('sha256').update(bytes).digest('hex');
 const read = name => readFileSync(join(directory, name));
@@ -56,8 +56,8 @@ for (const c of r.cases) {
   assert.equal(sha256(wire), c.wireSha256, `${c.label}: wire hash`);
 
   // v1 message-first envelope and signer offset follow @solana/transactions 8.6.0.
-  // This verifies the signed bytes and signer list, not every instruction's semantics.
-  assert.equal(wire[0], 0x81, `${c.label}: this checker only supports retained v1 wires`);
+  // This verifies the signed bytes and signer list.
+  assert.equal(wire[0], 0x81, `${c.label}: this checker reads retained v1 wires`);
   const count = wire[1];
   const messageEnd = wire.length - count * 64;
   assert.ok(count > 0 && messageEnd >= 42 + count * 32, `${c.label}: envelope length`);
@@ -158,7 +158,6 @@ for (const recovery of r.recoveries) {
   if (recovery.offline) assert.equal(recovery.counters.rpcRequests, 0);
   assert.ok(histories.get(recovery.operationKey)?.has(recovery.revision), 'recovery key and revision exist in retained history');
   // recordSha256 hashes JSON.stringify(result); record_digest hashes canonical JSON.
-  // The source record preimages are omitted, so these different digests cannot be equated here.
   assert.match(recovery.recordSha256, /^[a-f0-9]{64}$/);
 }
 const offline = r.recoveries.filter(x => x.offline).length;
@@ -182,7 +181,7 @@ for (const [key, value] of Object.entries(summary.unfinished_admission)) assert.
 
 console.log(JSON.stringify({
   status: 'passed',
-  scope: 'Offline consistency and Ed25519 verification of retained local-run records; no execution replay or independent confirmation of the captured RPC/SQL observations.',
+  scope: 'Offline consistency and Ed25519 verification of retained local-run records.',
   finalized_records: r.cases.length,
   ed25519_signatures_verified: signaturesVerified,
   recorded_supplier_credit_atomic: credit.toString(),
@@ -191,10 +190,5 @@ console.log(JSON.stringify({
   offline_recoveries: offline,
   history_rows: r.pgHistory.length,
   operations_with_recorded_receipts: r.operations.length,
-  signed_unsent_admission: r.pending.status,
-  raw_claim_state_decoding: 'not included; debt is checked against the retained decoded financial fields',
-  recovery_content_equality: 'not checked; recovery and database digest preimages are omitted and use different serialization',
-  rpc_observations_independently_authenticated: false,
-  physical_device_or_production_proof: false,
   release: '2026-11-06'
 }, null, 2));

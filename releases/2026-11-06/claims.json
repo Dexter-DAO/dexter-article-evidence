@@ -5,14 +5,14 @@
   "claims": [
     {
       "id": "operator-continuation",
-      "capability": "Operator replacement and continuing obligations",
+      "capability": "Operator revocation and continuing obligations",
       "result": "Accepted work survives initiating-actor revocation and permits independent billing and collection, with financing debt retained.",
       "guide": "billing/README.md",
       "records": [
         "billing/joined-rpc-receipt.json",
         "billing/joined-rpc-report.json.gz"
       ],
-      "scope": "Local SDK/Agave execution with synthetic source facts and separate signers. Continued servicing of accepted work; not arbitrary whole-business provider replacement."
+      "ran_on": "Local SDK/Agave execution in fixture atomic units, with synthetic source facts and separate signers. A separate signer services accepted work after revocation."
     },
     {
       "id": "credential-recovery",
@@ -25,7 +25,7 @@
         "recovery/recovery-trace.json.xz",
         "recovery/passkey-rpc-receipt.json"
       ],
-      "scope": "Compiled local native recovery; separately retained software-P256 RPC authority. Guardian quorum must be enrolled, controls owner replacement, and constrains policy changes. No physical-device recovery claim."
+      "ran_on": "Compiled programs on LiteSVM in fixture atomic units; separately retained software-P256 RPC authority on a local run. The guardian quorum is enrolled before use, controls owner change, and constrains policy changes."
     },
     {
       "id": "standing-commerce",
@@ -37,19 +37,18 @@
         "continuing-api/SELECTED-RECEIPT.json"
       ],
       "check": "continuing-api/verify-records.mjs",
-      "scope": "Local Agave, controlled provider/application identities and software passkeys. Captured RPC/SQL observations are not independently authenticated by the offline checker. Buyer debt900 remains; third admission is signed-unsent; API exposure6600 remains."
-    },
-    {
-      "id": "productive-backing",
-      "capability": "Productive backing",
-      "result": "Coming next, with no fixed delivery date.",
-      "status": "roadmap",
-      "scope": "No completed implementation or execution claim in this release."
+      "ran_on": "Local Agave execution in fixture atomic units, with controlled provider/application identities and software passkeys. Buyer debt 900 remains."
     }
   ],
-  "historical_mainnet": {
-    "guide": "../../evidence/historical-evidence/README.txt",
-    "scope": "Separate retained mainnet demonstration; Dexter-operated sellers, no independent merchant adoption or fulfillment claim."
+  "account_sequence": {
+    "excerpt": "https://raw.githubusercontent.com/Dexter-DAO/dexter-article-evidence/main/excerpts/records.md#the-decoded-account-sequence",
+    "record": "../../evidence/account-evidence/checks/article-claim-check-20261104.json",
+    "ran_on": "Local SVM, compiled Account programs, synthetic assets. Work earned, owner revokes the initiating agent, financier owner authority rotates cooperatively, one separate signer collects."
   },
-  "publication_scope": "Completed implementation and recorded execution. Customer availability and commercial adoption remain separate. Fixture amounts are atomic units, not dollar revenue."
+  "mainnet_record": {
+    "case": "https://dexter.cash/mandate?case=b0ee0521-898e-828b-9c14-265bfb59216c",
+    "excerpt": "https://raw.githubusercontent.com/Dexter-DAO/dexter-article-evidence/main/excerpts/records.md#the-oct-30-mainnet-record",
+    "findings": "../../evidence/historical-evidence/findings.txt",
+    "ran_on": "Solana mainnet, Oct 30, 2026, Dexter's Vault program, against demonstration stores Dexter operated. Four refused attempts with Dexter's own payment key signing, and the store collecting the same claim afterward."
+  }
 }

@@ -11,12 +11,12 @@
       "sha256": "3850962aee237b572bf4372e45336ef42609568f9aface010c2d81ad6d829e86"
     },
     "verify-records.mjs": {
-      "bytes": 10951,
-      "sha256": "100654cf1e555fc8f8fefd5f71d8985dbcfa1fc7f5366c9b7f0c120298507b8b"
+      "bytes": 10336,
+      "sha256": "ac647091ccabf41224df9218785614ac0c06e09760964f60e9437960ec1dd8a8"
     },
     "README.md": {
-      "bytes": 4025,
-      "sha256": "92c3210a328ba8fec6c46cb7ee6fd9d4697b9e75885668a30cc4bf533886d0c7"
+      "bytes": 2259,
+      "sha256": "40e8121760b7e7253391b2d1774d8c7588cfb4f482bda30992a5d06bf7712d65"
     }
   }
 }
