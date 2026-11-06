@@ -1,0 +1,32 @@
+{
+  "createdAt": "2026-11-05T09:55:57.185495+00:00",
+  "head": "1489470609756238a6728d85ab182741d600d64a",
+  "base": "411748c333c094cc1db18abeb505f7ca2a31b812",
+  "packageManifestSha256": "4800fc7b149c03a0d123df10f147806a528e28dcfb0638751120634380b8f135",
+  "packageFilesVerified": 73,
+  "archiveSourcesVerified": 424,
+  "archiveMembersExactlyMatch": true,
+  "sourceMatchingHead": {
+    "account": 69,
+    "sdk": 352,
+    "rpc": 3
+  },
+  "sdkBuildInputsVerified": 350,
+  "retainedBuildOutputsMatched": 1384,
+  "retainedBuildOutputsTotal": 1384,
+  "authoredFilesVerified": 19,
+  "sourceReviewers": [
+    "root/account_repo_reconciliation",
+    "root/vault_repo_reconciliation"
+  ],
+  "evidenceReview": "root/runtime550_review independently closed count-only qualification, retrospective48-record selector and launch argv extraction; original provenance limitations retained.",
+  "sourceBlockers": [],
+  "limits": [
+    "software credentials and synthetic WebAuthn flags",
+    "generated admission and internal compiled join",
+    "same-process receipt reread",
+    "local declared Agave/SIMD profile, differing local ELF bytes",
+    "baseline selector is post-run supplemental evidence",
+    "device, public continuing coordinator and existing Vault adapter unfinished"
+  ]
+}

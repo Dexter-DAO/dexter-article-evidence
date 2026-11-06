@@ -20,5 +20,12 @@
       "results": "../../evidence/account-evidence/checks/offline-check-20261104.json",
       "manifest": "../../evidence/account-evidence/manifest.json"
     }
+  ],
+  "later_releases": [
+    {
+      "date": "2026-11-06",
+      "guide": "../../releases/2026-11-06/README.md",
+      "claims": "../../releases/2026-11-06/claims.json"
+    }
   ]
 }

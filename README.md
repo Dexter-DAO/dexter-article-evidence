@@ -25,6 +25,10 @@
 
 Find an article below to inspect the records, source and checks behind its claims. Each article has its own guide and downloadable evidence package. Shared records stay in the evidence library so later articles can refer to the same material.
 
+## Latest completed Account results
+
+[November 6: continuing obligations, credential recovery and standing commerce](releases/2026-11-06/README.md) publishes the completed local execution records, their significance and standalone checks. [Download the dated release](https://github.com/Dexter-DAO/dexter-article-evidence/releases/tag/2026-11-06). Productive backing is coming next.
+
 ## Articles
 
 | Article | Evidence | Package |

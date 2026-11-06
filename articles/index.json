@@ -7,7 +7,14 @@
       "subtitle": "From Account Holder to Account Owner",
       "guide": "the-account-inversion/README.md",
       "evidence_index": "the-account-inversion/evidence.json",
-      "evidence_released": "2026-11-04"
+      "evidence_released": "2026-11-04",
+      "later_evidence": "../releases/2026-11-06/README.md"
     }
-  ]
+  ],
+  "latest_release": {
+    "date": "2026-11-06",
+    "guide": "../releases/2026-11-06/README.md",
+    "claims": "../releases/2026-11-06/claims.json",
+    "download": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/tag/2026-11-06"
+  }
 }

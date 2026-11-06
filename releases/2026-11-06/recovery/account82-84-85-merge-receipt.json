@@ -1,0 +1,37 @@
+{
+  "verifiedAt": "2026-11-05T10:00:13.287977+00:00",
+  "sequence": [
+    {
+      "pr": 85,
+      "reviewedHead": "1489470609756238a6728d85ab182741d600d64a",
+      "baseBranch": "pro/passkey-account-authority-20261105",
+      "mergeCommit": "01ba439c319bcb968b15d7d08d6b127c7914ebcd"
+    },
+    {
+      "pr": 84,
+      "reviewedCombinedHead": "01ba439c319bcb968b15d7d08d6b127c7914ebcd",
+      "baseBranch": "pro/core-recovery-20261104",
+      "mergeCommit": "515d8e173af4b2a7d4de85e7efdad01ebdbe90b3"
+    },
+    {
+      "pr": 82,
+      "reviewedCombinedHead": "515d8e173af4b2a7d4de85e7efdad01ebdbe90b3",
+      "baseBranch": "main",
+      "mergeCommit": "133c2286e3c1b52aea952a1a4ddc79acdb9f59ae"
+    }
+  ],
+  "verifiedMain": "133c2286e3c1b52aea952a1a4ddc79acdb9f59ae",
+  "tree": "2321536aca8d550dc99f37b2e2438729b92f4c39",
+  "treeEqualsReviewed1489470": true,
+  "allThreePRsReadBackMerged": true,
+  "reasonForSequence": "Bring compatible SDK with core to main without a broken intermediate source tree",
+  "checkRunsObserved": [],
+  "validation": "Pinned local build/native/RPC and independent source/evidence reviews; no GitHub check runs were reported",
+  "limits": [
+    "Source-only merge",
+    "No recovery-policy enrollment or seven-day maintenance adoption",
+    "No deployment, wallet graph or live database changes",
+    "No live spending or customer proof",
+    "Existing Vault custody adapter, public continuing coordinator and device journey remain"
+  ]
+}

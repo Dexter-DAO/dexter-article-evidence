@@ -1,0 +1,228 @@
+{
+  "schema": "dexter-selected-continuing-api-receipt/v1",
+  "status": "Selected record summary for evidence release 2026-11-06",
+  "derivation": {
+    "source_file": "results/report.json",
+    "source_sha256": "028599afe1fdacf3710c91db0e05adfecb473dc5f5b0d82443a2aa7ce031ea87",
+    "method": "Selected fields and arithmetic/count checks from the retained execution report. This extraction is not a fresh execution or public-network observation."
+  },
+  "source": {
+    "api": "34a665c9ca3870e5cde4c88549e7f02ae72d2da4",
+    "apiTree": "c265c197bd8e0d60c1b42acb5ed733efe71884eb",
+    "mergedMain": "fcf43f3629b8c2ed92a0486377ed86a77f305914",
+    "sdk": "5863c531bb14a2b05af575933102381ff5f47c74",
+    "genesis": "9SbuyiDVnmDWao3wsVauQZTxiuVyZeiD5iW9ttjPXhsr"
+  },
+  "started_at": "2026-11-05T21:13:57.411Z",
+  "finished_at": "2026-11-05T21:28:09.253Z",
+  "environment": "Actual local Work/funding enrollment, continuing configuration/PG custody, public SDK and current native programs. Signed LiteSVM setup is imported at fresh genesis. Native buyer association is retained; issuer/supplier same-Principal P256 adoption tests software approvals. Provider events and application owner/service identities are controlled. No buyer passkey onboarding, browser/device ceremony, live Vault deployment, paid provider or production claim.",
+  "transactions": [
+    {
+      "label": "initialize-actual-genesis-authority-deployment",
+      "signature": "4jNnxwSBijKCLoiffYJAmHEVSTBscSKYKxkDB9nwAoyfqk5Q6TtUSmrtXF5Ca5StX8rNcHzK3rLCwkD2UNvyYYBq",
+      "wire_sha256": "25c192b22e40ac859c9d3cb41d235e0b3de621f2a4da4b825f7b576cd6ae30f0",
+      "slot": 58,
+      "block_time": 1793913239,
+      "fee_lamports": 10017,
+      "error": null
+    },
+    {
+      "label": "create-current-native-buyer-actor",
+      "signature": "aJYFfX4ButBxBB3DgfX7njXJ3drCqtjJ74ztecQzgZecxXG7o6wEuin5HjuK5gyZHhrBPZBMQLQ9zM1psRKFyNJ",
+      "wire_sha256": "4d5130d02d1ae0d41abedff8f45f2d8e2e68402f566555a93bb267a9193c67e5",
+      "slot": 95,
+      "block_time": 1793913254,
+      "fee_lamports": 10017,
+      "error": null
+    },
+    {
+      "label": "open-original-supplier-receiving-custody",
+      "signature": "5iaMXUMZj94h8vVw4R12aFduR76tW8ThubcWhCrQbEmLJLLc7f9aAwgNAE54GLBNs4QFUH6ZBWfGxPBRds4zBcRk",
+      "wire_sha256": "0c7eb3056e0c2331ec1557ce6c845b904ef26e9e47ed5f233ea92ff46673c22a",
+      "slot": 131,
+      "block_time": 1793913270,
+      "fee_lamports": 10017,
+      "error": null
+    },
+    {
+      "label": "create-exact-native-buyer-mandate",
+      "signature": "4KCrQF32T2mKp5eCpjYeV4oygyTDBZUg15KrscWhNiAM4Vj5YyGmGJviNMRyF3SL5KhAfdU6zL2y46vVgWMmy4XF",
+      "wire_sha256": "800d85c0db44f7cb17cd8c1f1eae00daa2264508f72ace34230cdc4a85499d4b",
+      "slot": 167,
+      "block_time": 1793913285,
+      "fee_lamports": 10017,
+      "error": null
+    },
+    {
+      "label": "native-api-admission",
+      "signature": "43xspYg6eGce6XXzzwW7vCYgjyvxxudM3xbCq2XyQT4vwc5f6yPLpwacZEXRmb6s9t7gLcw1zAtNXZz83bEjgmLj",
+      "wire_sha256": "b6fca13b42098bb1b15f0b984f4c2a0c796851c1142e2de8e4f7bf1ccb6c1ab8",
+      "slot": 282,
+      "block_time": 1793913335,
+      "fee_lamports": 20017,
+      "error": null
+    },
+    {
+      "label": "initialize-issuer-passkey-alias",
+      "signature": "dtz6qzZEZARGHBFQK6awXKD3heN7eP8TES65qnphCuhvLx7Uui1rTbk6Ue6kK3Q7Bop3Lc7z6ZXm7GCSodLUD7H",
+      "wire_sha256": "95def71aecf1d8c88a00ff8c01714a8e150e50cba57db67f9a1080a88e21d840",
+      "slot": 358,
+      "block_time": 1793913367,
+      "fee_lamports": 5017,
+      "error": null
+    },
+    {
+      "label": "adopt-issuer-passkey-on-original-principal",
+      "signature": "3Nxc3QjUURSHNDatjd5MpAs5adWSeFZhHmKNtdGicDXRgA3QPMSU9H6W7QRvyvJoG2qs59vaprS9Y9pvAqgnr7NH",
+      "wire_sha256": "c0a7a6d241b59c96ec3a21a251c02dc7e0fa3cf433173d7ef948ee545d231d59",
+      "slot": 395,
+      "block_time": 1793913384,
+      "fee_lamports": 15017,
+      "error": null
+    },
+    {
+      "label": "initialize-supplier-passkey-alias",
+      "signature": "3a79QU1ieFKM38TRpjQHhQXaSPaAAFHYayo2W7fYEbz6b87h6HinVK1cFNZzepyMwDuVV9YfG1UZ2Wi1uxnMyDsh",
+      "wire_sha256": "1ee815eb3bad77fb2a30d821d1f3c6525088e572f9c94575add47472ec597249",
+      "slot": 432,
+      "block_time": 1793913399,
+      "fee_lamports": 5017,
+      "error": null
+    },
+    {
+      "label": "adopt-supplier-passkey-on-original-principal",
+      "signature": "4G9ptoXhsarXnYG1GZ5vmXtZ2n9ctxitDJz24yY7tCaPpjcEAzBdTyNqjLUikcX6vQaXTpvBDpLYiy2Cb6aKGpYK",
+      "wire_sha256": "b3edcb5fc6535e9021a0a55e887da2e8a31543585b3c1a43795499b6d5ff4d73",
+      "slot": 468,
+      "block_time": 1793913415,
+      "fee_lamports": 15017,
+      "error": null
+    },
+    {
+      "label": "two-passkey-api-admission",
+      "signature": "4wvyupVCJAAPhvtKrMvMhW7QcX9XrNS5u64FiTFkNntmsibMWFH14vqJPTNXFwUDw1DtLGmTwC5dZpxnxuAArhJu",
+      "wire_sha256": "41d975101e81878c1f6ece5ff7912a10265188200a7aa0fdce59bfcc6871d0f2",
+      "slot": 566,
+      "block_time": 1793913457,
+      "fee_lamports": 20017,
+      "error": null
+    },
+    {
+      "label": "independent-native-actor-revocation",
+      "signature": "5xEgqwYDwzJHxiLc1Unvi91aSF1k1WNHmTn25Zof3zwMbConbL5x9u4Lmd2spsfnqwq2RoZR1fXgc1U3DxGjNrAG",
+      "wire_sha256": "cdc02cf3530eef3404d8c96823f9ac4cb786e57bdc93818fef139fd268dccfde",
+      "slot": 745,
+      "block_time": 1793913535,
+      "fee_lamports": 10017,
+      "error": null
+    },
+    {
+      "label": "retained-provider-native-source-record",
+      "signature": "662y4MkXf1BvuszZrqFnLy7mL36R9M4dXjsvQP6W2WurgSL3crdpRj71Hot5D3K5BpCCJZjWfHkyAE4oSqRqwTLT",
+      "wire_sha256": "0b3d5542d16c8980880cce9aee674fe7ee8761bd2854de757b6b021522114ea4",
+      "slot": 826,
+      "block_time": 1793913570,
+      "fee_lamports": 10017,
+      "error": null
+    },
+    {
+      "label": "original-supplier-passkey-claim",
+      "signature": "2p6viB54AhraVTscNVDkmUSNh4Sx6YXyoMSEXWedNUwJnbYHfF4ipAvhFgapWLLANq8EjocdvRom2jxayK1AYkK2",
+      "wire_sha256": "afc773b1d47e667b72b19842c117bea02ce735e3d8ea2ed1b4261c84e8290bea",
+      "slot": 937,
+      "block_time": 1793913619,
+      "fee_lamports": 10017,
+      "error": null
+    },
+    {
+      "label": "native-earned-independent-finalization",
+      "signature": "Ruwtj1nz71PjV82uygL7TKvNi9j76yVqfPn8T1dwS9APrEXe3EvAKfDseP9gE8dhntSE3hWCsAUTK7vUQ2xhrRd",
+      "wire_sha256": "2857183a57f314a7d59caedabf99052c10218b92687c8188d994c4fce9e493a9",
+      "slot": 1683,
+      "block_time": 1793913940,
+      "fee_lamports": 5017,
+      "error": null
+    },
+    {
+      "label": "passkey-zero-independent-finalization",
+      "signature": "2zEUxDfpYw1YunnqHPmhiMLEq5uunwnxgpSuq8tUqmToZgtkSrAw4BL5b8cwifD831EDcEmZko5BvkosV9gRXH1t",
+      "wire_sha256": "649c06338a6e1a29ff8f9242836149bfe8363c7560e60666fe29fd45260b112f",
+      "slot": 1782,
+      "block_time": 1793913983,
+      "fee_lamports": 5017,
+      "error": null
+    },
+    {
+      "label": "independent-api-governed-collection",
+      "signature": "33R96WcW4sz6ZTtyopywsnYbSEJnYKR53xS3c83qazZrLsNHcMqQ9wYqaQBoDCkmTkxtKx8PTB5UiwnrQHojEqLD",
+      "wire_sha256": "5696955278d0fcba1a769d1baac867810a2654d95c10119168dab479a46472f0",
+      "slot": 1872,
+      "block_time": 1793914021,
+      "fee_lamports": 10017,
+      "error": null
+    }
+  ],
+  "financial": {
+    "units": "disposable fixture atomic units",
+    "before_cash": {
+      "financier": "1000000",
+      "supplier": "0"
+    },
+    "after_cash": {
+      "financier": "999100",
+      "supplier": "900"
+    },
+    "earned": {
+      "remaining": "0",
+      "payable": "0",
+      "debt": "900",
+      "paid": "900",
+      "repaid": "0",
+      "released": "1100",
+      "feeAuthorityRemaining": "90",
+      "releasedFeeCaps": "110"
+    },
+    "unused_bill": {
+      "remaining": "0",
+      "payable": "0",
+      "debt": "0",
+      "paid": "0",
+      "repaid": "0",
+      "released": "2000",
+      "feeAuthorityRemaining": "0",
+      "releasedFeeCaps": "200"
+    }
+  },
+  "recovery": {
+    "distinct_processes": 26,
+    "offline": 19,
+    "online": 7,
+    "all_passed": true,
+    "send_requests": 0,
+    "funding_requests": 0,
+    "admission_authorizations": 0
+  },
+  "unfinished_admission": {
+    "status": "pending-reconciliation",
+    "broadcast": "not-started",
+    "billAbsent": true,
+    "claimAbsent": true
+  },
+  "api_exposure": {
+    "intents": 3,
+    "exposure": "6600"
+  },
+  "limits": [
+    "Controlled localhost Agave4.4 with declared SIMD0268 deactivation; no default/public-network parity.",
+    "Software P256 and synthetic WebAuthn flags; no actual device ceremony.",
+    "Controlled provider/publisher/service identities and native buyer Work association.",
+    "serviceWithoutPool true; no Pool projection qualification.",
+    "Retained shared API node_modules; separate sealed clean release evidence does not establish identical runtime dependencies.",
+    "No first passkey-alias Work funding association, existing Vault adoption, buyer owner rotation through API or customer rollout.",
+    "Original failures stay failed; no claim of arbitrary host-loss recovery.",
+    "API purchase exposure remains6600; native cap releases are a distinct accounting layer.",
+    "No live deployment/database/spending/policy change."
+  ],
+  "legacy_note": "Existing Vault migration is not a delivery prerequisite. The retained historical limit describes what this specific run did not exercise.",
+  "native_binary_provenance": "Fresh local ELF bytes differ from published Pro binaries. These actual artifacts are source-bound and will be qualified locally; no82artifacts or compiler target reused."
+}

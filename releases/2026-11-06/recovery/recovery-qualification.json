@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "source_file": "foundation/onchain/tests/recovery.py",
+  "source_sha256": "6f6f7b22a8e1973593fbb840aaf2e2d92d2df0d6e42a5ffb195b45363639c946",
+  "build_receipt_sha256": "6cc9f65f19fcaeeb33804e771f33c21f6f82e25e7d12a21d0ed1626925f0ae42",
+  "idl_receipt_sha256": "ad9ca226894e154eb34e983de0e9868e6d9fa7cf50817ac39f93fb46e72549e2",
+  "full_unpruned_trace": {
+    "path": "recovery-trace.json.xz",
+    "format": "xz",
+    "preset": 6,
+    "compressed_bytes": 179208,
+    "compressed_sha256": "5d49fa9ae7c2a00fc967785810a18f81ebb8c804224947820020284faf23528d",
+    "uncompressed_bytes": 45601389,
+    "uncompressed_sha256": "e643e4888b597016881598f0dbeaa321c4677e58decb3af9d1298f4fdbc85887",
+    "lossless_roundtrip_verified": true
+  },
+  "native_counts": {
+    "transaction_count": 168,
+    "refused": 36,
+    "assertions": 674,
+    "receipts": 22,
+    "maximum_signed_packet": 2930
+  },
+  "all_expected_outcomes_passed": true,
+  "all_refusals_classified": true,
+  "unclassified_refusals": [],
+  "public_transactions_sent": 0,
+  "legacy_external_redirect_refusal": "FundingReplay: request committed an economic collection ID for a different destination; Core derives original accepted destination before computing its expected ID. This is not a FundingTokenRouting assertion. The original route then successfully paid 400.",
+  "boundary": "Actual compiled local SBPF/native-v1 execution. Does not qualify production enrollment, public RPC admission, validator finality, live source/provider facts, passkey/session recovery or deployment."
+}

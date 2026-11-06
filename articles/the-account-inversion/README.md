@@ -1,3 +1,5 @@
+> **Latest evidence:** [November 6 capability guide](../../releases/2026-11-06/README.md) adds completed continuing-obligation, credential-recovery and standing-commerce results. The November 4 records below remain the historical collection.
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/Dexter-DAO/dexter-x402-sdk/main/assets/dexter-wordmark.svg" alt="Dexter" width="360">
 </p>

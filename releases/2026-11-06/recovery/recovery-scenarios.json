@@ -1,0 +1,109 @@
+{
+  "status": "passed",
+  "scope": "compiled native-v1 local execution",
+  "recoveries": [
+    {
+      "role": "protocol",
+      "receipt": "FyUoEvu2eJxmEcwUcUfQgVfCZWU1J86engnd89KoYVqx",
+      "old_owner": "DgmxzQX61DxkAMkAubrgHVJb637fYYTdh7ouVqZGnJrp",
+      "new_owner": "DCLeVsUWC6b68dUoPgewFCEHD3quwRCgPBp8V4XLDCjc",
+      "generation": 3,
+      "guardian_bitmap": 3
+    },
+    {
+      "role": "protocol",
+      "receipt": "FV9f7mXoTeufqwjwebaGRFXAd1NkqDhYgcJ3S1aJYZUk",
+      "old_owner": "DCLeVsUWC6b68dUoPgewFCEHD3quwRCgPBp8V4XLDCjc",
+      "new_owner": "7rpDt11nvidzpRJRz8UiCndE4z58YqdktV5KYYpTMQ2P",
+      "generation": 4,
+      "guardian_bitmap": 3
+    },
+    {
+      "role": "company",
+      "receipt": "9MC3JYkauZDHLuWLK7C25smqo2BXM6DNXvdo7RwK24oK",
+      "old_owner": "3BuW9SR5tG6VFK4MmkQQ3Ak8ny1K1Vv5Uz7is8Aa5pwG",
+      "new_owner": "Ce6R5jCf97nqhG7G5QRJdzQknPGyBEVYLXwVeGTb1Brp",
+      "generation": 2,
+      "guardian_bitmap": 3
+    },
+    {
+      "role": "financier",
+      "receipt": "9dJDZ58HGoELfLGTnuMBXinKPfeyFLotjn2NtB5kAhfz",
+      "old_owner": "6TcyBfPdBt1kjsvDZLzmBFnuMaLWiTaAt4RjUr9VA5YD",
+      "new_owner": "Bp2QcqMdBAEmoGBGPzRqP6TGAe1uMdEotSkwGaguG3MY",
+      "generation": 2,
+      "guardian_bitmap": 3
+    },
+    {
+      "role": "supplier",
+      "receipt": "GTUqVYRwTb6oixFr4HNVThp4n7qSJNJeHWiusxecBQwT",
+      "old_owner": "4MfyR4G3NWfVRDWo6iNAHDBZqWMgwZX6FNtMqEW3a9JT",
+      "new_owner": "3pYhU9juSMSYob4oMcrsy38HU9PznzofiHs8qxDeWGct",
+      "generation": 2,
+      "guardian_bitmap": 3
+    },
+    {
+      "role": "assignee",
+      "receipt": "FQtoM8XLC3iFHWoZFdCuqvDpwZaroxRHNsaxvBA1H8Mu",
+      "old_owner": "7nLFtY5yiR4CZnkB6bYMth3bbAns9DnFhtgjHGqcCiRn",
+      "new_owner": "4pCM2tGd36eWLJ7FnoQJ5eLmuFYxe8bxpgzct2zXo42s",
+      "generation": 2,
+      "guardian_bitmap": 3
+    },
+    {
+      "role": "supplier",
+      "receipt": "3yjKzw8AGijZfobmDSskwwZHFD473fdT3W6WE97oHkch",
+      "old_owner": "3pYhU9juSMSYob4oMcrsy38HU9PznzofiHs8qxDeWGct",
+      "new_owner": "4MfyR4G3NWfVRDWo6iNAHDBZqWMgwZX6FNtMqEW3a9JT",
+      "generation": 3,
+      "guardian_bitmap": 3
+    },
+    {
+      "role": "supplier",
+      "receipt": "26VL9jBoQjuQWk64sNyB2fVGyuuQ9BNncp365rmorAQe",
+      "old_owner": "4MfyR4G3NWfVRDWo6iNAHDBZqWMgwZX6FNtMqEW3a9JT",
+      "new_owner": "EYwzqwfWPgKiF5LNrjh1xZugnpDXwWwCKYfiAqQ6w3sd",
+      "generation": 4,
+      "guardian_bitmap": 3
+    }
+  ],
+  "scenarios": {
+    "before_work": {
+      "old_owner": "4Mz4Y6iXdBdAbPMv874YWPgH2oy6QKARovMt2pNurh6e",
+      "native_cash_withdrawn": 17,
+      "no_old_signature": true,
+      "request_survived_hostile_rotation": true,
+      "guardian_replacement_requires_both_quorums": true,
+      "exact_withdrawal_retry_after_original_destination_closed": true
+    },
+    "accepted_work": {
+      "cap": 2000,
+      "bill": 900,
+      "unused_release": 1100,
+      "released_interest_authority": 110,
+      "remaining_interest_authority": 90,
+      "partial_collections": [
+        400,
+        500
+      ],
+      "receiving_withdrawals": [
+        200,
+        700
+      ],
+      "external_payout": 400
+    }
+  },
+  "receipt": {
+    "status": "passed",
+    "trace": "<fixture-workspace>/.local/anchor/recovery-trace.json",
+    "trace_sha256": "e643e4888b597016881598f0dbeaa321c4677e58decb3af9d1298f4fdbc85887",
+    "transaction_count": 168,
+    "refused": 36,
+    "assertions": 674,
+    "receipts": 22,
+    "maximum_signed_packet": 2930,
+    "build_receipt_sha256": "6cc9f65f19fcaeeb33804e771f33c21f6f82e25e7d12a21d0ed1626925f0ae42",
+    "idl_receipt_sha256": "ad9ca226894e154eb34e983de0e9868e6d9fa7cf50817ac39f93fb46e72549e2"
+  },
+  "public_transactions_sent": 0
+}

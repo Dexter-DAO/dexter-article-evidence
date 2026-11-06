@@ -1,0 +1,22 @@
+{
+  "schema": "dexter-api551-export-review-manifest/v1",
+  "status": "Dated public evidence release 2026-11-06",
+  "files": {
+    "SELECTED-RECORDS.json": {
+      "bytes": 306682,
+      "sha256": "45a6e9f1de5e78dbe17f8040d6ed3d0177b87d969219e0de360d0d8eea6669ac"
+    },
+    "SELECTED-RECEIPT.json": {
+      "bytes": 9543,
+      "sha256": "3850962aee237b572bf4372e45336ef42609568f9aface010c2d81ad6d829e86"
+    },
+    "verify-records.mjs": {
+      "bytes": 10951,
+      "sha256": "100654cf1e555fc8f8fefd5f71d8985dbcfa1fc7f5366c9b7f0c120298507b8b"
+    },
+    "README.md": {
+      "bytes": 4025,
+      "sha256": "92c3210a328ba8fec6c46cb7ee6fd9d4697b9e75885668a30cc4bf533886d0c7"
+    }
+  }
+}

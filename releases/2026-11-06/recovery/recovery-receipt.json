@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "trace": "<fixture-workspace>/.local/anchor/recovery-trace.json",
+  "trace_sha256": "e643e4888b597016881598f0dbeaa321c4677e58decb3af9d1298f4fdbc85887",
+  "transaction_count": 168,
+  "refused": 36,
+  "assertions": 674,
+  "receipts": 22,
+  "maximum_signed_packet": 2930,
+  "build_receipt_sha256": "6cc9f65f19fcaeeb33804e771f33c21f6f82e25e7d12a21d0ed1626925f0ae42",
+  "idl_receipt_sha256": "ad9ca226894e154eb34e983de0e9868e6d9fa7cf50817ac39f93fb46e72549e2"
+}

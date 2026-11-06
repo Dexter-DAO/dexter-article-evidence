@@ -1,0 +1,429 @@
+{
+  "schema": "dexter-current84-p256-rpc-receipt/v2",
+  "status": "passed",
+  "sealedAt": "2026-11-05T09:38:37.428783+00:00",
+  "scope": "Actual loopback Agave native-v1 transport of generated admission target with handwritten SDK passkey preparation/assembly and continuing readback. Controlled existing native-owned Principals adopt aliases; no existing deployed passkey/Vault path or browser/device ceremony is claimed.",
+  "source": {
+    "head": "411748c333c094cc1db18abeb505f7ca2a31b812",
+    "programTree": "ba3f35b2044ecaefd5213091b7469dc10fc15959",
+    "sourceInputCount": 69,
+    "inputsAndArtifactsUnchanged": true,
+    "localElfVersusPublished": "All69 source inputs and all3 IDLs match current84 publication. Each fresh local ELF differs from the published Pro ELF; the cause of byte differences is not established. These exact local binaries were exercised by this RPC proof.",
+    "artifacts": [
+      {
+        "kind": "elf",
+        "name": "principal_registry.so",
+        "path": "<qualification-workspace>/.local/anchor/deploy/principal_registry.so",
+        "bytes": 1058408,
+        "sha256": "92a21620018609eb98f504f0bbfe8370eda6d10081ef1cc1d5c540903bf35214",
+        "publishedSha256": "35c4d260656ae79c6a78bc66b02c706aa68aa12166d647a7cae900407c13d23b",
+        "matchesPublished": false
+      },
+      {
+        "kind": "elf",
+        "name": "pool_issuer.so",
+        "path": "<qualification-workspace>/.local/anchor/deploy/pool_issuer.so",
+        "bytes": 334384,
+        "sha256": "6804757b94ce2da8854388a1f748b614296207682db27cde85958f868b726e65",
+        "publishedSha256": "ff7d05fbe191c8c710a26880b23ca55295edd251b62588a215c2f64e821fa366",
+        "matchesPublished": false
+      },
+      {
+        "kind": "elf",
+        "name": "claims_core.so",
+        "path": "<qualification-workspace>/.local/anchor/deploy/claims_core.so",
+        "bytes": 3080784,
+        "sha256": "3ae2dc3c913c3ec696144c8e06104616f82a4d3305ff33e123c418eb446e0bb5",
+        "publishedSha256": "374b4ab483c401be92258b88ec7fe1dc0d630ae68360cbc9745cf1901dffdd6b",
+        "matchesPublished": false
+      },
+      {
+        "kind": "idl",
+        "name": "principal_registry.json",
+        "path": "<qualification-workspace>/.local/anchor/idl/principal_registry.json",
+        "bytes": 133844,
+        "sha256": "f8e978be53033c464f1ed06b2bdfd4a8e4e07c2b2c7a71ba6d477153c0a6efae",
+        "publishedSha256": "f8e978be53033c464f1ed06b2bdfd4a8e4e07c2b2c7a71ba6d477153c0a6efae",
+        "matchesPublished": true
+      },
+      {
+        "kind": "idl",
+        "name": "pool_issuer.json",
+        "path": "<qualification-workspace>/.local/anchor/idl/pool_issuer.json",
+        "bytes": 23175,
+        "sha256": "089c961ff2faff876fc54e13c3302fa29c652b3c3972b2a4933b169a9ba5b0e6",
+        "publishedSha256": "089c961ff2faff876fc54e13c3302fa29c652b3c3972b2a4933b169a9ba5b0e6",
+        "matchesPublished": true
+      },
+      {
+        "kind": "idl",
+        "name": "claims_core.json",
+        "path": "<qualification-workspace>/.local/anchor/idl/claims_core.json",
+        "bytes": 286365,
+        "sha256": "58dbd841a13dcc8e1d7f6c188430e456704172e16f408eb606e3dd07e3b4758c",
+        "publishedSha256": "58dbd841a13dcc8e1d7f6c188430e456704172e16f408eb606e3dd07e3b4758c",
+        "matchesPublished": true
+      }
+    ],
+    "tools": {
+      "anchor": {
+        "path": "<qualification-workspace>/.local/toolchains/anchor-1.2.2/bin/anchor",
+        "version": "1.2.2",
+        "version_output": "anchor-cli 1.2.2",
+        "sha256": "e2c35a973bcfe476f3a89b120e99820f917229faf33d3e71f6625bd94199e741"
+      },
+      "python": {
+        "path": "<qualification-workspace>/.local/python/bin/python",
+        "version": "3.12.3",
+        "version_output": "Python 3.12.3",
+        "sha256": "e50d468e8b0adfb05733f5b87b3cff34829c4a8c1aea50c865aa8bdfe4bb150f"
+      },
+      "node": {
+        "path": "<qualification-workspace>/.local/toolchains/node-24.22.1/node-v24.22.1-linux-x64/bin/node",
+        "version": "24.22.1",
+        "version_output": "v24.22.1",
+        "sha256": "e32e2d16081cf644f88392934288086e7662529d0d43277c34f7aad2207cfafb"
+      },
+      "solana": {
+        "path": "<qualification-workspace>/.local/toolchains/agave-4.4.0/solana-release/bin/solana",
+        "version": "4.4.0",
+        "version_output": "solana-cli 4.4.0 (src:9ef63128; feat:dddabd53, client:Agave)",
+        "sha256": "6ef318d8e9333b878fac59c149ce02440ec23f906f5c066813a9056aeab8b3e0"
+      },
+      "validator": {
+        "path": "<qualification-workspace>/.local/toolchains/agave-4.4.0/solana-release/bin/solana-test-validator",
+        "version": "4.4.0",
+        "version_output": "solana-test-validator 4.4.0 (src:9ef63128; feat:dddabd53, client:Agave)",
+        "sha256": "d6555f205ca785ee2201ee6a92bfdb8ca3ade2fed9e3313b9cdecad6bd723f21"
+      },
+      "cargo_build_sbf": {
+        "path": "<qualification-workspace>/.local/toolchains/cargo-build-sbf-4.5.0/bin/cargo-build-sbf",
+        "version": "4.5.0",
+        "version_output": "cargo-build-sbf 4.5.0\nDefault platform-tools: v1.57\nDefault Rust: 1.95.0",
+        "sha256": "c3db8ea1a40978c6b220b88f7b725b16459dc824909b47b0384783daca07b45c"
+      },
+      "cargo": {
+        "path": "<qualification-workspace>/.local/toolchains/platform-tools-1.57/rust/bin/cargo",
+        "version": "1.95.0",
+        "version_output": "cargo 1.95.0 (bbbd3a760 2026-07-09)",
+        "sha256": "c13a2c6dc68b95a0fd494d65a299264e4ad027544759a7291f6ccfcda4264603"
+      },
+      "rustc": {
+        "path": "<qualification-workspace>/.local/toolchains/platform-tools-1.57/rust/bin/rustc",
+        "version": "1.95.0-dev",
+        "version_output": "rustc 1.95.0-dev (ae660768a 2026-08-17)",
+        "sha256": "f7a4ec1b62e27fa990de4c9bd3c38eb7a5ba0a4f41b2e0929a0631c68c9c6e78"
+      },
+      "host_cargo": {
+        "path": "<qualification-workspace>/.local/toolchains/host-rust-1.99.1/bin/cargo",
+        "version": "1.99.1",
+        "version_output": "cargo 1.99.1 (5f94df478 2026-08-27)",
+        "sha256": "a670e02cfa39ac2e53f77a2d911ca1fc9e2c479b0603ec956625be1daf24e3af"
+      },
+      "host_rustc": {
+        "path": "<qualification-workspace>/.local/toolchains/host-rust-1.99.1/bin/rustc",
+        "version": "1.99.1",
+        "version_output": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+        "sha256": "b53b780f77f952062f8ca8a3b70aef2390b1e45ad91939be94afdc9543026853"
+      }
+    },
+    "sourceArchiveFileCount": 424,
+    "sourceArchiveSha256": "48c3ccfd82815a17b824f0b402f731ab60aa47c2919ba9c377c7cce10964dd97",
+    "baselineSelector": {
+      "supplement": "rpc-baseline-supplement.json",
+      "currentRawSha256": "75f3087d9d1e8893c9c4e4817e340ddede544cc6d679c746c7f3fb147191f420",
+      "retrospectiveMatchingFinancialAddressCount": 48,
+      "sealedInPreRunManifest": false
+    }
+  },
+  "sdk": {
+    "buildReceiptSha256": "4bd304a7e6e366cf2ac88b0118e06672a36406579903d72f9302dd94723c970d",
+    "builtAt": "2026-11-05T09:25:32.568Z",
+    "reviewedPinSha256": "00639a733ba2541bd541b8b91f4f70ca48940bca5928aef37253e13adfcd3f99",
+    "sourceAndOutputsStable": true,
+    "internalJoin": "Compiled evidence-billing-record.js#bindContinuingEvidenceBillClaim, explicitly used for qualification rather than claimed as a package-root API."
+  },
+  "rpc": {
+    "genesis": "2QKdxJpfW4Lco2CW41TygrVMLpWX25CXQCKiGgkM96FL",
+    "version": {
+      "feature-set": 3722100051,
+      "solana-core": "4.4.0"
+    },
+    "profile": {
+      "simd0268Disabled": "6TkHkRmP7JZy1fdM6fg5uXn76wChQBWGokHBJzrLB3mj",
+      "source": "same explicit deactivation as qualified current84 native2963 RPC receipt",
+      "publicClusterParityClaim": false
+    },
+    "publicTransactionsSent": 0,
+    "freshLedger": "<qualification-workspace>/.local/p256-rpc-corrected-20261105T093248Z/ledger",
+    "canonicalRegistryBootstrap": "Agave --upgradeable-program creates canonical Program/ProgramData with disposable real native upgrade authority; actual RPC initializer records actual fresh genesis. Deployment PDA was absent and never staged.",
+    "launchEvidence": {
+      "file": "rpc-validator-launch.json",
+      "exactArgvSha256": "9caa8bc134351eafeb5d26bb2889a945bce23d9afd2edc78bbfa068587e5a645",
+      "capture": "Original launcher lifecycle retained exact Popen command; this annotation extracts it after the run.",
+      "fullLaunchParityClaim": false
+    }
+  },
+  "result": {
+    "casesPassed": 13,
+    "assertionsPassed": 223,
+    "finalizedTransactions": 11,
+    "simulationOnlyRefusals": 2,
+    "softwareP256Assertions": 8,
+    "admission": {
+      "wireBytes": 3726,
+      "nativeSigners": [
+        "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9",
+        "Cdkrk8tujFY6mTyGwFgKpnbiGc1hqtXCog1qvUdKAe6D"
+      ],
+      "nativeSignatures": 2,
+      "P256Proofs": 2,
+      "targetIndex": 4,
+      "priorityFeeLamports": 17,
+      "zeroPriorityQuote": 20000,
+      "priorityQuote": 20017,
+      "chargedFee": 20017,
+      "signature": "4mVGiYXJBEaVKTEhPG6kbmu3QatnaVc9BYDDJEpkBLwo6D4XFfoAXxFUCZShhrtiyMz2TgnuCpUMVXR1VXazaRpq",
+      "targetAccountPositionsCounted": 45,
+      "independentExpectedOrderedMetaVectorAsserted": false
+    },
+    "financial": {
+      "unusedClaim": "2000",
+      "maximumInterest": "200",
+      "payable": "0",
+      "paid": "0",
+      "debt": "0",
+      "budgetReservedBefore": "0",
+      "budgetReservedAfter": "2200",
+      "custodyUnusedBefore": "0",
+      "custodyUnusedAfter": "2000",
+      "existingTokenAccountsUnchanged": true,
+      "existingFinancialStateUnchangedAcrossAdoption": true,
+      "principalAndSeedOwnerPreserved": true
+    },
+    "receiptFirstReread": {
+      "status": "recorded",
+      "assertionRequests": 0,
+      "sends": 0,
+      "boundary": "Fresh receipt read in this process; not durable coordinator restart qualification."
+    },
+    "softwareP256Boundary": "Node software keys and real ECDSA signatures; synthetic clientDataJSON and UP/UV flags, not device/browser observations."
+  },
+  "cases": [
+    {
+      "name": "unrelated-upgrade-authority-refused",
+      "status": "passed",
+      "wireBytes": 428,
+      "nativeSigners": [
+        "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9",
+        "92CudvFbL7Tyw2RkWC7NU1ehdNBSjy8FEG1TsJaN8wgz"
+      ],
+      "signature": "2ExdeD5c97bQ9qeVnVd52HUTtUSPGe4EpP7CAy5sDaJ5jXkK6WqHdzjGxUBLfH9DSFP65z8cLDESJiGQ32Bwpcpy",
+      "finalized": false,
+      "simulationError": {
+        "InstructionError": [
+          0,
+          {
+            "Custom": 6042
+          }
+        ]
+      }
+    },
+    {
+      "name": "initialize-actual-genesis-deployment",
+      "status": "passed",
+      "wireBytes": 428,
+      "nativeSigners": [
+        "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9",
+        "6ZySCUmY6AVtwNwXSroAdcUAPCsbsoRYz8RQSvcusZQL"
+      ],
+      "signature": "4iR3BfGuRN4q8c1tKvqnE9WVWYnBmhe8xhPxQSa4toApJvvVQuwAzQEEoruhvfgbS1YHx997EjJJqLbNZwDAmvr4",
+      "finalized": true,
+      "simulationError": null
+    },
+    {
+      "name": "immutable-genesis-refused",
+      "status": "passed",
+      "wireBytes": 428,
+      "nativeSigners": [
+        "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9",
+        "6ZySCUmY6AVtwNwXSroAdcUAPCsbsoRYz8RQSvcusZQL"
+      ],
+      "signature": "4aPXpQmpeDFKybeVF56FE64Dj2pSsdpvMDqmyLjjCLMqWznsA7JweYHeiPfjJCss94xQFLDymXVshxoDYdWoADQx",
+      "finalized": false,
+      "simulationError": {
+        "InstructionError": [
+          0,
+          {
+            "Custom": 6042
+          }
+        ]
+      }
+    },
+    {
+      "name": "initialize-company-alias",
+      "status": "passed",
+      "wireBytes": 428,
+      "nativeSigners": [
+        "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+      ],
+      "signature": "2KCZge11jYrBZ4Z3q2FUHj17A7AUU2RDWkSJfY4NRJPCxKTLeJhvYk95N18ZuVtZ6zAVL37rpXTdWGvGrnwcn8dk",
+      "finalized": true,
+      "simulationError": null
+    },
+    {
+      "name": "adopt-company-alias",
+      "status": "passed",
+      "wireBytes": 1027,
+      "nativeSigners": [
+        "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9",
+        "3BuW9SR5tG6VFK4MmkQQ3Ak8ny1K1Vv5Uz7is8Aa5pwG"
+      ],
+      "signature": "4ey1n4ghqJUAo5GfFH7paTGKQpif1nT5doiZHCDnwMaed87JvBxSg2dfgm7Fx5SVTKHH9ZMwXeRva8DCz8Jzid1W",
+      "finalized": true,
+      "simulationError": null
+    },
+    {
+      "name": "initialize-issuer-alias",
+      "status": "passed",
+      "wireBytes": 428,
+      "nativeSigners": [
+        "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+      ],
+      "signature": "axCKrAApYq719EbZwQPL6jgiGBS5Kad8v4mhgTmk6GwMwrVsZVG9S3RmswRDYfBg2y6vVWcsz3xNazVJQSwdSMU",
+      "finalized": true,
+      "simulationError": null
+    },
+    {
+      "name": "adopt-issuer-alias",
+      "status": "passed",
+      "wireBytes": 1027,
+      "nativeSigners": [
+        "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9",
+        "FMUEmtxhU46GzhKF4FW9MLJdQWiLgjiXP9TYRWSrqTpV"
+      ],
+      "signature": "2yDR3frG4D5yCVUzWrUWEpJs2nxEQAYGjYM2dxW6ZrMzNRfccePkKk1VVD67Q36LJ6ToUXQUEWeTxRhjHCBLuvwA",
+      "finalized": true,
+      "simulationError": null
+    },
+    {
+      "name": "initialize-supplier-alias",
+      "status": "passed",
+      "wireBytes": 428,
+      "nativeSigners": [
+        "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+      ],
+      "signature": "M3kxMDTj7TMTJsRAJYf3UxBw3wUqGNU2XFmbEM5sK9FVUNHvFDShg9eLU8ipqXBYryRbDq5Nx9dZ4dSWRfinnNK",
+      "finalized": true,
+      "simulationError": null
+    },
+    {
+      "name": "adopt-supplier-alias",
+      "status": "passed",
+      "wireBytes": 1027,
+      "nativeSigners": [
+        "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9",
+        "4MfyR4G3NWfVRDWo6iNAHDBZqWMgwZX6FNtMqEW3a9JT"
+      ],
+      "signature": "4b7pZkGPTH6NpbfVNtW8A5gPWjbzfvyVhfX3CCMynvj817JZBpVsr53JGQh5iax8nVBFmcz3NwSJSTQUFECQZBmH",
+      "finalized": true,
+      "simulationError": null
+    },
+    {
+      "name": "company-passkey-creates-current-actor",
+      "status": "passed",
+      "wireBytes": 905,
+      "nativeSigners": [
+        "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+      ],
+      "signature": "G3B2QhZ6CdSvTmYHzCQoLi9rbiftbFMfeS9dQFxDcVhuKt8zFjYneJF5gVCgRghqfamiqA8uojKQLTVYSjSpyYv",
+      "finalized": true,
+      "simulationError": null
+    },
+    {
+      "name": "supplier-passkey-opens-receiving-custody",
+      "status": "passed",
+      "wireBytes": 1062,
+      "nativeSigners": [
+        "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+      ],
+      "signature": "2HQNjzfK4rAZ1CBzxFE7mz978f8Z9pxYbh4Kb6CVR4X2EGMJLeSxJBAx84a33kix4DgbZiegQPhZ192HRbvKWd42",
+      "finalized": true,
+      "simulationError": null
+    },
+    {
+      "name": "company-passkey-approves-exact-custody-mandate",
+      "status": "passed",
+      "wireBytes": 1003,
+      "nativeSigners": [
+        "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+      ],
+      "signature": "6skCy5Vasp3jWW1He4UMyyL52HbTiPaLrPhNoLJ3Qq9LQdmaNmvsJ7k8Q42Y85boUNW8QG3AVw7dHKVam41pEVX",
+      "finalized": true,
+      "simulationError": null
+    },
+    {
+      "name": "two-p256-financed-admission",
+      "status": "passed",
+      "wireBytes": 3726,
+      "nativeSigners": [
+        "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9",
+        "Cdkrk8tujFY6mTyGwFgKpnbiGc1hqtXCog1qvUdKAe6D"
+      ],
+      "signature": "4mVGiYXJBEaVKTEhPG6kbmu3QatnaVc9BYDDJEpkBLwo6D4XFfoAXxFUCZShhrtiyMz2TgnuCpUMVXR1VXazaRpq",
+      "finalized": true,
+      "simulationError": null
+    }
+  ],
+  "failedRun": {
+    "privateReport": "<qualification-workspace>/.local/p256-rpc-20261105T092827Z/verification.json",
+    "sha256": "74011fac7ecef472aeaff70355759c02e91a938f4bd7a84f9c73e0f9b2e42e69",
+    "finalizedSetupTransactions": 2,
+    "assertionRequests": 0,
+    "financialAdmissions": 0,
+    "cause": "Strict Node Buffer versus Uint8Array decoder-view comparison; all decoded field values and bytes match.",
+    "rawPrincipalCaveat": "Original post-registration RPC response was not retained; readonly Principal in successful finalized registration guarantees no mutation. Corrected run retains direct pre/post raw RPC comparisons.",
+    "correctionReceiptSha256": "5d23cf4dfedc3f125d46fe02602d2ed4415ccf0f74a84870bbe1ebb6f9ae9af0",
+    "teardown": "Validator stopped. Initial bind check transiently failed; separately retained later check proves every port bindable."
+  },
+  "reports": {
+    "correctedPrivate": {
+      "path": "<qualification-workspace>/.local/p256-rpc-corrected-20261105T093248Z/verification.json",
+      "bytes": 1956808,
+      "sha256": "ac496c3591401d50e7c59a5da0e76411fc8979d2ef963565a5cbc420486c44d8"
+    },
+    "originalPrivate": {
+      "path": "<qualification-workspace>/.local/p256-rpc-20261105T092827Z/verification.json",
+      "bytes": 1673764,
+      "sha256": "74011fac7ecef472aeaff70355759c02e91a938f4bd7a84f9c73e0f9b2e42e69"
+    },
+    "published": "rpc-corrected-report.json.xz and rpc-original-report.json.xz omit only the Registry ProgramData ELF bytes, retaining observed header and exact hashes. No binary or ledger is copied into this packet.",
+    "fixtureRedactions": "rpc-fixture-redactions.json; runtime SDK extraInput hashes continue to identify unchanged private originals, not sanitized inspection copies."
+  },
+  "lifecycle": {
+    "corrected": {
+      "validatorStopped": true,
+      "validatorExit": -15,
+      "allPortsClosed": true,
+      "ledgerPreserved": "<qualification-workspace>/.local/p256-rpc-corrected-20261105T093248Z/ledger"
+    },
+    "originalLedgerPreserved": "<qualification-workspace>/.local/p256-rpc-20261105T092827Z/ledger"
+  },
+  "limits": [
+    "Software P256 assertions only; no browser/device authenticator or deployed Vault adoption.",
+    "Signed native financing setup loaded at genesis; only listed RPC cases prove runtime creation/changes.",
+    "Native-v1 local profile explicitly disables SIMD-0268; no public cluster capability claim.",
+    "No provider call, earned work, bill finalization, cash collection, recovery quorum or seven-day policy adoption.",
+    "Same-process receipt-first reread is not durable coordinator restart qualification.",
+    "No deployment, release, package publication or public funds.",
+    "The45-account assertion checks count only, not an independent ordered-meta vector.",
+    "baseline.json was omitted from pre-run extraInputs; supplemental post-run closure matches48 addresses and records but is not a retroactive seal.",
+    "Published fixture seed fields are removed; replay regenerates private runtime keys from the exact source generator."
+  ],
+  "packagingUpdatedAt": "2026-11-05T09:46:52.336457+00:00",
+  "originalSealRetained": "rpc-receipt-v1.json",
+  "reviewCorrections": {
+    "file": "rpc-review-corrections.json",
+    "sha256": "142b356412c7e9ab6297749ac7daf1b80bf9dfe553e268d76a6625197c250dc3"
+  }
+}

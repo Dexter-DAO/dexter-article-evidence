@@ -1,0 +1,55 @@
+{
+  "schema": "dexter-public-capability-evidence/v1",
+  "release": "2026-11-06",
+  "guide": "README.md",
+  "claims": [
+    {
+      "id": "operator-continuation",
+      "capability": "Operator replacement and continuing obligations",
+      "result": "Accepted work survives initiating-actor revocation and permits independent billing and collection, with financing debt retained.",
+      "guide": "billing/README.md",
+      "records": [
+        "billing/joined-rpc-receipt.json",
+        "billing/joined-rpc-report.json.gz"
+      ],
+      "scope": "Local SDK/Agave execution with synthetic source facts and separate signers. Continued servicing of accepted work; not arbitrary whole-business provider replacement."
+    },
+    {
+      "id": "credential-recovery",
+      "capability": "Credential recovery",
+      "result": "Enrolled guardian recovery without the old owner signature preserves continuing custody and accepted obligations; supplier recovery between collections retains usable proceeds.",
+      "guide": "recovery/README.md",
+      "records": [
+        "recovery/recovery-scenarios.json",
+        "recovery/recovery-receipt.json",
+        "recovery/recovery-trace.json.xz",
+        "recovery/passkey-rpc-receipt.json"
+      ],
+      "scope": "Compiled local native recovery; separately retained software-P256 RPC authority. Guardian quorum must be enrolled, controls owner replacement, and constrains policy changes. No physical-device recovery claim."
+    },
+    {
+      "id": "standing-commerce",
+      "capability": "Standing commerce",
+      "result": "API/PostgreSQL/SDK/native purchase reaches evidence, claim, deadline finalization and collection; fresh processes recover retained operations without sends or new funding/admission authority.",
+      "guide": "continuing-api/README.md",
+      "records": [
+        "continuing-api/SELECTED-RECORDS.json",
+        "continuing-api/SELECTED-RECEIPT.json"
+      ],
+      "check": "continuing-api/verify-records.mjs",
+      "scope": "Local Agave, controlled provider/application identities and software passkeys. Captured RPC/SQL observations are not independently authenticated by the offline checker. Buyer debt900 remains; third admission is signed-unsent; API exposure6600 remains."
+    },
+    {
+      "id": "productive-backing",
+      "capability": "Productive backing",
+      "result": "Coming next, with no fixed delivery date.",
+      "status": "roadmap",
+      "scope": "No completed implementation or execution claim in this release."
+    }
+  ],
+  "historical_mainnet": {
+    "guide": "../../evidence/historical-evidence/README.txt",
+    "scope": "Separate retained mainnet demonstration; Dexter-operated sellers, no independent merchant adoption or fulfillment claim."
+  },
+  "publication_scope": "Completed implementation and recorded execution. Customer availability and commercial adoption remain separate. Fixture amounts are atomic units, not dollar revenue."
+}

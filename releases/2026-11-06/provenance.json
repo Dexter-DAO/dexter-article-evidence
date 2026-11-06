@@ -1,0 +1,115 @@
+{
+  "schema": "dexter-selected-public-provenance/v1",
+  "release": "2026-11-06",
+  "sources": [
+    {
+      "file": "billing/joined-rpc-receipt.json",
+      "source": {
+        "repository": "Dexter-DAO/dexter-account",
+        "commit": "3415de7a9ec4d0ee42e9c7226c449969c91a0ff4",
+        "path": "docs/evidence/evidence-billing-sdk-20261105/joined-rpc-receipt.json"
+      },
+      "source_sha256": "2badb40f507fcfc9b0a8cb3a29c4f928bf3de0c6c07c9db1dc90eab734aefcc7",
+      "export_sha256": "2badb40f507fcfc9b0a8cb3a29c4f928bf3de0c6c07c9db1dc90eab734aefcc7",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "billing/joined-rpc-report.json.gz",
+      "source": {
+        "repository": "Dexter-DAO/dexter-account",
+        "commit": "3415de7a9ec4d0ee42e9c7226c449969c91a0ff4",
+        "path": "docs/evidence/evidence-billing-sdk-20261105/joined-rpc-report.json.gz"
+      },
+      "source_sha256": "f28b06a81fb110fba8e72f73980100204f95993d3c5c5b968abf845a078faba0",
+      "export_sha256": "f28b06a81fb110fba8e72f73980100204f95993d3c5c5b968abf845a078faba0",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "recovery/recovery-receipt.json",
+      "source": {
+        "repository": "Dexter-DAO/dexter-account",
+        "commit": "1489470609756238a6728d85ab182741d600d64a",
+        "path": "docs/evidence/core-recovery-20261105/recovery-receipt.json"
+      },
+      "source_sha256": "1ec6ab859ab71ebbcf2eb375b17a67430df9c7bae537cb4b77d94dd34e952774",
+      "export_sha256": "e17e8887df46a0fd7c3222633e76d2ebd4dab7bc9addd0e10f4a91a2fd0e2cf4",
+      "workspace_path_fields_replaced": 1,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "recovery/recovery-scenarios.json",
+      "source": {
+        "repository": "Dexter-DAO/dexter-account",
+        "commit": "1489470609756238a6728d85ab182741d600d64a",
+        "path": "docs/evidence/core-recovery-20261105/recovery-scenarios.json"
+      },
+      "source_sha256": "b515f858b4e2676c809cdd84215fe7c874cdd65c51f1bf6e11fbb4bf4fff6b4b",
+      "export_sha256": "a8418d808a4e1898d0f8b5b1758962a0ef19582d53e5625e46b7ea5933e7b800",
+      "workspace_path_fields_replaced": 1,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "recovery/recovery-qualification.json",
+      "source": {
+        "repository": "Dexter-DAO/dexter-account",
+        "commit": "1489470609756238a6728d85ab182741d600d64a",
+        "path": "docs/evidence/core-recovery-20261105/recovery-qualification.json"
+      },
+      "source_sha256": "c10e937be3852dfeb043f1877c877dbd155927152f650e0373ac02d7af5ea0d5",
+      "export_sha256": "c10e937be3852dfeb043f1877c877dbd155927152f650e0373ac02d7af5ea0d5",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "recovery/recovery-trace.json.xz",
+      "source": {
+        "repository": "Dexter-DAO/dexter-account",
+        "commit": "1489470609756238a6728d85ab182741d600d64a",
+        "path": "docs/evidence/core-recovery-20261105/recovery-trace.json.xz"
+      },
+      "source_sha256": "5d49fa9ae7c2a00fc967785810a18f81ebb8c804224947820020284faf23528d",
+      "export_sha256": "ce0847dec7ae60ad9aa18f5864780f4447490597bc48113f2323b9b7fc139329",
+      "workspace_path_fields_replaced": 3,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "recovery/passkey-rpc-receipt.json",
+      "source": {
+        "repository": "Dexter-DAO/dexter-account",
+        "commit": "1489470609756238a6728d85ab182741d600d64a",
+        "path": "docs/evidence/account-authority-sdk-20261105/rpc-receipt.json"
+      },
+      "source_sha256": "9fc2b3560437cd43d7c72ed7fdd3b425c0217ce093946ada3ebc3143be722092",
+      "export_sha256": "734706338b1f796b7a5fbdbd3f51ca9935595fa3210382bb28505bf732454976",
+      "workspace_path_fields_replaced": 22,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "recovery/pr85-source-and-evidence-review.json",
+      "source": {
+        "kind": "retained engineering review or merge receipt",
+        "file": "pr85-source-and-evidence-review.json"
+      },
+      "source_sha256": "8d98c5e75f2eda73644f38c6c431ff3cd4883911de8f9556a2a2f87422cb7ad1",
+      "export_sha256": "8d98c5e75f2eda73644f38c6c431ff3cd4883911de8f9556a2a2f87422cb7ad1",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "recovery/account82-84-85-merge-receipt.json",
+      "source": {
+        "kind": "retained engineering review or merge receipt",
+        "file": "account82-84-85-merge-receipt.json"
+      },
+      "source_sha256": "39483d89eb502c43e678306e271164fe7dadebabada06f5928147d4bb63e5e55",
+      "export_sha256": "39483d89eb502c43e678306e271164fe7dadebabada06f5928147d4bb63e5e55",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    }
+  ],
+  "api551": "The prepared selected-record package is retained with publication-status wording updated and hashes recomputed; its explicit source selections and evidence limits are unchanged.",
+  "omissions": "Source checkouts, keys, raw SQL, signed-unsent API authorization and unselected historical test traces are excluded. Full execution replay is not advertised.",
+  "path_redaction": "Only absolute qualification-workspace prefixes changed where counted. Source and export hashes are distinct."
+}
