@@ -2,10 +2,10 @@
   "id": "the-account-inversion",
   "title": "The Account Inversion",
   "subtitle": "From Account Holder to Account Owner",
-  "evidence_released": "2026-11-04",
+  "evidence_released": "2026-11-06",
   "guide": "README.md",
-  "archive": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-04/dexter-article-evidence-2026-11-04.zip",
-  "archive_sha256": "e789a59a553c23488007befa3678032373ab1e68bf41462a92a5da10eadd33f2",
+  "archive": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-06b/dexter-article-evidence-2026-11-06b.zip",
+  "archive_sha256": "64834cdfc45f4792f1445a952fa0791156dff6226c02fc89c86495785aeaddf1",
   "evidence": [
     {
       "id": "historical-mainnet-case",
@@ -15,17 +15,43 @@
     },
     {
       "id": "account-commitments",
-      "guide": "../../evidence/account-evidence/README.md",
+      "guide": "../../excerpts/records.md#the-decoded-account-sequence",
       "sequence": "../../evidence/account-evidence/checks/article-claim-check-20261104.json",
       "results": "../../evidence/account-evidence/checks/offline-check-20261104.json",
       "manifest": "../../evidence/account-evidence/manifest.json"
+    },
+    {
+      "id": "operator-continuation",
+      "guide": "../../excerpts/records.md#billing-after-revocation",
+      "record": "../../releases/2026-11-06/billing/joined-rpc-receipt.json"
+    },
+    {
+      "id": "credential-recovery",
+      "guide": "../../excerpts/records.md#guardian-recovery-between-collections",
+      "record": "../../releases/2026-11-06/recovery/recovery-receipt.json"
+    },
+    {
+      "id": "standing-commerce",
+      "guide": "../../excerpts/records.md#one-purchase-from-admission-to-collection",
+      "record": "../../releases/2026-11-06/continuing-api/SELECTED-RECORDS.json"
     }
   ],
   "later_releases": [
     {
       "date": "2026-11-06",
       "guide": "../../releases/2026-11-06/README.md",
-      "claims": "../../releases/2026-11-06/claims.json"
+      "claims": "../../releases/2026-11-06/claims.json",
+      "tag": "2026-11-06b",
+      "download": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/tag/2026-11-06b"
     }
-  ]
+  ],
+  "previous_releases": [
+    {
+      "date": "2026-11-04",
+      "archive": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-04/dexter-article-evidence-2026-11-04.zip",
+      "archive_sha256": "e789a59a553c23488007befa3678032373ab1e68bf41462a92a5da10eadd33f2"
+    }
+  ],
+  "release_tag": "2026-11-06b",
+  "checksum": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-06b/SHA256SUMS"
 }

@@ -4,7 +4,7 @@ This page quotes the records that [dexter.cash/llms.txt](https://dexter.cash/llm
 
 ## The Oct 30 mainnet record
 
-On Solana mainnet on Oct 30, 2026, Dexter's Vault program, against demonstration stores Dexter operated, refused four attempts, and the store collected the same claim afterward. [findings.txt](https://raw.githubusercontent.com/Dexter-DAO/dexter-article-evidence/main/evidence/historical-evidence/findings.txt) states the record:
+Dexter signed a transfer to the wrong recipient. The Vault program refused it and the approved store collected the same claim. The [record](../evidence/historical-evidence/findings.txt) identifies both transactions from October 30, 2026, on Solana mainnet. Dexter operated the demonstration stores.
 
 ```text
 // evidence/historical-evidence/findings.txt
@@ -75,7 +75,7 @@ Signers are shortened here. The full addresses are in the file quoted below.
 
 The backing sits in a financier's wallet. Rows 51 to 53 of the same trace are "create and bind exact governed financier wallet", "create financier custody token account" and "prefund financier token account before explicit allocation".
 
-From line 5 of the [Account evidence guide](https://raw.githubusercontent.com/Dexter-DAO/dexter-article-evidence/main/evidence/account-evidence/README.md):
+From line 5 of the [Account evidence guide](../evidence/account-evidence/README.md):
 
 > Two facilities share backing. Attempts to spend committed funds fail. The owner revokes the initiating agent and cooperatively rotates the financier's owner authority. A separate collector then pays the supplier with one transaction signature. The remaining backing stays protected and the company's financing debt stays outstanding.
 
@@ -112,7 +112,7 @@ From line 5 of the [Account evidence guide](https://raw.githubusercontent.com/De
 
 ## Billing after revocation
 
-The Nov 6 release's billing run is a local SDK/RPC run on a local validator, with synthetic source facts and separate signers, in fixture units. [joined-rpc-receipt.json](https://raw.githubusercontent.com/Dexter-DAO/dexter-article-evidence/main/releases/2026-11-06/billing/joined-rpc-receipt.json), line 14: "Admission, revocation, detached record submission, finalization and collection below use real SDK native-v1 packets and finalized RPC."
+After the initiating agent lost authority, a supplier claimed 1,400 units. The work record supported 900. A separate signer collected 900 for the supplier, and the buyer's debt remained 900. The [billing receipt](../releases/2026-11-06/billing/joined-rpc-receipt.json) records the SDK transactions on a local validator with synthetic work records. Amounts below are fixture token units.
 
 | Lot | Cap | Supplier claim | Source facts support | Bill established | Released | Buyer debt |
 |---|---:|---:|---:|---:|---:|---:|
@@ -149,6 +149,10 @@ The initiating actor's key, line 243, is Cdkrk8tujFY6mTyGwFgKpnbiGc1hqtXCog1qvUd
 | earned-finalization | 626 | 4ap9kAPdHiV82d8D73mrtEgwGxBbUxJgyFr1fRGLhide |
 | earned-collection | 743 | 9XJfNJ5Hej7WDSDs26QqxXC2DST38YgNMwi3NB8NvWJn |
 
+## Guardian recovery between collections
+
+The supplier received 400 units of a 900-unit bill, then recovered control of its account. Two of three previously enrolled guardians approved the replacement key, and the new key holder proved possession. The old key did not sign. The remaining 500 units reached the same account and the buyer's debt remained 900. The [guardian policy and native execution trace](../releases/2026-11-06/recovery/README.md) document the local compiled-program run.
+
 ## Passkey authority alongside recovery
 
 A local run with software-generated P-256 keys recorded same-Principal adoption, company authority and a financed admission with two P-256 approvals. Rows from [passkey-rpc-receipt.json](https://raw.githubusercontent.com/Dexter-DAO/dexter-article-evidence/main/releases/2026-11-06/recovery/passkey-rpc-receipt.json), all finalized:
@@ -178,7 +182,7 @@ A local run with software-generated P-256 keys recorded same-Principal adoption,
 
 ## One purchase from admission to collection
 
-On local Agave, in fixture units, with controlled provider and application identities and software passkeys, the API, PostgreSQL, SDK and native programs ran one purchase. [SELECTED-RECEIPT.json](https://raw.githubusercontent.com/Dexter-DAO/dexter-article-evidence/main/releases/2026-11-06/continuing-api/SELECTED-RECEIPT.json) summarizes it, and [SELECTED-RECORDS.json](https://raw.githubusercontent.com/Dexter-DAO/dexter-article-evidence/main/releases/2026-11-06/continuing-api/SELECTED-RECORDS.json) holds the original values. The summary lists 16 transactions, each with a null error. The purchase's steps:
+The supplier received 900 units from financier custody. The buyer's debt remained 900. Twenty-six fresh processes recovered recorded outcomes without sending another transaction. The API, PostgreSQL, SDK and native programs ran on local Agave with software passkeys and controlled provider and application identities. The [receipt](../releases/2026-11-06/continuing-api/SELECTED-RECEIPT.json) summarizes the run. The [original transaction records](../releases/2026-11-06/continuing-api/SELECTED-RECORDS.json) identify all 16 transactions and their captured results.
 
 | Label | Slot |
 |---|---:|
@@ -238,9 +242,11 @@ node verify.mjs ../record.json --rpc https://YOUR-ARCHIVAL-SOLANA-RPC
 
 That command is read-only. The commands come from [README.txt](https://raw.githubusercontent.com/Dexter-DAO/dexter-article-evidence/main/evidence/historical-evidence/README.txt).
 
+The [case record](../evidence/historical-evidence/record.json) timestamps approval at **06:27:37 UTC on October 30, 2026**. Its [recorded Wayback URL](https://web.archive.org/web/20261030025533id_/https://dexter.cash/.well-known/did.json) redirects to the [06:28:57 UTC capture](https://web.archive.org/web/20261030062857id_/https://dexter.cash/.well-known/did.json), 80 seconds after approval. The capture's 910 bytes match the seller document hash in the signed binding: `eaa77c5e24fb7356749890577a60887cd5464c2b8d2f0750e592cea3c4e83c03`. That capture establishes the file's contents after approval.
+
 ## Source notices and approval
 
-Files under `vault/` retain the original MIT license, per line 3 of [NOTICE.md](https://raw.githubusercontent.com/Dexter-DAO/dexter-article-evidence/main/evidence/account-evidence/NOTICE.md). Account source retains its existing copyright, per line 33 of the [package README](https://raw.githubusercontent.com/Dexter-DAO/dexter-article-evidence/main/evidence/README.txt). [APPROVED-PACKAGE.json](https://raw.githubusercontent.com/Dexter-DAO/dexter-article-evidence/main/APPROVED-PACKAGE.json) records the approved archive:
+Files under `vault/` retain the original MIT license, per line 3 of [NOTICE.md](../evidence/account-evidence/NOTICE.md). Account source retains its existing copyright, per line 33 of the [package README](https://raw.githubusercontent.com/Dexter-DAO/dexter-article-evidence/main/evidence/README.txt). [APPROVED-PACKAGE.json](https://raw.githubusercontent.com/Dexter-DAO/dexter-article-evidence/main/APPROVED-PACKAGE.json) records the original November 4 archive. The current [November 6b release](https://github.com/Dexter-DAO/dexter-article-evidence/releases/tag/2026-11-06b) supplies its own [checksum](https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-06b/SHA256SUMS). The following lines identify the November 4 file:
 
 ```text
 // APPROVED-PACKAGE.json

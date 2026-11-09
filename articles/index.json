@@ -7,14 +7,19 @@
       "subtitle": "From Account Holder to Account Owner",
       "guide": "the-account-inversion/README.md",
       "evidence_index": "the-account-inversion/evidence.json",
-      "evidence_released": "2026-11-04",
-      "later_evidence": "../releases/2026-11-06/README.md"
+      "evidence_released": "2026-11-06",
+      "later_evidence": "../releases/2026-11-06/README.md",
+      "first_evidence_released": "2026-11-04"
     }
   ],
   "latest_release": {
     "date": "2026-11-06",
     "guide": "../releases/2026-11-06/README.md",
     "claims": "../releases/2026-11-06/claims.json",
-    "download": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/tag/2026-11-06"
+    "download": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/tag/2026-11-06b",
+    "tag": "2026-11-06b",
+    "archive": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-06b/dexter-article-evidence-2026-11-06b.zip",
+    "checksum": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-06b/SHA256SUMS",
+    "archive_sha256": "64834cdfc45f4792f1445a952fa0791156dff6226c02fc89c86495785aeaddf1"
   }
 }
