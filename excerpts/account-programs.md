@@ -88,6 +88,8 @@ From section 7 of the specification, `evidence/account-evidence/spec/tab-and-bac
 | Wallet-backed source | Buyer's or issuer's exact wallet reserve under a complete control graph | Cash can remain in the managed wallet until payout | Accepted capacity becomes the earned supplier right defined by that profile | Every spending and management path must preserve the floor; settlement must survive agent rotation |
 | Pool cash guarantee | Pool investors' committed source cash | Pool treasury to Core escrow before the guarantee becomes accepted | Buyer debt to issuer plus issuer payable to supplier, created once | Unused reserve can release; payable backing survives agent/issuer outage; supplier can use Core payout |
 
+The [reserve state](../evidence/account-evidence/execution/foundation/onchain/programs/claims-core/src/funding_state.rs) records committed and drawn capacity. The [signed shared-custody sequence](records.md#the-decoded-account-sequence) shows the protected floor through revocation, owner rotation and collection. The [financing contract types](../evidence/account-evidence/execution/foundation/onchain/crates/contracts/src/financing.rs) define the fields used by those programs.
+
 ## The network fee
 
 The fee is a supplier-approved term of each accepted order: a rate, an aggregate cap and a fixed destination.
@@ -165,6 +167,8 @@ Download a trace and run this with its path and a row number:
 ```sh
 python3 -c "import json,lzma,sys; t=json.loads(lzma.open(sys.argv[1]).read()); x=t['transactions'][int(sys.argv[2])]; print(x['name'],x['expected'],x['result'].get('err')); print([r['data'] for r in t['receipts'] if r['address'] in x['account_keys']])" financing-commercial-trace.json.xz 85
 ```
+
+For wallet spending, the [case index](../evidence/account-evidence/account/docs/evidence/wallet-spending-20261101/case-index.json) identifies each transaction by suite and row. The [execution report](../evidence/account-evidence/account/docs/evidence/wallet-spending-20261101/execution-report.json) lists the scenario traces. The [wallet verifier source](../evidence/account-evidence/execution/foundation/onchain/tests/verify_wallet_spending.py) shows how the fixture checks those results.
 
 ## Check the Account records
 
