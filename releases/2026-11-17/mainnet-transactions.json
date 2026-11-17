@@ -1,0 +1,308 @@
+{
+  "record": "Dexter Vault: an owner's balance moved into an earning token and back, inside the owner's wallet",
+  "network": "Solana mainnet-beta",
+  "run_date": "2026-07-18",
+  "read_from": "https://api.mainnet-beta.solana.com",
+  "read_on": "2026-11-17",
+  "commitment": "finalized",
+  "amount_units": "token atoms; USDC and syrupUSDC each have 6 decimals",
+  "vault_program": "Hg3wRaydFtJhYrdvYrKECacpJYDsC9Px7yKmpncj2fhc",
+  "owner_wallet": "6KqP3LHpyGwHL1Ni8u7Hc7cTFdcU9qCDiXNtA5UmSZFk",
+  "vault_account": "7biWWeoDtniC8djiyStts8VzWdXHXPhTyeHztoGimEet",
+  "tokens": {
+    "USDC": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+    "syrupUSDC": "AvZZF1YaZDziPY2RCK4oJrRVrbN3mTD9NL24hPeaZeUj"
+  },
+  "transactions": [
+    {
+      "step": "fund",
+      "signature": "5it5rQgoZ5rGeZ2eGeesM8g9ABNV72E9WShhmspFURsPkwqyKPV9qM9szSYpdiLz2PEXkP23rqMBcuDq7oug8keR",
+      "slot": 433676022,
+      "block_time_utc": "2026-07-18T10:58:47Z",
+      "error": null,
+      "top_level_programs": [
+        "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+        "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+      ],
+      "token_balance_changes": [
+        {
+          "token": "USDC",
+          "holder": "6KqP3LHpyGwHL1Ni8u7Hc7cTFdcU9qCDiXNtA5UmSZFk",
+          "before": 0,
+          "after": 2000000,
+          "change": 2000000
+        },
+        {
+          "token": "USDC",
+          "holder": "FKF63wLt122SLDNPBfpDgrMcQzxtdLfLyrUS1KziRR1h",
+          "before": 18982821,
+          "after": 16982821,
+          "change": -2000000
+        }
+      ]
+    },
+    {
+      "step": "open_wallet",
+      "signature": "5ejecxVFsPU5m3Cvuz8fSaTxQLYAT7bTiHpsuwh18hJd1NtFxa2fufQY8wx8S2YM8SJDVdPWKozf7okhm1nA5Hiv",
+      "slot": 433676025,
+      "block_time_utc": "2026-07-18T10:58:48Z",
+      "error": null,
+      "top_level_programs": [
+        "Hg3wRaydFtJhYrdvYrKECacpJYDsC9Px7yKmpncj2fhc",
+        "Secp256r1SigVerify1111111111111111111111111"
+      ],
+      "token_balance_changes": []
+    },
+    {
+      "step": "buy",
+      "signature": "3a91Esk3yyC2uictro8in3wyT89tBevZAD75v5CG9aWNHKKDnzUz9LrvPp1mEYRBmdRg9tLw86oNJ75S6ZsUMSJa",
+      "slot": 433677158,
+      "block_time_utc": "2026-07-18T11:06:43Z",
+      "error": null,
+      "top_level_programs": [
+        "ComputeBudget111111111111111111111111111111",
+        "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+        "Secp256r1SigVerify1111111111111111111111111",
+        "Hg3wRaydFtJhYrdvYrKECacpJYDsC9Px7yKmpncj2fhc",
+        "swigypWHEksbC64pWKwah1WTeh9JXwx8H1rJHLdbQMB"
+      ],
+      "token_balance_changes": [
+        {
+          "token": "syrupUSDC",
+          "holder": "6fteKNvMdv7tYmBoJHhj1jx6rHcEwC6RdSEmVpyS613J",
+          "before": 2592767282893,
+          "after": 2592766431093,
+          "change": -851800
+        },
+        {
+          "token": "USDC",
+          "holder": "6fteKNvMdv7tYmBoJHhj1jx6rHcEwC6RdSEmVpyS613J",
+          "before": 6982950996546,
+          "after": 6982951996546,
+          "change": 1000000
+        },
+        {
+          "token": "syrupUSDC",
+          "holder": "6KqP3LHpyGwHL1Ni8u7Hc7cTFdcU9qCDiXNtA5UmSZFk",
+          "before": 0,
+          "after": 851800,
+          "change": 851800
+        },
+        {
+          "token": "USDC",
+          "holder": "6KqP3LHpyGwHL1Ni8u7Hc7cTFdcU9qCDiXNtA5UmSZFk",
+          "before": 2000000,
+          "after": 1000000,
+          "change": -1000000
+        }
+      ]
+    },
+    {
+      "step": "sell",
+      "signature": "5q7CEBButxXi4gsZ5e9vVHxPdqQJB3o2Yf17Byo79JrqodvoThLk3R657UvczFwGWv3fNcWkUQ8ATHuUqJxXqbrc",
+      "slot": 433677193,
+      "block_time_utc": "2026-07-18T11:06:57Z",
+      "error": null,
+      "top_level_programs": [
+        "ComputeBudget111111111111111111111111111111",
+        "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+        "Secp256r1SigVerify1111111111111111111111111",
+        "Hg3wRaydFtJhYrdvYrKECacpJYDsC9Px7yKmpncj2fhc",
+        "swigypWHEksbC64pWKwah1WTeh9JXwx8H1rJHLdbQMB"
+      ],
+      "token_balance_changes": [
+        {
+          "token": "syrupUSDC",
+          "holder": "6fteKNvMdv7tYmBoJHhj1jx6rHcEwC6RdSEmVpyS613J",
+          "before": 2592766431093,
+          "after": 2592767282893,
+          "change": 851800
+        },
+        {
+          "token": "USDC",
+          "holder": "6fteKNvMdv7tYmBoJHhj1jx6rHcEwC6RdSEmVpyS613J",
+          "before": 6982951996546,
+          "after": 6982950996748,
+          "change": -999798
+        },
+        {
+          "token": "USDC",
+          "holder": "6KqP3LHpyGwHL1Ni8u7Hc7cTFdcU9qCDiXNtA5UmSZFk",
+          "before": 1000000,
+          "after": 1999798,
+          "change": 999798
+        },
+        {
+          "token": "syrupUSDC",
+          "holder": "6KqP3LHpyGwHL1Ni8u7Hc7cTFdcU9qCDiXNtA5UmSZFk",
+          "before": 851800,
+          "after": 0,
+          "change": -851800
+        }
+      ]
+    },
+    {
+      "step": "fund",
+      "signature": "4TSmiVUx1EfmB87hcyWyDdSKA849CjLe6nLjpcQQ6yQpDp9Ya29iWj5b9xf1vQTfpaDX7NzbCwgbVR8wfxV26rgy",
+      "slot": 433677269,
+      "block_time_utc": "2026-07-18T11:07:28Z",
+      "error": null,
+      "top_level_programs": [
+        "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+        "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+      ],
+      "token_balance_changes": [
+        {
+          "token": "USDC",
+          "holder": "6KqP3LHpyGwHL1Ni8u7Hc7cTFdcU9qCDiXNtA5UmSZFk",
+          "before": 1999798,
+          "after": 3999798,
+          "change": 2000000
+        },
+        {
+          "token": "USDC",
+          "holder": "FKF63wLt122SLDNPBfpDgrMcQzxtdLfLyrUS1KziRR1h",
+          "before": 16982821,
+          "after": 14982821,
+          "change": -2000000
+        }
+      ]
+    },
+    {
+      "step": "buy",
+      "signature": "3fnTzwP3wPoJCNysVaHYFCm3RjRKBu7N5PL3CE5PGdNV2kbvr8cCZuc8Q3tZk6uaq6TLGhHckEUmktkAjeYBFZmX",
+      "slot": 433677279,
+      "block_time_utc": "2026-07-18T11:07:32Z",
+      "error": null,
+      "top_level_programs": [
+        "ComputeBudget111111111111111111111111111111",
+        "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+        "Secp256r1SigVerify1111111111111111111111111",
+        "Hg3wRaydFtJhYrdvYrKECacpJYDsC9Px7yKmpncj2fhc",
+        "swigypWHEksbC64pWKwah1WTeh9JXwx8H1rJHLdbQMB"
+      ],
+      "token_balance_changes": [
+        {
+          "token": "syrupUSDC",
+          "holder": "6fteKNvMdv7tYmBoJHhj1jx6rHcEwC6RdSEmVpyS613J",
+          "before": 2592767282893,
+          "after": 2592766431093,
+          "change": -851800
+        },
+        {
+          "token": "USDC",
+          "holder": "6fteKNvMdv7tYmBoJHhj1jx6rHcEwC6RdSEmVpyS613J",
+          "before": 6982950996748,
+          "after": 6982951996748,
+          "change": 1000000
+        },
+        {
+          "token": "syrupUSDC",
+          "holder": "6KqP3LHpyGwHL1Ni8u7Hc7cTFdcU9qCDiXNtA5UmSZFk",
+          "before": 0,
+          "after": 851800,
+          "change": 851800
+        },
+        {
+          "token": "USDC",
+          "holder": "6KqP3LHpyGwHL1Ni8u7Hc7cTFdcU9qCDiXNtA5UmSZFk",
+          "before": 3999798,
+          "after": 2999798,
+          "change": -1000000
+        }
+      ]
+    },
+    {
+      "step": "sell",
+      "signature": "28puEGSVDXWukxdHDATkAK4drdkcYqqTKybDMAzApjnexS1YUmfjyx2JevBTrhfB1CRbc27yBUsb7rWzRPkSUrED",
+      "slot": 433677311,
+      "block_time_utc": "2026-07-18T11:07:46Z",
+      "error": null,
+      "top_level_programs": [
+        "ComputeBudget111111111111111111111111111111",
+        "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+        "Secp256r1SigVerify1111111111111111111111111",
+        "Hg3wRaydFtJhYrdvYrKECacpJYDsC9Px7yKmpncj2fhc",
+        "swigypWHEksbC64pWKwah1WTeh9JXwx8H1rJHLdbQMB"
+      ],
+      "token_balance_changes": [
+        {
+          "token": "syrupUSDC",
+          "holder": "6fteKNvMdv7tYmBoJHhj1jx6rHcEwC6RdSEmVpyS613J",
+          "before": 2592766431093,
+          "after": 2592767282893,
+          "change": 851800
+        },
+        {
+          "token": "USDC",
+          "holder": "6fteKNvMdv7tYmBoJHhj1jx6rHcEwC6RdSEmVpyS613J",
+          "before": 6982951996748,
+          "after": 6982950996950,
+          "change": -999798
+        },
+        {
+          "token": "USDC",
+          "holder": "6KqP3LHpyGwHL1Ni8u7Hc7cTFdcU9qCDiXNtA5UmSZFk",
+          "before": 2999798,
+          "after": 3999596,
+          "change": 999798
+        },
+        {
+          "token": "syrupUSDC",
+          "holder": "6KqP3LHpyGwHL1Ni8u7Hc7cTFdcU9qCDiXNtA5UmSZFk",
+          "before": 851800,
+          "after": 0,
+          "change": -851800
+        }
+      ]
+    },
+    {
+      "step": "withdrawal_request",
+      "signature": "3AJzQqwtz3Y2dewLzm89wQCzucCC5Aa2Fnm2qgje5Gup8Xt3efiXn76ds1qo34JJuxB3Nhnr2ZUAJeBmrDLvdJwW",
+      "slot": 433677319,
+      "block_time_utc": "2026-07-18T11:07:49Z",
+      "error": null,
+      "top_level_programs": [
+        "Secp256r1SigVerify1111111111111111111111111",
+        "Hg3wRaydFtJhYrdvYrKECacpJYDsC9Px7yKmpncj2fhc"
+      ],
+      "token_balance_changes": []
+    },
+    {
+      "step": "withdrawal",
+      "signature": "5QGAzPYPbAT3C1JuVXJfqJSy21X9jJ3fRfw4V6gTmG2X2y4PP2t5Wm7JpS6PAkwQT7Q4bmKFdeuats1NzZZFj8zm",
+      "slot": 433677322,
+      "block_time_utc": "2026-07-18T11:07:50Z",
+      "error": null,
+      "top_level_programs": [
+        "ComputeBudget111111111111111111111111111111",
+        "Secp256r1SigVerify1111111111111111111111111",
+        "Hg3wRaydFtJhYrdvYrKECacpJYDsC9Px7yKmpncj2fhc",
+        "swigypWHEksbC64pWKwah1WTeh9JXwx8H1rJHLdbQMB"
+      ],
+      "token_balance_changes": [
+        {
+          "token": "USDC",
+          "holder": "6KqP3LHpyGwHL1Ni8u7Hc7cTFdcU9qCDiXNtA5UmSZFk",
+          "before": 3999596,
+          "after": 0,
+          "change": -3999596
+        },
+        {
+          "token": "USDC",
+          "holder": "FKF63wLt122SLDNPBfpDgrMcQzxtdLfLyrUS1KziRR1h",
+          "before": 14982821,
+          "after": 18482417,
+          "change": 3499596
+        },
+        {
+          "token": "USDC",
+          "holder": "WFEErkBoqbQ2deE998izRVoS59H52Yf3Qbc4rb6q8mj",
+          "before": 7004208,
+          "after": 7504208,
+          "change": 500000
+        }
+      ]
+    }
+  ]
+}
