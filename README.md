@@ -32,7 +32,7 @@ The [company reference](https://dexter.cash/llms.txt) explains the problem and t
 
 | Result | Read it |
 |---|---|
-| Dexter signed a payout to the wrong recipient with its own payment key. Vault refused it, and the approved store collected the same claim. The case also records refusals of a copycat charge, an amount above the remaining limit and a charge after expiry. Dexter operated the demonstration stores on Solana mainnet on October 30, 2026. | [Case record](https://dexter.cash/mandate?case=b0ee0521-898e-828b-9c14-265bfb59216c), [transactions](excerpts/records.md#the-oct-30-mainnet-record), [signed record](evidence/historical-evidence/record.json) |
+| Dexter signed a payout to the wrong recipient with its own payment key. The program refused it, and the approved store collected the same claim. The case also records refusals of a copycat charge, an amount above the remaining limit and a charge after expiry. Dexter operated the demonstration stores on Solana mainnet on October 30, 2026. | [Case record](https://dexter.cash/mandate?case=b0ee0521-898e-828b-9c14-265bfb59216c), [transactions](excerpts/records.md#the-oct-30-mainnet-record), [signed record](evidence/historical-evidence/record.json) |
 | A separate signer collected the supplier's earned payment after the owner revoked the agent and the financier cooperatively rotated its owner key. The payable fell from 100,000 token atoms to zero. Unused backing stayed at 200,000 and buyer debt stayed at 100,000. The compiled Account programs ran on a local SVM with synthetic assets. | [Decoded sequence](excerpts/records.md#the-decoded-account-sequence), [15 recorded scenarios](excerpts/records.md#fifteen-recorded-scenarios), [case index](evidence/account-evidence/account/docs/evidence/wallet-spending-20261101/case-index.json) |
 | After the initiating actor's revocation, a supplier claimed 1,400 units. The work record supported 900. A separate signer collected 900 for the supplier, and the buyer still owed the financier 900. The SDK/RPC run used synthetic work records on a local validator. | [Billing record](excerpts/records.md#billing-after-revocation) |
 | The supplier recovered its account between two collections. The first 400 units and the remaining 500 reached the same custody. Two of three enrolled guardians authorized the new key on compiled Account programs in a local runtime. | [Recovery record](excerpts/records.md#guardian-recovery-between-collections), [guardian policy and original trace](releases/2026-11-06/recovery/README.md) |
@@ -61,7 +61,7 @@ The rules are in the [program source](https://github.com/Dexter-DAO/dexter-artic
 
 | Article | Evidence | Package |
 |---|---|---|
-| **[The Account Inversion](articles/the-account-inversion/)**<br>From Account Holder to Account Owner | [Claims, records and checks](articles/the-account-inversion/README.md) | [November 6b ZIP](https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-06b/dexter-article-evidence-2026-11-06b.zip) |
+| **[Turns Out the Impasse Was a Tech Problem](articles/the-account-inversion/)**<br>Agentic Commerce Is at an Impasse Because Account Holders Are Not Account Owners. That Problem Is Now Solved. | [Claims, records and checks](articles/the-account-inversion/README.md) | [November 6b ZIP](https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-06b/dexter-article-evidence-2026-11-06b.zip) |
 
 ## Evidence library
 

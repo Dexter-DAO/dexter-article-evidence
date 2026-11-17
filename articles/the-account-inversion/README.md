@@ -2,9 +2,9 @@
   <img src="https://raw.githubusercontent.com/Dexter-DAO/dexter-x402-sdk/main/assets/dexter-wordmark.svg" alt="Dexter" width="360">
 </p>
 
-<h1 align="center">The Account Inversion</h1>
+<h1 align="center">Turns Out the Impasse Was a Tech Problem</h1>
 
-<p align="center"><strong>From Account Holder to Account Owner</strong></p>
+<p align="center"><strong>Agentic Commerce Is at an Impasse Because Account Holders Are Not Account Owners. That Problem Is Now Solved.</strong></p>
 
 <p align="center">
   <a href="../../README.md#articles">All articles</a> &middot;
@@ -21,7 +21,7 @@ A supplier collected payment for accepted work after the initiating agent lost i
 
 | Article claim | Inspect it |
 |---|---|
-| Dexter signed a diversion with its own payment key. Vault refused it, and the approved store collected the same claim. The transaction ran on Solana mainnet on October 30, 2026, against Dexter-operated demonstration stores. | [Case page](https://dexter.cash/mandate?case=b0ee0521-898e-828b-9c14-265bfb59216c), [transaction links](../../excerpts/records.md#the-oct-30-mainnet-record), [signed record](../../evidence/historical-evidence/record.json) |
+| Dexter signed a diversion with its own payment key. The program refused it, and the approved store collected the same claim. The transaction ran on Solana mainnet on October 30, 2026, against Dexter-operated demonstration stores. | [Case page](https://dexter.cash/mandate?case=b0ee0521-898e-828b-9c14-265bfb59216c), [transaction links](../../excerpts/records.md#the-oct-30-mainnet-record), [signed record](../../evidence/historical-evidence/record.json) |
 | On compiled Account programs on a local SVM, with synthetic assets, protected backing survives attempted spending, revocation of the initiating agent and cooperative rotation of owner authority. A separate signer then collects an earned supplier payment, and unused backing and financing debt stay intact. | [Decoded Account sequence](../../excerpts/records.md#the-decoded-account-sequence), [source and explanation](../../excerpts/account-programs.md), [script that checks it](https://raw.githubusercontent.com/Dexter-DAO/dexter-article-evidence/main/evidence/account-evidence/inspect_article_claim.py), [collection source](https://raw.githubusercontent.com/Dexter-DAO/dexter-article-evidence/main/evidence/account-evidence/execution/foundation/onchain/programs/claims-core/src/funding_collection.rs) |
 | In Dexter's Vault program source, pinned at 7dbd239, passkey approval binds the wallet grant, and claim discharge is tied to the actual payment. | [WebAuthn verifier](https://raw.githubusercontent.com/Dexter-DAO/dexter-article-evidence/main/evidence/account-evidence/vault/programs/dexter-vault/src/verify/webauthn.rs), [grant installation](https://raw.githubusercontent.com/Dexter-DAO/dexter-article-evidence/main/evidence/account-evidence/vault/programs/dexter-vault/src/instructions/grant_agent_session.rs), [settlement check](https://raw.githubusercontent.com/Dexter-DAO/dexter-article-evidence/main/evidence/account-evidence/vault/programs/dexter-vault/src/instructions/settle_locked_voucher.rs) |
 | After revocation, an independent signer collected the 900 units the supplier had earned, and the buyer's debt to the financier remained 900. The local SDK/RPC run used synthetic work records. | [Billing results](../../excerpts/records.md#billing-after-revocation), [execution guide](../../releases/2026-11-06/billing/README.md) |
