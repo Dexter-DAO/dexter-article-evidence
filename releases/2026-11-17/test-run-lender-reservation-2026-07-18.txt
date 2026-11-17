@@ -1,0 +1,8 @@
+  c8b — welded-vault BUY reservation (credit-node branch)
+    ✔ c8b-0. happy welded BUY above the credit reservation succeeds (32242ms)
+    ✔ c8b-1. welded BUY dipping below subtree_draw reverts SwapWouldViolateReservation (959ms)
+    ✔ c8b-2. welded BUY with node:null reverts CreditNodeRequired (15002ms)
+
+
+  3 passing (5m)
+

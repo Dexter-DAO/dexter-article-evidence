@@ -14,6 +14,12 @@
       "index": "../../evidence/historical-evidence/evidence-index.json"
     },
     {
+      "id": "earning-balance",
+      "guide": "../../releases/2026-11-17/README.md",
+      "record": "../../releases/2026-11-17/mainnet-transactions.json",
+      "tests": "../../releases/2026-11-17/test-run-2026-07-18.txt"
+    },
+    {
       "id": "account-commitments",
       "guide": "../../excerpts/records.md#the-decoded-account-sequence",
       "sequence": "../../evidence/account-evidence/checks/article-claim-check-20261104.json",
@@ -43,6 +49,10 @@
       "claims": "../../releases/2026-11-06/claims.json",
       "tag": "2026-11-06b",
       "download": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/tag/2026-11-06b"
+    },
+    {
+      "date": "2026-11-17",
+      "guide": "../../releases/2026-11-17/README.md"
     }
   ],
   "previous_releases": [

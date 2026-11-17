@@ -1,0 +1,23 @@
+  swap-for-carry e2e — delta-sandwich through a real cloned Whirlpool
+      [tx-size] BUY v0+ALT wire = 867B (cap 1232B)
+      [price] BUY exec 1.17392728 USDC/syrup vs quote 1.17392728 (spent 25000000, gained 21296038, quoted out 21296038, min_out 21083078)
+    ✔ A. happy BUY — $25 USDC -> syrupUSDC through the real cloned pool (32492ms)
+      [tx-size] SELL v0+ALT wire = 867B (cap 1232B)
+      [price] SELL exec 1.17369245 USDC/syrup vs quote 1.17369240 (sold 21296038, gained 24994999, quoted out 24994998, min_out 24745049)
+    ✔ B. happy SELL — the full syrup position back to USDC (29132ms)
+    ✔ c1. missing finish_swap — bracket cannot open without its close (SwapBracketNotClosed) (768ms)
+    ✔ c2. finish_swap for a DIFFERENT vault at [+2] (SwapBracketNotClosed) (99407ms)
+    ✔ c3. SignV2 wrapping TWO inner instructions — route + siphon transfer (SwapEnvelopeInvalid) (29110ms)
+    ✔ c4. SignV2 wrapping a non-Jupiter inner program — plain TransferChecked (SwapEnvelopeInvalid) (29034ms)
+    ✔ c5. min_out tampered AFTER passkey signing (PasskeyVerificationFailed) (766ms)
+    ✔ c6. replay of the already-executed BUY intent — same signature, same nonce (SwapNonceMismatch) (513ms)
+    ✔ c7. expiry_slot in the past (SwapIntentExpired) (767ms)
+    ✔ c8. BUY that would strip USDC below outstanding locks (SwapWouldViolateReservation) (42018ms)
+    ✔ c9. asset_config disabled (AssetConfigDisabled) (27678ms)
+    ✔ c10. intent signed for a DIFFERENT vault — cross-vault replay (PasskeyVerificationFailed) (771ms)
+    ✔ c11. exact-input guard — amount_in over-claims the route's real spend (SwapDeltaShortfall) (966ms)
+    ✔ D. no partial state — vault balances are UNCHANGED across all of c1-c11 (382ms)
+
+
+  14 passing (7m)
+
