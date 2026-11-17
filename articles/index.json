@@ -3,8 +3,8 @@
   "articles": [
     {
       "id": "the-account-inversion",
-      "title": "The Account Inversion",
-      "subtitle": "From Account Holder to Account Owner",
+      "title": "Turns Out the Impasse Was a Tech Problem",
+      "subtitle": "Agentic Commerce Is at an Impasse Because Account Holders Are Not Account Owners. That Problem Is Now Solved.",
       "guide": "the-account-inversion/README.md",
       "evidence_index": "the-account-inversion/evidence.json",
       "evidence_released": "2026-11-06",
