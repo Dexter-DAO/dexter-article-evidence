@@ -6,6 +6,8 @@ This page quotes what [dexter.cash/llms.txt](https://dexter.cash/llms.txt) and t
 
 The `accept` instruction in [funding.rs](https://raw.githubusercontent.com/Dexter-DAO/dexter-article-evidence/main/evidence/account-evidence/execution/foundation/onchain/programs/claims-core/src/funding.rs), lines 391 to 476, calls `reserve` in the Registry's [lib.rs](https://raw.githubusercontent.com/Dexter-DAO/dexter-article-evidence/main/evidence/account-evidence/execution/foundation/onchain/programs/principal-registry/src/lib.rs) inside the same transaction. Any failed check fails the whole transaction.
 
+The [November 18 commit record](../releases/2026-11-18/README.md) shows these checks refusing. On the compiled programs, the commit accepted an order with all three present and refused 23 attempts that each lacked one: eight for the owner's permission, five for the money and ten for the deal. Each refusal names its program error and trace row. The [shared-reserve record](../releases/2026-11-18/shared-reserve/README.md) shows the budget and the cash floor refusing a second order that would overdraw them.
+
 Did the owner say yes? The agent's current key signs, under an active mandate at its exact revision, inside the per-operation ceiling and the shared budget.
 
 ```rust
