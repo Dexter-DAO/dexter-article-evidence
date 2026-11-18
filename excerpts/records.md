@@ -110,6 +110,25 @@ From line 5 of the [Account evidence guide](../evidence/account-evidence/README.
 254:     "verified_actual_adapter_swaps": 4,
 ```
 
+## Twelve refused wallet operations
+
+The [case index](https://raw.githubusercontent.com/Dexter-DAO/dexter-article-evidence/main/evidence/account-evidence/account/docs/evidence/wallet-spending-20261101/case-index.json) of the Nov 1, 2026 Account records names all 300 transactions in the send, shared and swap suites by suite and index. These rows are refusals of wallet sends, a withdrawal and a swap. The first eight are sends that PrincipalRegistry refused while authorizing the wallet. The last four are a withdrawal, two sends and a swap that ClaimsCore refused because each would leave the wallet below its committed backing. Error 6033 is `SpendingPermission` in PrincipalRegistry and `FundingCashShortfall` in ClaimsCore, so each row names its program and error:
+
+- wallet-spending-send 77, "per-operation ceiling refuses one excess token", PrincipalRegistry `SpendingPermission`, error 6033.
+- wallet-spending-send 81, "cumulative authority cannot be refilled by a new request id", PrincipalRegistry `SpendingPermission`, error 6033.
+- wallet-spending-send 86, "standing permission cannot start before its not-before bound", PrincipalRegistry `SpendingPermission`, error 6033.
+- wallet-spending-send 88, "standing permission expires at its exclusive time boundary", PrincipalRegistry `SpendingPermission`, error 6033.
+- wallet-spending-send 91, "revocation prevents a previously unused delegated send", PrincipalRegistry `SpendingPermission`, error 6033.
+- wallet-spending-send 98, "spending approval cannot use another principal's capital", PrincipalRegistry `FundingAction`, error 6030.
+- wallet-spending-send 102, "owner rotation invalidates an old-generation unused permission", PrincipalRegistry `WalletGeneration`, error 6020.
+- wallet-spending-send 62, "changed signed bundle hash cannot authorize an ordinary send", PrincipalRegistry `WalletBundleHash`, error 6025.
+- wallet-spending-shared 73, "ordinary withdrawal preserves the same canonical reserve floor", ClaimsCore `FundingCashShortfall`, error 6033.
+- wallet-spending-shared 72, "a separate exact owner approval cannot spend one committed token", ClaimsCore `FundingCashShortfall`, error 6033.
+- wallet-spending-shared 69, "fresh authorization still refuses spending another facility's backing", ClaimsCore `FundingCashShortfall`, error 6033.
+- wallet-spending-swap 97, "owner-approved swap cannot convert accepted supplier backing into another asset", ClaimsCore `FundingCashShortfall`, error 6033.
+
+Rows 69 and 72 of the shared suite open [the decoded Account sequence](#the-decoded-account-sequence) above.
+
 ## Billing after revocation
 
 After the initiating agent lost authority, a supplier claimed 1,400 units. The work record supported 900. A separate signer collected 900 for the supplier, and the buyer's debt remained 900. The [billing receipt](../releases/2026-11-06/billing/joined-rpc-receipt.json) records the SDK transactions on a local validator with synthetic work records. Amounts below are fixture token units.
