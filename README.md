@@ -64,7 +64,7 @@ The rules behind the November 1 refusals are in the [program source](https://git
 
 | Article | Evidence | Package |
 |---|---|---|
-| **[Turns Out the Impasse Was a Tech Problem](articles/the-account-inversion/)**<br>Agentic Commerce Is at an Impasse Because Account Holders Are Not Account Owners. That Problem Is Now Solved. | [Claims, records and checks](articles/the-account-inversion/README.md) | [November 6b ZIP](https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-06b/dexter-article-evidence-2026-11-06b.zip)<br>Records through November 6 |
+| **[Turns Out the Impasse Was a Tech Problem](articles/the-account-inversion/)**<br>Agentic Commerce Is at an Impasse Because Account Holders Are Not Account Owners. That Problem Is Now Solved. | [Claims, records and checks](articles/the-account-inversion/README.md) | [November 18 ZIP](https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-18/dexter-article-evidence-2026-11-18.zip)<br>Records through November 18 |
 
 ## Evidence library
 
@@ -88,7 +88,7 @@ Article guides link each claim to specific records and source. Each collection g
 git clone https://github.com/Dexter-DAO/dexter-article-evidence.git
 ```
 
-The [November 6b ZIP](https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-06b/dexter-article-evidence-2026-11-06b.zip) and its [SHA-256 checksum](https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-06b/SHA256SUMS) hold the repository as of November 6, 2026: the November 4 collection and the November 6 records. The November 17 and November 18 releases came later and are in the repository, each folder with its own `SHA256SUMS`. That includes the [current verifier](releases/2026-11-18/verifier/README.md) for the Oct 30 record.
+The [November 18 ZIP](https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-18/dexter-article-evidence-2026-11-18.zip) and its [SHA-256 checksum](https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-18/SHA256SUMS) hold the same files: the November 4 collection, the November 6 records, the July 18 earning run and the November 18 records, with the [current verifier](releases/2026-11-18/verifier/README.md) for the Oct 30 record. Each release folder has its own `SHA256SUMS`.
 
 The [article catalog](https://raw.githubusercontent.com/Dexter-DAO/dexter-article-evidence/main/articles/index.json) is a machine-readable starting point. Evidence manifests and provenance files identify exact source revisions.
 
