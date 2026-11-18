@@ -30,6 +30,12 @@
       "source": "../../releases/2026-11-18/named-signer/source/"
     },
     {
+      "id": "account-program-source",
+      "guide": "../../releases/2026-11-18/source/README.md",
+      "manifest": "../../releases/2026-11-18/source/provenance.json",
+      "source": "../../releases/2026-11-18/source/foundation/"
+    },
+    {
       "id": "historical-mainnet-case",
       "record": "../../evidence/historical-evidence/record.json",
       "findings": "../../evidence/historical-evidence/findings.txt",
@@ -39,7 +45,8 @@
       "id": "earning-balance",
       "guide": "../../releases/2026-11-17/README.md",
       "record": "../../releases/2026-11-17/mainnet-transactions.json",
-      "tests": "../../releases/2026-11-17/test-run-2026-07-18.txt"
+      "tests": "../../releases/2026-11-17/test-run-2026-07-18.txt",
+      "source": "../../releases/2026-11-17/source/"
     },
     {
       "id": "account-commitments",
@@ -62,6 +69,10 @@
       "id": "standing-commerce",
       "guide": "../../excerpts/records.md#one-purchase-from-admission-to-collection",
       "record": "../../releases/2026-11-06/continuing-api/SELECTED-RECORDS.json"
+    },
+    {
+      "id": "world-chain-bridge",
+      "guide": "https://github.com/Dexter-DAO/world-chain-bridge"
     }
   ],
   "later_releases": [

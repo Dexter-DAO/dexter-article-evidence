@@ -97,7 +97,7 @@ The binaries are the ones the [commit record](../README.md) ran, built from comm
 | PoolIssuer | `3yceApSVxLYihHjLLrCycV8T4Bg1MYggbxQhdzaqB2Sm` | `6804757b94ce2da8854388a1f748b614296207682db27cde85958f868b726e65` |
 | Swig | `swigypWHEksbC64pWKwah1WTeh9JXwx8H1rJHLdbQMB` | `bb744d9811c392e3f343952d1a99bef9c97aa1936248a23b9d7efc1adb8939c1` |
 
-The source lines in the case index (`error_source`) refer to that commit. The [program source in this repository](../../../evidence/account-evidence/execution/foundation/onchain/programs) is the earlier pin of the November 1 records, `fb2a3a4`.
+The source lines in the case index (`error_source`) refer to that commit. Its complete source, all 69 inputs, is in [../source/](../source/README.md). The [program source under `evidence/`](../../../evidence/account-evidence/execution/foundation/onchain/programs) is the earlier pin of the November 1 records, `fb2a3a4`.
 
 ## Files
 
