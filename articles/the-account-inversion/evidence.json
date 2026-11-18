@@ -8,6 +8,13 @@
   "archive_sha256": "64834cdfc45f4792f1445a952fa0791156dff6226c02fc89c86495785aeaddf1",
   "evidence": [
     {
+      "id": "three-way-commit",
+      "guide": "../../releases/2026-11-18/README.md",
+      "record": "../../releases/2026-11-18/commit-legs-trace.json.xz",
+      "index": "../../releases/2026-11-18/case-index.json",
+      "tests": "../../releases/2026-11-18/commit_legs.py"
+    },
+    {
       "id": "historical-mainnet-case",
       "record": "../../evidence/historical-evidence/record.json",
       "findings": "../../evidence/historical-evidence/findings.txt",
@@ -53,6 +60,10 @@
     {
       "date": "2026-11-17",
       "guide": "../../releases/2026-11-17/README.md"
+    },
+    {
+      "date": "2026-11-18",
+      "guide": "../../releases/2026-11-18/README.md"
     }
   ],
   "previous_releases": [

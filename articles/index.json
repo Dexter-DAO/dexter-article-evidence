@@ -9,6 +9,20 @@
       "evidence_index": "the-account-inversion/evidence.json",
       "evidence_released": "2026-11-06",
       "later_evidence": "../releases/2026-11-06/README.md",
+      "later_releases": [
+        {
+          "date": "2026-11-06",
+          "guide": "../releases/2026-11-06/README.md"
+        },
+        {
+          "date": "2026-11-17",
+          "guide": "../releases/2026-11-17/README.md"
+        },
+        {
+          "date": "2026-11-18",
+          "guide": "../releases/2026-11-18/README.md"
+        }
+      ],
       "first_evidence_released": "2026-11-04"
     }
   ],
