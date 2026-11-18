@@ -34,6 +34,14 @@
       "source": "../../releases/2026-11-18/pinned-delivery/source/"
     },
     {
+      "id": "owner-pinned-price",
+      "guide": "../../releases/2026-11-18/pinned-price/README.md",
+      "record": "../../releases/2026-11-18/pinned-price/pinned-price-trace.json.xz",
+      "index": "../../releases/2026-11-18/pinned-price/case-index.json",
+      "tests": "../../releases/2026-11-18/pinned-price/pinned_price.py",
+      "source": "../../releases/2026-11-18/pinned-price/source/"
+    },
+    {
       "id": "shared-reserve",
       "guide": "../../releases/2026-11-18/shared-reserve/README.md",
       "record": "../../releases/2026-11-18/shared-reserve/shared-reserve-receipt.json",
