@@ -241,7 +241,7 @@ npm ci --ignore-scripts --no-audit --no-fund
 node verify.mjs ../../../../evidence/historical-evidence/record.json --rpc https://YOUR-ARCHIVAL-SOLANA-RPC
 ```
 
-That command is read-only. The verifier copy inside the November 4 package is kept unchanged as approved and fails at the archive line, where the Internet Archive now redirects the record's link; the verifier in `releases/2026-11-18/verifier` is the current one.
+That command is read-only. The verifier in `releases/2026-11-18/verifier` is the current one. The copy inside the November 4 package predates the Internet Archive's redirect of the record's link and is kept unchanged as approved.
 
 The [case record](../evidence/historical-evidence/record.json) timestamps approval at **06:27:37 UTC on October 30, 2026**. Its [recorded Wayback URL](https://web.archive.org/web/20261030025533id_/https://dexter.cash/.well-known/did.json) redirects to the [06:28:57 UTC capture](https://web.archive.org/web/20261030062857id_/https://dexter.cash/.well-known/did.json), 80 seconds after approval. The capture's 910 bytes match the seller document hash in the signed binding: `eaa77c5e24fb7356749890577a60887cd5464c2b8d2f0750e592cea3c4e83c03`. That capture establishes the file's contents after approval.
 
