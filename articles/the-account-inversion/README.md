@@ -7,6 +7,7 @@
 <p align="center"><strong>Agentic Commerce Is at an Impasse Because Account Holders Are Not Account Owners. That Problem Is Now Solved.</strong></p>
 
 <p align="center">
+  <a href="https://x.com/BranchManager69/status/2123118207779143791">Read the article</a> &middot;
   <a href="../../README.md#articles">All articles</a> &middot;
   <a href="#start-with-a-claim">Evidence by claim</a> &middot;
   <a href="https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-18b/dexter-article-evidence-2026-11-18b.zip">Download November 18b ZIP</a> &middot;
