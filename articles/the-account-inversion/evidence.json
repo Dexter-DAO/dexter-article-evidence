@@ -22,6 +22,14 @@
       "tests": "../../releases/2026-11-18/shared-reserve/shared_reserve.py"
     },
     {
+      "id": "named-delivery-signer",
+      "guide": "../../releases/2026-11-18/named-signer/README.md",
+      "record": "../../releases/2026-11-18/named-signer/named-signer-trace.json.xz",
+      "index": "../../releases/2026-11-18/named-signer/case-index.json",
+      "tests": "../../releases/2026-11-18/named-signer/named_signer.py",
+      "source": "../../releases/2026-11-18/named-signer/source/"
+    },
+    {
       "id": "historical-mainnet-case",
       "record": "../../evidence/historical-evidence/record.json",
       "findings": "../../evidence/historical-evidence/findings.txt",
