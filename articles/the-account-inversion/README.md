@@ -4,7 +4,7 @@
 
 <h1 align="center">Turns Out the Impasse Was a Tech Problem</h1>
 
-<p align="center"><strong>Agentic Commerce Is at an Impasse Because Account Holders Are Not Account Owners. That Problem Is Now Solved.</strong></p>
+<p align="center"><strong>Agentic commerce is at an impasse because banks won’t stand behind an agent’s promise to pay, and stores won’t take that promise on its own. That problem is now solved — and the implications could reach far beyond both agents and commerce.</strong></p>
 
 <p align="center">
   <a href="https://x.com/BranchManager69/status/2123118207779143791">Read the article</a> &middot;
