@@ -1,0 +1,24 @@
+# Test fixture for foundation/onchain/tests/early_settlement.py; its own workspace.
+[package]
+name = "delivery-rule"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+name = "delivery_rule"
+
+[dependencies]
+anchor-lang = "=1.2.2"
+
+[workspace]
+
+[profile.release]
+overflow-checks = true
+lto = "fat"
+codegen-units = 1
+
+[lints.rust.unexpected_cfgs]
+level = "warn"
+check-cfg = ['cfg(target_os, values("solana"))', 'cfg(feature, values("custom-heap", "custom-panic"))']

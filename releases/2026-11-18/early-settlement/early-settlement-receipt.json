@@ -1,0 +1,79 @@
+{
+  "runs": {
+    "early-settlement": {
+      "status": "passed",
+      "trace": "early-settlement-trace.json.xz",
+      "trace_sha256": "4abdd7209b4e0e1a2d34288c5670dc57f20961dfa117c088b72ebd7b3cf175cd",
+      "transaction_count": 105,
+      "refused": 21,
+      "assertions": 517,
+      "receipts": 22,
+      "maximum_signed_packet": 3221,
+      "build_receipt_sha256": "72224cfa23d09a8ef4e854d44075c0590ae9cef58bade42d26339042ae5d92bd",
+      "idl_receipt_sha256": "9af69cd713b9f60cbe0debe0fff6764f61f8473d0092729f8162c8dff18ea5b3",
+      "trace_xz_sha256": "536c60715ca64a59423b7a49c84805159ff232cb9ff1782495ff76c3a8fe538b",
+      "annotated_cases": 50,
+      "annotated_refusals": 21,
+      "annotated_acceptances": 29,
+      "roles": {
+        "buyer's owner": "3BuW9SR5tG6VFK4MmkQQ3Ak8ny1K1Vv5Uz7is8Aa5pwG",
+        "agent 1": "Cdkrk8tujFY6mTyGwFgKpnbiGc1hqtXCog1qvUdKAe6D",
+        "agent 2": "5WcE8o73vmsSZXeeWTLm3ty3fAJKCnBWRF6VuKUme5nu",
+        "seller": "4MfyR4G3NWfVRDWo6iNAHDBZqWMgwZX6FNtMqEW3a9JT",
+        "carrier (ed25519 delivery signer)": "GFKfRLPKHYRyARLSTc4p94vukKPMFAkSrQT5j55WYoy2",
+        "lender's owner": "6TcyBfPdBt1kjsvDZLzmBFnuMaLWiTaAt4RjUr9VA5YD",
+        "credit issuer's owner": "FMUEmtxhU46GzhKF4FW9MLJdQWiLgjiXP9TYRWSrqTpV",
+        "fee payer of setup and order transactions": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9",
+        "key that submits signed records": "92CudvFbL7Tyw2RkWC7NU1ehdNBSjy8FEG1TsJaN8wgz",
+        "key that finalizes": "4ap9kAPdHiV82d8D73mrtEgwGxBbUxJgyFr1fRGLhide",
+        "key that collects": "6jQ7iw7szEgN6hp49SAAMagYSYdDAZTQRDF3b8vTLNqM"
+      }
+    },
+    "early-settlement-recoverable": {
+      "status": "passed",
+      "trace": "early-settlement-recoverable-trace.json.xz",
+      "trace_sha256": "42d579bf941fdcbfd4a26b22b9c7f5b4629025fc958935053ea96d8e32e11cab",
+      "transaction_count": 67,
+      "refused": 2,
+      "assertions": 116,
+      "receipts": 9,
+      "maximum_signed_packet": 2963,
+      "build_receipt_sha256": "72224cfa23d09a8ef4e854d44075c0590ae9cef58bade42d26339042ae5d92bd",
+      "idl_receipt_sha256": "9af69cd713b9f60cbe0debe0fff6764f61f8473d0092729f8162c8dff18ea5b3",
+      "trace_xz_sha256": "002991a8e5f53e401910b6d2c6db49cd6fd23aba11256bb9d7bb229e0a503edb",
+      "annotated_cases": 6,
+      "annotated_refusals": 2,
+      "annotated_acceptances": 4,
+      "roles": {
+        "buyer's owner": "3BuW9SR5tG6VFK4MmkQQ3Ak8ny1K1Vv5Uz7is8Aa5pwG",
+        "agent": "Cdkrk8tujFY6mTyGwFgKpnbiGc1hqtXCog1qvUdKAe6D",
+        "seller's owner": "4MfyR4G3NWfVRDWo6iNAHDBZqWMgwZX6FNtMqEW3a9JT",
+        "source principal's owner": "7nLFtY5yiR4CZnkB6bYMth3bbAns9DnFhtgjHGqcCiRn"
+      }
+    }
+  },
+  "run_seconds": 0.98,
+  "engine": "solders 0.29.0 LiteSVM",
+  "program_sha256": {
+    "principal_registry.so": "f6f4052ceb824561f98718176bb4d32d7851a603a949b750aecf2b9465587659",
+    "pool_issuer.so": "6804757b94ce2da8854388a1f748b614296207682db27cde85958f868b726e65",
+    "claims_core.so": "a96472c1e26f35fcabe9a5af9122c2d807c1048ba8a7a511dc0b2ea5473b69f2"
+  },
+  "rule_program": {
+    "source": "foundation/test-programs/delivery-rule",
+    "sha256": "4f16350c3aa170832750179d5fd304d2d3cd60e42c5ba02a21e79943c56142ec",
+    "source_sha256": {
+      "Cargo.toml": "b2540c151c0927138d816a3a877c8fbcd234ea679e7826b8819e0b93f8f479ff",
+      "Cargo.lock": "61c2ac477cecf8cef527ddaf0b4f25c88888e469e7a289c41db5e236529c26cb",
+      "src/lib.rs": "a8cc7b515a9f9da6c1cc465089d2208a219ef4e71b35dbdb95ada0204bc45f06"
+    },
+    "immutable_address": "uY46ibBrA5pEsx4z8iiQ6BpNeBuMR6weo4u2ubREB9q",
+    "upgradeable_address": "8ESb6S2iPPgUes97tCQJPn7PTNbkWtfQLGqKgFXyvwrr",
+    "upgrade_authority": "Gymcte79ALGtFrWybRxqb7M7uRjnbjgaHjGgQf1v4qB8",
+    "delivery_source": "9j3Dn1ix4qEc4g4f1rDRWNgfm8c4DgmVxHQNNorR4hxN",
+    "source_identity": "98ef73239ea5dd0aff93d084bb91cd3b67116779e6a9d63af34d71342d079fdc"
+  },
+  "swig_sha256": "bb744d9811c392e3f343952d1a99bef9c97aa1936248a23b9d7efc1adb8939c1",
+  "build_receipt_sha256": "72224cfa23d09a8ef4e854d44075c0590ae9cef58bade42d26339042ae5d92bd",
+  "idl_receipt_sha256": "9af69cd713b9f60cbe0debe0fff6764f61f8473d0092729f8162c8dff18ea5b3"
+}
