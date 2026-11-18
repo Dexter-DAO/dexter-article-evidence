@@ -1,6 +1,6 @@
 # Account program source at the November 18 commit
 
-This folder holds the complete source the November 18 binaries were built from: the three Account programs, ClaimsCore, PrincipalRegistry and PoolIssuer, and the types they share. It is commit `e55c0ad3a224a1c4e72de4c283161345d438caaf` of the Dexter Account repository, the commit every November 18 record ran: the [commit record](../README.md), the [shared-reserve record](../shared-reserve/README.md) and the [named-signer record](../named-signer/README.md).
+This folder holds the complete source of the three Account programs, ClaimsCore, PrincipalRegistry and PoolIssuer, and the types they share, at commit `e55c0ad3a224a1c4e72de4c283161345d438caaf` of the Dexter Account repository. It is the source the binaries were built from for the [commit](../README.md), [shared-reserve](../shared-reserve/README.md), [named-signer](../named-signer/README.md), [revocation](../revocation/README.md), [both-sides](../both-sides/README.md) and [refund-promise](../refund-promise/README.md) records. The [pinned-terms record](../pinned-terms/README.md) ran this commit plus one change and publishes the six files that differ.
 
 The 69 files are the `build_inputs` list each of those traces records. They are copied byte for byte at their repository paths, and each file's SHA-256 equals the trace's entry for it. The files total 1,177,459 bytes, and the Rust files hold 19,454 lines.
 
@@ -44,7 +44,7 @@ Paths are under `foundation/onchain/`. Line numbers are where each function star
 | Key rotation | [programs/principal-registry/src/ownership.rs](foundation/onchain/programs/principal-registry/src/ownership.rs) | `rotate`, line 53, the handler of `rotate_principal_owner` |
 | | [programs/principal-registry/src/lib.rs](foundation/onchain/programs/principal-registry/src/lib.rs) | `rotate_actor`, line 189, and `revoke_actor`, line 209, for an agent's key |
 
-The instruction names are the entry points in each program's `lib.rs`. The source lines the November 18 case indexes cite in `error_source` are lines of these files.
+The instruction names are the entry points in each program's `lib.rs`. The source lines those six records' case indexes cite in `error_source` are lines of these files.
 
 ## Match a file to a trace
 

@@ -1,0 +1,194 @@
+{
+  "schema": "dexter-selected-public-provenance/v1",
+  "release": "2026-11-18",
+  "program_source": {
+    "codebase": "Dexter Account",
+    "commit": "ef9ae9768525512195afe4420a3640737d4880d5",
+    "base_commit": "e55c0ad3a224a1c4e72de4c283161345d438caaf",
+    "base_published": "../source/"
+  },
+  "sources": [
+    {
+      "file": "pinned-terms-trace.json.xz",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "dc02e8e2d06e352e5f484158c055572484f995b1",
+        "path": "docs/evidence/pinned-terms-20261118/pinned-terms-trace.json.xz"
+      },
+      "source_sha256": "056642d40f966c23930fd2c59cc2e2fefa7a654ad5fdc8fe6951d82a898f1c4f",
+      "export_sha256": "056642d40f966c23930fd2c59cc2e2fefa7a654ad5fdc8fe6951d82a898f1c4f",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "pinned-terms-passkey-trace.json.xz",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "dc02e8e2d06e352e5f484158c055572484f995b1",
+        "path": "docs/evidence/pinned-terms-20261118/pinned-terms-passkey-trace.json.xz"
+      },
+      "source_sha256": "741ecf020127ba0add5a94616dfea9e4c877b4b1a75209a5b0c31d475e9db46f",
+      "export_sha256": "741ecf020127ba0add5a94616dfea9e4c877b4b1a75209a5b0c31d475e9db46f",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "pinned-terms-recoverable-trace.json.xz",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "dc02e8e2d06e352e5f484158c055572484f995b1",
+        "path": "docs/evidence/pinned-terms-20261118/pinned-terms-recoverable-trace.json.xz"
+      },
+      "source_sha256": "f658d578e2ab008f6913067aea8aee29f03b13a020e7d0b1e82bd1ef6d6bc182",
+      "export_sha256": "f658d578e2ab008f6913067aea8aee29f03b13a020e7d0b1e82bd1ef6d6bc182",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "pinned-terms-pool-funded-trace.json.xz",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "dc02e8e2d06e352e5f484158c055572484f995b1",
+        "path": "docs/evidence/pinned-terms-20261118/pinned-terms-pool-funded-trace.json.xz"
+      },
+      "source_sha256": "7355c74476055c6b196f3618c5b6c3157a8059b4672b7ca68c249c05e56c7174",
+      "export_sha256": "7355c74476055c6b196f3618c5b6c3157a8059b4672b7ca68c249c05e56c7174",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "case-index.json",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "dc02e8e2d06e352e5f484158c055572484f995b1",
+        "path": "docs/evidence/pinned-terms-20261118/case-index.json"
+      },
+      "source_sha256": "8f3aeefc7a612aa8b4b2c3a80067a01be7276ede9de1c2107c9b0030a809d34d",
+      "export_sha256": "8f3aeefc7a612aa8b4b2c3a80067a01be7276ede9de1c2107c9b0030a809d34d",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "pinned-terms-receipt.json",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "dc02e8e2d06e352e5f484158c055572484f995b1",
+        "path": "docs/evidence/pinned-terms-20261118/pinned-terms-receipt.json"
+      },
+      "source_sha256": "6952ede2b22c33f35fb923e9e2f08f396282468412539f63fae712ffbc64d9d7",
+      "export_sha256": "6952ede2b22c33f35fb923e9e2f08f396282468412539f63fae712ffbc64d9d7",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "pinned-terms.log",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "dc02e8e2d06e352e5f484158c055572484f995b1",
+        "path": "docs/evidence/pinned-terms-20261118/pinned-terms.log"
+      },
+      "source_sha256": "2ac600bbfdf4233d08ba7784c08e570b9ca92400005d471ce8cde84a6e39e0c9",
+      "export_sha256": "70d73b74fb22e2f5375f57d661f88d71579fd571f9d9b4dc62b11bf6e92f291d",
+      "workspace_path_fields_replaced": 4,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "pinned_terms.py",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "dc02e8e2d06e352e5f484158c055572484f995b1",
+        "path": "foundation/onchain/tests/pinned_terms.py"
+      },
+      "source_sha256": "de8b4f212550662a54a1e0237065ccd1e8d8dacd56a22c15a5cbc05da85f1d90",
+      "export_sha256": "de8b4f212550662a54a1e0237065ccd1e8d8dacd56a22c15a5cbc05da85f1d90",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "source/foundation/onchain/programs/principal-registry/src/lib.rs",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "ef9ae9768525512195afe4420a3640737d4880d5",
+        "path": "foundation/onchain/programs/principal-registry/src/lib.rs"
+      },
+      "source_sha256": "a26254b5810810b44e10f1c5724798bff92ad419bfd2b3b719c396e0a0357814",
+      "export_sha256": "a26254b5810810b44e10f1c5724798bff92ad419bfd2b3b719c396e0a0357814",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false,
+      "trace_build_input_sha256": "a26254b5810810b44e10f1c5724798bff92ad419bfd2b3b719c396e0a0357814",
+      "matches_trace_build_input": true
+    },
+    {
+      "file": "source/foundation/onchain/programs/principal-registry/src/state.rs",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "ef9ae9768525512195afe4420a3640737d4880d5",
+        "path": "foundation/onchain/programs/principal-registry/src/state.rs"
+      },
+      "source_sha256": "7140c0a2d7d38d073756a8a20235e19f96b7fecc7e2edebcce8bf93ac6e5bbf2",
+      "export_sha256": "7140c0a2d7d38d073756a8a20235e19f96b7fecc7e2edebcce8bf93ac6e5bbf2",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false,
+      "trace_build_input_sha256": "7140c0a2d7d38d073756a8a20235e19f96b7fecc7e2edebcce8bf93ac6e5bbf2",
+      "matches_trace_build_input": true
+    },
+    {
+      "file": "source/foundation/onchain/programs/principal-registry/src/passkey.rs",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "ef9ae9768525512195afe4420a3640737d4880d5",
+        "path": "foundation/onchain/programs/principal-registry/src/passkey.rs"
+      },
+      "source_sha256": "c7b446e53bfcf3c1a69043659e2c40cf258d604e1fdf8945177f4a4981ec223a",
+      "export_sha256": "c7b446e53bfcf3c1a69043659e2c40cf258d604e1fdf8945177f4a4981ec223a",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false,
+      "trace_build_input_sha256": "c7b446e53bfcf3c1a69043659e2c40cf258d604e1fdf8945177f4a4981ec223a",
+      "matches_trace_build_input": true
+    },
+    {
+      "file": "source/foundation/onchain/programs/claims-core/src/funding.rs",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "ef9ae9768525512195afe4420a3640737d4880d5",
+        "path": "foundation/onchain/programs/claims-core/src/funding.rs"
+      },
+      "source_sha256": "bd734b47b32458b0a4c3271e1788853a329429556bed3100c89b71246bb10096",
+      "export_sha256": "bd734b47b32458b0a4c3271e1788853a329429556bed3100c89b71246bb10096",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false,
+      "trace_build_input_sha256": "bd734b47b32458b0a4c3271e1788853a329429556bed3100c89b71246bb10096",
+      "matches_trace_build_input": true
+    },
+    {
+      "file": "source/foundation/onchain/programs/claims-core/src/lib.rs",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "ef9ae9768525512195afe4420a3640737d4880d5",
+        "path": "foundation/onchain/programs/claims-core/src/lib.rs"
+      },
+      "source_sha256": "f020e3b33475c62fd8b365eba653bdbbac5f39e69d0ea956444b8873377b3ac9",
+      "export_sha256": "f020e3b33475c62fd8b365eba653bdbbac5f39e69d0ea956444b8873377b3ac9",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false,
+      "trace_build_input_sha256": "f020e3b33475c62fd8b365eba653bdbbac5f39e69d0ea956444b8873377b3ac9",
+      "matches_trace_build_input": true
+    },
+    {
+      "file": "source/foundation/onchain/programs/claims-core/src/evidence_billing.rs",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "ef9ae9768525512195afe4420a3640737d4880d5",
+        "path": "foundation/onchain/programs/claims-core/src/evidence_billing.rs"
+      },
+      "source_sha256": "f553cdd169a6733d0a1b8aec2f854ed22565183b75809d33545c155d62f4ea98",
+      "export_sha256": "f553cdd169a6733d0a1b8aec2f854ed22565183b75809d33545c155d62f4ea98",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false,
+      "trace_build_input_sha256": "f553cdd169a6733d0a1b8aec2f854ed22565183b75809d33545c155d62f4ea98",
+      "matches_trace_build_input": true
+    }
+  ],
+  "path_redaction": "Only the absolute workspace prefix in pinned-terms.log changed, in four fields, to <fixture-workspace>. Its source and export hashes are distinct. The other thirteen files are byte-identical to their source commits. The traces are published as recorded: the program_artifacts section of the main, passkey and recoverable traces names the three program binaries by their absolute paths on the machine that ran them.",
+  "source_files": "The six files under source/ are the build inputs that differ between the base commit and the program_source commit, copied byte for byte. Their SHA-256 values equal the entries for the same paths in the build_inputs of the main, passkey and recoverable traces. The other 63 build inputs are identical to the files under ../source/. The files retain their existing copyright, and this release adds no license grant for them."
+}
