@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "trace": "revocation-trace.json.xz",
+  "trace_sha256": "e67b8495b36eccd072d0b91c4f27c197466cb41e40407d32b0fbae7fade18975",
+  "transaction_count": 72,
+  "refused": 3,
+  "assertions": 271,
+  "receipts": 14,
+  "maximum_signed_packet": 2299,
+  "build_receipt_sha256": "a412fb7fadb7ca39531bba51e59931f8a3a6645803cf42f464c3da7a33349896",
+  "idl_receipt_sha256": "93fef2184c5a79cc738dc168e13f58af195744bceec12904e8e5103f754a37aa",
+  "trace_xz_sha256": "6018ab8bcb48a41972449b5d283bc6f1a053f6441a4f3a5e6188118a1d8949db",
+  "annotated_cases": 16,
+  "annotated_refusals": 3,
+  "annotated_acceptances": 13,
+  "run_seconds": 0.31,
+  "engine": "solders 0.29.0 LiteSVM",
+  "program_sha256": {
+    "principal_registry.so": "92a21620018609eb98f504f0bbfe8370eda6d10081ef1cc1d5c540903bf35214",
+    "pool_issuer.so": "6804757b94ce2da8854388a1f748b614296207682db27cde85958f868b726e65",
+    "claims_core.so": "3ae2dc3c913c3ec696144c8e06104616f82a4d3305ff33e123c418eb446e0bb5"
+  },
+  "swig_sha256": "bb744d9811c392e3f343952d1a99bef9c97aa1936248a23b9d7efc1adb8939c1"
+}

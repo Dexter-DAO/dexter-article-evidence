@@ -1,0 +1,72 @@
+{
+  "schema": "dexter-selected-public-provenance/v1",
+  "release": "2026-11-18",
+  "program_source": {
+    "codebase": "Dexter Account",
+    "commit": "e55c0ad3a224a1c4e72de4c283161345d438caaf",
+    "published": "../source/"
+  },
+  "sources": [
+    {
+      "file": "revocation-trace.json.xz",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "6f4762108205f0f6f082fdf1ff68a6c74a8b9251",
+        "path": "docs/evidence/revocation-20261118/revocation-trace.json.xz"
+      },
+      "source_sha256": "6018ab8bcb48a41972449b5d283bc6f1a053f6441a4f3a5e6188118a1d8949db",
+      "export_sha256": "6018ab8bcb48a41972449b5d283bc6f1a053f6441a4f3a5e6188118a1d8949db",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "case-index.json",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "6f4762108205f0f6f082fdf1ff68a6c74a8b9251",
+        "path": "docs/evidence/revocation-20261118/case-index.json"
+      },
+      "source_sha256": "defa35a5348ee893abbe6e8f667bb21fdd1ed4be756b4813fb4fd1ce53718af6",
+      "export_sha256": "defa35a5348ee893abbe6e8f667bb21fdd1ed4be756b4813fb4fd1ce53718af6",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "revocation-receipt.json",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "6f4762108205f0f6f082fdf1ff68a6c74a8b9251",
+        "path": "docs/evidence/revocation-20261118/revocation-receipt.json"
+      },
+      "source_sha256": "5d430cd5d7a7a768d7a07427b3162741c2de98c0278e0145beed362db5ec3a7e",
+      "export_sha256": "5d430cd5d7a7a768d7a07427b3162741c2de98c0278e0145beed362db5ec3a7e",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "revocation.log",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "6f4762108205f0f6f082fdf1ff68a6c74a8b9251",
+        "path": "docs/evidence/revocation-20261118/revocation.log"
+      },
+      "source_sha256": "9d162b4fb6bdaf8e22959302cbc892737472ad0d814ee2d12ed19e25742e840e",
+      "export_sha256": "cccb96f8d0706807c84ca317f1f72ca2e1e0b92f7fe7144ea1f8761a2506d49f",
+      "workspace_path_fields_replaced": 1,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "revocation.py",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "6f4762108205f0f6f082fdf1ff68a6c74a8b9251",
+        "path": "foundation/onchain/tests/revocation.py"
+      },
+      "source_sha256": "ea26c2ed805df12be59271c886b5069f7a7d8ed954ff4f735abd924968182c72",
+      "export_sha256": "ea26c2ed805df12be59271c886b5069f7a7d8ed954ff4f735abd924968182c72",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    }
+  ],
+  "path_redaction": "Only the absolute workspace prefix in revocation.log changed, in 1 field, to <fixture-workspace>. Its source and export hashes are distinct. The other four files are byte-identical to the source commit. The trace is published as recorded: its program_artifacts section names the three program binaries by their absolute paths on the machine that ran it."
+}
