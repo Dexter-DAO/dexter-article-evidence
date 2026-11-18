@@ -27,20 +27,29 @@ fee. Numbers are those of commit_legs.py: per-order limit 100,000, budget
 500,000, facility and credit line 500,000, lender wallet 1,000,000.
 
 Refusals are checked the same way as in commit_legs.py: transaction error,
-first failing program frame, Anchor error name, number and source location
-from that frame's log, and byte-identical state for every writable account
-except the fee payer. Each refused order is also checked for no budget hold,
+first failing program frame, Anchor error name and number from that frame's
+log, and byte-identical state for every writable account except the fee payer.
+This module also asserts the source location in that log line against the
+table `RAISED` below. Each refused order is also checked for no budget hold,
 no lender promise and no order record. In the main run no account bytes are
 written by the harness and the clock is never moved.
+
+A second run on the same setup creates a permission already pinned, in one
+instruction (`create_pinned_mandate`), and follows one order through later pin
+changes and a revocation.
 
 Three short runs follow, each on an existing fixture:
 - passkey owners, on the setup of passkey_authority.py. That setup writes a
   disposable upgrade authority into the Registry's loader metadata from the
   harness; it writes no other account bytes and does not move the clock.
 - a recoverable order (`accept_recoverable_financed_tab`), on recovery.py.
-- an older pool-funded order (`accept_tab`), on integration.py. That fixture
-  sends v0 transactions through a lookup table the harness writes, and its
-  transaction builder is given the signer flags of the keys that sign.
+- pool-funded orders (`accept_tab` and `accept_metered_tab`), on
+  integration.py. That fixture sends v0 transactions through a lookup table
+  the harness writes, and its transaction builder is given the signer flags of
+  the keys that sign.
+
+The fingerprints, lists and hashes computed here are compared with
+order_terms_vectors.json, which the SDK's order-terms test reads as well.
 
 Run in a prepared checkout: ./dev anchor-smoke pinned-terms
 Record: <python> foundation/onchain/tests/pinned_terms.py --record docs/evidence/<directory>
@@ -58,6 +67,43 @@ POLICY_PREFIX = b"DEXTER:COMPLETED-RUN-POLICY:1"
 # Written here from the Registry source enum, then compared with the built interface.
 REGISTRY_ERRORS = dict(OwnerAuthority=6001, ConfigurationConflict=6002, InvalidPolicy=6003,
     MandateRevoked=6007, MandateRevision=6008, TermsRequired=6051, TermsMismatch=6052, TermsNotPermitted=6053)
+ANCHOR_ERRORS = dict(ConstraintSeeds=2006, AccountNotSigner=3010)
+# Where each refusal is raised: the origin in the Anchor log line, written here
+# from the Registry source at this commit and asserted for every refusal.
+SOURCE = "thrown in programs/principal-registry/src/"
+RAISED = {
+    "owner account": "caused by account: owner",
+    "owner signature": SOURCE + "passkey.rs:415",
+    "pin list": SOURCE + "lib.rs:225",
+    "pin on revoked": SOURCE + "lib.rs:230",
+    "pin revision": SOURCE + "lib.rs:231",
+    "created list": SOURCE + "lib.rs:275",
+    "create sent again": SOURCE + "lib.rs:283",
+    "order revision": SOURCE + "lib.rs:336",
+    "no list shown": SOURCE + "lib.rs:352",
+    "list length": SOURCE + "lib.rs:354",
+    "list names": SOURCE + "lib.rs:355",
+    "list hash": SOURCE + "lib.rs:356",
+    "pinned term": SOURCE + "lib.rs:358",
+    "Core authority": "caused by account: core_authority",
+}
+SHARED_VECTORS = Path(__file__).resolve().parent / "order_terms_vectors.json"
+
+
+def refusal(name, where, **extra):
+    """What a refusal must show: raising program, error name and number, and where it is raised."""
+    return dict(program=REGISTRY, name=name, code=REGISTRY_ERRORS.get(name) or ANCHOR_ERRORS[name],
+        source=RAISED[where], **extra)
+
+
+class SourceChecked:
+    """commit_legs.py's refusal check, plus the source location in the failing frame's log line."""
+    def refused(self, row, *, source, **expected):
+        CommitLegs.refused(self, row, **expected)
+        row["passed"] = False
+        found = row["commit_legs"]["refusal"]["anchor_error"]
+        assert found is not None and found["origin"] == source, (row["name"], "raised at", found, "expected", source)
+        row["passed"] = True
 SELLER_TERMS = (("item", "trail shoe"), ("size", "10"), ("colour", "red"), ("ship_to", "warehouse 4"))
 SIXTEEN_TERMS = SELLER_TERMS + (("quantity", "1 pair"), ("width", "regular"), ("brand", "example"),
     ("material", "mesh"), ("sole", "rubber"), ("laces", "black"), ("box", "recycled"), ("carrier", "ground"),
@@ -120,15 +166,12 @@ def absent(svm, address):
     return account is None or (account.lamports == 0 and not account.data)
 
 
-class PinnedTerms(CommitLegs, EvidenceBillingFixture):
+class PinnedTerms(SourceChecked, CommitLegs, EvidenceBillingFixture):
     def __init__(self):
         super().__init__()
         self.outsider = self.impostor
         for signer in (self.agent, self.outsider):
             self.h.svm.airdrop(signer.pubkey(), 100_000_000_000)
-
-    def refusal(self, name):
-        return dict(program=REGISTRY, name=name, code=REGISTRY_ERRORS[name])
 
     def mark(self, case, kind, what_changed, *, refuse=None, **extra):
         return self.note(section=case, leg=kind, changed=what_changed, refuse=refuse, **extra)
@@ -151,6 +194,20 @@ class PinnedTerms(CommitLegs, EvidenceBillingFixture):
         self.send(label, self.pin_instruction(permission, required, expected_revision, owner=owner),
             [self.parties["company"]["owner"]] if signers is None else signers, reject=refuse is not None)
         return self.mark(case, "pin", what_changed, refuse=refuse)
+
+    def create_pinned(self, name, index, required, label, *, case, what_changed="nothing", refuse=None):
+        """create_pinned_mandate: the permission and its pinned terms in one instruction."""
+        buyer = self.parties["company"]
+        mandate_id = ident("mandate-" + name)
+        permission = pda(REGISTRY, b"mandate", self.company, mandate_id)
+        self.send(label, self.ix("principal_registry", "create_pinned_mandate",
+            dict(owner=buyer["owner"].pubkey(), principal=self.company, actor=self.actors[index],
+                budget=self.budget, mandate=permission),
+            args=dict(mandate_id=mandate_id, supplier=self.parties["supplier"]["owner"].pubkey(),
+                source=self.facility, per_operation_limit=PER_ORDER_LIMIT, expires_at=NOW + PERMISSION_SECONDS),
+            required_terms=required), [buyer["owner"]], reject=refuse is not None)
+        self.mark(case, "create pinned", what_changed, refuse=refuse)
+        return permission
 
     def recreate(self, name, index, permission, label, *, case, what_changed, refuse=None):
         """The permission's original create_mandate, sent again unchanged."""
@@ -274,6 +331,18 @@ def interface(f):
     f.h.check("a name and a value of the same text have different fingerprints", name_print("10") == value_print("10"), False)
     names = [item["name"] for item in listing(SIXTEEN_TERMS)]
     f.h.check("a listing ascends strictly by name fingerprint", all(a < b for a, b in zip(names, names[1:])), True)
+    shared = json.loads(SHARED_VECTORS.read_text())
+    f.h.check("the shared vectors name the domains this module uses",
+        [shared[key].encode() for key in ("name_domain", "value_domain", "terms_domain")],
+        [NAME_DOMAIN, VALUE_DOMAIN, TERMS_DOMAIN])
+    for vector in shared["vectors"]:
+        terms = listing(tuple(tuple(entry) for entry in vector["entries"]))
+        f.h.check("shared vector, list of terms: " + vector["name"],
+            [dict(name=item["name"].hex(), value=item["value"].hex()) for item in terms], vector["terms"])
+        f.h.check("shared vector, order terms hash: " + vector["name"], order_terms_hash(terms).hex(), vector["hash"])
+    repeated = [item["name"] for item in listing(tuple(tuple(entry) for entry in shared["repeated_name"]["entries"]))]
+    f.h.check("the shared repeated-name entries do not ascend strictly",
+        all(a < b for a, b in zip(repeated, repeated[1:])), False)
 
 
 def cast(f):
@@ -309,7 +378,7 @@ def pin_size(f, order_1):
     # A replayed create never reports a pinned permission as freshly created, and never clears its pins.
     f.recreate("agent-1", 0, f.permission, "refused: the original setup of agent 1's permission is sent again after the pin",
         case="1", what_changed="the permission was pinned since it was created",
-        refuse=f.refusal("ConfigurationConflict"))
+        refuse=refusal("ConfigurationConflict", "create sent again"))
     f.h.check("agent 1's permission keeps its pin after the refused setup",
         f.pinned(f.permission), dict(revision=2, pinned=[size_10], active=True))
     row = f.recreate("agent-2", 1, f.second, "no effect: the original setup of agent 2's unpinned permission is sent again",
@@ -318,7 +387,7 @@ def pin_size(f, order_1):
 
     # Case 9: only the buyer's owner can pin or unpin.
     owner = f.parties["company"]["owner"].pubkey()
-    constraint, handler = f.refusal("OwnerAuthority"), f.refusal("OwnerAuthority")
+    constraint, handler = refusal("OwnerAuthority", "owner account"), refusal("OwnerAuthority", "owner signature")
     for holder, who in ((f.agent, "agent 1"), (f.outsider, "a key that is not the owner")):
         with f.paid_by(holder):
             f.pin(f.permission, [], f"refused: {who} unpins agent 1's permission, naming itself as the owner",
@@ -334,7 +403,7 @@ def pin_size(f, order_1):
     # What a pin may contain. The spare permission belongs to agent 2 and is never used for an order.
     four = listing(SELLER_TERMS)
     f.pin(f.spare, four, "ACCEPTED: the buyer's owner pins four terms on a spare permission, the most a permission can hold",
-        case="1 (limits)")
+        case="what a pin holds")
     f.h.check("the spare permission stores the four terms in ascending order of name",
         f.pinned(f.spare), dict(revision=2, pinned=four, active=True))
     two = listing((("size", "10"), ("colour", "red")))
@@ -344,27 +413,28 @@ def pin_size(f, order_1):
             (two[::-1], "two terms with their names out of ascending order"),
             ([dict(name=bytes(32), value=size_10["value"])], "a term whose name is all zeros")):
         f.pin(f.spare, required, f"refused: the buyer's owner pins {what} on the spare permission",
-            case="1 (limits)", what_changed="pinned list: " + what, refuse=f.refusal("InvalidPolicy"))
+            case="what a pin holds", what_changed="pinned list: " + what, refuse=refusal("InvalidPolicy", "pin list"))
     f.pin(f.spare, [size_10], "refused: the buyer's owner pins size = 10 on the spare permission against revision 1; it is at revision 2",
-        case="1 (limits)", what_changed="expected revision is one behind", expected_revision=1,
-        refuse=f.refusal("MandateRevision"))
+        case="what a pin holds", what_changed="expected revision is one behind", expected_revision=1,
+        refuse=refusal("MandateRevision", "pin revision"))
     f.h.check("the spare permission is unchanged after the six refusals",
         f.pinned(f.spare), dict(revision=2, pinned=four, active=True))
     revoke = f.ix("principal_registry", "revoke_mandate",
         dict(owner=owner, principal=f.company, mandate=f.spare), expected_revision=2)
     f.send("the buyer's owner revokes the spare permission", revoke, [f.parties["company"]["owner"]])
-    f.mark("1 (limits)", "revoke", "nothing")
+    f.mark("what a pin holds", "revoke", "nothing")
     f.pin(f.spare, [size_10], "refused: the buyer's owner pins size = 10 on the revoked spare permission",
-        case="1 (limits)", what_changed="the permission was revoked", refuse=f.refusal("MandateRevoked"))
+        case="what a pin holds", what_changed="the permission was revoked", refuse=refusal("MandateRevoked", "pin on revoked"))
     f.send("no effect: the revocation of the spare permission is sent again", revoke, [f.parties["company"]["owner"]])
-    row = f.mark("1 (limits)", "revoke", "the revocation is sent a second time")
+    row = f.mark("what a pin holds", "revoke", "the revocation is sent a second time")
     f.h.check("sending the revocation again changes no observed account", row["observed_after"], row["observed_before"])
     f.h.check("the revoked spare permission keeps its revision and its list",
         f.pinned(f.spare), dict(revision=3, pinned=four, active=False))
 
 
 def size_refusals_then_acceptance(f, order_1, prepared_before_pin):
-    not_permitted, mismatch = f.refusal("TermsNotPermitted"), f.refusal("TermsMismatch")
+    not_permitted, mismatch = refusal("TermsNotPermitted", "pinned term"), refusal("TermsMismatch", "list hash")
+    names = refusal("TermsMismatch", "list names")
 
     v = f.set_terms(variant(order_1), changed(SELLER_TERMS, size="11"))
     f.place(v, "refused: agent 1 and the seller submit order 1 with terms that say size = 11; the owner pinned size = 10",
@@ -377,21 +447,22 @@ def size_refusals_then_acceptance(f, order_1, prepared_before_pin):
         case="5", what_changed="list shown is not the list the signed terms hash to", refuse=mismatch)
     v = f.set_terms(variant(order_1), SELLER_TERMS, shown=())
     f.place(v, "refused: order 1 with size = 10 is sent through the pinned instruction with an empty list",
-        case="5", what_changed="list shown is empty", refuse=mismatch)
+        case="5", what_changed="list shown is empty", refuse=refusal("TermsMismatch", "list length"))
     twice = listing(SELLER_TERMS + (("size", "11"),))
     f.h.check("the list that names size twice holds size = 10, which the owner pinned, and size = 11",
         (term("size", "10") in twice, term("size", "11") in twice, len(twice)), (True, True, 5))
     v = f.set_terms(variant(order_1), twice)
     f.place(v, "refused: order 1 with a list that names size twice, as size = 10 and as size = 11; a list may name a field once",
-        case="13", what_changed="size named twice in the seller's terms: 10 and 11", refuse=mismatch)
+        case="13", what_changed="size named twice in the seller's terms: 10 and 11", refuse=names)
     v = f.set_terms(variant(order_1), listing(SELLER_TERMS)[::-1])
     f.place(v, "refused: order 1 with size = 10 and its four names in descending order; names must ascend",
-        case="14", what_changed="order of the names in the list", refuse=mismatch)
+        case="14", what_changed="order of the names in the list", refuse=names)
     f.place(order_1, "refused: order 1 with size = 10 is sent through plain accept_financed_tab, which shows no list",
-        case="6", what_changed="plain instruction, no list shown", shown=False, refuse=f.refusal("TermsRequired"))
+        case="6", what_changed="plain instruction, no list shown", shown=False, refuse=refusal("TermsRequired", "no list shown"))
     f.h.check("the order prepared before the pin names revision 1", prepared_before_pin["terms"]["mandate_revision"], 1)
     f.place(prepared_before_pin, "refused: order 1 with size = 10, prepared against the permission's revision 1 from before the pin",
-        case="8", what_changed="permission revision named by the order: 1 instead of 2", refuse=f.refusal("MandateRevision"))
+        case="8", what_changed="permission revision named by the order: 1 instead of 2",
+        refuse=refusal("MandateRevision", "order revision"))
 
     row = f.place(order_1, "ACCEPTED: agent 1 and the seller submit order 1, maximum 100,000, with terms that say size = 10",
         case="3")
@@ -416,7 +487,8 @@ def unpinned_agent(f):
     order_5 = f.terms_order("order-5", size_11, revision=1, index=1, permission=f.second)
     v = f.set_terms(variant(order_5), size_11, shown=SELLER_TERMS)
     f.place(v, "refused: agent 2 sends order 5 (size = 11) through the pinned instruction with a list that says size = 10",
-        case="7", what_changed="list shown is not the list the signed terms hash to", refuse=f.refusal("TermsMismatch"))
+        case="7", what_changed="list shown is not the list the signed terms hash to",
+        refuse=refusal("TermsMismatch", "list hash"))
     row = f.place(order_5, "ACCEPTED: agent 2 submits order 5 with size = 11 through the pinned instruction; its permission pins nothing",
         case="7")
     f.accepted(order_5, row, 5, shown=True, held=3 * ORDER)
@@ -438,11 +510,13 @@ def two_pins(f):
     f.h.check("order 3 carries sixteen terms, the most an order can show", len(order_3["order_terms"]), 16)
     v = f.set_terms(variant(order_3), changed(SIXTEEN_TERMS, colour="blue"))
     f.place(v, "refused: order 3 with size = 10 and colour = blue; the owner pinned size = 10 and colour = red",
-        case="10", what_changed="colour in the seller's terms: blue instead of red", refuse=f.refusal("TermsNotPermitted"))
+        case="10", what_changed="colour in the seller's terms: blue instead of red",
+        refuse=refusal("TermsNotPermitted", "pinned term"))
     v = f.set_terms(variant(order_3), SIXTEEN_TERMS + (("note", "gift"),))
     f.h.check("the oversized variant carries seventeen terms", len(v["order_terms"]), 17)
     f.place(v, "refused: order 3 with a seventeenth term added to its sixteen",
-        case="10", what_changed="seventeen terms in the list, one more than an order can show", refuse=f.refusal("TermsMismatch"))
+        case="10", what_changed="seventeen terms in the list, one more than an order can show",
+        refuse=refusal("TermsMismatch", "list length"))
     row = f.place(order_3, "ACCEPTED: order 3, maximum 100,000, with size = 10 and colour = red among its sixteen terms",
         case="10")
     f.accepted(order_3, row, 3, shown=True, held=3 * ORDER)
@@ -450,7 +524,7 @@ def two_pins(f):
 
 def paths_without_a_list(f):
     """Cases 12 and 6 again while two terms are pinned; both are accepted after the unpin."""
-    required = f.refusal("TermsRequired")
+    required = refusal("TermsRequired", "no list shown")
     f.mandates[0] = f.permission
     evidence = f.evidence_tab("order-6-evidence", cap=ORDER, rates=((1, 1, ORDER),))
     evidence["terms"]["mandate_revision"] = 3
@@ -504,8 +578,140 @@ def exercise(f):
     end_state(f)
 
 
-class PasskeyPinnedTerms(CommitLegs, PasskeyFixture):
-    """The same pin and pinned order when the buyer's owner and the credit issuer's owner are passkeys."""
+class CreatedPinnedTerms(PinnedTerms):
+    """A permission created already pinned, and one order followed through later changes to the pin."""
+
+
+def created_pinned(f):
+    buyer, seller, lender = [f.parties[x] for x in ("company", "supplier", "financier")]
+    f.setup_principals()
+    for role, amount in (("protocol", 0), ("fee", 0), ("issuer", 200_000)):
+        f.create_custody(role, amount)
+    f.create_custody("financier", LENDER_CASH, wallet=True)
+    f.open_fee_agreement("main", 2_100)
+    f.facility = f.open_facility()
+    f.line, f.assignment_policy = f.open_line(f.facility)
+    cast(f)
+    size_10, size_11, size_12 = term("size", "10"), term("size", "11"), term("size", "12")
+    conflict = refusal("ConfigurationConflict", "create sent again")
+    invalid = refusal("InvalidPolicy", "created list")
+    not_permitted = refusal("TermsNotPermitted", "pinned term")
+
+    # Case 17: the permission is created with its pin, so it is never usable without it.
+    f.permission = f.create_pinned("agent-1", 0, [size_10],
+        "ACCEPTED: the buyer's owner creates agent 1's permission already pinned to size = 10, in one instruction", case="17")
+    row = f.h.cases[-1]
+    f.h.check("the permission exists at revision 1 with the term size = 10",
+        f.pinned(f.permission), dict(revision=1, pinned=[size_10], active=True))
+    f.h.check("creating it pinned is one instruction", len(row["instructions"]), 1)
+    f.h.check("the Registry ran CreatePinnedMandate", "Program log: Instruction: CreatePinnedMandate" in row["result"]["logs"], True)
+    f.h.check("it is signed by the fee payer and the buyer's owner only", sorted(f.signers_of(row)),
+        sorted([str(f.h.payer.pubkey()), str(buyer["owner"].pubkey())]))
+    order_1 = f.terms_order("order-1", SELLER_TERMS, revision=1)
+    wrong = f.set_terms(variant(order_1), changed(SELLER_TERMS, size="11"))
+    f.place(wrong, "refused: straight after the permission is created, agent 1 and the seller submit order 1 with size = 11 "
+        "through plain accept_financed_tab", case="17", what_changed="size = 11, plain instruction, no list shown",
+        shown=False, refuse=refusal("TermsRequired", "no list shown"))
+    f.place(wrong, "refused: order 1 with size = 11 through the pinned instruction",
+        case="17", what_changed="size in the seller's terms: 11 instead of 10", refuse=not_permitted)
+    row = f.place(order_1, "ACCEPTED: order 1, maximum 100,000, with size = 10 through the pinned instruction", case="17")
+    f.accepted(order_1, row, 1, shown=True, held=ORDER)
+
+    # Case 18: sending the creation again.
+    row_before = f.pinned(f.permission)
+    f.create_pinned("agent-1", 0, [size_10], "no effect: the same creation (size = 10) is sent again",
+        case="18", what_changed="the creation is sent a second time")
+    row = f.h.cases[-1]
+    f.h.check("sending the creation again changes no observed account", row["observed_after"], row["observed_before"])
+    f.recreate("agent-1", 0, f.permission, "refused: plain create_mandate is sent for the permission that was created pinned",
+        case="18", what_changed="the creation is sent without its pinned terms", refuse=conflict)
+    f.create_pinned("agent-1", 0, [size_11], "refused: the creation is sent again with size = 11 in place of size = 10",
+        case="18", what_changed="pinned terms in the creation: size = 11", refuse=conflict)
+    f.h.check("the permission is unchanged after the three re-sends", f.pinned(f.permission), row_before)
+    for required, what in (([], "no terms"), ([size_10, size_11], "the field size twice, as 10 and as 11"),
+            (listing(SELLER_TERMS + (("note", "gift"),)), "five terms")):
+        name = "never-created-" + str(len(required))
+        f.create_pinned(name, 0, required, f"refused: the buyer's owner creates a pinned permission with {what}",
+            case="18", what_changed="pinned list at creation: " + what, refuse=invalid)
+        f.h.check(f"no permission exists after the creation with {what}",
+            absent(f.h.svm, pda(REGISTRY, b"mandate", f.company, ident("mandate-" + name))), True)
+
+    # Case 21: a pinned value of all zeros is a value like any other.
+    zero = dict(name=name_print("size"), value=bytes(32))
+    f.second = f.create_pinned("agent-2", 1, [zero],
+        "ACCEPTED: the buyer's owner creates agent 2's permission pinned to size with an all-zero value fingerprint", case="21")
+    f.h.check("agent 2's permission stores the all-zero value", f.pinned(f.second), dict(revision=1, pinned=[zero], active=True))
+    order_2 = f.terms_order("order-2", SELLER_TERMS, revision=1, index=1, permission=f.second)
+    f.place(order_2, "refused: agent 2 submits order 2 with size = 10; its permission pins the all-zero value",
+        case="21", what_changed="size value in the seller's terms: 10, not the pinned all-zero value", refuse=not_permitted)
+    with_zero = [zero if item["name"] == zero["name"] else item for item in listing(SELLER_TERMS)]
+    row = f.place(f.set_terms(order_2, with_zero), "ACCEPTED: order 2, maximum 100,000, whose size term carries the all-zero value",
+        case="21")
+    f.accepted(order_2, row, 2, shown=True, held=2 * ORDER)
+
+    # Case 22: the Registry's pinned reservation called directly, without ClaimsCore.
+    order_3 = f.terms_order("order-3", SELLER_TERMS, revision=1)
+    info = f.registry.instructions["reserve_pinned"]
+    data = bytes(info["discriminator"]) + b"".join(f.registry.encode(a["type"], value) for a, value in zip(info["args"], (
+        dict(operation_id=f.operation(b"accept", f.agent.pubkey(), order_3["args"]["request_id"]), terms=order_3["terms"]),
+        order_3["namespace"], order_3["service_unit"], order_3["unit_price"], order_3["order_terms"])))
+    f.h.check("the direct call carries the five arguments of reserve_pinned",
+        [a["name"] for a in info["args"]], ["args", "namespace", "unit", "unit_price", "order_terms"])
+    for authority, signed, name, what in ((f.registry_authority, False, "AccountNotSigner", "ClaimsCore's authority address, which no key can sign for"),
+            (f.outsider.pubkey(), True, "ConstraintSeeds", "its own key in place of ClaimsCore's authority")):
+        accounts = order_3["accounts"]
+        metas = [M(authority, signed), M(f.h.payer.pubkey(), True, True), M(f.company), M(accounts["actor"]),
+            M(f.agent.pubkey(), True), M(accounts["mandate"]), M(f.budget, w=True), M(order_3["reservation"], w=True),
+            M(accounts["registry_operation"], w=True), M(SYSTEM)]
+        before = f.money()
+        f.send(f"refused: a direct call to the Registry's reserve_pinned for order 3 (size = 10), naming {what}",
+            Instruction(REGISTRY, data, metas), [f.agent, f.outsider] if signed else [f.agent], reject=True)
+        f.mark("22", "direct Registry call", "the caller is not ClaimsCore", refuse=refusal(name, "Core authority"))
+        f.nothing_moved(order_3, "direct call naming " + what, before)
+
+    # Cases 19 and 20: order 1 was accepted under size = 10. The owner then changes the pin, unpins and revokes.
+    accepted = f.h.snapshot([order_1["claim"], order_1["reservation"], order_1["receipt"]])
+    f.pin(f.permission, [size_12], "ACCEPTED: the buyer's owner changes the pin on agent 1's permission to size = 12", case="19")
+    f.h.check("agent 1's permission now pins size = 12 at revision 2", f.pinned(f.permission), dict(revision=2, pinned=[size_12], active=True))
+    resent = f.set_terms(variant(order_1), SELLER_TERMS, shown=changed(SELLER_TERMS, size="11"))
+    f.h.check("the re-sent order shows a list that does not hash to its signed terms",
+        order_terms_hash(resent["order_terms"]) == resent["external_contract_hash"], False)
+    for shown, how in ((True, "through the pinned instruction with a list that says size = 11"),
+            (False, "through plain accept_financed_tab")):
+        row = f.place(resent, f"no effect: accepted order 1 is sent again after the pin changed, {how}", case="20",
+            what_changed="an accepted order is sent again after the pin changed", shown=shown)
+        f.h.check("the re-sent order changes no observed account: " + how, row["observed_after"], row["observed_before"])
+        f.h.check("the re-sent order does not reach the Registry: " + how, f"Program {REGISTRY} invoke [2]" in row["result"]["logs"], False)
+    f.pin(f.permission, [], "ACCEPTED: the buyer's owner unpins agent 1's permission (empty list)", case="19")
+    f.send("the buyer's owner revokes agent 1's permission", f.ix("principal_registry", "revoke_mandate",
+        dict(owner=buyer["owner"].pubkey(), principal=f.company, mandate=f.permission), expected_revision=3), [buyer["owner"]])
+    f.mark("19", "revoke", "nothing")
+    f.h.check("agent 1's permission is revoked at revision 4", f.pinned(f.permission), dict(revision=4, pinned=[], active=False))
+    f.h.check("the pin change, the unpin and the revocation left order 1's records byte-identical",
+        f.h.snapshot([order_1["claim"], order_1["reservation"], order_1["receipt"]]), accepted)
+    run = f.earn(order_1, "order-1-work", EARNED,
+        label="ACCEPTED: after the pin changed and the permission was revoked, the seller reports 60,000 of completed work on order 1")
+    f.mark("19", "seller's work report", "nothing")
+    seller_ata = f.h.ata(seller["owner"].pubkey(), f.mint)
+    seller_before, wallet_before = f.h.amount(seller_ata), f.h.amount(lender["custody_token"])
+    with f.paid_by(f.collector):
+        request = f.collection(order_1, run, EARNED)
+        f.send("ACCEPTED: an outside key collects order 1's 60,000 from the lender wallet to the seller",
+            f.envelope(compact_sign(lender["config"], lender["wallet"], request["instruction"])),
+            request["signers"], receipt=request["receipt"])
+        row = f.mark("19", "collection", "nothing")
+    f.h.check("the collection's only signer is the outside key", f.signers_of(row), [str(f.collector.pubkey())])
+    f.h.check("the seller receives exactly 60,000", f.h.amount(seller_ata) - seller_before, EARNED)
+    f.h.check("the lender wallet pays exactly 60,000", wallet_before - f.h.amount(lender["custody_token"]), EARNED)
+    claim = f.state("FundedClaim", order_1["claim"])
+    for field, value in (("paid", EARNED), ("payable", 0), ("debt", EARNED), ("remaining", ORDER - EARNED)):
+        f.h.check("order 1 record " + field + " after collection", claim[field], value)
+    f.h.check("order 1's record still carries the terms hash it was accepted with",
+        claim["external_contract_hash"], order_1["external_contract_hash"])
+
+
+class PasskeyPinnedTerms(SourceChecked, CommitLegs, PasskeyFixture):
+    """A permission created pinned, a pin change and pinned orders when the owners are passkeys."""
 
 
 def passkey_owners(f):
@@ -523,44 +729,66 @@ def passkey_owners(f):
     mandate_id = ident("pinned-terms-passkey-owner")
     permission = pda(REGISTRY, b"mandate", f.company, mandate_id, u64(buyer["generation"]))
     f.mandates[0] = permission
-    f.send("the buyer's owner, a passkey, permits the agent: this seller, this lender facility, per-order limit 200,000",
-        f.ix("principal_registry", "create_mandate",
+    size_10 = term("size", "10")
+    f.send("ACCEPTED: the buyer's owner, a passkey, creates the agent's permission already pinned to size = 10, in one approved instruction",
+        f.ix("principal_registry", "create_pinned_mandate",
             dict(owner=buyer["owner"].pubkey(), principal=f.company, actor=f.actors[0], budget=f.budget, mandate=permission),
             args=dict(mandate_id=mandate_id, supplier=seller["owner"].pubkey(), source=f.facility,
-                per_operation_limit=200_000, expires_at=NOW + 600)), [buyer["owner"]])
-    size_10 = term("size", "10")
-    f.send("ACCEPTED: the buyer's owner, a passkey, pins size = 10 on the agent's permission",
-        pin_instruction(f.registry, buyer["owner"].pubkey(), f.company, permission, [size_10], 1), [buyer["owner"]])
-    row = f.note(section="passkey", leg="pin", changed="nothing")
-    f.h.check("the pin was approved by one passkey proof", len(row["passkey_authorizations"]), 1)
-    f.h.check("the permission stores the term size = 10 at revision 2",
-        stored_pin(f.registry, f.h.svm, permission), dict(revision=2, pinned=[size_10], active=True))
+                per_operation_limit=200_000, expires_at=NOW + 600), required_terms=[size_10]), [buyer["owner"]])
+    row = f.note(section="passkey", leg="create pinned", changed="nothing")
+    f.h.check("the creation was approved by one passkey proof", len(row["passkey_authorizations"]), 1)
+    f.h.check("the permission exists at revision 1 with the term size = 10",
+        stored_pin(f.registry, f.h.svm, permission), dict(revision=1, pinned=[size_10], active=True))
 
-    def order(pairs):
-        tab = f.acceptance("order-1", cap=ORDER, maximum_interest=0, fees=False)
-        tab["terms"]["mandate_revision"] = 2
+    def order(name, pairs, revision, *, shown=True, **options):
+        tab = f.acceptance(name, cap=ORDER, **options)
+        tab["terms"]["mandate_revision"] = revision
         PinnedTerms.set_terms(f, tab, pairs)
-        return tab, f.ix("claims_core", "accept_pinned_financed_tab", tab["accounts"],
-            remaining=f.remaining(["company", "issuer", "supplier", tab["financier"]]),
-            order_terms=tab["order_terms"], **tab["args"])
-    tab, instruction = order(changed(SIXTEEN_TERMS, size="11"))
-    f.send("refused: order 1 with size = 11 among its sixteen terms, signed by the agent, the seller and the credit issuer's passkey",
-        instruction, tab["signers"], reject=True, receipt=tab["receipt"])
-    f.note(section="passkey", leg="order, list shown", changed="size in the seller's terms: 11 instead of 10",
-        refuse=dict(program=REGISTRY, name="TermsNotPermitted", code=REGISTRY_ERRORS["TermsNotPermitted"], index=2))
-    tab, instruction = order(SIXTEEN_TERMS)
+        remaining = f.remaining(["company", "issuer", "supplier", tab["financier"]])
+        if shown:
+            return tab, f.ix("claims_core", "accept_pinned_financed_tab", tab["accounts"], remaining=remaining,
+                order_terms=tab["order_terms"], **tab["args"])
+        return tab, f.ix("claims_core", "accept_financed_tab", tab["accounts"], remaining=remaining, **tab["args"])
+    plain = dict(maximum_interest=0, fees=False)
+    tab, instruction = order("order-1", changed(SIXTEEN_TERMS, size="11"), 1, shown=False, **plain)
+    f.send("refused: straight after the permission is created, order 1 with size = 11 through plain accept_financed_tab, "
+        "signed by the agent, the seller and the credit issuer's passkey", instruction, tab["signers"], reject=True, receipt=tab["receipt"])
+    f.note(section="passkey", leg="order, no list shown", changed="size = 11, plain instruction, no list shown",
+        refuse=refusal("TermsRequired", "no list shown", index=2))
+    tab, instruction = order("order-1", SIXTEEN_TERMS, 1, **plain)
     f.send("ACCEPTED: order 1, maximum 100,000, with size = 10 among its sixteen terms, signed by the agent, the seller and the credit issuer's passkey",
         instruction, tab["signers"], receipt=tab["receipt"])
     row = f.note(section="passkey", leg="order, list shown", changed="nothing")
     f.h.check("the order was approved by one passkey proof, the credit issuer's", len(row["passkey_authorizations"]), 1)
     f.h.check("the order record stores the terms hash", f.state("FundedClaim", tab["claim"])["external_contract_hash"],
         tab["external_contract_hash"])
-    f.h.check("budget hold after the order", f.registry.read(f.h.svm, f.budget, "Budget")["reserved"], ORDER)
+    f.h.check("budget hold after order 1", f.registry.read(f.h.svm, f.budget, "Budget")["reserved"], ORDER)
+
+    both = listing((("size", "10"), ("colour", "red")))
+    f.send("ACCEPTED: the buyer's owner, a passkey, pins size = 10 and colour = red on the agent's permission",
+        pin_instruction(f.registry, buyer["owner"].pubkey(), f.company, permission, both, 1), [buyer["owner"]])
+    row = f.note(section="passkey", leg="pin", changed="nothing")
+    f.h.check("the pin was approved by one passkey proof", len(row["passkey_authorizations"]), 1)
+    f.h.check("the permission stores both terms at revision 2",
+        stored_pin(f.registry, f.h.svm, permission), dict(revision=2, pinned=both, active=True))
+    costly = dict(maximum_interest=1_000, fees=True)
+    tab, instruction = order("order-2", changed(SIXTEEN_TERMS, colour="blue"), 2, **costly)
+    f.send("refused: order 2 with colour = blue among its sixteen terms, with a seller fee and interest",
+        instruction, tab["signers"], reject=True, receipt=tab["receipt"])
+    f.note(section="passkey", leg="order, list shown", changed="colour in the seller's terms: blue instead of red",
+        refuse=refusal("TermsNotPermitted", "pinned term", index=2))
+    tab, instruction = order("order-2", SIXTEEN_TERMS, 2, **costly)
+    f.send("ACCEPTED: order 2, maximum 100,000 with a seller fee and interest of up to 1,000, sixteen terms, "
+        "signed by the agent, the seller and the credit issuer's passkey", instruction, tab["signers"], receipt=tab["receipt"])
+    row = f.note(section="passkey", leg="order, list shown", changed="nothing")
+    f.h.check("order 2 is the largest signed transaction of this run", row["wire_bytes"], max(x["wire_bytes"] for x in f.h.cases))
+    f.h.check("order 2 fits the 4,096-byte transaction limit", row["wire_bytes"] <= 4096, True)
+    f.h.check("budget hold after order 2 includes its interest", f.registry.read(f.h.svm, f.budget, "Budget")["reserved"], 2 * ORDER + 1_000)
     f.roles = {"buyer's owner (passkey alias)": buyer["owner"], "credit issuer's owner (passkey alias)": issuer["owner"],
         "agent": f.agent, "seller": seller["owner"]}
 
 
-class RecoverablePinnedTerms(CommitLegs, RecoveryFixture):
+class RecoverablePinnedTerms(SourceChecked, CommitLegs, RecoveryFixture):
     """A pinned permission on a recoverable order, which shows no list."""
 
 
@@ -570,7 +798,6 @@ def recoverable_order(f):
     f.receiving_open("supplier")
     permission = f.controlled_mandate("pinned-terms")
     size_10 = term("size", "10")
-    required = dict(program=REGISTRY, name="TermsRequired", code=REGISTRY_ERRORS["TermsRequired"])
 
     def pin(required_terms, revision, label):
         f.send(label, pin_instruction(f.registry, buyer["owner"].pubkey(), f.company, permission, required_terms, revision),
@@ -586,7 +813,7 @@ def recoverable_order(f):
     f.h.cases[-1]["name"] = ("refused: order 1, a recoverable order (accept_recoverable_financed_tab) of 100,000, "
         "on the agent's pinned permission")
     f.note(section="15", leg="recoverable order, no list shown",
-        changed="the permission is pinned and this instruction shows no list", refuse=required)
+        changed="the permission is pinned and this instruction shows no list", refuse=refusal("TermsRequired", "no list shown"))
     f.h.check("the refused recoverable order left the budget as it was", f.registry.read(f.h.svm, f.budget, "Budget"), budget)
     for name, address in (("order record", tab["claim"]), ("Registry reservation", tab["reservation"]), ("bill", tab["bill"])):
         f.h.check(f"no {name} exists after the refused recoverable order", absent(f.h.svm, address), True)
@@ -600,14 +827,14 @@ def recoverable_order(f):
 
 
 class PoolFundedPinnedTerms(Journey):
-    """A pinned permission on an older pool-funded order (`accept_tab`), on integration.py's fixture.
+    """A pinned permission on pool-funded orders (`accept_tab`, `accept_metered_tab`), on integration.py's fixture.
 
     That fixture builds v0 transactions from interface signer flags. Owner
-    accounts are no longer flagged there, so the keys that sign are flagged here.
+    accounts are not flagged there, so the keys that sign are flagged here.
     """
     now = NOW
     note = CommitLegs.note
-    refused = CommitLegs.refused
+    refused = SourceChecked.refused
 
     def tx(self, instructions, signers):
         supplied = {signer.pubkey() for signer in signers}
@@ -636,34 +863,62 @@ def pool_funded_order(j):
     registry = Idl(OUT / "idl/principal_registry.json")
     permission = j.mandates[0]
     size_10 = term("size", "10")
+    required = refusal("TermsRequired", "no list shown", index=1)
 
     def pin(required_terms, revision, label):
         j.send(label, pin_instruction(registry, j.owner.pubkey(), j.principal, permission, required_terms, revision), [j.owner])
         j.note(section="16", leg="pin", changed="nothing")
+
+    def held():
+        return registry.read(j.h.svm, j.budget, "Budget")["reserved"]
+
+    def metered(tab, label, request_id, error=None):
+        """accept_metered_tab with the accounts of accept_tab and the unit-price policy the terms commit to."""
+        operation_id, core_op, registry_op = j.operations(request_id, j.agent.pubkey())
+        accounts = dict(j.base(), actor=j.actors[0], mandate=permission, credential=j.agent.pubkey(),
+            manager=j.h.payer.pubkey(), claim=tab["claim"], reservation=tab["reservation"],
+            operation=core_op, registry_operation=registry_op)
+        j.send(label, j.ix("claims_core", "accept_metered_tab", accounts,
+            args=dict(operation_id=request_id, terms=tab["terms"]), **tab["policy"]), [j.h.payer, j.agent], error)
     pin([size_10], 1, "ACCEPTED: the buyer's owner pins size = 10 on agent 1's permission")
     j.h.check("the permission stores the term size = 10 at revision 2",
         stored_pin(registry, j.h.svm, permission), dict(revision=2, pinned=[size_10], active=True))
-    tab = j.tab("order-1-pool-funded", ORDER)
-    tab["terms"]["mandate_revision"] = 2
-    request_id = ident("accept-order-1-pool-funded")
-    budget = registry.read(j.h.svm, j.budget, "Budget")
-    j.accept(tab, "refused: order 1, an older pool-funded order (accept_tab) of 100,000, on agent 1's pinned permission",
-        error="TermsRequired", request_id=request_id)
+    order_1 = j.tab("order-1-pool-funded", ORDER)
+    order_2 = j.tab("order-2-metered", ORDER)
+    order_2["policy"] = dict(namespace=ident("provider-namespace"), service_unit=ident("completed-inference-unit"),
+        unit_price=1, external_contract_hash=ident("provider-contract"))
+    order_2["terms"]["external_terms_hash"] = hashlib.sha256(POLICY_PREFIX + order_2["policy"]["namespace"]
+        + order_2["policy"]["service_unit"] + u64(1) + order_2["policy"]["external_contract_hash"]).digest()
+    requests = ident("accept-order-1-pool-funded"), ident("accept-order-2-metered")
+    for tab in (order_1, order_2):
+        tab["terms"]["mandate_revision"] = 2
+    j.accept(order_1, "refused: order 1, a pool-funded order (accept_tab) of 100,000, on agent 1's pinned permission",
+        error="TermsRequired", request_id=requests[0])
     j.note(section="16", leg="pool-funded order, no list shown",
-        changed="the permission is pinned and this instruction shows no list",
-        refuse=dict(program=REGISTRY, name="TermsRequired", code=REGISTRY_ERRORS["TermsRequired"], index=1))
-    j.h.check("the refused pool-funded order left the budget as it was", registry.read(j.h.svm, j.budget, "Budget"), budget)
-    for name, address in (("order record", tab["claim"]), ("Registry reservation", tab["reservation"])):
-        j.h.check(f"no {name} exists after the refused pool-funded order", absent(j.h.svm, address), True)
+        changed="the permission is pinned and this instruction shows no list", refuse=required)
+    metered(order_2, "refused: order 2, a metered pool-funded order (accept_metered_tab) of 100,000, on agent 1's pinned permission",
+        requests[1], error="TermsRequired")
+    j.note(section="23", leg="metered pool-funded order, no list shown",
+        changed="the permission is pinned and this instruction shows no list", refuse=required)
+    j.h.check("the refused pool-funded orders left no budget hold", held(), 0)
+    for tab in (order_1, order_2):
+        for name, address in (("order record", tab["claim"]), ("Registry reservation", tab["reservation"])):
+            j.h.check(f"no {name} exists after the refused {tab['name']}", absent(j.h.svm, address), True)
     pin([], 2, "ACCEPTED: the buyer's owner unpins agent 1's permission (empty list)")
-    tab["terms"]["mandate_revision"] = 3
-    j.accept(tab, "ACCEPTED: after the unpin, order 1, the pool-funded order of 100,000", request_id=request_id)
+    for tab in (order_1, order_2):
+        tab["terms"]["mandate_revision"] = 3
+    j.accept(order_1, "ACCEPTED: after the unpin, order 1, the pool-funded order of 100,000", request_id=requests[0])
     j.note(section="16", leg="pool-funded order, no list shown", changed="nothing")
-    j.h.check("budget hold after the accepted pool-funded order", registry.read(j.h.svm, j.budget, "Budget")["reserved"], ORDER)
+    j.h.check("budget hold after the accepted pool-funded order", held(), ORDER)
+    metered(order_2, "ACCEPTED: after the unpin, order 2, the metered pool-funded order of 100,000", requests[1])
+    j.note(section="23", leg="metered pool-funded order, no list shown", changed="nothing")
+    j.h.check("budget hold after the accepted metered order", held(), 2 * ORDER)
+    j.h.check("order 2's record is a metered one", j.core.read(j.h.svm, order_2["claim"], "Claim")["version"], 2)
     j.roles = {"buyer's owner": j.owner, "agent 1": j.agent, "seller": j.supplier, "pool manager and fee payer": j.h.payer}
 
 
-RUNS = (("pinned-terms", PinnedTerms, exercise), ("pinned-terms-passkey", PasskeyPinnedTerms, passkey_owners),
+RUNS = (("pinned-terms", PinnedTerms, exercise), ("pinned-terms-created-pinned", CreatedPinnedTerms, created_pinned),
+    ("pinned-terms-passkey", PasskeyPinnedTerms, passkey_owners),
     ("pinned-terms-recoverable", RecoverablePinnedTerms, recoverable_order),
     ("pinned-terms-pool-funded", PoolFundedPinnedTerms, pool_funded_order))
 

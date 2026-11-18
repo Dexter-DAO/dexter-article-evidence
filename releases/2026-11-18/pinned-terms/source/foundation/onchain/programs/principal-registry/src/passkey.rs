@@ -199,7 +199,7 @@ fn is_instruction(ix:&Instruction,program:Pubkey,name:&str)->bool {
 
 fn allowed_target(ix:&Instruction)->bool {
     let names:&[&str]=if ix.program_id==crate::ID {&[
-        "create_passkey_principal","create_actor","create_budget","create_mandate","rotate_actor","revoke_actor",
+        "create_passkey_principal","create_actor","create_budget","create_mandate","create_pinned_mandate","rotate_actor","revoke_actor",
         "revoke_mandate","pin_mandate_terms","amend_allowance","rotate_principal_owner","configure_recovery_policy","recover_principal_owner",
         "bind_wallet","authorize_wallet","bind_funding_wallet","authorize_funding_wallet",
         "grant_spending_permission","revoke_spending_permission","grant_repayment_permission","revoke_repayment_permission",

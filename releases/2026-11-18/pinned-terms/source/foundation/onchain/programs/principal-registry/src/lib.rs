@@ -157,34 +157,14 @@ pub mod principal_registry {
     }
 
     pub fn create_mandate(ctx: Context<CreateMandate>, args: CreateMandateArgs) -> Result<()> {
-        check_principal(&ctx.accounts.principal)?;
-        require_owner_authority(&ctx.accounts.principal,&ctx.accounts.owner,ctx.remaining_accounts)?;
-        ctx.accounts.budget.check()?;
-        let mandate = &mut ctx.accounts.mandate;
-        if mandate.version != 0 {
-            require!(mandate.version == SCHEMA_VERSION, RegistryError::SchemaVersion);
-            require!(mandate.principal == ctx.accounts.principal.key() && mandate.actor == ctx.accounts.actor.key()
-                && mandate.budget == ctx.accounts.budget.key() && mandate.mandate_id == args.mandate_id
-                && mandate.asset == ctx.accounts.budget.asset && mandate.supplier == args.supplier
-                && mandate.source == args.source && mandate.per_operation_limit == args.per_operation_limit
-                && mandate.expires_at == args.expires_at && mandate.revision == 1 && mandate.active,
-                RegistryError::ConfigurationConflict);
-            return Ok(());
-        }
-        require!(ctx.accounts.actor.version == SCHEMA_VERSION, RegistryError::SchemaVersion);
-        require!(ctx.accounts.actor.active, RegistryError::CredentialInactive);
-        require!(args.supplier != Pubkey::default() && args.source != Pubkey::default()
-            && args.per_operation_limit > 0 && args.per_operation_limit <= ctx.accounts.budget.ceiling,
-            RegistryError::InvalidPolicy);
-        require!(args.expires_at > Clock::get()?.unix_timestamp, RegistryError::Expired);
-        mandate.set_inner(Mandate { version: SCHEMA_VERSION, bump: ctx.bumps.mandate,
-            principal: ctx.accounts.principal.key(), actor: ctx.accounts.actor.key(),
-            budget: ctx.accounts.budget.key(), mandate_id: args.mandate_id,
-            asset: ctx.accounts.budget.asset, supplier: args.supplier, source: args.source,
-            per_operation_limit: args.per_operation_limit, expires_at: args.expires_at,
-            revision: 1, active: true, required_terms_count: 0,
-            required_terms: [Term::default(); MAX_REQUIRED_TERMS] });
-        Ok(())
+        create_permission(ctx, args, None)
+    }
+
+    /// `create_mandate` for a permission that is never live without its pinned
+    /// terms: they are stored at revision 1, in the instruction that creates it.
+    pub fn create_pinned_mandate(ctx: Context<CreateMandate>, args: CreateMandateArgs,
+        required_terms: Vec<Term>) -> Result<()> {
+        create_permission(ctx, args, Some(required_terms))
     }
 
     pub fn rotate_actor(ctx: Context<ManageActor>, args: RotateActorArgs) -> Result<()> {
@@ -242,18 +222,14 @@ pub mod principal_registry {
         require_owner_authority(&ctx.accounts.principal,&ctx.accounts.owner,ctx.remaining_accounts)?;
         let mandate = &mut ctx.accounts.mandate;
         require!(mandate.version == SCHEMA_VERSION, RegistryError::SchemaVersion);
-        require!(required_terms.len() <= MAX_REQUIRED_TERMS && names_ascend(&required_terms)
-            && required_terms.iter().all(|term| term.name != [0; 32]), RegistryError::InvalidPolicy);
+        require!(pinnable(&required_terms), RegistryError::InvalidPolicy);
         let next = plus(expected_revision, 1)?;
         if mandate.active && mandate.revision == next && mandate.pinned_terms() == required_terms.as_slice() {
             return Ok(());
         }
         require!(mandate.active, RegistryError::MandateRevoked);
         require!(mandate.revision == expected_revision, RegistryError::MandateRevision);
-        let mut stored = [Term::default(); MAX_REQUIRED_TERMS];
-        stored[..required_terms.len()].copy_from_slice(&required_terms);
-        mandate.required_terms_count = required_terms.len() as u8;
-        mandate.required_terms = stored;
+        mandate.set_pinned_terms(&required_terms);
         mandate.revision = next;
         Ok(())
     }
@@ -286,6 +262,47 @@ pub mod principal_registry {
         service(&a.principal, &mut a.budget, &mut a.reservation, &mut a.operation,
             ctx.bumps.operation, args, RELEASE)
     }
+}
+
+fn create_permission(ctx: Context<CreateMandate>, args: CreateMandateArgs,
+    required_terms: Option<Vec<Term>>) -> Result<()> {
+    check_principal(&ctx.accounts.principal)?;
+    require_owner_authority(&ctx.accounts.principal,&ctx.accounts.owner,ctx.remaining_accounts)?;
+    ctx.accounts.budget.check()?;
+    // A permission created pinned names at least one term; the plain create pins none.
+    let required: &[Term] = match &required_terms {
+        Some(terms) => {
+            require!(!terms.is_empty() && pinnable(terms), RegistryError::InvalidPolicy);
+            terms
+        }
+        None => &[],
+    };
+    let mandate = &mut ctx.accounts.mandate;
+    if mandate.version != 0 {
+        require!(mandate.version == SCHEMA_VERSION, RegistryError::SchemaVersion);
+        require!(mandate.principal == ctx.accounts.principal.key() && mandate.actor == ctx.accounts.actor.key()
+            && mandate.budget == ctx.accounts.budget.key() && mandate.mandate_id == args.mandate_id
+            && mandate.asset == ctx.accounts.budget.asset && mandate.supplier == args.supplier
+            && mandate.source == args.source && mandate.per_operation_limit == args.per_operation_limit
+            && mandate.expires_at == args.expires_at && mandate.revision == 1 && mandate.active
+            && mandate.pinned_terms() == required, RegistryError::ConfigurationConflict);
+        return Ok(());
+    }
+    require!(ctx.accounts.actor.version == SCHEMA_VERSION, RegistryError::SchemaVersion);
+    require!(ctx.accounts.actor.active, RegistryError::CredentialInactive);
+    require!(args.supplier != Pubkey::default() && args.source != Pubkey::default()
+        && args.per_operation_limit > 0 && args.per_operation_limit <= ctx.accounts.budget.ceiling,
+        RegistryError::InvalidPolicy);
+    require!(args.expires_at > Clock::get()?.unix_timestamp, RegistryError::Expired);
+    mandate.set_inner(Mandate { version: SCHEMA_VERSION, bump: ctx.bumps.mandate,
+        principal: ctx.accounts.principal.key(), actor: ctx.accounts.actor.key(),
+        budget: ctx.accounts.budget.key(), mandate_id: args.mandate_id,
+        asset: ctx.accounts.budget.asset, supplier: args.supplier, source: args.source,
+        per_operation_limit: args.per_operation_limit, expires_at: args.expires_at,
+        revision: 1, active: true, required_terms_count: 0,
+        required_terms: [Term::default(); MAX_REQUIRED_TERMS] });
+    mandate.set_pinned_terms(required);
+    Ok(())
 }
 
 struct ShownTerms { namespace: [u8; 32], unit: [u8; 32], unit_price: u64, terms: Vec<Term> }

@@ -158,6 +158,19 @@ impl Mandate {
     pub fn pinned_terms(&self) -> &[Term] {
         &self.required_terms[..usize::from(self.required_terms_count).min(MAX_REQUIRED_TERMS)]
     }
+
+    /// Stores a list `pinnable` accepted; unused slots are zero.
+    pub fn set_pinned_terms(&mut self, terms: &[Term]) {
+        self.required_terms = [Term::default(); MAX_REQUIRED_TERMS];
+        self.required_terms[..terms.len()].copy_from_slice(terms);
+        self.required_terms_count = terms.len() as u8;
+    }
+}
+
+/// What a permission may require: at most four terms, one value per name
+/// (names strictly ascending) and no all-zero name. An empty list pins nothing.
+pub fn pinnable(terms: &[Term]) -> bool {
+    terms.len() <= MAX_REQUIRED_TERMS && names_ascend(terms) && terms.iter().all(|term| term.name != [0; 32])
 }
 
 /// The value an order's `external_contract_hash` carries when its terms are a

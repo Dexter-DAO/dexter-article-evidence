@@ -113,7 +113,7 @@ The receipt counts 36 refusals. The tables above hold 32 of them and row 64 is t
 
 ## Terms the owner pins
 
-A further record pins terms of the deal on the agent's permission. The owner pinned size = 10. The agent's order for size 11 was refused with PrincipalRegistry `TermsNotPermitted` and nothing was held or recorded, and the same order for size 10 was accepted. An agent whose permission was not pinned ordered size 11 and was accepted. This record ran commit `ef9ae97`, which is the commit the other records on this page ran plus this change, and it publishes the six source files that differ. The tables, the traces and the test module are in [pinned-terms](pinned-terms/README.md).
+A further record pins terms of the deal on the agent's permission. The owner created the permission already pinned to size = 10, in one instruction. The agent's order for size 11 was refused, with PrincipalRegistry `TermsRequired` through `accept_financed_tab` and `TermsNotPermitted` through the instruction that shows the order's terms, and nothing was held or recorded. The same order for size 10 was accepted. An agent whose permission was not pinned ordered size 11 and was accepted. This record ran commit `9ab1130`, which is the commit the other records on this page ran plus this change, and it publishes the six source files that differ. The tables, the traces and the test module are in [pinned-terms](pinned-terms/README.md).
 
 ## Orders that share one budget and one wallet
 
