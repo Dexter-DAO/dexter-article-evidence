@@ -172,7 +172,7 @@ For wallet spending, the [case index](../evidence/account-evidence/account/docs/
 
 ## Check the Account records
 
-From `evidence/account-evidence/` in the [dated ZIP](https://github.com/Dexter-DAO/dexter-article-evidence/releases/tag/2026-11-06b), with Python 3.10 or newer:
+From `evidence/account-evidence/` in the [dated ZIP](https://github.com/Dexter-DAO/dexter-article-evidence/releases/tag/2026-11-18), with Python 3.10 or newer:
 
 ```sh
 python3 -m venv .venv

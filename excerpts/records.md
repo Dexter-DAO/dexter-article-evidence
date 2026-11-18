@@ -240,7 +240,7 @@ The supplier received 900 units from financier custody. The buyer's debt remaine
 
 ## Check the Oct 30 record
 
-From `evidence/historical-evidence/` in the [dated ZIP](https://github.com/Dexter-DAO/dexter-article-evidence/releases/tag/2026-11-06b), with Node 24 or newer:
+From `evidence/historical-evidence/` in the [dated ZIP](https://github.com/Dexter-DAO/dexter-article-evidence/releases/tag/2026-11-18), with Node 24 or newer:
 
 ```sh
 shasum -a 256 -c SHA256SUMS
