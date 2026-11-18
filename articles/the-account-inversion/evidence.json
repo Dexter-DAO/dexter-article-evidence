@@ -57,6 +57,14 @@
       "source": "../../releases/2026-11-18/named-signer/source/"
     },
     {
+      "id": "early-settlement",
+      "guide": "../../releases/2026-11-18/early-settlement/README.md",
+      "record": "../../releases/2026-11-18/early-settlement/early-settlement-trace.json.xz",
+      "index": "../../releases/2026-11-18/early-settlement/case-index.json",
+      "tests": "../../releases/2026-11-18/early-settlement/early_settlement.py",
+      "source": "../../releases/2026-11-18/early-settlement/source/"
+    },
+    {
       "id": "agent-revocation",
       "guide": "../../releases/2026-11-18/revocation/README.md",
       "record": "../../releases/2026-11-18/revocation/revocation-trace.json.xz",
