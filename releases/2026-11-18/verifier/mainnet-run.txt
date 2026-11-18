@@ -1,0 +1,55 @@
+PASS record: b0ee0521-898e-828b-9c14-265bfb59216c
+PASS network: 5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d
+PASS approval: {"verified":true,"signature":"2vWcs5iPRHqoTHBrtKiSWjriYUWf7DHpWZPUPYbZFCem3WhhBkW9weBA9JvSg9h1ZNWjM7dPSReFQHcKe1xj9P6F","slot":463183758,"blockTime":1793341657,"ceremonyNonce":"745db66d64da3918a0a3cae8d6d3d693cc3084aaefb429461da050d7b4c04adf","checks":[{"name":"transaction","ok":true,"detail":"Successful finalized transaction at or before the account snapshot"},{"name":"accounts","ok":true,"detail":"Register targets this writable session and vault"},{"name":"terms","ok":true,"detail":"Registration fields equal current agent, payee, caps, expiry and nonce"},{"name":"webauthn_data","ok":true,"detail":"Complete WebAuthn data with user presence and verification"},{"name":"client_data","ok":true,"detail":"Expected WebAuthn type, origin and crossOrigin"},{"name":"challenge_encoding","ok":true,"detail":"Canonical base64url challenge"},{"name":"account_layout","ok":true,"detail":"Authorization envelope uses the replay-guard account layout"},{"name":"challenge","ok":true,"detail":"200-byte authorization envelope: domain, epoch, program, vault, authorization nonce, operation hash, ceremony nonce"},{"name":"precompile","ok":true,"detail":"Immediately preceding secp256r1 instruction"},{"name":"precompile_offsets","ok":true,"detail":"One signature with local instruction offsets"},{"name":"passkey","ok":true,"detail":"Precompile key equals current vault passkey"},{"name":"signed_message","ok":true,"detail":"Signed message equals authenticatorData || SHA-256(clientDataJSON)"},{"name":"p256_signature","ok":true,"detail":"P-256 signature verifies over SHA-256(signed message)"}]}
+PASS approval.transaction: Successful finalized transaction at or before the account snapshot
+PASS approval.accounts: Register targets this writable session and vault
+PASS approval.terms: Registration fields equal current agent, payee, caps, expiry and nonce
+PASS approval.webauthn_data: Complete WebAuthn data with user presence and verification
+PASS approval.client_data: Expected WebAuthn type, origin and crossOrigin
+PASS approval.challenge_encoding: Canonical base64url challenge
+PASS approval.account_layout: Authorization envelope uses the replay-guard account layout
+PASS approval.challenge: 200-byte authorization envelope: domain, epoch, program, vault, authorization nonce, operation hash, ceremony nonce
+PASS approval.precompile: Immediately preceding secp256r1 instruction
+PASS approval.precompile_offsets: One signature with local instruction offsets
+PASS approval.passkey: Precompile key equals current vault passkey
+PASS approval.signed_message: Signed message equals authenticatorData || SHA-256(clientDataJSON)
+PASS approval.p256_signature: P-256 signature verifies over SHA-256(signed message)
+PASS seller.binding_bytes: 1552 canonical bytes, sha256 9ad25a29d13b991086fd59eb439a90e8eec631f9a8025f6ed0dc2cabc32380ed
+PASS seller.registration_match: vault, counterparty and agent key equal the registration
+PASS seller.commitment: sellerBindingNonce(binding, salt) equals the approval's ceremony nonce
+PASS seller.did_document_hash: sha256 eaa77c5e24fb7356749890577a60887cd5464c2b8d2f0750e592cea3c4e83c03 equals the binding
+PASS seller.did_document_valid: did:web:dexter.cash's file meets the store-file rules
+PASS seller.key_listed: did:web:dexter.cash#books-quote-1 is listed and is the key in the binding
+PASS seller.host_listed: dexter.cash's file lists books.dexter.cash
+PASS seller.offer_signature: the quote verifies under the listed key and its hash equals the binding
+PASS seller.offer_terms: the quote names D21yDMWuiMZfkoaZj3t67S4hhfBfCgA4hNYuWA5i1esj for https://books.dexter.cash/books/the-innovators-dilemma, valid at 1793341650
+PASS seller.payto_listed: D21yDMWuiMZfkoaZj3t67S4hhfBfCgA4hNYuWA5i1esj is in the file's address list
+PASS seller.address_proofs: every listed address carries a valid control proof
+PASS seller.screen_decision: replayed: allowed
+PASS seller.retained_binding: Saved binding hash, registration and nonce equal the verified approval
+PASS seller.manifest_seller: The manifest names the same binding, host, domain, DID and key
+PASS seller: nonce 745db66d64da3918a0a3cae8d6d3d693cc3084aaefb429461da050d7b4c04adf
+PASS archive: https://web.archive.org/web/20261030062857id_/https://dexter.cash/.well-known/did.json sha256 eaa77c5e24fb7356749890577a60887cd5464c2b8d2f0750e592cea3c4e83c03, captured 1 min after the approval; the record links to 2026-10-30T02:55:33.000Z and the archive answers that link with this capture from 2026-10-30T06:28:57.000Z
+PASS purchases.complete: two distinct purchase records
+PASS purchase.1.settlement: {"verified":true,"signature":"2hJBKx3GqFHPEsjGQNBNjTAdLd2S121KSNxzccVupjfGxywbFscozePwVY6SPwe95JgicywY6LzNwhJwrY5tJV7d","slot":463185954,"blockTime":1793342126,"lockSlot":463185897,"lockBlockTime":1793342114,"reservationBlockTime":1793342112,"claimAddress":"9KoQFbCgxtykNqiVSVRP4Vb6oPePv8CyyaVtNy8qgnkM","holder":"DexVpBdHtnDGESaz6FqADHW4nVSvKhApG87TuSTiExVB","dexterAuthority":"3SWJTQ4FBDveFQGQbqd8pxyBxa2PKqkega4QzxgPMWMG","seller":"D21yDMWuiMZfkoaZj3t67S4hhfBfCgA4hNYuWA5i1esj"}
+PASS purchase.1.receipt: {"ok":true,"payload":{"version":1,"network":"solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp","resourceUrl":"https://books.dexter.cash/books/the-innovators-dilemma","payer":"H6YGwccDRcjtaRFgCfaa5tWxFC1fkMjQWJRtCmXnMuJr","issuedAt":1793342113}}
+PASS purchase.2.settlement: {"verified":true,"signature":"QNb41FGAxugzUWaWiKjj8vsouA2sLngHVftaXuycR4JmBxMg5CetYmUGVwmymuo7hCF3P3h8DkSmKXJkg96eN8h","slot":463186363,"blockTime":1793342213,"lockSlot":463186018,"lockBlockTime":1793342140,"reservationBlockTime":1793342138,"claimAddress":"49Bg9FJx2VC73udyvN6EFXhwDxbV5yVsKJCWHrCrU3fz","holder":"DexVpBdHtnDGESaz6FqADHW4nVSvKhApG87TuSTiExVB","dexterAuthority":"3SWJTQ4FBDveFQGQbqd8pxyBxa2PKqkega4QzxgPMWMG","seller":"D21yDMWuiMZfkoaZj3t67S4hhfBfCgA4hNYuWA5i1esj"}
+PASS purchase.2.receipt: {"ok":true,"payload":{"version":1,"network":"solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp","resourceUrl":"https://books.dexter.cash/books/the-sovereign-individual","payer":"H6YGwccDRcjtaRFgCfaa5tWxFC1fkMjQWJRtCmXnMuJr","issuedAt":1793342140}}
+PASS copycats.history_binding: books.dexter.cash
+PASS copycats.complete: V1, V2, V3, V4, V5
+PASS copycat.V1: confirm R4 lookalike_name
+PASS copycat.V2: refused R1 kid_not_listed
+PASS copycat.V3: refused R2 payto_mismatch
+PASS copycat.V4: confirm R4 lookalike_name
+PASS copycat.V5: confirm R5 unsigned_known_host
+PASS first_contact: allowed, first-payment
+PASS first_contact.screenshot: c01b775bb77d315fc961ed4dc986b60974fb42a862084ca0caabcada8617d87f
+PASS copycat_history.complete: 1 retained copycat histories
+PASS copycat_history.FRLf4qg2xEHRWXv1DrujbqxqUXzxsgAs6tcPkTUZRHH2: {"sessionAddress":"6oPFj9nahDstFmJDbWDfWP6kB24Yhf9wrAn68jjj7eYJ","failedSignatures":1}
+PASS redirects.complete: 3012 and 6070
+PASS redirect.no-permission: Program log: AnchorError caused by account: session. Error Code: AccountNotInitialized. Error Number: 3012. Error Message: The program expected this account to be already initialized.
+PASS redirect.payout-redirect: Program log: AnchorError thrown in programs/dexter-vault/src/instructions/settle_locked_voucher.rs:207. Error Code: DebtTransferMismatch. Error Number: 6070. Error Message: Debt-transfer amounts do not reconcile.
+PASS refusals.complete: 6013 and 6009
+PASS refusal.6013: Program log: AnchorError thrown in programs/dexter-vault/src/instructions/settle_voucher.rs:108. Error Code: RevolvingCapacityExceeded. Error Number: 6013. Error Message: Opening this tab would exceed the session's revolving capacity.
+PASS refusal.6009: Program log: AnchorError thrown in programs/dexter-vault/src/instructions/settle_voucher.rs:95. Error Code: SessionExpiryInPast. Error Number: 6009. Error Message: Session expiry must be in the future.
+LIVE store_file: still_listed

@@ -84,7 +84,7 @@ The rules behind the November 1 rows are in the [program source](https://github.
 | Collection | Contents |
 |---|---|
 | [November 6 release](releases/2026-11-06/README.md) | Billing through collection after revocation, guardian recovery and one purchase through the API, each with its records and standalone checks. |
-| [Oct 30 mainnet record](excerpts/records.md#the-oct-30-mainnet-record) | Passkey approval, signed seller and purchase records, the refused diversion, collection transactions, disclosure examples and a standalone verifier. |
+| [Oct 30 mainnet record](excerpts/records.md#the-oct-30-mainnet-record) | Passkey approval, signed seller and purchase records, the refused diversion, collection transactions, disclosure examples and a [standalone verifier](releases/2026-11-18/verifier/README.md). |
 | [November 18 commit record](releases/2026-11-18/README.md) | One order sent to the three-way commit with one fact changed in each case: the acceptance and 23 refusals, then collection and the lender's withdrawal, with the trace, the case index and the test module. |
 | [July 18 earning run](releases/2026-11-17/README.md) | Nine mainnet transactions that kept an owner's balance in a yield-bearing token inside the owner's wallet, the program rule that protects what the wallet owes, and the test logs. |
 | [Account commitments and collection](excerpts/records.md#the-decoded-account-sequence) | Pinned program source, retained execution records, shared-backing and authority-change scenarios, financial receipts and offline checks. |
