@@ -1,0 +1,48 @@
+{
+  "schema": "dexter-selected-public-provenance/v1",
+  "release": "2026-11-17",
+  "source": {
+    "codebase": "Dexter Vault",
+    "commit": "1d6e752a36295b4195a125a0ead1ca318422f75e"
+  },
+  "selection": "The four files that implement the earning-token trade and its reservation check, and the license file, at the commit the release guide quotes and names as deployed to mainnet on July 18, 2026.",
+  "check": {
+    "files": 5,
+    "bytes": 51440,
+    "every_git_blob_equals_commit_tree": true
+  },
+  "files": [
+    {
+      "path": "programs/dexter-vault/src/instructions/swap_for_carry.rs",
+      "bytes": 13037,
+      "sha256": "810394794b45867445ece18ce7b813972a338b5c5aa71b6c45839b31966ea4ca",
+      "git_blob": "5f694d92be8656e6900c8ff74ea2aeb079605435"
+    },
+    {
+      "path": "programs/dexter-vault/src/instructions/finish_swap.rs",
+      "bytes": 10304,
+      "sha256": "36a5dcd308a35e1f4b8302fb006754a343dfba5fab6ef588f9d20cfc916ca870",
+      "git_blob": "1a10f458c48a24151f0263b38c1f40f989e90590"
+    },
+    {
+      "path": "programs/dexter-vault/src/instructions/finalize_withdrawal.rs",
+      "bytes": 11413,
+      "sha256": "5291d89dcd4735f5e2303df8171c9b2a72d7aab51acd6d98ae48d905c8442818",
+      "git_blob": "4705086670ea5a107bafd4d42fce733ebd31dbc8"
+    },
+    {
+      "path": "programs/dexter-vault/src/accrual.rs",
+      "bytes": 15623,
+      "sha256": "4096df41ec6bcc0f70169682032079caae72c9244ebe1e49193101f4d61df2a5",
+      "git_blob": "a6e36589a1ac0f70eb2485988a031f06f609751d"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1063,
+      "sha256": "6a694c6c736e9474ca4b54dac937a509cc744459e7e7a03aa82a567ab097d7c3",
+      "git_blob": "769fcf8daffe0842dbd7e29b3b7ab7aad2060dc7"
+    }
+  ],
+  "rights": "The files retain the original MIT license, included as LICENSE.",
+  "path_redaction": "None. Every file is byte-identical to the source commit."
+}

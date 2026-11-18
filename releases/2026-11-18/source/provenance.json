@@ -1,0 +1,571 @@
+{
+  "schema": "dexter-selected-public-provenance/v1",
+  "release": "2026-11-18",
+  "source": {
+    "codebase": "Dexter Account",
+    "commit": "e55c0ad3a224a1c4e72de4c283161345d438caaf"
+  },
+  "selection": "Every file in the build_inputs list of releases/2026-11-18/commit-legs-trace.json.xz. The shared-reserve and named-signer traces record the same list and hashes.",
+  "check": {
+    "files": 69,
+    "bytes": 1177459,
+    "every_sha256_equals_trace_build_input": true,
+    "every_git_blob_equals_commit_tree": true
+  },
+  "files": [
+    {
+      "path": "foundation/onchain/Anchor.toml",
+      "bytes": 495,
+      "sha256": "93e3bb1cbd4cf97d40287d772bdb1497f11e04a70a378d7966fc745b5c77da7b",
+      "git_blob": "dacedb7bc125fb9504f9f31ef2701db5f3d6d5aa",
+      "trace_build_input_sha256": "93e3bb1cbd4cf97d40287d772bdb1497f11e04a70a378d7966fc745b5c77da7b",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/Cargo.lock",
+      "bytes": 62573,
+      "sha256": "4fb9c520ac32fb32e1f9601c91e4a789b434fd00f461887a78fb57786edde2cd",
+      "git_blob": "851ffb408a4dec21488a6e4d0d9912370cae2b40",
+      "trace_build_input_sha256": "4fb9c520ac32fb32e1f9601c91e4a789b434fd00f461887a78fb57786edde2cd",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/Cargo.toml",
+      "bytes": 751,
+      "sha256": "8876ae7cc566ac037fe5a120b74fd6843e7289b4e5844cc037f87a32a5591056",
+      "git_blob": "0961a9155fba389b1ccad0fae73c1ee033eccec9",
+      "trace_build_input_sha256": "8876ae7cc566ac037fe5a120b74fd6843e7289b4e5844cc037f87a32a5591056",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/crates/contracts/Cargo.toml",
+      "bytes": 245,
+      "sha256": "a7e4c821e6a3455f9d5e3e2377c8146e1a32dc1281140118578bb4076445e21b",
+      "git_blob": "bb2b28f60bd83fb74da0c6e7d65a5a06e43c8669",
+      "trace_build_input_sha256": "a7e4c821e6a3455f9d5e3e2377c8146e1a32dc1281140118578bb4076445e21b",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/crates/contracts/examples/wallet_interface_vectors.rs",
+      "bytes": 10171,
+      "sha256": "f28b4b306fa942312a2ed4dc58807db3457e90d2e4f0ee87c09ff21ad8af1080",
+      "git_blob": "cfadcc3cf816e3c760b1c2ce62618f6e873bb7b8",
+      "trace_build_input_sha256": "f28b4b306fa942312a2ed4dc58807db3457e90d2e4f0ee87c09ff21ad8af1080",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/crates/contracts/src/billing.rs",
+      "bytes": 11980,
+      "sha256": "489c4bddd0421810a89c230c36bc912c8425acd817f86b1fdabab4d676094230",
+      "git_blob": "e394d057709494a1b6b5fc91d9149e585df3f1f1",
+      "trace_build_input_sha256": "489c4bddd0421810a89c230c36bc912c8425acd817f86b1fdabab4d676094230",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/crates/contracts/src/commercial.rs",
+      "bytes": 20211,
+      "sha256": "7d1cfd04fe2127f3978028c8ca5a8a5e1fe0a1c5ba14dad5797ebacb17bf92f1",
+      "git_blob": "8b90afb8c68a1c0a7597418d8b0a9070a1620eeb",
+      "trace_build_input_sha256": "7d1cfd04fe2127f3978028c8ca5a8a5e1fe0a1c5ba14dad5797ebacb17bf92f1",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/crates/contracts/src/corrections.rs",
+      "bytes": 8394,
+      "sha256": "1de3db0c565429fca79cc6f2c24c39188b0bf829d7b923b88dfa40835032d9b0",
+      "git_blob": "f3587b80ed770da60fcc9f680def6ba00908b7b9",
+      "trace_build_input_sha256": "1de3db0c565429fca79cc6f2c24c39188b0bf829d7b923b88dfa40835032d9b0",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/crates/contracts/src/financing.rs",
+      "bytes": 25602,
+      "sha256": "70e687271fa885717b8135c075733aad1d6d8175fa7979eb1e5e3227f3f0a6e9",
+      "git_blob": "d3eb24b26775696feea3a678d3c2a3cdfa3c6934",
+      "trace_build_input_sha256": "70e687271fa885717b8135c075733aad1d6d8175fa7979eb1e5e3227f3f0a6e9",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/crates/contracts/src/funded.rs",
+      "bytes": 15104,
+      "sha256": "9adb35c6ee23631429c85ffc16b2a105f4b44f5b65e4e9d8eb6ad4e85f65a4e0",
+      "git_blob": "aac4f24c1c3ddb68c3811b7b4c543a484c89a3a0",
+      "trace_build_input_sha256": "9adb35c6ee23631429c85ffc16b2a105f4b44f5b65e4e9d8eb6ad4e85f65a4e0",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/crates/contracts/src/lib.rs",
+      "bytes": 9888,
+      "sha256": "744248dcc45b7f9368f6ac5627f0786bbf163b2a204fbb55d9918e073fd79a1b",
+      "git_blob": "f91b1aa262416b7319b1e1ec121cce3d54118fba",
+      "trace_build_input_sha256": "744248dcc45b7f9368f6ac5627f0786bbf163b2a204fbb55d9918e073fd79a1b",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/crates/contracts/src/recovery.rs",
+      "bytes": 2371,
+      "sha256": "6552a8915c74181307e882cd576484b7f5c6bb3e4e40c140bb407aa08c69cbdf",
+      "git_blob": "2660a8c047de52d78dae4846bf63ea8ffc3cfb79",
+      "trace_build_input_sha256": "6552a8915c74181307e882cd576484b7f5c6bb3e4e40c140bb407aa08c69cbdf",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/crates/contracts/src/repayment.rs",
+      "bytes": 13581,
+      "sha256": "4bbf62992e35303b0dfa0939047609cb40cfdee693ab441862d7c525cdbb54ba",
+      "git_blob": "57f1730f18de7674709169c3a90f2c74fd3a2607",
+      "trace_build_input_sha256": "4bbf62992e35303b0dfa0939047609cb40cfdee693ab441862d7c525cdbb54ba",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/crates/contracts/src/spending.rs",
+      "bytes": 19247,
+      "sha256": "acef73c024c0d0dd6f5144c4fddb26a0f25d328f6a8fa1a066e310d0d9ea965c",
+      "git_blob": "487eab0e0c921268a4adf9bdb76d998aca3f4a7c",
+      "trace_build_input_sha256": "acef73c024c0d0dd6f5144c4fddb26a0f25d328f6a8fa1a066e310d0d9ea965c",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/crates/contracts/src/token_controls.rs",
+      "bytes": 2662,
+      "sha256": "ba76864c95f827a1a074f4abbd50be575021a6316783e64615963760747819f9",
+      "git_blob": "7f182551e53a887b4136deb3f663f873514ba94d",
+      "trace_build_input_sha256": "ba76864c95f827a1a074f4abbd50be575021a6316783e64615963760747819f9",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/crates/contracts/src/trading.rs",
+      "bytes": 11183,
+      "sha256": "503f7e69544680371a65f8ae1bf224c4f2830345b58449a825804012c4596f0c",
+      "git_blob": "f339bd26f85f83613d8509470a236f481ff05f1a",
+      "trace_build_input_sha256": "503f7e69544680371a65f8ae1bf224c4f2830345b58449a825804012c4596f0c",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/crates/contracts/src/wallet_operation.rs",
+      "bytes": 12435,
+      "sha256": "0e02768c299e22dd21c4333e0e7d507d1752461d0ba614361b9da2efcfdef1be",
+      "git_blob": "ce5f9cc62e1fcba18a8aa3eb6d77b0f95ad84b24",
+      "trace_build_input_sha256": "0e02768c299e22dd21c4333e0e7d507d1752461d0ba614361b9da2efcfdef1be",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/crates/contracts/src/webauthn.rs",
+      "bytes": 15687,
+      "sha256": "39d9f390399601df505979231a04259610e7beb7f02fe179d9950c76381e13b3",
+      "git_blob": "e2abfce8fb60d344003af6eebb45d434bf3c1c89",
+      "trace_build_input_sha256": "39d9f390399601df505979231a04259610e7beb7f02fe179d9950c76381e13b3",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/crates/contracts/tests/billing.rs",
+      "bytes": 18933,
+      "sha256": "1c9aed9103076e9026f28fd7ac75bb3f404b40b96cda4e78ed7722d7322785b9",
+      "git_blob": "1a452b2b80574a7be24d95e5b25a89ad87c65ca9",
+      "trace_build_input_sha256": "1c9aed9103076e9026f28fd7ac75bb3f404b40b96cda4e78ed7722d7322785b9",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/crates/contracts/tests/commercial.rs",
+      "bytes": 15631,
+      "sha256": "c7573e437ed6a25954b1aa6646cf159216a201a70051d4ca694cbdcb6989035b",
+      "git_blob": "cf328b8fae1fda022dfb9706dee24976264752fa",
+      "trace_build_input_sha256": "c7573e437ed6a25954b1aa6646cf159216a201a70051d4ca694cbdcb6989035b",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/crates/contracts/tests/corrections.rs",
+      "bytes": 8697,
+      "sha256": "d63b9879ede1078a3be88f3c5423e0240e6d858ad297965f3321021bf0931206",
+      "git_blob": "07f05941fdf35b8836a21e63ffc6ddd5a60c77cf",
+      "trace_build_input_sha256": "d63b9879ede1078a3be88f3c5423e0240e6d858ad297965f3321021bf0931206",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/crates/contracts/tests/financing.rs",
+      "bytes": 20319,
+      "sha256": "b5253a2c09506da5fa4a1fa478b94f4392eac4fc7d1aa28ff791acc3937069e9",
+      "git_blob": "53e9702631e0a0435dc585e53421b13875c0377c",
+      "trace_build_input_sha256": "b5253a2c09506da5fa4a1fa478b94f4392eac4fc7d1aa28ff791acc3937069e9",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/crates/contracts/tests/funded.rs",
+      "bytes": 13652,
+      "sha256": "e9c7a88820a7093346e36ae7a701b20b8628bec19515e9df5a03e3f20f3ad641",
+      "git_blob": "d3cbbab8d72afc89e81809304bf176c1f91b4648",
+      "trace_build_input_sha256": "e9c7a88820a7093346e36ae7a701b20b8628bec19515e9df5a03e3f20f3ad641",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/crates/contracts/tests/recovery.rs",
+      "bytes": 2673,
+      "sha256": "61cd63e88974aa48defc6961e3c1f4d0c9ca6b731dc3ece1a0b4811abbe9ec8c",
+      "git_blob": "eaaa942c89d9f56ea5c3a4c587f2ddfe4d9ea6a7",
+      "trace_build_input_sha256": "61cd63e88974aa48defc6961e3c1f4d0c9ca6b731dc3ece1a0b4811abbe9ec8c",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/crates/contracts/tests/trading_hashes.rs",
+      "bytes": 16534,
+      "sha256": "bf1a40323eac66f1b213bea68502cca66024f5a07028cc5d034c8e6795c7cc21",
+      "git_blob": "ac37f3ce2adcdb9ab9140324313f14722defd9e4",
+      "trace_build_input_sha256": "bf1a40323eac66f1b213bea68502cca66024f5a07028cc5d034c8e6795c7cc21",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/crates/contracts/tests/wallet_operation.rs",
+      "bytes": 6257,
+      "sha256": "b1af7eb3b491a41ba29b147b2cbd01c23ead71428a4f153e3bacec310052a869",
+      "git_blob": "b0a35ca596d45f878af86e7d750dece1ca856da2",
+      "trace_build_input_sha256": "b1af7eb3b491a41ba29b147b2cbd01c23ead71428a4f153e3bacec310052a869",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/crates/contracts/tests/webauthn.rs",
+      "bytes": 12304,
+      "sha256": "08aa75eb25afbf7947e95f868e23a263e1b61a522bd4fe54fbdba61de293df8b",
+      "git_blob": "a3b44e263cb477de97057e74147da24df5c05f4a",
+      "trace_build_input_sha256": "08aa75eb25afbf7947e95f868e23a263e1b61a522bd4fe54fbdba61de293df8b",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/claims-core/Cargo.toml",
+      "bytes": 884,
+      "sha256": "0a039a201dc92b9a3cea03d76defe2bd66c58330dbcdaba1e1260ace3b8b3f07",
+      "git_blob": "04c9fe1e37a7031491f24588f855fae4598e8e11",
+      "trace_build_input_sha256": "0a039a201dc92b9a3cea03d76defe2bd66c58330dbcdaba1e1260ace3b8b3f07",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/claims-core/src/corrections.rs",
+      "bytes": 33206,
+      "sha256": "528e4768cef3509dfdca9bd18bcc04e0b950b34fd6c9cee242ce75e0791962cb",
+      "git_blob": "190bdd9418b1bb559da644fd1ac53098b8cd57d1",
+      "trace_build_input_sha256": "528e4768cef3509dfdca9bd18bcc04e0b950b34fd6c9cee242ce75e0791962cb",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/claims-core/src/evidence_billing.rs",
+      "bytes": 20710,
+      "sha256": "ac666fe2445666b945a6dc8800153be5ba212839dbabe55203cd1eb27fccdb7e",
+      "git_blob": "c3431be27a1dd2fa22350f04815a756549d599ce",
+      "trace_build_input_sha256": "ac666fe2445666b945a6dc8800153be5ba212839dbabe55203cd1eb27fccdb7e",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/claims-core/src/funding.rs",
+      "bytes": 48383,
+      "sha256": "e2f5f93333f2454a3766e6ca6e06643a64aeb613705b5ef8081560f82ce5993e",
+      "git_blob": "ee732f9b94630ce635099f8018a9566c114534a6",
+      "trace_build_input_sha256": "e2f5f93333f2454a3766e6ca6e06643a64aeb613705b5ef8081560f82ce5993e",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/claims-core/src/funding_capital.rs",
+      "bytes": 9492,
+      "sha256": "b93656ca23b3b6231ee5983e03b2ab2f70dd72ce43a52bf96a473240942ffa70",
+      "git_blob": "4a2cf3a7daf7eba36e47b9d5f98b5f1b2cfaa5d2",
+      "trace_build_input_sha256": "b93656ca23b3b6231ee5983e03b2ab2f70dd72ce43a52bf96a473240942ffa70",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/claims-core/src/funding_collection.rs",
+      "bytes": 15436,
+      "sha256": "f3de6f981f38814d5a696da441c5a24ffe6b7921c988811110c6d6e4cdb3cbfb",
+      "git_blob": "9938865c6a5860db5a469965e99f91101a5d3c77",
+      "trace_build_input_sha256": "f3de6f981f38814d5a696da441c5a24ffe6b7921c988811110c6d6e4cdb3cbfb",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/claims-core/src/funding_journal.rs",
+      "bytes": 4749,
+      "sha256": "21ddee6bbcf2b8a96c13dd4e6e71c721de3326344edc3d7230831388c46ed903",
+      "git_blob": "31d303ce5159fb0049d99b9283ab55dfec0cf747",
+      "trace_build_input_sha256": "21ddee6bbcf2b8a96c13dd4e6e71c721de3326344edc3d7230831388c46ed903",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/claims-core/src/funding_servicing.rs",
+      "bytes": 14698,
+      "sha256": "d55aa6dbf3e72c6ad9a9899fcd2bbedda0fedb6a7cf5f5c83d76bb6890f98c60",
+      "git_blob": "b6523969f795a04d9b4dcea73bd1f1309340aab9",
+      "trace_build_input_sha256": "d55aa6dbf3e72c6ad9a9899fcd2bbedda0fedb6a7cf5f5c83d76bb6890f98c60",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/claims-core/src/funding_sponsor.rs",
+      "bytes": 6520,
+      "sha256": "b988f9bb4537b943afee8166692d2562735729d07237f5390d5b00462dc9232e",
+      "git_blob": "928b6f970bc7e77d6588289bf14c1b5fd0d7a362",
+      "trace_build_input_sha256": "b988f9bb4537b943afee8166692d2562735729d07237f5390d5b00462dc9232e",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/claims-core/src/funding_state.rs",
+      "bytes": 25616,
+      "sha256": "cfe40b951832e9f44f51ec9cdb8508d1cfd6ae31b665f73bc3e445d37fb101fa",
+      "git_blob": "90bef303aff53777deeab400d880f5e35afb1204",
+      "trace_build_input_sha256": "cfe40b951832e9f44f51ec9cdb8508d1cfd6ae31b665f73bc3e445d37fb101fa",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/claims-core/src/historical_refunds.rs",
+      "bytes": 3918,
+      "sha256": "8cb71fe680ed400f7211f15539e0f3f56e9e95b1c54d01ffbb3c7036c8646eaf",
+      "git_blob": "4b6e633c870bb767db4a984b6f9f62a65960fe7c",
+      "trace_build_input_sha256": "8cb71fe680ed400f7211f15539e0f3f56e9e95b1c54d01ffbb3c7036c8646eaf",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/claims-core/src/interest_refunds.rs",
+      "bytes": 15407,
+      "sha256": "576685b5bbd06fd1795a1ca05f9a49cad35209a92a09e7af8dc5e33f7d0e72f6",
+      "git_blob": "4acc8282b71fb8a5ec3545d4f0553c566814bea3",
+      "trace_build_input_sha256": "576685b5bbd06fd1795a1ca05f9a49cad35209a92a09e7af8dc5e33f7d0e72f6",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/claims-core/src/jupiter_adapter.rs",
+      "bytes": 27053,
+      "sha256": "2234e30218707e900c8e8c9777db68c7e14912fa7f2eeb2cca9a24b8eab19f9e",
+      "git_blob": "77b72286fce015a0de41fe6ada1919ae44cad93f",
+      "trace_build_input_sha256": "2234e30218707e900c8e8c9777db68c7e14912fa7f2eeb2cca9a24b8eab19f9e",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/claims-core/src/lib.rs",
+      "bytes": 65433,
+      "sha256": "ffe83d87a03c41206a63d2d742963e9a113679b6df2e05b567a97275206c9747",
+      "git_blob": "79cb13cb3ecc680a7f5bbaea5c41227e6b925ceb",
+      "trace_build_input_sha256": "ffe83d87a03c41206a63d2d742963e9a113679b6df2e05b567a97275206c9747",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/claims-core/src/mixed_route_adapter.rs",
+      "bytes": 20382,
+      "sha256": "25fec1174f86204cb480304b3a1b051b3b142c9bdd5f05ccf4ae582cb344a76e",
+      "git_blob": "dccd3850af288b11b5b5d1716a78eb7bbe1c0e27",
+      "trace_build_input_sha256": "25fec1174f86204cb480304b3a1b051b3b142c9bdd5f05ccf4ae582cb344a76e",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/claims-core/src/pump_adapter.rs",
+      "bytes": 41752,
+      "sha256": "cc2550f77628e10108395743566f4448acd8185215244ebb646032e71df933c6",
+      "git_blob": "26affc19aaf75d86be9cfe273350d85645f46d1b",
+      "trace_build_input_sha256": "cc2550f77628e10108395743566f4448acd8185215244ebb646032e71df933c6",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/claims-core/src/receivables.rs",
+      "bytes": 50848,
+      "sha256": "145ce5e258c2d65f95d3e85c54c5f97a332de89ef82925eff7b9b1893811a9d9",
+      "git_blob": "9dcceed8f6b54b9346cfaab7b2ff48d7717f82fc",
+      "trace_build_input_sha256": "145ce5e258c2d65f95d3e85c54c5f97a332de89ef82925eff7b9b1893811a9d9",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/claims-core/src/receiving.rs",
+      "bytes": 17092,
+      "sha256": "25f3eb10027b906bb0eb702613eb0b89c265339b51265d2d09d3b88481089fbf",
+      "git_blob": "350ecc15c4ead12d168370c7ca9f4576e270d3c9",
+      "trace_build_input_sha256": "25f3eb10027b906bb0eb702613eb0b89c265339b51265d2d09d3b88481089fbf",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/claims-core/src/recoverable_billing.rs",
+      "bytes": 11703,
+      "sha256": "fc40335c77f6f2f727891ead58ad9617d856644b0cb718d28414dc15f7d86f5d",
+      "git_blob": "77cec96657a5e6490b03e0ffe433be0084766a51",
+      "trace_build_input_sha256": "fc40335c77f6f2f727891ead58ad9617d856644b0cb718d28414dc15f7d86f5d",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/claims-core/src/seller_fees.rs",
+      "bytes": 12963,
+      "sha256": "72688110a4ced5f066b264989ee4a1b4fd599c08b05ccf4f0e3f709e3cd1fa50",
+      "git_blob": "0f3543d57d2f2969ec5642bb4fa7df9ddb33af22",
+      "trace_build_input_sha256": "72688110a4ced5f066b264989ee4a1b4fd599c08b05ccf4f0e3f709e3cd1fa50",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/claims-core/src/stock_token_controls.rs",
+      "bytes": 12245,
+      "sha256": "266906402ee4ca655fac9523ac7a084b038aabfe42361b7df1b5e3b14c1dc932",
+      "git_blob": "6d6b1ebd1495707298a1940f7bcdf22686debc52",
+      "trace_build_input_sha256": "266906402ee4ca655fac9523ac7a084b038aabfe42361b7df1b5e3b14c1dc932",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/claims-core/src/wallet_spending.rs",
+      "bytes": 31749,
+      "sha256": "c0039f5e806b56b1f58f7995ccf1b6607b75f0940b2705deabcae489537283e4",
+      "git_blob": "9b7c534ff1423e74a412175f7d892d0ce92d59d0",
+      "trace_build_input_sha256": "c0039f5e806b56b1f58f7995ccf1b6607b75f0940b2705deabcae489537283e4",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/claims-core/src/wallet_stock_custody.rs",
+      "bytes": 16722,
+      "sha256": "371a810055ad4680efb7ab0b95c92e6524e5fcd1bab12483ce83482c8408cba7",
+      "git_blob": "fc391635e880ae668e2d9de87f41bfc0e5b98ac3",
+      "trace_build_input_sha256": "371a810055ad4680efb7ab0b95c92e6524e5fcd1bab12483ce83482c8408cba7",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/claims-core/src/wallet_token_lifecycle.rs",
+      "bytes": 23133,
+      "sha256": "0d6b49b5dfb8f45c11e846db4d75e1eb4d8413de5941e45ed6e2306fead2f947",
+      "git_blob": "316c375b8857cedde068dd4e35a42e5518768c7c",
+      "trace_build_input_sha256": "0d6b49b5dfb8f45c11e846db4d75e1eb4d8413de5941e45ed6e2306fead2f947",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/claims-core/src/wallet_tokens.rs",
+      "bytes": 13635,
+      "sha256": "43df50d45d2f9dd9bef51b5238f7c9e317538a9404adc7c05eb92eefab89bd4a",
+      "git_blob": "f3d8c1e52c0a5431f70c89acae2465afdb4702cf",
+      "trace_build_input_sha256": "43df50d45d2f9dd9bef51b5238f7c9e317538a9404adc7c05eb92eefab89bd4a",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/claims-core/src/wallet_trading.rs",
+      "bytes": 14921,
+      "sha256": "3976dac9d9ab6147d1ae52f0cfd6bac849ed61b5c5aabcd25411f3c0799af5d6",
+      "git_blob": "15885b1662713b49b1a9a4da6e060858b577cb10",
+      "trace_build_input_sha256": "3976dac9d9ab6147d1ae52f0cfd6bac849ed61b5c5aabcd25411f3c0799af5d6",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/claims-core/src/wallet_trading_policy.rs",
+      "bytes": 10507,
+      "sha256": "f766f7563eaa2e768ff296800daa9337f6463f1aa553f8a8356b8bc374fc4c45",
+      "git_blob": "442b04d6c59f43963033fdd1aec1f267f3bb8330",
+      "trace_build_input_sha256": "f766f7563eaa2e768ff296800daa9337f6463f1aa553f8a8356b8bc374fc4c45",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/pool-issuer/Cargo.toml",
+      "bytes": 645,
+      "sha256": "ac8b10466749c6d1e9859265d9cc40dc434796c23c5872ec699be069e3a8226f",
+      "git_blob": "a5b8d79c45e058628473821a6b50c3c6a2e7959b",
+      "trace_build_input_sha256": "ac8b10466749c6d1e9859265d9cc40dc434796c23c5872ec699be069e3a8226f",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/pool-issuer/src/funding.rs",
+      "bytes": 11799,
+      "sha256": "212f99d9b52a049096d9d7a923a679ecf92ec5c8d25b1965afb073347eff6b70",
+      "git_blob": "f0561dcc4f867f7e1e6e2708624b2df54e11e9cd",
+      "trace_build_input_sha256": "212f99d9b52a049096d9d7a923a679ecf92ec5c8d25b1965afb073347eff6b70",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/pool-issuer/src/lib.rs",
+      "bytes": 15627,
+      "sha256": "6f9c010043551604bc630b2ee6b88a0c22b5577d911e2ba70bf3dacd0e281330",
+      "git_blob": "8fc7fb437c8a9c0ae1ec61568a1c341a3a8313e5",
+      "trace_build_input_sha256": "6f9c010043551604bc630b2ee6b88a0c22b5577d911e2ba70bf3dacd0e281330",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/principal-registry/Cargo.toml",
+      "bytes": 594,
+      "sha256": "1d4b61efec8b7701d448d55266f331793cadb32bec1d35cf28574fdbc130f947",
+      "git_blob": "2a80fd644616e24fd3541a3f6f7b7350bf49d98c",
+      "trace_build_input_sha256": "1d4b61efec8b7701d448d55266f331793cadb32bec1d35cf28574fdbc130f947",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/principal-registry/src/allowance.rs",
+      "bytes": 5021,
+      "sha256": "f00c9fe755b48471eff0e11bda1c95e3235e373d08cc4430c131ba91e3172329",
+      "git_blob": "ad0c7fe89e17312656e63db20a65c4828242e045",
+      "trace_build_input_sha256": "f00c9fe755b48471eff0e11bda1c95e3235e373d08cc4430c131ba91e3172329",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/principal-registry/src/lib.rs",
+      "bytes": 33437,
+      "sha256": "381149f48041356769a3053777f99f166e9f635806931bdfa7f883e13c804f5e",
+      "git_blob": "249a804f8ab7f71699469d10109fc8ad687e78f9",
+      "trace_build_input_sha256": "381149f48041356769a3053777f99f166e9f635806931bdfa7f883e13c804f5e",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/principal-registry/src/ownership.rs",
+      "bytes": 5323,
+      "sha256": "80b052b121211748f136331ec583c1758306ee6382c0ce0f9795485f1e7b2b2d",
+      "git_blob": "566232406b6738c80fb873c98af198860bd491e8",
+      "trace_build_input_sha256": "80b052b121211748f136331ec583c1758306ee6382c0ce0f9795485f1e7b2b2d",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/principal-registry/src/passkey.rs",
+      "bytes": 29566,
+      "sha256": "c661789b26e5f4391bc83d7bdccec747ec634958a03cb2f149fc5c7fb2b9f46e",
+      "git_blob": "420136082e2908b237023e44c8dea3185835b36e",
+      "trace_build_input_sha256": "c661789b26e5f4391bc83d7bdccec747ec634958a03cb2f149fc5c7fb2b9f46e",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/principal-registry/src/recovery.rs",
+      "bytes": 28781,
+      "sha256": "e8b20509ed63aafe232318383a95bdd780b37ef8a5561be637dd6eed47432ea4",
+      "git_blob": "e6cff1a14cd7e1cd74b58db226c2f2fac472c0bc",
+      "trace_build_input_sha256": "e8b20509ed63aafe232318383a95bdd780b37ef8a5561be637dd6eed47432ea4",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/principal-registry/src/repayment.rs",
+      "bytes": 20949,
+      "sha256": "997221b4b304aadbfab1ac69f298139f55c3a96d2d39f99dc9549420ab0a7c01",
+      "git_blob": "a2c49cd9c984dfae7664af551fa8278a4b60144c",
+      "trace_build_input_sha256": "997221b4b304aadbfab1ac69f298139f55c3a96d2d39f99dc9549420ab0a7c01",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/principal-registry/src/spending.rs",
+      "bytes": 23922,
+      "sha256": "b70008e8599b5d24bfb43fe9655ed82a818bd66659df85a99e8e65a0cb864560",
+      "git_blob": "6445f8a122c1ed8d8f4764f1ec06915a32a58502",
+      "trace_build_input_sha256": "b70008e8599b5d24bfb43fe9655ed82a818bd66659df85a99e8e65a0cb864560",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/principal-registry/src/state.rs",
+      "bytes": 11185,
+      "sha256": "26f63cc7cf7f5ba2634495a675915f05a864c8e6cd3225bf9b9e1de86afab654",
+      "git_blob": "20286fd532074aba42f7305ca251c58c1fa8f4c3",
+      "trace_build_input_sha256": "26f63cc7cf7f5ba2634495a675915f05a864c8e6cd3225bf9b9e1de86afab654",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/principal-registry/src/swig_framing.rs",
+      "bytes": 11389,
+      "sha256": "2a7c4f328710ce701f65c940311b8195f3f7a34252455faf8bfba08757abdd80",
+      "git_blob": "718f000180e20f6c43e5c49d53d3d2d29fd1a0fe",
+      "trace_build_input_sha256": "2a7c4f328710ce701f65c940311b8195f3f7a34252455faf8bfba08757abdd80",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/principal-registry/src/wallet.rs",
+      "bytes": 17372,
+      "sha256": "877a2c96911611517abf381af73b0bd86c9688a834722dc110b9c18799f829d0",
+      "git_blob": "058813acfdba4d5874544652ef8009e2a4b6f25e",
+      "trace_build_input_sha256": "877a2c96911611517abf381af73b0bd86c9688a834722dc110b9c18799f829d0",
+      "matches_trace_build_input": true
+    },
+    {
+      "path": "foundation/onchain/programs/principal-registry/src/wallet_funding.rs",
+      "bytes": 35112,
+      "sha256": "7d2cba1f76daee939fb2635baeb91f5f14d4394e37568084d78b1bc55cf8a3d2",
+      "git_blob": "3d7360c5523db16d2d7c53f4e14b0718c143c7ea",
+      "trace_build_input_sha256": "7d2cba1f76daee939fb2635baeb91f5f14d4394e37568084d78b1bc55cf8a3d2",
+      "matches_trace_build_input": true
+    }
+  ],
+  "rights": "The files retain their existing copyright. This release adds no license grant for them.",
+  "path_redaction": "None. Every file is byte-identical to the source commit."
+}

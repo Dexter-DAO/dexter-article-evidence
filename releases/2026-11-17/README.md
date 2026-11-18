@@ -55,6 +55,8 @@ require!(
 
 The same check guards withdrawals, so the owner can invest or spend the surplus down to what the wallet owes and no further.
 
+The four files that implement this are in [source/](source) as they stand at commit `1d6e752`, with their [notice](source/NOTICE.md) and [hashes](source/SHA256SUMS). The lines quoted above are lines 146 to 167 of [finish_swap.rs](source/programs/dexter-vault/src/instructions/finish_swap.rs), and [swap_for_carry.rs](source/programs/dexter-vault/src/instructions/swap_for_carry.rs) opens the trade that `finish_swap` closes. The withdrawal check is at lines 144 to 167 of [finalize_withdrawal.rs](source/programs/dexter-vault/src/instructions/finalize_withdrawal.rs), and `pro_forma_accrued`, the interest term in both, is at line 94 of [accrual.rs](source/programs/dexter-vault/src/accrual.rs).
+
 ## The test run with obligations outstanding
 
 The July 18 test suite ran this program on a local validator loaded with a copy of the live syrupUSDC pool, so every trade priced against real liquidity.

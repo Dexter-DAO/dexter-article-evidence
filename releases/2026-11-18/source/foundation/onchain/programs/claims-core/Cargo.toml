@@ -1,0 +1,32 @@
+[package]
+name = "claims-core"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "claims_core"
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+anchor-debug = []
+custom-heap = []
+custom-panic = []
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build", "anchor-spl/token_2022", "dexter-contracts/idl-build", "principal-registry/idl-build", "pool-issuer/idl-build"]
+
+[dependencies]
+anchor-lang = { workspace = true }
+anchor-spl = { workspace = true }
+solana-sha256-hasher = { workspace = true }
+dexter-contracts = { path = "../../crates/contracts" }
+principal-registry = { path = "../principal-registry", features = ["cpi"] }
+pool-issuer = { path = "../pool-issuer", features = ["cpi"] }
+
+[lints.rust.unexpected_cfgs]
+level = "warn"
+check-cfg = ['cfg(target_os, values("solana"))']
