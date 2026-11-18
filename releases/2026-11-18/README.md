@@ -144,6 +144,8 @@ The source lines in the case index (`error_source`) refer to that commit. The [p
 
 The trace, case index, receipt and test module are byte-identical to the source commit. In the log, one absolute workspace path is replaced with `<fixture-workspace>`. `commit_legs.py` imports the Account repository's shared test fixture, and the trace's `fixture_inputs` lists the hash of each fixture file it ran with.
 
+The [verifier](verifier/README.md) folder is a separate item: the current verifier for the October 30 mainnet record.
+
 ## Check a row yourself
 
 Download the trace, then print any row's name, result, state comparison and program log. This reads row 67:

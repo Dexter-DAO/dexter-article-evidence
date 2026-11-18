@@ -1,0 +1,37 @@
+{
+  "schema": "dexter-verifier-run/v1",
+  "started_at": "2026-11-18T14:17:05Z",
+  "completed_at": "2026-11-18T14:17:19Z",
+  "started_at_us_eastern": "2026-11-18 09:17:05 EST",
+  "node": "v24.22.1",
+  "working_directory": "releases/2026-11-18/verifier/verify-case-three",
+  "command": [
+    "node",
+    "verify.mjs",
+    "../../../../evidence/historical-evidence/record.json",
+    "--rpc",
+    "https://YOUR-ARCHIVAL-SOLANA-RPC"
+  ],
+  "rpc": "A Solana mainnet RPC that retains the October 30 transactions. Its address carries an access key and is not retained; the command above shows a placeholder in its place. The network line of the output is the mainnet genesis hash that RPC returned.",
+  "verifier": {
+    "codebase": "Dexter-DAO/dexter-x402-sdk",
+    "commit": "ed789c3725c0059614a69d8413f64ecaf198701b",
+    "path": "examples/verify-case-three"
+  },
+  "record": {
+    "path": "evidence/historical-evidence/record.json",
+    "bytes": 49826,
+    "sha256": "9c2052a9e07706d1596d819521615c187b76fc215087cc37cd13b1c17cbd152a"
+  },
+  "exit_code": 0,
+  "pass_lines": 54,
+  "fail_lines": 0,
+  "live_lines": 1,
+  "stdout": "mainnet-run.txt",
+  "stdout_lines": 55,
+  "stdout_sha256": "7579c7975400000fde52d3c118d4d6f7acb1a512bc87d1efff4433048d98f3da",
+  "stderr": [
+    "bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)"
+  ],
+  "public_transactions_sent": 0
+}

@@ -1,0 +1,169 @@
+{
+  "schema": "dexter-selected-public-provenance/v1",
+  "release": "2026-11-18",
+  "item": "Current verifier for the October 30, 2026 mainnet record",
+  "source": {
+    "codebase": "Dexter-DAO/dexter-x402-sdk",
+    "commit": "ed789c3725c0059614a69d8413f64ecaf198701b",
+    "commit_tree": "82b4f7af7857071fbd600480914eaa18f38a68c4",
+    "path": "examples/verify-case-three",
+    "path_tree": "9da38dea7ce684a2506a1644a15c98599193bfc0",
+    "url": "https://github.com/Dexter-DAO/dexter-x402-sdk/tree/ed789c3725c0059614a69d8413f64ecaf198701b/examples/verify-case-three"
+  },
+  "sources": [
+    {
+      "file": "verify-case-three/README.md",
+      "source": {
+        "codebase": "Dexter-DAO/dexter-x402-sdk",
+        "commit": "ed789c3725c0059614a69d8413f64ecaf198701b",
+        "path": "examples/verify-case-three/README.md",
+        "url": "https://github.com/Dexter-DAO/dexter-x402-sdk/blob/ed789c3725c0059614a69d8413f64ecaf198701b/examples/verify-case-three/README.md"
+      },
+      "git_blob": "497446adb58244461540f40dc6c95a58dd33347d",
+      "bytes": 5370,
+      "source_sha256": "86ba22ade52d038979f4b986d2a05188778f3500719e3aa6cf7359e36aab82da",
+      "export_sha256": "86ba22ade52d038979f4b986d2a05188778f3500719e3aa6cf7359e36aab82da",
+      "semantic_fields_changed": false,
+      "differs_from_november_4_copy": true
+    },
+    {
+      "file": "verify-case-three/archive.mjs",
+      "source": {
+        "codebase": "Dexter-DAO/dexter-x402-sdk",
+        "commit": "ed789c3725c0059614a69d8413f64ecaf198701b",
+        "path": "examples/verify-case-three/archive.mjs",
+        "url": "https://github.com/Dexter-DAO/dexter-x402-sdk/blob/ed789c3725c0059614a69d8413f64ecaf198701b/examples/verify-case-three/archive.mjs"
+      },
+      "git_blob": "9b9af0efbee63c3d92f4b4c9ed45e44fc5c54acf",
+      "bytes": 3770,
+      "source_sha256": "552696acd5ea5fe2c1979d530af2e351504e1b4053510f4995eda61275951459",
+      "export_sha256": "552696acd5ea5fe2c1979d530af2e351504e1b4053510f4995eda61275951459",
+      "semantic_fields_changed": false,
+      "differs_from_november_4_copy": true
+    },
+    {
+      "file": "verify-case-three/fixtures/archived-transactions.mjs",
+      "source": {
+        "codebase": "Dexter-DAO/dexter-x402-sdk",
+        "commit": "ed789c3725c0059614a69d8413f64ecaf198701b",
+        "path": "examples/verify-case-three/fixtures/archived-transactions.mjs",
+        "url": "https://github.com/Dexter-DAO/dexter-x402-sdk/blob/ed789c3725c0059614a69d8413f64ecaf198701b/examples/verify-case-three/fixtures/archived-transactions.mjs"
+      },
+      "git_blob": "8ae7004fcfc1a16e1ddbd17ce7bbe628597f179a",
+      "bytes": 2172,
+      "source_sha256": "d462bfef7230335c420cc0c99f436f930c995525cbfb63696efcc4612350f490",
+      "export_sha256": "d462bfef7230335c420cc0c99f436f930c995525cbfb63696efcc4612350f490",
+      "semantic_fields_changed": false,
+      "differs_from_november_4_copy": false
+    },
+    {
+      "file": "verify-case-three/fixtures/case-three-clone-run-9.json",
+      "source": {
+        "codebase": "Dexter-DAO/dexter-x402-sdk",
+        "commit": "ed789c3725c0059614a69d8413f64ecaf198701b",
+        "path": "examples/verify-case-three/fixtures/case-three-clone-run-9.json",
+        "url": "https://github.com/Dexter-DAO/dexter-x402-sdk/blob/ed789c3725c0059614a69d8413f64ecaf198701b/examples/verify-case-three/fixtures/case-three-clone-run-9.json"
+      },
+      "git_blob": "9803799391b4eee5b61fc3d7d6e2e2e4d0f4030b",
+      "bytes": 55755,
+      "source_sha256": "39e748fad04b53e9cd334178267d81ad194c145728805d2d24c94c63f5affb2d",
+      "export_sha256": "39e748fad04b53e9cd334178267d81ad194c145728805d2d24c94c63f5affb2d",
+      "semantic_fields_changed": false,
+      "differs_from_november_4_copy": false
+    },
+    {
+      "file": "verify-case-three/fixtures/published-case-two-payments.json",
+      "source": {
+        "codebase": "Dexter-DAO/dexter-x402-sdk",
+        "commit": "ed789c3725c0059614a69d8413f64ecaf198701b",
+        "path": "examples/verify-case-three/fixtures/published-case-two-payments.json",
+        "url": "https://github.com/Dexter-DAO/dexter-x402-sdk/blob/ed789c3725c0059614a69d8413f64ecaf198701b/examples/verify-case-three/fixtures/published-case-two-payments.json"
+      },
+      "git_blob": "27a0a5df9ab44d0f3d76e6e0bffb2a672d5ce647",
+      "bytes": 38711,
+      "source_sha256": "c8a8083920f1e6092a96bbf7d486682f1568462c303b48d30637e897320bb71b",
+      "export_sha256": "c8a8083920f1e6092a96bbf7d486682f1568462c303b48d30637e897320bb71b",
+      "semantic_fields_changed": false,
+      "differs_from_november_4_copy": false
+    },
+    {
+      "file": "verify-case-three/package-lock.json",
+      "source": {
+        "codebase": "Dexter-DAO/dexter-x402-sdk",
+        "commit": "ed789c3725c0059614a69d8413f64ecaf198701b",
+        "path": "examples/verify-case-three/package-lock.json",
+        "url": "https://github.com/Dexter-DAO/dexter-x402-sdk/blob/ed789c3725c0059614a69d8413f64ecaf198701b/examples/verify-case-three/package-lock.json"
+      },
+      "git_blob": "6253b47d96200352aa8884b3d975691bd3327bcc",
+      "bytes": 90919,
+      "source_sha256": "02c82b0457c291cd87ef4cba8c517fcc3bb103d65f2fb8c7ea86605f9418b284",
+      "export_sha256": "02c82b0457c291cd87ef4cba8c517fcc3bb103d65f2fb8c7ea86605f9418b284",
+      "semantic_fields_changed": false,
+      "differs_from_november_4_copy": false
+    },
+    {
+      "file": "verify-case-three/package.json",
+      "source": {
+        "codebase": "Dexter-DAO/dexter-x402-sdk",
+        "commit": "ed789c3725c0059614a69d8413f64ecaf198701b",
+        "path": "examples/verify-case-three/package.json",
+        "url": "https://github.com/Dexter-DAO/dexter-x402-sdk/blob/ed789c3725c0059614a69d8413f64ecaf198701b/examples/verify-case-three/package.json"
+      },
+      "git_blob": "b56b636d7c1c36655580e177b768d03609510d75",
+      "bytes": 337,
+      "source_sha256": "da09b452b5d8e1ea4bf29c2ada7660b66a8d43ad5fb51b18025384456c8a93e7",
+      "export_sha256": "da09b452b5d8e1ea4bf29c2ada7660b66a8d43ad5fb51b18025384456c8a93e7",
+      "semantic_fields_changed": false,
+      "differs_from_november_4_copy": false
+    },
+    {
+      "file": "verify-case-three/verify.mjs",
+      "source": {
+        "codebase": "Dexter-DAO/dexter-x402-sdk",
+        "commit": "ed789c3725c0059614a69d8413f64ecaf198701b",
+        "path": "examples/verify-case-three/verify.mjs",
+        "url": "https://github.com/Dexter-DAO/dexter-x402-sdk/blob/ed789c3725c0059614a69d8413f64ecaf198701b/examples/verify-case-three/verify.mjs"
+      },
+      "git_blob": "54b821d6fa51268b6a3d8b4869085f3e82055791",
+      "bytes": 44122,
+      "source_sha256": "39994ce3eda73e83d7d2cb24199d032d0d772f208051e3395c38f94573e55844",
+      "export_sha256": "39994ce3eda73e83d7d2cb24199d032d0d772f208051e3395c38f94573e55844",
+      "semantic_fields_changed": false,
+      "differs_from_november_4_copy": true
+    },
+    {
+      "file": "verify-case-three/verify.test.mjs",
+      "source": {
+        "codebase": "Dexter-DAO/dexter-x402-sdk",
+        "commit": "ed789c3725c0059614a69d8413f64ecaf198701b",
+        "path": "examples/verify-case-three/verify.test.mjs",
+        "url": "https://github.com/Dexter-DAO/dexter-x402-sdk/blob/ed789c3725c0059614a69d8413f64ecaf198701b/examples/verify-case-three/verify.test.mjs"
+      },
+      "git_blob": "5a84d36af14c397216f4020bf33d89b9ea90ea98",
+      "bytes": 45713,
+      "source_sha256": "e4c532f6a89a2a3da4b3e6f44c81d5ea19e22866bb8cf616fb623b5e536fa396",
+      "export_sha256": "e4c532f6a89a2a3da4b3e6f44c81d5ea19e22866bb8cf616fb623b5e536fa396",
+      "semantic_fields_changed": false,
+      "differs_from_november_4_copy": true
+    }
+  ],
+  "november_4_copy": {
+    "path": "evidence/historical-evidence/verifier",
+    "commit": "43980c8daaa5e3067681b9e3738b7bbb968ea200",
+    "path_tree": "582183bdcad74721c4af83b4534b9d28684e9546",
+    "files_that_differ": [
+      "README.md",
+      "archive.mjs",
+      "verify.mjs",
+      "verify.test.mjs"
+    ],
+    "files_identical": [
+      "fixtures/archived-transactions.mjs",
+      "fixtures/case-three-clone-run-9.json",
+      "fixtures/published-case-two-payments.json",
+      "package-lock.json",
+      "package.json"
+    ]
+  },
+  "export": "All nine files are byte-identical to the source commit. Nothing was added to or removed from the folder."
+}
