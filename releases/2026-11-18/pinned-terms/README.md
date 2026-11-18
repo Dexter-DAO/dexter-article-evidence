@@ -65,7 +65,7 @@ One buyer, two agents, one seller, one credit issuer and one lender. Every order
 
 The seller's terms for orders 1, 2, 4 and 5 of the main run have four fields: item = trail shoe, size, colour = red and ship_to = warehouse 4. Order 3 has sixteen fields.
 
-In the tables below, "Row" is the zero-based position in a trace's `transactions` array and equals `index` in the case index for that run's `suite`. "Error" is the name and number in the program log, followed by the program that raised it. Every order refusal reaches the Registry through ClaimsCore, so the Registry fails first and ClaimsCore fails with the same code.
+In the tables below, "Row" is the zero-based position in a trace's `transactions` array and equals `index` in the case index for that run's `suite`. "Error" is the name and number in the program log, followed by the program that raised it. Every order refusal except the two direct calls in rows 67 and 68 of the created-pinned run reaches the Registry through ClaimsCore, so the Registry fails first and ClaimsCore fails with the same code.
 
 ## A permission created already pinned
 
