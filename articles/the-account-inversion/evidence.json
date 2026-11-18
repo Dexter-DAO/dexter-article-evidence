@@ -6,8 +6,8 @@
   "subtitle": "Agentic Commerce Is at an Impasse Because Account Holders Are Not Account Owners. That Problem Is Now Solved.",
   "evidence_released": "2026-11-18",
   "guide": "README.md",
-  "archive": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-18c/dexter-article-evidence-2026-11-18c.zip",
-  "archive_sha256": "5d6ef68d468cd65c0baf608c94a3bbea9b13a1d9a71646daef354dc6ce6e6c24",
+  "archive": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-18d/dexter-article-evidence-2026-11-18d.zip",
+  "archive_sha256": "c0be267ced4edbc09883fe4c87e9c46f97a04390a07d235aaa3a5b19bd6c18f0",
   "evidence": [
     {
       "id": "three-way-commit",
@@ -130,11 +130,17 @@
     {
       "date": "2026-11-18",
       "guide": "../../releases/2026-11-18/README.md",
-      "tag": "2026-11-18c",
-      "download": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/tag/2026-11-18c"
+      "tag": "2026-11-18d",
+      "download": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/tag/2026-11-18d"
     }
   ],
   "previous_releases": [
+    {
+      "date": "2026-11-18",
+      "tag": "2026-11-18c",
+      "archive": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-18c/dexter-article-evidence-2026-11-18c.zip",
+      "archive_sha256": "5d6ef68d468cd65c0baf608c94a3bbea9b13a1d9a71646daef354dc6ce6e6c24"
+    },
     {
       "date": "2026-11-18",
       "tag": "2026-11-18b",
@@ -159,6 +165,6 @@
       "archive_sha256": "e789a59a553c23488007befa3678032373ab1e68bf41462a92a5da10eadd33f2"
     }
   ],
-  "release_tag": "2026-11-18c",
-  "checksum": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-18c/SHA256SUMS"
+  "release_tag": "2026-11-18d",
+  "checksum": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-18d/SHA256SUMS"
 }
