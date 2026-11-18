@@ -15,6 +15,13 @@
       "tests": "../../releases/2026-11-18/commit_legs.py"
     },
     {
+      "id": "shared-reserve",
+      "guide": "../../releases/2026-11-18/shared-reserve/README.md",
+      "record": "../../releases/2026-11-18/shared-reserve/shared-reserve-receipt.json",
+      "index": "../../releases/2026-11-18/shared-reserve/case-index.json",
+      "tests": "../../releases/2026-11-18/shared-reserve/shared_reserve.py"
+    },
+    {
       "id": "historical-mainnet-case",
       "record": "../../evidence/historical-evidence/record.json",
       "findings": "../../evidence/historical-evidence/findings.txt",

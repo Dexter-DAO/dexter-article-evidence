@@ -1,0 +1,107 @@
+{
+  "schema": "dexter-selected-public-provenance/v1",
+  "release": "2026-11-18",
+  "program_source": {
+    "codebase": "Dexter Account",
+    "commit": "e55c0ad3a224a1c4e72de4c283161345d438caaf"
+  },
+  "sources": [
+    {
+      "file": "shared-reserve-budget-trace.json.xz",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "6e1a1b763ce9be5a8fda0dd878dacb395d03e0da",
+        "path": "docs/evidence/shared-reserve-20261118/shared-reserve-budget-trace.json.xz"
+      },
+      "source_sha256": "5ecdaf388e505f41985127ca50cfc5cbae35f2ac34bee197a96c4e9551c2aca2",
+      "export_sha256": "5ecdaf388e505f41985127ca50cfc5cbae35f2ac34bee197a96c4e9551c2aca2",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "shared-reserve-wallet-trace.json.xz",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "6e1a1b763ce9be5a8fda0dd878dacb395d03e0da",
+        "path": "docs/evidence/shared-reserve-20261118/shared-reserve-wallet-trace.json.xz"
+      },
+      "source_sha256": "9eb617bbb1bcb6683a0710670ce5d1d804cc2273a5cf152bd207963fe12d552a",
+      "export_sha256": "9eb617bbb1bcb6683a0710670ce5d1d804cc2273a5cf152bd207963fe12d552a",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "case-index.json",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "6e1a1b763ce9be5a8fda0dd878dacb395d03e0da",
+        "path": "docs/evidence/shared-reserve-20261118/case-index.json"
+      },
+      "source_sha256": "0cf263a0583edb864924182fd6a0035e01c5225b8860343a70df0d59b0ae27a5",
+      "export_sha256": "0cf263a0583edb864924182fd6a0035e01c5225b8860343a70df0d59b0ae27a5",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "shared-reserve-receipt.json",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "6e1a1b763ce9be5a8fda0dd878dacb395d03e0da",
+        "path": "docs/evidence/shared-reserve-20261118/shared-reserve-receipt.json"
+      },
+      "source_sha256": "c0de7f76ca54afe449789b29c0a42bd13cc7a4813c68dc84c774e7dfc75c8d2d",
+      "export_sha256": "c0de7f76ca54afe449789b29c0a42bd13cc7a4813c68dc84c774e7dfc75c8d2d",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "shared-reserve-budget-receipt.json",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "6e1a1b763ce9be5a8fda0dd878dacb395d03e0da",
+        "path": "docs/evidence/shared-reserve-20261118/shared-reserve-budget-receipt.json"
+      },
+      "source_sha256": "f121e3ec1d5b81259fe6278b78bb02a0f3d8b2f7d2a427a74464fdfa05cd2ecc",
+      "export_sha256": "f121e3ec1d5b81259fe6278b78bb02a0f3d8b2f7d2a427a74464fdfa05cd2ecc",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "shared-reserve-wallet-receipt.json",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "6e1a1b763ce9be5a8fda0dd878dacb395d03e0da",
+        "path": "docs/evidence/shared-reserve-20261118/shared-reserve-wallet-receipt.json"
+      },
+      "source_sha256": "415051e1bff79dc5aea45fe1d3887817e1d18d5f6d85a4e0218dec45427f37c3",
+      "export_sha256": "415051e1bff79dc5aea45fe1d3887817e1d18d5f6d85a4e0218dec45427f37c3",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "shared-reserve.log",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "6e1a1b763ce9be5a8fda0dd878dacb395d03e0da",
+        "path": "docs/evidence/shared-reserve-20261118/shared-reserve.log"
+      },
+      "source_sha256": "94fbb6bbef228b391af4ff50325dddacabf7e7a19d6ad977416421b3c33d0136",
+      "export_sha256": "db906715debf229a345585ea155d0466adef6b604f40e825f568eba7377b5c41",
+      "workspace_path_fields_replaced": 2,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "shared_reserve.py",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "6e1a1b763ce9be5a8fda0dd878dacb395d03e0da",
+        "path": "foundation/onchain/tests/shared_reserve.py"
+      },
+      "source_sha256": "43690fb7b885c0fd52ab59cce77bf8d13ba342b78229e9dccf2750a1026a67d3",
+      "export_sha256": "43690fb7b885c0fd52ab59cce77bf8d13ba342b78229e9dccf2750a1026a67d3",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    }
+  ],
+  "path_redaction": "Only the absolute workspace prefix in shared-reserve.log changed, in two fields, to <fixture-workspace>. Its source and export hashes are distinct. The other seven files are byte-identical to the source commit. The two traces are published as recorded: the program_artifacts section of each names the three program binaries by their absolute paths on the machine that ran it."
+}

@@ -1,0 +1,46 @@
+{
+  "runs": {
+    "shared-reserve-budget": {
+      "status": "passed",
+      "trace": "shared-reserve-budget-trace.json.xz",
+      "trace_sha256": "6a779f8d8ca6531ecf286de78973fbf7a7dfdce90f2a244a9abd13bbe9214c27",
+      "transaction_count": 63,
+      "refused": 2,
+      "assertions": 98,
+      "receipts": 7,
+      "maximum_signed_packet": 2299,
+      "build_receipt_sha256": "a412fb7fadb7ca39531bba51e59931f8a3a6645803cf42f464c3da7a33349896",
+      "idl_receipt_sha256": "93fef2184c5a79cc738dc168e13f58af195744bceec12904e8e5103f754a37aa",
+      "trace_xz_sha256": "5ecdaf388e505f41985127ca50cfc5cbae35f2ac34bee197a96c4e9551c2aca2",
+      "annotated_cases": 5,
+      "annotated_refusals": 2,
+      "annotated_acceptances": 3
+    },
+    "shared-reserve-wallet": {
+      "status": "passed",
+      "trace": "shared-reserve-wallet-trace.json.xz",
+      "trace_sha256": "7db4bd293b5fd868f5dad4e1d35cbd8163d0344d9c9d4eb772c6f4e22dad40a1",
+      "transaction_count": 73,
+      "refused": 8,
+      "assertions": 201,
+      "receipts": 12,
+      "maximum_signed_packet": 2299,
+      "build_receipt_sha256": "a412fb7fadb7ca39531bba51e59931f8a3a6645803cf42f464c3da7a33349896",
+      "idl_receipt_sha256": "93fef2184c5a79cc738dc168e13f58af195744bceec12904e8e5103f754a37aa",
+      "trace_xz_sha256": "9eb617bbb1bcb6683a0710670ce5d1d804cc2273a5cf152bd207963fe12d552a",
+      "annotated_cases": 13,
+      "annotated_refusals": 8,
+      "annotated_acceptances": 5
+    }
+  },
+  "run_seconds": 0.5,
+  "engine": "solders 0.29.0 LiteSVM",
+  "program_sha256": {
+    "principal_registry.so": "92a21620018609eb98f504f0bbfe8370eda6d10081ef1cc1d5c540903bf35214",
+    "pool_issuer.so": "6804757b94ce2da8854388a1f748b614296207682db27cde85958f868b726e65",
+    "claims_core.so": "3ae2dc3c913c3ec696144c8e06104616f82a4d3305ff33e123c418eb446e0bb5"
+  },
+  "swig_sha256": "bb744d9811c392e3f343952d1a99bef9c97aa1936248a23b9d7efc1adb8939c1",
+  "build_receipt_sha256": "a412fb7fadb7ca39531bba51e59931f8a3a6645803cf42f464c3da7a33349896",
+  "idl_receipt_sha256": "93fef2184c5a79cc738dc168e13f58af195744bceec12904e8e5103f754a37aa"
+}
