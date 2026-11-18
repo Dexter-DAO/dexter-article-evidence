@@ -71,7 +71,7 @@ The rules behind the November 1 refusals are in the [program source](https://git
 
 | Article | Evidence | Package |
 |---|---|---|
-| **[Turns Out the Impasse Was a Tech Problem](https://x.com/BranchManager69/status/2123118207779143791)**<br>Agentic Commerce Is at an Impasse Because Account Holders Are Not Account Owners. That Problem Is Now Solved. | [Claims, records and checks](articles/the-account-inversion/README.md) | [November 18e ZIP](https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-18e/dexter-article-evidence-2026-11-18e.zip)<br>Records and source through November 18 |
+| **[Turns Out the Impasse Was a Tech Problem](https://x.com/BranchManager69/status/2123118207779143791)**<br>Agentic commerce is at an impasse because banks won’t stand behind an agent’s promise to pay, and stores won’t take that promise on its own. That problem is now solved — and the implications could reach far beyond both agents and commerce. | [Claims, records and checks](articles/the-account-inversion/README.md) | [November 18e ZIP](https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-18e/dexter-article-evidence-2026-11-18e.zip)<br>Records and source through November 18 |
 
 ## Evidence library
 
