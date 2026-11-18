@@ -150,7 +150,7 @@ The other source lines in the case index (`error_source`) refer to the same comm
 
 The trace, case index, receipt, test module and both source files are byte-identical to their source commits. In the log, one absolute workspace path is replaced with `<fixture-workspace>`. The source files keep their existing copyright, and this release adds no license grant for them. The trace's `fixture_inputs` lists the hash of every test file the run used.
 
-This folder was added after the [November 18 ZIP](https://github.com/Dexter-DAO/dexter-article-evidence/releases/tag/2026-11-18) was cut. It is in the repository and not in that ZIP.
+This folder was added after the first [November 18 ZIP](https://github.com/Dexter-DAO/dexter-article-evidence/releases/tag/2026-11-18) was cut. The [November 18b ZIP](https://github.com/Dexter-DAO/dexter-article-evidence/releases/tag/2026-11-18b) holds it.
 
 ## Check a row yourself
 

@@ -1,0 +1,72 @@
+{
+  "schema": "dexter-selected-public-provenance/v1",
+  "release": "2026-11-18",
+  "program_source": {
+    "codebase": "Dexter Account",
+    "commit": "e55c0ad3a224a1c4e72de4c283161345d438caaf",
+    "published": "../source/"
+  },
+  "sources": [
+    {
+      "file": "refund-promise-trace.json.xz",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "04afd3e92e104c92be7ab429c87f40e78fdf14d8",
+        "path": "docs/evidence/refund-promise-20261118/refund-promise-trace.json.xz"
+      },
+      "source_sha256": "d9f1cf2a8a8462d35fce4b006a81e01a91dfc282b3f691c11efd0608daf85f8f",
+      "export_sha256": "d9f1cf2a8a8462d35fce4b006a81e01a91dfc282b3f691c11efd0608daf85f8f",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "case-index.json",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "04afd3e92e104c92be7ab429c87f40e78fdf14d8",
+        "path": "docs/evidence/refund-promise-20261118/case-index.json"
+      },
+      "source_sha256": "d628fbd715ca079fda056c1285c2985c654f2a8c89a533f354d23f059b651b70",
+      "export_sha256": "d628fbd715ca079fda056c1285c2985c654f2a8c89a533f354d23f059b651b70",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "refund-promise-receipt.json",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "04afd3e92e104c92be7ab429c87f40e78fdf14d8",
+        "path": "docs/evidence/refund-promise-20261118/refund-promise-receipt.json"
+      },
+      "source_sha256": "7edc079136959c841c6904e04d485158510e3d1c5b091f1d168fbb9dd8ecf7b3",
+      "export_sha256": "7edc079136959c841c6904e04d485158510e3d1c5b091f1d168fbb9dd8ecf7b3",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "refund-promise.log",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "04afd3e92e104c92be7ab429c87f40e78fdf14d8",
+        "path": "docs/evidence/refund-promise-20261118/refund-promise.log"
+      },
+      "source_sha256": "4231ab9603f5675146aeccc02e447f02edf3d9d93bc5a3f845be0a8e78da4cb7",
+      "export_sha256": "213060b33ffc03e3a7e349cae6be37a50f863ef10ef0615c8e01d654982d0c31",
+      "workspace_path_fields_replaced": 1,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "refund_promise.py",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "04afd3e92e104c92be7ab429c87f40e78fdf14d8",
+        "path": "foundation/onchain/tests/refund_promise.py"
+      },
+      "source_sha256": "742229e664acbfb26c2f615dba309f7f5807e43b98faaca2fd9728daf050d0d9",
+      "export_sha256": "742229e664acbfb26c2f615dba309f7f5807e43b98faaca2fd9728daf050d0d9",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    }
+  ],
+  "path_redaction": "Only the absolute workspace prefix in refund-promise.log changed, in 1 field, to <fixture-workspace>. Its source and export hashes are distinct. The other four files are byte-identical to the source commit. The trace is published as recorded: its program_artifacts section names the three program binaries by their absolute paths on the machine that ran it."
+}

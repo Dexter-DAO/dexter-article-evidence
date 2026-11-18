@@ -30,6 +30,27 @@
       "source": "../../releases/2026-11-18/named-signer/source/"
     },
     {
+      "id": "agent-revocation",
+      "guide": "../../releases/2026-11-18/revocation/README.md",
+      "record": "../../releases/2026-11-18/revocation/revocation-trace.json.xz",
+      "index": "../../releases/2026-11-18/revocation/case-index.json",
+      "tests": "../../releases/2026-11-18/revocation/revocation.py"
+    },
+    {
+      "id": "one-account-both-sides",
+      "guide": "../../releases/2026-11-18/both-sides/README.md",
+      "record": "../../releases/2026-11-18/both-sides/both-sides-trace.json.xz",
+      "index": "../../releases/2026-11-18/both-sides/case-index.json",
+      "tests": "../../releases/2026-11-18/both-sides/both_sides.py"
+    },
+    {
+      "id": "refund-promise",
+      "guide": "../../releases/2026-11-18/refund-promise/README.md",
+      "record": "../../releases/2026-11-18/refund-promise/refund-promise-trace.json.xz",
+      "index": "../../releases/2026-11-18/refund-promise/case-index.json",
+      "tests": "../../releases/2026-11-18/refund-promise/refund_promise.py"
+    },
+    {
       "id": "account-program-source",
       "guide": "../../releases/2026-11-18/source/README.md",
       "manifest": "../../releases/2026-11-18/source/provenance.json",

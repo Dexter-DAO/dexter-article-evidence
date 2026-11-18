@@ -1,0 +1,72 @@
+{
+  "schema": "dexter-selected-public-provenance/v1",
+  "release": "2026-11-18",
+  "program_source": {
+    "codebase": "Dexter Account",
+    "commit": "e55c0ad3a224a1c4e72de4c283161345d438caaf",
+    "published": "../source/"
+  },
+  "sources": [
+    {
+      "file": "both-sides-trace.json.xz",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "e662e0fdbbc43ad33eefe4d9ec552da11354734f",
+        "path": "docs/evidence/both-sides-20261118/both-sides-trace.json.xz"
+      },
+      "source_sha256": "307cb0e6b7d5b740eb421a343a454978cb1ee76d45f7c3ffa88175189087f943",
+      "export_sha256": "307cb0e6b7d5b740eb421a343a454978cb1ee76d45f7c3ffa88175189087f943",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "case-index.json",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "e662e0fdbbc43ad33eefe4d9ec552da11354734f",
+        "path": "docs/evidence/both-sides-20261118/case-index.json"
+      },
+      "source_sha256": "ea9b480653c840228c99d5eb6a0497dca0dde11c90c58270de8e5b96189e75b3",
+      "export_sha256": "ea9b480653c840228c99d5eb6a0497dca0dde11c90c58270de8e5b96189e75b3",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "both-sides-receipt.json",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "e662e0fdbbc43ad33eefe4d9ec552da11354734f",
+        "path": "docs/evidence/both-sides-20261118/both-sides-receipt.json"
+      },
+      "source_sha256": "74c0e377e326be1deb3f090f37fd42943a4ff483e6fd1fde449fb7f1498da274",
+      "export_sha256": "74c0e377e326be1deb3f090f37fd42943a4ff483e6fd1fde449fb7f1498da274",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "both-sides.log",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "e662e0fdbbc43ad33eefe4d9ec552da11354734f",
+        "path": "docs/evidence/both-sides-20261118/both-sides.log"
+      },
+      "source_sha256": "fe50b0f99935976b3d55523f5d303056eee88041b0d5e9caf94d439750416178",
+      "export_sha256": "9829abc9281a0dcd56f75b54ab1a4c59d67f03f03806b92a1b3869527d74512a",
+      "workspace_path_fields_replaced": 1,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "both_sides.py",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "e662e0fdbbc43ad33eefe4d9ec552da11354734f",
+        "path": "foundation/onchain/tests/both_sides.py"
+      },
+      "source_sha256": "8fe1a105e62a6b8de08871390bfc88cba1d7394ebe9cdde8ba23485db6023e4e",
+      "export_sha256": "8fe1a105e62a6b8de08871390bfc88cba1d7394ebe9cdde8ba23485db6023e4e",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    }
+  ],
+  "path_redaction": "Only the absolute workspace prefix in both-sides.log changed, in 1 field, to <fixture-workspace>. Its source and export hashes are distinct. The other four files are byte-identical to the source commit. The trace is published as recorded: its program_artifacts section names the three program binaries by their absolute paths on the machine that ran it."
+}

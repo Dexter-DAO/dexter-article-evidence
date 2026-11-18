@@ -119,6 +119,18 @@ A second record from the same day, on the same binaries, has two agents of one b
 
 A third record from the same day, on the same binaries, has six orders that each name a signer for delivery. The seller was paid 900 when the named signer signed for 900 against a claim of 1,400, and nothing when the named signer never signed. The seller's own report of delivery was refused on such an order, and one order named the buyer as the signer. The tables, the trace, the test module and the two source files that implement the rule are in [named-signer](named-signer/README.md).
 
+## After the owner revokes an agent
+
+A fourth record from the same day, on the same binaries, follows an agent through its revocation. Three of its orders were accepted, the buyer's owner revoked it, and its fourth order was refused. The seller was then paid 160,000 on the first two orders by a key with no role, and a new agent placed a fifth order. The tables, the trace and the test module are in [revocation](revocation/README.md).
+
+## One account on both sides
+
+A fifth record has one company buying on one order and selling on another. Its single book showed 100,000 on the buying side and 150,000 on the selling side at the same time, and each seller was paid straight from the wallet of the lender behind its order. The company changed its agent and then its owner key, and neither order changed. The tables, the trace and the test module are in [both-sides](both-sides/README.md).
+
+## A refund the seller funds and a decider releases
+
+A sixth record has a seller holding 200,000 of its own cash in its own wallet behind two refund promises, each naming a decider. The seller could not withdraw while the promises were open. The decider signed for 30,000 on one, which was paid to the buyer, and never signed on the other, which paid nothing. The tables, the trace and the test module are in [refund-promise](refund-promise/README.md).
+
 ## Where it ran
 
 The compiled programs ran in LiteSVM from solders 0.29.0 under Python 3.12.3, with signature verification on and native v1 transactions. The token is one synthetic six-decimal SPL token and every key is a disposable test key. The run started on November 18, 2026 at 8:42 AM US Eastern. It sent no transaction to a public network.

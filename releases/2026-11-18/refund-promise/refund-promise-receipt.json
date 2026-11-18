@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "trace": "refund-promise-trace.json.xz",
+  "trace_sha256": "0ae4dfabfab16fc885b5df03f9469609aed24801ea4fe30a93bfd5070344157a",
+  "transaction_count": 86,
+  "refused": 6,
+  "assertions": 325,
+  "receipts": 19,
+  "maximum_signed_packet": 2732,
+  "build_receipt_sha256": "a412fb7fadb7ca39531bba51e59931f8a3a6645803cf42f464c3da7a33349896",
+  "idl_receipt_sha256": "93fef2184c5a79cc738dc168e13f58af195744bceec12904e8e5103f754a37aa",
+  "trace_xz_sha256": "d9f1cf2a8a8462d35fce4b006a81e01a91dfc282b3f691c11efd0608daf85f8f",
+  "annotated_cases": 24,
+  "annotated_refusals": 6,
+  "annotated_acceptances": 18,
+  "run_seconds": 0.35,
+  "engine": "solders 0.29.0 LiteSVM",
+  "roles": {
+    "original buyer's owner": "3BuW9SR5tG6VFK4MmkQQ3Ak8ny1K1Vv5Uz7is8Aa5pwG",
+    "original buyer's agent": "Cdkrk8tujFY6mTyGwFgKpnbiGc1hqtXCog1qvUdKAe6D",
+    "seller's owner": "4MfyR4G3NWfVRDWo6iNAHDBZqWMgwZX6FNtMqEW3a9JT",
+    "seller's agent": "3MZskhKUdNRkeMQ6zyNVSJcCx38o79ohwmSgZ2d5a4cu",
+    "lender's owner": "6TcyBfPdBt1kjsvDZLzmBFnuMaLWiTaAt4RjUr9VA5YD",
+    "credit issuer's owner": "FMUEmtxhU46GzhKF4FW9MLJdQWiLgjiXP9TYRWSrqTpV",
+    "decider": "GFKfRLPKHYRyARLSTc4p94vukKPMFAkSrQT5j55WYoy2",
+    "fee payer of setup and order transactions": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9",
+    "key that submits signed records": "92CudvFbL7Tyw2RkWC7NU1ehdNBSjy8FEG1TsJaN8wgz",
+    "key that finalizes": "4ap9kAPdHiV82d8D73mrtEgwGxBbUxJgyFr1fRGLhide",
+    "key that collects": "6jQ7iw7szEgN6hp49SAAMagYSYdDAZTQRDF3b8vTLNqM"
+  },
+  "accounts": {
+    "seller principal": "ADG9CUeaRQKvoCj9iZfS61s1zAELZQcNUcaWPhNexqFV",
+    "seller's governed wallet": "E2duoH7V1qXzV4qtU1Rtgudz2SER76x1uHtiJ3orD5gc",
+    "seller's wallet token account": "ChLpvDb5LWTWymFQonwwKUJnBfHBcq94mw5YFsNnpyNY",
+    "seller's own token account": "pZQ3qDdXgJ2bHDhJGurFTc4FYfPiqaRNDLYUC6xCcgv",
+    "original buyer principal": "3j5rAy9V4FQTbposk4Uow2eb1xHhgC9GyNZmpFn6Dmr8",
+    "original buyer's payout token account": "jTjN38dhN9hnbbFum1HjDHxvVawUBbdrzyrwVd12xv4",
+    "lender's wallet token account": "2hfaqUkKA9cpEB2GQGzTbVE71iX47mjsQ6s19775TRuS"
+  },
+  "program_sha256": {
+    "principal_registry.so": "92a21620018609eb98f504f0bbfe8370eda6d10081ef1cc1d5c540903bf35214",
+    "pool_issuer.so": "6804757b94ce2da8854388a1f748b614296207682db27cde85958f868b726e65",
+    "claims_core.so": "3ae2dc3c913c3ec696144c8e06104616f82a4d3305ff33e123c418eb446e0bb5"
+  },
+  "swig_sha256": "bb744d9811c392e3f343952d1a99bef9c97aa1936248a23b9d7efc1adb8939c1"
+}
