@@ -115,6 +115,10 @@ The receipt counts 36 refusals. The tables above hold 32 of them and row 64 is t
 
 A second record from the same day, on the same binaries, has two agents of one buyer ordering from two sellers. Both agents draw on one budget of 150,000, and one lender wallet of 150,000 backs both sellers' open orders at once. An order that would overdraw either is refused, each seller is paid from the shared wallet while the other's share stays untouched, and unused backing returns to the lender only after the seller releases it. The tables, traces and test module are in [shared-reserve](shared-reserve/README.md).
 
+## An order that names who signs for delivery
+
+A third record from the same day, on the same binaries, has six orders that each name a signer for delivery. The seller was paid 900 when the named signer signed for 900 against a claim of 1,400, and nothing when the named signer never signed. The seller's own report of delivery was refused on such an order, and one order named the buyer as the signer. The tables, the trace, the test module and the two source files that implement the rule are in [named-signer](named-signer/README.md).
+
 ## Where it ran
 
 The compiled programs ran in LiteSVM from solders 0.29.0 under Python 3.12.3, with signature verification on and native v1 transactions. The token is one synthetic six-decimal SPL token and every key is a disposable test key. The run started on November 18, 2026 at 8:42 AM US Eastern. It sent no transaction to a public network.

@@ -1,0 +1,96 @@
+{
+  "schema": "dexter-selected-public-provenance/v1",
+  "release": "2026-11-18",
+  "program_source": {
+    "codebase": "Dexter Account",
+    "commit": "e55c0ad3a224a1c4e72de4c283161345d438caaf"
+  },
+  "sources": [
+    {
+      "file": "named-signer-trace.json.xz",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "2b6e0ea239d297b83fac5c8d1e09869e60e62b1f",
+        "path": "docs/evidence/named-signer-20261118/named-signer-trace.json.xz"
+      },
+      "source_sha256": "d45a274cab6d538c44efb5a6892ddac8c150be16f5437b68e4612fe34693a53d",
+      "export_sha256": "d45a274cab6d538c44efb5a6892ddac8c150be16f5437b68e4612fe34693a53d",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "case-index.json",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "2b6e0ea239d297b83fac5c8d1e09869e60e62b1f",
+        "path": "docs/evidence/named-signer-20261118/case-index.json"
+      },
+      "source_sha256": "41e3117e3715b3b822e1bcb0b9d728cad3f06ed37a9dc74a7c2428e56ed653a7",
+      "export_sha256": "41e3117e3715b3b822e1bcb0b9d728cad3f06ed37a9dc74a7c2428e56ed653a7",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "named-signer-receipt.json",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "2b6e0ea239d297b83fac5c8d1e09869e60e62b1f",
+        "path": "docs/evidence/named-signer-20261118/named-signer-receipt.json"
+      },
+      "source_sha256": "a9006599389c36539525e4520c013ef39fecf613342f6cd31bf6349f1591c4e5",
+      "export_sha256": "a9006599389c36539525e4520c013ef39fecf613342f6cd31bf6349f1591c4e5",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "named-signer.log",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "2b6e0ea239d297b83fac5c8d1e09869e60e62b1f",
+        "path": "docs/evidence/named-signer-20261118/named-signer.log"
+      },
+      "source_sha256": "a49f295ea3b8f0dd9c8d8dfa80a72e11373ec2594234dac21a52e3cff2149520",
+      "export_sha256": "ac6e1272c80dea7d77f0ff147640629d7c43a41622d10eaf4a54618cb4062808",
+      "workspace_path_fields_replaced": 1,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "named_signer.py",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "2b6e0ea239d297b83fac5c8d1e09869e60e62b1f",
+        "path": "foundation/onchain/tests/named_signer.py"
+      },
+      "source_sha256": "28feaedb90a07dde781617e7c5736b8628524a0667970db1237aa8d24f886d97",
+      "export_sha256": "28feaedb90a07dde781617e7c5736b8628524a0667970db1237aa8d24f886d97",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "source/foundation/onchain/programs/claims-core/src/evidence_billing.rs",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "e55c0ad3a224a1c4e72de4c283161345d438caaf",
+        "path": "foundation/onchain/programs/claims-core/src/evidence_billing.rs"
+      },
+      "source_sha256": "ac666fe2445666b945a6dc8800153be5ba212839dbabe55203cd1eb27fccdb7e",
+      "export_sha256": "ac666fe2445666b945a6dc8800153be5ba212839dbabe55203cd1eb27fccdb7e",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "source/foundation/onchain/crates/contracts/src/billing.rs",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "e55c0ad3a224a1c4e72de4c283161345d438caaf",
+        "path": "foundation/onchain/crates/contracts/src/billing.rs"
+      },
+      "source_sha256": "489c4bddd0421810a89c230c36bc912c8425acd817f86b1fdabab4d676094230",
+      "export_sha256": "489c4bddd0421810a89c230c36bc912c8425acd817f86b1fdabab4d676094230",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    }
+  ],
+  "path_redaction": "Only the absolute workspace prefix in named-signer.log changed, in one field, to <fixture-workspace>. Its source and export hashes are distinct. The other six files are byte-identical to their source commits. The trace is published as recorded: its program_artifacts section names the three program binaries by their absolute paths on the machine that ran it.",
+  "source_files": "The two files under source/ are Dexter Account program source at the program_source commit, copied byte for byte. Their SHA-256 values equal the entries for the same paths in the trace's build_inputs. They retain their existing copyright, and this release adds no license grant for them."
+}

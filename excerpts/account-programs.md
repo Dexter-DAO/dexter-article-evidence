@@ -133,6 +133,8 @@ Rows in [financing-commercial-trace](https://raw.githubusercontent.com/Dexter-DA
 
 ## A wrong or partial delivery
 
+At this pin the seller reports its own completed work: `EarnFinancedRun` in [funding.rs](https://raw.githubusercontent.com/Dexter-DAO/dexter-article-evidence/main/evidence/account-evidence/execution/foundation/onchain/programs/claims-core/src/funding.rs) takes the supplier as its signer, line 147. The current programs also let an order name who signs for delivery, and the bill then follows that signature. The [November 18 named-signer record](../releases/2026-11-18/named-signer/README.md) shows it on the compiled programs and publishes the [two source files](../releases/2026-11-18/named-signer/README.md#the-rule-in-the-source) that implement it. The rest of this section is the remedy after a bill exists.
+
 The `correct` instruction in [corrections.rs](https://raw.githubusercontent.com/Dexter-DAO/dexter-article-evidence/main/evidence/account-evidence/execution/foundation/onchain/programs/claims-core/src/corrections.rs) takes a signed correction of one delivered run. The buyer's owner signs every correction. The supplier's owner signs any correction that changes the bill, and the current creditor's owner signs where it loses principal or waives interest.
 
 ```rust
