@@ -1,0 +1,141 @@
+{
+  "runs": {
+    "pinned-terms": {
+      "status": "passed",
+      "trace": "pinned-terms-trace.json.xz",
+      "trace_sha256": "40f72c94f8c1a6e62c055c610dea461505fe28a4471c6746b9dc0c155188d94d",
+      "transaction_count": 100,
+      "refused": 27,
+      "assertions": 288,
+      "receipts": 11,
+      "maximum_signed_packet": 3391,
+      "build_receipt_sha256": "3b2464c1a84a4acdb6b100b2220b3eb8d3465ddbef68e3e2a31ee0f515e92edf",
+      "idl_receipt_sha256": "6fdbae75996e0df67a5f8bede7daec1411a474b3dd9325c1b7b0ddbbf7afe95e",
+      "trace_xz_sha256": "0f1ad8d48a1ad8a36de9ca2ced342db0139519176191500777b236250f2a98fc",
+      "annotated_cases": 43,
+      "annotated_refusals": 27,
+      "annotated_acceptances": 16,
+      "roles": {
+        "buyer's owner": "3BuW9SR5tG6VFK4MmkQQ3Ak8ny1K1Vv5Uz7is8Aa5pwG",
+        "agent 1": "Cdkrk8tujFY6mTyGwFgKpnbiGc1hqtXCog1qvUdKAe6D",
+        "agent 2": "5WcE8o73vmsSZXeeWTLm3ty3fAJKCnBWRF6VuKUme5nu",
+        "seller": "4MfyR4G3NWfVRDWo6iNAHDBZqWMgwZX6FNtMqEW3a9JT",
+        "lender's owner": "6TcyBfPdBt1kjsvDZLzmBFnuMaLWiTaAt4RjUr9VA5YD",
+        "credit issuer's owner": "FMUEmtxhU46GzhKF4FW9MLJdQWiLgjiXP9TYRWSrqTpV",
+        "fee payer of setup and order transactions": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9",
+        "outside key (refusals)": "8bcRzB3v6PxbbtkVCiX9ceW2whwakA6gX7qvSYbeMHLq"
+      }
+    },
+    "pinned-terms-created-pinned": {
+      "status": "passed",
+      "trace": "pinned-terms-created-pinned-trace.json.xz",
+      "trace_sha256": "7868320034854a8f02fb89c08453548639a7e0c3581bb6965ddb3aeac6e28f2c",
+      "transaction_count": 76,
+      "refused": 10,
+      "assertions": 163,
+      "receipts": 8,
+      "maximum_signed_packet": 2559,
+      "build_receipt_sha256": "3b2464c1a84a4acdb6b100b2220b3eb8d3465ddbef68e3e2a31ee0f515e92edf",
+      "idl_receipt_sha256": "6fdbae75996e0df67a5f8bede7daec1411a474b3dd9325c1b7b0ddbbf7afe95e",
+      "trace_xz_sha256": "04c8bf55229b97bbb923efb1e945927e0ce8cd2d958d112741de29ddec26477b",
+      "annotated_cases": 22,
+      "annotated_refusals": 10,
+      "annotated_acceptances": 12,
+      "roles": {
+        "buyer's owner": "3BuW9SR5tG6VFK4MmkQQ3Ak8ny1K1Vv5Uz7is8Aa5pwG",
+        "agent 1": "Cdkrk8tujFY6mTyGwFgKpnbiGc1hqtXCog1qvUdKAe6D",
+        "agent 2": "5WcE8o73vmsSZXeeWTLm3ty3fAJKCnBWRF6VuKUme5nu",
+        "seller": "4MfyR4G3NWfVRDWo6iNAHDBZqWMgwZX6FNtMqEW3a9JT",
+        "lender's owner": "6TcyBfPdBt1kjsvDZLzmBFnuMaLWiTaAt4RjUr9VA5YD",
+        "credit issuer's owner": "FMUEmtxhU46GzhKF4FW9MLJdQWiLgjiXP9TYRWSrqTpV",
+        "fee payer of setup and order transactions": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9",
+        "outside key (refusals)": "8bcRzB3v6PxbbtkVCiX9ceW2whwakA6gX7qvSYbeMHLq"
+      }
+    },
+    "pinned-terms-passkey": {
+      "status": "passed",
+      "trace": "pinned-terms-passkey-trace.json.xz",
+      "trace_sha256": "b74f62b3c53dc2ee0f57af610077297c39bf19a7b75d7467423e935a4a9bb090",
+      "transaction_count": 80,
+      "refused": 7,
+      "assertions": 124,
+      "receipts": 8,
+      "maximum_signed_packet": 3821,
+      "build_receipt_sha256": "3b2464c1a84a4acdb6b100b2220b3eb8d3465ddbef68e3e2a31ee0f515e92edf",
+      "idl_receipt_sha256": "6fdbae75996e0df67a5f8bede7daec1411a474b3dd9325c1b7b0ddbbf7afe95e",
+      "trace_xz_sha256": "eb48533a29908667de77007519a0583f49516c9c458e694d7b81909a339a3762",
+      "annotated_cases": 6,
+      "annotated_refusals": 2,
+      "annotated_acceptances": 4,
+      "roles": {
+        "buyer's owner (passkey alias)": "FZXmU3vnccKyM384A4S2dEA4GqVByq7i8tDKyyaX1kBf",
+        "credit issuer's owner (passkey alias)": "DXugwUsviZJK1YWbe2m2TdxoPNTULtiGC5HiqDJ7J9sR",
+        "agent": "Cdkrk8tujFY6mTyGwFgKpnbiGc1hqtXCog1qvUdKAe6D",
+        "seller": "4MfyR4G3NWfVRDWo6iNAHDBZqWMgwZX6FNtMqEW3a9JT"
+      }
+    },
+    "pinned-terms-recoverable": {
+      "status": "passed",
+      "trace": "pinned-terms-recoverable-trace.json.xz",
+      "trace_sha256": "5173d31c5e11d1cba96a7a9a3980edcff874f3a5140f57e9488c5b6cd0063483",
+      "transaction_count": 65,
+      "refused": 1,
+      "assertions": 65,
+      "receipts": 7,
+      "maximum_signed_packet": 2963,
+      "build_receipt_sha256": "3b2464c1a84a4acdb6b100b2220b3eb8d3465ddbef68e3e2a31ee0f515e92edf",
+      "idl_receipt_sha256": "6fdbae75996e0df67a5f8bede7daec1411a474b3dd9325c1b7b0ddbbf7afe95e",
+      "trace_xz_sha256": "bf6483fb52194ff59ba16f155a802e83623b7ea92f10b3451e130201813a46be",
+      "annotated_cases": 4,
+      "annotated_refusals": 1,
+      "annotated_acceptances": 3,
+      "roles": {
+        "buyer's owner": "3BuW9SR5tG6VFK4MmkQQ3Ak8ny1K1Vv5Uz7is8Aa5pwG",
+        "agent": "Cdkrk8tujFY6mTyGwFgKpnbiGc1hqtXCog1qvUdKAe6D",
+        "seller's owner": "4MfyR4G3NWfVRDWo6iNAHDBZqWMgwZX6FNtMqEW3a9JT"
+      }
+    },
+    "pinned-terms-pool-funded": {
+      "status": "passed",
+      "trace": "pinned-terms-pool-funded-trace.json.xz",
+      "trace_sha256": "0ef6fa7da2efc20f380218f60ac41809cc6a3f97685b873ee267ea00ff773f64",
+      "transaction_count": 18,
+      "refused": 2,
+      "assertions": 14,
+      "receipts": 0,
+      "maximum_signed_packet": 847,
+      "build_receipt_sha256": "3b2464c1a84a4acdb6b100b2220b3eb8d3465ddbef68e3e2a31ee0f515e92edf",
+      "idl_receipt_sha256": "6fdbae75996e0df67a5f8bede7daec1411a474b3dd9325c1b7b0ddbbf7afe95e",
+      "trace_xz_sha256": "2a7071533c5dd9c81414c46c1aa6ad68ce7d0d60c3eeb52417bda0db0794c4cd",
+      "annotated_cases": 6,
+      "annotated_refusals": 2,
+      "annotated_acceptances": 4,
+      "roles": {
+        "buyer's owner": "3BuW9SR5tG6VFK4MmkQQ3Ak8ny1K1Vv5Uz7is8Aa5pwG",
+        "agent 1": "FMUEmtxhU46GzhKF4FW9MLJdQWiLgjiXP9TYRWSrqTpV",
+        "seller": "4MfyR4G3NWfVRDWo6iNAHDBZqWMgwZX6FNtMqEW3a9JT",
+        "pool manager and fee payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+      }
+    }
+  },
+  "run_seconds": 1.74,
+  "engine": "solders 0.29.0 LiteSVM",
+  "name_fingerprints": {
+    "size": "05b37e4652b5bc6d4e0b3c9b3853eb3fa49ef68411548147e0c9ff5b215c84fb",
+    "colour": "afbc890ab78fe0170cddb1cf432db91c94783f184e2562d512b77abe68ba8a28"
+  },
+  "value_fingerprints": {
+    "10": "67c64cd99ee9c2941257cd3c1d83fabde2526b1aff20a1cf54758f495d572416",
+    "11": "f05c20c04a654ee163ccc9887013bbf3d6ec1cb82722ebcc1c2969cb77620c60",
+    "red": "20b69583a4955ce56a5f643520e2290f5905722d38959b5f8c244fd5b424b6d3",
+    "blue": "cec0061149fed3ce0b661b96cca0a51fd7c57e515ec227f750ea1a85dc0882c9"
+  },
+  "program_sha256": {
+    "principal_registry.so": "0aad6b0090bcc1a0c5fc1576f73771824869199c281dafea47e386bb8bd609cd",
+    "pool_issuer.so": "6804757b94ce2da8854388a1f748b614296207682db27cde85958f868b726e65",
+    "claims_core.so": "1d866dede6ce0a5f449f8f845c77eedae31858c8d505d82ae608f30b732983be"
+  },
+  "swig_sha256": "bb744d9811c392e3f343952d1a99bef9c97aa1936248a23b9d7efc1adb8939c1",
+  "build_receipt_sha256": "3b2464c1a84a4acdb6b100b2220b3eb8d3465ddbef68e3e2a31ee0f515e92edf",
+  "idl_receipt_sha256": "6fdbae75996e0df67a5f8bede7daec1411a474b3dd9325c1b7b0ddbbf7afe95e"
+}

@@ -17,6 +17,15 @@
       "tests": "../../releases/2026-11-18/commit_legs.py"
     },
     {
+      "id": "owner-pinned-terms",
+      "guide": "../../releases/2026-11-18/pinned-terms/README.md",
+      "record": "../../releases/2026-11-18/pinned-terms/pinned-terms-created-pinned-trace.json.xz",
+      "main_run": "../../releases/2026-11-18/pinned-terms/pinned-terms-trace.json.xz",
+      "index": "../../releases/2026-11-18/pinned-terms/case-index.json",
+      "tests": "../../releases/2026-11-18/pinned-terms/pinned_terms.py",
+      "source": "../../releases/2026-11-18/pinned-terms/source/"
+    },
+    {
       "id": "shared-reserve",
       "guide": "../../releases/2026-11-18/shared-reserve/README.md",
       "record": "../../releases/2026-11-18/shared-reserve/shared-reserve-receipt.json",

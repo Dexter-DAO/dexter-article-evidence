@@ -1,0 +1,105 @@
+{
+  "schema": "dexter.order-terms-v2",
+  "name_domain": "DEXTER:ORDER-TERM-NAME:1",
+  "value_domain": "DEXTER:ORDER-TERM-VALUE:1",
+  "terms_domain": "DEXTER:ORDER-TERMS:2",
+  "rule": "terms ascend by name fingerprint; hash = sha256(terms_domain || u8(count) || name_1 || value_1 || ... || name_n || value_n)",
+  "vectors": [
+    {
+      "name": "one term",
+      "entries": [
+        [
+          "size",
+          "10"
+        ]
+      ],
+      "terms": [
+        {
+          "name": "05b37e4652b5bc6d4e0b3c9b3853eb3fa49ef68411548147e0c9ff5b215c84fb",
+          "value": "67c64cd99ee9c2941257cd3c1d83fabde2526b1aff20a1cf54758f495d572416"
+        }
+      ],
+      "hash": "dce5665205a7a9c09b76a1f096e7a5ca970944a8cd1f0791232e40669233373a"
+    },
+    {
+      "name": "four terms",
+      "entries": [
+        [
+          "item",
+          "trail shoe"
+        ],
+        [
+          "size",
+          "10"
+        ],
+        [
+          "colour",
+          "red"
+        ],
+        [
+          "ship_to",
+          "warehouse 4"
+        ]
+      ],
+      "terms": [
+        {
+          "name": "05b37e4652b5bc6d4e0b3c9b3853eb3fa49ef68411548147e0c9ff5b215c84fb",
+          "value": "67c64cd99ee9c2941257cd3c1d83fabde2526b1aff20a1cf54758f495d572416"
+        },
+        {
+          "name": "0a4afc41d4416fc657471728707cdc8bf7c2c5a4496ebec58ecf81b8cc766ab1",
+          "value": "593f316cdacdd20aee24f82f2eed39a68db17719b2ef35f57a78248fdb72de8a"
+        },
+        {
+          "name": "6b57b1ca5def698d58053edcf071a8138c4055cdba3f477e053ce2cb09adb4be",
+          "value": "e69e1a3b5f55190f989e039e738632a6428dbe7603bed236dda22a26ada443f6"
+        },
+        {
+          "name": "afbc890ab78fe0170cddb1cf432db91c94783f184e2562d512b77abe68ba8a28",
+          "value": "20b69583a4955ce56a5f643520e2290f5905722d38959b5f8c244fd5b424b6d3"
+        }
+      ],
+      "hash": "12ba268ad7af896884f76de88116dfa74a0db5b40b8200db3a54f0c029f1120c"
+    },
+    {
+      "name": "non-ASCII text",
+      "entries": [
+        [
+          "couleur",
+          "rouge foncé"
+        ],
+        [
+          "taille",
+          "42½"
+        ]
+      ],
+      "terms": [
+        {
+          "name": "8972382771fd3908485e56065fff29e9049e5236a162ff06a12647cd3eea58d4",
+          "value": "624037f046ede282c9f238129c75b5e92c0427f37c20aa0c854110256ab93846"
+        },
+        {
+          "name": "9b8254f8dbde11673932add2e0d6124b8507a246b6dd02052dd553ffc7066ede",
+          "value": "4e836ca01b8922fc2bfbfa7eade28f54198a28f2c91a4743f9b6f354cb123b17"
+        }
+      ],
+      "hash": "f353afb77678e8656a91d7e1773b8203fe71787243972c90d430dd7d8c88ef39"
+    }
+  ],
+  "repeated_name": {
+    "entries": [
+      [
+        "size",
+        "10"
+      ],
+      [
+        "colour",
+        "red"
+      ],
+      [
+        "size",
+        "11"
+      ]
+    ]
+  }
+}

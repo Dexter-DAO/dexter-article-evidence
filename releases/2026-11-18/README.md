@@ -111,6 +111,10 @@ With 50,000 free and 40,000 promised to order 1, the lender's withdrawal of 50,0
 
 The receipt counts 36 refusals. The tables above hold 32 of them and row 64 is the 33rd. Rows 83, 84 and 96 start from account state the test harness wrote directly, and the case index labels each `harness-written state`. The remaining 75 transactions set up the scenario or are the owners' steps between cases, such as lowering a limit and restoring it.
 
+## Terms the owner pins
+
+A further record pins terms of the deal on the agent's permission. The owner created the permission already pinned to size = 10, in one instruction. The agent's order for size 11 was refused, with PrincipalRegistry `TermsRequired` through `accept_financed_tab` and `TermsNotPermitted` through the instruction that shows the order's terms, and nothing was held or recorded. The same order for size 10 was accepted. An agent whose permission was not pinned ordered size 11 and was accepted. This record ran commit `9ab1130`, which is the commit the other records on this page ran plus this change, and it publishes the six source files that differ. The tables, the traces and the test module are in [pinned-terms](pinned-terms/README.md).
+
 ## Orders that share one budget and one wallet
 
 A second record from the same day, on the same binaries, has two agents of one buyer ordering from two sellers. Both agents draw on one budget of 150,000, and one lender wallet of 150,000 backs both sellers' open orders at once. An order that would overdraw either is refused, each seller is paid from the shared wallet while the other's share stays untouched, and unused backing returns to the lender only after the seller releases it. The tables, traces and test module are in [shared-reserve](shared-reserve/README.md).
