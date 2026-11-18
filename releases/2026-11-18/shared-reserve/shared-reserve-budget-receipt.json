@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "trace": "shared-reserve-budget-trace.json.xz",
+  "trace_sha256": "6a779f8d8ca6531ecf286de78973fbf7a7dfdce90f2a244a9abd13bbe9214c27",
+  "transaction_count": 63,
+  "refused": 2,
+  "assertions": 98,
+  "receipts": 7,
+  "maximum_signed_packet": 2299,
+  "build_receipt_sha256": "a412fb7fadb7ca39531bba51e59931f8a3a6645803cf42f464c3da7a33349896",
+  "idl_receipt_sha256": "93fef2184c5a79cc738dc168e13f58af195744bceec12904e8e5103f754a37aa",
+  "trace_xz_sha256": "5ecdaf388e505f41985127ca50cfc5cbae35f2ac34bee197a96c4e9551c2aca2",
+  "annotated_cases": 5,
+  "annotated_refusals": 2,
+  "annotated_acceptances": 3
+}

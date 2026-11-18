@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "trace": "shared-reserve-wallet-trace.json.xz",
+  "trace_sha256": "7db4bd293b5fd868f5dad4e1d35cbd8163d0344d9c9d4eb772c6f4e22dad40a1",
+  "transaction_count": 73,
+  "refused": 8,
+  "assertions": 201,
+  "receipts": 12,
+  "maximum_signed_packet": 2299,
+  "build_receipt_sha256": "a412fb7fadb7ca39531bba51e59931f8a3a6645803cf42f464c3da7a33349896",
+  "idl_receipt_sha256": "93fef2184c5a79cc738dc168e13f58af195744bceec12904e8e5103f754a37aa",
+  "trace_xz_sha256": "9eb617bbb1bcb6683a0710670ce5d1d804cc2273a5cf152bd207963fe12d552a",
+  "annotated_cases": 13,
+  "annotated_refusals": 8,
+  "annotated_acceptances": 5
+}

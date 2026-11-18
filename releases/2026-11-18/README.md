@@ -111,6 +111,10 @@ With 50,000 free and 40,000 promised to order 1, the lender's withdrawal of 50,0
 
 The receipt counts 36 refusals. The tables above hold 32 of them and row 64 is the 33rd. Rows 83, 84 and 96 start from account state the test harness wrote directly, and the case index labels each `harness-written state`. The remaining 75 transactions set up the scenario or are the owners' steps between cases, such as lowering a limit and restoring it.
 
+## Orders that share one budget and one wallet
+
+A second record from the same day, on the same binaries, has two agents of one buyer ordering from two sellers. Both agents draw on one budget of 150,000, and one lender wallet of 150,000 backs both sellers' open orders at once. An order that would overdraw either is refused, each seller is paid from the shared wallet while the other's share stays untouched, and unused backing returns to the lender only after the seller releases it. The tables, traces and test module are in [shared-reserve](shared-reserve/README.md).
+
 ## Where it ran
 
 The compiled programs ran in LiteSVM from solders 0.29.0 under Python 3.12.3, with signature verification on and native v1 transactions. The token is one synthetic six-decimal SPL token and every key is a disposable test key. The run started on November 18, 2026 at 8:42 AM US Eastern. It sent no transaction to a public network.
