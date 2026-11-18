@@ -32,10 +32,10 @@
   "latest_release": {
     "date": "2026-11-18",
     "guide": "../releases/2026-11-18/README.md",
-    "download": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/tag/2026-11-18b",
-    "tag": "2026-11-18b",
-    "archive": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-18b/dexter-article-evidence-2026-11-18b.zip",
-    "checksum": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-18b/SHA256SUMS",
-    "archive_sha256": "cdf93a297a6484c54569f30f9f0c962ef9177c7fb166adfd33e8768905b1b2a4"
+    "download": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/tag/2026-11-18c",
+    "tag": "2026-11-18c",
+    "archive": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-18c/dexter-article-evidence-2026-11-18c.zip",
+    "checksum": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-18c/SHA256SUMS",
+    "archive_sha256": "5d6ef68d468cd65c0baf608c94a3bbea9b13a1d9a71646daef354dc6ce6e6c24"
   }
 }
