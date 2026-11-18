@@ -26,6 +26,14 @@
       "source": "../../releases/2026-11-18/pinned-terms/source/"
     },
     {
+      "id": "owner-pinned-delivery-signer",
+      "guide": "../../releases/2026-11-18/pinned-delivery/README.md",
+      "record": "../../releases/2026-11-18/pinned-delivery/pinned-delivery-trace.json.xz",
+      "index": "../../releases/2026-11-18/pinned-delivery/case-index.json",
+      "tests": "../../releases/2026-11-18/pinned-delivery/pinned_delivery.py",
+      "source": "../../releases/2026-11-18/pinned-delivery/source/"
+    },
+    {
       "id": "shared-reserve",
       "guide": "../../releases/2026-11-18/shared-reserve/README.md",
       "record": "../../releases/2026-11-18/shared-reserve/shared-reserve-receipt.json",
