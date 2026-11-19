@@ -23,6 +23,10 @@
         {
           "date": "2026-11-18",
           "guide": "../releases/2026-11-18/README.md"
+        },
+        {
+          "date": "2026-11-19",
+          "guide": "../releases/2026-11-19/README.md"
         }
       ],
       "first_evidence_released": "2026-11-04",
