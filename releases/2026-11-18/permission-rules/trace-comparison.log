@@ -1,0 +1,136 @@
+{
+ "traces": 51,
+ "transactions": 4822,
+ "assertions": 16777,
+ "refused": 530,
+ "transactions with different compute units": 1237,
+ "instruction data: create_mandate -> create_mandate: the seller as a list of one, each pin a list rule of one value": 78,
+ "observed_after: permission record, 517 -> 1,070 bytes, same meaning": 3163,
+ "observed_before: permission record, 517 -> 1,070 bytes, same meaning": 3077,
+ "log lines: the seller check's Left/Right keys (require_keys_eq) are not printed": 1,
+ "instruction data: create_pinned_mandate -> create_mandate: the seller as a list of one, each pin a list rule of one value": 15,
+ "log lines: instruction renamed": 43,
+ "instruction data: accept_program_sourced_financed_tab: each shown term carries no number": 4,
+ "log lines: error message reworded": 38,
+ "assertions that differ": 91,
+ "passkey approvals decoded: challenge, client data hash and key recomputed in each run": 10,
+ "instruction data: passkey proof of the changed instruction": 20,
+ "log lines: passkey approval event, digests of the changed instruction": 10,
+ "observed_after: passkey record, digests of the last approved instruction": 18,
+ "instruction data: accept_pinned_evidence_financed_tab: each shown term carries no number": 30,
+ "observed_before: passkey record, digests of the last approved instruction": 14,
+ "instruction data: accept_pinned_recoverable_financed_tab: each shown term carries no number": 11,
+ "instruction data: pin_mandate_terms -> set_mandate_rules: the permission's seller kept, each pin a list rule of one value": 28,
+ "instruction data: accept_pinned_financed_tab: each shown term carries no number": 36,
+ "the plain permission that exists only on this branch (the behaviour change)": 28,
+ "instruction data: reserve_pinned: each shown term carries no number": 2
+}
+wire byte change per instruction class: {
+ "create_mandate -> create_mandate: the seller as a list of one, each pin a list rule of one value": [
+  8,
+  9
+ ],
+ "create_pinned_mandate -> create_mandate: the seller as a list of one, each pin a list rule of one value": [
+  118,
+  232,
+  346,
+  574
+ ],
+ "accept_program_sourced_financed_tab: each shown term carries no number": [
+  5
+ ],
+ "passkey proof of the changed instruction": [
+  5,
+  16,
+  118,
+  232,
+  264
+ ],
+ "accept_pinned_evidence_financed_tab: each shown term carries no number": [
+  4,
+  5,
+  6,
+  7
+ ],
+ "accept_pinned_recoverable_financed_tab: each shown term carries no number": [
+  5,
+  6
+ ],
+ "pin_mandate_terms -> set_mandate_rules: the permission's seller kept, each pin a list rule of one value": [
+  36,
+  150,
+  151,
+  264,
+  378,
+  492,
+  606
+ ],
+ "accept_pinned_financed_tab: each shown term carries no number": [
+  3,
+  4,
+  5,
+  6,
+  16,
+  17
+ ],
+ "reserve_pinned: each shown term carries no number": [
+  4
+ ]
+}
+compute unit change: min -126 max 3636
+source lines moved (error, main, this branch: occurrences):
+   AuthorityEpoch: lib.rs:334 -> lib.rs:320 (2)
+   ConfigurationConflict: lib.rs:290 -> lib.rs:277 (3)
+   CredentialInactive: lib.rs:337 -> lib.rs:323 (4)
+   CredentialKey: lib.rs:338 -> lib.rs:324 (2)
+   DeliverySignerMismatch: lib.rs:366 -> lib.rs:354 (4)
+   Expired: lib.rs:343 -> lib.rs:329 (2)
+   IntentMismatch: lib.rs:350 -> lib.rs:336 (1)
+   InvalidPolicy: lib.rs:225 -> lib.rs:220 (5)
+   InvalidPolicy: lib.rs:282 -> lib.rs:273 (2)
+   MandateRevision: lib.rs:231 -> lib.rs:226 (1)
+   MandateRevision: lib.rs:341 -> lib.rs:327 (1)
+   MandateRevoked: lib.rs:230 -> lib.rs:225 (1)
+   PerOperationLimit: lib.rs:352 -> lib.rs:338 (1)
+   PriceMismatch: lib.rs:368 -> lib.rs:356 (5)
+   TermsMismatch: lib.rs:359 -> lib.rs:345 (2)
+   TermsMismatch: lib.rs:360 -> lib.rs:346 (3)
+   TermsMismatch: lib.rs:361 -> lib.rs:347 (3)
+   TermsNotPermitted: lib.rs:363 -> state.rs:383 (4)
+   TermsNotPermitted: lib.rs:363 -> state.rs:396 (23)
+   TermsRequired: lib.rs:357 -> lib.rs:343 (11)
+payer accounts whose lamports differ only by the larger permission's rent (trace, account, permissions paid for: observations):
+   none: no observed account differs only in lamports
+behaviour changes: [
+ {
+  "trace": "pinned-terms-created-pinned-trace.json",
+  "row": 61,
+  "before": "refused: the buyer's owner creates a pinned permission with no terms",
+  "before_error": {
+   "InstructionError": [
+    0,
+    {
+     "Custom": 6003
+    }
+   ]
+  },
+  "after": "ACCEPTED: the buyer's owner creates a permission with no terms, which is the plain permission",
+  "after_error": null
+ }
+]
+UNEXPLAINED: 0
+assertion classes: {
+ "snapshot leaf: permission record, same meaning": 122,
+ "state snapshot equal in each run; permission or passkey records differ in layout": 71,
+ "digest of a passkey-approved instruction whose bytes changed: the digest of a decoded approval in each run": 10,
+ "renamed: the Registry ran CreatePinnedMandate": 1,
+ "renamed: no permission exists after the creation with no terms": 1,
+ "snapshot leaf: the plain permission that exists only on this branch": 2,
+ "largest transaction: 16 shown terms, one byte each for the absent number": 1,
+ "renamed: the permission record ends with the pinned-terms count and list": 1,
+ "renamed: a term is a name fingerprint and a value fingerprint": 1,
+ "permission fields other than its rules: the seller read as a list of one": 1,
+ "the permission's seller read as a list of one": 4
+}
+assertions left for review: 0
+UNEXPLAINED after assertions: 0
