@@ -10,7 +10,7 @@
   <a href="https://x.com/BranchManager69/status/2123118207779143791">Read the article</a> &middot;
   <a href="../../README.md#articles">All articles</a> &middot;
   <a href="#start-with-a-claim">Evidence by claim</a> &middot;
-  <a href="https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-18i/dexter-article-evidence-2026-11-18i.zip">Download November 18i ZIP</a> &middot;
+  <a href="https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-19/dexter-article-evidence-2026-11-19.zip">Download November 19 ZIP</a> &middot;
   <a href="https://raw.githubusercontent.com/Dexter-DAO/dexter-article-evidence/main/articles/the-account-inversion/evidence.json">Machine-readable index</a>
 </p>
 
@@ -73,10 +73,10 @@ The [verifier instructions](../../excerpts/records.md#check-the-oct-30-record) r
 
 ## Download and check offline
 
-Download the [November 18i ZIP](https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-18i/dexter-article-evidence-2026-11-18i.zip) and [checksum](https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-18i/SHA256SUMS). It holds every record and source folder in the repository, and each November 18 record's guide gives its own check. The [November 6 instructions](../../releases/2026-11-06/README.md#download-and-check) verify the recovery and purchase records with Python and Node. For the earlier records, follow the [Oct 30 verifier instructions](../../excerpts/records.md#check-the-oct-30-record) or [Account instructions](../../excerpts/account-programs.md#check-the-account-records).
+Download the [November 19 ZIP](https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-19/dexter-article-evidence-2026-11-19.zip) and [checksum](https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-19/SHA256SUMS). It holds every record and source folder in the repository, and each November 18 and November 19 record's guide gives its own check. The [November 6 instructions](../../releases/2026-11-06/README.md#download-and-check) verify the recovery and purchase records with Python and Node. For the earlier records, follow the [Oct 30 verifier instructions](../../excerpts/records.md#check-the-oct-30-record) or [Account instructions](../../excerpts/account-programs.md#check-the-account-records).
 
 The package's two disclosure examples show the same case, on the [case page](https://dexter.cash/mandate?case=b0ee0521-898e-828b-9c14-265bfb59216c), with the shared name concealed and with a key that lets the reader reveal it. The key is present only in the explicit shared-name link.
 
 ## Provenance and rights
 
-The [November 18i release](https://github.com/Dexter-DAO/dexter-article-evidence/releases/tag/2026-11-18i) publishes the checksum for the current ZIP. [APPROVED-PACKAGE.json](../../APPROVED-PACKAGE.json) identifies the original November 4 archive. Each record retains its source revision. Licensing is in the [source notices](../../excerpts/records.md#source-notices-and-approval).
+The [November 19 release](https://github.com/Dexter-DAO/dexter-article-evidence/releases/tag/2026-11-19) publishes the checksum for the current ZIP. [APPROVED-PACKAGE.json](../../APPROVED-PACKAGE.json) identifies the original November 4 archive. Each record retains its source revision. Licensing is in the [source notices](../../excerpts/records.md#source-notices-and-approval).

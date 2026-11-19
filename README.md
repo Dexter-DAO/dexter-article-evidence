@@ -77,7 +77,7 @@ The rules behind the November 1 refusals are in the [program source](https://git
 
 | Article | Evidence | Package |
 |---|---|---|
-| **[Turns Out the Impasse Was a Tech Problem](https://x.com/BranchManager69/status/2123118207779143791)**<br>Agentic commerce is at an impasse because banks won’t stand behind an agent’s promise to pay, and stores won’t take that promise on its own. That problem is now solved — and the implications could reach far beyond both agents and commerce. | [Claims, records and checks](articles/the-account-inversion/README.md) | [November 18i ZIP](https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-18i/dexter-article-evidence-2026-11-18i.zip)<br>Records and source through November 18 |
+| **[Turns Out the Impasse Was a Tech Problem](https://x.com/BranchManager69/status/2123118207779143791)**<br>Agentic commerce is at an impasse because banks won’t stand behind an agent’s promise to pay, and stores won’t take that promise on its own. That problem is now solved — and the implications could reach far beyond both agents and commerce. | [Claims, records and checks](articles/the-account-inversion/README.md) | [November 19 ZIP](https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-19/dexter-article-evidence-2026-11-19.zip)<br>Records and source through November 19 |
 
 ## Evidence library
 
@@ -117,7 +117,7 @@ Article guides link each claim to specific records and source. Each collection g
 git clone https://github.com/Dexter-DAO/dexter-article-evidence.git
 ```
 
-The [November 18i ZIP](https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-18i/dexter-article-evidence-2026-11-18i.zip) and its [SHA-256 checksum](https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-18i/SHA256SUMS) hold the same files: every record, source folder and check in the repository. Each release folder has its own `SHA256SUMS`.
+The [November 19 ZIP](https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-19/dexter-article-evidence-2026-11-19.zip) and its [SHA-256 checksum](https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-19/SHA256SUMS) hold the same files: every record, source folder and check in the repository. Each release folder has its own `SHA256SUMS`.
 
 The [article catalog](https://raw.githubusercontent.com/Dexter-DAO/dexter-article-evidence/main/articles/index.json) is a machine-readable starting point. Evidence manifests and provenance files identify exact source revisions.
 
