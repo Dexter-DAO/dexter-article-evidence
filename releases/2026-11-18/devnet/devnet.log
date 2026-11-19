@@ -1,0 +1,63 @@
+funded at Nov 18 08:54 PM ET with 16.91426272 SOL
+--- principal_registry
+
+Signature: 4M7F3WYaY44PPjPTc1p2hHKfFqVUfYpGkXsmNmh2DNdJTZH5ExjXsLyBWVyXv5yGgVaTMkvvmUHzhHgtSm93Xmeh
+
+principal_registry on-chain matches build
+--- claims_core
+
+Signature: 3EMBiSGjbkPUi81SdreKTgC3G9A9sCwAXZsDLyKor9nw6TfdsxYE9t1pjpwvZMoJN4HhSr5DpfinyjCX2GFrknXW
+
+claims_core on-chain matches build
+balance after: 0.83069212 SOL
+done 08:55 PM ET
+--- check-only
+cluster devnet  genesis EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG  node 4.4.1  endpoint https://devnet.helius-rpc.com
+program principal_registry  9cRnuwBP8gUBmFKJxxhLyR3GcqzKwMuUCTTFPngEtr8G  sha256 f6f4052ceb824561f98718176bb4d32d7851a603a949b750aecf2b9465587659  matches build: exact
+program claims_core         727zmMkqPEPHaBDbxY4iAhzt6uZxxAd8CFoPUjdGXPPz  sha256 a96472c1e26f35fcabe9a5af9122c2d807c1048ba8a7a511dc0b2ea5473b69f2  matches build: exact
+program pool_issuer         3yceApSVxLYihHjLLrCycV8T4Bg1MYggbxQhdzaqB2Sm  sha256 6804757b94ce2da8854388a1f748b614296207682db27cde85958f868b726e65  matches build: exact
+program swig                swigypWHEksbC64pWKwah1WTeh9JXwx8H1rJHLdbQMB  sha256 0418f037fe1c9f6c0cd9d3ee57d684f69aca2ed9b3388f5d0c45020b01cce1d9  matches build: exact
+cluster time 1795053330  payer FpD1YKCetiW6JamQNQRNRbASCFdR2iZX4BPAmea3MmKB  payer lamports 830692120
+check only: nothing sent. requests 12
+--- run
+   success slot 523832993  3s1xwqy5CxH3teV3pASTkNqLyC4d4g4uSSJsrmmRGBvjbvGKDE2RFrTaJpZBPEwJcnBPnGG8hDEXACgQjTNTDd9G  COLLECTION ACCEPTED: a key with no role in the order pays the seller's earned 60,000 from the lender's wallet
+   success slot 523833007  3koba6ndXroUCwrpHeDgF7ULvoHGTeXNG13Rg5XnGXnHArhyH1wFT1ihBytmCKhdTfs6NdTFahasdxE8BnAYEpaY  payer gives the lender's owner lamports for one receipt
+   failed  slot 523833024  5BAeD8XHArCFWsTJbJDRDTzKQj8wmDHr6DY7dM3RrKBGBVY8HR2ZCh1C6LAMPWLPpxQpBPeE8HnLMqZqb3yqtyjm  withdrawal refused: lender asks for 50,001 when 50,000 is free and 40,000 is promised  claims_core:FundingCashShortfall(6033)
+   success slot 523833036  3ruDFp45Ldh4q5eyQ4Kj56RV13kAmuBkRhCu4TDAYVnwtSnbrLCVyAoLBujumVzWJh9U4A99kWVFn4AkF5Bua5pq  RELEASE ACCEPTED: seller releases the order's unused 40,000
+   success slot 523833059  5hwStrA6rqGnd7SiNaz4iQXcD6ooqTwH8Ley1egcjyAiNSFs3no8Z7JmTijFoER3mhnSiFeVuWK5pp5xa3eLZdH7  buyer's owner enrolls agent 2
+   success slot 523833072  3J2bS4zdhmuz8XBuVTZEEcEE3qSByjW8qgvsQs3qRjiJL7TSkaXCWvbW95gkqj62KybJWBrNseboJomt4cXHrsUy  PERMISSION CREATED PINNED: buyer's owner permits agent 2 with size = 10 and a unit price of 1 already pinned, in one instruction (create_pinned_mandate): this seller, this lender facility, per-order limit 100,000
+   failed  slot 523833089  4BeAsGWmCvnRih2UfrGNU7qSNyTXgy5R4J2tmV6JvdEbcRgatwDD2Xu6QGznjZaSxMMdXnpyJ7y3tQppxHRkPx8P  pinned order refused (terms): agent 2's order of 50,000 says size = 11 where the owner pinned size = 10, sent through accept_pinned_financed_tab  principal_registry:TermsNotPermitted(6053)
+   failed  slot 523833104  3SCDCKAXfPSErrsv2y7r39ZQQNFEj6FKLcWn8Jk7aWqKeuAiPoeKBnierWozRV3iWeeNy4CsScocWx5fpuPDegfk  pinned order refused (no terms shown): the same size = 11 order sent through plain accept_financed_tab, which shows no terms  principal_registry:TermsRequired(6051)
+   failed  slot 523833118  HiqPXnMSVRHc9K3Q8sk5J1Y7C3aQfdJWEQFoBck2qo7CjQictc9vP9fCC3tF5kw8TJMHHBeC2Q1qcAY4eeFR4AL  pinned order refused (price): agent 2's order of 50,000 with size = 10 at 2 per unit, listing its own unit_price, where the owner pinned 1 per unit  principal_registry:TermsNotPermitted(6053)
+   success slot 523833130  5RdMRwxNPXVJ1U5T2V9R3G2s7k6UgEguPRpd6DS8Mcnan11JrXSYw1j2kuWkgYihQWTswf1pdTyc67yaTV4kn4Xx  PINNED ORDER ACCEPTED: agent 2's order of 50,000 says size = 10 at 1 per unit, the pinned values, sent through accept_pinned_financed_tab
+   success slot 523833148  34VuZuvXhq36HBEyJYUnwrN6pJtCRH6QsQWeUBw8JVKRdVBSbwCQRZLMQijghVeEVwTq92ZMfYM9ZxwKE5kdcQfQ  seller reports all 50,000 of order 2 as completed work
+   success slot 523833163  5DHKA2eroj7rvQWx6myRwepvoUYJ1SKS2JmDQusb81XuwSZ3DNa2DRfSA5VTAgEeBXDy4tPgjidtV91Qyrf8cMwJ  payer gives the collecting key lamports for order 2's collection receipt and its fee
+   success slot 523833180  5TYa7mNdmSr7mXNCvpzDXWDCMH5XKsBcqmBtx3XeYxiQDAdSJaornnk5wZ1Hi6q2sgBambfxnXF9ChsRYAQBG3MW  PINNED ORDER COLLECTED: a key with no role in the order pays the seller's earned 50,000 on order 2 from the lender's wallet
+   success slot 523833196  4MvBPsCfsRKggYDxKxjTo9vWj7Z46KrHKRdaDAMo4MKAaqAx7XUW65t4JCJaRiZ1Wi7Xeu17YdL89WM1kv6ofkUv  collecting key returns its remaining lamports to the payer
+   success slot 523833212  4LsYY1n4Y85u7qXcHpSd3Tqu2JQ7wuWaiEUL2Aw7jbP1qUBtcJhTXKCtkgKtGVCo3JqqoXacpkDj1QfvzyPdk9pC  lender's owner returns its lamports to the payer
+
+failed   True  claims_core        FundingCashShortfall  6033   100377  3xEZF2Z6fDKoxW3Z1795k9GiEt9eMqFiUCEPJQQEQDSzXfXzggNcrKWLAYDXGoQVwkh7UFWMrf6cVGLi9RHVvMmw  commit refused (money): order of 100,000 when the lender's free cash is 99,999
+success  True                                                  170189  3pKFHNmY4uHnyP2TQw959Su8HEpW5EEVKPG4yNsAfxWQXbSMkx6XenTfcxxRsoKCwbRWKGUGkGvzhXn2qXy1RPCq  lender adds 50,001 to its wallet: free cash becomes 150,000
+failed   True  principal_registry PerOperationLimit     6011   143551  2oYJhw2iq8GLuJdN5115j3xL28KNqoAdgandTHp7WPw5aom3LE44HNzsCkcFuUnYoZZiaFyTiwoh7jCGLz6jqidY  commit refused (permission): order of 100,001 when the agent's per-order limit is 100,000
+failed   True  claims_core        FundingUsage          6044    61593  5ckLUXgndW5zcyPVpRAMgGMUSqyRKSSmVSw8etbyyWRdqjqzsSMkRTjaajEB58vYbBUHcnTU9Q9jSBgNbnEeJqyy  commit refused (deal): order sent at unit price 2 when the agreed terms commit to unit price 1
+success  True                                                  383050  93jWsEiXuWzjwdKz3v8jhFFKD3w5EtMynSYYgcHcT25WXBdciU1xuoSFzG1zjUFKJp3k1ZWtqVSX5uocxrTNkKU  COMMIT ACCEPTED: order of 100,000, inside the agent's 100,000 limit and the 500,000 budget, lender free cash 150,000, seller and credit issuer's owner signed
+success  True                                                  346340  2jx2B4JxEUrSVtaP95e17LNGvojKmASN6K9HPvA3Sec87FRXV5ujrXNKggu7WNgqgACFSGfzkxpbEDbH48PFXyW3  seller reports 60,000 of completed work on the order
+success  True                                                     150  2W6BTyG5y1BVJdG63wikhVAuE6ZKsTPnauK4kh5s8ZVhEijRHoHXswABQgCcEch66yDQw4BJzkjLoqTG2JZTAajW  payer gives the collecting key lamports for one receipt and its fees
+success  True                                                   13518  371M9Eyvuztg2RmsiEauwdgzjCbuoiq8B81muswTsSjN4rrUBRWiK9kZL1AgAt99wAwuuq9dTYX62JtGgRWxjZq  create the collecting key's own token account
+failed   True  claims_core        FundingTokenRouting   6035   105448  Yfxm4hw4EKmauBVpn4TTFxSKnosa8FzQY9bgQ6JrFM1qZk5eKLEbLHt33HnJrDk4LUxqM9f9ATmnBqmX63czPBD  collection refused: payee swapped to the collecting key's own token account
+failed   True  principal_registry WalletEnvelope        6023    12933  z3PH6TuWwCwRuYb4CZBtYpy5Pmb1Gw9YZkBd9JRcTL2XmNB7UaNMe6WP4CbAAyRtu6JorGoK4NAywLeS7GGRvaC  collection refused: an extra instruction follows the wallet's SignV2
+success  True                                                  376770  3s1xwqy5CxH3teV3pASTkNqLyC4d4g4uSSJsrmmRGBvjbvGKDE2RFrTaJpZBPEwJcnBPnGG8hDEXACgQjTNTDd9G  COLLECTION ACCEPTED: a key with no role in the order pays the seller's earned 60,000 from the lender's wallet
+success  True                                                     150  3koba6ndXroUCwrpHeDgF7ULvoHGTeXNG13Rg5XnGXnHArhyH1wFT1ihBytmCKhdTfs6NdTFahasdxE8BnAYEpaY  payer gives the lender's owner lamports for one receipt
+failed   True  claims_core        FundingCashShortfall  6033    67269  5BAeD8XHArCFWsTJbJDRDTzKQj8wmDHr6DY7dM3RrKBGBVY8HR2ZCh1C6LAMPWLPpxQpBPeE8HnLMqZqb3yqtyjm  withdrawal refused: lender asks for 50,001 when 50,000 is free and 40,000 is promised
+success  True                                                  324074  3ruDFp45Ldh4q5eyQ4Kj56RV13kAmuBkRhCu4TDAYVnwtSnbrLCVyAoLBujumVzWJh9U4A99kWVFn4AkF5Bua5pq  RELEASE ACCEPTED: seller releases the order's unused 40,000
+success  True                                                   10667  5hwStrA6rqGnd7SiNaz4iQXcD6ooqTwH8Ley1egcjyAiNSFs3no8Z7JmTijFoER3mhnSiFeVuWK5pp5xa3eLZdH7  buyer's owner enrolls agent 2
+success  True                                                   16689  3J2bS4zdhmuz8XBuVTZEEcEE3qSByjW8qgvsQs3qRjiJL7TSkaXCWvbW95gkqj62KybJWBrNseboJomt4cXHrsUy  PERMISSION CREATED PINNED: buyer's owner permits agent 2 with size = 10 and a unit price of 1 already pinned, in one instruction (create_pinned_mandate): this seller, this lender facility, per-order limit 100,000
+failed   True  principal_registry TermsNotPermitted     6053   145836  4BeAsGWmCvnRih2UfrGNU7qSNyTXgy5R4J2tmV6JvdEbcRgatwDD2Xu6QGznjZaSxMMdXnpyJ7y3tQppxHRkPx8P  pinned order refused (terms): agent 2's order of 50,000 says size = 11 where the owner pinned size = 10, sent through accept_pinned_financed_tab
+failed   True  principal_registry TermsRequired         6051   143550  3SCDCKAXfPSErrsv2y7r39ZQQNFEj6FKLcWn8Jk7aWqKeuAiPoeKBnierWozRV3iWeeNy4CsScocWx5fpuPDegfk  pinned order refused (no terms shown): the same size = 11 order sent through plain accept_financed_tab, which shows no terms
+failed   True  principal_registry TermsNotPermitted     6053   145876  HiqPXnMSVRHc9K3Q8sk5J1Y7C3aQfdJWEQFoBck2qo7CjQictc9vP9fCC3tF5kw8TJMHHBeC2Q1qcAY4eeFR4AL  pinned order refused (price): agent 2's order of 50,000 with size = 10 at 2 per unit, listing its own unit_price, where the owner pinned 1 per unit
+success  True                                                  384445  5RdMRwxNPXVJ1U5T2V9R3G2s7k6UgEguPRpd6DS8Mcnan11JrXSYw1j2kuWkgYihQWTswf1pdTyc67yaTV4kn4Xx  PINNED ORDER ACCEPTED: agent 2's order of 50,000 says size = 10 at 1 per unit, the pinned values, sent through accept_pinned_financed_tab
+success  True                                                  340157  34VuZuvXhq36HBEyJYUnwrN6pJtCRH6QsQWeUBw8JVKRdVBSbwCQRZLMQijghVeEVwTq92ZMfYM9ZxwKE5kdcQfQ  seller reports all 50,000 of order 2 as completed work
+success  True                                                     150  5DHKA2eroj7rvQWx6myRwepvoUYJ1SKS2JmDQusb81XuwSZ3DNa2DRfSA5VTAgEeBXDy4tPgjidtV91Qyrf8cMwJ  payer gives the collecting key lamports for order 2's collection receipt and its fee
+success  True                                                  382748  5TYa7mNdmSr7mXNCvpzDXWDCMH5XKsBcqmBtx3XeYxiQDAdSJaornnk5wZ1Hi6q2sgBambfxnXF9ChsRYAQBG3MW  PINNED ORDER COLLECTED: a key with no role in the order pays the seller's earned 50,000 on order 2 from the lender's wallet
+{"status": "passed", "record": "<run-directory>/devnet-record.json", "transactions": 52, "succeeded": 43, "refused_on_chain": 9, "sent_this_invocation": 52, "already_on_chain": 0, "adopted": 0, "payer_spent_sol": 0.3679872, "http_requests": 395, "http_requests_all_invocations": 395, "wall_seconds": 224.4}
+done 08:59 PM ET

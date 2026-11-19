@@ -17,6 +17,13 @@
       "tests": "../../releases/2026-11-18/commit_legs.py"
     },
     {
+      "id": "devnet-run",
+      "guide": "../../releases/2026-11-18/devnet/README.md",
+      "record": "../../releases/2026-11-18/devnet/devnet-record.json",
+      "log": "../../releases/2026-11-18/devnet/devnet.log",
+      "tests": "../../releases/2026-11-18/devnet/public_rpc_sequence.py"
+    },
+    {
       "id": "owner-pinned-terms",
       "guide": "../../releases/2026-11-18/pinned-terms/README.md",
       "record": "../../releases/2026-11-18/pinned-terms/pinned-terms-created-pinned-trace.json.xz",
