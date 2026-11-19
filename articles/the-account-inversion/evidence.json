@@ -6,8 +6,8 @@
   "subtitle": "Agentic commerce is at an impasse because banks won’t stand behind an agent’s promise to pay, and stores won’t take that promise on its own. That problem is now solved — and the implications could reach far beyond both agents and commerce.",
   "evidence_released": "2026-11-18",
   "guide": "README.md",
-  "archive": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-18g/dexter-article-evidence-2026-11-18g.zip",
-  "archive_sha256": "4f2565fed796b1d47afddfc3d9ac1a696a7bb288964ad93312ab7bb80ddeae66",
+  "archive": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-18h/dexter-article-evidence-2026-11-18h.zip",
+  "archive_sha256": "bd8c05454f9525c5b4d25e60587486579719e5d1ec61e62ee4aeb40138e45910",
   "evidence": [
     {
       "id": "three-way-commit",
@@ -162,11 +162,17 @@
     {
       "date": "2026-11-18",
       "guide": "../../releases/2026-11-18/README.md",
-      "tag": "2026-11-18g",
-      "download": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/tag/2026-11-18g"
+      "tag": "2026-11-18h",
+      "download": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/tag/2026-11-18h"
     }
   ],
   "previous_releases": [
+    {
+      "date": "2026-11-18",
+      "tag": "2026-11-18g",
+      "archive": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-18g/dexter-article-evidence-2026-11-18g.zip",
+      "archive_sha256": "4f2565fed796b1d47afddfc3d9ac1a696a7bb288964ad93312ab7bb80ddeae66"
+    },
     {
       "date": "2026-11-18",
       "tag": "2026-11-18f",
@@ -215,6 +221,6 @@
       "archive_sha256": "e789a59a553c23488007befa3678032373ab1e68bf41462a92a5da10eadd33f2"
     }
   ],
-  "release_tag": "2026-11-18g",
-  "checksum": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-18g/SHA256SUMS"
+  "release_tag": "2026-11-18h",
+  "checksum": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/download/2026-11-18h/SHA256SUMS"
 }
