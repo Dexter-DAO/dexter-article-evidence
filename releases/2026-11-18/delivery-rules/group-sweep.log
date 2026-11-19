@@ -1,0 +1,82 @@
+{
+ "seed": 20261118,
+ "retained_sha256": "704831da874812b856d47806083726bd4bfefe9b43fe526b3fba3c70029f9f0f",
+ "orders": 60,
+ "configurations": 30,
+ "orders_by_pool": {
+  "attesting": 41,
+  "all_signers": 19
+ },
+ "orders_with_tied_best_price": 5,
+ "orders_whose_price_the_silence_change_moves": [
+  {
+   "order": "sw-2-1-1-0",
+   "silence": "paid",
+   "previous_price": 1658,
+   "price": 886
+  },
+  {
+   "order": "sw-2-1-1-1",
+   "silence": "paid",
+   "previous_price": 1658,
+   "price": 986
+  },
+  {
+   "order": "sw-3-1-1-0",
+   "silence": "paid",
+   "previous_price": 1658,
+   "price": 425
+  },
+  {
+   "order": "sw-3-2-1-1",
+   "silence": "paid",
+   "previous_price": 1153,
+   "price": 253
+  },
+  {
+   "order": "sw-4-1-1-0",
+   "silence": "paid",
+   "previous_price": 1658,
+   "price": 629
+  },
+  {
+   "order": "sw-4-2-1-0",
+   "silence": "paid",
+   "previous_price": 886,
+   "price": 386
+  },
+  {
+   "order": "sw-4-2-1-1",
+   "silence": "paid",
+   "previous_price": 1153,
+   "price": 746
+  },
+  {
+   "order": "sw-5-2-1-0",
+   "silence": "paid",
+   "previous_price": 1658,
+   "price": 550
+  },
+  {
+   "order": "sw-5-2-1-1",
+   "silence": "paid",
+   "previous_price": 1658,
+   "price": 679
+  },
+  {
+   "order": "sw-5-3-1-0",
+   "silence": "paid",
+   "previous_price": 986,
+   "price": 450
+  },
+  {
+   "order": "sw-5-4-1-0",
+   "silence": "paid",
+   "previous_price": 467,
+   "price": 300
+  }
+ ],
+ "mismatches": [],
+ "settle_cu_min": 34321,
+ "settle_cu_max": 61037
+}

@@ -1,0 +1,103 @@
+{
+  "status": "passed",
+  "trace": "delivery-rules-trace.json.xz",
+  "trace_sha256": "4fca1d48cfd1a5527c82355fc5fd504c935685eeed7f2b4e3d823c7a0d8d4dce",
+  "transaction_count": 226,
+  "refused": 44,
+  "assertions": 1471,
+  "receipts": 56,
+  "maximum_signed_packet": 3221,
+  "build_receipt_sha256": "7fc1cc19e734b9b5f257ab82dbc11d06b5aa5faef3fd5c9f0c55471d0bc2945b",
+  "idl_receipt_sha256": "524946bbc75186aa34d1ed2748a4efb288af55239cd75647a6b1d1dc1a15894e",
+  "trace_xz_sha256": "49c2d7448d06409bcdb19e3a28dfa562a45503fa03838025fa1eb143f03068e3",
+  "annotated_cases": 171,
+  "annotated_refusals": 44,
+  "annotated_acceptances": 127,
+  "roles": {
+    "buyer's owner (objector)": "3BuW9SR5tG6VFK4MmkQQ3Ak8ny1K1Vv5Uz7is8Aa5pwG",
+    "agent 1": "Cdkrk8tujFY6mTyGwFgKpnbiGc1hqtXCog1qvUdKAe6D",
+    "agent 2": "5WcE8o73vmsSZXeeWTLm3ty3fAJKCnBWRF6VuKUme5nu",
+    "seller (opens cases)": "4MfyR4G3NWfVRDWo6iNAHDBZqWMgwZX6FNtMqEW3a9JT",
+    "carrier": "GFKfRLPKHYRyARLSTc4p94vukKPMFAkSrQT5j55WYoy2",
+    "second carrier": "3wpYnGqceZ8DzN3guiTd9rrYkWTwTHCChBSuo6cvkXTG",
+    "third carrier": "FR5pWwinRBn35GNhg7bsvw8Q13kRept2pm561DwZCQzT",
+    "inspector (decider)": "FLCbA5rPHLmgEeQSg1CiewVizRGw6Gy5MXc1m17HyxUG",
+    "lender's owner": "6TcyBfPdBt1kjsvDZLzmBFnuMaLWiTaAt4RjUr9VA5YD",
+    "credit issuer's owner": "FMUEmtxhU46GzhKF4FW9MLJdQWiLgjiXP9TYRWSrqTpV",
+    "fee payer of setup and order transactions": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9",
+    "key that pays for claims, attestations, objections and decisions": "92CudvFbL7Tyw2RkWC7NU1ehdNBSjy8FEG1TsJaN8wgz",
+    "key that settles and closes cases": "4Yk9HoDSfJv9QcmJbLcXdWVgS7nfvdUqiVcvbSu8VBru",
+    "key that finalizes": "4ap9kAPdHiV82d8D73mrtEgwGxBbUxJgyFr1fRGLhide",
+    "key that collects": "6jQ7iw7szEgN6hp49SAAMagYSYdDAZTQRDF3b8vTLNqM"
+  },
+  "run_seconds": 6.7,
+  "engine": "solders 0.29.0 LiteSVM",
+  "program_sha256": {
+    "principal_registry.so": "f6f4052ceb824561f98718176bb4d32d7851a603a949b750aecf2b9465587659",
+    "pool_issuer.so": "6804757b94ce2da8854388a1f748b614296207682db27cde85958f868b726e65",
+    "claims_core.so": "a96472c1e26f35fcabe9a5af9122c2d807c1048ba8a7a511dc0b2ea5473b69f2",
+    "delivery_rules.so": "704831da874812b856d47806083726bd4bfefe9b43fe526b3fba3c70029f9f0f"
+  },
+  "rules_program": {
+    "address": "EsR1knVgJG8NAYFjeGCYpTuvjf1DtwAU1ne5XBdcotq3",
+    "retained": "foundation/onchain/programs/delivery-rules/artifacts/delivery-rules-retained.so",
+    "retained_sha256": "704831da874812b856d47806083726bd4bfefe9b43fe526b3fba3c70029f9f0f",
+    "retained_equals_build": true,
+    "upgradeable_copy": "66fEp6X3QADW85WJ5CLDFzJvMrC44xUjPdanizFxJSC",
+    "upgrade_authority": "EVNwqfgkUnJoMqBqiHgDfa3TLZPQocX1hpcbAXbpcSLv",
+    "rules": {
+      "shoe-store": "BS3fG3p2f1V5LH11cXbwoq1sUvyNRhkGeKKSZrQ81BuN",
+      "lapse": "3YE9nrbjd9TKYKf9XUnjEFH5irYP5De8Tn64XRWjV7Uy",
+      "trio": "7YxTQxupZ6iKfy5uX5jxcBhSZhPBTYygHrVfoDtqxHbP",
+      "paid": "BzG79D1fU7NRPtaK2Hamay7nVUDwtWWPhuBT3M9KfY4H",
+      "duo": "5zaVMdu1AaZoVzgL9EeUDmE921LyLDhTy9NM9SJ3odg5",
+      "hour": "9bjCGeWtyLG2LKizUiB9r8KfJ2nLnXoysTx8mUZgpVza"
+    },
+    "delivery_sources": {
+      "shoe-store": "2zsLHHTtci3ZySeQV5c36ts3duTLaRCMJThZu9ZM336z",
+      "lapse": "56fYYU7XofSh32zbAT6FAUGhmG4JuFvqoHELtesvNjqd",
+      "trio": "4ki6U7L2w72trA4EkbuaNXGbiQi6g9ERS1XN3FFCcwLE",
+      "paid": "9LwwCNu5ALJVuGFN5oZGs3pGQSvRT4aMdTgPggzyUAkh",
+      "duo": "2nMTsHNezVdYhRSsPsLivhrJdeqobbbHFM26UWXDLKUJ",
+      "hour": "D72EYz6r4b9VrqbdpyprGX33RnLxiwDY8CKpnEabHtU2"
+    },
+    "sdk_check": {
+      "ghost": {
+        "error": "DELIVERY_RULE_NOT_FOUND"
+      },
+      "short": {
+        "error": "DELIVERY_RULE_WINDOW"
+      },
+      "shoe": {
+        "rule": "BS3fG3p2f1V5LH11cXbwoq1sUvyNRhkGeKKSZrQ81BuN",
+        "signers": [
+          "GFKfRLPKHYRyARLSTc4p94vukKPMFAkSrQT5j55WYoy2"
+        ],
+        "threshold": 1,
+        "signersSilent": "nothing",
+        "objectors": [
+          "3BuW9SR5tG6VFK4MmkQQ3Ak8ny1K1Vv5Uz7is8Aa5pwG"
+        ],
+        "decider": "FLCbA5rPHLmgEeQSg1CiewVizRGw6Gy5MXc1m17HyxUG",
+        "deciderSilent": "nothing",
+        "signingCloses": "1790086420",
+        "objectionsClose": "1790345620",
+        "decisionCloses": "1790777620",
+        "settleBy": "1790864020",
+        "minimumSettleBy": "1790781220",
+        "overlaps": []
+      }
+    },
+    "cost": {
+      "program_bytes": 262976,
+      "program_data_bytes": 263021,
+      "program_data_rent": 1831517040,
+      "program_account_rent": 1141440,
+      "rule_bytes": 377,
+      "rule_rent": 3514800,
+      "case_bytes": 613,
+      "case_rent": 5157360
+    }
+  },
+  "swig_sha256": "bb744d9811c392e3f343952d1a99bef9c97aa1936248a23b9d7efc1adb8939c1"
+}

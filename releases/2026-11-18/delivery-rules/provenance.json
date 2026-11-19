@@ -1,0 +1,242 @@
+{
+  "schema": "dexter-selected-public-provenance/v1",
+  "release": "2026-11-18",
+  "program_source": {
+    "codebase": "Dexter Account",
+    "commit": "58a997a3047bc0743b3ff532a09a96b5fd4be3b1",
+    "merged_to_main_in": "7b2cac09c025b3cda63d4bc60c020992bc65d765",
+    "base_commit": "5df2ff19efaaaad2936a769138f54afcd05b8cde",
+    "base_published": [
+      "../early-settlement/source/",
+      "../pinned-price/source/",
+      "../pinned-delivery/source/",
+      "../source/"
+    ]
+  },
+  "retained_binary": {
+    "file": "source/foundation/onchain/programs/delivery-rules/artifacts/delivery-rules-retained.so",
+    "program": "EsR1knVgJG8NAYFjeGCYpTuvjf1DtwAU1ne5XBdcotq3",
+    "bytes": 262976,
+    "sha256": "704831da874812b856d47806083726bd4bfefe9b43fe526b3fba3c70029f9f0f",
+    "statement": "The record's claims about the delivery-rules program rest on this exact binary. The run loaded this file by its SHA-256, at EsR1knVgJG8NAYFjeGCYpTuvjf1DtwAU1ne5XBdcotq3 with no upgrade authority and at 66fEp6X3QADW85WJ5CLDFzJvMrC44xUjPdanizFxJSC with upgrade authority EVNwqfgkUnJoMqBqiHgDfa3TLZPQocX1hpcbAXbpcSLv. The trace asserts that the program_source commit builds the same file, the receipt records its hash as retained_sha256, and the group sweep ran on the same hash."
+  },
+  "sources": [
+    {
+      "file": "delivery-rules-trace.json.xz",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "0c268babd626d18c8ada696f48942b8c9a35d3c6",
+        "path": "docs/evidence/delivery-rules-20261118/delivery-rules-trace.json.xz"
+      },
+      "source_sha256": "49c2d7448d06409bcdb19e3a28dfa562a45503fa03838025fa1eb143f03068e3",
+      "export_sha256": "49c2d7448d06409bcdb19e3a28dfa562a45503fa03838025fa1eb143f03068e3",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "case-index.json",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "0c268babd626d18c8ada696f48942b8c9a35d3c6",
+        "path": "docs/evidence/delivery-rules-20261118/case-index.json"
+      },
+      "source_sha256": "39474ef978bbaf99527e9b13f4b741cbce6fdc32f0bbd514272650a93eccfd07",
+      "export_sha256": "39474ef978bbaf99527e9b13f4b741cbce6fdc32f0bbd514272650a93eccfd07",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "delivery-rules-receipt.json",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "0c268babd626d18c8ada696f48942b8c9a35d3c6",
+        "path": "docs/evidence/delivery-rules-20261118/delivery-rules-receipt.json"
+      },
+      "source_sha256": "5188a1e44aa247ab54b7b481bac949053e5ccc9bf716c9dda1a8c2e23fc9528e",
+      "export_sha256": "5188a1e44aa247ab54b7b481bac949053e5ccc9bf716c9dda1a8c2e23fc9528e",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "delivery-rules.log",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "0c268babd626d18c8ada696f48942b8c9a35d3c6",
+        "path": "docs/evidence/delivery-rules-20261118/delivery-rules.log"
+      },
+      "source_sha256": "61713fe3251968c1257d73b7b3eee1e7ab850e1e85dcfb70758f430b125186e7",
+      "export_sha256": "11ccaea8787e11ee81276b0d66508a1d83d2cf980a97bfcb5a0fb060947f1dc4",
+      "workspace_path_fields_replaced": 1,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "group-sweep.log",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "0c268babd626d18c8ada696f48942b8c9a35d3c6",
+        "path": "docs/evidence/delivery-rules-20261118/group-sweep.log"
+      },
+      "source_sha256": "92e29def0cab6ae553476c45ca5da8f7e198d23b80cedb0973d2abfa82721acf",
+      "export_sha256": "92e29def0cab6ae553476c45ca5da8f7e198d23b80cedb0973d2abfa82721acf",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "delivery_rules.py",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "0c268babd626d18c8ada696f48942b8c9a35d3c6",
+        "path": "foundation/onchain/tests/delivery_rules.py"
+      },
+      "source_sha256": "d7f58bd76feb267ad323657d2201b7cf1216a22cbf1e1e03089f46fc1fcaab70",
+      "export_sha256": "d7f58bd76feb267ad323657d2201b7cf1216a22cbf1e1e03089f46fc1fcaab70",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "delivery_rules_sweep.py",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "0c268babd626d18c8ada696f48942b8c9a35d3c6",
+        "path": "foundation/onchain/tests/delivery_rules_sweep.py"
+      },
+      "source_sha256": "ab84c44019221c1cf192c01777b36aa2af00a268f957075f9ace3351b06ae072",
+      "export_sha256": "ab84c44019221c1cf192c01777b36aa2af00a268f957075f9ace3351b06ae072",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "source/foundation/onchain/Anchor.toml",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "58a997a3047bc0743b3ff532a09a96b5fd4be3b1",
+        "path": "foundation/onchain/Anchor.toml"
+      },
+      "source_sha256": "86830c5e0a187a0b50bd893447270bb1fe0e3c0f660c813568849a4c17c999c3",
+      "export_sha256": "86830c5e0a187a0b50bd893447270bb1fe0e3c0f660c813568849a4c17c999c3",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false,
+      "trace_build_input_sha256": "86830c5e0a187a0b50bd893447270bb1fe0e3c0f660c813568849a4c17c999c3",
+      "matches_trace_build_input": true
+    },
+    {
+      "file": "source/foundation/onchain/Cargo.toml",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "58a997a3047bc0743b3ff532a09a96b5fd4be3b1",
+        "path": "foundation/onchain/Cargo.toml"
+      },
+      "source_sha256": "d54f63e4e25e714a9cb35c9ce3a90e4b99a3e72571f5eb98f1d459ba3800d191",
+      "export_sha256": "d54f63e4e25e714a9cb35c9ce3a90e4b99a3e72571f5eb98f1d459ba3800d191",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false,
+      "trace_build_input_sha256": "d54f63e4e25e714a9cb35c9ce3a90e4b99a3e72571f5eb98f1d459ba3800d191",
+      "matches_trace_build_input": true
+    },
+    {
+      "file": "source/foundation/onchain/Cargo.lock",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "58a997a3047bc0743b3ff532a09a96b5fd4be3b1",
+        "path": "foundation/onchain/Cargo.lock"
+      },
+      "source_sha256": "e8fbb030ec27f6aa177c1fb23538e573d7ca2ec652060f67cde1f607a2af1e92",
+      "export_sha256": "e8fbb030ec27f6aa177c1fb23538e573d7ca2ec652060f67cde1f607a2af1e92",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false,
+      "trace_build_input_sha256": "e8fbb030ec27f6aa177c1fb23538e573d7ca2ec652060f67cde1f607a2af1e92",
+      "matches_trace_build_input": true
+    },
+    {
+      "file": "source/foundation/onchain/programs/claims-core/src/evidence_billing.rs",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "58a997a3047bc0743b3ff532a09a96b5fd4be3b1",
+        "path": "foundation/onchain/programs/claims-core/src/evidence_billing.rs"
+      },
+      "source_sha256": "3d952179fdab0c521c9deb74fe4a477dbc20fcedf7037da78c6515da8d934f49",
+      "export_sha256": "3d952179fdab0c521c9deb74fe4a477dbc20fcedf7037da78c6515da8d934f49",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false,
+      "trace_build_input_sha256": "3d952179fdab0c521c9deb74fe4a477dbc20fcedf7037da78c6515da8d934f49",
+      "matches_trace_build_input": true
+    },
+    {
+      "file": "source/foundation/onchain/programs/claims-core/src/lib.rs",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "58a997a3047bc0743b3ff532a09a96b5fd4be3b1",
+        "path": "foundation/onchain/programs/claims-core/src/lib.rs"
+      },
+      "source_sha256": "da599707f954de2cf59ae89c92ff7f79ed49514a5ab36ad0aa84f2225326aece",
+      "export_sha256": "da599707f954de2cf59ae89c92ff7f79ed49514a5ab36ad0aa84f2225326aece",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false,
+      "trace_build_input_sha256": "da599707f954de2cf59ae89c92ff7f79ed49514a5ab36ad0aa84f2225326aece",
+      "matches_trace_build_input": true
+    },
+    {
+      "file": "source/foundation/onchain/programs/delivery-rules/Cargo.toml",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "58a997a3047bc0743b3ff532a09a96b5fd4be3b1",
+        "path": "foundation/onchain/programs/delivery-rules/Cargo.toml"
+      },
+      "source_sha256": "e723043712372005086dea66f2b9d295055ebddb5bea0da3c83cf1fba163ba5d",
+      "export_sha256": "e723043712372005086dea66f2b9d295055ebddb5bea0da3c83cf1fba163ba5d",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false,
+      "trace_build_input_sha256": "e723043712372005086dea66f2b9d295055ebddb5bea0da3c83cf1fba163ba5d",
+      "matches_trace_build_input": true
+    },
+    {
+      "file": "source/foundation/onchain/programs/delivery-rules/src/lib.rs",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "58a997a3047bc0743b3ff532a09a96b5fd4be3b1",
+        "path": "foundation/onchain/programs/delivery-rules/src/lib.rs"
+      },
+      "source_sha256": "71b895f368ff4d2dec63411df489f76072ae09388b632f90c234de21dad3e848",
+      "export_sha256": "71b895f368ff4d2dec63411df489f76072ae09388b632f90c234de21dad3e848",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false,
+      "trace_build_input_sha256": "71b895f368ff4d2dec63411df489f76072ae09388b632f90c234de21dad3e848",
+      "matches_trace_build_input": true
+    },
+    {
+      "file": "source/foundation/onchain/programs/delivery-rules/artifacts/delivery-rules-retained.so",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "58a997a3047bc0743b3ff532a09a96b5fd4be3b1",
+        "path": "foundation/onchain/programs/delivery-rules/artifacts/delivery-rules-retained.so"
+      },
+      "source_sha256": "704831da874812b856d47806083726bd4bfefe9b43fe526b3fba3c70029f9f0f",
+      "export_sha256": "704831da874812b856d47806083726bd4bfefe9b43fe526b3fba3c70029f9f0f",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false,
+      "receipt_retained_sha256": "704831da874812b856d47806083726bd4bfefe9b43fe526b3fba3c70029f9f0f",
+      "trace_program_artifact_sha256": "704831da874812b856d47806083726bd4bfefe9b43fe526b3fba3c70029f9f0f",
+      "group_sweep_retained_sha256": "704831da874812b856d47806083726bd4bfefe9b43fe526b3fba3c70029f9f0f",
+      "matches_receipt": true,
+      "matches_trace_program_artifact": true,
+      "matches_group_sweep": true
+    },
+    {
+      "file": "source/foundation/onchain/programs/delivery-rules/README.md",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "7c5f123cae275da7fb6f4529e8be15d01aa4f39e",
+        "path": "foundation/onchain/programs/delivery-rules/README.md",
+        "merged_to_main_in": "7b2cac09c025b3cda63d4bc60c020992bc65d765"
+      },
+      "source_sha256": "49efda1225be254ffdbe21aadaeb826605d5fd476d1352cc7e8f468887f339a6",
+      "export_sha256": "0a0cf0a2cafc60790dd86c46120f58925abed1fce758bb5dc45e24d19a7ca4a0",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false,
+      "relative_links_rewritten": 1
+    }
+  ],
+  "path_redaction": "Only the absolute workspace prefix in delivery-rules.log changed, in 1 field, to <fixture-workspace>. Its source and export hashes are distinct. The trace is published as recorded: its program_artifacts section names the four program binaries by their absolute paths on the machine that ran it.",
+  "link_rewrite": "The delivery-rules program's README.md links to its record as ../../../../docs/evidence/delivery-rules-20261118/README.md in the Account repository. Here that one link reads ../../../../../README.md, this record's guide, so its source and export hashes are distinct. No other byte changed. Every file other than delivery-rules.log and README.md is byte-identical to its source commit.",
+  "source_files": "The seven build inputs under source/foundation/onchain/ whose hashes are not already published are copied byte for byte at the program_source commit, and their SHA-256 values equal the entries for the same paths in the trace's build_inputs. One other build input is identical to a file under ../early-settlement/source/, three to files under ../pinned-price/source/, one to a file under ../pinned-delivery/source/ and the remaining 59 to files under ../source/. The base commit's program source is the program source of the early-settlement record. The retained binary and the README of the delivery-rules program are not build inputs: the binary is the file the run loaded, copied at the program_source commit, and the README is the copy on the Account repository's main branch. The files retain their existing copyright, and this release adds no license grant for them."
+}
