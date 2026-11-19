@@ -1,0 +1,446 @@
+{
+  "schema": "dexter.order-terms-v2",
+  "name_domain": "DEXTER:ORDER-TERM-NAME:1",
+  "value_domain": "DEXTER:ORDER-TERM-VALUE:1",
+  "terms_domain": "DEXTER:ORDER-TERMS:2",
+  "rule": "terms ascend by name fingerprint; hash = sha256(terms_domain || u8(count) || name_1 || value_1 || ... || name_n || value_n)",
+  "vectors": [
+    {
+      "name": "one term",
+      "entries": [
+        [
+          "size",
+          "10"
+        ]
+      ],
+      "terms": [
+        {
+          "name": "05b37e4652b5bc6d4e0b3c9b3853eb3fa49ef68411548147e0c9ff5b215c84fb",
+          "value": "67c64cd99ee9c2941257cd3c1d83fabde2526b1aff20a1cf54758f495d572416"
+        }
+      ],
+      "hash": "dce5665205a7a9c09b76a1f096e7a5ca970944a8cd1f0791232e40669233373a"
+    },
+    {
+      "name": "four terms",
+      "entries": [
+        [
+          "item",
+          "trail shoe"
+        ],
+        [
+          "size",
+          "10"
+        ],
+        [
+          "colour",
+          "red"
+        ],
+        [
+          "ship_to",
+          "warehouse 4"
+        ]
+      ],
+      "terms": [
+        {
+          "name": "05b37e4652b5bc6d4e0b3c9b3853eb3fa49ef68411548147e0c9ff5b215c84fb",
+          "value": "67c64cd99ee9c2941257cd3c1d83fabde2526b1aff20a1cf54758f495d572416"
+        },
+        {
+          "name": "0a4afc41d4416fc657471728707cdc8bf7c2c5a4496ebec58ecf81b8cc766ab1",
+          "value": "593f316cdacdd20aee24f82f2eed39a68db17719b2ef35f57a78248fdb72de8a"
+        },
+        {
+          "name": "6b57b1ca5def698d58053edcf071a8138c4055cdba3f477e053ce2cb09adb4be",
+          "value": "e69e1a3b5f55190f989e039e738632a6428dbe7603bed236dda22a26ada443f6"
+        },
+        {
+          "name": "afbc890ab78fe0170cddb1cf432db91c94783f184e2562d512b77abe68ba8a28",
+          "value": "20b69583a4955ce56a5f643520e2290f5905722d38959b5f8c244fd5b424b6d3"
+        }
+      ],
+      "hash": "12ba268ad7af896884f76de88116dfa74a0db5b40b8200db3a54f0c029f1120c"
+    },
+    {
+      "name": "non-ASCII text",
+      "entries": [
+        [
+          "couleur",
+          "rouge foncé"
+        ],
+        [
+          "taille",
+          "42½"
+        ]
+      ],
+      "terms": [
+        {
+          "name": "8972382771fd3908485e56065fff29e9049e5236a162ff06a12647cd3eea58d4",
+          "value": "624037f046ede282c9f238129c75b5e92c0427f37c20aa0c854110256ab93846"
+        },
+        {
+          "name": "9b8254f8dbde11673932add2e0d6124b8507a246b6dd02052dd553ffc7066ede",
+          "value": "4e836ca01b8922fc2bfbfa7eade28f54198a28f2c91a4743f9b6f354cb123b17"
+        }
+      ],
+      "hash": "f353afb77678e8656a91d7e1773b8203fe71787243972c90d430dd7d8c88ef39"
+    }
+  ],
+  "repeated_name": {
+    "entries": [
+      [
+        "size",
+        "10"
+      ],
+      [
+        "colour",
+        "red"
+      ],
+      [
+        "size",
+        "11"
+      ]
+    ]
+  },
+  "delivery_signer": {
+    "name": "delivery_signer",
+    "name_fingerprint": "59f0d4e2b287345eda1d13cd607e9f34d76c143108ac72494012e10fa214c370",
+    "rule": "the value is the 32 bytes of the key the order names to sign for delivery, not a fingerprint of text",
+    "vectors": [
+      {
+        "name": "four terms and the delivery signer",
+        "entries": [
+          [
+            "item",
+            "trail shoe"
+          ],
+          [
+            "size",
+            "10"
+          ],
+          [
+            "colour",
+            "red"
+          ],
+          [
+            "ship_to",
+            "warehouse 4"
+          ]
+        ],
+        "signer": "4wBqpZM9xaSheZzJSMawUKKwhdpChKbZ5eu5ky4Vigw",
+        "terms": [
+          {
+            "name": "05b37e4652b5bc6d4e0b3c9b3853eb3fa49ef68411548147e0c9ff5b215c84fb",
+            "value": "67c64cd99ee9c2941257cd3c1d83fabde2526b1aff20a1cf54758f495d572416"
+          },
+          {
+            "name": "0a4afc41d4416fc657471728707cdc8bf7c2c5a4496ebec58ecf81b8cc766ab1",
+            "value": "593f316cdacdd20aee24f82f2eed39a68db17719b2ef35f57a78248fdb72de8a"
+          },
+          {
+            "name": "59f0d4e2b287345eda1d13cd607e9f34d76c143108ac72494012e10fa214c370",
+            "value": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20"
+          },
+          {
+            "name": "6b57b1ca5def698d58053edcf071a8138c4055cdba3f477e053ce2cb09adb4be",
+            "value": "e69e1a3b5f55190f989e039e738632a6428dbe7603bed236dda22a26ada443f6"
+          },
+          {
+            "name": "afbc890ab78fe0170cddb1cf432db91c94783f184e2562d512b77abe68ba8a28",
+            "value": "20b69583a4955ce56a5f643520e2290f5905722d38959b5f8c244fd5b424b6d3"
+          }
+        ],
+        "hash": "46106cd7261eb62f3f079bcb60bea3e1f4ea0f51ab95d41c94af9d4286d7423d"
+      }
+    ]
+  },
+  "billing_tariff": {
+    "name": "billing_tariff",
+    "name_fingerprint": "5d95c80f76655ec667d9ec6ed7df6726430aa936fe75b57ee3c35ecdaa48f8a0",
+    "domain": "DEXTER:BILLING-TARIFF:1",
+    "rule": "value = sha256(domain || u8(metric_count) || metric_ids[8] || price_numerators[8] || price_denominators[8] || max_units[8]), integers u64 little-endian, unused slots zero; u64 fields in these vectors are decimal strings",
+    "vectors": [
+      {
+        "name": "three metrics",
+        "metric_count": 3,
+        "metric_ids": [
+          "0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b",
+          "0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c",
+          "0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+          "0000000000000000000000000000000000000000000000000000000000000000",
+          "0000000000000000000000000000000000000000000000000000000000000000",
+          "0000000000000000000000000000000000000000000000000000000000000000",
+          "0000000000000000000000000000000000000000000000000000000000000000",
+          "0000000000000000000000000000000000000000000000000000000000000000"
+        ],
+        "price_numerators": [
+          "1",
+          "3",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "price_denominators": [
+          "3",
+          "2",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "max_units": [
+          "10",
+          "100",
+          "5",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "value": "6195f824d3305a4b46b633f68eca9b76cb1bb66530f41521631f76e0375ac49e"
+      },
+      {
+        "name": "three metrics, first rate doubled",
+        "metric_count": 3,
+        "metric_ids": [
+          "0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b",
+          "0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c",
+          "0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d0d",
+          "0000000000000000000000000000000000000000000000000000000000000000",
+          "0000000000000000000000000000000000000000000000000000000000000000",
+          "0000000000000000000000000000000000000000000000000000000000000000",
+          "0000000000000000000000000000000000000000000000000000000000000000",
+          "0000000000000000000000000000000000000000000000000000000000000000"
+        ],
+        "price_numerators": [
+          "2",
+          "3",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "price_denominators": [
+          "3",
+          "2",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "max_units": [
+          "10",
+          "100",
+          "5",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "value": "25744ab26204ed8ddfcf15f8be59727bc73cc27d7ea039e7b3bbc71ccfcbf385"
+      },
+      {
+        "name": "eight metrics",
+        "metric_count": 8,
+        "metric_ids": [
+          "1515151515151515151515151515151515151515151515151515151515151515",
+          "1616161616161616161616161616161616161616161616161616161616161616",
+          "1717171717171717171717171717171717171717171717171717171717171717",
+          "1818181818181818181818181818181818181818181818181818181818181818",
+          "1919191919191919191919191919191919191919191919191919191919191919",
+          "1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a",
+          "1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b",
+          "1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c"
+        ],
+        "price_numerators": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "price_denominators": [
+          "8",
+          "7",
+          "6",
+          "5",
+          "4",
+          "3",
+          "2",
+          "1"
+        ],
+        "max_units": [
+          "100",
+          "200",
+          "300",
+          "400",
+          "500",
+          "600",
+          "700",
+          "800"
+        ],
+        "value": "96a5f80511c0f2747aaf888b3610978524abd48043434a772b90d0fa517cc143"
+      },
+      {
+        "name": "eight metrics at u64::MAX",
+        "metric_count": 8,
+        "metric_ids": [
+          "1515151515151515151515151515151515151515151515151515151515151515",
+          "1616161616161616161616161616161616161616161616161616161616161616",
+          "1717171717171717171717171717171717171717171717171717171717171717",
+          "1818181818181818181818181818181818181818181818181818181818181818",
+          "1919191919191919191919191919191919191919191919191919191919191919",
+          "1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a",
+          "1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b",
+          "1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c"
+        ],
+        "price_numerators": [
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615"
+        ],
+        "price_denominators": [
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615"
+        ],
+        "max_units": [
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615",
+          "18446744073709551615"
+        ],
+        "value": "e0e9028bd77cbee7a21d7ad50f8225d547334ade9426b3db016eb4b009c078f6"
+      }
+    ]
+  },
+  "unit_price": {
+    "name": "unit_price",
+    "name_fingerprint": "a8e0024018d0e2020fb31727f77326bfff85226b3ea709f192610f5df1b19e55",
+    "domain": "DEXTER:UNIT-PRICE:1",
+    "rule": "value = sha256(domain || namespace || unit || u64le(unit_price)); unit_price in these vectors is a decimal string",
+    "vectors": [
+      {
+        "name": "unit price 1",
+        "namespace": "0808080808080808080808080808080808080808080808080808080808080808",
+        "unit": "0909090909090909090909090909090909090909090909090909090909090909",
+        "unit_price": "1",
+        "value": "f2021a9c363c960313f8a3575e4ced5b54a9520426f4ce7a3591a94e38923b1e"
+      },
+      {
+        "name": "unit price 2",
+        "namespace": "0808080808080808080808080808080808080808080808080808080808080808",
+        "unit": "0909090909090909090909090909090909090909090909090909090909090909",
+        "unit_price": "2",
+        "value": "02d940a584ce7d95d2daf939b2e7d0556a2f9ed9b760b346b2bcbab9ab8dde73"
+      },
+      {
+        "name": "unit price u64::MAX",
+        "namespace": "0808080808080808080808080808080808080808080808080808080808080808",
+        "unit": "0909090909090909090909090909090909090909090909090909090909090909",
+        "unit_price": "18446744073709551615",
+        "value": "5f77e4093abb8144485f1021fe913a07808c166be4d5a5541221e4b65a82bfe0"
+      }
+    ]
+  },
+  "number": {
+    "domain": "DEXTER:ORDER-TERM-NUMBER:1",
+    "rule": "value = sha256(domain || i64le(number)); number in these vectors is a decimal string. A decimal is a whole number of its smallest step and the name says the step: size 10.5 is size_tenths = 105",
+    "vectors": [
+      {
+        "number": "0",
+        "value": "a9fac4a1da2c83107ecd0a64f49b35d3fc8b657fa6c0be2c9403ceabce9d7ebb"
+      },
+      {
+        "number": "1",
+        "value": "187eb552570621c87358b9f727c22f401591f7f59f6e6695e3a362c677d867d1"
+      },
+      {
+        "number": "-1",
+        "value": "47297ddb77775d82c0bbaa40c1db32b97d3776e2b52f0303056a1f812a78f41c"
+      },
+      {
+        "number": "100",
+        "value": "e356a773e8f59a97a0af03146a5e765ba1e2bf4c062903c5b77bee2866f4a374"
+      },
+      {
+        "number": "105",
+        "value": "2258d121687c5b5a5c4141d0544f9b49af7604448d8110da0af44e739f4cf68b"
+      },
+      {
+        "number": "185",
+        "value": "9ba956ecea0661e895af651530022036219ca7a4c76914cbf1866dd0a145d148"
+      },
+      {
+        "number": "18500",
+        "value": "2d053497abe5cf5f4b8ab065a15ad81a95e493c031c084239be7606a233f4ded"
+      },
+      {
+        "number": "-9223372036854775808",
+        "value": "930320ffab54f65ac4ce072d8189feb38cb105995f1daa9f02dae0698d2a4b56"
+      },
+      {
+        "number": "9223372036854775807",
+        "value": "3a0f6030db167f8e4a1f986f00d1ff82aa8bd216149e8152fbcadfb243658731"
+      }
+    ]
+  },
+  "price_unit": {
+    "domain": "DEXTER:PRICE-UNIT:1",
+    "rule": "value = sha256(domain || namespace || unit): the seller's service and the completed-run unit a price ceiling bounds; a unit_price range rule lists 1 to 4 of these, ascending",
+    "vectors": [
+      {
+        "name": "the fixture's service and unit",
+        "namespace": "f67e7acf420baf45e5c34708bb55b8c885831a37bfa6c4e6c3b5d7080bbc36a5",
+        "unit": "aa4a6bdda20faa3873d4489d7a0541a43c1f6ddb2d4cb66430b2c5f7d86fdfe9",
+        "value": "50520fe7013f3363d93a121a1daddb4744c6a01d0c5a13c66d475d9e614d3861"
+      },
+      {
+        "name": "the same service, a thousandth of its unit",
+        "namespace": "f67e7acf420baf45e5c34708bb55b8c885831a37bfa6c4e6c3b5d7080bbc36a5",
+        "unit": "e15f81bc50cce2fcfee00dbe4b9d3a6c952ec924f425b4f0702ea73b19e8bd0e",
+        "value": "963eb227859542d7663363663ffb8351893042375406f8ec377c49d985a5b69b"
+      },
+      {
+        "name": "another service and unit",
+        "namespace": "7242dfd44b1ebef4fa2ad4d3abf2fea23ff5a4c798e2a8db6e6c033ea39e29c6",
+        "unit": "16367aacb67a4a017c8da8ab95682ccb390863780f7114dda0a0e0c55644c7c4",
+        "value": "663ae63ea63e04e562eab54ce4de86624e976550d58a19f8ef9395c034c1d587"
+      },
+      {
+        "name": "all-zero namespace and unit",
+        "namespace": "0000000000000000000000000000000000000000000000000000000000000000",
+        "unit": "0000000000000000000000000000000000000000000000000000000000000000",
+        "value": "5fe395323e7d941fe22606bc64cdabaff6d258f7e980521b7eaf13669c161e55"
+      }
+    ]
+  }
+}

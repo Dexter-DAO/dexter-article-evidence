@@ -81,6 +81,15 @@
       "source": "../../releases/2026-11-18/delivery-rules/source/"
     },
     {
+      "id": "permission-rules",
+      "guide": "../../releases/2026-11-18/permission-rules/README.md",
+      "record": "../../releases/2026-11-18/permission-rules/permission-rules-trace.json.xz",
+      "index": "../../releases/2026-11-18/permission-rules/case-index.json",
+      "tests": "../../releases/2026-11-18/permission-rules/permission_rules.py",
+      "comparison": "../../releases/2026-11-18/permission-rules/trace-comparison.log",
+      "source": "../../releases/2026-11-18/permission-rules/source/"
+    },
+    {
       "id": "agent-revocation",
       "guide": "../../releases/2026-11-18/revocation/README.md",
       "record": "../../releases/2026-11-18/revocation/revocation-trace.json.xz",
