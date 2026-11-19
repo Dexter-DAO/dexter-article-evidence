@@ -1,0 +1,367 @@
+{
+ "schema": "dexter-selected-public-provenance/v1",
+ "release": "2026-11-19",
+ "program_source": {
+  "codebase": "Dexter Account",
+  "commit": "d204555ddf7f36a94aeebcfb83d05cc948c4ff95",
+  "published": [
+   "source/",
+   "../source/"
+  ]
+ },
+ "baseline": {
+  "codebase": "Dexter Account",
+  "commit": "8805fd3b03209d2427fe848e0f7c5aa8a233e3a3",
+  "same_binaries_as": [
+   "../../2026-11-18/permission-rules/"
+  ],
+  "harness_change": "main-harness.patch"
+ },
+ "sources": [
+  {
+   "file": "double-charge-scenarios.json",
+   "source": {
+    "codebase": "Dexter Account",
+    "commit": "d204555ddf7f36a94aeebcfb83d05cc948c4ff95",
+    "path": "docs/evidence/tab-receipt-book-20261119/double-charge-scenarios.json"
+   },
+   "source_sha256": "0218c16294703d7c69d54c0022f12271f2137075f64e3b49304873b9ebcec942",
+   "export_sha256": "7db67a3cd833f100fe000e9aa8b5c9abf8f7f667f22abcce64449fec65e7729d",
+   "workspace_path_fields_replaced": 1,
+   "semantic_fields_changed": false
+  },
+  {
+   "file": "double_charge.py",
+   "source": {
+    "codebase": "Dexter Account",
+    "commit": "d204555ddf7f36a94aeebcfb83d05cc948c4ff95",
+    "path": "foundation/onchain/tests/double_charge.py"
+   },
+   "source_sha256": "a2af54b6e3ce968a58f9371a398d245004bcf6d9978bcff45e0319c32fcc48cc",
+   "export_sha256": "a2af54b6e3ce968a58f9371a398d245004bcf6d9978bcff45e0319c32fcc48cc",
+   "workspace_path_fields_replaced": 0,
+   "semantic_fields_changed": false,
+   "trace_fixture_input_sha256": "a2af54b6e3ce968a58f9371a398d245004bcf6d9978bcff45e0319c32fcc48cc",
+   "matches_trace_fixture_input": true
+  },
+  {
+   "file": "excess-rent-sizes.json",
+   "source": {
+    "codebase": "Dexter Account",
+    "commit": "d204555ddf7f36a94aeebcfb83d05cc948c4ff95",
+    "path": "docs/evidence/tab-receipt-book-20261119/excess-rent-sizes.json"
+   },
+   "source_sha256": "0ff60d7eb21645e587d1c99cee5b6995ec3c8ae79973cab4f3b632a88f98564c",
+   "export_sha256": "fb48d795dae19f3ca9c92d2d0ba306411b0a65997ab28ad421cab85959d9fb2f",
+   "workspace_path_fields_replaced": 5,
+   "semantic_fields_changed": false
+  },
+  {
+   "file": "flow-rent-spec.json",
+   "source": {
+    "codebase": "Dexter Account",
+    "commit": "d204555ddf7f36a94aeebcfb83d05cc948c4ff95",
+    "path": "scripts/flow-rent-spec.json"
+   },
+   "source_sha256": "26082da9be08cd2366f391f69571cba0999a1d5eb0f738b074a6b6ead637de7e",
+   "export_sha256": "26082da9be08cd2366f391f69571cba0999a1d5eb0f738b074a6b6ead637de7e",
+   "workspace_path_fields_replaced": 0,
+   "semantic_fields_changed": false
+  },
+  {
+   "file": "flow-rent.json",
+   "source": {
+    "codebase": "Dexter Account",
+    "commit": "d204555ddf7f36a94aeebcfb83d05cc948c4ff95",
+    "path": "docs/evidence/tab-receipt-book-20261119/flow-rent.json"
+   },
+   "source_sha256": "a07f74821073332f47b211b8650bfb999947b87aa8b3bce69c893cf6815361f5",
+   "export_sha256": "a07f74821073332f47b211b8650bfb999947b87aa8b3bce69c893cf6815361f5",
+   "workspace_path_fields_replaced": 0,
+   "semantic_fields_changed": false
+  },
+  {
+   "file": "flow-rent.md",
+   "source": {
+    "codebase": "Dexter Account",
+    "commit": "d204555ddf7f36a94aeebcfb83d05cc948c4ff95",
+    "path": "docs/evidence/tab-receipt-book-20261119/flow-rent.md"
+   },
+   "source_sha256": "58553825c9ba4f3c0101d91762dc4ac5c38905210f8b1c3543c8aea51ef9a93c",
+   "export_sha256": "58553825c9ba4f3c0101d91762dc4ac5c38905210f8b1c3543c8aea51ef9a93c",
+   "workspace_path_fields_replaced": 0,
+   "semantic_fields_changed": false
+  },
+  {
+   "file": "flow-rent.py",
+   "source": {
+    "codebase": "Dexter Account",
+    "commit": "d204555ddf7f36a94aeebcfb83d05cc948c4ff95",
+    "path": "scripts/flow-rent.py"
+   },
+   "source_sha256": "7234e5a6378a3579274144738e39da52efb2f10ee3e350d1eda068c28fb5b978",
+   "export_sha256": "7234e5a6378a3579274144738e39da52efb2f10ee3e350d1eda068c28fb5b978",
+   "workspace_path_fields_replaced": 0,
+   "semantic_fields_changed": false
+  },
+  {
+   "file": "main-harness.patch",
+   "source": {
+    "codebase": "Dexter Account",
+    "commit": "d204555ddf7f36a94aeebcfb83d05cc948c4ff95",
+    "path": "docs/evidence/tab-receipt-book-20261119/main-harness.patch"
+   },
+   "source_sha256": "bbec6c188978b8b99c288605835c527b6145df134b8d256eeacba40155e6d544",
+   "export_sha256": "bbec6c188978b8b99c288605835c527b6145df134b8d256eeacba40155e6d544",
+   "workspace_path_fields_replaced": 0,
+   "semantic_fields_changed": false
+  },
+  {
+   "file": "tab-book-replay-scenarios.json",
+   "source": {
+    "codebase": "Dexter Account",
+    "commit": "d204555ddf7f36a94aeebcfb83d05cc948c4ff95",
+    "path": "docs/evidence/tab-receipt-book-20261119/tab-book-replay-scenarios.json"
+   },
+   "source_sha256": "d68896d7d1dd49bd06f646ebb8acc871e99aed7354836452f49fa439643977ce",
+   "export_sha256": "86c056f0f4a43daeab9a0f43c72208bc4047ae498dd9f372db2b0f772c6cafb4",
+   "workspace_path_fields_replaced": 1,
+   "semantic_fields_changed": false
+  },
+  {
+   "file": "tab_book_replay.py",
+   "source": {
+    "codebase": "Dexter Account",
+    "commit": "d204555ddf7f36a94aeebcfb83d05cc948c4ff95",
+    "path": "foundation/onchain/tests/tab_book_replay.py"
+   },
+   "source_sha256": "5a06261995d305000b4b842499b00828fdbb29dc52f8f5af0528222536e9728b",
+   "export_sha256": "5a06261995d305000b4b842499b00828fdbb29dc52f8f5af0528222536e9728b",
+   "workspace_path_fields_replaced": 0,
+   "semantic_fields_changed": false,
+   "trace_fixture_input_sha256": "5a06261995d305000b4b842499b00828fdbb29dc52f8f5af0528222536e9728b",
+   "matches_trace_fixture_input": true
+  },
+  {
+   "file": "traces/branch/double-charge-trace.json.xz",
+   "source": {
+    "codebase": "Dexter Account",
+    "commit": "d204555ddf7f36a94aeebcfb83d05cc948c4ff95",
+    "path": "docs/evidence/tab-receipt-book-20261119/traces/branch/double-charge-trace.json.xz"
+   },
+   "source_sha256": "e4ab365701c1e29c1d8cfe6bb117aff981991b5f8643ccaf8cb680ffb77faad2",
+   "export_sha256": "e4ab365701c1e29c1d8cfe6bb117aff981991b5f8643ccaf8cb680ffb77faad2",
+   "workspace_path_fields_replaced": 0,
+   "semantic_fields_changed": false
+  },
+  {
+   "file": "traces/branch/own-money-trace.json.xz",
+   "source": {
+    "codebase": "Dexter Account",
+    "commit": "d204555ddf7f36a94aeebcfb83d05cc948c4ff95",
+    "path": "docs/evidence/tab-receipt-book-20261119/traces/branch/own-money-trace.json.xz"
+   },
+   "source_sha256": "d1701a4d4e86f15b8d50324a936911308eae63f0b052e13826e36b27571216c5",
+   "export_sha256": "d1701a4d4e86f15b8d50324a936911308eae63f0b052e13826e36b27571216c5",
+   "workspace_path_fields_replaced": 0,
+   "semantic_fields_changed": false
+  },
+  {
+   "file": "traces/branch/tab-book-replay-trace.json.xz",
+   "source": {
+    "codebase": "Dexter Account",
+    "commit": "d204555ddf7f36a94aeebcfb83d05cc948c4ff95",
+    "path": "docs/evidence/tab-receipt-book-20261119/traces/branch/tab-book-replay-trace.json.xz"
+   },
+   "source_sha256": "0843ce77383b0147a76df708e4f19bdc15e8e914e61fbd6ae827e239d1a48e18",
+   "export_sha256": "0843ce77383b0147a76df708e4f19bdc15e8e914e61fbd6ae827e239d1a48e18",
+   "workspace_path_fields_replaced": 0,
+   "semantic_fields_changed": false
+  },
+  {
+   "file": "traces/branch/wallet-spending-send-trace.json.xz",
+   "source": {
+    "codebase": "Dexter Account",
+    "commit": "d204555ddf7f36a94aeebcfb83d05cc948c4ff95",
+    "path": "docs/evidence/tab-receipt-book-20261119/traces/branch/wallet-spending-send-trace.json.xz"
+   },
+   "source_sha256": "c5e0af1ce0b5c35f442e208aff2714be1b0646603c75745abc935e4412d948ae",
+   "export_sha256": "c5e0af1ce0b5c35f442e208aff2714be1b0646603c75745abc935e4412d948ae",
+   "workspace_path_fields_replaced": 0,
+   "semantic_fields_changed": false
+  },
+  {
+   "file": "traces/main/own-money-trace.json.xz",
+   "source": {
+    "codebase": "Dexter Account",
+    "commit": "d204555ddf7f36a94aeebcfb83d05cc948c4ff95",
+    "path": "docs/evidence/tab-receipt-book-20261119/traces/main/own-money-trace.json.xz"
+   },
+   "source_sha256": "e7ff61a37e96837ba269158e1acc93ea64fd974bbbd97c8dbbb8830f8675e037",
+   "export_sha256": "e7ff61a37e96837ba269158e1acc93ea64fd974bbbd97c8dbbb8830f8675e037",
+   "workspace_path_fields_replaced": 0,
+   "semantic_fields_changed": false
+  },
+  {
+   "file": "traces/main/wallet-spending-send-trace.json.xz",
+   "source": {
+    "codebase": "Dexter Account",
+    "commit": "d204555ddf7f36a94aeebcfb83d05cc948c4ff95",
+    "path": "docs/evidence/tab-receipt-book-20261119/traces/main/wallet-spending-send-trace.json.xz"
+   },
+   "source_sha256": "f110b545ded510fa733e5404f40a753398931f60f558d2b3a3f798f67d3bfdbd",
+   "export_sha256": "f110b545ded510fa733e5404f40a753398931f60f558d2b3a3f798f67d3bfdbd",
+   "workspace_path_fields_replaced": 0,
+   "semantic_fields_changed": false
+  },
+  {
+   "file": "source/foundation/onchain/Anchor.toml",
+   "source": {
+    "codebase": "Dexter Account",
+    "commit": "d204555ddf7f36a94aeebcfb83d05cc948c4ff95",
+    "path": "foundation/onchain/Anchor.toml"
+   },
+   "source_sha256": "86830c5e0a187a0b50bd893447270bb1fe0e3c0f660c813568849a4c17c999c3",
+   "export_sha256": "86830c5e0a187a0b50bd893447270bb1fe0e3c0f660c813568849a4c17c999c3",
+   "workspace_path_fields_replaced": 0,
+   "semantic_fields_changed": false,
+   "trace_build_input_sha256": "86830c5e0a187a0b50bd893447270bb1fe0e3c0f660c813568849a4c17c999c3",
+   "matches_trace_build_input": true
+  },
+  {
+   "file": "source/foundation/onchain/crates/contracts/src/lib.rs",
+   "source": {
+    "codebase": "Dexter Account",
+    "commit": "d204555ddf7f36a94aeebcfb83d05cc948c4ff95",
+    "path": "foundation/onchain/crates/contracts/src/lib.rs"
+   },
+   "source_sha256": "5ce8882684768e61e9ef8dbfd38093e4f229685ff811a2b2d435be39d280dfc5",
+   "export_sha256": "5ce8882684768e61e9ef8dbfd38093e4f229685ff811a2b2d435be39d280dfc5",
+   "workspace_path_fields_replaced": 0,
+   "semantic_fields_changed": false,
+   "trace_build_input_sha256": "5ce8882684768e61e9ef8dbfd38093e4f229685ff811a2b2d435be39d280dfc5",
+   "matches_trace_build_input": true
+  },
+  {
+   "file": "source/foundation/onchain/crates/contracts/tests/billing.rs",
+   "source": {
+    "codebase": "Dexter Account",
+    "commit": "d204555ddf7f36a94aeebcfb83d05cc948c4ff95",
+    "path": "foundation/onchain/crates/contracts/tests/billing.rs"
+   },
+   "source_sha256": "1c9aed9103076e9026f28fd7ac75bb3f404b40b96cda4e78ed7722d7322785b9",
+   "export_sha256": "1c9aed9103076e9026f28fd7ac75bb3f404b40b96cda4e78ed7722d7322785b9",
+   "workspace_path_fields_replaced": 0,
+   "semantic_fields_changed": false,
+   "trace_build_input_sha256": "1c9aed9103076e9026f28fd7ac75bb3f404b40b96cda4e78ed7722d7322785b9",
+   "matches_trace_build_input": true
+  },
+  {
+   "file": "source/foundation/onchain/crates/contracts/tests/recovery.rs",
+   "source": {
+    "codebase": "Dexter Account",
+    "commit": "d204555ddf7f36a94aeebcfb83d05cc948c4ff95",
+    "path": "foundation/onchain/crates/contracts/tests/recovery.rs"
+   },
+   "source_sha256": "61cd63e88974aa48defc6961e3c1f4d0c9ca6b731dc3ece1a0b4811abbe9ec8c",
+   "export_sha256": "61cd63e88974aa48defc6961e3c1f4d0c9ca6b731dc3ece1a0b4811abbe9ec8c",
+   "workspace_path_fields_replaced": 0,
+   "semantic_fields_changed": false,
+   "trace_build_input_sha256": "61cd63e88974aa48defc6961e3c1f4d0c9ca6b731dc3ece1a0b4811abbe9ec8c",
+   "matches_trace_build_input": true
+  },
+  {
+   "file": "source/foundation/onchain/programs/claims-core/src/evidence_billing.rs",
+   "source": {
+    "codebase": "Dexter Account",
+    "commit": "d204555ddf7f36a94aeebcfb83d05cc948c4ff95",
+    "path": "foundation/onchain/programs/claims-core/src/evidence_billing.rs"
+   },
+   "source_sha256": "1dbb76dab349f2ff53e202769dee9289d28e6273c09ef411056ccc53eb3dbc25",
+   "export_sha256": "1dbb76dab349f2ff53e202769dee9289d28e6273c09ef411056ccc53eb3dbc25",
+   "workspace_path_fields_replaced": 0,
+   "semantic_fields_changed": false,
+   "trace_build_input_sha256": "1dbb76dab349f2ff53e202769dee9289d28e6273c09ef411056ccc53eb3dbc25",
+   "matches_trace_build_input": true
+  },
+  {
+   "file": "source/foundation/onchain/programs/claims-core/src/lib.rs",
+   "source": {
+    "codebase": "Dexter Account",
+    "commit": "d204555ddf7f36a94aeebcfb83d05cc948c4ff95",
+    "path": "foundation/onchain/programs/claims-core/src/lib.rs"
+   },
+   "source_sha256": "7bbe620811316506130f9e48619227d2802db7cd66d4ef13c2d6268eb0ec6e6f",
+   "export_sha256": "7bbe620811316506130f9e48619227d2802db7cd66d4ef13c2d6268eb0ec6e6f",
+   "workspace_path_fields_replaced": 0,
+   "semantic_fields_changed": false,
+   "trace_build_input_sha256": "7bbe620811316506130f9e48619227d2802db7cd66d4ef13c2d6268eb0ec6e6f",
+   "matches_trace_build_input": true
+  },
+  {
+   "file": "source/foundation/onchain/programs/delivery-rules/src/lib.rs",
+   "source": {
+    "codebase": "Dexter Account",
+    "commit": "d204555ddf7f36a94aeebcfb83d05cc948c4ff95",
+    "path": "foundation/onchain/programs/delivery-rules/src/lib.rs"
+   },
+   "source_sha256": "efccf2d4e0238cdcd094b83d5b85d53678ccdfbf02e885a95799e331afa69817",
+   "export_sha256": "efccf2d4e0238cdcd094b83d5b85d53678ccdfbf02e885a95799e331afa69817",
+   "workspace_path_fields_replaced": 0,
+   "semantic_fields_changed": false,
+   "trace_build_input_sha256": "efccf2d4e0238cdcd094b83d5b85d53678ccdfbf02e885a95799e331afa69817",
+   "matches_trace_build_input": true
+  },
+  {
+   "file": "source/foundation/onchain/programs/pool-issuer/src/lib.rs",
+   "source": {
+    "codebase": "Dexter Account",
+    "commit": "d204555ddf7f36a94aeebcfb83d05cc948c4ff95",
+    "path": "foundation/onchain/programs/pool-issuer/src/lib.rs"
+   },
+   "source_sha256": "a9ba434388a2090d1db5540209c23c29bbc121e735e130e63944b59a1af80180",
+   "export_sha256": "a9ba434388a2090d1db5540209c23c29bbc121e735e130e63944b59a1af80180",
+   "workspace_path_fields_replaced": 0,
+   "semantic_fields_changed": false,
+   "trace_build_input_sha256": "a9ba434388a2090d1db5540209c23c29bbc121e735e130e63944b59a1af80180",
+   "matches_trace_build_input": true
+  },
+  {
+   "file": "source/foundation/onchain/programs/principal-registry/src/lib.rs",
+   "source": {
+    "codebase": "Dexter Account",
+    "commit": "d204555ddf7f36a94aeebcfb83d05cc948c4ff95",
+    "path": "foundation/onchain/programs/principal-registry/src/lib.rs"
+   },
+   "source_sha256": "51b1ee4b2cb39fce8c6e8dd4c076818701cba8e0d02e0afeee1908ae4bae5759",
+   "export_sha256": "51b1ee4b2cb39fce8c6e8dd4c076818701cba8e0d02e0afeee1908ae4bae5759",
+   "workspace_path_fields_replaced": 0,
+   "semantic_fields_changed": false,
+   "trace_build_input_sha256": "51b1ee4b2cb39fce8c6e8dd4c076818701cba8e0d02e0afeee1908ae4bae5759",
+   "matches_trace_build_input": true
+  }
+ ],
+ "written_for_this_release": [
+  {
+   "file": "case-index.json",
+   "source": {
+    "written_for_this_release_by": "make_case_index.py",
+    "from": [
+     "traces/branch/tab-book-replay-trace.json.xz",
+     "traces/branch/double-charge-trace.json.xz"
+    ]
+   },
+   "export_sha256": "c24685a2f55c47bc6b94745004d0a4b82f4f977518f6d5b01b383911eeb0cc93"
+  },
+  {
+   "file": "make_case_index.py",
+   "source": {
+    "written_for_this_release": true
+   },
+   "export_sha256": "3838ed8d061a058cd037d6a21b5c9859769b6bccfbfd0fe37d64508c82b6d668"
+  }
+ ],
+ "path_redaction": "The absolute workspace prefix is replaced with <fixture-workspace> in tab-book-replay-scenarios.json (1 field), double-charge-scenarios.json (1 field) and excess-rent-sizes.json (5 fields). Their source and export hashes are distinct. Every other file listed under sources is byte-identical to the source commit. The traces are published as recorded: each one's program_artifacts section names the four program binaries by their absolute paths on the machine that ran it.",
+ "source_files": "The nine files under source/foundation/onchain/ are the build inputs of this record that differ from the files under ../source/, copied byte for byte at the program_source commit. Their SHA-256 values equal the entries for the same paths in each branch trace's build_inputs. The other 67 build inputs are identical to files under ../source/. The files retain their existing copyright, and this release adds no license grant for them.",
+ "not_published": "The source record at docs/evidence/tab-receipt-book-20261119 holds 69 traces of this build and 57 of the earlier programs; four and two are published here. The traces of the swap, Jupiter and Pump runs are among those not published. Also not published: the comparison of every earlier test module on both builds, the client test logs and traces, the local-validator runs, the build, unit-test and interface receipts and logs, and the other scenario files."
+}

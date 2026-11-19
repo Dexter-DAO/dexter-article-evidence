@@ -10,6 +10,29 @@
   "archive_sha256": "639aa58c8e767549f452e37305c2dcd332a4d59606509b84e03c072160c958a3",
   "evidence": [
     {
+      "id": "tab-receipt-book",
+      "guide": "../../releases/2026-11-19/tab-receipt-book/README.md",
+      "record": "../../releases/2026-11-19/tab-receipt-book/traces/branch/tab-book-replay-trace.json.xz",
+      "numbered_payments": "../../releases/2026-11-19/tab-receipt-book/traces/branch/double-charge-trace.json.xz",
+      "index": "../../releases/2026-11-19/tab-receipt-book/case-index.json",
+      "flows": "../../releases/2026-11-19/tab-receipt-book/flow-rent.md",
+      "tests": "../../releases/2026-11-19/tab-receipt-book/tab_book_replay.py",
+      "source": "../../releases/2026-11-19/tab-receipt-book/source/"
+    },
+    {
+      "id": "devnet-run-2026-11-19",
+      "guide": "../../releases/2026-11-19/devnet/README.md",
+      "record": "../../releases/2026-11-19/devnet/devnet-record.json",
+      "log": "../../releases/2026-11-19/devnet/devnet.log",
+      "tests": "../../releases/2026-11-19/devnet/public_rpc_sequence.py"
+    },
+    {
+      "id": "account-program-source-2026-11-19",
+      "guide": "../../releases/2026-11-19/source/README.md",
+      "manifest": "../../releases/2026-11-19/source/provenance.json",
+      "source": "../../releases/2026-11-19/source/foundation/"
+    },
+    {
       "id": "three-way-commit",
       "guide": "../../releases/2026-11-18/README.md",
       "record": "../../releases/2026-11-18/commit-legs-trace.json.xz",
@@ -173,6 +196,10 @@
       "guide": "../../releases/2026-11-18/README.md",
       "tag": "2026-11-18i",
       "download": "https://github.com/Dexter-DAO/dexter-article-evidence/releases/tag/2026-11-18i"
+    },
+    {
+      "date": "2026-11-19",
+      "guide": "../../releases/2026-11-19/README.md"
     }
   ],
   "previous_releases": [

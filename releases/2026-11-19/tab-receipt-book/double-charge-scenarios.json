@@ -1,0 +1,241 @@
+{
+  "schema": "dexter-double-charge-attacks/v1",
+  "status": "passed",
+  "transport": "native-v1 LiteSVM",
+  "public_transactions_sent": 0,
+  "trace": "<fixture-workspace>/.local/anchor/double-charge-trace.json",
+  "trace_sha256": "c3733a7fe0f0c3c1ff970b7cf968dc0a97a137211fbeee94819e378eb55f7426",
+  "attacks": [
+    {
+      "attack": "lost response, ordinary repayment (route record window)",
+      "refused": [
+        "naive rebuild of a landed ordinary repayment is refused"
+      ],
+      "error": "NumberUsed",
+      "legitimate_path": [
+        "ordinary repayment lands while its response is lost",
+        "the route's next payment lands with a fresh number"
+      ],
+      "refused_changes_nothing": true,
+      "window": "DQb59EE6XZV293Upkv6tECytGpTbwWcAzP4jgafjMG6W",
+      "number": 1,
+      "sdk_rule": {
+        "landed": "bit set and event found",
+        "not_landed": "bit clear, no event",
+        "unknown": "bit set, no matching event: never rebuilt"
+      }
+    },
+    {
+      "attack": "sibling attempts, ordinary repayment",
+      "refused": [
+        "sibling attempt of the same repayment from another fee payer is refused"
+      ],
+      "error": "NumberUsed",
+      "legitimate_path": [
+        "first signed attempt of a repayment lands"
+      ],
+      "refused_changes_nothing": true
+    },
+    {
+      "attack": "sibling attempts, withdrawal",
+      "refused": [
+        "sibling attempt of the same withdrawal from another fee payer is refused"
+      ],
+      "error": "NumberUsed",
+      "legitimate_path": [
+        "first signed attempt of a withdrawal lands"
+      ],
+      "refused_changes_nothing": true
+    },
+    {
+      "attack": "two intents sharing one number (why one allocator per record)",
+      "refused": [
+        "a different intent reusing that number is refused"
+      ],
+      "error": "NumberUsed",
+      "legitimate_path": [
+        "first intent under a shared number lands",
+        "the second intent lands under its own number"
+      ],
+      "refused_changes_nothing": true
+    },
+    {
+      "attack": "lost response, facility repayment (payer's book window)",
+      "refused": [
+        "naive rebuild of a landed facility repayment is refused"
+      ],
+      "error": "NumberUsed",
+      "legitimate_path": [
+        "issuer facility repayment lands while its response is lost",
+        "the facility's next repayment lands with a fresh number"
+      ],
+      "refused_changes_nothing": true
+    },
+    {
+      "attack": "lost response, withdrawal (custody window)",
+      "refused": [
+        "naive rebuild of a landed withdrawal is refused"
+      ],
+      "error": "NumberUsed",
+      "legitimate_path": [
+        "escrow withdrawal lands while its response is lost",
+        "the custody's next withdrawal lands with a fresh number"
+      ],
+      "refused_changes_nothing": true
+    },
+    {
+      "attack": "lost response, contribution (custody window)",
+      "refused": [
+        "naive rebuild of a landed contribution is refused"
+      ],
+      "error": "NumberUsed",
+      "legitimate_path": [
+        "capital contribution lands while its response is lost",
+        "the custody's next contribution lands with a fresh number"
+      ],
+      "refused_changes_nothing": true
+    },
+    {
+      "attack": "lost response, seller-fee credit (beneficiary's book window)",
+      "refused": [
+        "an exact retry of a landed seller-fee credit is refused",
+        "naive rebuild of a landed seller-fee credit is refused"
+      ],
+      "error": "TabStale (exact retry), NumberUsed (rebuild)",
+      "legitimate_path": [
+        "seller-fee credit lands while its response is lost",
+        "the beneficiary's next credit lands with a fresh number"
+      ],
+      "refused_changes_nothing": true
+    },
+    {
+      "attack": "lost response, correction cash leg (funder's book window)",
+      "refused": [
+        "an exact retry of a landed correction cash leg is refused",
+        "naive rebuild of a landed correction cash leg is refused"
+      ],
+      "error": "TabStale (exact retry), NumberUsed (rebuild, after its token leg rolls back)",
+      "legitimate_path": [
+        "supplier-funded correction cash leg lands while its response is lost",
+        "the supplier's next correction lands with a fresh number"
+      ],
+      "refused_changes_nothing": true
+    },
+    {
+      "attack": "third party repays the issuer's facility (one writer per window)",
+      "refused": [],
+      "error": "none: every payment lands",
+      "legitimate_path": [
+        "a third party repays the issuer's facility with the issuer's in-flight number",
+        "a third party repays the issuer's facility with a number 60,000 ahead",
+        "the issuer's own facility repayment lands with its in-flight number"
+      ],
+      "refused_changes_nothing": true,
+      "issuer_number": 3,
+      "third_party_numbers": [
+        3,
+        60003
+      ]
+    },
+    {
+      "attack": "rebuilt no-cash correction (company's book window)",
+      "refused": [
+        "an exact retry of a landed no-cash correction is refused",
+        "naive rebuild of a landed no-cash correction is refused"
+      ],
+      "error": "TabStale (exact retry), NumberUsed (rebuild)",
+      "legitimate_path": [
+        "company, supplier and creditor agree a no-cash unpaid reduction",
+        "the company's next no-cash correction lands with a fresh number"
+      ],
+      "refused_changes_nothing": true
+    },
+    {
+      "attack": "rebuilt surrender release before expiry (supplier's book window)",
+      "refused": [
+        "an exact retry of a landed surrender is refused",
+        "naive rebuild of a landed surrender is refused"
+      ],
+      "error": "TabStale (exact retry), NumberUsed (rebuild)",
+      "legitimate_path": [
+        "supplier surrenders unused capacity before expiry",
+        "the supplier's next surrender lands with a fresh number"
+      ],
+      "refused_changes_nothing": true
+    },
+    {
+      "attack": "exact-approval re-grant, governed repayment",
+      "refused": [
+        "an exact retry under used approval a is refused",
+        "a rebuild under used approval a is refused",
+        "approval a's attempt cannot run under re-granted approval b",
+        "a grant at existing approval number a is refused",
+        "a grant that skips the principal's next number is refused",
+        "a stale attempt after approval a closed is refused"
+      ],
+      "error": "TabStale, RepaymentPermission, RepaymentPermission, RepaymentPermission, ApprovalNumber, RepaymentPermission",
+      "legitimate_path": [
+        "governed payment lands under exact approval a",
+        "approval b authorizes only its own new payment, which lands once",
+        "anyone closes used approval a after its expiry"
+      ],
+      "refused_changes_nothing": true,
+      "approval_a": "4RRGQFMa2N2PKY9SvFv173g5CKVtVH7wnnujf9RiMqNR",
+      "number_a": 1,
+      "number_b": 2,
+      "closed_rent": 5547120
+    },
+    {
+      "attack": "standing-grant governed repayment replay",
+      "refused": [
+        "a replay of the standing grant's landed number is refused"
+      ],
+      "error": "OrderUsed",
+      "legitimate_path": [
+        "standing grant pays its first number",
+        "the standing grant's next number lands"
+      ],
+      "refused_changes_nothing": true
+    },
+    {
+      "attack": "settling repayment with appended closes retried after landing",
+      "refused": [
+        "settling repayment with its closes, retried after landing",
+        "resending only the closes after settlement"
+      ],
+      "error": "AccountNotInitialized (both)",
+      "legitimate_path": [
+        "settling repayment lands with its closes appended"
+      ],
+      "refused_changes_nothing": true
+    },
+    {
+      "attack": "close order: runs, then records, then the Tab",
+      "refused": [],
+      "error": "none: early closes are no-ops",
+      "legitimate_path": [
+        "close_repayment_record before its run is closed is a no-op",
+        "close_tab with its run and record open is a no-op",
+        "close_run closes the settled run",
+        "close_tab still waits for the open record",
+        "close_repayment_record closes after its run",
+        "close_tab closes once every run and record is closed"
+      ],
+      "refused_changes_nothing": true
+    },
+    {
+      "attack": "lost response, interest refund (lender's book window)",
+      "refused": [
+        "an exact retry of a landed interest refund is refused",
+        "naive rebuild of a landed interest refund is refused"
+      ],
+      "error": "TabStale (exact retry), NumberUsed (rebuild, after its token leg rolls back)",
+      "legitimate_path": [
+        "interest refund lands while its response is lost",
+        "the lender's next refund lands with a fresh number"
+      ],
+      "refused_changes_nothing": true
+    }
+  ],
+  "boundary": "Compiled-program local execution with synthetic tokens; no deployment or public RPC"
+}

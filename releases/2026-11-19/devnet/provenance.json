@@ -1,0 +1,110 @@
+{
+  "schema": "dexter-selected-public-provenance/v1",
+  "release": "2026-11-19",
+  "program_source": {
+    "codebase": "Dexter Account",
+    "commit": "cd2b2bb27c3fc5e7193ab13d4de619b833a5c398",
+    "published": "../source/",
+    "build_inputs_sha256": "7a4d8397e09d77241021fc27e897594161c7c5e62d1f7e05595f59cbc9583de9"
+  },
+  "driver": {
+    "codebase": "Dexter Account",
+    "commit": "cd2b2bb27c3fc5e7193ab13d4de619b833a5c398",
+    "path": "foundation/onchain/tests/public_rpc_sequence.py"
+  },
+  "chain": {
+    "cluster": "devnet",
+    "genesis_hash": "EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG",
+    "programs": {
+      "principal_registry": {
+        "program_id": "DEXregFGwJM4LsVAPeWf7pQm4JBNbZxijTRQzrxk1SQS",
+        "sha256_on_chain": "64bbaea177e9a982f483e78b28877bb03ee94daaac1dc374c899e4b78105505e",
+        "bytes_on_chain": 1051464,
+        "last_deployed_slot": 524119556,
+        "upgrade_authority": "FpD1YKCetiW6JamQNQRNRbASCFdR2iZX4BPAmea3MmKB",
+        "explorer": "https://explorer.solana.com/address/DEXregFGwJM4LsVAPeWf7pQm4JBNbZxijTRQzrxk1SQS?cluster=devnet"
+      },
+      "claims_core": {
+        "program_id": "DEXcor9xYbiaSyvdEjKprMZuJFwe3MdgwW5kVzUiHdtu",
+        "sha256_on_chain": "6144105bd973f843080e9eb15013cc8ab20069608e35ea46627e9ccdfcb98e0a",
+        "bytes_on_chain": 2442816,
+        "last_deployed_slot": 524119684,
+        "upgrade_authority": "FpD1YKCetiW6JamQNQRNRbASCFdR2iZX4BPAmea3MmKB",
+        "explorer": "https://explorer.solana.com/address/DEXcor9xYbiaSyvdEjKprMZuJFwe3MdgwW5kVzUiHdtu?cluster=devnet"
+      },
+      "pool_issuer": {
+        "program_id": "DEXissgoPzcY4bDsGfyKjy1bMxh3VFZ8yDChjjLrLg6x",
+        "sha256_on_chain": "97d95b58df5c6fc60f92adfb1ca6a0e31be119f50d3a5b2564b50d6a05473119",
+        "bytes_on_chain": 197432,
+        "last_deployed_slot": 524119584,
+        "upgrade_authority": "FpD1YKCetiW6JamQNQRNRbASCFdR2iZX4BPAmea3MmKB",
+        "explorer": "https://explorer.solana.com/address/DEXissgoPzcY4bDsGfyKjy1bMxh3VFZ8yDChjjLrLg6x?cluster=devnet"
+      },
+      "swig": {
+        "program_id": "swigypWHEksbC64pWKwah1WTeh9JXwx8H1rJHLdbQMB",
+        "sha256_on_chain": "0418f037fe1c9f6c0cd9d3ee57d684f69aca2ed9b3388f5d0c45020b01cce1d9",
+        "bytes_on_chain": 443904,
+        "last_deployed_slot": 522994140,
+        "upgrade_authority": "yRtJa2jbNRv5KR7qKTi4ZFQ1GGjbkyPHra5C7G4NtPb",
+        "explorer": "https://explorer.solana.com/address/swigypWHEksbC64pWKwah1WTeh9JXwx8H1rJHLdbQMB?cluster=devnet"
+      },
+      "delivery_rules": {
+        "program_id": "DEXdeLmbdmRi1V8XHUGzNCFYcTEZQdkpy9jywRRu8CVt",
+        "sha256_on_chain": "55a6792033e1e29f4d898b0a12e3a66b46eae6b8990b2eaca2853e51456c61c2",
+        "bytes_on_chain": 276224,
+        "last_deployed_slot": 524119613,
+        "upgrade_authority": "FpD1YKCetiW6JamQNQRNRbASCFdR2iZX4BPAmea3MmKB",
+        "explorer": "https://explorer.solana.com/address/DEXdeLmbdmRi1V8XHUGzNCFYcTEZQdkpy9jywRRu8CVt?cluster=devnet"
+      }
+    }
+  },
+  "sources": [
+    {
+      "file": "devnet-record.json",
+      "source": {
+        "run_output": "dex-a6e9380.salt.json.record.json",
+        "written_by": {
+          "codebase": "Dexter Account",
+          "commit": "cd2b2bb27c3fc5e7193ab13d4de619b833a5c398",
+          "path": "foundation/onchain/tests/public_rpc_sequence.py"
+        }
+      },
+      "source_sha256": "aca9cb5b7076eaf2c71b818f4cbe131ac87b40f1a8a15e54668090f89bf2a245",
+      "export_sha256": "3b1d0f4b73a0fd05d133992918466a197c9ee65632daab91df4916ad4887bd08",
+      "fields_omitted": [
+        "run.salt_file",
+        "run.salt_sha256",
+        "run.journal"
+      ],
+      "workspace_path_fields_replaced": 1,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "devnet.log",
+      "source": {
+        "run_output": "deploy-dex-a6e9380.out",
+        "lines_published": "157 to 224 of 224"
+      },
+      "source_sha256": "e93ac9c03ff1740bca0af4c030646f021d324e854098f669a266673c8b1480d1",
+      "export_sha256": "a57282aca4ab0547c4fbb312f101890a789bafa65679a5d51f4d785a920a4ded",
+      "workspace_path_fields_replaced": 1,
+      "semantic_fields_changed": false
+    },
+    {
+      "file": "public_rpc_sequence.py",
+      "source": {
+        "codebase": "Dexter Account",
+        "commit": "cd2b2bb27c3fc5e7193ab13d4de619b833a5c398",
+        "path": "foundation/onchain/tests/public_rpc_sequence.py"
+      },
+      "source_sha256": "80548a2e144412c762bc3efd480a85964b829221d45d3075375c457c185c6967",
+      "export_sha256": "80548a2e144412c762bc3efd480a85964b829221d45d3075375c457c185c6967",
+      "workspace_path_fields_replaced": 0,
+      "semantic_fields_changed": false,
+      "record_driver_source_sha256": "80548a2e144412c762bc3efd480a85964b829221d45d3075375c457c185c6967",
+      "matches_record": true
+    }
+  ],
+  "omitted": "The run salt file, from which every key the run created derives, and the journal the driver keeps beside it are not published. From the record's run section the local paths of the salt file and the journal and the salt file's SHA-256 are removed; build.artifact_root reads <fixture-workspace> and the log's record path reads <run-directory>/devnet-record.json. No other field changed. The log is the 68 lines the driver printed, its check before sending and its run; the lines the deploy script printed before them are not published, nor is the deploy script.",
+  "secret_check": "Before publication the published record was searched for the strings salt, seed, secret, mnemonic and keypair, for an RPC key and for local paths. Every 32-byte value in it (base58, hex, base64 or a byte array) was tested as an Ed25519 seed against the public keys the record names, and every 64-byte value as a keypair. None matched."
+}
