@@ -1,0 +1,19 @@
+[toolchain]
+anchor_version = "1.2.2"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.localnet]
+principal_registry = "DEXregFGwJM4LsVAPeWf7pQm4JBNbZxijTRQzrxk1SQS"
+claims_core = "DEXcor9xYbiaSyvdEjKprMZuJFwe3MdgwW5kVzUiHdtu"
+pool_issuer = "DEXissgoPzcY4bDsGfyKjy1bMxh3VFZ8yDChjjLrLg6x"
+delivery_rules = "DEXdeLmbdmRi1V8XHUGzNCFYcTEZQdkpy9jywRRu8CVt"
+
+[provider]
+cluster = "http://127.0.0.1:18999"
+wallet = "../../.local/validator/dev-payer.json"
+
+[workspace]
+members = ["programs/principal-registry", "programs/claims-core", "programs/pool-issuer", "programs/delivery-rules"]

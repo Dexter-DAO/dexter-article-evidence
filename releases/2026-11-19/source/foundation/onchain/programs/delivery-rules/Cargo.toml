@@ -1,0 +1,30 @@
+[package]
+name = "delivery-rules"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "delivery_rules"
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+anchor-debug = []
+custom-heap = []
+custom-panic = []
+idl-build = ["anchor-lang/idl-build", "dexter-contracts/idl-build", "claims-core/idl-build"]
+
+[dependencies]
+anchor-lang = { workspace = true }
+solana-sha256-hasher = { workspace = true }
+dexter-contracts = { path = "../../crates/contracts" }
+claims-core = { path = "../claims-core", features = ["cpi"] }
+
+[lints.rust.unexpected_cfgs]
+level = "warn"
+check-cfg = ['cfg(target_os, values("solana"))']
