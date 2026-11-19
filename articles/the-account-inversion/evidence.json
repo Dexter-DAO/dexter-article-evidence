@@ -65,6 +65,15 @@
       "source": "../../releases/2026-11-18/early-settlement/source/"
     },
     {
+      "id": "delivery-rules",
+      "guide": "../../releases/2026-11-18/delivery-rules/README.md",
+      "record": "../../releases/2026-11-18/delivery-rules/delivery-rules-trace.json.xz",
+      "index": "../../releases/2026-11-18/delivery-rules/case-index.json",
+      "tests": "../../releases/2026-11-18/delivery-rules/delivery_rules.py",
+      "sweep": "../../releases/2026-11-18/delivery-rules/group-sweep.log",
+      "source": "../../releases/2026-11-18/delivery-rules/source/"
+    },
+    {
       "id": "agent-revocation",
       "guide": "../../releases/2026-11-18/revocation/README.md",
       "record": "../../releases/2026-11-18/revocation/revocation-trace.json.xz",
