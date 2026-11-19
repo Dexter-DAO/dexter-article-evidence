@@ -1,0 +1,298 @@
+{
+ "sides": {},
+ "flows": [
+  {
+   "flow": "one-time setup (principals, books, projections, custody, facility, line, budget, mandates, permissions)",
+   "main": {
+    "trace": "own-money",
+    "before": "ACCEPTED: the buyer's agent orders 100,000 from the seller, backed by the buyer's own wallet"
+   },
+   "branch": {
+    "trace": "own-money",
+    "before": "ACCEPTED: the buyer's agent orders 100,000 from the seller, backed by the buyer's own wallet"
+   },
+   "note": "Long-lived records created once per principal, mint, custody, facility, line, budget and mandate; they are not per-flow costs. Main's figure includes five capital-allocation receipts."
+  },
+  {
+   "flow": "order, commit to close: cash repayment settles it, closes appended to the settling repayment",
+   "main": {
+    "trace": "own-money",
+    "tab_from": "ACCEPTED: the buyer's agent orders 100,000 from the seller, backed by the buyer's own wallet"
+   },
+   "branch": {
+    "trace": "own-money",
+    "tab_from": "ACCEPTED: the buyer's agent orders 100,000 from the seller, backed by the buyer's own wallet"
+   },
+   "note": "Branch: the Tab, hold and run close in the settling repayment and each deposit returns to the payer recorded at creation; the repayment record is created and closed inside that same transaction, so it nets to zero and is not listed. Main keeps every record."
+  },
+  {
+   "flow": "order, commit to close: Swig-governed final payment, keeper sends the closes separately (Tab records; its exact repayment approvals are the next rows)",
+   "main": {
+    "trace": "financing-governed-repayment-run",
+    "tab_from": "accept finite supplier commitment governed-company"
+   },
+   "branch": {
+    "trace": "financing-governed-repayment-run",
+    "tab_from": "accept finite supplier commitment governed-company"
+   },
+   "note": "Branch: the keeper's separate close transaction returns the Tab, hold, run and both repayment records to their recorded payers. The exact repayment approvals that authorized the governed payments are separate accounts, measured in the next row."
+  },
+  {
+   "flow": "exact repayment approval: grant, then close_approval after expiry (the payment it authorizes is measured with its order)",
+   "main": {
+    "trace": "financing-governed-repayment-run",
+    "names": [
+     "owner grants exact individual repayment permission individual-permission"
+    ]
+   },
+   "branch": {
+    "trace": "double-charge",
+    "names": [
+     "owner grants exact individual repayment permission approval-a",
+     "anyone closes used approval a after its expiry"
+    ]
+   },
+   "note": "Branch: double-charge.py grants approval a (its grant; 5,547,120 lamports paid by its grantor), uses it for one payment, and after expiry an outside key closes it : exactly 5,547,120 lamports go back to the grantor, the closer pays only the fee. Main's exact repayment permission is a RepaymentPermission account with no close. In financing_governed_repayment.py the branch's three exact repayment approvals stay open because that suite never runs close_approval."
+  },
+  {
+   "flow": "evidence order, commit to close: no records, finalized at zero",
+   "main": {
+    "trace": "evidence-billing",
+    "names": [
+     "accept bounded authenticated work no-records",
+     "independent caller establishes deterministic bill then releases residual no-records"
+    ]
+   },
+   "branch": {
+    "trace": "evidence-billing",
+    "names": [
+     "accept bounded authenticated work no-records",
+     "independent caller establishes deterministic bill then releases residual no-records",
+     "Change 5: an outside key closes settled order no-records"
+    ]
+   }
+  },
+  {
+   "flow": "wallet send, standing grant",
+   "main": {
+    "trace": "wallet-spending-send",
+    "names": [
+     "bounded executor sends the first permitted amount"
+    ]
+   },
+   "branch": {
+    "trace": "wallet-spending-send",
+    "names": [
+     "bounded executor sends the first permitted amount"
+    ]
+   }
+  },
+  {
+   "flow": "wallet send, exact approval: grant, send, then (branch) close_approval after expiry",
+   "main": {
+    "trace": "wallet-spending-send",
+    "names": [
+     "owner grants exact spending permission exact-send-approval",
+     "explicit owner approval transfers exactly the approved asset and amount"
+    ]
+   },
+   "branch": {
+    "trace": "wallet-double-charge",
+    "names": [
+     "owner grants exact spending permission double-charge-close-used",
+     "close_approval: the used approval's trade lands",
+     "close_approval: the expired used approval closes"
+    ]
+   },
+   "note": "Branch: wallet_double_charge.py rows 94, 95 and 100. The grant's payer (9LbZUY...) pays 5,442,720 lamports and gets exactly 5,442,720 back from close_approval after expiry; the closer pays only the fee. Main keeps the SpendingPermission and both receipts."
+  },
+  {
+   "flow": "exact spending approval never used: grant, then close_approval after expiry",
+   "branch": {
+    "trace": "wallet-double-charge",
+    "names": [
+     "owner grants exact spending permission double-charge-close-unused",
+     "close_approval: the expired unused approval closes"
+    ]
+   },
+   "note": "Branch only (main has no close): an approval that was never used also closes after expiry, rent back to its payer."
+  },
+  {
+   "flow": "SPL swap, standing grant",
+   "main": {
+    "trace": "wallet-spending-swap",
+    "names": [
+     "bounded delegated swap commits the actual debit and output"
+    ]
+   },
+   "branch": {
+    "trace": "wallet-spending-swap",
+    "names": [
+     "bounded delegated swap commits the actual debit and output"
+    ]
+   }
+  },
+  {
+   "flow": "SPL swap, exact approval: grant, swap, then (branch) close_approval after expiry",
+   "main": {
+    "trace": "wallet-spending-swap",
+    "names": [
+     "owner grants exact spending permission exact-swap-approval",
+     "owner-approved exact-input swap executes the actual source-built adapter"
+    ]
+   },
+   "branch": {
+    "trace": "wallet-spending-swap",
+    "names": [
+     "owner grants exact spending permission exact-swap-approval",
+     "owner-approved exact-input swap executes the actual source-built adapter",
+     "close_approval: expired exact approval exact-swap-approval closes"
+    ]
+   },
+   "note": "Branch: wallet_spending.py now closes its exact approvals after expiry; the ExactSpendingApproval's rent goes back to its recorded payer. Main keeps the SpendingPermission and the receipts."
+  },
+  {
+   "flow": "Jupiter trade, standing grant",
+   "main": {
+    "trace": "wallet-jupiter-public",
+    "names": [
+     "actual recorded public public-pump-direct route under governed wallet authority"
+    ]
+   },
+   "branch": {
+    "trace": "wallet-jupiter-public",
+    "names": [
+     "actual recorded public public-pump-direct route under governed wallet authority"
+    ]
+   }
+  },
+  {
+   "flow": "Jupiter trade, exact approval: grant, trade, then (branch) close_approval after expiry",
+   "main": {
+    "trace": "wallet-jupiter-public",
+    "names": [
+     "owner grants exact spending permission public-route-0",
+     "actual recorded public public-legacy route under governed wallet authority"
+    ]
+   },
+   "branch": {
+    "trace": "wallet-jupiter-public",
+    "names": [
+     "owner grants exact spending permission public-route-0",
+     "actual recorded public public-legacy route under governed wallet authority",
+     "close_approval: expired exact approval public-route-0 closes"
+    ]
+   },
+   "note": "Branch: wallet_jupiter.py now closes its exact approvals after expiry; the approval's rent goes back to its recorded payer."
+  },
+  {
+   "flow": "Pump trade, standing grant",
+   "main": {
+    "trace": "wallet-pump-curve",
+    "names": [
+     "bounded standing permission admits first launch buy"
+    ]
+   },
+   "branch": {
+    "trace": "wallet-pump-curve",
+    "names": [
+     "bounded standing permission admits first launch buy"
+    ]
+   }
+  },
+  {
+   "flow": "Pump trade, exact approval: grant, buy, then (branch) close_approval after expiry",
+   "main": {
+    "trace": "wallet-pump-curve",
+    "names": [
+     "owner grants exact spending permission pump-exact-buy",
+     "actual governed Pump launch buy unwraps only accounted WSOL"
+    ]
+   },
+   "branch": {
+    "trace": "wallet-pump-curve",
+    "names": [
+     "owner grants exact spending permission pump-exact-buy",
+     "actual governed Pump launch buy unwraps only accounted WSOL",
+     "close_approval: expired exact approval pump-exact-buy closes"
+    ]
+   },
+   "note": "Branch: wallet_pump.py now closes its exact approvals after expiry; the approval's rent goes back to its recorded payer."
+  },
+  {
+   "flow": "deposit: owner moves cash into the governed wallet's custody",
+   "main": {
+    "trace": "own-money",
+    "names": [
+     "buyer's owner moves 150,000 of the buyer's own cash into the buyer's own governed wallet"
+    ]
+   },
+   "branch": {
+    "trace": "own-money",
+    "names": [
+     "buyer's owner moves 150,000 of the buyer's own cash into the buyer's own governed wallet"
+    ]
+   }
+  },
+  {
+   "flow": "deposit: owner capital contribution into existing custody",
+   "main": {
+    "trace": "financing-commercial",
+    "names": [
+     "owner contribution records actual token inflow and allocated own capital"
+    ]
+   },
+   "branch": {
+    "trace": "financing-commercial",
+    "names": [
+     "owner contribution records actual token inflow and allocated own capital"
+    ]
+   }
+  },
+  {
+   "flow": "deposit: tokens into wallet trading custody",
+   "main": {
+    "trace": "wallet-token-lifecycle",
+    "names": [
+     "deposit exact gross/net wallet tokens"
+    ]
+   },
+   "branch": {
+    "trace": "wallet-token-lifecycle",
+    "names": [
+     "deposit exact gross/net wallet tokens"
+    ]
+   }
+  },
+  {
+   "flow": "withdrawal: owner withdraws free cash from custody",
+   "main": {
+    "trace": "own-money",
+    "names": [
+     "ACCEPTED: buyer's owner withdraws exactly the free 50,000 from the buyer's wallet"
+    ]
+   },
+   "branch": {
+    "trace": "own-money",
+    "names": [
+     "ACCEPTED: buyer's owner withdraws exactly the free 50,000 from the buyer's wallet"
+    ]
+   }
+  },
+  {
+   "flow": "withdrawal: tokens out of wallet trading custody",
+   "main": {
+    "trace": "wallet-token-lifecycle",
+    "names": [
+     "withdraw exact gross/net wallet tokens"
+    ]
+   },
+   "branch": {
+    "trace": "wallet-token-lifecycle",
+    "names": [
+     "withdraw exact gross/net wallet tokens"
+    ]
+   }
+  }
+ ]
+}

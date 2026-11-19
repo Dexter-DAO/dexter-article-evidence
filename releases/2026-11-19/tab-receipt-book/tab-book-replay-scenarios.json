@@ -1,0 +1,706 @@
+{
+  "schema": "dexter-tab-book-replay/v1",
+  "status": "passed",
+  "transport": "native-v1 LiteSVM",
+  "public_transactions_sent": 0,
+  "native_suite": {
+    "status": "passed",
+    "trace": "<fixture-workspace>/.local/anchor/tab-book-replay-trace.json",
+    "trace_sha256": "709c65806cff08449e4d424435b15ca220fc21617c0eb6be5183da25f86996c7",
+    "transaction_count": 124,
+    "refused": 41,
+    "assertions": 493,
+    "receipts": 27,
+    "change5_ledger": {
+      "transactions": 83,
+      "events": 37,
+      "tab_checks": 23,
+      "book_checks": 84,
+      "remaining_checks": 17,
+      "closed_tabs": 2
+    },
+    "maximum_signed_packet": 2746,
+    "build_receipt_sha256": "e5647e1e952f7f6f2ebb52052b7d9c93c98afab7453321fe785f8fed425db4c8",
+    "idl_receipt_sha256": "714f57471e552982279e79deb9e0cf1b61ae66b23e44714c416926f77936f1f6"
+  },
+  "reuse_after_close": [
+    {
+      "attempt": "recreate order 5's Tab with a fresh signed commit",
+      "error": "OrderUsed",
+      "kind": "program",
+      "program": "principal_registry",
+      "origin": "thrown in programs/principal-registry/src/lib.rs:475",
+      "number": 6061,
+      "instruction_index": 0
+    },
+    {
+      "attempt": "recreate order 20's Tab with a fresh signed commit",
+      "error": "OrderUsed",
+      "kind": "program",
+      "program": "principal_registry",
+      "origin": "thrown in programs/principal-registry/src/lib.rs:475",
+      "number": 6061,
+      "instruction_index": 0
+    },
+    {
+      "attempt": "bill the old run id at its old address, under closed Tab 5",
+      "error": "AccountNotInitialized",
+      "kind": "program",
+      "program": "claims_core",
+      "origin": "caused by account: reservation",
+      "number": 3012,
+      "instruction_index": 0,
+      "why": "the run address derives from Tab 5's address, Tab 5 no longer exists, and order 5 can never be committed again (OrderUsed, later OrderBelowWindow), so no run can ever be created there"
+    }
+  ],
+  "profiles": {
+    "ordinary": {
+      "name": "ordinary order 5",
+      "order": 5,
+      "tab": "B7ssFogxjfb7jFyPGqKCRjz8m4vWwnAo4VtHxX5T21cj",
+      "steps": [
+        {
+          "step": "commit",
+          "name": "ordinary order 5: the agent, the credit issuer's owner and the seller commit 10,000"
+        },
+        {
+          "step": "capture",
+          "name": "ordinary order 5: the seller captures 6,000 of completed work, paying its own fee"
+        },
+        {
+          "step": "collection",
+          "name": "ordinary order 5: an outside key collects 6,000 from the lender's escrow to the seller"
+        },
+        {
+          "step": "release",
+          "name": "release unused accepted work ordinary-5-unused"
+        },
+        {
+          "step": "repayment 1",
+          "name": "ordinary order 5: the buyer repays 3,000, repayment number 1 on its route"
+        },
+        {
+          "step": "settling repayment 2 with every close",
+          "name": "ordinary order 5: the buyer repays the last 3,000 (number 2) and the same transaction closes the repayment record, the run and the Tab with its hold; an outside keeper pays"
+        }
+      ],
+      "close": {
+        "name": "ordinary order 5",
+        "tab": "B7ssFogxjfb7jFyPGqKCRjz8m4vWwnAo4VtHxX5T21cj",
+        "order": 5,
+        "steps": 8,
+        "fingerprint": "02e37e86dc4172825d3dd416662bd221479391c7e21c18947adcac5882e3bc67",
+        "deposits": {
+          "tab": 10349520,
+          "hold": 2136720,
+          "run 1": 4405680,
+          "repayment record 1": 3807120
+        },
+        "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9",
+        "records": {
+          "tab": "B7ssFogxjfb7jFyPGqKCRjz8m4vWwnAo4VtHxX5T21cj",
+          "hold": "BKC97rpvKe7mXTvnnrPqVVoJoeyjEjKVXAXs4PXbqeqD",
+          "run 1": "9H8AqS55k1Ktxq39GiNZNsyo21w1d9962JmwDTcvH4o",
+          "repayment record 1": "AaAu6vDPRh123xWAC6sqHbqCzaUooN4wjVivvTR4beDo"
+        },
+        "deposits_by_payer": {
+          "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9": {
+            "records": [
+              "tab",
+              "hold"
+            ],
+            "lamports": 12486240
+          },
+          "4MfyR4G3NWfVRDWo6iNAHDBZqWMgwZX6FNtMqEW3a9JT": {
+            "records": [
+              "run 1"
+            ],
+            "lamports": 4405680
+          },
+          "3BuW9SR5tG6VFK4MmkQQ3Ak8ny1K1Vv5Uz7is8Aa5pwG": {
+            "records": [
+              "repayment record 1"
+            ],
+            "lamports": 3807120
+          }
+        },
+        "keeper": "CNSe1x1YtQmxqyEeQjBfA6jJmWqziYJATL3BApKJwU6S",
+        "settling_wire_bytes": 1348,
+        "settling_compute_units": 302882
+      },
+      "step_replays": [
+        {
+          "step": "commit",
+          "original_signature": "44rRtj5oywUkPLgNTAc5xNYnNwEUC6HowRidQMfFbGcC269iSDDKY4zdWz1gg4gdQPH7Nv8GyvQBQ27YdCSuQtWC",
+          "literal": {
+            "error": "BlockhashNotFound",
+            "kind": "runtime, before any program runs",
+            "signatures_verified": true
+          },
+          "resigned": {
+            "error": "OrderUsed",
+            "kind": "program",
+            "program": "principal_registry",
+            "origin": "thrown in programs/principal-registry/src/lib.rs:475",
+            "number": 6061,
+            "instruction_index": 0
+          },
+          "why": "the mandate's order window already holds this number"
+        },
+        {
+          "step": "capture",
+          "original_signature": "5EpxGbi669FQK2T67w7Zng8Bhn33WaNufoYbL3uwEowgyZUuQacojEL2g8i47ohRWS5FD5gVX6Wxi6H2DC5FmTwe",
+          "literal": {
+            "error": "BlockhashNotFound",
+            "kind": "runtime, before any program runs",
+            "signatures_verified": true
+          },
+          "resigned": {
+            "error": "AccountNotInitialized",
+            "kind": "program",
+            "program": "claims_core",
+            "origin": "caused by account: reservation",
+            "number": 3012,
+            "instruction_index": 0,
+            "account": "reservation"
+          },
+          "why": "the close removed its records"
+        },
+        {
+          "step": "collection",
+          "original_signature": "2XndfvNSZwC3aiKqixJC2UQ8yzDofep4ahs1qtpwJNDRcj3kAKo2CvmszfcAtw3UGT3m1Wkie54cbHmBb6Au6fbN",
+          "literal": {
+            "error": "BlockhashNotFound",
+            "kind": "runtime, before any program runs",
+            "signatures_verified": true
+          },
+          "resigned": {
+            "error": "AccountNotInitialized",
+            "kind": "program",
+            "program": "claims_core",
+            "origin": "caused by account: claim",
+            "number": 3012,
+            "instruction_index": 0,
+            "account": "claim"
+          },
+          "why": "the close removed its records"
+        },
+        {
+          "step": "release",
+          "original_signature": "4bbG29Ftj1pK3U7sc4qcbsewgL3DrH5N8rnKyf6zMiW5d981bV7p6SfkD6dDD7wLsYmPbStbHkYozjHgsaahDvQU",
+          "literal": {
+            "error": "BlockhashNotFound",
+            "kind": "runtime, before any program runs",
+            "signatures_verified": true
+          },
+          "resigned": {
+            "error": "AccountNotInitialized",
+            "kind": "program",
+            "program": "claims_core",
+            "origin": "caused by account: reservation",
+            "number": 3012,
+            "instruction_index": 0,
+            "account": "reservation"
+          },
+          "why": "the close removed its records"
+        },
+        {
+          "step": "repayment 1",
+          "original_signature": "etjF2Tm4X12Mri4VwNgZXp5NFAL6zZSS4Viphxt9Jdnjwc7CU6674f7nMYbVqdb6Zqf2UgxawCWqyKNhYToxtQs",
+          "literal": {
+            "error": "BlockhashNotFound",
+            "kind": "runtime, before any program runs",
+            "signatures_verified": true
+          },
+          "resigned": {
+            "error": "AccountNotInitialized",
+            "kind": "program",
+            "program": "claims_core",
+            "origin": "caused by account: reservation",
+            "number": 3012,
+            "instruction_index": 0,
+            "account": "reservation"
+          },
+          "why": "the close removed its records"
+        },
+        {
+          "step": "settling repayment 2 with every close",
+          "original_signature": "4YujBUBzynMcHjuPJLtGxfNpEdUve9WMwUbkmXXe1KU4C4RjsX9U8fL223fTFNNo2EbnpztEc2RnCYuayW4RuJgF",
+          "literal": {
+            "error": "BlockhashNotFound",
+            "kind": "runtime, before any program runs",
+            "signatures_verified": true
+          },
+          "resigned": {
+            "error": "AccountNotInitialized",
+            "kind": "program",
+            "program": "claims_core",
+            "origin": "caused by account: reservation",
+            "number": 3012,
+            "instruction_index": 0,
+            "account": "reservation"
+          },
+          "why": "the close removed its records"
+        }
+      ],
+      "record_replays": [
+        {
+          "record": "buyer's commit (agent, credit issuer's owner and seller signatures)",
+          "against": "order 4",
+          "bound": {
+            "signed_order": 5,
+            "presented_order": 4,
+            "signed_tab": "B7ssFogxjfb7jFyPGqKCRjz8m4vWwnAo4VtHxX5T21cj",
+            "presented_tab": "3diJWw3eHGLJXXZnhMbfPABccTjdtqA4eLrpdq7ddm8m",
+            "signed_hold": "BKC97rpvKe7mXTvnnrPqVVoJoeyjEjKVXAXs4PXbqeqD",
+            "presented_hold": "AuNecAtZh9Tm8xoayQcErRWqLecCaS2HVaXD7BEoCTMy"
+          },
+          "error": "SignatureFailure",
+          "kind": "runtime, before any program runs",
+          "signatures_verified": false
+        },
+        {
+          "record": "buyer's commit (agent, credit issuer's owner and seller signatures)",
+          "against": "order 6",
+          "bound": {
+            "signed_order": 5,
+            "presented_order": 6,
+            "signed_tab": "B7ssFogxjfb7jFyPGqKCRjz8m4vWwnAo4VtHxX5T21cj",
+            "presented_tab": "DfXMwiyGa3tPiujS7rknxpbKf3tEzrrnf77rFiJWu6iQ",
+            "signed_hold": "BKC97rpvKe7mXTvnnrPqVVoJoeyjEjKVXAXs4PXbqeqD",
+            "presented_hold": "F2M3TkjQ8UTCPbavFfpEunUfuETEeFtd1qrKiWRkyPzr"
+          },
+          "error": "SignatureFailure",
+          "kind": "runtime, before any program runs",
+          "signatures_verified": false
+        },
+        {
+          "record": "buyer's commit (agent, credit issuer's owner and seller signatures)",
+          "against": "order 7",
+          "bound": {
+            "signed_order": 5,
+            "presented_order": 7,
+            "signed_tab": "B7ssFogxjfb7jFyPGqKCRjz8m4vWwnAo4VtHxX5T21cj",
+            "presented_tab": "HUYCjoobvvBmsrMqW4D7wbnpyx5gu1HNtCU9KL2J3bcj",
+            "signed_hold": "BKC97rpvKe7mXTvnnrPqVVoJoeyjEjKVXAXs4PXbqeqD",
+            "presented_hold": "DnqQsRTVv93NMJS8fGUwZLVQvvE9Gm9TE6Zgei2rKTSY"
+          },
+          "error": "SignatureFailure",
+          "kind": "runtime, before any program runs",
+          "signatures_verified": false
+        },
+        {
+          "record": "seller's capture (seller's signature)",
+          "against": "order 6",
+          "bound": {
+            "signed_tab": "B7ssFogxjfb7jFyPGqKCRjz8m4vWwnAo4VtHxX5T21cj",
+            "presented_tab": "DfXMwiyGa3tPiujS7rknxpbKf3tEzrrnf77rFiJWu6iQ",
+            "signed_run": "9H8AqS55k1Ktxq39GiNZNsyo21w1d9962JmwDTcvH4o",
+            "presented_run": "7NddnKeHnahhhwt4VZBRjXzivT8UYSt9kwRTtxvGyau6"
+          },
+          "error": "SignatureFailure",
+          "kind": "runtime, before any program runs",
+          "signatures_verified": false
+        },
+        {
+          "record": "buyer's repayment number 1 (buyer owner's signature)",
+          "against": "order 6's repayment route",
+          "bound": {
+            "signed_record": "AaAu6vDPRh123xWAC6sqHbqCzaUooN4wjVivvTR4beDo",
+            "presented_record": "4HjfgnCDjChyZ5Wf9J1MTEtBzpRSoASNyUFWyip12hjh",
+            "signed_run": "9H8AqS55k1Ktxq39GiNZNsyo21w1d9962JmwDTcvH4o",
+            "presented_run": "7NddnKeHnahhhwt4VZBRjXzivT8UYSt9kwRTtxvGyau6",
+            "number": 1
+          },
+          "error": "SignatureFailure",
+          "kind": "runtime, before any program runs",
+          "signatures_verified": false
+        },
+        {
+          "record": "buyer's repayment number 2 (buyer owner's signature)",
+          "against": "order 6's repayment route",
+          "bound": {
+            "signed_record": "AaAu6vDPRh123xWAC6sqHbqCzaUooN4wjVivvTR4beDo",
+            "presented_record": "4HjfgnCDjChyZ5Wf9J1MTEtBzpRSoASNyUFWyip12hjh",
+            "signed_run": "9H8AqS55k1Ktxq39GiNZNsyo21w1d9962JmwDTcvH4o",
+            "presented_run": "7NddnKeHnahhhwt4VZBRjXzivT8UYSt9kwRTtxvGyau6",
+            "number": 2
+          },
+          "error": "SignatureFailure",
+          "kind": "runtime, before any program runs",
+          "signatures_verified": false
+        }
+      ],
+      "fresh_records": [
+        {
+          "record": "new commit",
+          "order": 4,
+          "note": "order 4 is below the mandate's highest and was never used"
+        },
+        {
+          "record": "new commit",
+          "order": 6
+        },
+        {
+          "record": "new capture of the same run id",
+          "order": 6,
+          "run": "7NddnKeHnahhhwt4VZBRjXzivT8UYSt9kwRTtxvGyau6",
+          "old_run": "9H8AqS55k1Ktxq39GiNZNsyo21w1d9962JmwDTcvH4o",
+          "trade_off": "A: cross-Tab run-id uniqueness is dropped; the supplier SDK binds each delivered run to one Tab before billing"
+        },
+        {
+          "record": "new repayment",
+          "order": 6,
+          "number": 1,
+          "route": "4HjfgnCDjChyZ5Wf9J1MTEtBzpRSoASNyUFWyip12hjh"
+        }
+      ]
+    },
+    "evidence": {
+      "name": "evidence order 20",
+      "order": 20,
+      "tab": "BCUMuuy61zexngC1963whHN6KwLJKURdnNn2LgvinqY6",
+      "steps": [
+        {
+          "step": "commit",
+          "name": "evidence order 20: the agent, the credit issuer's owner and the seller commit 2,000 naming the meter"
+        },
+        {
+          "step": "meter report",
+          "name": "evidence order 20: the meter's signed report of 900 units is admitted"
+        },
+        {
+          "step": "seller claim",
+          "name": "evidence order 20: the seller's signed claim of 1,400 is admitted"
+        },
+        {
+          "step": "finalization",
+          "name": "evidence order 20: an outside key finalizes the bill: 900 earned, 1,100 released"
+        },
+        {
+          "step": "collection",
+          "name": "evidence order 20: an outside key collects the bill of 900 to the seller"
+        },
+        {
+          "step": "repayment 1",
+          "name": "evidence order 20: the buyer repays 450, repayment number 1 on its route"
+        },
+        {
+          "step": "settling repayment 2 with every close",
+          "name": "evidence order 20: the buyer repays the last 450 (number 2) and the same transaction closes the repayment record, the run and the Tab with its hold and bill; an outside keeper pays"
+        }
+      ],
+      "close": {
+        "name": "evidence order 20",
+        "tab": "BCUMuuy61zexngC1963whHN6KwLJKURdnNn2LgvinqY6",
+        "order": 20,
+        "steps": 9,
+        "fingerprint": "1ab3a47ec57a82849720f9fff271e89d764de230e4e5d4e2046935da935d42aa",
+        "deposits": {
+          "tab": 10349520,
+          "hold": 2136720,
+          "run 1": 4405680,
+          "repayment record 1": 3807120,
+          "bill": 9361200
+        },
+        "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9",
+        "records": {
+          "tab": "BCUMuuy61zexngC1963whHN6KwLJKURdnNn2LgvinqY6",
+          "hold": "3cmFks789RU9mtybhBnVeR1n5QcVAQv8ktojsJ2tZYns",
+          "run 1": "GTZxQLKs6d6mo3Z65SamWo6nyvs8kbFCDQbcqfBKvvvb",
+          "repayment record 1": "86uvN9kithVVGiYUgpgh8VEigVEZFqmj1HduMd3Ee2nk",
+          "bill": "9VtKzTrH175kmrAogQu625JrzpYDnJ3YbAon1eaKofVX"
+        },
+        "deposits_by_payer": {
+          "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9": {
+            "records": [
+              "tab",
+              "hold",
+              "bill"
+            ],
+            "lamports": 21847440
+          },
+          "4ap9kAPdHiV82d8D73mrtEgwGxBbUxJgyFr1fRGLhide": {
+            "records": [
+              "run 1"
+            ],
+            "lamports": 4405680
+          },
+          "3BuW9SR5tG6VFK4MmkQQ3Ak8ny1K1Vv5Uz7is8Aa5pwG": {
+            "records": [
+              "repayment record 1"
+            ],
+            "lamports": 3807120
+          }
+        },
+        "keeper": "CNSe1x1YtQmxqyEeQjBfA6jJmWqziYJATL3BApKJwU6S",
+        "settling_wire_bytes": 1412,
+        "settling_compute_units": 351616
+      },
+      "step_replays": [
+        {
+          "step": "commit",
+          "original_signature": "3pCDggGk1xhtuyt9TQUCo5s8SvkyqmQzkbwFp9kFV8X9DuMSeVzp4FDn8ZWx7AdAaQDxLgBLMy2jBEZP3szMzXoQ",
+          "literal": {
+            "error": "BlockhashNotFound",
+            "kind": "runtime, before any program runs",
+            "signatures_verified": true
+          },
+          "resigned": {
+            "error": "OrderUsed",
+            "kind": "program",
+            "program": "principal_registry",
+            "origin": "thrown in programs/principal-registry/src/lib.rs:475",
+            "number": 6061,
+            "instruction_index": 0
+          },
+          "why": "the mandate's order window already holds this number"
+        },
+        {
+          "step": "meter report",
+          "original_signature": "32mzs8qz4dH4uEtqfWNqR88RaWtopva8zqGyxJQjvPC5KWvnvd7StBjsxXDoPbvTuynMRE4hXLXuzwZR6cJLLoCA",
+          "literal": {
+            "error": "BlockhashNotFound",
+            "kind": "runtime, before any program runs",
+            "signatures_verified": true
+          },
+          "resigned": {
+            "error": "AccountNotInitialized",
+            "kind": "program",
+            "program": "claims_core",
+            "origin": "caused by account: bill",
+            "number": 3012,
+            "instruction_index": 1,
+            "account": "bill"
+          },
+          "why": "the close removed its records"
+        },
+        {
+          "step": "seller claim",
+          "original_signature": "3XvxGiCCaLg5hiTo4AcT7N2w8HiRF8cnupEb6HUPzEaB4SoNnNU8o2KPQb7KNjBDD42ytRnCKH6FheHe3qQsL59r",
+          "literal": {
+            "error": "BlockhashNotFound",
+            "kind": "runtime, before any program runs",
+            "signatures_verified": true
+          },
+          "resigned": {
+            "error": "AccountNotInitialized",
+            "kind": "program",
+            "program": "claims_core",
+            "origin": "caused by account: bill",
+            "number": 3012,
+            "instruction_index": 1,
+            "account": "bill"
+          },
+          "why": "the close removed its records"
+        },
+        {
+          "step": "finalization",
+          "original_signature": "64kU8k8uK5Z7t7ZfXLsPz4nKHWfNPM1w6SEHENdfY7uw2C4we5ZkhkW9gRfVLEGkXQLRZegLtqGUedRQgxJMfrPM",
+          "literal": {
+            "error": "BlockhashNotFound",
+            "kind": "runtime, before any program runs",
+            "signatures_verified": true
+          },
+          "resigned": {
+            "error": "AccountNotInitialized",
+            "kind": "program",
+            "program": "claims_core",
+            "origin": "caused by account: bill",
+            "number": 3012,
+            "instruction_index": 0,
+            "account": "bill"
+          },
+          "why": "the close removed its records"
+        },
+        {
+          "step": "collection",
+          "original_signature": "4WTCAQKqb9Jx4CSUcdFy2AhGXj4qoqAZXfSYwaEFyVVfhyqsKRigbYkGd2WLG5NoqbTmoee594FB199HKbdeLChi",
+          "literal": {
+            "error": "BlockhashNotFound",
+            "kind": "runtime, before any program runs",
+            "signatures_verified": true
+          },
+          "resigned": {
+            "error": "AccountNotInitialized",
+            "kind": "program",
+            "program": "claims_core",
+            "origin": "caused by account: claim",
+            "number": 3012,
+            "instruction_index": 0,
+            "account": "claim"
+          },
+          "why": "the close removed its records"
+        },
+        {
+          "step": "repayment 1",
+          "original_signature": "4SMpbqVL2C2u8qYxstSbbkTzp1fzwd7Z558fevVk35f14r8DcyMBffKUUDNar3gQtCZAEBtsRBUPWBAgmoNNquB1",
+          "literal": {
+            "error": "BlockhashNotFound",
+            "kind": "runtime, before any program runs",
+            "signatures_verified": true
+          },
+          "resigned": {
+            "error": "AccountNotInitialized",
+            "kind": "program",
+            "program": "claims_core",
+            "origin": "caused by account: reservation",
+            "number": 3012,
+            "instruction_index": 0,
+            "account": "reservation"
+          },
+          "why": "the close removed its records"
+        },
+        {
+          "step": "settling repayment 2 with every close",
+          "original_signature": "2R8yfa4CJDsoG3Cd4PmNUbMsAFfdQrftjmHY6yTFk4pnS8dAAyZgWirKbArEr5xuT39Zq7bw2dVwGwJ4eHE56XhP",
+          "literal": {
+            "error": "BlockhashNotFound",
+            "kind": "runtime, before any program runs",
+            "signatures_verified": true
+          },
+          "resigned": {
+            "error": "AccountNotInitialized",
+            "kind": "program",
+            "program": "claims_core",
+            "origin": "caused by account: reservation",
+            "number": 3012,
+            "instruction_index": 0,
+            "account": "reservation"
+          },
+          "why": "the close removed its records"
+        }
+      ],
+      "record_replays": [
+        {
+          "record": "buyer's commit (agent, credit issuer's owner and seller signatures)",
+          "against": "order 19",
+          "bound": {
+            "signed_order": 20,
+            "presented_order": 19,
+            "signed_tab": "BCUMuuy61zexngC1963whHN6KwLJKURdnNn2LgvinqY6",
+            "presented_tab": "8M2Nqg76nerRTV9NvwX3zyrfX7v6rbAHCVPhwVuPNdFz",
+            "signed_hold": "3cmFks789RU9mtybhBnVeR1n5QcVAQv8ktojsJ2tZYns",
+            "presented_hold": "EYGRuMYxVL3yX1srU4jmzCFynuZDvsSMr4L2EF2goY6g"
+          },
+          "error": "SignatureFailure",
+          "kind": "runtime, before any program runs",
+          "signatures_verified": false
+        },
+        {
+          "record": "buyer's commit (agent, credit issuer's owner and seller signatures)",
+          "against": "order 21",
+          "bound": {
+            "signed_order": 20,
+            "presented_order": 21,
+            "signed_tab": "BCUMuuy61zexngC1963whHN6KwLJKURdnNn2LgvinqY6",
+            "presented_tab": "9Lw9bGQra3iZd7H16ivnMHjNLGLfgycW5CnVJUyggXkc",
+            "signed_hold": "3cmFks789RU9mtybhBnVeR1n5QcVAQv8ktojsJ2tZYns",
+            "presented_hold": "6koRAgw9MhB1unC11Tr87UWA7GMYtpvpSCZePg8KuEeK"
+          },
+          "error": "SignatureFailure",
+          "kind": "runtime, before any program runs",
+          "signatures_verified": false
+        },
+        {
+          "record": "buyer's commit (agent, credit issuer's owner and seller signatures)",
+          "against": "order 22",
+          "bound": {
+            "signed_order": 20,
+            "presented_order": 22,
+            "signed_tab": "BCUMuuy61zexngC1963whHN6KwLJKURdnNn2LgvinqY6",
+            "presented_tab": "Fqu6MQnjARgzqRdHySDyKMKDfbqBzYRkX2RMeWqHSy3b",
+            "signed_hold": "3cmFks789RU9mtybhBnVeR1n5QcVAQv8ktojsJ2tZYns",
+            "presented_hold": "7roMt7Pfhr3CsrrSeUkRXY7Wdcu7kCbMBWB6ddLPTRcx"
+          },
+          "error": "SignatureFailure",
+          "kind": "runtime, before any program runs",
+          "signatures_verified": false
+        },
+        {
+          "record": "meter's report (Ed25519 over the report digest)",
+          "against": "order 21's bill",
+          "bound": {
+            "signed_bill": "9VtKzTrH175kmrAogQu625JrzpYDnJ3YbAon1eaKofVX",
+            "presented_bill": "3BBWkfCHAysfhpoduWNECsxiEFRcjk7EtkA5nAa3ENya",
+            "signed_tab": "BCUMuuy61zexngC1963whHN6KwLJKURdnNn2LgvinqY6",
+            "presented_tab": "9Lw9bGQra3iZd7H16ivnMHjNLGLfgycW5CnVJUyggXkc",
+            "signed_digest": "882674c3c0ab2016e7314ede083cebff4bd9d57cebfed185725b485a00cbe3f0",
+            "digest_order_21_needs": "25be0123e04802fe0d355269b27a1b066bd64eef9ebf7bbc88c436c23fb5f4f2"
+          },
+          "error": "BillingSignature",
+          "kind": "program",
+          "program": "claims_core",
+          "origin": "thrown in programs/claims-core/src/evidence_billing.rs:319",
+          "number": 6063,
+          "instruction_index": 1
+        },
+        {
+          "record": "seller's claim (Ed25519 over the claim digest)",
+          "against": "order 21's bill",
+          "bound": {
+            "signed_bill": "9VtKzTrH175kmrAogQu625JrzpYDnJ3YbAon1eaKofVX",
+            "presented_bill": "3BBWkfCHAysfhpoduWNECsxiEFRcjk7EtkA5nAa3ENya",
+            "signed_tab": "BCUMuuy61zexngC1963whHN6KwLJKURdnNn2LgvinqY6",
+            "presented_tab": "9Lw9bGQra3iZd7H16ivnMHjNLGLfgycW5CnVJUyggXkc",
+            "signed_digest": "8152f3890c281771c6dfbc2498ee2d69dd4294a9847203940a4a54ba08a30320",
+            "digest_order_21_needs": "d0fb01f7f801801132aef24751020b49abffb30187f91e3a2f75f25beb50ec91"
+          },
+          "error": "BillingSignature",
+          "kind": "program",
+          "program": "claims_core",
+          "origin": "thrown in programs/claims-core/src/evidence_billing.rs:319",
+          "number": 6063,
+          "instruction_index": 1
+        },
+        {
+          "record": "buyer's repayment number 1 (buyer owner's signature)",
+          "against": "order 21's repayment route",
+          "bound": {
+            "signed_record": "86uvN9kithVVGiYUgpgh8VEigVEZFqmj1HduMd3Ee2nk",
+            "presented_record": "268nKdzZkEoMytod2og3Wk8AHY9D7q3T5MdGXchMUcj6",
+            "signed_run": "GTZxQLKs6d6mo3Z65SamWo6nyvs8kbFCDQbcqfBKvvvb",
+            "presented_run": "FM7CX3acxiPM8ZtAHwi5tHtEBJctyQreM4eyMSHbFhAR",
+            "number": 1
+          },
+          "error": "SignatureFailure",
+          "kind": "runtime, before any program runs",
+          "signatures_verified": false
+        }
+      ],
+      "fresh_records": [
+        {
+          "record": "new evidence commit",
+          "order": 19,
+          "note": "order 19 is below the mandate's highest and was never used"
+        },
+        {
+          "record": "new evidence commit for the same work and request",
+          "order": 21
+        },
+        {
+          "record": "new meter report",
+          "order": 21
+        },
+        {
+          "record": "new seller claim",
+          "order": 21
+        },
+        {
+          "record": "finalization of the same work under order 21",
+          "order": 21,
+          "run": "FM7CX3acxiPM8ZtAHwi5tHtEBJctyQreM4eyMSHbFhAR",
+          "old_run": "GTZxQLKs6d6mo3Z65SamWo6nyvs8kbFCDQbcqfBKvvvb",
+          "trade_off": "A (spec section 10 items 6-7): a work id is unique per Tab"
+        },
+        {
+          "record": "new repayment",
+          "order": 21,
+          "number": 1,
+          "route": "268nKdzZkEoMytod2og3Wk8AHY9D7q3T5MdGXchMUcj6"
+        }
+      ]
+    }
+  },
+  "boundary": "Compiled-program local execution of the dd70820 build; no deployment or public RPC"
+}

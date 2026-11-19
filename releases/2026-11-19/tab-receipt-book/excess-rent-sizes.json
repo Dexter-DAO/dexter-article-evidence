@@ -1,0 +1,5291 @@
+{
+  "schema": "dexter-change5-excess-rent/v1",
+  "status": "passed",
+  "created_at_rate": 6960,
+  "rates": [
+    5080,
+    696
+  ],
+  "overhead_bytes": 128,
+  "build_receipt_sha256": "e5647e1e952f7f6f2ebb52052b7d9c93c98afab7453321fe785f8fed425db4c8",
+  "idl_receipt_sha256": "714f57471e552982279e79deb9e0cf1b61ae66b23e44714c416926f77936f1f6",
+  "returns": {
+    "records": 229,
+    "successful_calls": 458,
+    "per_fixture": {
+      "passkey and recovery fixture": 51,
+      "governed repayment fixture": 48,
+      "wallet spending fixture": 41,
+      "stock wallet fixture": 47,
+      "delivery rules fixture": 42
+    },
+    "types": [
+      "claims_core/BillAuthorityBinding",
+      "claims_core/CustomerCreditLine",
+      "claims_core/EvidenceBill",
+      "claims_core/FacilityAuthority",
+      "claims_core/FinanceBook",
+      "claims_core/FinancierCustody",
+      "claims_core/FundedClaim",
+      "claims_core/FundedRun",
+      "claims_core/FundingFacility",
+      "claims_core/ReceivingCustody",
+      "claims_core/RepaymentRecord",
+      "claims_core/SellerFeeAgreement",
+      "claims_core/StockControlApproval",
+      "claims_core/WalletTradingPolicy",
+      "delivery_rules/Case",
+      "delivery_rules/Rule",
+      "pool_issuer/FinancialProjection",
+      "principal_registry/Actor",
+      "principal_registry/AuthorityDeployment",
+      "principal_registry/Budget",
+      "principal_registry/ExactRepaymentApproval",
+      "principal_registry/ExactSpendingApproval",
+      "principal_registry/FundingWalletBinding",
+      "principal_registry/Mandate",
+      "principal_registry/PasskeyAuthority",
+      "principal_registry/Principal",
+      "principal_registry/RecoveryPolicy",
+      "principal_registry/RepaymentPermission",
+      "principal_registry/Reservation",
+      "principal_registry/SpendingPermission"
+    ],
+    "lamports_returned": {
+      "5080": 227816520,
+      "696": 531248736
+    }
+  },
+  "token_accounts": "return_excess_rent accepts only its program's own records; a wrapped-SOL token account is refused by all four programs and keeps every lamport (SPL WithdrawExcessLamports is not built, spec section 11 item 5)",
+  "measured": [
+    {
+      "program": "claims_core",
+      "type": "BillAuthorityBinding",
+      "measured_bytes": 427,
+      "idl_bytes": 427,
+      "matches_idl": true,
+      "stores_rent_payer": true,
+      "main_bytes": 395,
+      "rent_at_5080": 2819400,
+      "rent_at_696": 386280,
+      "source": "live account, passkey and recovery fixture",
+      "records": 1
+    },
+    {
+      "program": "claims_core",
+      "type": "CustomerCreditLine",
+      "measured_bytes": 410,
+      "idl_bytes": 410,
+      "matches_idl": true,
+      "stores_rent_payer": true,
+      "main_bytes": 378,
+      "rent_at_5080": 2733040,
+      "rent_at_696": 374448,
+      "source": "live account, passkey and recovery fixture",
+      "records": 5
+    },
+    {
+      "program": "claims_core",
+      "type": "EvidenceBill",
+      "measured_bytes": 1217,
+      "idl_bytes": 1217,
+      "matches_idl": true,
+      "stores_rent_payer": true,
+      "main_bytes": 1281,
+      "rent_at_5080": 6832600,
+      "rent_at_696": 936120,
+      "source": "live account, passkey and recovery fixture",
+      "records": 2
+    },
+    {
+      "program": "claims_core",
+      "type": "FacilityAuthority",
+      "measured_bytes": 147,
+      "idl_bytes": 147,
+      "matches_idl": true,
+      "stores_rent_payer": true,
+      "main_bytes": 115,
+      "rent_at_5080": 1397000,
+      "rent_at_696": 191400,
+      "source": "live account, passkey and recovery fixture",
+      "records": 5
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "measured_bytes": 475,
+      "idl_bytes": 475,
+      "matches_idl": true,
+      "stores_rent_payer": true,
+      "main_bytes": 307,
+      "rent_at_5080": 3063240,
+      "rent_at_696": 419688,
+      "source": "live account, passkey and recovery fixture",
+      "records": 42
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "measured_bytes": 452,
+      "idl_bytes": 452,
+      "matches_idl": true,
+      "stores_rent_payer": true,
+      "main_bytes": 252,
+      "rent_at_5080": 2946400,
+      "rent_at_696": 403680,
+      "source": "live account, passkey and recovery fixture",
+      "records": 31
+    },
+    {
+      "program": "claims_core",
+      "type": "FundedClaim",
+      "measured_bytes": 1359,
+      "idl_bytes": 1359,
+      "matches_idl": true,
+      "stores_rent_payer": true,
+      "main_bytes": 1264,
+      "rent_at_5080": 7553960,
+      "rent_at_696": 1034952,
+      "source": "live account, passkey and recovery fixture",
+      "records": 3
+    },
+    {
+      "program": "claims_core",
+      "type": "FundedRun",
+      "measured_bytes": 505,
+      "idl_bytes": 505,
+      "matches_idl": true,
+      "stores_rent_payer": true,
+      "main_bytes": 729,
+      "rent_at_5080": 3215640,
+      "rent_at_696": 440568,
+      "source": "live account, governed repayment fixture",
+      "records": 2
+    },
+    {
+      "program": "claims_core",
+      "type": "FundingFacility",
+      "measured_bytes": 467,
+      "idl_bytes": 467,
+      "matches_idl": true,
+      "stores_rent_payer": true,
+      "main_bytes": 435,
+      "rent_at_5080": 3022600,
+      "rent_at_696": 414120,
+      "source": "live account, passkey and recovery fixture",
+      "records": 5
+    },
+    {
+      "program": "claims_core",
+      "type": "ReceivingCustody",
+      "measured_bytes": 467,
+      "idl_bytes": 467,
+      "matches_idl": true,
+      "stores_rent_payer": true,
+      "main_bytes": 291,
+      "rent_at_5080": 3022600,
+      "rent_at_696": 414120,
+      "source": "live account, passkey and recovery fixture",
+      "records": 1
+    },
+    {
+      "program": "claims_core",
+      "type": "RepaymentRecord",
+      "measured_bytes": 419,
+      "idl_bytes": 419,
+      "matches_idl": true,
+      "stores_rent_payer": true,
+      "main_bytes": null,
+      "rent_at_5080": 2778760,
+      "rent_at_696": 380712,
+      "source": "live account, governed repayment fixture",
+      "records": 1
+    },
+    {
+      "program": "claims_core",
+      "type": "SellerFeeAgreement",
+      "measured_bytes": 259,
+      "idl_bytes": 259,
+      "matches_idl": true,
+      "stores_rent_payer": true,
+      "main_bytes": 227,
+      "rent_at_5080": 1965960,
+      "rent_at_696": 269352,
+      "source": "live account, passkey and recovery fixture",
+      "records": 5
+    },
+    {
+      "program": "claims_core",
+      "type": "StockControlApproval",
+      "measured_bytes": 380,
+      "idl_bytes": 380,
+      "matches_idl": true,
+      "stores_rent_payer": true,
+      "main_bytes": 348,
+      "rent_at_5080": 2580640,
+      "rent_at_696": 353568,
+      "source": "live account, stock wallet fixture",
+      "records": 1
+    },
+    {
+      "program": "claims_core",
+      "type": "WalletTradingPolicy",
+      "measured_bytes": 599,
+      "idl_bytes": 599,
+      "matches_idl": true,
+      "stores_rent_payer": true,
+      "main_bytes": 567,
+      "rent_at_5080": 3693160,
+      "rent_at_696": 505992,
+      "source": "live account, stock wallet fixture",
+      "records": 1
+    },
+    {
+      "program": "delivery_rules",
+      "type": "Case",
+      "measured_bytes": 613,
+      "idl_bytes": 613,
+      "matches_idl": true,
+      "stores_rent_payer": true,
+      "main_bytes": 613,
+      "rent_at_5080": 3764280,
+      "rent_at_696": 515736,
+      "source": "live account, delivery rules fixture",
+      "records": 1
+    },
+    {
+      "program": "delivery_rules",
+      "type": "Rule",
+      "measured_bytes": 409,
+      "idl_bytes": 409,
+      "matches_idl": true,
+      "stores_rent_payer": true,
+      "main_bytes": 377,
+      "rent_at_5080": 2727960,
+      "rent_at_696": 373752,
+      "source": "live account, delivery rules fixture",
+      "records": 1
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "measured_bytes": 371,
+      "idl_bytes": 371,
+      "matches_idl": true,
+      "stores_rent_payer": true,
+      "main_bytes": 339,
+      "rent_at_5080": 2534920,
+      "rent_at_696": 347304,
+      "source": "live account, passkey and recovery fixture",
+      "records": 42
+    },
+    {
+      "program": "principal_registry",
+      "type": "Actor",
+      "measured_bytes": 164,
+      "idl_bytes": 164,
+      "matches_idl": true,
+      "stores_rent_payer": true,
+      "main_bytes": 132,
+      "rent_at_5080": 1483360,
+      "rent_at_696": 203232,
+      "source": "live account, passkey and recovery fixture",
+      "records": 10
+    },
+    {
+      "program": "principal_registry",
+      "type": "AllowanceAmendment",
+      "measured_bytes": 291,
+      "idl_bytes": 291,
+      "matches_idl": true,
+      "stores_rent_payer": false,
+      "main_bytes": null,
+      "rent_at_5080": 2128520,
+      "rent_at_696": 291624,
+      "source": "live account in commit-legs-trace.json (sha256 bcde10f62fc62a1c)",
+      "records": 1
+    },
+    {
+      "program": "principal_registry",
+      "type": "AuthorityDeployment",
+      "measured_bytes": 115,
+      "idl_bytes": 115,
+      "matches_idl": true,
+      "stores_rent_payer": true,
+      "main_bytes": 83,
+      "rent_at_5080": 1234440,
+      "rent_at_696": 169128,
+      "source": "live account, passkey and recovery fixture",
+      "records": 1
+    },
+    {
+      "program": "principal_registry",
+      "type": "Budget",
+      "measured_bytes": 139,
+      "idl_bytes": 139,
+      "matches_idl": true,
+      "stores_rent_payer": true,
+      "main_bytes": 107,
+      "rent_at_5080": 1356360,
+      "rent_at_696": 185832,
+      "source": "live account, passkey and recovery fixture",
+      "records": 5
+    },
+    {
+      "program": "principal_registry",
+      "type": "ExactRepaymentApproval",
+      "measured_bytes": 669,
+      "idl_bytes": 669,
+      "matches_idl": true,
+      "stores_rent_payer": true,
+      "main_bytes": null,
+      "rent_at_5080": 4048760,
+      "rent_at_696": 554712,
+      "source": "live account, governed repayment fixture",
+      "records": 1
+    },
+    {
+      "program": "principal_registry",
+      "type": "ExactSpendingApproval",
+      "measured_bytes": 654,
+      "idl_bytes": 654,
+      "matches_idl": true,
+      "stores_rent_payer": true,
+      "main_bytes": null,
+      "rent_at_5080": 3972560,
+      "rent_at_696": 544272,
+      "source": "live account, wallet spending fixture",
+      "records": 1
+    },
+    {
+      "program": "principal_registry",
+      "type": "FundingWalletBinding",
+      "measured_bytes": 211,
+      "idl_bytes": 211,
+      "matches_idl": true,
+      "stores_rent_payer": true,
+      "main_bytes": 179,
+      "rent_at_5080": 1722120,
+      "rent_at_696": 235944,
+      "source": "live account, passkey and recovery fixture",
+      "records": 6
+    },
+    {
+      "program": "principal_registry",
+      "type": "Mandate",
+      "measured_bytes": 1282,
+      "idl_bytes": 1282,
+      "matches_idl": true,
+      "stores_rent_payer": true,
+      "main_bytes": 1070,
+      "rent_at_5080": 7162800,
+      "rent_at_696": 981360,
+      "source": "live account, passkey and recovery fixture",
+      "records": 6
+    },
+    {
+      "program": "principal_registry",
+      "type": "OwnerRecoveryReceipt",
+      "measured_bytes": 260,
+      "idl_bytes": 260,
+      "matches_idl": true,
+      "stores_rent_payer": false,
+      "main_bytes": null,
+      "rent_at_5080": 1971040,
+      "rent_at_696": 270048,
+      "source": "live account in recovery-permissions-repayment-trace.json (sha256 8c6d861144349e1d)",
+      "records": 1
+    },
+    {
+      "program": "principal_registry",
+      "type": "OwnerRotationReceipt",
+      "measured_bytes": 187,
+      "idl_bytes": 187,
+      "matches_idl": true,
+      "stores_rent_payer": false,
+      "main_bytes": null,
+      "rent_at_5080": 1600200,
+      "rent_at_696": 219240,
+      "source": "live account in both-sides-trace.json (sha256 777c4a790cd49238)",
+      "records": 1
+    },
+    {
+      "program": "principal_registry",
+      "type": "PasskeyAuthority",
+      "measured_bytes": 302,
+      "idl_bytes": 302,
+      "matches_idl": true,
+      "stores_rent_payer": true,
+      "main_bytes": 270,
+      "rent_at_5080": 2184400,
+      "rent_at_696": 299280,
+      "source": "live account, passkey and recovery fixture",
+      "records": 1
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "measured_bytes": 220,
+      "idl_bytes": 220,
+      "matches_idl": true,
+      "stores_rent_payer": true,
+      "main_bytes": 180,
+      "rent_at_5080": 1767840,
+      "rent_at_696": 242208,
+      "source": "live account, passkey and recovery fixture",
+      "records": 40
+    },
+    {
+      "program": "principal_registry",
+      "type": "RecoveryPolicy",
+      "measured_bytes": 285,
+      "idl_bytes": 285,
+      "matches_idl": true,
+      "stores_rent_payer": true,
+      "main_bytes": 253,
+      "rent_at_5080": 2098040,
+      "rent_at_696": 287448,
+      "source": "live account, passkey and recovery fixture",
+      "records": 4
+    },
+    {
+      "program": "principal_registry",
+      "type": "RecoveryPolicyChangeReceipt",
+      "measured_bytes": 407,
+      "idl_bytes": 407,
+      "matches_idl": true,
+      "stores_rent_payer": false,
+      "main_bytes": null,
+      "rent_at_5080": 2717800,
+      "rent_at_696": 372360,
+      "source": "live account, passkey and recovery fixture",
+      "records": 4
+    },
+    {
+      "program": "principal_registry",
+      "type": "RepaymentPermission",
+      "measured_bytes": 789,
+      "idl_bytes": 789,
+      "matches_idl": true,
+      "stores_rent_payer": true,
+      "main_bytes": 693,
+      "rent_at_5080": 4658360,
+      "rent_at_696": 638232,
+      "source": "live account, governed repayment fixture",
+      "records": 1
+    },
+    {
+      "program": "principal_registry",
+      "type": "Reservation",
+      "measured_bytes": 179,
+      "idl_bytes": 179,
+      "matches_idl": true,
+      "stores_rent_payer": true,
+      "main_bytes": 419,
+      "rent_at_5080": 1559560,
+      "rent_at_696": 213672,
+      "source": "live account, passkey and recovery fixture",
+      "records": 3
+    },
+    {
+      "program": "principal_registry",
+      "type": "SpendingPermission",
+      "measured_bytes": 774,
+      "idl_bytes": 774,
+      "matches_idl": true,
+      "stores_rent_payer": true,
+      "main_bytes": 678,
+      "rent_at_5080": 4582160,
+      "rent_at_696": 627792,
+      "source": "live account, wallet spending fixture",
+      "records": 1
+    }
+  ],
+  "main_only_records": [
+    {
+      "type": "FinanceReceipt",
+      "main_bytes": 5169,
+      "after_change5": "not written"
+    },
+    {
+      "type": "FundedPayment",
+      "main_bytes": 171,
+      "after_change5": "not written"
+    },
+    {
+      "type": "Registry OperationReceipt",
+      "main_bytes": 180,
+      "after_change5": "not written"
+    },
+    {
+      "type": "SellerFeeCredits",
+      "main_bytes": 51,
+      "after_change5": "not written"
+    },
+    {
+      "type": "CorrectionReceipt",
+      "main_bytes": 1244,
+      "after_change5": "not written"
+    },
+    {
+      "type": "InterestRefundReceipt",
+      "main_bytes": 1012,
+      "after_change5": "not written"
+    },
+    {
+      "type": "CollectionCorrectionRecord",
+      "main_bytes": 115,
+      "after_change5": "not written"
+    },
+    {
+      "type": "RepaymentRefundRecord",
+      "main_bytes": 131,
+      "after_change5": "not written"
+    },
+    {
+      "type": "WalletSpendReceipt",
+      "main_bytes": 916,
+      "after_change5": "not written"
+    },
+    {
+      "type": "WalletTradingDetails",
+      "main_bytes": 1289,
+      "after_change5": "not written"
+    },
+    {
+      "type": "WalletTokenTransferReceipt",
+      "main_bytes": 475,
+      "after_change5": "not written"
+    }
+  ],
+  "flows_after_change5": [
+    {
+      "flow": "Open order: Tab, budget hold, one run (returned at settlement)",
+      "accounts": 3,
+      "bytes": 2043,
+      "sol_at_5080": 0.012329,
+      "sol_at_696": 0.001689,
+      "records": [
+        "claims_core/FundedClaim",
+        "principal_registry/Reservation",
+        "claims_core/FundedRun"
+      ]
+    },
+    {
+      "flow": "Each further run (held until the Tab can no longer earn)",
+      "accounts": 1,
+      "bytes": 505,
+      "sol_at_5080": 0.003216,
+      "sol_at_696": 0.000441,
+      "records": [
+        "claims_core/FundedRun"
+      ]
+    },
+    {
+      "flow": "Each repayment record (one per payer route and creditor)",
+      "accounts": 1,
+      "bytes": 419,
+      "sol_at_5080": 0.002779,
+      "sol_at_696": 0.000381,
+      "records": [
+        "claims_core/RepaymentRecord"
+      ]
+    },
+    {
+      "flow": "Evidence order: bill",
+      "accounts": 1,
+      "bytes": 1217,
+      "sol_at_5080": 0.006833,
+      "sol_at_696": 0.000936,
+      "records": [
+        "claims_core/EvidenceBill"
+      ]
+    },
+    {
+      "flow": "Recoverable evidence order: bill authority binding",
+      "accounts": 1,
+      "bytes": 427,
+      "sol_at_5080": 0.002819,
+      "sol_at_696": 0.000386,
+      "records": [
+        "claims_core/BillAuthorityBinding"
+      ]
+    },
+    {
+      "flow": "Exact spending approval (held until it expires)",
+      "accounts": 1,
+      "bytes": 654,
+      "sol_at_5080": 0.003973,
+      "sol_at_696": 0.000544,
+      "records": [
+        "principal_registry/ExactSpendingApproval"
+      ]
+    },
+    {
+      "flow": "Exact repayment approval (held until it expires)",
+      "accounts": 1,
+      "bytes": 669,
+      "sol_at_5080": 0.004049,
+      "sol_at_696": 0.000555,
+      "records": [
+        "principal_registry/ExactRepaymentApproval"
+      ]
+    },
+    {
+      "flow": "DeliveryRules case (held until finalization)",
+      "accounts": 1,
+      "bytes": 613,
+      "sol_at_5080": 0.003764,
+      "sol_at_696": 0.000516,
+      "records": [
+        "delivery_rules/Case"
+      ]
+    }
+  ],
+  "flows_main": [
+    {
+      "flow": "Order: commit, earn, collect, release",
+      "accounts": 11,
+      "bytes": 23799,
+      "sol_at_5080": 0.128052,
+      "sol_at_696": 0.017544,
+      "source": "design note section 2 (main 8805fd3), locked forever"
+    },
+    {
+      "flow": "The same order after one repayment",
+      "accounts": 12,
+      "bytes": 28968,
+      "sol_at_5080": 0.15496,
+      "sol_at_696": 0.021231,
+      "source": "design note section 2 (main 8805fd3), locked forever"
+    },
+    {
+      "flow": "Wallet send",
+      "accounts": 2,
+      "bytes": 6085,
+      "sol_at_5080": 0.032212,
+      "sol_at_696": 0.004413,
+      "source": "design note section 2 (main 8805fd3), locked forever"
+    },
+    {
+      "flow": "Wallet swap (SPL or Jupiter)",
+      "accounts": 3,
+      "bytes": 11254,
+      "sol_at_5080": 0.059121,
+      "sol_at_696": 0.0081,
+      "source": "design note section 2 (main 8805fd3), locked forever"
+    },
+    {
+      "flow": "Wallet market trade (Pump, stock)",
+      "accounts": 4,
+      "bytes": 12543,
+      "sol_at_5080": 0.066319,
+      "sol_at_696": 0.009086,
+      "source": "design note section 2 (main 8805fd3), locked forever"
+    },
+    {
+      "flow": "Token setup, deposit, adoption or withdrawal",
+      "accounts": 2,
+      "bytes": 5644,
+      "sol_at_5080": 0.029972,
+      "sol_at_696": 0.004106,
+      "source": "design note section 2 (main 8805fd3), locked forever"
+    }
+  ],
+  "not_measured": [],
+  "traces_used": [
+    "both-sides-trace.json",
+    "commit-legs-trace.json",
+    "recovery-permissions-repayment-trace.json"
+  ],
+  "traces": [
+    "<fixture-workspace>/.local/anchor/excess-rent-passkey-trace.json",
+    "<fixture-workspace>/.local/anchor/excess-rent-governed-trace.json",
+    "<fixture-workspace>/.local/anchor/excess-rent-wallet-trace.json",
+    "<fixture-workspace>/.local/anchor/excess-rent-stock-trace.json",
+    "<fixture-workspace>/.local/anchor/excess-rent-delivery-trace.json"
+  ],
+  "returned": [
+    {
+      "program": "claims_core",
+      "type": "ReceivingCustody",
+      "address": "145L1uMmj4awD5NbZS2qhueGrr6yfKiKEvYpkRB438Km",
+      "rate": 5080,
+      "bytes": 467,
+      "excess": 1118600,
+      "minimum": 3022600,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "6neRfpaFyAXmJj48xFdN8EvnXKd6ATUuoeg3SCu2zZ7",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "JBU3MwetukbvBimBfVs52NsgVweaZNNegYRukAo3XXP",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "2E5fSxAazJMYG8xpKPtzrsCfWAv9Y8UXyxwZDhjFTgyp",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "2dJQ7rrvLpPGcxsFfmaiVjDZptHsSx3aRwj7rVmGvVm6",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Budget",
+      "address": "2dQVjuWSrzxCuYnaKBmsYkpuBqQtXchoxRVZYMMoqvqC",
+      "rate": 5080,
+      "bytes": 139,
+      "excess": 501960,
+      "minimum": 1356360,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "2pj4pKPaforRtdqJMsbRYx6TkokDYELX5s1dgLtm9Sk2",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Mandate",
+      "address": "2xVL83h52jR8g3hNktf48pk8vTtQzcuxgz5gVoFtZrXY",
+      "rate": 5080,
+      "bytes": 1282,
+      "excess": 2650800,
+      "minimum": 7162800,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "31sdVyYtamkNthPQPubGrsiyuMvfssJwsEoN4otJvSRn",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "37pwRBpEPLy2wDXeBF6sjEVyos6g8od8qKAd1XcNp2Wn",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "SellerFeeAgreement",
+      "address": "3Ah6LYQeWRRquqNk9JEqPNUythUP6tFcxducavXjYnSZ",
+      "rate": 5080,
+      "bytes": 259,
+      "excess": 727560,
+      "minimum": 1965960,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Reservation",
+      "address": "3Z7YpfvW3QJhDiy4WKfYNycB66c9rwGVDpuPKKXbRtKx",
+      "rate": 5080,
+      "bytes": 179,
+      "excess": 577160,
+      "minimum": 1559560,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "3j5rAy9V4FQTbposk4Uow2eb1xHhgC9GyNZmpFn6Dmr8",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "3scRzfsVxbEVEWqsPDieWzeUeH9F5CHgfGDf2bEbsvkX",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "4KR7BwxEDPBbgUZSyvjGvS4Uz3kMLF3MugfwXefPPgDw",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "4twwLeZRi2W9VYJQw9JJ6rvxMbYUssTYUXx1CUypqmvA",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "5JVCKtCj2Luxt96Qxy5wuywrBoVDr6yfReUh92P1Gin2",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "67aK9X5K1vjfhC88ZvouYzpo7aa5UGprcxsGeGN8BhCN",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Actor",
+      "address": "6DXTRPxtZJEWT1GNUdGztoAU8sP7GmNdaDXvND1iEe3c",
+      "rate": 5080,
+      "bytes": 164,
+      "excess": 548960,
+      "minimum": 1483360,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "6GSFTM5NmQwPWJyr1ZZeCHr2LRJKhEmy52DVJQbBZXZR",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "RecoveryPolicy",
+      "address": "7xrivoJb9jwPYS6g2bDngddeu8gjdnrLHzTK8CepGCPZ",
+      "rate": 5080,
+      "bytes": 285,
+      "excess": 776440,
+      "minimum": 2098040,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "EvidenceBill",
+      "address": "82tArEyRcyP6BjXajAQJzzn7dU8AUJtQtGZ8HXB2j7Nw",
+      "rate": 5080,
+      "bytes": 1217,
+      "excess": 2528600,
+      "minimum": 6832600,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "CustomerCreditLine",
+      "address": "85TJCwwMkmxVGfYWYo2Ls4Fzoq93hLUuy92KoFAAj6yr",
+      "rate": 5080,
+      "bytes": 410,
+      "excess": 1011440,
+      "minimum": 2733040,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "BillAuthorityBinding",
+      "address": "8KfZnPrHx7N8qqqVKivRSz5fTW1w3EMbGaiwCQKX4xbo",
+      "rate": 5080,
+      "bytes": 427,
+      "excess": 1043400,
+      "minimum": 2819400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "93MCfyKskYPfMoDSEQ2LLvvqWYVryLi4Y6wAQsFrCqLk",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "A5bd6P8RVMvreh65xthMzGUQMfJwtjAip9cgXV4wiVwy",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "ADG9CUeaRQKvoCj9iZfS61s1zAELZQcNUcaWPhNexqFV",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "AG37JxSXAV6XWXeQFFL5qSGW7xWwqyHNsJjRbZexjfU9",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "AQnXB38BArcrghAhNzPEmJnVi3kFRZyjMzCGJrLLW4Dt",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "BJgA8w4yXp3G3xsZuBLLYzjwU5AEovxmRGXc1q815guS",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "BqxfbzgV7o3mQJbB6w9KV9g2H9UZgESBBHhzknYPX3Qn",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FundedClaim",
+      "address": "Bypq5yTNmjNRyXUsb4zaCnctyH7fa3xv6trxdzGpRP2h",
+      "rate": 5080,
+      "bytes": 1359,
+      "excess": 2795560,
+      "minimum": 7553960,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "FundingWalletBinding",
+      "address": "C1gqsMDTCLdHYwcNciLkxpzoiXBCDfpyZXWv8eaj4bkb",
+      "rate": 5080,
+      "bytes": 211,
+      "excess": 637320,
+      "minimum": 1722120,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "CCJ9DYQjd7cnPT3EsxvX6oU3TcKAf2uKQ9FH7Dss1LGD",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "CT6x1kjs1Yi3XRa5Bxqt2t5JpH8G6ts89hJ4KaScJgK5",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FundingFacility",
+      "address": "CUGbyGhek7TRMoLAVgA4FCRkqLZnwqznhXe7angDGDXj",
+      "rate": 5080,
+      "bytes": 467,
+      "excess": 1118600,
+      "minimum": 3022600,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "CgWbr9n8AzXjEKTCAq8XyE18VqmCzHerLGUad77K4igT",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Mandate",
+      "address": "CiXhQxBwAZpcvdyGwGrMjWsRZd5HKuWhBWf6KVrNmZYV",
+      "rate": 5080,
+      "bytes": 1282,
+      "excess": 2650800,
+      "minimum": 7162800,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "RecoveryPolicy",
+      "address": "CsdCYFyjUkZvoetrE1qgDB7dCqeJFu46Lcost4x5zVhM",
+      "rate": 5080,
+      "bytes": 285,
+      "excess": 776440,
+      "minimum": 2098040,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "CukocP1PE8hD73R58W6wtaVMZH2sk7nAijFB8fq8R7SF",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "DfFpLhHdDtRegv8uMQMDGzBxfQKNWz73exi9Qhg8ePH9",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "RecoveryPolicy",
+      "address": "DrEaeHURYtr4PScdGvpGkBGchrpqKbn2qJH9J2bh1LX2",
+      "rate": 5080,
+      "bytes": 285,
+      "excess": 776440,
+      "minimum": 2098040,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "AuthorityDeployment",
+      "address": "EER2hmiSCDgZwVLM46iyF866Ye4KBu7nAWrUSvRdxcVs",
+      "rate": 5080,
+      "bytes": 115,
+      "excess": 456840,
+      "minimum": 1234440,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "EMPX3MrhzgnWTi9jjwfCQ5b2waoHomSVULtwRiTpCvym",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FacilityAuthority",
+      "address": "EVsLxabyb4FUt6qRvYMVUXq7teRgVKHMiGphNg2g14nu",
+      "rate": 5080,
+      "bytes": 147,
+      "excess": 517000,
+      "minimum": 1397000,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "RecoveryPolicy",
+      "address": "F9Dwpg3BBN4A3oCMTLbTyBbp27tYhhXWyQ9LFtevNZ5h",
+      "rate": 5080,
+      "bytes": 285,
+      "excess": 776440,
+      "minimum": 2098040,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "PasskeyAuthority",
+      "address": "FZXmU3vnccKyM384A4S2dEA4GqVByq7i8tDKyyaX1kBf",
+      "rate": 5080,
+      "bytes": 302,
+      "excess": 808400,
+      "minimum": 2184400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "GTxaukfjRH981u3Z7oKGAkEVVVRXRzKJsdH3o9gbVV5u",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "HwyQBwFa4f2xFYqi4JL56j1yUVxTDuxCVvQNFGTDzQ33",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Actor",
+      "address": "HxcMWnNnBcsdH2zXXuFkTJqYvZGoxxmFivp1Wxxfih1S",
+      "rate": 5080,
+      "bytes": 164,
+      "excess": 548960,
+      "minimum": 1483360,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "HyjLRcFmnXm96W8SvVb1foZcZeCQs43YJospQTQ6Ukec",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "ReceivingCustody",
+      "address": "145L1uMmj4awD5NbZS2qhueGrr6yfKiKEvYpkRB438Km",
+      "rate": 696,
+      "bytes": 467,
+      "excess": 2608480,
+      "minimum": 414120,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "6neRfpaFyAXmJj48xFdN8EvnXKd6ATUuoeg3SCu2zZ7",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "JBU3MwetukbvBimBfVs52NsgVweaZNNegYRukAo3XXP",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "2E5fSxAazJMYG8xpKPtzrsCfWAv9Y8UXyxwZDhjFTgyp",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "2dJQ7rrvLpPGcxsFfmaiVjDZptHsSx3aRwj7rVmGvVm6",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Budget",
+      "address": "2dQVjuWSrzxCuYnaKBmsYkpuBqQtXchoxRVZYMMoqvqC",
+      "rate": 696,
+      "bytes": 139,
+      "excess": 1170528,
+      "minimum": 185832,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "2pj4pKPaforRtdqJMsbRYx6TkokDYELX5s1dgLtm9Sk2",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Mandate",
+      "address": "2xVL83h52jR8g3hNktf48pk8vTtQzcuxgz5gVoFtZrXY",
+      "rate": 696,
+      "bytes": 1282,
+      "excess": 6181440,
+      "minimum": 981360,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "31sdVyYtamkNthPQPubGrsiyuMvfssJwsEoN4otJvSRn",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "37pwRBpEPLy2wDXeBF6sjEVyos6g8od8qKAd1XcNp2Wn",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "SellerFeeAgreement",
+      "address": "3Ah6LYQeWRRquqNk9JEqPNUythUP6tFcxducavXjYnSZ",
+      "rate": 696,
+      "bytes": 259,
+      "excess": 1696608,
+      "minimum": 269352,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Reservation",
+      "address": "3Z7YpfvW3QJhDiy4WKfYNycB66c9rwGVDpuPKKXbRtKx",
+      "rate": 696,
+      "bytes": 179,
+      "excess": 1345888,
+      "minimum": 213672,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "3j5rAy9V4FQTbposk4Uow2eb1xHhgC9GyNZmpFn6Dmr8",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "3scRzfsVxbEVEWqsPDieWzeUeH9F5CHgfGDf2bEbsvkX",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "4KR7BwxEDPBbgUZSyvjGvS4Uz3kMLF3MugfwXefPPgDw",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "4twwLeZRi2W9VYJQw9JJ6rvxMbYUssTYUXx1CUypqmvA",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "5JVCKtCj2Luxt96Qxy5wuywrBoVDr6yfReUh92P1Gin2",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "67aK9X5K1vjfhC88ZvouYzpo7aa5UGprcxsGeGN8BhCN",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Actor",
+      "address": "6DXTRPxtZJEWT1GNUdGztoAU8sP7GmNdaDXvND1iEe3c",
+      "rate": 696,
+      "bytes": 164,
+      "excess": 1280128,
+      "minimum": 203232,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "6GSFTM5NmQwPWJyr1ZZeCHr2LRJKhEmy52DVJQbBZXZR",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "RecoveryPolicy",
+      "address": "7xrivoJb9jwPYS6g2bDngddeu8gjdnrLHzTK8CepGCPZ",
+      "rate": 696,
+      "bytes": 285,
+      "excess": 1810592,
+      "minimum": 287448,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "EvidenceBill",
+      "address": "82tArEyRcyP6BjXajAQJzzn7dU8AUJtQtGZ8HXB2j7Nw",
+      "rate": 696,
+      "bytes": 1217,
+      "excess": 5896480,
+      "minimum": 936120,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "CustomerCreditLine",
+      "address": "85TJCwwMkmxVGfYWYo2Ls4Fzoq93hLUuy92KoFAAj6yr",
+      "rate": 696,
+      "bytes": 410,
+      "excess": 2358592,
+      "minimum": 374448,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "BillAuthorityBinding",
+      "address": "8KfZnPrHx7N8qqqVKivRSz5fTW1w3EMbGaiwCQKX4xbo",
+      "rate": 696,
+      "bytes": 427,
+      "excess": 2433120,
+      "minimum": 386280,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "93MCfyKskYPfMoDSEQ2LLvvqWYVryLi4Y6wAQsFrCqLk",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "A5bd6P8RVMvreh65xthMzGUQMfJwtjAip9cgXV4wiVwy",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "ADG9CUeaRQKvoCj9iZfS61s1zAELZQcNUcaWPhNexqFV",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "AG37JxSXAV6XWXeQFFL5qSGW7xWwqyHNsJjRbZexjfU9",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "AQnXB38BArcrghAhNzPEmJnVi3kFRZyjMzCGJrLLW4Dt",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "BJgA8w4yXp3G3xsZuBLLYzjwU5AEovxmRGXc1q815guS",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "BqxfbzgV7o3mQJbB6w9KV9g2H9UZgESBBHhzknYPX3Qn",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FundedClaim",
+      "address": "Bypq5yTNmjNRyXUsb4zaCnctyH7fa3xv6trxdzGpRP2h",
+      "rate": 696,
+      "bytes": 1359,
+      "excess": 6519008,
+      "minimum": 1034952,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "FundingWalletBinding",
+      "address": "C1gqsMDTCLdHYwcNciLkxpzoiXBCDfpyZXWv8eaj4bkb",
+      "rate": 696,
+      "bytes": 211,
+      "excess": 1486176,
+      "minimum": 235944,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "CCJ9DYQjd7cnPT3EsxvX6oU3TcKAf2uKQ9FH7Dss1LGD",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "CT6x1kjs1Yi3XRa5Bxqt2t5JpH8G6ts89hJ4KaScJgK5",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FundingFacility",
+      "address": "CUGbyGhek7TRMoLAVgA4FCRkqLZnwqznhXe7angDGDXj",
+      "rate": 696,
+      "bytes": 467,
+      "excess": 2608480,
+      "minimum": 414120,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "CgWbr9n8AzXjEKTCAq8XyE18VqmCzHerLGUad77K4igT",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Mandate",
+      "address": "CiXhQxBwAZpcvdyGwGrMjWsRZd5HKuWhBWf6KVrNmZYV",
+      "rate": 696,
+      "bytes": 1282,
+      "excess": 6181440,
+      "minimum": 981360,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "RecoveryPolicy",
+      "address": "CsdCYFyjUkZvoetrE1qgDB7dCqeJFu46Lcost4x5zVhM",
+      "rate": 696,
+      "bytes": 285,
+      "excess": 1810592,
+      "minimum": 287448,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "CukocP1PE8hD73R58W6wtaVMZH2sk7nAijFB8fq8R7SF",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "DfFpLhHdDtRegv8uMQMDGzBxfQKNWz73exi9Qhg8ePH9",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "RecoveryPolicy",
+      "address": "DrEaeHURYtr4PScdGvpGkBGchrpqKbn2qJH9J2bh1LX2",
+      "rate": 696,
+      "bytes": 285,
+      "excess": 1810592,
+      "minimum": 287448,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "AuthorityDeployment",
+      "address": "EER2hmiSCDgZwVLM46iyF866Ye4KBu7nAWrUSvRdxcVs",
+      "rate": 696,
+      "bytes": 115,
+      "excess": 1065312,
+      "minimum": 169128,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "EMPX3MrhzgnWTi9jjwfCQ5b2waoHomSVULtwRiTpCvym",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FacilityAuthority",
+      "address": "EVsLxabyb4FUt6qRvYMVUXq7teRgVKHMiGphNg2g14nu",
+      "rate": 696,
+      "bytes": 147,
+      "excess": 1205600,
+      "minimum": 191400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "RecoveryPolicy",
+      "address": "F9Dwpg3BBN4A3oCMTLbTyBbp27tYhhXWyQ9LFtevNZ5h",
+      "rate": 696,
+      "bytes": 285,
+      "excess": 1810592,
+      "minimum": 287448,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "PasskeyAuthority",
+      "address": "FZXmU3vnccKyM384A4S2dEA4GqVByq7i8tDKyyaX1kBf",
+      "rate": 696,
+      "bytes": 302,
+      "excess": 1885120,
+      "minimum": 299280,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "GTxaukfjRH981u3Z7oKGAkEVVVRXRzKJsdH3o9gbVV5u",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "HwyQBwFa4f2xFYqi4JL56j1yUVxTDuxCVvQNFGTDzQ33",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Actor",
+      "address": "HxcMWnNnBcsdH2zXXuFkTJqYvZGoxxmFivp1Wxxfih1S",
+      "rate": 696,
+      "bytes": 164,
+      "excess": 1280128,
+      "minimum": 203232,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "HyjLRcFmnXm96W8SvVb1foZcZeCQs43YJospQTQ6Ukec",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "6neRfpaFyAXmJj48xFdN8EvnXKd6ATUuoeg3SCu2zZ7",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "JBU3MwetukbvBimBfVs52NsgVweaZNNegYRukAo3XXP",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "2E5fSxAazJMYG8xpKPtzrsCfWAv9Y8UXyxwZDhjFTgyp",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "2dJQ7rrvLpPGcxsFfmaiVjDZptHsSx3aRwj7rVmGvVm6",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Budget",
+      "address": "2dQVjuWSrzxCuYnaKBmsYkpuBqQtXchoxRVZYMMoqvqC",
+      "rate": 5080,
+      "bytes": 139,
+      "excess": 501960,
+      "minimum": 1356360,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "2pj4pKPaforRtdqJMsbRYx6TkokDYELX5s1dgLtm9Sk2",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "31sdVyYtamkNthPQPubGrsiyuMvfssJwsEoN4otJvSRn",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "37pwRBpEPLy2wDXeBF6sjEVyos6g8od8qKAd1XcNp2Wn",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "SellerFeeAgreement",
+      "address": "3Ah6LYQeWRRquqNk9JEqPNUythUP6tFcxducavXjYnSZ",
+      "rate": 5080,
+      "bytes": 259,
+      "excess": 727560,
+      "minimum": 1965960,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "3j5rAy9V4FQTbposk4Uow2eb1xHhgC9GyNZmpFn6Dmr8",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "3scRzfsVxbEVEWqsPDieWzeUeH9F5CHgfGDf2bEbsvkX",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "4KR7BwxEDPBbgUZSyvjGvS4Uz3kMLF3MugfwXefPPgDw",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "ExactRepaymentApproval",
+      "address": "4RRGQFMa2N2PKY9SvFv173g5CKVtVH7wnnujf9RiMqNR",
+      "rate": 5080,
+      "bytes": 669,
+      "excess": 1498360,
+      "minimum": 4048760,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FundedRun",
+      "address": "4ivsV9LHfd2pNPNA7DSsgkxTTbB4KzKTgAcuHsmuVJyv",
+      "rate": 5080,
+      "bytes": 505,
+      "excess": 1190040,
+      "minimum": 3215640,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "4twwLeZRi2W9VYJQw9JJ6rvxMbYUssTYUXx1CUypqmvA",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "5JVCKtCj2Luxt96Qxy5wuywrBoVDr6yfReUh92P1Gin2",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FundedRun",
+      "address": "5frhFeoMJkeGbfYjXYtYUgVXqyJiTerdt8k2uzWKkUa7",
+      "rate": 5080,
+      "bytes": 505,
+      "excess": 1190040,
+      "minimum": 3215640,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "67aK9X5K1vjfhC88ZvouYzpo7aa5UGprcxsGeGN8BhCN",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Actor",
+      "address": "6DXTRPxtZJEWT1GNUdGztoAU8sP7GmNdaDXvND1iEe3c",
+      "rate": 5080,
+      "bytes": 164,
+      "excess": 548960,
+      "minimum": 1483360,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "6GSFTM5NmQwPWJyr1ZZeCHr2LRJKhEmy52DVJQbBZXZR",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "CustomerCreditLine",
+      "address": "85TJCwwMkmxVGfYWYo2Ls4Fzoq93hLUuy92KoFAAj6yr",
+      "rate": 5080,
+      "bytes": 410,
+      "excess": 1011440,
+      "minimum": 2733040,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "93MCfyKskYPfMoDSEQ2LLvvqWYVryLi4Y6wAQsFrCqLk",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "A5bd6P8RVMvreh65xthMzGUQMfJwtjAip9cgXV4wiVwy",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "ADG9CUeaRQKvoCj9iZfS61s1zAELZQcNUcaWPhNexqFV",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "AG37JxSXAV6XWXeQFFL5qSGW7xWwqyHNsJjRbZexjfU9",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "AQnXB38BArcrghAhNzPEmJnVi3kFRZyjMzCGJrLLW4Dt",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "BJgA8w4yXp3G3xsZuBLLYzjwU5AEovxmRGXc1q815guS",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "BNVE8noBC28fEvjUeGcVSi9KwLP2K6NZkUmKaPx3H9Fa",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "BqxfbzgV7o3mQJbB6w9KV9g2H9UZgESBBHhzknYPX3Qn",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "FundingWalletBinding",
+      "address": "C1gqsMDTCLdHYwcNciLkxpzoiXBCDfpyZXWv8eaj4bkb",
+      "rate": 5080,
+      "bytes": 211,
+      "excess": 637320,
+      "minimum": 1722120,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "CCJ9DYQjd7cnPT3EsxvX6oU3TcKAf2uKQ9FH7Dss1LGD",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "CT6x1kjs1Yi3XRa5Bxqt2t5JpH8G6ts89hJ4KaScJgK5",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FundingFacility",
+      "address": "CUGbyGhek7TRMoLAVgA4FCRkqLZnwqznhXe7angDGDXj",
+      "rate": 5080,
+      "bytes": 467,
+      "excess": 1118600,
+      "minimum": 3022600,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "CgWbr9n8AzXjEKTCAq8XyE18VqmCzHerLGUad77K4igT",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Mandate",
+      "address": "CiXhQxBwAZpcvdyGwGrMjWsRZd5HKuWhBWf6KVrNmZYV",
+      "rate": 5080,
+      "bytes": 1282,
+      "excess": 2650800,
+      "minimum": 7162800,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "CukocP1PE8hD73R58W6wtaVMZH2sk7nAijFB8fq8R7SF",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "RepaymentPermission",
+      "address": "DQGWTe1Z72HWGCpHaBM6EknbEBoGtjDUvzy98ihGwRpH",
+      "rate": 5080,
+      "bytes": 789,
+      "excess": 1723960,
+      "minimum": 4658360,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "DfFpLhHdDtRegv8uMQMDGzBxfQKNWz73exi9Qhg8ePH9",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "FundingWalletBinding",
+      "address": "Do68h1P9L8bMmtgjZ9WhgqkEZ7jMiA9XWmgHiXank9mB",
+      "rate": 5080,
+      "bytes": 211,
+      "excess": 637320,
+      "minimum": 1722120,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "EMPX3MrhzgnWTi9jjwfCQ5b2waoHomSVULtwRiTpCvym",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FundedClaim",
+      "address": "ENKNPBKARWLZdpkKgQMWqqZemRzMz7xmgdxV9WpNNcQn",
+      "rate": 5080,
+      "bytes": 1359,
+      "excess": 2795560,
+      "minimum": 7553960,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FacilityAuthority",
+      "address": "EVsLxabyb4FUt6qRvYMVUXq7teRgVKHMiGphNg2g14nu",
+      "rate": 5080,
+      "bytes": 147,
+      "excess": 517000,
+      "minimum": 1397000,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "RepaymentRecord",
+      "address": "EsAUWteD1e8zVVyVzqu1XdhDTGyF1hEMEzFgSDEyy2ed",
+      "rate": 5080,
+      "bytes": 419,
+      "excess": 1028360,
+      "minimum": 2778760,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Reservation",
+      "address": "GJtqdTLrJkQ7wdCUXztvu5eyMfpxmxUPXeePhexTgNs7",
+      "rate": 5080,
+      "bytes": 179,
+      "excess": 577160,
+      "minimum": 1559560,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "GTxaukfjRH981u3Z7oKGAkEVVVRXRzKJsdH3o9gbVV5u",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "HwyQBwFa4f2xFYqi4JL56j1yUVxTDuxCVvQNFGTDzQ33",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Actor",
+      "address": "HxcMWnNnBcsdH2zXXuFkTJqYvZGoxxmFivp1Wxxfih1S",
+      "rate": 5080,
+      "bytes": 164,
+      "excess": 548960,
+      "minimum": 1483360,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "HyjLRcFmnXm96W8SvVb1foZcZeCQs43YJospQTQ6Ukec",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "6neRfpaFyAXmJj48xFdN8EvnXKd6ATUuoeg3SCu2zZ7",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "JBU3MwetukbvBimBfVs52NsgVweaZNNegYRukAo3XXP",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "2E5fSxAazJMYG8xpKPtzrsCfWAv9Y8UXyxwZDhjFTgyp",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "2dJQ7rrvLpPGcxsFfmaiVjDZptHsSx3aRwj7rVmGvVm6",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Budget",
+      "address": "2dQVjuWSrzxCuYnaKBmsYkpuBqQtXchoxRVZYMMoqvqC",
+      "rate": 696,
+      "bytes": 139,
+      "excess": 1170528,
+      "minimum": 185832,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "2pj4pKPaforRtdqJMsbRYx6TkokDYELX5s1dgLtm9Sk2",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "31sdVyYtamkNthPQPubGrsiyuMvfssJwsEoN4otJvSRn",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "37pwRBpEPLy2wDXeBF6sjEVyos6g8od8qKAd1XcNp2Wn",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "SellerFeeAgreement",
+      "address": "3Ah6LYQeWRRquqNk9JEqPNUythUP6tFcxducavXjYnSZ",
+      "rate": 696,
+      "bytes": 259,
+      "excess": 1696608,
+      "minimum": 269352,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "3j5rAy9V4FQTbposk4Uow2eb1xHhgC9GyNZmpFn6Dmr8",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "3scRzfsVxbEVEWqsPDieWzeUeH9F5CHgfGDf2bEbsvkX",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "4KR7BwxEDPBbgUZSyvjGvS4Uz3kMLF3MugfwXefPPgDw",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "ExactRepaymentApproval",
+      "address": "4RRGQFMa2N2PKY9SvFv173g5CKVtVH7wnnujf9RiMqNR",
+      "rate": 696,
+      "bytes": 669,
+      "excess": 3494048,
+      "minimum": 554712,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FundedRun",
+      "address": "4ivsV9LHfd2pNPNA7DSsgkxTTbB4KzKTgAcuHsmuVJyv",
+      "rate": 696,
+      "bytes": 505,
+      "excess": 2775072,
+      "minimum": 440568,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "4twwLeZRi2W9VYJQw9JJ6rvxMbYUssTYUXx1CUypqmvA",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "5JVCKtCj2Luxt96Qxy5wuywrBoVDr6yfReUh92P1Gin2",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FundedRun",
+      "address": "5frhFeoMJkeGbfYjXYtYUgVXqyJiTerdt8k2uzWKkUa7",
+      "rate": 696,
+      "bytes": 505,
+      "excess": 2775072,
+      "minimum": 440568,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "67aK9X5K1vjfhC88ZvouYzpo7aa5UGprcxsGeGN8BhCN",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Actor",
+      "address": "6DXTRPxtZJEWT1GNUdGztoAU8sP7GmNdaDXvND1iEe3c",
+      "rate": 696,
+      "bytes": 164,
+      "excess": 1280128,
+      "minimum": 203232,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "6GSFTM5NmQwPWJyr1ZZeCHr2LRJKhEmy52DVJQbBZXZR",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "CustomerCreditLine",
+      "address": "85TJCwwMkmxVGfYWYo2Ls4Fzoq93hLUuy92KoFAAj6yr",
+      "rate": 696,
+      "bytes": 410,
+      "excess": 2358592,
+      "minimum": 374448,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "93MCfyKskYPfMoDSEQ2LLvvqWYVryLi4Y6wAQsFrCqLk",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "A5bd6P8RVMvreh65xthMzGUQMfJwtjAip9cgXV4wiVwy",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "ADG9CUeaRQKvoCj9iZfS61s1zAELZQcNUcaWPhNexqFV",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "AG37JxSXAV6XWXeQFFL5qSGW7xWwqyHNsJjRbZexjfU9",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "AQnXB38BArcrghAhNzPEmJnVi3kFRZyjMzCGJrLLW4Dt",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "BJgA8w4yXp3G3xsZuBLLYzjwU5AEovxmRGXc1q815guS",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "BNVE8noBC28fEvjUeGcVSi9KwLP2K6NZkUmKaPx3H9Fa",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "BqxfbzgV7o3mQJbB6w9KV9g2H9UZgESBBHhzknYPX3Qn",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "FundingWalletBinding",
+      "address": "C1gqsMDTCLdHYwcNciLkxpzoiXBCDfpyZXWv8eaj4bkb",
+      "rate": 696,
+      "bytes": 211,
+      "excess": 1486176,
+      "minimum": 235944,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "CCJ9DYQjd7cnPT3EsxvX6oU3TcKAf2uKQ9FH7Dss1LGD",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "CT6x1kjs1Yi3XRa5Bxqt2t5JpH8G6ts89hJ4KaScJgK5",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FundingFacility",
+      "address": "CUGbyGhek7TRMoLAVgA4FCRkqLZnwqznhXe7angDGDXj",
+      "rate": 696,
+      "bytes": 467,
+      "excess": 2608480,
+      "minimum": 414120,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "CgWbr9n8AzXjEKTCAq8XyE18VqmCzHerLGUad77K4igT",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Mandate",
+      "address": "CiXhQxBwAZpcvdyGwGrMjWsRZd5HKuWhBWf6KVrNmZYV",
+      "rate": 696,
+      "bytes": 1282,
+      "excess": 6181440,
+      "minimum": 981360,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "CukocP1PE8hD73R58W6wtaVMZH2sk7nAijFB8fq8R7SF",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "RepaymentPermission",
+      "address": "DQGWTe1Z72HWGCpHaBM6EknbEBoGtjDUvzy98ihGwRpH",
+      "rate": 696,
+      "bytes": 789,
+      "excess": 4020128,
+      "minimum": 638232,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "DfFpLhHdDtRegv8uMQMDGzBxfQKNWz73exi9Qhg8ePH9",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "FundingWalletBinding",
+      "address": "Do68h1P9L8bMmtgjZ9WhgqkEZ7jMiA9XWmgHiXank9mB",
+      "rate": 696,
+      "bytes": 211,
+      "excess": 1486176,
+      "minimum": 235944,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "EMPX3MrhzgnWTi9jjwfCQ5b2waoHomSVULtwRiTpCvym",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FundedClaim",
+      "address": "ENKNPBKARWLZdpkKgQMWqqZemRzMz7xmgdxV9WpNNcQn",
+      "rate": 696,
+      "bytes": 1359,
+      "excess": 6519008,
+      "minimum": 1034952,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FacilityAuthority",
+      "address": "EVsLxabyb4FUt6qRvYMVUXq7teRgVKHMiGphNg2g14nu",
+      "rate": 696,
+      "bytes": 147,
+      "excess": 1205600,
+      "minimum": 191400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "RepaymentRecord",
+      "address": "EsAUWteD1e8zVVyVzqu1XdhDTGyF1hEMEzFgSDEyy2ed",
+      "rate": 696,
+      "bytes": 419,
+      "excess": 2398048,
+      "minimum": 380712,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Reservation",
+      "address": "GJtqdTLrJkQ7wdCUXztvu5eyMfpxmxUPXeePhexTgNs7",
+      "rate": 696,
+      "bytes": 179,
+      "excess": 1345888,
+      "minimum": 213672,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "GTxaukfjRH981u3Z7oKGAkEVVVRXRzKJsdH3o9gbVV5u",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "HwyQBwFa4f2xFYqi4JL56j1yUVxTDuxCVvQNFGTDzQ33",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Actor",
+      "address": "HxcMWnNnBcsdH2zXXuFkTJqYvZGoxxmFivp1Wxxfih1S",
+      "rate": 696,
+      "bytes": 164,
+      "excess": 1280128,
+      "minimum": 203232,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "HyjLRcFmnXm96W8SvVb1foZcZeCQs43YJospQTQ6Ukec",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "6neRfpaFyAXmJj48xFdN8EvnXKd6ATUuoeg3SCu2zZ7",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "JBU3MwetukbvBimBfVs52NsgVweaZNNegYRukAo3XXP",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "ExactSpendingApproval",
+      "address": "SDXGnMK9M49a8ooY3uPpaPQ6XDaMZc61kLq1EsEubYH",
+      "rate": 5080,
+      "bytes": 654,
+      "excess": 1470160,
+      "minimum": 3972560,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "2E5fSxAazJMYG8xpKPtzrsCfWAv9Y8UXyxwZDhjFTgyp",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "2dJQ7rrvLpPGcxsFfmaiVjDZptHsSx3aRwj7rVmGvVm6",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Budget",
+      "address": "2dQVjuWSrzxCuYnaKBmsYkpuBqQtXchoxRVZYMMoqvqC",
+      "rate": 5080,
+      "bytes": 139,
+      "excess": 501960,
+      "minimum": 1356360,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "2pj4pKPaforRtdqJMsbRYx6TkokDYELX5s1dgLtm9Sk2",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "31sdVyYtamkNthPQPubGrsiyuMvfssJwsEoN4otJvSRn",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "37pwRBpEPLy2wDXeBF6sjEVyos6g8od8qKAd1XcNp2Wn",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "SellerFeeAgreement",
+      "address": "3Ah6LYQeWRRquqNk9JEqPNUythUP6tFcxducavXjYnSZ",
+      "rate": 5080,
+      "bytes": 259,
+      "excess": 727560,
+      "minimum": 1965960,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "3j5rAy9V4FQTbposk4Uow2eb1xHhgC9GyNZmpFn6Dmr8",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "3scRzfsVxbEVEWqsPDieWzeUeH9F5CHgfGDf2bEbsvkX",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "4KR7BwxEDPBbgUZSyvjGvS4Uz3kMLF3MugfwXefPPgDw",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "4twwLeZRi2W9VYJQw9JJ6rvxMbYUssTYUXx1CUypqmvA",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "5JVCKtCj2Luxt96Qxy5wuywrBoVDr6yfReUh92P1Gin2",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "67aK9X5K1vjfhC88ZvouYzpo7aa5UGprcxsGeGN8BhCN",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Actor",
+      "address": "6DXTRPxtZJEWT1GNUdGztoAU8sP7GmNdaDXvND1iEe3c",
+      "rate": 5080,
+      "bytes": 164,
+      "excess": 548960,
+      "minimum": 1483360,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "6GSFTM5NmQwPWJyr1ZZeCHr2LRJKhEmy52DVJQbBZXZR",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "CustomerCreditLine",
+      "address": "85TJCwwMkmxVGfYWYo2Ls4Fzoq93hLUuy92KoFAAj6yr",
+      "rate": 5080,
+      "bytes": 410,
+      "excess": 1011440,
+      "minimum": 2733040,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "93MCfyKskYPfMoDSEQ2LLvvqWYVryLi4Y6wAQsFrCqLk",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "A5bd6P8RVMvreh65xthMzGUQMfJwtjAip9cgXV4wiVwy",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "ADG9CUeaRQKvoCj9iZfS61s1zAELZQcNUcaWPhNexqFV",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "AG37JxSXAV6XWXeQFFL5qSGW7xWwqyHNsJjRbZexjfU9",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "AQnXB38BArcrghAhNzPEmJnVi3kFRZyjMzCGJrLLW4Dt",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "BJgA8w4yXp3G3xsZuBLLYzjwU5AEovxmRGXc1q815guS",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "BqxfbzgV7o3mQJbB6w9KV9g2H9UZgESBBHhzknYPX3Qn",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "FundingWalletBinding",
+      "address": "C1gqsMDTCLdHYwcNciLkxpzoiXBCDfpyZXWv8eaj4bkb",
+      "rate": 5080,
+      "bytes": 211,
+      "excess": 637320,
+      "minimum": 1722120,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "CCJ9DYQjd7cnPT3EsxvX6oU3TcKAf2uKQ9FH7Dss1LGD",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "CT6x1kjs1Yi3XRa5Bxqt2t5JpH8G6ts89hJ4KaScJgK5",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FundingFacility",
+      "address": "CUGbyGhek7TRMoLAVgA4FCRkqLZnwqznhXe7angDGDXj",
+      "rate": 5080,
+      "bytes": 467,
+      "excess": 1118600,
+      "minimum": 3022600,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "SpendingPermission",
+      "address": "CUZJiptWu3sYxeqHuEUeKttMWCB1s6oZmB8udiV9zTdF",
+      "rate": 5080,
+      "bytes": 774,
+      "excess": 1695760,
+      "minimum": 4582160,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "CgWbr9n8AzXjEKTCAq8XyE18VqmCzHerLGUad77K4igT",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Mandate",
+      "address": "CiXhQxBwAZpcvdyGwGrMjWsRZd5HKuWhBWf6KVrNmZYV",
+      "rate": 5080,
+      "bytes": 1282,
+      "excess": 2650800,
+      "minimum": 7162800,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "CukocP1PE8hD73R58W6wtaVMZH2sk7nAijFB8fq8R7SF",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "DfFpLhHdDtRegv8uMQMDGzBxfQKNWz73exi9Qhg8ePH9",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "EMPX3MrhzgnWTi9jjwfCQ5b2waoHomSVULtwRiTpCvym",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FacilityAuthority",
+      "address": "EVsLxabyb4FUt6qRvYMVUXq7teRgVKHMiGphNg2g14nu",
+      "rate": 5080,
+      "bytes": 147,
+      "excess": 517000,
+      "minimum": 1397000,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "GTxaukfjRH981u3Z7oKGAkEVVVRXRzKJsdH3o9gbVV5u",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "HwyQBwFa4f2xFYqi4JL56j1yUVxTDuxCVvQNFGTDzQ33",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Actor",
+      "address": "HxcMWnNnBcsdH2zXXuFkTJqYvZGoxxmFivp1Wxxfih1S",
+      "rate": 5080,
+      "bytes": 164,
+      "excess": 548960,
+      "minimum": 1483360,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "HyjLRcFmnXm96W8SvVb1foZcZeCQs43YJospQTQ6Ukec",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "6neRfpaFyAXmJj48xFdN8EvnXKd6ATUuoeg3SCu2zZ7",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "JBU3MwetukbvBimBfVs52NsgVweaZNNegYRukAo3XXP",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "ExactSpendingApproval",
+      "address": "SDXGnMK9M49a8ooY3uPpaPQ6XDaMZc61kLq1EsEubYH",
+      "rate": 696,
+      "bytes": 654,
+      "excess": 3428288,
+      "minimum": 544272,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "2E5fSxAazJMYG8xpKPtzrsCfWAv9Y8UXyxwZDhjFTgyp",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "2dJQ7rrvLpPGcxsFfmaiVjDZptHsSx3aRwj7rVmGvVm6",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Budget",
+      "address": "2dQVjuWSrzxCuYnaKBmsYkpuBqQtXchoxRVZYMMoqvqC",
+      "rate": 696,
+      "bytes": 139,
+      "excess": 1170528,
+      "minimum": 185832,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "2pj4pKPaforRtdqJMsbRYx6TkokDYELX5s1dgLtm9Sk2",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "31sdVyYtamkNthPQPubGrsiyuMvfssJwsEoN4otJvSRn",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "37pwRBpEPLy2wDXeBF6sjEVyos6g8od8qKAd1XcNp2Wn",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "SellerFeeAgreement",
+      "address": "3Ah6LYQeWRRquqNk9JEqPNUythUP6tFcxducavXjYnSZ",
+      "rate": 696,
+      "bytes": 259,
+      "excess": 1696608,
+      "minimum": 269352,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "3j5rAy9V4FQTbposk4Uow2eb1xHhgC9GyNZmpFn6Dmr8",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "3scRzfsVxbEVEWqsPDieWzeUeH9F5CHgfGDf2bEbsvkX",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "4KR7BwxEDPBbgUZSyvjGvS4Uz3kMLF3MugfwXefPPgDw",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "4twwLeZRi2W9VYJQw9JJ6rvxMbYUssTYUXx1CUypqmvA",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "5JVCKtCj2Luxt96Qxy5wuywrBoVDr6yfReUh92P1Gin2",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "67aK9X5K1vjfhC88ZvouYzpo7aa5UGprcxsGeGN8BhCN",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Actor",
+      "address": "6DXTRPxtZJEWT1GNUdGztoAU8sP7GmNdaDXvND1iEe3c",
+      "rate": 696,
+      "bytes": 164,
+      "excess": 1280128,
+      "minimum": 203232,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "6GSFTM5NmQwPWJyr1ZZeCHr2LRJKhEmy52DVJQbBZXZR",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "CustomerCreditLine",
+      "address": "85TJCwwMkmxVGfYWYo2Ls4Fzoq93hLUuy92KoFAAj6yr",
+      "rate": 696,
+      "bytes": 410,
+      "excess": 2358592,
+      "minimum": 374448,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "93MCfyKskYPfMoDSEQ2LLvvqWYVryLi4Y6wAQsFrCqLk",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "A5bd6P8RVMvreh65xthMzGUQMfJwtjAip9cgXV4wiVwy",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "ADG9CUeaRQKvoCj9iZfS61s1zAELZQcNUcaWPhNexqFV",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "AG37JxSXAV6XWXeQFFL5qSGW7xWwqyHNsJjRbZexjfU9",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "AQnXB38BArcrghAhNzPEmJnVi3kFRZyjMzCGJrLLW4Dt",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "BJgA8w4yXp3G3xsZuBLLYzjwU5AEovxmRGXc1q815guS",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "BqxfbzgV7o3mQJbB6w9KV9g2H9UZgESBBHhzknYPX3Qn",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "FundingWalletBinding",
+      "address": "C1gqsMDTCLdHYwcNciLkxpzoiXBCDfpyZXWv8eaj4bkb",
+      "rate": 696,
+      "bytes": 211,
+      "excess": 1486176,
+      "minimum": 235944,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "CCJ9DYQjd7cnPT3EsxvX6oU3TcKAf2uKQ9FH7Dss1LGD",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "CT6x1kjs1Yi3XRa5Bxqt2t5JpH8G6ts89hJ4KaScJgK5",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FundingFacility",
+      "address": "CUGbyGhek7TRMoLAVgA4FCRkqLZnwqznhXe7angDGDXj",
+      "rate": 696,
+      "bytes": 467,
+      "excess": 2608480,
+      "minimum": 414120,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "SpendingPermission",
+      "address": "CUZJiptWu3sYxeqHuEUeKttMWCB1s6oZmB8udiV9zTdF",
+      "rate": 696,
+      "bytes": 774,
+      "excess": 3954368,
+      "minimum": 627792,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "CgWbr9n8AzXjEKTCAq8XyE18VqmCzHerLGUad77K4igT",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Mandate",
+      "address": "CiXhQxBwAZpcvdyGwGrMjWsRZd5HKuWhBWf6KVrNmZYV",
+      "rate": 696,
+      "bytes": 1282,
+      "excess": 6181440,
+      "minimum": 981360,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "CukocP1PE8hD73R58W6wtaVMZH2sk7nAijFB8fq8R7SF",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "DfFpLhHdDtRegv8uMQMDGzBxfQKNWz73exi9Qhg8ePH9",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "EMPX3MrhzgnWTi9jjwfCQ5b2waoHomSVULtwRiTpCvym",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FacilityAuthority",
+      "address": "EVsLxabyb4FUt6qRvYMVUXq7teRgVKHMiGphNg2g14nu",
+      "rate": 696,
+      "bytes": 147,
+      "excess": 1205600,
+      "minimum": 191400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "GTxaukfjRH981u3Z7oKGAkEVVVRXRzKJsdH3o9gbVV5u",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "HwyQBwFa4f2xFYqi4JL56j1yUVxTDuxCVvQNFGTDzQ33",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Actor",
+      "address": "HxcMWnNnBcsdH2zXXuFkTJqYvZGoxxmFivp1Wxxfih1S",
+      "rate": 696,
+      "bytes": 164,
+      "excess": 1280128,
+      "minimum": 203232,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "HyjLRcFmnXm96W8SvVb1foZcZeCQs43YJospQTQ6Ukec",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "6neRfpaFyAXmJj48xFdN8EvnXKd6ATUuoeg3SCu2zZ7",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "JBU3MwetukbvBimBfVs52NsgVweaZNNegYRukAo3XXP",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "2E5fSxAazJMYG8xpKPtzrsCfWAv9Y8UXyxwZDhjFTgyp",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "2dJQ7rrvLpPGcxsFfmaiVjDZptHsSx3aRwj7rVmGvVm6",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Budget",
+      "address": "2dQVjuWSrzxCuYnaKBmsYkpuBqQtXchoxRVZYMMoqvqC",
+      "rate": 5080,
+      "bytes": 139,
+      "excess": 501960,
+      "minimum": 1356360,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "2pj4pKPaforRtdqJMsbRYx6TkokDYELX5s1dgLtm9Sk2",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "31sdVyYtamkNthPQPubGrsiyuMvfssJwsEoN4otJvSRn",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "37pwRBpEPLy2wDXeBF6sjEVyos6g8od8qKAd1XcNp2Wn",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "SellerFeeAgreement",
+      "address": "3Ah6LYQeWRRquqNk9JEqPNUythUP6tFcxducavXjYnSZ",
+      "rate": 5080,
+      "bytes": 259,
+      "excess": 727560,
+      "minimum": 1965960,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "StockControlApproval",
+      "address": "3JJUSDp9TajXCyBj7J6qcVedKSGbVMYB7Myx6zFyR3QL",
+      "rate": 5080,
+      "bytes": 380,
+      "excess": 955040,
+      "minimum": 2580640,
+      "payer": "6TcyBfPdBt1kjsvDZLzmBFnuMaLWiTaAt4RjUr9VA5YD"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "3j5rAy9V4FQTbposk4Uow2eb1xHhgC9GyNZmpFn6Dmr8",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "3scRzfsVxbEVEWqsPDieWzeUeH9F5CHgfGDf2bEbsvkX",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "4GPVr7RCDNDozKFRYh3F2fandWnh81AyfYXDotzeG3x3",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "4KR7BwxEDPBbgUZSyvjGvS4Uz3kMLF3MugfwXefPPgDw",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "4rxqHcpwNNqPiYTh3LBfquWcKpJhiDsC4vG9bid5cntf",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "6TcyBfPdBt1kjsvDZLzmBFnuMaLWiTaAt4RjUr9VA5YD"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "4twwLeZRi2W9VYJQw9JJ6rvxMbYUssTYUXx1CUypqmvA",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "5JVCKtCj2Luxt96Qxy5wuywrBoVDr6yfReUh92P1Gin2",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "WalletTradingPolicy",
+      "address": "63NsQcaqTH9xCMXBzcRoBrciFzXpbjBzoz49ozCuBQQg",
+      "rate": 5080,
+      "bytes": 599,
+      "excess": 1366760,
+      "minimum": 3693160,
+      "payer": "6TcyBfPdBt1kjsvDZLzmBFnuMaLWiTaAt4RjUr9VA5YD"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "67aK9X5K1vjfhC88ZvouYzpo7aa5UGprcxsGeGN8BhCN",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Actor",
+      "address": "6DXTRPxtZJEWT1GNUdGztoAU8sP7GmNdaDXvND1iEe3c",
+      "rate": 5080,
+      "bytes": 164,
+      "excess": 548960,
+      "minimum": 1483360,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "6GSFTM5NmQwPWJyr1ZZeCHr2LRJKhEmy52DVJQbBZXZR",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "CustomerCreditLine",
+      "address": "85TJCwwMkmxVGfYWYo2Ls4Fzoq93hLUuy92KoFAAj6yr",
+      "rate": 5080,
+      "bytes": 410,
+      "excess": 1011440,
+      "minimum": 2733040,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "93MCfyKskYPfMoDSEQ2LLvvqWYVryLi4Y6wAQsFrCqLk",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "9EhBSSzofxLk6Bw8A7BtomxRmm5iyv1b6JKdGhuoCnP1",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "A5bd6P8RVMvreh65xthMzGUQMfJwtjAip9cgXV4wiVwy",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "ADG9CUeaRQKvoCj9iZfS61s1zAELZQcNUcaWPhNexqFV",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "AG37JxSXAV6XWXeQFFL5qSGW7xWwqyHNsJjRbZexjfU9",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "AQnXB38BArcrghAhNzPEmJnVi3kFRZyjMzCGJrLLW4Dt",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "BJgA8w4yXp3G3xsZuBLLYzjwU5AEovxmRGXc1q815guS",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "BqxfbzgV7o3mQJbB6w9KV9g2H9UZgESBBHhzknYPX3Qn",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "BvDeHSajivymdkyAWVqXhgkvgwwYmyWYTJRWR712Etgt",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "6TcyBfPdBt1kjsvDZLzmBFnuMaLWiTaAt4RjUr9VA5YD"
+    },
+    {
+      "program": "principal_registry",
+      "type": "FundingWalletBinding",
+      "address": "C1gqsMDTCLdHYwcNciLkxpzoiXBCDfpyZXWv8eaj4bkb",
+      "rate": 5080,
+      "bytes": 211,
+      "excess": 637320,
+      "minimum": 1722120,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "CCJ9DYQjd7cnPT3EsxvX6oU3TcKAf2uKQ9FH7Dss1LGD",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "CT6x1kjs1Yi3XRa5Bxqt2t5JpH8G6ts89hJ4KaScJgK5",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FundingFacility",
+      "address": "CUGbyGhek7TRMoLAVgA4FCRkqLZnwqznhXe7angDGDXj",
+      "rate": 5080,
+      "bytes": 467,
+      "excess": 1118600,
+      "minimum": 3022600,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "CZj7BkRTbRSVnkR9SP8X6KLSwXj7YwjU639TzxoAvqnt",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "6TcyBfPdBt1kjsvDZLzmBFnuMaLWiTaAt4RjUr9VA5YD"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "CgWbr9n8AzXjEKTCAq8XyE18VqmCzHerLGUad77K4igT",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Mandate",
+      "address": "CiXhQxBwAZpcvdyGwGrMjWsRZd5HKuWhBWf6KVrNmZYV",
+      "rate": 5080,
+      "bytes": 1282,
+      "excess": 2650800,
+      "minimum": 7162800,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "CukocP1PE8hD73R58W6wtaVMZH2sk7nAijFB8fq8R7SF",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "DfFpLhHdDtRegv8uMQMDGzBxfQKNWz73exi9Qhg8ePH9",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "EMPX3MrhzgnWTi9jjwfCQ5b2waoHomSVULtwRiTpCvym",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FacilityAuthority",
+      "address": "EVsLxabyb4FUt6qRvYMVUXq7teRgVKHMiGphNg2g14nu",
+      "rate": 5080,
+      "bytes": 147,
+      "excess": 517000,
+      "minimum": 1397000,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "FzLYWPD1jj6o2cBdGpDtNXwbJvQsvZeXRU7TMfPX8UG6",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "6TcyBfPdBt1kjsvDZLzmBFnuMaLWiTaAt4RjUr9VA5YD"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "GTxaukfjRH981u3Z7oKGAkEVVVRXRzKJsdH3o9gbVV5u",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "HwyQBwFa4f2xFYqi4JL56j1yUVxTDuxCVvQNFGTDzQ33",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Actor",
+      "address": "HxcMWnNnBcsdH2zXXuFkTJqYvZGoxxmFivp1Wxxfih1S",
+      "rate": 5080,
+      "bytes": 164,
+      "excess": 548960,
+      "minimum": 1483360,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "HyjLRcFmnXm96W8SvVb1foZcZeCQs43YJospQTQ6Ukec",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "6neRfpaFyAXmJj48xFdN8EvnXKd6ATUuoeg3SCu2zZ7",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "JBU3MwetukbvBimBfVs52NsgVweaZNNegYRukAo3XXP",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "2E5fSxAazJMYG8xpKPtzrsCfWAv9Y8UXyxwZDhjFTgyp",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "2dJQ7rrvLpPGcxsFfmaiVjDZptHsSx3aRwj7rVmGvVm6",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Budget",
+      "address": "2dQVjuWSrzxCuYnaKBmsYkpuBqQtXchoxRVZYMMoqvqC",
+      "rate": 696,
+      "bytes": 139,
+      "excess": 1170528,
+      "minimum": 185832,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "2pj4pKPaforRtdqJMsbRYx6TkokDYELX5s1dgLtm9Sk2",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "31sdVyYtamkNthPQPubGrsiyuMvfssJwsEoN4otJvSRn",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "37pwRBpEPLy2wDXeBF6sjEVyos6g8od8qKAd1XcNp2Wn",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "SellerFeeAgreement",
+      "address": "3Ah6LYQeWRRquqNk9JEqPNUythUP6tFcxducavXjYnSZ",
+      "rate": 696,
+      "bytes": 259,
+      "excess": 1696608,
+      "minimum": 269352,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "StockControlApproval",
+      "address": "3JJUSDp9TajXCyBj7J6qcVedKSGbVMYB7Myx6zFyR3QL",
+      "rate": 696,
+      "bytes": 380,
+      "excess": 2227072,
+      "minimum": 353568,
+      "payer": "6TcyBfPdBt1kjsvDZLzmBFnuMaLWiTaAt4RjUr9VA5YD"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "3j5rAy9V4FQTbposk4Uow2eb1xHhgC9GyNZmpFn6Dmr8",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "3scRzfsVxbEVEWqsPDieWzeUeH9F5CHgfGDf2bEbsvkX",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "4GPVr7RCDNDozKFRYh3F2fandWnh81AyfYXDotzeG3x3",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "4KR7BwxEDPBbgUZSyvjGvS4Uz3kMLF3MugfwXefPPgDw",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "4rxqHcpwNNqPiYTh3LBfquWcKpJhiDsC4vG9bid5cntf",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "6TcyBfPdBt1kjsvDZLzmBFnuMaLWiTaAt4RjUr9VA5YD"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "4twwLeZRi2W9VYJQw9JJ6rvxMbYUssTYUXx1CUypqmvA",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "5JVCKtCj2Luxt96Qxy5wuywrBoVDr6yfReUh92P1Gin2",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "WalletTradingPolicy",
+      "address": "63NsQcaqTH9xCMXBzcRoBrciFzXpbjBzoz49ozCuBQQg",
+      "rate": 696,
+      "bytes": 599,
+      "excess": 3187168,
+      "minimum": 505992,
+      "payer": "6TcyBfPdBt1kjsvDZLzmBFnuMaLWiTaAt4RjUr9VA5YD"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "67aK9X5K1vjfhC88ZvouYzpo7aa5UGprcxsGeGN8BhCN",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Actor",
+      "address": "6DXTRPxtZJEWT1GNUdGztoAU8sP7GmNdaDXvND1iEe3c",
+      "rate": 696,
+      "bytes": 164,
+      "excess": 1280128,
+      "minimum": 203232,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "6GSFTM5NmQwPWJyr1ZZeCHr2LRJKhEmy52DVJQbBZXZR",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "CustomerCreditLine",
+      "address": "85TJCwwMkmxVGfYWYo2Ls4Fzoq93hLUuy92KoFAAj6yr",
+      "rate": 696,
+      "bytes": 410,
+      "excess": 2358592,
+      "minimum": 374448,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "93MCfyKskYPfMoDSEQ2LLvvqWYVryLi4Y6wAQsFrCqLk",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "9EhBSSzofxLk6Bw8A7BtomxRmm5iyv1b6JKdGhuoCnP1",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "A5bd6P8RVMvreh65xthMzGUQMfJwtjAip9cgXV4wiVwy",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "ADG9CUeaRQKvoCj9iZfS61s1zAELZQcNUcaWPhNexqFV",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "AG37JxSXAV6XWXeQFFL5qSGW7xWwqyHNsJjRbZexjfU9",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "AQnXB38BArcrghAhNzPEmJnVi3kFRZyjMzCGJrLLW4Dt",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "BJgA8w4yXp3G3xsZuBLLYzjwU5AEovxmRGXc1q815guS",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "BqxfbzgV7o3mQJbB6w9KV9g2H9UZgESBBHhzknYPX3Qn",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "BvDeHSajivymdkyAWVqXhgkvgwwYmyWYTJRWR712Etgt",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "6TcyBfPdBt1kjsvDZLzmBFnuMaLWiTaAt4RjUr9VA5YD"
+    },
+    {
+      "program": "principal_registry",
+      "type": "FundingWalletBinding",
+      "address": "C1gqsMDTCLdHYwcNciLkxpzoiXBCDfpyZXWv8eaj4bkb",
+      "rate": 696,
+      "bytes": 211,
+      "excess": 1486176,
+      "minimum": 235944,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "CCJ9DYQjd7cnPT3EsxvX6oU3TcKAf2uKQ9FH7Dss1LGD",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "CT6x1kjs1Yi3XRa5Bxqt2t5JpH8G6ts89hJ4KaScJgK5",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FundingFacility",
+      "address": "CUGbyGhek7TRMoLAVgA4FCRkqLZnwqznhXe7angDGDXj",
+      "rate": 696,
+      "bytes": 467,
+      "excess": 2608480,
+      "minimum": 414120,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "CZj7BkRTbRSVnkR9SP8X6KLSwXj7YwjU639TzxoAvqnt",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "6TcyBfPdBt1kjsvDZLzmBFnuMaLWiTaAt4RjUr9VA5YD"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "CgWbr9n8AzXjEKTCAq8XyE18VqmCzHerLGUad77K4igT",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Mandate",
+      "address": "CiXhQxBwAZpcvdyGwGrMjWsRZd5HKuWhBWf6KVrNmZYV",
+      "rate": 696,
+      "bytes": 1282,
+      "excess": 6181440,
+      "minimum": 981360,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "CukocP1PE8hD73R58W6wtaVMZH2sk7nAijFB8fq8R7SF",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "DfFpLhHdDtRegv8uMQMDGzBxfQKNWz73exi9Qhg8ePH9",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "EMPX3MrhzgnWTi9jjwfCQ5b2waoHomSVULtwRiTpCvym",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FacilityAuthority",
+      "address": "EVsLxabyb4FUt6qRvYMVUXq7teRgVKHMiGphNg2g14nu",
+      "rate": 696,
+      "bytes": 147,
+      "excess": 1205600,
+      "minimum": 191400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "FzLYWPD1jj6o2cBdGpDtNXwbJvQsvZeXRU7TMfPX8UG6",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "6TcyBfPdBt1kjsvDZLzmBFnuMaLWiTaAt4RjUr9VA5YD"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "GTxaukfjRH981u3Z7oKGAkEVVVRXRzKJsdH3o9gbVV5u",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "HwyQBwFa4f2xFYqi4JL56j1yUVxTDuxCVvQNFGTDzQ33",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Actor",
+      "address": "HxcMWnNnBcsdH2zXXuFkTJqYvZGoxxmFivp1Wxxfih1S",
+      "rate": 696,
+      "bytes": 164,
+      "excess": 1280128,
+      "minimum": 203232,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "HyjLRcFmnXm96W8SvVb1foZcZeCQs43YJospQTQ6Ukec",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "6neRfpaFyAXmJj48xFdN8EvnXKd6ATUuoeg3SCu2zZ7",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "JBU3MwetukbvBimBfVs52NsgVweaZNNegYRukAo3XXP",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "2E5fSxAazJMYG8xpKPtzrsCfWAv9Y8UXyxwZDhjFTgyp",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "2dJQ7rrvLpPGcxsFfmaiVjDZptHsSx3aRwj7rVmGvVm6",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Budget",
+      "address": "2dQVjuWSrzxCuYnaKBmsYkpuBqQtXchoxRVZYMMoqvqC",
+      "rate": 5080,
+      "bytes": 139,
+      "excess": 501960,
+      "minimum": 1356360,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Reservation",
+      "address": "2pM2fAWBzxJ3mRd5421qb8EAoxcMuCq6S7DCzCjxMQG3",
+      "rate": 5080,
+      "bytes": 179,
+      "excess": 577160,
+      "minimum": 1559560,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "2pj4pKPaforRtdqJMsbRYx6TkokDYELX5s1dgLtm9Sk2",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "31sdVyYtamkNthPQPubGrsiyuMvfssJwsEoN4otJvSRn",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "37pwRBpEPLy2wDXeBF6sjEVyos6g8od8qKAd1XcNp2Wn",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "SellerFeeAgreement",
+      "address": "3Ah6LYQeWRRquqNk9JEqPNUythUP6tFcxducavXjYnSZ",
+      "rate": 5080,
+      "bytes": 259,
+      "excess": 727560,
+      "minimum": 1965960,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "3j5rAy9V4FQTbposk4Uow2eb1xHhgC9GyNZmpFn6Dmr8",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "3scRzfsVxbEVEWqsPDieWzeUeH9F5CHgfGDf2bEbsvkX",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "4twwLeZRi2W9VYJQw9JJ6rvxMbYUssTYUXx1CUypqmvA",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "delivery_rules",
+      "type": "Case",
+      "address": "5Hm3YK4TGxLZHdVKy6cBAsjmT14eDuUH7LxSKvLgQibG",
+      "rate": 5080,
+      "bytes": 613,
+      "excess": 1393080,
+      "minimum": 3764280,
+      "payer": "4MfyR4G3NWfVRDWo6iNAHDBZqWMgwZX6FNtMqEW3a9JT"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "5JVCKtCj2Luxt96Qxy5wuywrBoVDr6yfReUh92P1Gin2",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "67aK9X5K1vjfhC88ZvouYzpo7aa5UGprcxsGeGN8BhCN",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Actor",
+      "address": "6DXTRPxtZJEWT1GNUdGztoAU8sP7GmNdaDXvND1iEe3c",
+      "rate": 5080,
+      "bytes": 164,
+      "excess": 548960,
+      "minimum": 1483360,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "6GSFTM5NmQwPWJyr1ZZeCHr2LRJKhEmy52DVJQbBZXZR",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Mandate",
+      "address": "7N96Tt347PBBUf6b3o7brXDyn7QKARPBPDbyeW1cjXfk",
+      "rate": 5080,
+      "bytes": 1282,
+      "excess": 2650800,
+      "minimum": 7162800,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "CustomerCreditLine",
+      "address": "85TJCwwMkmxVGfYWYo2Ls4Fzoq93hLUuy92KoFAAj6yr",
+      "rate": 5080,
+      "bytes": 410,
+      "excess": 1011440,
+      "minimum": 2733040,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "93MCfyKskYPfMoDSEQ2LLvvqWYVryLi4Y6wAQsFrCqLk",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "A5bd6P8RVMvreh65xthMzGUQMfJwtjAip9cgXV4wiVwy",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "ADG9CUeaRQKvoCj9iZfS61s1zAELZQcNUcaWPhNexqFV",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "AG37JxSXAV6XWXeQFFL5qSGW7xWwqyHNsJjRbZexjfU9",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "BJgA8w4yXp3G3xsZuBLLYzjwU5AEovxmRGXc1q815guS",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "delivery_rules",
+      "type": "Rule",
+      "address": "BS3fG3p2f1V5LH11cXbwoq1sUvyNRhkGeKKSZrQ81BuN",
+      "rate": 5080,
+      "bytes": 409,
+      "excess": 1009560,
+      "minimum": 2727960,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "BqxfbzgV7o3mQJbB6w9KV9g2H9UZgESBBHhzknYPX3Qn",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "FundingWalletBinding",
+      "address": "C1gqsMDTCLdHYwcNciLkxpzoiXBCDfpyZXWv8eaj4bkb",
+      "rate": 5080,
+      "bytes": 211,
+      "excess": 637320,
+      "minimum": 1722120,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "CCJ9DYQjd7cnPT3EsxvX6oU3TcKAf2uKQ9FH7Dss1LGD",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "CT6x1kjs1Yi3XRa5Bxqt2t5JpH8G6ts89hJ4KaScJgK5",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FundingFacility",
+      "address": "CUGbyGhek7TRMoLAVgA4FCRkqLZnwqznhXe7angDGDXj",
+      "rate": 5080,
+      "bytes": 467,
+      "excess": 1118600,
+      "minimum": 3022600,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "CgWbr9n8AzXjEKTCAq8XyE18VqmCzHerLGUad77K4igT",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "CukocP1PE8hD73R58W6wtaVMZH2sk7nAijFB8fq8R7SF",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "DfFpLhHdDtRegv8uMQMDGzBxfQKNWz73exi9Qhg8ePH9",
+      "rate": 5080,
+      "bytes": 371,
+      "excess": 938120,
+      "minimum": 2534920,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "EMPX3MrhzgnWTi9jjwfCQ5b2waoHomSVULtwRiTpCvym",
+      "rate": 5080,
+      "bytes": 452,
+      "excess": 1090400,
+      "minimum": 2946400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FacilityAuthority",
+      "address": "EVsLxabyb4FUt6qRvYMVUXq7teRgVKHMiGphNg2g14nu",
+      "rate": 5080,
+      "bytes": 147,
+      "excess": 517000,
+      "minimum": 1397000,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "EvidenceBill",
+      "address": "F4JPFoJnuw4fBCQh6GtkGG1Guf7dw9NwicqpJNAfTj6g",
+      "rate": 5080,
+      "bytes": 1217,
+      "excess": 2528600,
+      "minimum": 6832600,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FundedClaim",
+      "address": "G9gSbbNetDX7Z8CG8FJ6tdcqgZYtsLXhKxViCdYB7uyp",
+      "rate": 5080,
+      "bytes": 1359,
+      "excess": 2795560,
+      "minimum": 7553960,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "GTxaukfjRH981u3Z7oKGAkEVVVRXRzKJsdH3o9gbVV5u",
+      "rate": 5080,
+      "bytes": 475,
+      "excess": 1133640,
+      "minimum": 3063240,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "HwyQBwFa4f2xFYqi4JL56j1yUVxTDuxCVvQNFGTDzQ33",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Actor",
+      "address": "HxcMWnNnBcsdH2zXXuFkTJqYvZGoxxmFivp1Wxxfih1S",
+      "rate": 5080,
+      "bytes": 164,
+      "excess": 548960,
+      "minimum": 1483360,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "HyjLRcFmnXm96W8SvVb1foZcZeCQs43YJospQTQ6Ukec",
+      "rate": 5080,
+      "bytes": 220,
+      "excess": 654240,
+      "minimum": 1767840,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "6neRfpaFyAXmJj48xFdN8EvnXKd6ATUuoeg3SCu2zZ7",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "JBU3MwetukbvBimBfVs52NsgVweaZNNegYRukAo3XXP",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "2E5fSxAazJMYG8xpKPtzrsCfWAv9Y8UXyxwZDhjFTgyp",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "2dJQ7rrvLpPGcxsFfmaiVjDZptHsSx3aRwj7rVmGvVm6",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Budget",
+      "address": "2dQVjuWSrzxCuYnaKBmsYkpuBqQtXchoxRVZYMMoqvqC",
+      "rate": 696,
+      "bytes": 139,
+      "excess": 1170528,
+      "minimum": 185832,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Reservation",
+      "address": "2pM2fAWBzxJ3mRd5421qb8EAoxcMuCq6S7DCzCjxMQG3",
+      "rate": 696,
+      "bytes": 179,
+      "excess": 1345888,
+      "minimum": 213672,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "2pj4pKPaforRtdqJMsbRYx6TkokDYELX5s1dgLtm9Sk2",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "31sdVyYtamkNthPQPubGrsiyuMvfssJwsEoN4otJvSRn",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "37pwRBpEPLy2wDXeBF6sjEVyos6g8od8qKAd1XcNp2Wn",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "SellerFeeAgreement",
+      "address": "3Ah6LYQeWRRquqNk9JEqPNUythUP6tFcxducavXjYnSZ",
+      "rate": 696,
+      "bytes": 259,
+      "excess": 1696608,
+      "minimum": 269352,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "3j5rAy9V4FQTbposk4Uow2eb1xHhgC9GyNZmpFn6Dmr8",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "3scRzfsVxbEVEWqsPDieWzeUeH9F5CHgfGDf2bEbsvkX",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "4twwLeZRi2W9VYJQw9JJ6rvxMbYUssTYUXx1CUypqmvA",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "delivery_rules",
+      "type": "Case",
+      "address": "5Hm3YK4TGxLZHdVKy6cBAsjmT14eDuUH7LxSKvLgQibG",
+      "rate": 696,
+      "bytes": 613,
+      "excess": 3248544,
+      "minimum": 515736,
+      "payer": "4MfyR4G3NWfVRDWo6iNAHDBZqWMgwZX6FNtMqEW3a9JT"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "5JVCKtCj2Luxt96Qxy5wuywrBoVDr6yfReUh92P1Gin2",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "67aK9X5K1vjfhC88ZvouYzpo7aa5UGprcxsGeGN8BhCN",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Actor",
+      "address": "6DXTRPxtZJEWT1GNUdGztoAU8sP7GmNdaDXvND1iEe3c",
+      "rate": 696,
+      "bytes": 164,
+      "excess": 1280128,
+      "minimum": 203232,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "6GSFTM5NmQwPWJyr1ZZeCHr2LRJKhEmy52DVJQbBZXZR",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Mandate",
+      "address": "7N96Tt347PBBUf6b3o7brXDyn7QKARPBPDbyeW1cjXfk",
+      "rate": 696,
+      "bytes": 1282,
+      "excess": 6181440,
+      "minimum": 981360,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "CustomerCreditLine",
+      "address": "85TJCwwMkmxVGfYWYo2Ls4Fzoq93hLUuy92KoFAAj6yr",
+      "rate": 696,
+      "bytes": 410,
+      "excess": 2358592,
+      "minimum": 374448,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "93MCfyKskYPfMoDSEQ2LLvvqWYVryLi4Y6wAQsFrCqLk",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "A5bd6P8RVMvreh65xthMzGUQMfJwtjAip9cgXV4wiVwy",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "ADG9CUeaRQKvoCj9iZfS61s1zAELZQcNUcaWPhNexqFV",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "AG37JxSXAV6XWXeQFFL5qSGW7xWwqyHNsJjRbZexjfU9",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "BJgA8w4yXp3G3xsZuBLLYzjwU5AEovxmRGXc1q815guS",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "delivery_rules",
+      "type": "Rule",
+      "address": "BS3fG3p2f1V5LH11cXbwoq1sUvyNRhkGeKKSZrQ81BuN",
+      "rate": 696,
+      "bytes": 409,
+      "excess": 2354208,
+      "minimum": 373752,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "BqxfbzgV7o3mQJbB6w9KV9g2H9UZgESBBHhzknYPX3Qn",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "FundingWalletBinding",
+      "address": "C1gqsMDTCLdHYwcNciLkxpzoiXBCDfpyZXWv8eaj4bkb",
+      "rate": 696,
+      "bytes": 211,
+      "excess": 1486176,
+      "minimum": 235944,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "CCJ9DYQjd7cnPT3EsxvX6oU3TcKAf2uKQ9FH7Dss1LGD",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "CT6x1kjs1Yi3XRa5Bxqt2t5JpH8G6ts89hJ4KaScJgK5",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FundingFacility",
+      "address": "CUGbyGhek7TRMoLAVgA4FCRkqLZnwqznhXe7angDGDXj",
+      "rate": 696,
+      "bytes": 467,
+      "excess": 2608480,
+      "minimum": 414120,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "CgWbr9n8AzXjEKTCAq8XyE18VqmCzHerLGUad77K4igT",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "CukocP1PE8hD73R58W6wtaVMZH2sk7nAijFB8fq8R7SF",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "pool_issuer",
+      "type": "FinancialProjection",
+      "address": "DfFpLhHdDtRegv8uMQMDGzBxfQKNWz73exi9Qhg8ePH9",
+      "rate": 696,
+      "bytes": 371,
+      "excess": 2187616,
+      "minimum": 347304,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinancierCustody",
+      "address": "EMPX3MrhzgnWTi9jjwfCQ5b2waoHomSVULtwRiTpCvym",
+      "rate": 696,
+      "bytes": 452,
+      "excess": 2542720,
+      "minimum": 403680,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FacilityAuthority",
+      "address": "EVsLxabyb4FUt6qRvYMVUXq7teRgVKHMiGphNg2g14nu",
+      "rate": 696,
+      "bytes": 147,
+      "excess": 1205600,
+      "minimum": 191400,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "EvidenceBill",
+      "address": "F4JPFoJnuw4fBCQh6GtkGG1Guf7dw9NwicqpJNAfTj6g",
+      "rate": 696,
+      "bytes": 1217,
+      "excess": 5896480,
+      "minimum": 936120,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FundedClaim",
+      "address": "G9gSbbNetDX7Z8CG8FJ6tdcqgZYtsLXhKxViCdYB7uyp",
+      "rate": 696,
+      "bytes": 1359,
+      "excess": 6519008,
+      "minimum": 1034952,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "claims_core",
+      "type": "FinanceBook",
+      "address": "GTxaukfjRH981u3Z7oKGAkEVVVRXRzKJsdH3o9gbVV5u",
+      "rate": 696,
+      "bytes": 475,
+      "excess": 2643552,
+      "minimum": 419688,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "HwyQBwFa4f2xFYqi4JL56j1yUVxTDuxCVvQNFGTDzQ33",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Actor",
+      "address": "HxcMWnNnBcsdH2zXXuFkTJqYvZGoxxmFivp1Wxxfih1S",
+      "rate": 696,
+      "bytes": 164,
+      "excess": 1280128,
+      "minimum": 203232,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    },
+    {
+      "program": "principal_registry",
+      "type": "Principal",
+      "address": "HyjLRcFmnXm96W8SvVb1foZcZeCQs43YJospQTQ6Ukec",
+      "rate": 696,
+      "bytes": 220,
+      "excess": 1525632,
+      "minimum": 242208,
+      "payer": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+    }
+  ],
+  "boundary": "LiteSVM with an explicitly lowered Rent sysvar; no public cluster"
+}

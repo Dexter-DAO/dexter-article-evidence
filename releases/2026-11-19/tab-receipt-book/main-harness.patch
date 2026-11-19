@@ -1,0 +1,38 @@
+diff --git a/foundation/onchain/tests/financing_support.py b/foundation/onchain/tests/financing_support.py
+index fef9fa3..ee49851 100644
+--- a/foundation/onchain/tests/financing_support.py
++++ b/foundation/onchain/tests/financing_support.py
+@@ -246,11 +246,22 @@ class V1Harness(Harness):
+         assert all(tx.verify_with_results())
+         return tx
+ 
++    def account_states(self, keys):
++        """Per account key: [lamports, owner, data length, first 8 data bytes] or None.
++        Lets a record measure accounts a flow creates and the lamports they keep."""
++        states = {}
++        for key in keys:
++            account = self.svm.get_account(key)
++            states[str(key)] = None if account is None else [account.lamports, str(account.owner),
++                len(account.data), bytes(account.data[:8]).hex()]
++        return states
++
+     def send(self, name, instructions, signers=(), fail=None, unchanged=(), transaction=None):
+         tx = transaction or self.transaction(instructions, signers)
+         assert isinstance(tx.message, MessageV1), "New financial native fixture requires v1"
+         before = self.snapshot(unchanged)
+         observed_before = self.snapshot(self.observe)
++        lamports_before = self.account_states(tx.message.account_keys)
+         result = self.svm.send_transaction(tx)
+         raw = json.loads(result.to_json())
+         failed = isinstance(result, FailedTransactionMetadata)
+@@ -265,7 +276,9 @@ class V1Harness(Harness):
+                     "is_signer": m.is_signer, "is_writable": m.is_writable}
+                     for i, m in enumerate(ix.accounts)]} for ix in instructions],
+             "observed_before": observed_before, "observed_after": self.snapshot(self.observe),
+-            "rollback_accounts": [str(k) for k in unchanged]}
++            "rollback_accounts": [str(k) for k in unchanged],
++            "account_lamports": {key: [lamports_before[key], state] for key, state in
++                self.account_states(tx.message.account_keys).items()}}
+         self.cases.append(row)
+         if fail is None:
+             assert not failed, (name, raw)

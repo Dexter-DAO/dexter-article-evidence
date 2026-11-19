@@ -1,0 +1,2283 @@
+[
+ {
+  "flow": "one-time setup (principals, books, projections, custody, facility, line, budget, mandates, permissions)",
+  "note": "Long-lived records created once per principal, mint, custody, facility, line, budget and mandate; they are not per-flow costs. Main's figure includes five capital-allocation receipts.",
+  "main": {
+   "trace": "own-money",
+   "transactions": [
+    "initialize synthetic SPL token and disposable freeze authority",
+    "register company continuing principal",
+    "initialize company canonical financial book",
+    "initialize company zero-frontier Pool projection",
+    "create company owner token account",
+    "register issuer continuing principal",
+    "initialize issuer canonical financial book",
+    "initialize issuer zero-frontier Pool projection",
+    "create issuer owner token account",
+    "register financier continuing principal",
+    "initialize financier canonical financial book",
+    "initialize financier zero-frontier Pool projection",
+    "create financier owner token account",
+    "register supplier continuing principal",
+    "initialize supplier canonical financial book",
+    "initialize supplier zero-frontier Pool projection",
+    "create supplier owner token account",
+    "register fee continuing principal",
+    "initialize fee canonical financial book",
+    "initialize fee zero-frontier Pool projection",
+    "create fee owner token account",
+    "register protocol continuing principal",
+    "initialize protocol canonical financial book",
+    "initialize protocol zero-frontier Pool projection",
+    "create protocol owner token account",
+    "register assignee continuing principal",
+    "initialize assignee canonical financial book",
+    "initialize assignee zero-frontier Pool projection",
+    "create assignee owner token account",
+    "register sponsor continuing principal",
+    "initialize sponsor canonical financial book",
+    "initialize sponsor zero-frontier Pool projection",
+    "create sponsor owner token account",
+    "fund only synthetic company owner cash",
+    "fund only synthetic issuer owner cash",
+    "fund only synthetic assignee owner cash",
+    "fund only synthetic fee owner cash",
+    "owner initializes company allowance",
+    "owner creates actor 1",
+    "owner creates actor 2",
+    "create protocol custody token account",
+    "owner allocates protocol capital without inventing token inflow",
+    "create fee custody token account",
+    "owner allocates fee capital without inventing token inflow",
+    "create issuer custody token account",
+    "prefund issuer token account before explicit allocation",
+    "owner allocates issuer capital without inventing token inflow",
+    "buyer's owner creates and binds the buyer's own governed wallet",
+    "buyer's own wallet gets its token account",
+    "buyer's owner opens the wallet's cash record with nothing in it",
+    "buyer's owner moves 150,000 of the buyer's own cash into the buyer's own governed wallet",
+    "supplier approves immutable aggregate fee agreement main",
+    "ACCEPTED: the buyer opens a facility in which it is both the financier and the credit issuer",
+    "buyer's owner and the credit issuer's owner approve a facility: the buyer is the financier, a second principal is the credit issuer",
+    "buyer's owner and the credit issuer's owner open the buyer's credit line on that facility",
+    "buyer's owner permits agent 1: this seller, this lender facility, per-order limit 100,000, for 7,200 seconds"
+   ],
+   "accounts": [
+    {
+     "address": "AB3FQHskSYuWVw4M9EpGdxNzrAjBNiYGpbH4CVzLFene",
+     "type": "SPL token account",
+     "rent": 1461600,
+     "created_by": "initialize synthetic SPL token and disposable freeze authority",
+     "locked_after": 1461600,
+     "closed": false
+    },
+    {
+     "address": "EjhxbandGtDnNSxFqRPsmypa9kB9toSPHuNqfca2FSwV",
+     "type": "SPL token account",
+     "rent": 2039280,
+     "created_by": "initialize synthetic SPL token and disposable freeze authority",
+     "locked_after": 2039280,
+     "closed": false
+    },
+    {
+     "address": "3j5rAy9V4FQTbposk4Uow2eb1xHhgC9GyNZmpFn6Dmr8",
+     "type": "principal_registry.Principal",
+     "rent": 2143680,
+     "created_by": "register company continuing principal",
+     "locked_after": 2143680,
+     "closed": false
+    },
+    {
+     "address": "2E5fSxAazJMYG8xpKPtzrsCfWAv9Y8UXyxwZDhjFTgyp",
+     "type": "claims_core.FinanceBook",
+     "rent": 3027600,
+     "created_by": "initialize company canonical financial book",
+     "locked_after": 3027600,
+     "closed": false
+    },
+    {
+     "address": "AG37JxSXAV6XWXeQFFL5qSGW7xWwqyHNsJjRbZexjfU9",
+     "type": "pool_issuer.FinancialProjection",
+     "rent": 3250320,
+     "created_by": "initialize company zero-frontier Pool projection",
+     "locked_after": 3250320,
+     "closed": false
+    },
+    {
+     "address": "jTjN38dhN9hnbbFum1HjDHxvVawUBbdrzyrwVd12xv4",
+     "type": "SPL token account",
+     "rent": 2039280,
+     "created_by": "create company owner token account",
+     "locked_after": 2039280,
+     "closed": false
+    },
+    {
+     "address": "HyjLRcFmnXm96W8SvVb1foZcZeCQs43YJospQTQ6Ukec",
+     "type": "principal_registry.Principal",
+     "rent": 2143680,
+     "created_by": "register issuer continuing principal",
+     "locked_after": 2143680,
+     "closed": false
+    },
+    {
+     "address": "5JVCKtCj2Luxt96Qxy5wuywrBoVDr6yfReUh92P1Gin2",
+     "type": "claims_core.FinanceBook",
+     "rent": 3027600,
+     "created_by": "initialize issuer canonical financial book",
+     "locked_after": 3027600,
+     "closed": false
+    },
+    {
+     "address": "JBU3MwetukbvBimBfVs52NsgVweaZNNegYRukAo3XXP",
+     "type": "pool_issuer.FinancialProjection",
+     "rent": 3250320,
+     "created_by": "initialize issuer zero-frontier Pool projection",
+     "locked_after": 3250320,
+     "closed": false
+    },
+    {
+     "address": "AxjwrNNLYFVioqukAUi1zmjqchWvmJmgwszSqQeMsabx",
+     "type": "SPL token account",
+     "rent": 2039280,
+     "created_by": "create issuer owner token account",
+     "locked_after": 2039280,
+     "closed": false
+    },
+    {
+     "address": "31sdVyYtamkNthPQPubGrsiyuMvfssJwsEoN4otJvSRn",
+     "type": "principal_registry.Principal",
+     "rent": 2143680,
+     "created_by": "register financier continuing principal",
+     "locked_after": 2143680,
+     "closed": false
+    },
+    {
+     "address": "BJgA8w4yXp3G3xsZuBLLYzjwU5AEovxmRGXc1q815guS",
+     "type": "claims_core.FinanceBook",
+     "rent": 3027600,
+     "created_by": "initialize financier canonical financial book",
+     "locked_after": 3027600,
+     "closed": false
+    },
+    {
+     "address": "CukocP1PE8hD73R58W6wtaVMZH2sk7nAijFB8fq8R7SF",
+     "type": "pool_issuer.FinancialProjection",
+     "rent": 3250320,
+     "created_by": "initialize financier zero-frontier Pool projection",
+     "locked_after": 3250320,
+     "closed": false
+    },
+    {
+     "address": "dPkVhmVesskoaFmaPXidmhUo14TQJCMTiDFM9Sr4tbh",
+     "type": "SPL token account",
+     "rent": 2039280,
+     "created_by": "create financier owner token account",
+     "locked_after": 2039280,
+     "closed": false
+    },
+    {
+     "address": "ADG9CUeaRQKvoCj9iZfS61s1zAELZQcNUcaWPhNexqFV",
+     "type": "principal_registry.Principal",
+     "rent": 2143680,
+     "created_by": "register supplier continuing principal",
+     "locked_after": 2143680,
+     "closed": false
+    },
+    {
+     "address": "37pwRBpEPLy2wDXeBF6sjEVyos6g8od8qKAd1XcNp2Wn",
+     "type": "claims_core.FinanceBook",
+     "rent": 3027600,
+     "created_by": "initialize supplier canonical financial book",
+     "locked_after": 3027600,
+     "closed": false
+    },
+    {
+     "address": "2dJQ7rrvLpPGcxsFfmaiVjDZptHsSx3aRwj7rVmGvVm6",
+     "type": "pool_issuer.FinancialProjection",
+     "rent": 3250320,
+     "created_by": "initialize supplier zero-frontier Pool projection",
+     "locked_after": 3250320,
+     "closed": false
+    },
+    {
+     "address": "pZQ3qDdXgJ2bHDhJGurFTc4FYfPiqaRNDLYUC6xCcgv",
+     "type": "SPL token account",
+     "rent": 2039280,
+     "created_by": "create supplier owner token account",
+     "locked_after": 2039280,
+     "closed": false
+    },
+    {
+     "address": "67aK9X5K1vjfhC88ZvouYzpo7aa5UGprcxsGeGN8BhCN",
+     "type": "principal_registry.Principal",
+     "rent": 2143680,
+     "created_by": "register fee continuing principal",
+     "locked_after": 2143680,
+     "closed": false
+    },
+    {
+     "address": "4twwLeZRi2W9VYJQw9JJ6rvxMbYUssTYUXx1CUypqmvA",
+     "type": "claims_core.FinanceBook",
+     "rent": 3027600,
+     "created_by": "initialize fee canonical financial book",
+     "locked_after": 3027600,
+     "closed": false
+    },
+    {
+     "address": "93MCfyKskYPfMoDSEQ2LLvvqWYVryLi4Y6wAQsFrCqLk",
+     "type": "pool_issuer.FinancialProjection",
+     "rent": 3250320,
+     "created_by": "initialize fee zero-frontier Pool projection",
+     "locked_after": 3250320,
+     "closed": false
+    },
+    {
+     "address": "AVZiD2NfxGugH63hEdskDkRyNhFtRFhhQgLgnfUbGGfr",
+     "type": "SPL token account",
+     "rent": 2039280,
+     "created_by": "create fee owner token account",
+     "locked_after": 2039280,
+     "closed": false
+    },
+    {
+     "address": "HwyQBwFa4f2xFYqi4JL56j1yUVxTDuxCVvQNFGTDzQ33",
+     "type": "principal_registry.Principal",
+     "rent": 2143680,
+     "created_by": "register protocol continuing principal",
+     "locked_after": 2143680,
+     "closed": false
+    },
+    {
+     "address": "6neRfpaFyAXmJj48xFdN8EvnXKd6ATUuoeg3SCu2zZ7",
+     "type": "claims_core.FinanceBook",
+     "rent": 3027600,
+     "created_by": "initialize protocol canonical financial book",
+     "locked_after": 3027600,
+     "closed": false
+    },
+    {
+     "address": "DfFpLhHdDtRegv8uMQMDGzBxfQKNWz73exi9Qhg8ePH9",
+     "type": "pool_issuer.FinancialProjection",
+     "rent": 3250320,
+     "created_by": "initialize protocol zero-frontier Pool projection",
+     "locked_after": 3250320,
+     "closed": false
+    },
+    {
+     "address": "8XaNt1dfYyEneKmJf1xgLm1MBL7uoKMYR72HfahFbUCY",
+     "type": "SPL token account",
+     "rent": 2039280,
+     "created_by": "create protocol owner token account",
+     "locked_after": 2039280,
+     "closed": false
+    },
+    {
+     "address": "6GSFTM5NmQwPWJyr1ZZeCHr2LRJKhEmy52DVJQbBZXZR",
+     "type": "principal_registry.Principal",
+     "rent": 2143680,
+     "created_by": "register assignee continuing principal",
+     "locked_after": 2143680,
+     "closed": false
+    },
+    {
+     "address": "CT6x1kjs1Yi3XRa5Bxqt2t5JpH8G6ts89hJ4KaScJgK5",
+     "type": "claims_core.FinanceBook",
+     "rent": 3027600,
+     "created_by": "initialize assignee canonical financial book",
+     "locked_after": 3027600,
+     "closed": false
+    },
+    {
+     "address": "CCJ9DYQjd7cnPT3EsxvX6oU3TcKAf2uKQ9FH7Dss1LGD",
+     "type": "pool_issuer.FinancialProjection",
+     "rent": 3250320,
+     "created_by": "initialize assignee zero-frontier Pool projection",
+     "locked_after": 3250320,
+     "closed": false
+    },
+    {
+     "address": "9p8hZnZbgN99M2xd6fAQgetHBAWS9kMGxVRCpr2pda9Z",
+     "type": "SPL token account",
+     "rent": 2039280,
+     "created_by": "create assignee owner token account",
+     "locked_after": 2039280,
+     "closed": false
+    },
+    {
+     "address": "BqxfbzgV7o3mQJbB6w9KV9g2H9UZgESBBHhzknYPX3Qn",
+     "type": "principal_registry.Principal",
+     "rent": 2143680,
+     "created_by": "register sponsor continuing principal",
+     "locked_after": 2143680,
+     "closed": false
+    },
+    {
+     "address": "GTxaukfjRH981u3Z7oKGAkEVVVRXRzKJsdH3o9gbVV5u",
+     "type": "claims_core.FinanceBook",
+     "rent": 3027600,
+     "created_by": "initialize sponsor canonical financial book",
+     "locked_after": 3027600,
+     "closed": false
+    },
+    {
+     "address": "A5bd6P8RVMvreh65xthMzGUQMfJwtjAip9cgXV4wiVwy",
+     "type": "pool_issuer.FinancialProjection",
+     "rent": 3250320,
+     "created_by": "initialize sponsor zero-frontier Pool projection",
+     "locked_after": 3250320,
+     "closed": false
+    },
+    {
+     "address": "HFK8tcfAYpCLscJfE872yueQ5HN3fsAKneJEXZaLnNSy",
+     "type": "SPL token account",
+     "rent": 2039280,
+     "created_by": "create sponsor owner token account",
+     "locked_after": 2039280,
+     "closed": false
+    },
+    {
+     "address": "2dQVjuWSrzxCuYnaKBmsYkpuBqQtXchoxRVZYMMoqvqC",
+     "type": "principal_registry.Budget",
+     "rent": 1635600,
+     "created_by": "owner initializes company allowance",
+     "locked_after": 1635600,
+     "closed": false
+    },
+    {
+     "address": "HxcMWnNnBcsdH2zXXuFkTJqYvZGoxxmFivp1Wxxfih1S",
+     "type": "principal_registry.Actor",
+     "rent": 1809600,
+     "created_by": "owner creates actor 1",
+     "locked_after": 1809600,
+     "closed": false
+    },
+    {
+     "address": "6DXTRPxtZJEWT1GNUdGztoAU8sP7GmNdaDXvND1iEe3c",
+     "type": "principal_registry.Actor",
+     "rent": 1809600,
+     "created_by": "owner creates actor 2",
+     "locked_after": 1809600,
+     "closed": false
+    },
+    {
+     "address": "ANwGZpGtzHbU5nTypcktNyhZfUauYjx8aiMEHwTNLGTk",
+     "type": "SPL token account",
+     "rent": 2039280,
+     "created_by": "create protocol custody token account",
+     "locked_after": 2039280,
+     "closed": false
+    },
+    {
+     "address": "79v2xUwgL3NMvyfpu6WiHAg1kuDY5nEY2PMbfJRoJ6YL",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "owner allocates protocol capital without inventing token inflow",
+     "locked_after": 36867120,
+     "closed": false
+    },
+    {
+     "address": "CgWbr9n8AzXjEKTCAq8XyE18VqmCzHerLGUad77K4igT",
+     "type": "claims_core.FinancierCustody",
+     "rent": 2644800,
+     "created_by": "owner allocates protocol capital without inventing token inflow",
+     "locked_after": 2644800,
+     "closed": false
+    },
+    {
+     "address": "4rkyMHQW5fDKmJT2GwgvjHKkUU7c7dhn8NbcS9bHNEnp",
+     "type": "SPL token account",
+     "rent": 2039280,
+     "created_by": "create fee custody token account",
+     "locked_after": 2039280,
+     "closed": false
+    },
+    {
+     "address": "2pj4pKPaforRtdqJMsbRYx6TkokDYELX5s1dgLtm9Sk2",
+     "type": "claims_core.FinancierCustody",
+     "rent": 2644800,
+     "created_by": "owner allocates fee capital without inventing token inflow",
+     "locked_after": 2644800,
+     "closed": false
+    },
+    {
+     "address": "5Q9YSau3NKUhiEWe5njvujACkDcfKxNoi2mQCiWGa4Wq",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "owner allocates fee capital without inventing token inflow",
+     "locked_after": 36867120,
+     "closed": false
+    },
+    {
+     "address": "2Syr3u8Tx2yGDxrqij5VJ9yvqZHfcHA5t7BnhH2AVZAJ",
+     "type": "SPL token account",
+     "rent": 2039280,
+     "created_by": "create issuer custody token account",
+     "locked_after": 2039280,
+     "closed": false
+    },
+    {
+     "address": "3scRzfsVxbEVEWqsPDieWzeUeH9F5CHgfGDf2bEbsvkX",
+     "type": "claims_core.FinancierCustody",
+     "rent": 2644800,
+     "created_by": "owner allocates issuer capital without inventing token inflow",
+     "locked_after": 2644800,
+     "closed": false
+    },
+    {
+     "address": "DyS4v99Z9x8Kkmjvuhm7XKAoAiVBaN5EYNQCvqSSZxSN",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "owner allocates issuer capital without inventing token inflow",
+     "locked_after": 36867120,
+     "closed": false
+    },
+    {
+     "address": "613YRK68KSy8AK3EWRxwUaF2aizjoP5GU3zBXtFcLVFj",
+     "type": "system account",
+     "rent": 890880,
+     "created_by": "buyer's owner creates and binds the buyer's own governed wallet",
+     "locked_after": 890880,
+     "closed": false
+    },
+    {
+     "address": "6uNJ6fiR25iQTRUJEJNMgXy44TrMBzZ9Gt3sXFhLQj1Z",
+     "type": "principal_registry.FundingWalletBinding",
+     "rent": 2136720,
+     "created_by": "buyer's owner creates and binds the buyer's own governed wallet",
+     "locked_after": 2136720,
+     "closed": false
+    },
+    {
+     "address": "89oXxgdU6sFnaFy6tX2Q3tbmQfmP7fFUHeMJu1rKebWG",
+     "type": "swig account (152 bytes)",
+     "rent": 1948800,
+     "created_by": "buyer's owner creates and binds the buyer's own governed wallet",
+     "locked_after": 1948800,
+     "closed": false
+    },
+    {
+     "address": "5F53GrpiDmKgjdmCNiUVmSQAk7AcKC1CFx7SJyvSZ2Gg",
+     "type": "SPL token account",
+     "rent": 2039280,
+     "created_by": "buyer's own wallet gets its token account",
+     "locked_after": 2039280,
+     "closed": false
+    },
+    {
+     "address": "8fLEp5Mkw3qMRYumahP21dbkaKLBAm44poxRDiZV54Ae",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "buyer's owner opens the wallet's cash record with nothing in it",
+     "locked_after": 36867120,
+     "closed": false
+    },
+    {
+     "address": "B4AEiYAZf4qvKFATTqf8fidjeQNET8cN5UNSKgUE3UGm",
+     "type": "claims_core.FinancierCustody",
+     "rent": 2644800,
+     "created_by": "buyer's owner opens the wallet's cash record with nothing in it",
+     "locked_after": 2644800,
+     "closed": false
+    },
+    {
+     "address": "44PWT1rhroYrrnK7Q5Sk9bgGAVo86XCzwnwzqKmTQD4X",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "buyer's owner moves 150,000 of the buyer's own cash into the buyer's own governed wallet",
+     "locked_after": 36867120,
+     "closed": false
+    },
+    {
+     "address": "3Ah6LYQeWRRquqNk9JEqPNUythUP6tFcxducavXjYnSZ",
+     "type": "claims_core.SellerFeeAgreement",
+     "rent": 2470800,
+     "created_by": "supplier approves immutable aggregate fee agreement main",
+     "locked_after": 2470800,
+     "closed": false
+    },
+    {
+     "address": "HsadZxeAepSWGcDze9CeW966MN7ZRhPcqPn8uhnUKQT",
+     "type": "claims_core.FundingFacility",
+     "rent": 3918480,
+     "created_by": "ACCEPTED: the buyer opens a facility in which it is both the financier and the credit issuer",
+     "locked_after": 3918480,
+     "closed": false
+    },
+    {
+     "address": "2uagxSZ6mRViEmQPjKFucU3HNPWz3ja6N93JgYiBp1Rf",
+     "type": "claims_core.FacilityAuthority",
+     "rent": 1691280,
+     "created_by": "ACCEPTED: the buyer opens a facility in which it is both the financier and the credit issuer",
+     "locked_after": 1691280,
+     "closed": false
+    },
+    {
+     "address": "517x5wiukZZyFpBJvuwr9yAee8Am4vTvbPgD2VH9Lxjd",
+     "type": "claims_core.FacilityAuthority",
+     "rent": 1691280,
+     "created_by": "buyer's owner and the credit issuer's owner approve a facility: the buyer is the financier, a second principal is the credit issuer",
+     "locked_after": 1691280,
+     "closed": false
+    },
+    {
+     "address": "DuDNs7T7w3qMRjMR3pfFqG9yRB8Ams59ZbgPVWnRfZen",
+     "type": "claims_core.FundingFacility",
+     "rent": 3918480,
+     "created_by": "buyer's owner and the credit issuer's owner approve a facility: the buyer is the financier, a second principal is the credit issuer",
+     "locked_after": 3918480,
+     "closed": false
+    },
+    {
+     "address": "85TJCwwMkmxVGfYWYo2Ls4Fzoq93hLUuy92KoFAAj6yr",
+     "type": "claims_core.CustomerCreditLine",
+     "rent": 3521760,
+     "created_by": "buyer's owner and the credit issuer's owner open the buyer's credit line on that facility",
+     "locked_after": 3521760,
+     "closed": false
+    },
+    {
+     "address": "7N96Tt347PBBUf6b3o7brXDyn7QKARPBPDbyeW1cjXfk",
+     "type": "principal_registry.Mandate",
+     "rent": 8338080,
+     "created_by": "buyer's owner permits agent 1: this seller, this lender facility, per-order limit 100,000, for 7,200 seconds",
+     "locked_after": 8338080,
+     "closed": false
+    }
+   ],
+   "created": 60,
+   "rent": 326041200,
+   "locked_after": 326041200,
+   "locked_accounts": 60
+  },
+  "branch": {
+   "trace": "own-money",
+   "transactions": [
+    "initialize synthetic SPL token and disposable freeze authority",
+    "register company continuing principal",
+    "initialize company canonical financial book",
+    "initialize company zero-frontier Pool projection",
+    "create company owner token account",
+    "register issuer continuing principal",
+    "initialize issuer canonical financial book",
+    "initialize issuer zero-frontier Pool projection",
+    "create issuer owner token account",
+    "register financier continuing principal",
+    "initialize financier canonical financial book",
+    "initialize financier zero-frontier Pool projection",
+    "create financier owner token account",
+    "register supplier continuing principal",
+    "initialize supplier canonical financial book",
+    "initialize supplier zero-frontier Pool projection",
+    "create supplier owner token account",
+    "register fee continuing principal",
+    "initialize fee canonical financial book",
+    "initialize fee zero-frontier Pool projection",
+    "create fee owner token account",
+    "register protocol continuing principal",
+    "initialize protocol canonical financial book",
+    "initialize protocol zero-frontier Pool projection",
+    "create protocol owner token account",
+    "register assignee continuing principal",
+    "initialize assignee canonical financial book",
+    "initialize assignee zero-frontier Pool projection",
+    "create assignee owner token account",
+    "register sponsor continuing principal",
+    "initialize sponsor canonical financial book",
+    "initialize sponsor zero-frontier Pool projection",
+    "create sponsor owner token account",
+    "fund only synthetic company owner cash",
+    "fund only synthetic issuer owner cash",
+    "fund only synthetic assignee owner cash",
+    "fund only synthetic fee owner cash",
+    "owner initializes company allowance",
+    "owner creates actor 1",
+    "owner creates actor 2",
+    "create protocol custody token account",
+    "owner allocates protocol capital without inventing token inflow",
+    "create fee custody token account",
+    "owner allocates fee capital without inventing token inflow",
+    "create issuer custody token account",
+    "prefund issuer token account before explicit allocation",
+    "owner allocates issuer capital without inventing token inflow",
+    "buyer's owner creates and binds the buyer's own governed wallet",
+    "buyer's own wallet gets its token account",
+    "buyer's owner opens the wallet's cash record with nothing in it",
+    "buyer's owner moves 150,000 of the buyer's own cash into the buyer's own governed wallet",
+    "supplier approves immutable aggregate fee agreement main",
+    "ACCEPTED: the buyer opens a facility in which it is both the financier and the credit issuer",
+    "buyer's owner and the credit issuer's owner approve a facility: the buyer is the financier, a second principal is the credit issuer",
+    "buyer's owner and the credit issuer's owner open the buyer's credit line on that facility",
+    "buyer's owner permits agent 1: this seller, this lender facility, per-order limit 100,000, for 7,200 seconds"
+   ],
+   "accounts": [
+    {
+     "address": "AB3FQHskSYuWVw4M9EpGdxNzrAjBNiYGpbH4CVzLFene",
+     "type": "SPL token account",
+     "rent": 1461600,
+     "created_by": "initialize synthetic SPL token and disposable freeze authority",
+     "locked_after": 1461600,
+     "closed": false
+    },
+    {
+     "address": "EjhxbandGtDnNSxFqRPsmypa9kB9toSPHuNqfca2FSwV",
+     "type": "SPL token account",
+     "rent": 2039280,
+     "created_by": "initialize synthetic SPL token and disposable freeze authority",
+     "locked_after": 2039280,
+     "closed": false
+    },
+    {
+     "address": "3j5rAy9V4FQTbposk4Uow2eb1xHhgC9GyNZmpFn6Dmr8",
+     "type": "principal_registry.Principal",
+     "rent": 2422080,
+     "created_by": "register company continuing principal",
+     "locked_after": 2422080,
+     "closed": false
+    },
+    {
+     "address": "2E5fSxAazJMYG8xpKPtzrsCfWAv9Y8UXyxwZDhjFTgyp",
+     "type": "claims_core.FinanceBook",
+     "rent": 4196880,
+     "created_by": "initialize company canonical financial book",
+     "locked_after": 4196880,
+     "closed": false
+    },
+    {
+     "address": "AG37JxSXAV6XWXeQFFL5qSGW7xWwqyHNsJjRbZexjfU9",
+     "type": "pool_issuer.FinancialProjection",
+     "rent": 3473040,
+     "created_by": "initialize company zero-frontier Pool projection",
+     "locked_after": 3473040,
+     "closed": false
+    },
+    {
+     "address": "jTjN38dhN9hnbbFum1HjDHxvVawUBbdrzyrwVd12xv4",
+     "type": "SPL token account",
+     "rent": 2039280,
+     "created_by": "create company owner token account",
+     "locked_after": 2039280,
+     "closed": false
+    },
+    {
+     "address": "HyjLRcFmnXm96W8SvVb1foZcZeCQs43YJospQTQ6Ukec",
+     "type": "principal_registry.Principal",
+     "rent": 2422080,
+     "created_by": "register issuer continuing principal",
+     "locked_after": 2422080,
+     "closed": false
+    },
+    {
+     "address": "5JVCKtCj2Luxt96Qxy5wuywrBoVDr6yfReUh92P1Gin2",
+     "type": "claims_core.FinanceBook",
+     "rent": 4196880,
+     "created_by": "initialize issuer canonical financial book",
+     "locked_after": 4196880,
+     "closed": false
+    },
+    {
+     "address": "JBU3MwetukbvBimBfVs52NsgVweaZNNegYRukAo3XXP",
+     "type": "pool_issuer.FinancialProjection",
+     "rent": 3473040,
+     "created_by": "initialize issuer zero-frontier Pool projection",
+     "locked_after": 3473040,
+     "closed": false
+    },
+    {
+     "address": "AxjwrNNLYFVioqukAUi1zmjqchWvmJmgwszSqQeMsabx",
+     "type": "SPL token account",
+     "rent": 2039280,
+     "created_by": "create issuer owner token account",
+     "locked_after": 2039280,
+     "closed": false
+    },
+    {
+     "address": "31sdVyYtamkNthPQPubGrsiyuMvfssJwsEoN4otJvSRn",
+     "type": "principal_registry.Principal",
+     "rent": 2422080,
+     "created_by": "register financier continuing principal",
+     "locked_after": 2422080,
+     "closed": false
+    },
+    {
+     "address": "BJgA8w4yXp3G3xsZuBLLYzjwU5AEovxmRGXc1q815guS",
+     "type": "claims_core.FinanceBook",
+     "rent": 4196880,
+     "created_by": "initialize financier canonical financial book",
+     "locked_after": 4196880,
+     "closed": false
+    },
+    {
+     "address": "CukocP1PE8hD73R58W6wtaVMZH2sk7nAijFB8fq8R7SF",
+     "type": "pool_issuer.FinancialProjection",
+     "rent": 3473040,
+     "created_by": "initialize financier zero-frontier Pool projection",
+     "locked_after": 3473040,
+     "closed": false
+    },
+    {
+     "address": "dPkVhmVesskoaFmaPXidmhUo14TQJCMTiDFM9Sr4tbh",
+     "type": "SPL token account",
+     "rent": 2039280,
+     "created_by": "create financier owner token account",
+     "locked_after": 2039280,
+     "closed": false
+    },
+    {
+     "address": "ADG9CUeaRQKvoCj9iZfS61s1zAELZQcNUcaWPhNexqFV",
+     "type": "principal_registry.Principal",
+     "rent": 2422080,
+     "created_by": "register supplier continuing principal",
+     "locked_after": 2422080,
+     "closed": false
+    },
+    {
+     "address": "37pwRBpEPLy2wDXeBF6sjEVyos6g8od8qKAd1XcNp2Wn",
+     "type": "claims_core.FinanceBook",
+     "rent": 4196880,
+     "created_by": "initialize supplier canonical financial book",
+     "locked_after": 4196880,
+     "closed": false
+    },
+    {
+     "address": "2dJQ7rrvLpPGcxsFfmaiVjDZptHsSx3aRwj7rVmGvVm6",
+     "type": "pool_issuer.FinancialProjection",
+     "rent": 3473040,
+     "created_by": "initialize supplier zero-frontier Pool projection",
+     "locked_after": 3473040,
+     "closed": false
+    },
+    {
+     "address": "pZQ3qDdXgJ2bHDhJGurFTc4FYfPiqaRNDLYUC6xCcgv",
+     "type": "SPL token account",
+     "rent": 2039280,
+     "created_by": "create supplier owner token account",
+     "locked_after": 2039280,
+     "closed": false
+    },
+    {
+     "address": "67aK9X5K1vjfhC88ZvouYzpo7aa5UGprcxsGeGN8BhCN",
+     "type": "principal_registry.Principal",
+     "rent": 2422080,
+     "created_by": "register fee continuing principal",
+     "locked_after": 2422080,
+     "closed": false
+    },
+    {
+     "address": "4twwLeZRi2W9VYJQw9JJ6rvxMbYUssTYUXx1CUypqmvA",
+     "type": "claims_core.FinanceBook",
+     "rent": 4196880,
+     "created_by": "initialize fee canonical financial book",
+     "locked_after": 4196880,
+     "closed": false
+    },
+    {
+     "address": "93MCfyKskYPfMoDSEQ2LLvvqWYVryLi4Y6wAQsFrCqLk",
+     "type": "pool_issuer.FinancialProjection",
+     "rent": 3473040,
+     "created_by": "initialize fee zero-frontier Pool projection",
+     "locked_after": 3473040,
+     "closed": false
+    },
+    {
+     "address": "AVZiD2NfxGugH63hEdskDkRyNhFtRFhhQgLgnfUbGGfr",
+     "type": "SPL token account",
+     "rent": 2039280,
+     "created_by": "create fee owner token account",
+     "locked_after": 2039280,
+     "closed": false
+    },
+    {
+     "address": "HwyQBwFa4f2xFYqi4JL56j1yUVxTDuxCVvQNFGTDzQ33",
+     "type": "principal_registry.Principal",
+     "rent": 2422080,
+     "created_by": "register protocol continuing principal",
+     "locked_after": 2422080,
+     "closed": false
+    },
+    {
+     "address": "6neRfpaFyAXmJj48xFdN8EvnXKd6ATUuoeg3SCu2zZ7",
+     "type": "claims_core.FinanceBook",
+     "rent": 4196880,
+     "created_by": "initialize protocol canonical financial book",
+     "locked_after": 4196880,
+     "closed": false
+    },
+    {
+     "address": "DfFpLhHdDtRegv8uMQMDGzBxfQKNWz73exi9Qhg8ePH9",
+     "type": "pool_issuer.FinancialProjection",
+     "rent": 3473040,
+     "created_by": "initialize protocol zero-frontier Pool projection",
+     "locked_after": 3473040,
+     "closed": false
+    },
+    {
+     "address": "8XaNt1dfYyEneKmJf1xgLm1MBL7uoKMYR72HfahFbUCY",
+     "type": "SPL token account",
+     "rent": 2039280,
+     "created_by": "create protocol owner token account",
+     "locked_after": 2039280,
+     "closed": false
+    },
+    {
+     "address": "6GSFTM5NmQwPWJyr1ZZeCHr2LRJKhEmy52DVJQbBZXZR",
+     "type": "principal_registry.Principal",
+     "rent": 2422080,
+     "created_by": "register assignee continuing principal",
+     "locked_after": 2422080,
+     "closed": false
+    },
+    {
+     "address": "CT6x1kjs1Yi3XRa5Bxqt2t5JpH8G6ts89hJ4KaScJgK5",
+     "type": "claims_core.FinanceBook",
+     "rent": 4196880,
+     "created_by": "initialize assignee canonical financial book",
+     "locked_after": 4196880,
+     "closed": false
+    },
+    {
+     "address": "CCJ9DYQjd7cnPT3EsxvX6oU3TcKAf2uKQ9FH7Dss1LGD",
+     "type": "pool_issuer.FinancialProjection",
+     "rent": 3473040,
+     "created_by": "initialize assignee zero-frontier Pool projection",
+     "locked_after": 3473040,
+     "closed": false
+    },
+    {
+     "address": "9p8hZnZbgN99M2xd6fAQgetHBAWS9kMGxVRCpr2pda9Z",
+     "type": "SPL token account",
+     "rent": 2039280,
+     "created_by": "create assignee owner token account",
+     "locked_after": 2039280,
+     "closed": false
+    },
+    {
+     "address": "BqxfbzgV7o3mQJbB6w9KV9g2H9UZgESBBHhzknYPX3Qn",
+     "type": "principal_registry.Principal",
+     "rent": 2422080,
+     "created_by": "register sponsor continuing principal",
+     "locked_after": 2422080,
+     "closed": false
+    },
+    {
+     "address": "GTxaukfjRH981u3Z7oKGAkEVVVRXRzKJsdH3o9gbVV5u",
+     "type": "claims_core.FinanceBook",
+     "rent": 4196880,
+     "created_by": "initialize sponsor canonical financial book",
+     "locked_after": 4196880,
+     "closed": false
+    },
+    {
+     "address": "A5bd6P8RVMvreh65xthMzGUQMfJwtjAip9cgXV4wiVwy",
+     "type": "pool_issuer.FinancialProjection",
+     "rent": 3473040,
+     "created_by": "initialize sponsor zero-frontier Pool projection",
+     "locked_after": 3473040,
+     "closed": false
+    },
+    {
+     "address": "HFK8tcfAYpCLscJfE872yueQ5HN3fsAKneJEXZaLnNSy",
+     "type": "SPL token account",
+     "rent": 2039280,
+     "created_by": "create sponsor owner token account",
+     "locked_after": 2039280,
+     "closed": false
+    },
+    {
+     "address": "2dQVjuWSrzxCuYnaKBmsYkpuBqQtXchoxRVZYMMoqvqC",
+     "type": "principal_registry.Budget",
+     "rent": 1858320,
+     "created_by": "owner initializes company allowance",
+     "locked_after": 1858320,
+     "closed": false
+    },
+    {
+     "address": "HxcMWnNnBcsdH2zXXuFkTJqYvZGoxxmFivp1Wxxfih1S",
+     "type": "principal_registry.Actor",
+     "rent": 2032320,
+     "created_by": "owner creates actor 1",
+     "locked_after": 2032320,
+     "closed": false
+    },
+    {
+     "address": "6DXTRPxtZJEWT1GNUdGztoAU8sP7GmNdaDXvND1iEe3c",
+     "type": "principal_registry.Actor",
+     "rent": 2032320,
+     "created_by": "owner creates actor 2",
+     "locked_after": 2032320,
+     "closed": false
+    },
+    {
+     "address": "ANwGZpGtzHbU5nTypcktNyhZfUauYjx8aiMEHwTNLGTk",
+     "type": "SPL token account",
+     "rent": 2039280,
+     "created_by": "create protocol custody token account",
+     "locked_after": 2039280,
+     "closed": false
+    },
+    {
+     "address": "CgWbr9n8AzXjEKTCAq8XyE18VqmCzHerLGUad77K4igT",
+     "type": "claims_core.FinancierCustody",
+     "rent": 4036800,
+     "created_by": "owner allocates protocol capital without inventing token inflow",
+     "locked_after": 4036800,
+     "closed": false
+    },
+    {
+     "address": "4rkyMHQW5fDKmJT2GwgvjHKkUU7c7dhn8NbcS9bHNEnp",
+     "type": "SPL token account",
+     "rent": 2039280,
+     "created_by": "create fee custody token account",
+     "locked_after": 2039280,
+     "closed": false
+    },
+    {
+     "address": "2pj4pKPaforRtdqJMsbRYx6TkokDYELX5s1dgLtm9Sk2",
+     "type": "claims_core.FinancierCustody",
+     "rent": 4036800,
+     "created_by": "owner allocates fee capital without inventing token inflow",
+     "locked_after": 4036800,
+     "closed": false
+    },
+    {
+     "address": "2Syr3u8Tx2yGDxrqij5VJ9yvqZHfcHA5t7BnhH2AVZAJ",
+     "type": "SPL token account",
+     "rent": 2039280,
+     "created_by": "create issuer custody token account",
+     "locked_after": 2039280,
+     "closed": false
+    },
+    {
+     "address": "3scRzfsVxbEVEWqsPDieWzeUeH9F5CHgfGDf2bEbsvkX",
+     "type": "claims_core.FinancierCustody",
+     "rent": 4036800,
+     "created_by": "owner allocates issuer capital without inventing token inflow",
+     "locked_after": 4036800,
+     "closed": false
+    },
+    {
+     "address": "613YRK68KSy8AK3EWRxwUaF2aizjoP5GU3zBXtFcLVFj",
+     "type": "system account",
+     "rent": 890880,
+     "created_by": "buyer's owner creates and binds the buyer's own governed wallet",
+     "locked_after": 890880,
+     "closed": false
+    },
+    {
+     "address": "6uNJ6fiR25iQTRUJEJNMgXy44TrMBzZ9Gt3sXFhLQj1Z",
+     "type": "principal_registry.FundingWalletBinding",
+     "rent": 2359440,
+     "created_by": "buyer's owner creates and binds the buyer's own governed wallet",
+     "locked_after": 2359440,
+     "closed": false
+    },
+    {
+     "address": "89oXxgdU6sFnaFy6tX2Q3tbmQfmP7fFUHeMJu1rKebWG",
+     "type": "swig account (152 bytes)",
+     "rent": 1948800,
+     "created_by": "buyer's owner creates and binds the buyer's own governed wallet",
+     "locked_after": 1948800,
+     "closed": false
+    },
+    {
+     "address": "5F53GrpiDmKgjdmCNiUVmSQAk7AcKC1CFx7SJyvSZ2Gg",
+     "type": "SPL token account",
+     "rent": 2039280,
+     "created_by": "buyer's own wallet gets its token account",
+     "locked_after": 2039280,
+     "closed": false
+    },
+    {
+     "address": "B4AEiYAZf4qvKFATTqf8fidjeQNET8cN5UNSKgUE3UGm",
+     "type": "claims_core.FinancierCustody",
+     "rent": 4036800,
+     "created_by": "buyer's owner opens the wallet's cash record with nothing in it",
+     "locked_after": 4036800,
+     "closed": false
+    },
+    {
+     "address": "3Ah6LYQeWRRquqNk9JEqPNUythUP6tFcxducavXjYnSZ",
+     "type": "claims_core.SellerFeeAgreement",
+     "rent": 2693520,
+     "created_by": "supplier approves immutable aggregate fee agreement main",
+     "locked_after": 2693520,
+     "closed": false
+    },
+    {
+     "address": "HsadZxeAepSWGcDze9CeW966MN7ZRhPcqPn8uhnUKQT",
+     "type": "claims_core.FundingFacility",
+     "rent": 4141200,
+     "created_by": "ACCEPTED: the buyer opens a facility in which it is both the financier and the credit issuer",
+     "locked_after": 4141200,
+     "closed": false
+    },
+    {
+     "address": "2uagxSZ6mRViEmQPjKFucU3HNPWz3ja6N93JgYiBp1Rf",
+     "type": "claims_core.FacilityAuthority",
+     "rent": 1914000,
+     "created_by": "ACCEPTED: the buyer opens a facility in which it is both the financier and the credit issuer",
+     "locked_after": 1914000,
+     "closed": false
+    },
+    {
+     "address": "517x5wiukZZyFpBJvuwr9yAee8Am4vTvbPgD2VH9Lxjd",
+     "type": "claims_core.FacilityAuthority",
+     "rent": 1914000,
+     "created_by": "buyer's owner and the credit issuer's owner approve a facility: the buyer is the financier, a second principal is the credit issuer",
+     "locked_after": 1914000,
+     "closed": false
+    },
+    {
+     "address": "DuDNs7T7w3qMRjMR3pfFqG9yRB8Ams59ZbgPVWnRfZen",
+     "type": "claims_core.FundingFacility",
+     "rent": 4141200,
+     "created_by": "buyer's owner and the credit issuer's owner approve a facility: the buyer is the financier, a second principal is the credit issuer",
+     "locked_after": 4141200,
+     "closed": false
+    },
+    {
+     "address": "85TJCwwMkmxVGfYWYo2Ls4Fzoq93hLUuy92KoFAAj6yr",
+     "type": "claims_core.CustomerCreditLine",
+     "rent": 3744480,
+     "created_by": "buyer's owner and the credit issuer's owner open the buyer's credit line on that facility",
+     "locked_after": 3744480,
+     "closed": false
+    },
+    {
+     "address": "7N96Tt347PBBUf6b3o7brXDyn7QKARPBPDbyeW1cjXfk",
+     "type": "principal_registry.Mandate",
+     "rent": 9813600,
+     "created_by": "buyer's owner permits agent 1: this seller, this lender facility, per-order limit 100,000, for 7,200 seconds",
+     "locked_after": 9813600,
+     "closed": false
+    }
+   ],
+   "created": 55,
+   "rent": 164339520,
+   "locked_after": 164339520,
+   "locked_accounts": 55
+  }
+ },
+ {
+  "flow": "order, commit to close: cash repayment settles it, closes appended to the settling repayment",
+  "note": "Branch: the Tab, hold and run close in the settling repayment and each deposit returns to the payer recorded at creation; the repayment record is created and closed inside that same transaction, so it nets to zero and is not listed. Main keeps every record.",
+  "main": {
+   "trace": "own-money",
+   "transactions": [
+    "ACCEPTED: the buyer's agent orders 100,000 from the seller, backed by the buyer's own wallet",
+    "ACCEPTED: the seller reports 100,000 of completed work",
+    "ACCEPTED: an outside key collects the 100,000 from the buyer's wallet to the seller",
+    "ACCEPTED: clearing step 1 of 2, the buyer's owner pays 100,000 from the buyer's own token account to the credit issuer"
+   ],
+   "accounts": [
+    {
+     "address": "4mT2YNw652HRcCSx7PGk6rSojs8XGK9tmVP92jxiNELE",
+     "type": "principal_registry.OperationReceipt",
+     "rent": 2143680,
+     "created_by": "ACCEPTED: the buyer's agent orders 100,000 from the seller, backed by the buyer's own wallet",
+     "locked_after": 2143680,
+     "closed": false
+    },
+    {
+     "address": "A4Cr4xDn89cD6NWF3F3HXJ3r1FujkabGtbDa6kxV35B6",
+     "type": "claims_core.FundedClaim",
+     "rent": 9688320,
+     "created_by": "ACCEPTED: the buyer's agent orders 100,000 from the seller, backed by the buyer's own wallet",
+     "locked_after": 9688320,
+     "closed": false
+    },
+    {
+     "address": "AEfvai7UYSRrHwXkmLFabdZnFPouhg5nPcNBHecydxf4",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "ACCEPTED: the buyer's agent orders 100,000 from the seller, backed by the buyer's own wallet",
+     "locked_after": 36867120,
+     "closed": false
+    },
+    {
+     "address": "Cb7RCo9h9qoVm3Sb54eFqTDjAE8rkbjpnLCPP41ojSur",
+     "type": "principal_registry.Reservation",
+     "rent": 3807120,
+     "created_by": "ACCEPTED: the buyer's agent orders 100,000 from the seller, backed by the buyer's own wallet",
+     "locked_after": 3807120,
+     "closed": false
+    },
+    {
+     "address": "7jEQxQLvPhZt8hyfnpdzBkuE5zf3tCLffXpQ888uocvJ",
+     "type": "claims_core.FundedRun",
+     "rent": 5964720,
+     "created_by": "ACCEPTED: the seller reports 100,000 of completed work",
+     "locked_after": 5964720,
+     "closed": false
+    },
+    {
+     "address": "A4GHVQAobyGKkgSsaP4n4TkreYxNvGocoK34zuEpV6ZC",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "ACCEPTED: the seller reports 100,000 of completed work",
+     "locked_after": 36867120,
+     "closed": false
+    },
+    {
+     "address": "DTr4ufxJuFadByqb39uTNsY6ie7dpCtEN3vZU2y2LfAq",
+     "type": "claims_core.FundedPayment",
+     "rent": 2081040,
+     "created_by": "ACCEPTED: the seller reports 100,000 of completed work",
+     "locked_after": 2081040,
+     "closed": false
+    },
+    {
+     "address": "HVBpKJkciSryeFaxNXwQYfvb3ZPEdTyw7Fhb5G7VPmMG",
+     "type": "principal_registry.OperationReceipt",
+     "rent": 2143680,
+     "created_by": "ACCEPTED: the seller reports 100,000 of completed work",
+     "locked_after": 2143680,
+     "closed": false
+    },
+    {
+     "address": "cJaRFLkdGCXu7woPhxmngQDtbnJcG24X81TkzBRCue5",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "ACCEPTED: an outside key collects the 100,000 from the buyer's wallet to the seller",
+     "locked_after": 36867120,
+     "closed": false
+    },
+    {
+     "address": "EB2DKTpC7Rr7d1nnNbXDQs34omqgMydaD3eQ3hbPLnbx",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "ACCEPTED: clearing step 1 of 2, the buyer's owner pays 100,000 from the buyer's own token account to the credit issuer",
+     "locked_after": 36867120,
+     "closed": false
+    }
+   ],
+   "created": 10,
+   "rent": 173297040,
+   "locked_after": 173297040,
+   "locked_accounts": 10
+  },
+  "branch": {
+   "trace": "own-money",
+   "transactions": [
+    "ACCEPTED: the buyer's agent orders 100,000 from the seller, backed by the buyer's own wallet",
+    "ACCEPTED: the seller reports 100,000 of completed work",
+    "ACCEPTED: an outside key collects the 100,000 from the buyer's wallet to the seller",
+    "ACCEPTED: clearing step 1 of 2, the buyer's owner pays 100,000 from the buyer's own token account to the credit issuer"
+   ],
+   "accounts": [
+    {
+     "address": "2pM2fAWBzxJ3mRd5421qb8EAoxcMuCq6S7DCzCjxMQG3",
+     "type": "principal_registry.Reservation",
+     "rent": 2136720,
+     "created_by": "ACCEPTED: the buyer's agent orders 100,000 from the seller, backed by the buyer's own wallet",
+     "locked_after": 0,
+     "closed": true
+    },
+    {
+     "address": "G9gSbbNetDX7Z8CG8FJ6tdcqgZYtsLXhKxViCdYB7uyp",
+     "type": "claims_core.FundedClaim",
+     "rent": 10349520,
+     "created_by": "ACCEPTED: the buyer's agent orders 100,000 from the seller, backed by the buyer's own wallet",
+     "locked_after": 0,
+     "closed": true
+    },
+    {
+     "address": "CvUeLnCsdcxpupTQ2KUZ1RyDSByoYge3pCEJmVautzB",
+     "type": "claims_core.FundedRun",
+     "rent": 4405680,
+     "created_by": "ACCEPTED: the seller reports 100,000 of completed work",
+     "locked_after": 0,
+     "closed": true
+    }
+   ],
+   "created": 3,
+   "rent": 16891920,
+   "locked_after": 0,
+   "locked_accounts": 0
+  }
+ },
+ {
+  "flow": "order, commit to close: Swig-governed final payment, keeper sends the closes separately (Tab records; its exact repayment approvals are the next rows)",
+  "note": "Branch: the keeper's separate close transaction returns the Tab, hold, run and both repayment records to their recorded payers. The exact repayment approvals that authorized the governed payments are separate accounts, measured in the next row.",
+  "main": {
+   "trace": "financing-governed-repayment-run",
+   "transactions": [
+    "accept finite supplier commitment governed-company",
+    "supplier attests completed run governed-delivery",
+    "independent supplier collection of earned right",
+    "individual owner approval repays delivered principal through native Swig",
+    "lost response recovery reuses original economic payment",
+    "designated executor pays without another owner signature",
+    "historical standing result ignores minimum interval",
+    "second eligible payment consumes bounded standing allowance",
+    "remaining title can be assigned after governed payments",
+    "original payment survives creditor assignment owner rotation and revocation",
+    "replacement owner can approve the continuing wallet and current creditor",
+    "immutable receipt recovers after its permission expires"
+   ],
+   "accounts": [
+    {
+     "address": "7ZvNKuWfxZGCoVddwnm6x1P4Q9yupG4pT8t56XCESJo7",
+     "type": "principal_registry.OperationReceipt",
+     "rent": 2143680,
+     "created_by": "accept finite supplier commitment governed-company",
+     "locked_after": 2143680,
+     "closed": false
+    },
+    {
+     "address": "9rbtWWwhBZM2dodLLSAT4a3Lb8xT2Cy8KzJU2XLRaoVq",
+     "type": "principal_registry.Reservation",
+     "rent": 3807120,
+     "created_by": "accept finite supplier commitment governed-company",
+     "locked_after": 3807120,
+     "closed": false
+    },
+    {
+     "address": "9w3iJGCrGGNNgLXL1UUwikP1ssrv6ZvNoKwuBGzHX3Ew",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "accept finite supplier commitment governed-company",
+     "locked_after": 36867120,
+     "closed": false
+    },
+    {
+     "address": "FVMzjrKr9qnUxy3tKyoRr5jynoJ9ganNdsZV4rzcBqXt",
+     "type": "claims_core.FundedClaim",
+     "rent": 9688320,
+     "created_by": "accept finite supplier commitment governed-company",
+     "locked_after": 9688320,
+     "closed": false
+    },
+    {
+     "address": "4B4iPHhHGPVYUyQ9UKwFUKYPRhBqPh3XJpYuxLUGfRR1",
+     "type": "claims_core.FundedPayment",
+     "rent": 2081040,
+     "created_by": "supplier attests completed run governed-delivery",
+     "locked_after": 2081040,
+     "closed": false
+    },
+    {
+     "address": "4eifRYGUxradERxfG6EeeQxezYkhRkwKGVCV9kzxNXkq",
+     "type": "principal_registry.OperationReceipt",
+     "rent": 2143680,
+     "created_by": "supplier attests completed run governed-delivery",
+     "locked_after": 2143680,
+     "closed": false
+    },
+    {
+     "address": "7iQZCZsdVXRi1yftqmHRdqyxeNnWVjDi1bFpFQjJRuP3",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "supplier attests completed run governed-delivery",
+     "locked_after": 36867120,
+     "closed": false
+    },
+    {
+     "address": "HXNcMotev2KnTXcrTM4vu139dkoVnSGbzPKTXm99i3Gc",
+     "type": "claims_core.FundedRun",
+     "rent": 5964720,
+     "created_by": "supplier attests completed run governed-delivery",
+     "locked_after": 5964720,
+     "closed": false
+    },
+    {
+     "address": "HVEQp5wXEhR9179jJ2Nb616SFFQyeoCiG3LzxffComLA",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "independent supplier collection of earned right",
+     "locked_after": 36867120,
+     "closed": false
+    },
+    {
+     "address": "DxxuytrwfHy4Vg1jycRDk3rjYmch9Ci73dUXtfYrX4g9",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "individual owner approval repays delivered principal through native Swig",
+     "locked_after": 36867120,
+     "closed": false
+    },
+    {
+     "address": "6na6zv497ypBq3hkS6zyK6f5kUisaPEx7ryF6vVHwuqZ",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "designated executor pays without another owner signature",
+     "locked_after": 36867120,
+     "closed": false
+    },
+    {
+     "address": "DnveCuCotErTKJWTVeuFu85NCBUmSuuga13FrHjzMZ83",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "second eligible payment consumes bounded standing allowance",
+     "locked_after": 36867120,
+     "closed": false
+    },
+    {
+     "address": "2sGstyFZGzJXspRSCHzWcAE4FCZ8VS1R8BfFvwRJe3KP",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "remaining title can be assigned after governed payments",
+     "locked_after": 36867120,
+     "closed": false
+    },
+    {
+     "address": "6TWWaaSR6tRCjNSg8NiBSnpMUHEWqqGvtsFxgz5vGXut",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "replacement owner can approve the continuing wallet and current creditor",
+     "locked_after": 36867120,
+     "closed": false
+    }
+   ],
+   "created": 14,
+   "rent": 320765520,
+   "locked_after": 320765520,
+   "locked_accounts": 14
+  },
+  "branch": {
+   "trace": "financing-governed-repayment-run",
+   "transactions": [
+    "accept finite supplier commitment governed-company",
+    "supplier attests completed run governed-delivery",
+    "independent supplier collection of earned right",
+    "individual owner approval repays delivered principal through native Swig",
+    "designated executor pays without another owner signature",
+    "second eligible payment consumes bounded standing allowance",
+    "remaining title can be assigned after governed payments",
+    "replacement owner can approve the continuing wallet and current creditor",
+    "release unused accepted work governed-unused-capacity",
+    "replacement owner's exact approval pays the last amount the run owes",
+    "keeper closes the governed-settled Tab in a separate transaction"
+   ],
+   "accounts": [
+    {
+     "address": "ENKNPBKARWLZdpkKgQMWqqZemRzMz7xmgdxV9WpNNcQn",
+     "type": "claims_core.FundedClaim",
+     "rent": 10349520,
+     "created_by": "accept finite supplier commitment governed-company",
+     "locked_after": 0,
+     "closed": true
+    },
+    {
+     "address": "GJtqdTLrJkQ7wdCUXztvu5eyMfpxmxUPXeePhexTgNs7",
+     "type": "principal_registry.Reservation",
+     "rent": 2136720,
+     "created_by": "accept finite supplier commitment governed-company",
+     "locked_after": 0,
+     "closed": true
+    },
+    {
+     "address": "7DXYbXBq9yeTDGU3gbKUW8ECYyiEkMNuDU7XPU2QpNu6",
+     "type": "claims_core.FundedRun",
+     "rent": 4405680,
+     "created_by": "supplier attests completed run governed-delivery",
+     "locked_after": 0,
+     "closed": true
+    },
+    {
+     "address": "F47i3SL7rufjiE3nXuVEqhX9SJzPMwhVdgq6y1rUE8mV",
+     "type": "claims_core.RepaymentRecord",
+     "rent": 3807120,
+     "created_by": "individual owner approval repays delivered principal through native Swig",
+     "locked_after": 0,
+     "closed": true
+    },
+    {
+     "address": "7Ds1us7yNYhLioVANvpVAFtn3FiAFGh9LhokKxpNsnEh",
+     "type": "claims_core.RepaymentRecord",
+     "rent": 3807120,
+     "created_by": "replacement owner can approve the continuing wallet and current creditor",
+     "locked_after": 0,
+     "closed": true
+    }
+   ],
+   "created": 5,
+   "rent": 24506160,
+   "locked_after": 0,
+   "locked_accounts": 0
+  }
+ },
+ {
+  "flow": "exact repayment approval: grant, then close_approval after expiry (the payment it authorizes is measured with its order)",
+  "note": "Branch: double-charge.py grants approval a (its grant; 5,547,120 lamports paid by its grantor), uses it for one payment, and after expiry an outside key closes it : exactly 5,547,120 lamports go back to the grantor, the closer pays only the fee. Main's exact repayment permission is a RepaymentPermission account with no close. In financing_governed_repayment.py the branch's three exact repayment approvals stay open because that suite never runs close_approval.",
+  "main": {
+   "trace": "financing-governed-repayment-run",
+   "transactions": [
+    "owner grants exact individual repayment permission individual-permission"
+   ],
+   "accounts": [
+    {
+     "address": "9oqYWX2DvUCkDx8PwSiXkUJibEcX32VkFL4ELzvxWR9f",
+     "type": "principal_registry.RepaymentPermission",
+     "rent": 5714160,
+     "created_by": "owner grants exact individual repayment permission individual-permission",
+     "locked_after": 5714160,
+     "closed": false
+    }
+   ],
+   "created": 1,
+   "rent": 5714160,
+   "locked_after": 5714160,
+   "locked_accounts": 1
+  },
+  "branch": {
+   "trace": "double-charge",
+   "transactions": [
+    "owner grants exact individual repayment permission approval-a",
+    "anyone closes used approval a after its expiry"
+   ],
+   "accounts": [
+    {
+     "address": "4RRGQFMa2N2PKY9SvFv173g5CKVtVH7wnnujf9RiMqNR",
+     "type": "principal_registry.ExactRepaymentApproval",
+     "rent": 5547120,
+     "created_by": "owner grants exact individual repayment permission approval-a",
+     "locked_after": 0,
+     "closed": true
+    }
+   ],
+   "created": 1,
+   "rent": 5547120,
+   "locked_after": 0,
+   "locked_accounts": 0
+  }
+ },
+ {
+  "flow": "evidence order, commit to close: no records, finalized at zero",
+  "note": null,
+  "main": {
+   "trace": "evidence-billing",
+   "transactions": [
+    "accept bounded authenticated work no-records",
+    "independent caller establishes deterministic bill then releases residual no-records"
+   ],
+   "accounts": [
+    {
+     "address": "4mR3d3VR8vu4Qk5RSRXvkNEHXrUm713avxukswAFBRFo",
+     "type": "principal_registry.Reservation",
+     "rent": 3807120,
+     "created_by": "accept bounded authenticated work no-records",
+     "locked_after": 3807120,
+     "closed": false
+    },
+    {
+     "address": "7uCAYrGZ1JPJzFUF9o1dqgUrWssJBZcVXzePNv9Vd5ay",
+     "type": "claims_core.FundedClaim",
+     "rent": 9688320,
+     "created_by": "accept bounded authenticated work no-records",
+     "locked_after": 9688320,
+     "closed": false
+    },
+    {
+     "address": "EADw2V2exeeebkVxRPvtrR2Fgio8W1JyD9bQMQyxfnPQ",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "accept bounded authenticated work no-records",
+     "locked_after": 36867120,
+     "closed": false
+    },
+    {
+     "address": "ESMR3sXuPn6BBNq8xFjdBBMMkrGnXo333TJVWcCpagK6",
+     "type": "principal_registry.OperationReceipt",
+     "rent": 2143680,
+     "created_by": "accept bounded authenticated work no-records",
+     "locked_after": 2143680,
+     "closed": false
+    },
+    {
+     "address": "Hko4yKrk3nPDMVHVyjSiPrB7hd2stM3io5aRwfVjFjt9",
+     "type": "claims_core.EvidenceBill",
+     "rent": 9806640,
+     "created_by": "accept bounded authenticated work no-records",
+     "locked_after": 9806640,
+     "closed": false
+    },
+    {
+     "address": "3pxNGNK2ygx9iy4nccC8QiRHjjT1RMmgXo6DxErniaKo",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "independent caller establishes deterministic bill then releases residual no-records",
+     "locked_after": 36867120,
+     "closed": false
+    },
+    {
+     "address": "4xPUxxAQd5NsYMFYYopfAWYRWeMW58QeG9Xifu1BB1Jn",
+     "type": "claims_core.FundedPayment",
+     "rent": 2081040,
+     "created_by": "independent caller establishes deterministic bill then releases residual no-records",
+     "locked_after": 2081040,
+     "closed": false
+    },
+    {
+     "address": "7w3xQgmgzCuH7TzaEfjwctAA3yp2FwKGws8QJLYntFQu",
+     "type": "claims_core.FundedRun",
+     "rent": 5964720,
+     "created_by": "independent caller establishes deterministic bill then releases residual no-records",
+     "locked_after": 5964720,
+     "closed": false
+    },
+    {
+     "address": "8RMy5PsjZorfA84viL1n1VEsUMVYHZEHzbayNiSY7GZY",
+     "type": "principal_registry.OperationReceipt",
+     "rent": 2143680,
+     "created_by": "independent caller establishes deterministic bill then releases residual no-records",
+     "locked_after": 2143680,
+     "closed": false
+    },
+    {
+     "address": "CUvvGW8c1KUK44ESLkvSVUTNgdQk6qJUE9sbYT1od6CD",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "independent caller establishes deterministic bill then releases residual no-records",
+     "locked_after": 36867120,
+     "closed": false
+    }
+   ],
+   "created": 10,
+   "rent": 146236560,
+   "locked_after": 146236560,
+   "locked_accounts": 10
+  },
+  "branch": {
+   "trace": "evidence-billing",
+   "transactions": [
+    "accept bounded authenticated work no-records",
+    "independent caller establishes deterministic bill then releases residual no-records",
+    "Change 5: an outside key closes settled order no-records"
+   ],
+   "accounts": [
+    {
+     "address": "3gw78gJhSeqzCJd8itzrybv9i7Nx4DrCPcsPp6TDSHrh",
+     "type": "claims_core.FundedClaim",
+     "rent": 10349520,
+     "created_by": "accept bounded authenticated work no-records",
+     "locked_after": 0,
+     "closed": true
+    },
+    {
+     "address": "8LMmbsuBTeyRVTTkrVCDKoTBUvUU1aMX254aA5AQufN3",
+     "type": "claims_core.EvidenceBill",
+     "rent": 9361200,
+     "created_by": "accept bounded authenticated work no-records",
+     "locked_after": 0,
+     "closed": true
+    },
+    {
+     "address": "JDvTGUNSzqEfMHk85adjZHKss9cA8QqibHdj4t8ZpKiR",
+     "type": "principal_registry.Reservation",
+     "rent": 2136720,
+     "created_by": "accept bounded authenticated work no-records",
+     "locked_after": 0,
+     "closed": true
+    }
+   ],
+   "created": 3,
+   "rent": 21847440,
+   "locked_after": 0,
+   "locked_accounts": 0
+  }
+ },
+ {
+  "flow": "wallet send, standing grant",
+  "note": null,
+  "main": {
+   "trace": "wallet-spending-send",
+   "transactions": [
+    "bounded executor sends the first permitted amount"
+   ],
+   "accounts": [
+    {
+     "address": "5GTNEsJD29fw7YuJvMtobs4FqFuYZ53iaKeLhRgzkioY",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "bounded executor sends the first permitted amount",
+     "locked_after": 36867120,
+     "closed": false
+    },
+    {
+     "address": "HGoxn3vQGkU5NtJ5oJNfMKZs7MoRXkVyEeof3LMhPLdh",
+     "type": "claims_core.WalletSpendReceipt",
+     "rent": 7266240,
+     "created_by": "bounded executor sends the first permitted amount",
+     "locked_after": 7266240,
+     "closed": false
+    }
+   ],
+   "created": 2,
+   "rent": 44133360,
+   "locked_after": 44133360,
+   "locked_accounts": 2
+  },
+  "branch": {
+   "trace": "wallet-spending-send",
+   "transactions": [
+    "bounded executor sends the first permitted amount"
+   ],
+   "accounts": [],
+   "created": 0,
+   "rent": 0,
+   "locked_after": 0,
+   "locked_accounts": 0
+  }
+ },
+ {
+  "flow": "wallet send, exact approval: grant, send, then (branch) close_approval after expiry",
+  "note": "Branch: wallet_double_charge.py rows 94, 95 and 100. The grant's payer (9LbZUY...) pays 5,442,720 lamports and gets exactly 5,442,720 back from close_approval after expiry; the closer pays only the fee. Main keeps the SpendingPermission and both receipts.",
+  "main": {
+   "trace": "wallet-spending-send",
+   "transactions": [
+    "owner grants exact spending permission exact-send-approval",
+    "explicit owner approval transfers exactly the approved asset and amount"
+   ],
+   "accounts": [
+    {
+     "address": "12nLs2L2fh9FVZenekGL4oadSjLRGfWEvPSrZbSWykof",
+     "type": "principal_registry.SpendingPermission",
+     "rent": 5609760,
+     "created_by": "owner grants exact spending permission exact-send-approval",
+     "locked_after": 5609760,
+     "closed": false
+    },
+    {
+     "address": "De6953ZSrw1GnqYg45V2Knt77ms9XsXJEZbJCZ5JV67i",
+     "type": "claims_core.WalletSpendReceipt",
+     "rent": 7266240,
+     "created_by": "explicit owner approval transfers exactly the approved asset and amount",
+     "locked_after": 7266240,
+     "closed": false
+    },
+    {
+     "address": "Ed6m7i3Ua4zGByEbkZWSauc8fFest9ikegkWsz8mMP2J",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "explicit owner approval transfers exactly the approved asset and amount",
+     "locked_after": 36867120,
+     "closed": false
+    }
+   ],
+   "created": 3,
+   "rent": 49743120,
+   "locked_after": 49743120,
+   "locked_accounts": 3
+  },
+  "branch": {
+   "trace": "wallet-double-charge",
+   "transactions": [
+    "owner grants exact spending permission double-charge-close-used",
+    "close_approval: the used approval's trade lands",
+    "close_approval: the expired used approval closes"
+   ],
+   "accounts": [
+    {
+     "address": "F5CyAPu1DHL42SWMDJ75wwFhitEa686bvJXfcU9BUDuS",
+     "type": "principal_registry.ExactSpendingApproval",
+     "rent": 5442720,
+     "created_by": "owner grants exact spending permission double-charge-close-used",
+     "locked_after": 0,
+     "closed": true
+    }
+   ],
+   "created": 1,
+   "rent": 5442720,
+   "locked_after": 0,
+   "locked_accounts": 0
+  }
+ },
+ {
+  "flow": "exact spending approval never used: grant, then close_approval after expiry",
+  "note": "Branch only (main has no close): an approval that was never used also closes after expiry, rent back to its payer.",
+  "branch": {
+   "trace": "wallet-double-charge",
+   "transactions": [
+    "owner grants exact spending permission double-charge-close-unused",
+    "close_approval: the expired unused approval closes"
+   ],
+   "accounts": [
+    {
+     "address": "5z5ac9xkfTJ2fUUNS4jMcptF3uzDvmSYPU2EqAN3mub3",
+     "type": "principal_registry.ExactSpendingApproval",
+     "rent": 5442720,
+     "created_by": "owner grants exact spending permission double-charge-close-unused",
+     "locked_after": 0,
+     "closed": true
+    }
+   ],
+   "created": 1,
+   "rent": 5442720,
+   "locked_after": 0,
+   "locked_accounts": 0
+  }
+ },
+ {
+  "flow": "SPL swap, standing grant",
+  "note": null,
+  "main": {
+   "trace": "wallet-spending-swap",
+   "transactions": [
+    "bounded delegated swap commits the actual debit and output"
+   ],
+   "accounts": [
+    {
+     "address": "315PrgtC79Htd5StZeSnFmHaX5SkjLwATnnspkD9WfKk",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "bounded delegated swap commits the actual debit and output",
+     "locked_after": 36867120,
+     "closed": false
+    },
+    {
+     "address": "3wMFfYgNikvzmwqdNebVTTETsuPGzEK9NbhnViSy5yWA",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "bounded delegated swap commits the actual debit and output",
+     "locked_after": 36867120,
+     "closed": false
+    },
+    {
+     "address": "62HLqdC8CtB2ek5GF8UocheMuEwAoW227EQazysBDWD7",
+     "type": "claims_core.WalletSpendReceipt",
+     "rent": 7266240,
+     "created_by": "bounded delegated swap commits the actual debit and output",
+     "locked_after": 7266240,
+     "closed": false
+    }
+   ],
+   "created": 3,
+   "rent": 81000480,
+   "locked_after": 81000480,
+   "locked_accounts": 3
+  },
+  "branch": {
+   "trace": "wallet-spending-swap",
+   "transactions": [
+    "bounded delegated swap commits the actual debit and output"
+   ],
+   "accounts": [],
+   "created": 0,
+   "rent": 0,
+   "locked_after": 0,
+   "locked_accounts": 0
+  }
+ },
+ {
+  "flow": "SPL swap, exact approval: grant, swap, then (branch) close_approval after expiry",
+  "note": "Branch: wallet_spending.py now closes its exact approvals after expiry; the ExactSpendingApproval's rent goes back to its recorded payer. Main keeps the SpendingPermission and the receipts.",
+  "main": {
+   "trace": "wallet-spending-swap",
+   "transactions": [
+    "owner grants exact spending permission exact-swap-approval",
+    "owner-approved exact-input swap executes the actual source-built adapter"
+   ],
+   "accounts": [
+    {
+     "address": "5t97B67fSVkDDQCF7hyradzdXgfnwoZruQR8jM8mSC7Y",
+     "type": "principal_registry.SpendingPermission",
+     "rent": 5609760,
+     "created_by": "owner grants exact spending permission exact-swap-approval",
+     "locked_after": 5609760,
+     "closed": false
+    },
+    {
+     "address": "ABEeLk9RatXuXJPLHeT9MZyxjeQ8sn2iZqYyjiHxjbpd",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "owner-approved exact-input swap executes the actual source-built adapter",
+     "locked_after": 36867120,
+     "closed": false
+    },
+    {
+     "address": "AXUy9KsebbczpbshDBBxNdH1pDCooQHJC81D9D3GpKs7",
+     "type": "claims_core.WalletSpendReceipt",
+     "rent": 7266240,
+     "created_by": "owner-approved exact-input swap executes the actual source-built adapter",
+     "locked_after": 7266240,
+     "closed": false
+    },
+    {
+     "address": "DWrTgtkd8wJhDg4qEMnUFAyij9qqFXdCE1TPz2bAr4FM",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "owner-approved exact-input swap executes the actual source-built adapter",
+     "locked_after": 36867120,
+     "closed": false
+    }
+   ],
+   "created": 4,
+   "rent": 86610240,
+   "locked_after": 86610240,
+   "locked_accounts": 4
+  },
+  "branch": {
+   "trace": "wallet-spending-swap",
+   "transactions": [
+    "owner grants exact spending permission exact-swap-approval",
+    "owner-approved exact-input swap executes the actual source-built adapter",
+    "close_approval: expired exact approval exact-swap-approval closes"
+   ],
+   "accounts": [
+    {
+     "address": "SDXGnMK9M49a8ooY3uPpaPQ6XDaMZc61kLq1EsEubYH",
+     "type": "principal_registry.ExactSpendingApproval",
+     "rent": 5442720,
+     "created_by": "owner grants exact spending permission exact-swap-approval",
+     "locked_after": 0,
+     "closed": true
+    }
+   ],
+   "created": 1,
+   "rent": 5442720,
+   "locked_after": 0,
+   "locked_accounts": 0
+  }
+ },
+ {
+  "flow": "Jupiter trade, standing grant",
+  "note": null,
+  "main": {
+   "trace": "wallet-jupiter-public",
+   "transactions": [
+    "actual recorded public public-pump-direct route under governed wallet authority"
+   ],
+   "accounts": [
+    {
+     "address": "8bePjLpPKaiMRr539ZWWePnqvQuwo4dnYWgSzCM3Q9E",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "actual recorded public public-pump-direct route under governed wallet authority",
+     "locked_after": 36867120,
+     "closed": false
+    },
+    {
+     "address": "5nL9ge8Yd7AvV5TXEPPznfcsfTUMdaxf1Y9NeBBArgHC",
+     "type": "claims_core.WalletSpendReceipt",
+     "rent": 7266240,
+     "created_by": "actual recorded public public-pump-direct route under governed wallet authority",
+     "locked_after": 7266240,
+     "closed": false
+    },
+    {
+     "address": "AyURehaX2Mjs9ocpUyNEpD5hFYXJyNr4g9LnMN4zUmHf",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "actual recorded public public-pump-direct route under governed wallet authority",
+     "locked_after": 36867120,
+     "closed": false
+    }
+   ],
+   "created": 3,
+   "rent": 81000480,
+   "locked_after": 81000480,
+   "locked_accounts": 3
+  },
+  "branch": {
+   "trace": "wallet-jupiter-public",
+   "transactions": [
+    "actual recorded public public-pump-direct route under governed wallet authority"
+   ],
+   "accounts": [],
+   "created": 0,
+   "rent": 0,
+   "locked_after": 0,
+   "locked_accounts": 0
+  }
+ },
+ {
+  "flow": "Jupiter trade, exact approval: grant, trade, then (branch) close_approval after expiry",
+  "note": "Branch: wallet_jupiter.py now closes its exact approvals after expiry; the approval's rent goes back to its recorded payer.",
+  "main": {
+   "trace": "wallet-jupiter-public",
+   "transactions": [
+    "owner grants exact spending permission public-route-0",
+    "actual recorded public public-legacy route under governed wallet authority"
+   ],
+   "accounts": [
+    {
+     "address": "8wi8P4yAYEj1WKnhYB4bBLrGo6s4is6jGNMPo2BYtwxZ",
+     "type": "principal_registry.SpendingPermission",
+     "rent": 5609760,
+     "created_by": "owner grants exact spending permission public-route-0",
+     "locked_after": 5609760,
+     "closed": false
+    },
+    {
+     "address": "TzetibhDi61ugxk1bupHPPPA8neTv2vFv9csvvnkuqs",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "actual recorded public public-legacy route under governed wallet authority",
+     "locked_after": 36867120,
+     "closed": false
+    },
+    {
+     "address": "3h5txPJ7RNSpLoHeZhCrNHjuJVoun1qCgT1mcVGXjE3P",
+     "type": "claims_core.WalletSpendReceipt",
+     "rent": 7266240,
+     "created_by": "actual recorded public public-legacy route under governed wallet authority",
+     "locked_after": 7266240,
+     "closed": false
+    },
+    {
+     "address": "8wDe6c87UGab1bNz67FdheBAABYyR7TDP2pKGQxTqCLo",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "actual recorded public public-legacy route under governed wallet authority",
+     "locked_after": 36867120,
+     "closed": false
+    }
+   ],
+   "created": 4,
+   "rent": 86610240,
+   "locked_after": 86610240,
+   "locked_accounts": 4
+  },
+  "branch": {
+   "trace": "wallet-jupiter-public",
+   "transactions": [
+    "owner grants exact spending permission public-route-0",
+    "actual recorded public public-legacy route under governed wallet authority",
+    "close_approval: expired exact approval public-route-0 closes"
+   ],
+   "accounts": [
+    {
+     "address": "SDXGnMK9M49a8ooY3uPpaPQ6XDaMZc61kLq1EsEubYH",
+     "type": "principal_registry.ExactSpendingApproval",
+     "rent": 5442720,
+     "created_by": "owner grants exact spending permission public-route-0",
+     "locked_after": 0,
+     "closed": true
+    }
+   ],
+   "created": 1,
+   "rent": 5442720,
+   "locked_after": 0,
+   "locked_accounts": 0
+  }
+ },
+ {
+  "flow": "Pump trade, standing grant",
+  "note": null,
+  "main": {
+   "trace": "wallet-pump-curve",
+   "transactions": [
+    "bounded standing permission admits first launch buy"
+   ],
+   "accounts": [
+    {
+     "address": "VHbq7XfaxuYJUwXZciT2iXfcwXVtKQao2U3R6YkXB7K",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "bounded standing permission admits first launch buy",
+     "locked_after": 36867120,
+     "closed": false
+    },
+    {
+     "address": "6xQMm7HWEBiw3ZJqL164F3oJCTd879oQXPoEivmkyT33",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "bounded standing permission admits first launch buy",
+     "locked_after": 36867120,
+     "closed": false
+    },
+    {
+     "address": "Bw73Dw4wZSmYHcaZdqwehF1PAXRb6MMipp9No4Yy4ymP",
+     "type": "claims_core.WalletSpendReceipt",
+     "rent": 7266240,
+     "created_by": "bounded standing permission admits first launch buy",
+     "locked_after": 7266240,
+     "closed": false
+    },
+    {
+     "address": "EfHZg5N4afz1ac8KVqBT5D8vnmMmfQhCYbfqFsVXwrBC",
+     "type": "claims_core.WalletTradingDetails",
+     "rent": 9862320,
+     "created_by": "bounded standing permission admits first launch buy",
+     "locked_after": 9862320,
+     "closed": false
+    }
+   ],
+   "created": 4,
+   "rent": 90862800,
+   "locked_after": 90862800,
+   "locked_accounts": 4
+  },
+  "branch": {
+   "trace": "wallet-pump-curve",
+   "transactions": [
+    "bounded standing permission admits first launch buy"
+   ],
+   "accounts": [],
+   "created": 0,
+   "rent": 0,
+   "locked_after": 0,
+   "locked_accounts": 0
+  }
+ },
+ {
+  "flow": "Pump trade, exact approval: grant, buy, then (branch) close_approval after expiry",
+  "note": "Branch: wallet_pump.py now closes its exact approvals after expiry; the approval's rent goes back to its recorded payer.",
+  "main": {
+   "trace": "wallet-pump-curve",
+   "transactions": [
+    "owner grants exact spending permission pump-exact-buy",
+    "actual governed Pump launch buy unwraps only accounted WSOL"
+   ],
+   "accounts": [
+    {
+     "address": "4dSPw1CYBiF6mzW1aTjpZPtPEadhTiaRAQjMLgFWU6Qc",
+     "type": "principal_registry.SpendingPermission",
+     "rent": 5609760,
+     "created_by": "owner grants exact spending permission pump-exact-buy",
+     "locked_after": 5609760,
+     "closed": false
+    },
+    {
+     "address": "4trVDi6QhPupafEcXC16VTxKLQfiM3ELryhiYZ6Y6g4A",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "actual governed Pump launch buy unwraps only accounted WSOL",
+     "locked_after": 36867120,
+     "closed": false
+    },
+    {
+     "address": "6MN9gjZ9rHqsdhRLGBCigKRWgTxb8rpSVZnJcJXQqUwD",
+     "type": "claims_core.WalletTradingDetails",
+     "rent": 9862320,
+     "created_by": "actual governed Pump launch buy unwraps only accounted WSOL",
+     "locked_after": 9862320,
+     "closed": false
+    },
+    {
+     "address": "8khDnjf4ekncdcZoNazdXAEKUQmRfngWzcFQSEBiGXwH",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "actual governed Pump launch buy unwraps only accounted WSOL",
+     "locked_after": 36867120,
+     "closed": false
+    },
+    {
+     "address": "8q1cmzsYXXLtmAW3gAzcw97YRHfegnryUKibX4YJ9LHj",
+     "type": "claims_core.WalletSpendReceipt",
+     "rent": 7266240,
+     "created_by": "actual governed Pump launch buy unwraps only accounted WSOL",
+     "locked_after": 7266240,
+     "closed": false
+    }
+   ],
+   "created": 5,
+   "rent": 96472560,
+   "locked_after": 96472560,
+   "locked_accounts": 5
+  },
+  "branch": {
+   "trace": "wallet-pump-curve",
+   "transactions": [
+    "owner grants exact spending permission pump-exact-buy",
+    "actual governed Pump launch buy unwraps only accounted WSOL",
+    "close_approval: expired exact approval pump-exact-buy closes"
+   ],
+   "accounts": [
+    {
+     "address": "8QVAwvt7Es4Hb2sgZBsxeyaakh1sh3mMesSTBXhJZHrV",
+     "type": "principal_registry.ExactSpendingApproval",
+     "rent": 5442720,
+     "created_by": "owner grants exact spending permission pump-exact-buy",
+     "locked_after": 0,
+     "closed": true
+    }
+   ],
+   "created": 1,
+   "rent": 5442720,
+   "locked_after": 0,
+   "locked_accounts": 0
+  }
+ },
+ {
+  "flow": "deposit: owner moves cash into the governed wallet's custody",
+  "note": null,
+  "main": {
+   "trace": "own-money",
+   "transactions": [
+    "buyer's owner moves 150,000 of the buyer's own cash into the buyer's own governed wallet"
+   ],
+   "accounts": [
+    {
+     "address": "44PWT1rhroYrrnK7Q5Sk9bgGAVo86XCzwnwzqKmTQD4X",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "buyer's owner moves 150,000 of the buyer's own cash into the buyer's own governed wallet",
+     "locked_after": 36867120,
+     "closed": false
+    }
+   ],
+   "created": 1,
+   "rent": 36867120,
+   "locked_after": 36867120,
+   "locked_accounts": 1
+  },
+  "branch": {
+   "trace": "own-money",
+   "transactions": [
+    "buyer's owner moves 150,000 of the buyer's own cash into the buyer's own governed wallet"
+   ],
+   "accounts": [],
+   "created": 0,
+   "rent": 0,
+   "locked_after": 0,
+   "locked_accounts": 0
+  }
+ },
+ {
+  "flow": "deposit: owner capital contribution into existing custody",
+  "note": null,
+  "main": {
+   "trace": "financing-commercial",
+   "transactions": [
+    "owner contribution records actual token inflow and allocated own capital"
+   ],
+   "accounts": [
+    {
+     "address": "AzZvgoJCbCoZdTnEvWvRdqoqmcvBohwd729q4o4RmNtu",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "owner contribution records actual token inflow and allocated own capital",
+     "locked_after": 36867120,
+     "closed": false
+    }
+   ],
+   "created": 1,
+   "rent": 36867120,
+   "locked_after": 36867120,
+   "locked_accounts": 1
+  },
+  "branch": {
+   "trace": "financing-commercial",
+   "transactions": [
+    "owner contribution records actual token inflow and allocated own capital"
+   ],
+   "accounts": [],
+   "created": 0,
+   "rent": 0,
+   "locked_after": 0,
+   "locked_accounts": 0
+  }
+ },
+ {
+  "flow": "deposit: tokens into wallet trading custody",
+  "note": null,
+  "main": {
+   "trace": "wallet-token-lifecycle",
+   "transactions": [
+    "deposit exact gross/net wallet tokens"
+   ],
+   "accounts": [
+    {
+     "address": "7XYNiEyFdSQfwe8T15HzQLBBc8UKeanx5pwswTRgcKjL",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "deposit exact gross/net wallet tokens",
+     "locked_after": 36867120,
+     "closed": false
+    },
+    {
+     "address": "HpxShdwaumYSKHiBSU9S5AAyLDJvkWi7bH2XHgZvMvAc",
+     "type": "claims_core.WalletTokenTransferReceipt",
+     "rent": 4196880,
+     "created_by": "deposit exact gross/net wallet tokens",
+     "locked_after": 4196880,
+     "closed": false
+    }
+   ],
+   "created": 2,
+   "rent": 41064000,
+   "locked_after": 41064000,
+   "locked_accounts": 2
+  },
+  "branch": {
+   "trace": "wallet-token-lifecycle",
+   "transactions": [
+    "deposit exact gross/net wallet tokens"
+   ],
+   "accounts": [],
+   "created": 0,
+   "rent": 0,
+   "locked_after": 0,
+   "locked_accounts": 0
+  }
+ },
+ {
+  "flow": "withdrawal: owner withdraws free cash from custody",
+  "note": null,
+  "main": {
+   "trace": "own-money",
+   "transactions": [
+    "ACCEPTED: buyer's owner withdraws exactly the free 50,000 from the buyer's wallet"
+   ],
+   "accounts": [
+    {
+     "address": "Hf7svmh4Nynk5tfbPkXTfF8oosA5xwymCLx2YPPfKucj",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "ACCEPTED: buyer's owner withdraws exactly the free 50,000 from the buyer's wallet",
+     "locked_after": 36867120,
+     "closed": false
+    }
+   ],
+   "created": 1,
+   "rent": 36867120,
+   "locked_after": 36867120,
+   "locked_accounts": 1
+  },
+  "branch": {
+   "trace": "own-money",
+   "transactions": [
+    "ACCEPTED: buyer's owner withdraws exactly the free 50,000 from the buyer's wallet"
+   ],
+   "accounts": [],
+   "created": 0,
+   "rent": 0,
+   "locked_after": 0,
+   "locked_accounts": 0
+  }
+ },
+ {
+  "flow": "withdrawal: tokens out of wallet trading custody",
+  "note": null,
+  "main": {
+   "trace": "wallet-token-lifecycle",
+   "transactions": [
+    "withdraw exact gross/net wallet tokens"
+   ],
+   "accounts": [
+    {
+     "address": "48BraLyQEx3yw4naFc2tE12gT4EyJSwshirT6LNxkufj",
+     "type": "claims_core.FinanceReceipt",
+     "rent": 36867120,
+     "created_by": "withdraw exact gross/net wallet tokens",
+     "locked_after": 36867120,
+     "closed": false
+    },
+    {
+     "address": "DuQdK1eATvugf9Fse2rHEBhmv6fwqYXjG17QX2tckWvn",
+     "type": "claims_core.WalletTokenTransferReceipt",
+     "rent": 4196880,
+     "created_by": "withdraw exact gross/net wallet tokens",
+     "locked_after": 4196880,
+     "closed": false
+    }
+   ],
+   "created": 2,
+   "rent": 41064000,
+   "locked_after": 41064000,
+   "locked_accounts": 2
+  },
+  "branch": {
+   "trace": "wallet-token-lifecycle",
+   "transactions": [
+    "withdraw exact gross/net wallet tokens"
+   ],
+   "accounts": [],
+   "created": 0,
+   "rent": 0,
+   "locked_after": 0,
+   "locked_accounts": 0
+  }
+ }
+]
